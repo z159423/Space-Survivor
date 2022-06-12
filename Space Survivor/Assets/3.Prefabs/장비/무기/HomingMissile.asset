@@ -19,7 +19,7 @@ MonoBehaviour:
   fireDirName: FireDir1
   ready: 1
   coolTime:
-    baseValue: 2
+    baseValue: 3
     minValue: 0
     MinValue: 0
     maxValue: 0

@@ -31,6 +31,11 @@ public class ProjectileLogic : MonoBehaviour
 
     [Space]
 
+    [SerializeField] private bool randomSpawn = false;
+    [SerializeField] private Vector3 randomSpawnOffset;
+
+    [Space]
+
     [SerializeField] private bool fireToNearEnemy = false;
     [SerializeField] private float fireToNearEnemyRadius = 25f;
 
@@ -64,7 +69,17 @@ public class ProjectileLogic : MonoBehaviour
 
         rigidbody.velocity = Vector2.zero;
 
-        if(fireToNearEnemy)
+        if (lookFirePos)
+        {
+            var dir = Utility.GetDirection(transform.position, target.position);
+
+            var angle = Mathf.Atan2((dir.y + transform.position.y) - transform.position.y,
+            (dir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
+
+            transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        }
+
+        if (fireToNearEnemy)
         {
             var nearEnemy = Utility.FindNearEnemy(transform, fireToNearEnemyRadius);
 
@@ -92,11 +107,13 @@ public class ProjectileLogic : MonoBehaviour
             rigidbody.AddForce(dir * fireForce);
         }
 
+        
+
         void AddForce(Transform target, int fireForce)
         {
             Vector2 dir;
 
-            if(Spread)
+            if (Spread)
             {
                 dir = Utility.GetDirection(transform.position, target.position + new Vector3(Random.Range(-spreadOffset.x, spreadOffset.x), Random.Range(-spreadOffset.y, spreadOffset.y)));
                 rigidbody.AddForce(dir * fireForce);
@@ -106,20 +123,15 @@ public class ProjectileLogic : MonoBehaviour
                 dir = Utility.GetDirection(transform.position, target.position);
                 rigidbody.AddForce(dir * fireForce);
             }
-            
+
+            if (randomSpawn)
+            {
+                transform.position += new Vector3(Random.Range(-randomSpawnOffset.x, randomSpawnOffset.x), Random.Range(-randomSpawnOffset.y, randomSpawnOffset.y));
+            }
+
         }
 
-        if(lookFirePos)
-        {
-            var dir = Utility.GetDirection(transform.position, target.position);
-
-            var angle = Mathf.Atan2((dir.y + transform.position.y) - transform.position.y,
-            (dir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
-
-            transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-        }
-
-        if(deleteOnTime)
+        if (deleteOnTime)
             StartCoroutine(DeleteOnTime());
     }
 

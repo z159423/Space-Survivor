@@ -57,6 +57,7 @@ MonoBehaviour:
     MaxValue: 1000
   hitLimit: 1
   knockBackForce: 15
+  deleteOnTime: 1
   deleteTime: 5
   deleteVFXType: 4
   lookFirePos: 0
@@ -140,7 +141,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0

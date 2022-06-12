@@ -15,5 +15,5 @@ MonoBehaviour:
   StartWaveTime: 60
   StopWaveTime: 120
   waveType: 0
-  summonCycleTime: 2
+  summonCycleTime: 1.5
   enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}

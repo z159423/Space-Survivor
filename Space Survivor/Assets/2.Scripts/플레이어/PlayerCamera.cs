@@ -10,7 +10,7 @@ public class PlayerCamera : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         transform.position = new Vector3(playerPosition.position.x, playerPosition.position.y, transform.position.z) + cameraShakeOffset;
     }

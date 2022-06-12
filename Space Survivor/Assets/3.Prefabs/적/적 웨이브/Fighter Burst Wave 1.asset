@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 316eb3d71cc265b41b13a8ea98e5984e, type: 3}
-  m_Name: FighterWave 1
+  m_Name: Fighter Burst Wave 1
   m_EditorClassIdentifier: 
-  StartWaveTime: 140
-  StopWaveTime: 180
+  StartWaveTime: 300
+  StopWaveTime: 305
   waveType: 0
-  summonCycleTime: 1
+  summonCycleTime: 0.02
   enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}

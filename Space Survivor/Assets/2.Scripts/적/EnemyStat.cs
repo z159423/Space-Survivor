@@ -42,7 +42,7 @@ public class EnemyStat : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         movedir = (target.position - transform.position).normalized;
 

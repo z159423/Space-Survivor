@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
-  m_Name: Scout1
+  m_Script: {fileID: 11500000, guid: 316eb3d71cc265b41b13a8ea98e5984e, type: 3}
+  m_Name: ScoutWave 3
   m_EditorClassIdentifier: 
-  Object: {fileID: 601496630676670503, guid: 195f5567674ccb24ab1c28a8caf32fe7, type: 3}
-  type: 1
+  StartWaveTime: 120
+  StopWaveTime: 160
+  waveType: 0
+  summonCycleTime: 1.5
+  enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}

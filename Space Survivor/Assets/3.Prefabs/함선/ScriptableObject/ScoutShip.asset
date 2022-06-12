@@ -16,5 +16,5 @@ MonoBehaviour:
   basicWeapon:
   - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
   baseMaxHp: 700
-  baseMoveSpeed: 10
-  baseRotationSpeed: 3
+  baseMoveSpeed: 7
+  baseRotationSpeed: 4.5

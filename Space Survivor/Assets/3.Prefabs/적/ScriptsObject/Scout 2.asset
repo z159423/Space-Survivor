@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 316eb3d71cc265b41b13a8ea98e5984e, type: 3}
-  m_Name: FighterWave 1
+  m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
+  m_Name: Scout 2
   m_EditorClassIdentifier: 
-  StartWaveTime: 140
-  StopWaveTime: 180
-  waveType: 0
-  summonCycleTime: 1
-  enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+  Object: {fileID: 601496630676670503, guid: 3505f50a4a938bb4487763f13806b167, type: 3}
+  type: 3

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316eb3d71cc265b41b13a8ea98e5984e, type: 3}
   m_Name: ScoutWave2
   m_EditorClassIdentifier: 
-  StartWaveTime: 120
-  StopWaveTime: 125
+  StartWaveTime: 180
+  StopWaveTime: 240
   waveType: 0
-  summonCycleTime: 0.02
-  enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+  summonCycleTime: 0.7
+  enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
