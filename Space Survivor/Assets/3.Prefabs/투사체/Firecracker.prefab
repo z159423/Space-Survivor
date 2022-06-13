@@ -64,6 +64,8 @@ MonoBehaviour:
   lookFirePos: 0
   Spread: 1
   spreadOffset: {x: 2, y: 2, z: 0}
+  randomSpawn: 0
+  randomSpawnOffset: {x: 0, y: 0, z: 0}
   fireToNearEnemy: 1
   fireToNearEnemyRadius: 10
   flak: 0
@@ -93,7 +95,7 @@ MonoBehaviour:
     MaxValue: 1000
   explodeTime: 2
   explodeRadius: 2.5
-  knockbackForce: -30
+  knockbackForce: -5
   vfxType: 5
   projectileLogic: {fileID: 7194569554524369616}
 --- !u!212 &2596404529426074017

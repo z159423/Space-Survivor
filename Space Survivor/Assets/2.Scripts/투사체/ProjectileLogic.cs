@@ -47,7 +47,7 @@ public class ProjectileLogic : MonoBehaviour
 
     [SerializeField]new private Rigidbody2D rigidbody;
     [SerializeField]private PlayerWeapon playerWeapon;
-    [SerializeField] private VisualEffect[] vfxs;
+    [SerializeField] private ParticleSystem[] vfxs;
     [SerializeField] private TrailRenderer[] trails;
     [SerializeField] private WeaponObject weaponObject;
 
@@ -57,6 +57,10 @@ public class ProjectileLogic : MonoBehaviour
         {
             vfxs[i].transform.SetParent(transform);
             vfxs[i].transform.localPosition = Vector3.zero;
+
+            vfxs[i].transform.localScale = new Vector3(1, 1, 1);
+
+            vfxs[i].Play();
         }
     }
 
@@ -166,10 +170,14 @@ public class ProjectileLogic : MonoBehaviour
         for (int i = 0; i < vfxs.Length; i++)
         {
             vfxs[i].transform.SetParent(null);
+
+            vfxs[i].transform.localScale = new Vector3(1, 1, 1);
+
+            vfxs[i].Stop();
         }
 
-        gameObject.SetActive(false);
         playerWeapon.EnQueueBullet(this);
+        gameObject.SetActive(false);
 
         if (deleteVFXType != VFXType.none)
         {

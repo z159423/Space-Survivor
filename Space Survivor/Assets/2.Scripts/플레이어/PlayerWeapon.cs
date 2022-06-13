@@ -58,6 +58,9 @@ public class PlayerWeapon : MonoBehaviour
                         projectileLogic.SetPlayerWeapon(this);
                         projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
 
+                        if (weaponPool[i].type == WeaponType.ThornSatellite)
+                            projectileLogic.GetComponent<ThronSpike>().ChangePosition(weaponPool[i].projectileAmount, j);
+
                     }
                     else
                     {
@@ -68,6 +71,9 @@ public class PlayerWeapon : MonoBehaviour
                         projectileLogic.SetPlayerWeapon(this);
                         projectileLogic.SetWeaponObject(weaponPool[i]);
                         projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
+
+                        if (weaponPool[i].type == WeaponType.ThornSatellite)
+                            projectileLogic.GetComponent<ThronSpike>().ChangePosition(weaponPool[i].projectileAmount, j);
                     }
 
                     yield return new WaitForSeconds(weaponPool[i].firingInterval.GetFinalStatValue());
@@ -89,6 +95,19 @@ public class PlayerWeapon : MonoBehaviour
                 pool.EnQueue(bullet.gameObject);
             }
         }
+    }
+
+    public bool CheckProjectileContainQueue(ProjectileLogic bullet)
+    {
+        foreach (WeaponObject pool in weaponPool)
+        {
+            if (pool.type == bullet.GetType())
+            {
+                return pool.IsProjectileContain(bullet.gameObject);
+            }
+        }
+
+        return false;
     }
 
     public void ResetPlayerWeapon()

@@ -99,4 +99,4 @@ public class ResourcePool
     }
 }
 
-public enum resourceType { Mineral }
+public enum resourceType { Mineral1 , Mineral2 }

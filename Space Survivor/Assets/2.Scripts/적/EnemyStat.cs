@@ -124,7 +124,7 @@ public class EnemyStat : MonoBehaviour
 
     public void Knockback(Vector2 hitPoint ,int force)
     {
-        rigidbody.AddForce(Utility.GetDirection(transform.position, hitPoint) * force);
+        rigidbody.AddForce(Utility.GetDirection(transform.position, hitPoint) * force, ForceMode2D.Impulse);
     }
 
     private IEnumerator HitEffect()

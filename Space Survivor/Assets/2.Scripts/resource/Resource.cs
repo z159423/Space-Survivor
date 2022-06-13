@@ -28,7 +28,9 @@ public class Resource : MonoBehaviour
 
             dirToPlayer = Utility.GetDirection(transform.position, player.position);
 
-            rigid.velocity += dirToPlayer * Time.deltaTime * currentPullForce;
+            //rigid.velocity += dirToPlayer * Time.deltaTime * currentPullForce;
+
+            transform.Translate(dirToPlayer * Time.deltaTime * currentPullForce);
 
             if (Vector2.Distance(player.position, transform.position) < 0.5f)
                 playerGetResource(player);

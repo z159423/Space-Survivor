@@ -6,8 +6,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Wave", menuName = "Scriptable Object/Wave Data", order = int.MaxValue)]
 public class WaveObject : ScriptableObject
 {
-    public int StartWaveTime;
-    public int StopWaveTime;
+    //[Range(0,1800)]
+    //public int StartWaveTime;
+    //[Range(0, 1800)]
+    //public int StopWaveTime;
     [Space]
     public waveType waveType;
     [Space]

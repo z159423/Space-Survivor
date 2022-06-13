@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6763005730519926907}
   - component: {fileID: 7194569554524369616}
+  - component: {fileID: 15706700358756952}
   - component: {fileID: 2596404529426074017}
-  - component: {fileID: 4673022242771149064}
-  - component: {fileID: 8210337936861823044}
   - component: {fileID: 5662989110531773721}
+  - component: {fileID: 3853482692992197530}
+  - component: {fileID: 2346821762138843853}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8837024627107654669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 1}
+  m_LocalScale: {x: 0.013, y: 0.013, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,32 +49,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f1302ced0e35f4fb31f53e14d91a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 5
   damage:
-    baseValue: 20
+    baseValue: 10
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  hitLimit: 1
+  hitLimit: 10000
   knockBackForce: 3
   deleteOnTime: 1
   deleteTime: 5
   deleteVFXType: 4
   lookFirePos: 0
-  Spread: 1
+  Spread: 0
   spreadOffset: {x: 0.5, y: 0.5, z: 0}
   randomSpawn: 0
   randomSpawnOffset: {x: 0, y: 0, z: 0}
-  fireToNearEnemy: 1
+  fireToNearEnemy: 0
   fireToNearEnemyRadius: 7
   flak: 0
-  rigidbody: {fileID: 4673022242771149064}
+  rigidbody: {fileID: 2346821762138843853}
   playerWeapon: {fileID: 0}
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
   weaponObject: {fileID: 0}
+--- !u!114 &15706700358756952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837024627107654669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50523a4145fed744901e370c4d4a7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  rotateSpeed: 150
+  rotateDir: {x: 0, y: 0, z: 1}
+  trailRenderer: {fileID: 5662989110531773721}
+  projectileLogic: {fileID: 7194569554524369616}
 --- !u!212 &2596404529426074017
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -115,7 +133,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 261e0d6687e1a7c45ad05c93976142a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbddb2f86b176d54280a4eaef689b719, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,56 +144,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4673022242771149064
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8837024627107654669}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &8210337936861823044
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8837024627107654669}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.85, y: 5.85}
-    newSize: {x: 5.85, y: 5.85}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -2.925, y: 2.925}
-      - {x: -2.925, y: -2.925}
-      - {x: 2.925, y: -2.925}
-      - {x: 2.925, y: 2.925}
 --- !u!96 &5662989110531773721
 TrailRenderer:
   serializedVersion: 2
@@ -218,10 +186,10 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -275,3 +243,40 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!58 &3853482692992197530
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837024627107654669}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 8.77
+--- !u!50 &2346821762138843853
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837024627107654669}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

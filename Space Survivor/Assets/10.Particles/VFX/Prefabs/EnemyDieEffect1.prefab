@@ -73,7 +73,10 @@ VisualEffect:
     m_Gradient:
       m_Array: []
     m_NamedObject:
-      m_Array: []
+      m_Array:
+      - m_Value: {fileID: 2800000, guid: 261e0d6687e1a7c45ad05c93976142a7, type: 3}
+        m_Name: Tex
+        m_Overridden: 1
     m_Bool:
       m_Array: []
 --- !u!73398921 &3644435231153123393

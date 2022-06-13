@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
@@ -10,7 +10,7 @@ public class EnemyGenerator : MonoBehaviour
 
     public Transform parent;
 
-    public List<WaveObject> waveObjects = new List<WaveObject>();
+    public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
 
     [Space]
     public List<EnemyObject> enemyPools = new List<EnemyObject>();
@@ -30,21 +30,21 @@ public class EnemyGenerator : MonoBehaviour
 
     public void CheckWave()
     {
-        for(int i = 0; i < waveObjects.Count; i++)
+        for(int i = 0; i < enemySpawnWaves.Count; i++)
         {
-            if(waveObjects[i].StartWaveTime == GameManager.instance.getCurrentTime())
+            if(enemySpawnWaves[i].StartWaveTime == GameManager.instance.getCurrentTime())
             {
-                StartWave(waveObjects[i]);
+                StartWave(enemySpawnWaves[i]);
             }
 
-            if (waveObjects[i].StopWaveTime == GameManager.instance.getCurrentTime())
+            if (enemySpawnWaves[i].StopWaveTime == GameManager.instance.getCurrentTime())
             {
-                StopWave(waveObjects[i]);
+                StopWave(enemySpawnWaves[i]);
             }
         }
     }
 
-    private void StartWave(WaveObject wave)
+    private void StartWave(EnemyWave wave)
     {
         switch (wave.waveType)
         {
@@ -58,7 +58,7 @@ public class EnemyGenerator : MonoBehaviour
         }
     }
 
-    private void StopWave(WaveObject wave)
+    private void StopWave(EnemyWave wave)
     {
         if (wave.waveCoroutine == null)
             return;
@@ -69,9 +69,9 @@ public class EnemyGenerator : MonoBehaviour
 
     public void StopAllWave()
     {
-        for(int i = 0; i < waveObjects.Count; i++)
+        for(int i = 0; i < enemySpawnWaves.Count; i++)
         {
-            StopWave(waveObjects[i]);
+            StopWave(enemySpawnWaves[i]);
         }
     }
 
@@ -203,6 +203,37 @@ public class EnemyGenerator : MonoBehaviour
             }
         }
     }
+}
+
+[System.Serializable]
+public class EnemyWave
+{
+    [Range(0, 1800)]
+    public int StartWaveTime;
+    [Range(0, 1800)]
+    public int StopWaveTime;
+
+    [Space]
+    public waveType waveType;
+    [Space]
+    public float summonCycleTime = 1f;
+
+    public EnemyObject enemyObject;
+
+    public Coroutine waveCoroutine;
+
+    public IEnumerator SummonPreiodically()
+    {
+        while (true)
+        {
+            EnemyGenerator.instance.GenerateEnemy2(enemyObject);
+
+            yield return new WaitForSeconds(summonCycleTime);
+        }
+
+    }
+
+    //public WaveObject waveObject;
 }
 
 /*[System.Serializable]

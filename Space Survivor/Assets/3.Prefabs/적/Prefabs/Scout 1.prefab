@@ -125,7 +125,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
+  m_Mass: 1
   m_LinearDrag: 2
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -147,6 +147,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1227621}
+  m_Offset: {x: 0, y: -0.52981263}
   serializedVersion: 2
-  m_Radius: 1.7782018
+  m_Radius: 3.1285796

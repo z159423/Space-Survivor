@@ -20,7 +20,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private float rotationSpeed = 1f;
 
     [Space]
-    [SerializeField] private VisualEffect HitEffect;
+    [SerializeField] private ParticleSystem HitEffect;
 
     [Space]
     [SerializeField] private HpBar hpBar;
@@ -61,6 +61,8 @@ public class PlayerStat : MonoBehaviour
         VFXGenerator.instance.GenerateVFX(VFXType.playerDie1, transform.position);
 
         DeleteShipBody();
+
+        Utility.Explode(transform.position, 0, 20, -10, VFXType.Explode1);
     }
 
     public void GetExp(int exp)
@@ -76,14 +78,14 @@ public class PlayerStat : MonoBehaviour
         {
             LevelUp();
 
-            var remainExp = currentExp - maxExp;
-
-            if (remainExp > 0)
-                GetExp(remainExp);
-
             currentExp = 0;
 
             maxExp += 10;
+
+            var remainExp = currentExp - maxExp;
+
+            if (remainExp > 0)
+                GetExp(remainExp); 
         }
 
         float state = (float)currentExp;

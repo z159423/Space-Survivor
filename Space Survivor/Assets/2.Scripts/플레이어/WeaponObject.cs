@@ -81,6 +81,11 @@ public class WeaponObject : ScriptableObject
         bulletStack.Push(enemy);
     }
 
+    public bool IsProjectileContain(GameObject enemy)
+    {
+        return bulletStack.Contains(enemy);
+    }
+
     public Return DeQueue(Vector2 position)
     {
         Return ret = new Return();
@@ -167,4 +172,5 @@ public class UpgradeModuleList
     public List<UpgradeModule> upgradeModules = new List<UpgradeModule>();
 }
 
-public enum WeaponType { SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket }
+public enum WeaponType { SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite
+}

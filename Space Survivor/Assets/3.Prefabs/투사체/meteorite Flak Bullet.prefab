@@ -56,13 +56,15 @@ MonoBehaviour:
     maxValue: 0
     MaxValue: 1000
   hitLimit: 1
-  knockBackForce: 20
+  knockBackForce: 3
   deleteOnTime: 1
   deleteTime: 5
   deleteVFXType: 4
   lookFirePos: 0
   Spread: 1
   spreadOffset: {x: 0.2, y: 0.2, z: 0}
+  randomSpawn: 0
+  randomSpawnOffset: {x: 0, y: 0, z: 0}
   fireToNearEnemy: 0
   fireToNearEnemyRadius: 0.01
   flak: 1
