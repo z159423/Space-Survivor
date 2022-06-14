@@ -19,6 +19,11 @@ public class Firecracker : MonoBehaviour
         StartCoroutine(Explode());
     }
 
+    public void AddExplodeRadius(float radius)
+    {
+        explodeRadius += radius;
+    }
+
 
     IEnumerator Explode()
     {
@@ -27,5 +32,10 @@ public class Firecracker : MonoBehaviour
         Utility.Explode(transform.position,explodeDamage.GetFinalStatValue(), explodeRadius, knockbackForce, vfxType);
 
         projectileLogic.OffProjectile();
+    }
+
+    public VFXType GetVFXType()
+    {
+        return vfxType;
     }
 }

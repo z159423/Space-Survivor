@@ -39,7 +39,9 @@ public class VFXGenerator : MonoBehaviour
 
                 if (!success.success)
                 {
-                    var vfx = Instantiate(success.Object, position, Quaternion.identity, vfxPool[i].parent);
+                    var vfx = Instantiate(success.Object, position, Quaternion.identity, transform);
+
+                    vfx.transform.localScale = new Vector3(GetParticleSize(type), GetParticleSize(type), GetParticleSize(type)); 
 
                     generatedResource.Add(vfx);
 
@@ -68,6 +70,30 @@ public class VFXGenerator : MonoBehaviour
             }
         }
     }
+
+    public void AddParticleSize(VFXType type, float size)
+    {
+        for (int i = 0; i < vfxPool.Count; i++)
+        {
+            if (type == vfxPool[i].type)
+            {
+                vfxPool[i].AddParticleSize(size);
+            }
+        }
+    }
+
+    public float GetParticleSize(VFXType type)
+    {
+        for (int i = 0; i < vfxPool.Count; i++)
+        {
+            if (type == vfxPool[i].type)
+            {
+                return vfxPool[i].particleSize;
+            }
+        }
+
+        return 1;
+    }
 }
 
 [System.Serializable]
@@ -79,6 +105,7 @@ public class VFXPool
     public Transform parent;
     public VFXType type;
     public float endTime = 5f;
+    public float particleSize = 1f;
 
     public void EnQueue(GameObject enemy)
     {
@@ -107,6 +134,21 @@ public class VFXPool
             ret.success = false;
 
             return ret;
+        }
+    }
+
+    public void AddParticleSize(float size)
+    {
+        particleSize += size;
+
+        ChangeGeneratedParticleSize();
+    }
+
+    private void ChangeGeneratedParticleSize()
+    {
+        foreach (GameObject particle in vfxStack)
+        {
+            particle.transform.localScale = new Vector3(particleSize, particleSize, particleSize);
         }
     }
 

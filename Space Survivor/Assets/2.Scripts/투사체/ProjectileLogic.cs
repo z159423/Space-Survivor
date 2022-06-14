@@ -187,6 +187,11 @@ public class ProjectileLogic : MonoBehaviour
         
     }
 
+    public void UpgradeProjectile(GameObject projectile)
+    {
+        weaponObject.UpgradeProjectile(projectile);
+    }
+
     public void ResetProjectile()
     {
         hitCount = 0;
@@ -212,8 +217,18 @@ public class ProjectileLogic : MonoBehaviour
         damage.AddPercentModifier(percent);
     }
 
+    public void AddDamage(int intValue)
+    {
+        damage.AddIntModifier(intValue);
+    }
+
     public void SetWeaponObject(WeaponObject @object)
     {
         weaponObject = @object;
+    }
+
+    public WeaponObject GetWeaponObject()
+    {
+        return weaponObject;
     }
 }

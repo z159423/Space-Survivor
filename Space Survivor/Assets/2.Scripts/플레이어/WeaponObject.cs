@@ -7,6 +7,8 @@ public class WeaponObject : ScriptableObject
 {
     public Stack<GameObject> bulletStack = new Stack<GameObject>();
 
+    public List<GameObject> activeProjectile = new List<GameObject>();
+
     public GameObject projectilePrefab;
     public Transform parent;
     public WeaponType type;
@@ -49,7 +51,22 @@ public class WeaponObject : ScriptableObject
             switch (modules.upgradeModules[i].upgradeModuleType)
             {
                 case upgradeModuleType.DamageIncrease:
-                    damageMultifly.AddPercentModifier(modules.upgradeModules[i].value1);
+
+                    foreach(GameObject projectile in bulletStack)
+                    {
+                        if(projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
+                        {
+                            DamageIncreaseInt(logic, Utility.RountToInt(modules.upgradeModules[i].value1));
+                        }
+                    }
+
+                    for(int j = 0; j < activeProjectile.Count; j++)
+                    {
+                        if (activeProjectile[j].TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
+                        {
+                            DamageIncreaseInt(logic, Utility.RountToInt(modules.upgradeModules[i].value1));
+                        }
+                    }
                     break;
 
                 case upgradeModuleType.CoolTimeDecrease:
@@ -65,8 +82,60 @@ public class WeaponObject : ScriptableObject
                     break;
 
                 case upgradeModuleType.IncreaseSize:
+                    foreach (GameObject projectile in bulletStack)
+                    {
+                        IncreseSize(projectile, modules.upgradeModules[i].value1);
+                    }
+                    break;
+
+                case upgradeModuleType.IncreseRotateSpeed:
+
+                    foreach (GameObject projectile in bulletStack)
+                    {
+                        if (projectile.TryGetComponent<ThronSpike>(out ThronSpike spike))
+                        {
+                            IncreseRotateSpeed(spike, Utility.RountToInt(modules.upgradeModules[i].value1));
+                        }
+                    }
+
+                    for (int j = 0; j < activeProjectile.Count; j++)
+                    {
+                        if (activeProjectile[j].TryGetComponent<ThronSpike>(out ThronSpike spike))
+                        {
+                            IncreseRotateSpeed(spike, Utility.RountToInt(modules.upgradeModules[i].value1));
+                        }
+                    }
 
                     break;
+
+                case upgradeModuleType.IncreseExplodeRadius:
+
+                    VFXType type = VFXType.none;
+
+                    foreach (GameObject projectile in bulletStack)
+                    {
+                        if (projectile.TryGetComponent<Firecracker>(out Firecracker script))
+                        {
+                            script.AddExplodeRadius(modules.upgradeModules[i].value1);
+
+                            type = script.GetVFXType();
+                        }
+                    }
+
+                    for (int j = 0; j < activeProjectile.Count; j++)
+                    {
+                        if (activeProjectile[j].TryGetComponent<Firecracker>(out Firecracker script))
+                        {
+                            script.AddExplodeRadius(modules.upgradeModules[i].value1);
+                        }
+                    }
+
+                    if(type != VFXType.none)
+                        VFXGenerator.instance.AddParticleSize(type, 0.1f);
+
+                    break;
+
+
             }
 
             currentUpgradeModules.Add(modules.upgradeModules[i]);
@@ -76,9 +145,26 @@ public class WeaponObject : ScriptableObject
         
     }
 
-    public void EnQueue(GameObject enemy)
+    private void DamageIncreaseInt(ProjectileLogic logic, int value)
     {
-        bulletStack.Push(enemy);
+        logic.AddDamage(Utility.RountToInt(value));
+    }
+
+    private void IncreseSize(GameObject projectile, float percent)
+    {
+        projectile.transform.localScale *= percent;
+    }
+
+    private void IncreseRotateSpeed(ThronSpike spike, int rotate)
+    {
+        spike.AddRotateSpeed(rotate);
+    }
+
+    public void EnQueue(GameObject bullet)
+    {
+        bulletStack.Push(bullet);
+
+        activeProjectile.Remove(bullet);
     }
 
     public bool IsProjectileContain(GameObject enemy)
@@ -103,6 +189,8 @@ public class WeaponObject : ScriptableObject
             ret.Object = bullet;
             ret.success = true;
 
+            AddActiveProjectile(bullet);
+
             return ret;
         }
         else
@@ -113,6 +201,43 @@ public class WeaponObject : ScriptableObject
             return ret;
         }
     }
+
+    public void UpgradeProjectile(GameObject projectile)
+    {
+        for (int i = 0; i < currentUpgradeModules.Count; i++)
+        {
+            switch (currentUpgradeModules[i].upgradeModuleType)
+            {
+                case upgradeModuleType.DamageIncrease:
+                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
+                    {
+                        DamageIncreaseInt(logic, Utility.RountToInt(currentUpgradeModules[i].value1));
+                    };
+                    break;
+
+                case upgradeModuleType.IncreaseSize:
+                    IncreseSize(projectile, currentUpgradeModules[i].value1);
+                    break;
+
+                case upgradeModuleType.IncreseRotateSpeed:
+                    if (projectile.TryGetComponent<ThronSpike>(out ThronSpike spike))
+                    {
+                        IncreseRotateSpeed(spike, Utility.RountToInt(currentUpgradeModules[i].value1));
+                    };
+                    break;
+
+                case upgradeModuleType.IncreseExplodeRadius:
+
+                    if (projectile.TryGetComponent<Firecracker>(out Firecracker script))
+                    {
+                        script.AddExplodeRadius(currentUpgradeModules[i].value1);
+                    }
+
+                    break;
+            }
+        }
+    }
+
 
     public void SetFirePos(Transform pos)
     {
@@ -163,6 +288,11 @@ public class WeaponObject : ScriptableObject
     public Vector3 GetRandomDir()
     {
         return randomDir;
+    }
+
+    public void AddActiveProjectile(GameObject Object)
+    {
+        activeProjectile.Add(Object);
     }
 }
 

@@ -13,5 +13,5 @@ public class UpgradeModule : ScriptableObject
 
 }
 
-public enum upgradeModuleType { CoolTimeDecrease, DamageIncrease, IncreasedProjectiles, IncreaseSize, IncreaseFireForce,
+public enum upgradeModuleType { CoolTimeDecrease, DamageIncrease, IncreasedProjectiles, IncreaseSize, IncreaseFireForce, IncreseRotateSpeed, IncreseExplodeRadius
 }

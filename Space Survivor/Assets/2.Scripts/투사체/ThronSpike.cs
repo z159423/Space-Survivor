@@ -33,6 +33,11 @@ public class ThronSpike : MonoBehaviour
         trailRenderer.Clear();
     }
 
+    public void AddRotateSpeed(int speed)
+    {
+        rotateSpeed += speed;
+    }
+
     private void OnDisable()
     {
         if(!projectileLogic.GetPlayerWeapon().CheckProjectileContainQueue(projectileLogic))

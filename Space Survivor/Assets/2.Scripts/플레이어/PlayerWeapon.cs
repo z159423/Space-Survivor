@@ -67,9 +67,12 @@ public class PlayerWeapon : MonoBehaviour
                         var Object = Instantiate(weaponPool[i].projectilePrefab, position, Quaternion.identity);
 
                         var projectileLogic = Object.GetComponent<ProjectileLogic>();
+                        projectileLogic.SetWeaponObject(weaponPool[i]);
+                        projectileLogic.UpgradeProjectile(Object);
                         projectileLogic.ResetProjectile();
                         projectileLogic.SetPlayerWeapon(this);
-                        projectileLogic.SetWeaponObject(weaponPool[i]);
+                        projectileLogic.GetWeaponObject().AddActiveProjectile(Object);
+
                         projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
 
                         if (weaponPool[i].type == WeaponType.ThornSatellite)
