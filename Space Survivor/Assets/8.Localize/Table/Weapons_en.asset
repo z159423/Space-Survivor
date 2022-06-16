@@ -10,22 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: UI_en
+  m_Name: Weapons_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 3c3b68b6e5ac0b8419a9da0f55f3ad36, type: 2}
+  m_SharedData: {fileID: 11400000, guid: d278216c58e614042b6b11ca6e42b3a8, type: 2}
   m_Metadata:
-    m_Items: []
-  m_TableData:
-  - m_Id: 5560793772748800
-    m_Localized: PLAY
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5560847115907072
-    m_Localized: UPGRADES
-    m_Metadata:
-      m_Items: []
+    m_Items:
+    - rid: 1427024619712020490
+  m_TableData: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 1427024619712020490
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00703e4d4d00000000703e410400000000707e4f820000000070febb9600000000707eabae0000000070fe81c7000000

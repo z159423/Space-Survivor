@@ -50,7 +50,7 @@ public class WeaponObject : ScriptableObject
         {
             switch (modules.upgradeModules[i].upgradeModuleType)
             {
-                case upgradeModuleType.DamageIncrease:
+                case upgradeModuleType.DamageIntIncrease:
 
                     foreach(GameObject projectile in bulletStack)
                     {
@@ -127,6 +127,8 @@ public class WeaponObject : ScriptableObject
                         if (activeProjectile[j].TryGetComponent<Firecracker>(out Firecracker script))
                         {
                             script.AddExplodeRadius(modules.upgradeModules[i].value1);
+
+                            type = script.GetVFXType();
                         }
                     }
 
@@ -208,7 +210,7 @@ public class WeaponObject : ScriptableObject
         {
             switch (currentUpgradeModules[i].upgradeModuleType)
             {
-                case upgradeModuleType.DamageIncrease:
+                case upgradeModuleType.DamageIntIncrease:
                     if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
                     {
                         DamageIncreaseInt(logic, Utility.RountToInt(currentUpgradeModules[i].value1));

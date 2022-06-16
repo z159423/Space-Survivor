@@ -97,7 +97,6 @@ public class PlayerStat : MonoBehaviour
     private void LevelUp()
     {
         playerLevel++;
-        Debug.Log("플레이어 래벨업!!");
 
         LevelUpManager.instance.StartWeaponUpgrade();
         playerLevelText.text = "Level " + playerLevel.ToString();

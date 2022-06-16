@@ -21,6 +21,14 @@ MonoBehaviour:
     m_Address: Assets/8.Localize/Table/UI Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: d278216c58e614042b6b11ca6e42b3a8
+    m_Address: Assets/8.Localize/Table/Weapons Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+  - m_GUID: a27e45456d69bcf4fb079931778ce842
+    m_Address: Assets/8.Localize/Table/Upgrades Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 4b116b5351a53d448bb9336946f9ac4c, type: 2}
   m_SchemaSet:

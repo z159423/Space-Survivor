@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Upgrades_ko-KR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ko-KR
+  m_SharedData: {fileID: 11400000, guid: a27e45456d69bcf4fb079931778ce842, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 1427024619712020494
+  m_TableData:
+  - m_Id: 11009945600
+    m_Localized: "\uCFE8\uD0C0\uC784 {VALUE1} % \uAC10\uC18C"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020494
+  - m_Id: 22900797440
+    m_Localized: "\uB370\uBBF8\uC9C0 {VALUE1} \uC99D\uAC00"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020494
+  - m_Id: 155352723456
+    m_Localized: "\uD3ED\uBC1C \uBC94\uC704 {VALUE1} % \uC99D\uAC00"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020494
+  - m_Id: 157194022912
+    m_Localized: "\uD22C\uC0AC\uCCB4 {VALUE1} \uAC1C \uC99D\uAC00"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020494
+  - m_Id: 259052695552
+    m_Localized: "\uD68C\uC804 \uC18D\uB3C4 \uC99D\uAC00"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020494
+  - m_Id: 356184387584
+    m_Localized: "\uD22C\uC0AC\uCCB4 \uC0AC\uC774\uC988 \uC99D\uAC00"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020494
+  references:
+    version: 2
+    RefIds:
+    - rid: 1427024619712020494
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00703e90020000000070fe54050000000070be2b2400000000707e99240000000070be503c00000000703eee52000000

@@ -45,6 +45,8 @@ public class VFXGenerator : MonoBehaviour
 
                     generatedResource.Add(vfx);
 
+                    vfxPool[i].activeParticle.Add(vfx);
+
                     StartCoroutine(endVFX2());
 
                     IEnumerator endVFX2()
@@ -53,6 +55,7 @@ public class VFXGenerator : MonoBehaviour
 
                         EnQueueVFX(vfxPool[i].type, vfx);
                     }
+
                 }
                 else
                 {
@@ -64,6 +67,8 @@ public class VFXGenerator : MonoBehaviour
 
                         EnQueueVFX(vfxPool[i].type, success.Object);
                     }
+
+                    vfxPool[i].activeParticle.Add(success.Object);
                 }
 
                 break;
@@ -101,6 +106,8 @@ public class VFXPool
 {
     public Stack<GameObject> vfxStack = new Stack<GameObject>();
 
+    public List<GameObject> activeParticle = new List<GameObject>();
+
     public GameObject Prefab;
     public Transform parent;
     public VFXType type;
@@ -110,6 +117,8 @@ public class VFXPool
     public void EnQueue(GameObject enemy)
     {
         vfxStack.Push(enemy);
+
+        activeParticle.Remove(enemy);
     }
 
     public Return DeQueue(Vector2 position)
@@ -146,9 +155,22 @@ public class VFXPool
 
     private void ChangeGeneratedParticleSize()
     {
+
         foreach (GameObject particle in vfxStack)
         {
-            particle.transform.localScale = new Vector3(particleSize, particleSize, particleSize);
+            foreach(ParticleSystem particle1 in particle.GetComponentsInChildren<ParticleSystem>())
+            {
+                particle1.transform.localScale = new Vector3(particleSize, particleSize, particleSize);
+            }
+        }
+
+        for(int i = 0; i < activeParticle.Count; i++)
+        {
+
+            foreach(ParticleSystem particle1 in activeParticle[i].GetComponentsInChildren<ParticleSystem>())
+            {
+                particle1.transform.localScale = new Vector3(particleSize, particleSize, particleSize);
+            }
         }
     }
 

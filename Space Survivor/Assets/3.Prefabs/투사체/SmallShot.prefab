@@ -57,7 +57,7 @@ MonoBehaviour:
   hitLimit: 1
   knockBackForce: 3
   deleteOnTime: 1
-  deleteTime: 5
+  deleteTime: 3
   deleteVFXType: 4
   lookFirePos: 1
   Spread: 0

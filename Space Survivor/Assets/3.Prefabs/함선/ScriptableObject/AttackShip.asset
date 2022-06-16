@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipBody: {fileID: 5518835431198223638, guid: a55735f6308bd5a4bb98c0a8246a8bd1, type: 3}
   basicWeapon:
-  - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
+  - {fileID: 11400000, guid: 27336ddc71cf3bb4d837685827823307, type: 2}
   baseMaxHp: 1000
   baseMoveSpeed: 5
   baseRotationSpeed: 3.5

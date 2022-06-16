@@ -93,8 +93,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  explodeTime: 2
-  explodeRadius: 2.5
+  explodeTime: 1.5
+  explodeRadius: 1.8
   knockbackForce: -5
   vfxType: 5
   projectileLogic: {fileID: 7194569554524369616}

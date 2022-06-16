@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a95a1ab3daffc6e49b2a3d295c9f852e, type: 3}
   m_Name: Firework Rocket
   m_EditorClassIdentifier: 
+  activeProjectile: []
   projectilePrefab: {fileID: 8837024627107654669, guid: 9c7933f276283c849ba6ce3f37b8d1f3, type: 3}
   parent: {fileID: 0}
   type: 4
@@ -38,7 +39,7 @@ MonoBehaviour:
     maxValue: 0
     MaxValue: 1000
   FireForce:
-    baseValue: 130
+    baseValue: 100
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -53,6 +54,7 @@ MonoBehaviour:
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
+    - {fileID: 11400000, guid: 724ba58641c764345add7e819884c9b1, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}

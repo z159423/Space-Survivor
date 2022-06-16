@@ -36,6 +36,7 @@ public class PlayerWeapon : MonoBehaviour
         //bullet.GetComponent<ProjectileLogic>().Fire(Utility.GetDirection(firePos.position, fireDir.position));
 
         pool.ready = false;
+
         yield return new WaitForSeconds(pool.coolTime.GetFinalStatValue());
         pool.ready = true;
     }

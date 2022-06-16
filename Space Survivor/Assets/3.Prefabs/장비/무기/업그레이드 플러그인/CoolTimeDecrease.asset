@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CoolTimeDecrease
   m_EditorClassIdentifier: 
   upgradeModuleType: 0
-  value1: 0.9
+  value1: -0.1
   value2: 0
   value3: 0
