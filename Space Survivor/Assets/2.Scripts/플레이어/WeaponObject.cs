@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 [CreateAssetMenu(fileName = "new Weapon", menuName = "Scriptable Object/Weapon Data", order = int.MaxValue)]
 public class WeaponObject : ScriptableObject
@@ -10,6 +12,7 @@ public class WeaponObject : ScriptableObject
     public List<GameObject> activeProjectile = new List<GameObject>();
 
     public GameObject projectilePrefab;
+    public Sprite weaponImage;
     public Transform parent;
     public WeaponType type;
     private Transform firePos;

@@ -129,6 +129,8 @@ public class PlayerWeapon : MonoBehaviour
         FindFirePos(newWeapon);
         FindFireDir(newWeapon);
 
+        LevelUpManager.instance.AddNewWeaponImage(weapon);
+
     }
 
     public void FindFirePos(WeaponObject weapon)
@@ -166,6 +168,7 @@ public class PlayerWeapon : MonoBehaviour
             if (weaponObject.type == weaponPool[i].type)
             {
                 weaponPool[i].UpgradeWeapon(weaponPool[i].GetUpgradeModuleList());
+                LevelUpManager.instance.AddUpgradeNode(weaponObject);
                 return;
             }
         }
@@ -204,6 +207,20 @@ public class PlayerWeapon : MonoBehaviour
         }
 
         return 0;
+    }
+
+    public bool GetIsWeaponHave(WeaponType type)
+    {
+        for (int i = 0; i < weaponPool.Count; i++)
+        {
+            if (weaponPool[i].type == type)
+            {
+                //Debug.LogError(type);
+                return true;
+            }
+        }
+
+        return false;
     }
 }
 

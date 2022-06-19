@@ -36,9 +36,17 @@ public class PlayerStat : MonoBehaviour
     public UnityEvent playerDieEvent;
     public UnityEvent playerLevelUpEvent;
 
+    [Space]
+
+    [SerializeField] private bool invinsible = false;
+
+
 
     public void TakeDamage(int damage)
     {
+        if (invinsible)
+            return;
+
         currentHp -= damage;
 
         hpBar.SetState(currentHp, maxHp);
@@ -176,5 +184,17 @@ public class PlayerStat : MonoBehaviour
     public float GetRotationSpeed()
     {
         return rotationSpeed;
+    }
+
+    public void ChangeInvinsible()
+    {
+        invinsible = !invinsible;
+    }
+
+    public void FullHp()
+    {
+        currentHp = maxHp;
+
+        hpBar.SetState(currentHp, maxHp);
     }
 }

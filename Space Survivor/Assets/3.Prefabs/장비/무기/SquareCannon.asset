@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a95a1ab3daffc6e49b2a3d295c9f852e, type: 3}
   m_Name: SquareCannon
   m_EditorClassIdentifier: 
+  activeProjectile: []
   projectilePrefab: {fileID: 8837024627107654669, guid: c25a684ca3928464e9d515a954e98b52, type: 3}
+  weaponImage: {fileID: 21300000, guid: dbda7c9fc2008954b83d83192a8e8fd4, type: 3}
   parent: {fileID: 0}
   type: 0
   firePosName: FirePos1
@@ -49,7 +51,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
-    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}

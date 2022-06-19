@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 601496630676670501}
   - component: {fileID: 3348257821194670371}
   m_Layer: 0
-  m_Name: Scout Boss 1
+  m_Name: Advanced Scout 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b6176ba7c69b4bb4aa25a9f33cd3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 4
   maxHp: 500
   damage: 4
   hitEffect: 1

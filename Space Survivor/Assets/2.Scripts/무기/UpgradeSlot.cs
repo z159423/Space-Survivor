@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Localization.Settings;
 using UnityEngine.Localization;
+using UnityEngine.UI;
 
 using UnityEngine.ResourceManagement.AsyncOperations;
 
@@ -12,6 +13,7 @@ public class UpgradeSlot : MonoBehaviour
     [SerializeField] private TextMeshProUGUI moduleName;
     [SerializeField] private TextMeshProUGUI moduleDetail;
     [SerializeField] private TextMeshProUGUI moduleLevel;
+    [SerializeField] private Image weaponImage;
 
     [Space]
 
@@ -23,6 +25,7 @@ public class UpgradeSlot : MonoBehaviour
 
         moduleName.text = weaponObject.type.ToString();
 
+        //새로운 무기라면 "새로운 무기!" 가 표시되고 소지중인 무기면 "현재레벨 / 최대래벨" 이 출력되도록
         if(LevelUpManager.instance.RequestPlayerWeapon(weaponObject.type) == null)
         {
             moduleLevel.text = "새로운 무기!";
@@ -46,6 +49,7 @@ public class UpgradeSlot : MonoBehaviour
 
         int weaponLevel = LevelUpManager.instance.RequestWeaponLevel(weaponObject.type);
 
+        //현재 소지중인 무기 래밸이 0일시 아이템의 설명이 출력되도록
         if(weaponLevel == 0)
         {
             var keyName = weaponObject.type.ToString() + "_D";
@@ -60,7 +64,7 @@ public class UpgradeSlot : MonoBehaviour
                 moduleDetail.text = str;
             }
         }
-        else
+        else  //아이템의 레벨이 1 이상이면 다음 업그레이드 노드들이 출력되도록
         {
             for (int i = 0; i < weaponObject.UpgradeModulesForLevel[weaponLevel-1].upgradeModules.Count; i++)
             {
@@ -87,6 +91,9 @@ public class UpgradeSlot : MonoBehaviour
 
             }
         }
+
+        //무기 이미지로 변경
+        weaponImage.sprite = weaponObject.weaponImage;
 
         
     }

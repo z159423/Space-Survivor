@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a95a1ab3daffc6e49b2a3d295c9f852e, type: 3}
-  m_Name: meteorite Flak
+  m_Name: Meteorite Flak
   m_EditorClassIdentifier: 
+  activeProjectile: []
   projectilePrefab: {fileID: 8837024627107654669, guid: 27748f12afb8ad74ba264d5d5f2b5dee, type: 3}
+  weaponImage: {fileID: 21300000, guid: 48d1b6361dcd4d84b81b6b6a0c64f707, type: 3}
   parent: {fileID: 0}
   type: 3
   firePosName: FirePos1
