@@ -13,6 +13,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private int maxExp = 5;
     private int currentExp = 0;
     private int playerLevel = 1;
+    private int currentCrystal = 0;
     [SerializeField] private TextMeshProUGUI playerLevelText;
 
     [Space]
@@ -27,6 +28,8 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private Transform expBar;
     [SerializeField] private PlayerWeapon playerWeapon;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private TextMeshProUGUI crystalText;
+    [SerializeField] private Transform weaponSlotParent;
     [Space]
     [SerializeField] GameObject dieVFX;
 
@@ -71,6 +74,8 @@ public class PlayerStat : MonoBehaviour
         DeleteShipBody();
 
         Utility.Explode(transform.position, 0, 20, -10, VFXType.Explode1);
+
+        UserDataManager.instance.AddCrystalValue(currentCrystal);
     }
 
     public void GetExp(int exp)
@@ -102,6 +107,13 @@ public class PlayerStat : MonoBehaviour
         expBar.transform.localScale = new Vector3(state, 1f, 1f);
     }
 
+    public void GetCrystal(int value)
+    {
+        currentCrystal += value;
+
+        crystalText.text = currentCrystal.ToString();
+    }
+
     private void LevelUp()
     {
         playerLevel++;
@@ -124,6 +136,8 @@ public class PlayerStat : MonoBehaviour
 
         playerLevel = 1;
         currentExp = 0;
+        currentCrystal = 0;
+        crystalText.text = currentCrystal.ToString();
         maxExp = 5;
 
         playerLevelText.text = "Level " + playerLevel.ToString();
@@ -132,6 +146,9 @@ public class PlayerStat : MonoBehaviour
         hpBar.SetState(currentHp, maxHp);
 
         playerWeapon.ResetPlayerWeapon();
+        ClearWeaponSlots();
+
+        
     }
 
     public void PlayGame()
@@ -196,5 +213,15 @@ public class PlayerStat : MonoBehaviour
         currentHp = maxHp;
 
         hpBar.SetState(currentHp, maxHp);
+    }
+
+    private void ClearWeaponSlots()
+    {
+        WeaponSlot[] slots = weaponSlotParent.GetComponentsInChildren<WeaponSlot>();
+
+        for(int i = 0; i < slots.Length; i++)
+        {
+            Destroy(slots[i].gameObject);
+        }
     }
 }

@@ -24,8 +24,9 @@ public class EnemyStat : MonoBehaviour
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float rotationSpeed = 0.05f;
     [Space]
-    [SerializeField] private GameObject expObject;
-    [SerializeField] private resourceType resourceType;
+    [SerializeField] private DropTable dropTable;
+    //[SerializeField] private GameObject expObject;
+    //[SerializeField] private resourceType resourceType;
     [Space]
     [SerializeField] private VFXType dieVFXType;
     //[SerializeField] private GameObject DieVFX;
@@ -79,9 +80,14 @@ public class EnemyStat : MonoBehaviour
     {
         EnQueueThisEnemy();
 
-        if (expObject != null)
-            ResourceGenerator.instance.DeQueueResource(resourceType, transform.position);
+        if (dropTable.expType != resourceType.none)
+            ResourceGenerator.instance.DeQueueResource(dropTable.expType, transform.position);
             //Instantiate(expObject,transform.position,Quaternion.identity);
+
+        if(Utility.PercentageCalculator(dropTable.crystalDropPercent))
+        {
+            ResourceGenerator.instance.DeQueueResource(dropTable.crystalType, transform.position);
+        }
 
         if(dieVFXType != VFXType.none)
         {
@@ -135,4 +141,19 @@ public class EnemyStat : MonoBehaviour
 
         spriteRenderer.material = originalMat;
     }
+}
+
+[System.Serializable]
+public class DropTable
+{
+    public resourceType expType;
+
+    [Space]
+
+    public resourceType crystalType;
+    [Range(0, 100)]
+    public int crystalDropPercent;
+
+
+
 }

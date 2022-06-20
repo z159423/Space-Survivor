@@ -42,7 +42,9 @@ public class ResourceGenerator : MonoBehaviour
 
                 if (success != null)
                 {
-                    var enemy = Instantiate(success, position, Quaternion.identity, resourcePool[i].parent);
+                    Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
+
+                    var enemy = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
 
                     generatedResource.Add(enemy);
                 }
@@ -99,4 +101,4 @@ public class ResourcePool
     }
 }
 
-public enum resourceType { Mineral1 , Mineral2 }
+public enum resourceType {none, Mineral1 , Mineral2, Crystal }

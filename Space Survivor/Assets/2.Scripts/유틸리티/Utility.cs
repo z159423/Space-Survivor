@@ -56,4 +56,18 @@ public class Utility : MonoBehaviour
     {
         return Mathf.RoundToInt(value);
     }
+
+    public static bool PercentageCalculator(int percent)
+    {
+        var random = Random.Range(0, 100);
+
+        if(percent > random)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

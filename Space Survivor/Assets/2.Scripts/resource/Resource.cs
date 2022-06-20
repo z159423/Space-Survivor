@@ -6,7 +6,9 @@ public class Resource : MonoBehaviour
 
     [Space]
 
-    [SerializeField] private int expValue = 1;
+    [SerializeField] private int expValue = 0;
+    [SerializeField] private int crystalValue = 0;
+
     [Space]
     [SerializeField] private float maxPullForce = 10f;
     [SerializeField] private float startPullForce = -3f;
@@ -66,7 +68,11 @@ public class Resource : MonoBehaviour
         gameObject.SetActive(false);
         ResourceGenerator.instance.EnQueueResource(type, gameObject);
 
-        player.GetComponentInParent<PlayerStat>().GetExp(expValue);
+        var playerStat = player.GetComponentInParent<PlayerStat>();
+
+        playerStat.GetExp(expValue);
+        playerStat.GetCrystal(crystalValue);
+
     }
 
     public void TriggerChange(bool trigger)

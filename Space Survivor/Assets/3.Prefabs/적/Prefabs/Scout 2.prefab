@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: ac761fa020ec5634fa44498c3259bf0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -109,8 +109,10 @@ MonoBehaviour:
   rigidbody: {fileID: 601496630676670501}
   moveSpeed: 3.5
   rotationSpeed: 2
-  expObject: {fileID: 5607207885873677397, guid: 5dc4997ea4d4c14419577c2752034568, type: 3}
-  resourceType: 1
+  dropTable:
+    expType: 2
+    crystalType: 3
+    crystalDropPercent: 50
   dieVFXType: 1
   target: {fileID: 0}
 --- !u!50 &601496630676670501
