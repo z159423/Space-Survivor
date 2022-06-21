@@ -224,4 +224,13 @@ public class PlayerStat : MonoBehaviour
             Destroy(slots[i].gameObject);
         }
     }
+
+    public void Heal(int value)
+    {
+        currentHp += value;
+
+        currentHp = Mathf.Clamp(currentHp, 0, maxHp);
+
+        hpBar.SetState(currentHp, maxHp);
+    }
 }

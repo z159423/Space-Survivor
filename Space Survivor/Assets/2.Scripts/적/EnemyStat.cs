@@ -80,16 +80,25 @@ public class EnemyStat : MonoBehaviour
     {
         EnQueueThisEnemy();
 
+        //경험치 드랍
         if (dropTable.expType != resourceType.none)
             ResourceGenerator.instance.DeQueueResource(dropTable.expType, transform.position);
             //Instantiate(expObject,transform.position,Quaternion.identity);
 
+        //크리스탈 드랍
         if(Utility.PercentageCalculator(dropTable.crystalDropPercent))
         {
             ResourceGenerator.instance.DeQueueResource(dropTable.crystalType, transform.position);
         }
 
-        if(dieVFXType != VFXType.none)
+        //아이템 드랍
+        if (Utility.PercentageCalculator(dropTable.ItemDropPercent))
+        {
+            ItemGenerator.instance.GenerateRandomItem(transform.position);
+        }
+
+        //사망 파티클 생성
+        if (dieVFXType != VFXType.none)
         {
             VFXGenerator.instance.GenerateVFX(dieVFXType, transform.position);
         }
@@ -154,6 +163,9 @@ public class DropTable
     [Range(0, 100)]
     public int crystalDropPercent;
 
+    [Space]
+    [Range(0, 100)]
+    public int ItemDropPercent;
 
 
 }

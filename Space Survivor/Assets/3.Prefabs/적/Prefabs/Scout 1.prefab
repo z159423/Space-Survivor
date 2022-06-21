@@ -113,6 +113,7 @@ MonoBehaviour:
     expType: 1
     crystalType: 3
     crystalDropPercent: 50
+    ItemDropPercent: 100
   dieVFXType: 1
   target: {fileID: 0}
 --- !u!50 &601496630676670501
