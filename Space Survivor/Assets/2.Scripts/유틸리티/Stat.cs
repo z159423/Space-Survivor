@@ -84,4 +84,14 @@ public class Stat
         if (modifier != 0)
             PercentModifiers.Remove(modifier);
     }
+
+    public void ClearIntModifier()
+    {
+        IntModifiers.Clear();
+    }
+
+    public void ClearPercentModifier()
+    {
+        PercentModifiers.Clear();
+    }
 }

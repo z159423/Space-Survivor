@@ -116,7 +116,7 @@ public class EnemyStat : MonoBehaviour
         }
     }
 
-    public EnemyType GetType()
+    public new EnemyType GetType()
     {
         return type;
     }

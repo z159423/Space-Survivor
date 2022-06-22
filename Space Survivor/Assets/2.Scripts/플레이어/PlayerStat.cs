@@ -233,4 +233,9 @@ public class PlayerStat : MonoBehaviour
 
         hpBar.SetState(currentHp, maxHp);
     }
+
+    public int GetCurrentPlayerLevel()
+    {
+        return playerLevel;
+    }
 }

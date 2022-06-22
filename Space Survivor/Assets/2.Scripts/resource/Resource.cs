@@ -10,7 +10,7 @@ public class Resource : MonoBehaviour
     [SerializeField] private int crystalValue = 0;
 
     [Space]
-    [SerializeField] private float maxPullForce = 10f;
+    //[SerializeField] private float maxPullForce = 10f;
     [SerializeField] private float startPullForce = -3f;
     [SerializeField] private float pullForceIncrease = 1f;
     [Space]
@@ -56,7 +56,7 @@ public class Resource : MonoBehaviour
         }
     }
 
-    private void StartPull(Transform player)
+    public void StartPull(Transform player)
     {
         isTriggered = true;
 

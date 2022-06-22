@@ -1125,6 +1125,12 @@ MonoBehaviour:
     type: 5
     endTime: 5
     particleSize: 1
+  - activeParticle: []
+    Prefab: {fileID: 8154537861706876898, guid: 8d5b129865076c74fb475e5cf708aff7, type: 3}
+    parent: {fileID: 248298816}
+    type: 6
+    endTime: 5
+    particleSize: 1
   generatedResource: []
 --- !u!4 &248298816
 Transform:
@@ -11369,6 +11375,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3579f6d7f41229c498af40ebfe4dc04a, type: 3}
+--- !u!1 &1353563427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353563428}
+  - component: {fileID: 1353563429}
+  m_Layer: 0
+  m_Name: ProjectileGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353563428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353563427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7638875, y: 4.83491, z: -0.003149998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1353563429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353563427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189f7829ef58c6d4aaaa55e3036d1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerWeapon: {fileID: 923141305}
+  projectilePool:
+  - Object: {fileID: 8100048574099637306, guid: 2a290a6c0a3b41c4fa91f16364c96216, type: 3}
+    parent: {fileID: 1353563428}
+    type: 1
+  generatedProjectile: []
 --- !u!1001 &1362435073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12508,6 +12564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e77083b490a25b4cb2c1c991476d210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerWeapon: {fileID: 923141305}
   itemPool:
   - Object: {fileID: 8757581497566339502, guid: 6ac44d60761f8f74c961459c10260794, type: 3}
     parent: {fileID: 1670996853}
@@ -13561,6 +13618,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1993698528}
         m_TargetAssemblyTypeName: LevelUpManager, Assembly-CSharp
         m_MethodName: ClearWeaponImages
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1670996852}
+        m_TargetAssemblyTypeName: ItemGenerator, Assembly-CSharp
+        m_MethodName: DeleteAllItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1353563429}
+        m_TargetAssemblyTypeName: ProjectileGenerator, Assembly-CSharp
+        m_MethodName: DeleteAllProjectile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14776,6 +14857,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1993698528}
         m_TargetAssemblyTypeName: LevelUpManager, Assembly-CSharp
         m_MethodName: ClearWeaponImages
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1670996852}
+        m_TargetAssemblyTypeName: ItemGenerator, Assembly-CSharp
+        m_MethodName: DeleteAllItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1353563429}
+        m_TargetAssemblyTypeName: ProjectileGenerator, Assembly-CSharp
+        m_MethodName: DeleteAllProjectile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

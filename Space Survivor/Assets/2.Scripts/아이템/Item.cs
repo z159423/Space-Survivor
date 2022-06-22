@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField] private ItemType itemType;
+    [SerializeField] private LayerMask resourceLayer;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,7 +14,7 @@ public class Item : MonoBehaviour
             switch (itemType)
             {
                 case ItemType.MissileBurst:
-                    MissileBurst();
+                    MissileBurst(collision);
                     break;
 
                 case ItemType.Repair:
@@ -21,7 +22,7 @@ public class Item : MonoBehaviour
                     break;
 
                 case ItemType.Magnetic:
-                    Magnetic();
+                    Magnetic(collision);
                     break;
             }
 
@@ -29,22 +30,30 @@ public class Item : MonoBehaviour
         }
     }
 
-    private void MissileBurst()
-    {
 
+    private void MissileBurst(Collider2D player)
+    {
+        player.GetComponentInParent<PlayerWeapon>().MissileBurst(player);
     }
+
 
     private void Repair(Collider2D player)
     {
-        if(player.TryGetComponent<PlayerStat>(out PlayerStat stat))
-        {
-            stat.Heal(200);
-        }
+        player.GetComponentInParent<PlayerStat>().Heal(200);
+        VFXGenerator.instance.GenerateVFX(VFXType.Heal1, player.transform.position);
     }
 
-    private void Magnetic()
+    private void Magnetic(Collider2D player)
     {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 50f, resourceLayer);
 
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            
+
+            if (colliders[i].GetComponent<Resource>() != null)
+                colliders[i].GetComponent<Resource>().StartPull(player.transform);
+        }
     }
 
     public void EnQueueThisItem()

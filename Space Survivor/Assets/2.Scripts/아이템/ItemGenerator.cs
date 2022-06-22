@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ItemGenerator : MonoBehaviour
 {
+    [SerializeField] private PlayerWeapon playerWeapon;
+
+    [Space]
     public List<ItemPool> itemPool = new List<ItemPool>();
     public List<GameObject> generateditem = new List<GameObject>();
 
@@ -32,7 +35,7 @@ public class ItemGenerator : MonoBehaviour
         }
     }
 
-    public void DeQueueItem(ItemType type, Vector2 position)
+    public GameObject DeQueueItem(ItemType type, Vector2 position)
     {
         for (int i = 0; i < itemPool.Count; i++)
         {
@@ -44,16 +47,16 @@ public class ItemGenerator : MonoBehaviour
                 {
                     Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
 
-                    var enemy = Instantiate(success, position + randomPosition, Quaternion.identity, itemPool[i].parent);
+                    var item = Instantiate(success, position + randomPosition, Quaternion.identity, itemPool[i].parent);
 
-                    generateditem.Add(enemy);
+                    generateditem.Add(item);
+
+                    return item;
                 }
-
-                //Debug.Log("spawn resource");
-
-                break;
             }
         }
+
+        return null;
     }
 
     public void DeleteAllItem()

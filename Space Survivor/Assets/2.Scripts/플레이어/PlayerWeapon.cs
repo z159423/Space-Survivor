@@ -222,6 +222,27 @@ public class PlayerWeapon : MonoBehaviour
 
         return false;
     }
+
+    public void MissileBurst(Collider2D player)
+    {
+        StartCoroutine(Missile());
+
+        IEnumerator Missile()
+        {
+            for (int i = 0; i < 20; i++)
+            {
+
+                yield return new WaitForSeconds(.15f);
+
+                var missile = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.BurstMissile, player.transform.position);
+
+                if (missile.TryGetComponent<BurstMissile>(out BurstMissile burstMissile))
+                {
+                    burstMissile.InitMissile(player.GetComponentInParent<PlayerStat>());
+                }
+            }
+        }
+    }
 }
 
 /*public class WeaponPool

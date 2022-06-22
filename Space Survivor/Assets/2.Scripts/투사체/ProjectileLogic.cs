@@ -197,7 +197,7 @@ public class ProjectileLogic : MonoBehaviour
         hitCount = 0;
     }
 
-    public WeaponType GetType()
+    public new WeaponType GetType()
     {
         return type;
     }
@@ -220,6 +220,13 @@ public class ProjectileLogic : MonoBehaviour
     public void AddDamage(int intValue)
     {
         damage.AddIntModifier(intValue);
+    }
+
+    public void ClearDamageModifire()
+    {
+        damage.ClearIntModifier();
+        damage.ClearPercentModifier();
+
     }
 
     public void SetWeaponObject(WeaponObject @object)
