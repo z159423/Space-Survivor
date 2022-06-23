@@ -29,7 +29,9 @@ public class Firecracker : MonoBehaviour
     {
         yield return new WaitForSeconds(explodeTime);
 
-        Utility.Explode(transform.position,explodeDamage.GetFinalStatValue(), explodeRadius, knockbackForce, vfxType);
+        EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
+
+        Utility.Explode(transform.position,explodeDamage.GetFinalStatValue(), explodeRadius, knockbackForce, vfxType, cameraShakeInstance);
 
         projectileLogic.OffProjectile();
     }

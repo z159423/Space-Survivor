@@ -63,6 +63,14 @@ MonoBehaviour:
     m_Key: ThornSatellite_D
     m_Metadata:
       m_Items: []
+  - m_Id: 2773398622990336
+    m_Key: ShockWaveGenerator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2773485830959104
+    m_Key: ShockWaveGenerator_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

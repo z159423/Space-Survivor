@@ -95,7 +95,7 @@ MonoBehaviour:
   rotateSpeed: 350
   findTargetOnStart: 1
   findTargetOnMissingTarget: 1
-  findTargetRange: 100
+  findTargetRange: 20
   rigid: {fileID: 8100048574099637308}
   projectileLogic: {fileID: 8100048574099637297}
 --- !u!114 &1700238967989047261

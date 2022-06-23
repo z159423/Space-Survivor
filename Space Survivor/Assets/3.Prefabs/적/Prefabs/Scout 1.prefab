@@ -112,8 +112,8 @@ MonoBehaviour:
   dropTable:
     expType: 1
     crystalType: 3
-    crystalDropPercent: 50
-    ItemDropPercent: 100
+    crystalDropPercent: 10
+    ItemDropPercent: 1
   dieVFXType: 1
   target: {fileID: 0}
 --- !u!50 &601496630676670501

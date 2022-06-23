@@ -89,6 +89,11 @@ public class WeaponObject : ScriptableObject
                     {
                         IncreseSize(projectile, modules.upgradeModules[i].value1);
                     }
+
+                    for (int j = 0; j < activeProjectile.Count; j++)
+                    {
+                        IncreseSize(activeProjectile[j], modules.upgradeModules[i].value1);
+                    }
                     break;
 
                 case upgradeModuleType.IncreseRotateSpeed:
@@ -307,5 +312,5 @@ public class UpgradeModuleList
     public List<UpgradeModule> upgradeModules = new List<UpgradeModule>();
 }
 
-public enum WeaponType { SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite
+public enum WeaponType { SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator
 }

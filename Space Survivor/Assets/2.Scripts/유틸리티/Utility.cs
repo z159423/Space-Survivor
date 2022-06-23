@@ -34,7 +34,7 @@ public class Utility : MonoBehaviour
         return closestTarget;
     }
 
-    public static void Explode(Vector2 center , float damage, float radius,int knockbackForce, VFXType vfxType)
+    public static void Explode(Vector2 center , float damage, float radius,int knockbackForce, VFXType vfxType, EZCameraShake.CameraShakeInstance cameraShakeInstance = null)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(center, radius);
 
@@ -48,8 +48,10 @@ public class Utility : MonoBehaviour
         }
 
         VFXGenerator.instance.GenerateVFX(vfxType, center);
-        //CinemachineShake.Instance.ShakeCamera(3f, .3f);
-        EZCameraShake.CameraShaker.Instance.ShakeOnce(4f, 4f, .2f, 1f);
+        
+
+        if (cameraShakeInstance != null)
+            EZCameraShake.CameraShaker.Instance.Shake(cameraShakeInstance);
     }
 
     public static int RountToInt(float value)
