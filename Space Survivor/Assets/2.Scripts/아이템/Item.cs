@@ -24,6 +24,10 @@ public class Item : MonoBehaviour
                 case ItemType.Magnetic:
                     Magnetic(collision);
                     break;
+
+                case ItemType.AtomicExplosion:
+                    AtomicExplosion(collision);
+                    break;
             }
 
             EnQueueThisItem();
@@ -56,6 +60,27 @@ public class Item : MonoBehaviour
         }
     }
 
+    private void AtomicExplosion(Collider2D player)
+    {
+        int layer = 1 << LayerMask.NameToLayer("Enemy");
+
+        int damage = player.GetComponentInParent<PlayerStat>().GetCurrentPlayerLevel() * 10;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 25f, layer);
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].GetComponent<EnemyStat>() != null)
+            {
+                colliders[i].GetComponent<EnemyStat>().TakeDamage(damage);
+                colliders[i].GetComponent<EnemyStat>().Knockback(Utility.GetDirection(player.transform.position, colliders[i].transform.position), 5);
+            }
+        }
+
+        VFXGenerator.instance.GenerateVFX(VFXType.AtomicExplosion, player.transform.position);
+        EZCameraShake.CameraShaker.Instance.ShakeOnce(6f, 6f, .2f, 1.5f);
+    }
+
     public void EnQueueThisItem()
     {
         ItemGenerator.instance.EnQueueItem(itemType, gameObject);
@@ -63,4 +88,4 @@ public class Item : MonoBehaviour
     }
 }
 
-public enum ItemType{none, MissileBurst, Repair, Magnetic }
+public enum ItemType{none, MissileBurst, Repair, Magnetic, AtomicExplosion }

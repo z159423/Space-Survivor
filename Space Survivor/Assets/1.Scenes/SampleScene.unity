@@ -1131,6 +1131,12 @@ MonoBehaviour:
     type: 6
     endTime: 5
     particleSize: 1
+  - activeParticle: []
+    Prefab: {fileID: 1061342233155500521, guid: 80b9fde5ab3993c419a1faf42dd3cc60, type: 3}
+    parent: {fileID: 248298816}
+    type: 7
+    endTime: 5
+    particleSize: 1
   generatedResource: []
 --- !u!4 &248298816
 Transform:
@@ -12575,6 +12581,9 @@ MonoBehaviour:
   - Object: {fileID: 8159806261492598905, guid: f9669cf07fc36ec49adbe1520a5976c9, type: 3}
     parent: {fileID: 1670996853}
     type: 3
+  - Object: {fileID: 4921064521658432218, guid: a8c9b19c2ae7bc744ad8e515e65edd02, type: 3}
+    parent: {fileID: 1670996853}
+    type: 4
   generateditem: []
 --- !u!4 &1670996853
 Transform:

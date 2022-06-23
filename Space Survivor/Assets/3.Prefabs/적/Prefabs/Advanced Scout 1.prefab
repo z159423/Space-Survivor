@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 601496630676670500}
   - component: {fileID: 601496630676670501}
   - component: {fileID: 3348257821194670371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Advanced Scout 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -113,6 +113,7 @@ MonoBehaviour:
     expType: 0
     crystalType: 2
     crystalDropPercent: 100
+    ItemDropPercent: 0
   dieVFXType: 1
   target: {fileID: 0}
 --- !u!50 &601496630676670501
