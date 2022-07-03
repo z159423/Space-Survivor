@@ -219,7 +219,7 @@ public class ProjectileLogic : MonoBehaviour
 
     public void AddDamage(int intValue)
     {
-        damage.AddIntModifier(intValue);
+        damage.AddFloatModifier(intValue);
     }
 
     public void ClearDamageModifire()

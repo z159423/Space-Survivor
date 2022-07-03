@@ -43,11 +43,48 @@ public class PlayerStat : MonoBehaviour
 
     [SerializeField] private bool invinsible = false;
 
+    [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
 
+    private void FixedUpdate()
+    {
+        int totalDamage = 0;
+
+        for (int i = 0; i < enteredEnemyList.Count; i++)
+        {
+            if (enteredEnemyList[i].gameObject.activeSelf)
+                totalDamage += enteredEnemyList[i].GetDamage();
+            else
+            {
+                enteredEnemyList.Remove(enteredEnemyList[i]);
+
+            }
+                
+
+        }
+
+        if (totalDamage > 0)
+            TakeDamage(totalDamage);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Enemy"))
+        {
+            enteredEnemyList.Add(collision.transform.GetComponent<EnemyStat>());
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Enemy"))
+        {
+            enteredEnemyList.Remove(collision.transform.GetComponent<EnemyStat>());
+        }
+    }
 
     public void TakeDamage(int damage)
     {
-        if (invinsible)
+        if (invinsible && playerDie)
             return;
 
         currentHp -= damage;
@@ -62,9 +99,10 @@ public class PlayerStat : MonoBehaviour
 
     private void Die()
     {
-        playerDieEvent.Invoke();
 
         playerDie = true;
+
+        playerDieEvent.Invoke();
 
         gameObject.SetActive(false);
 

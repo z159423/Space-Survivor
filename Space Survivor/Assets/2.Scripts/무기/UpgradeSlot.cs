@@ -75,7 +75,7 @@ public class UpgradeSlot : MonoBehaviour
                 arguments.Add(weaponObject.UpgradeModulesForLevel[weaponLevel-1].upgradeModules[i].value1);
 
                 var localizedString = new LocalizedString("Upgrades", keyName);
-                var dict = new Dictionary<string, string> { { "VALUE1", weaponObject.UpgradeModulesForLevel[weaponLevel-1].upgradeModules[i].value1.ToString() } };
+                var dict = new Dictionary<string, string> { { "VALUE1", weaponObject.UpgradeModulesForLevel[weaponLevel-1].GetValueHumanReadableValue(i) } };
                 localizedString.Arguments = new object[] { dict };
 
                 //var stringOperation = LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Weapons", keyName);

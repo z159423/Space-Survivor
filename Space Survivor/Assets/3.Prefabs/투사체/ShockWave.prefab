@@ -91,7 +91,12 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  damageRadius: 3
+  damageRadius:
+    baseValue: 2.5
+    minValue: 1
+    MinValue: 0
+    maxValue: 1
+    MaxValue: 1000
   knockbackForce: -3
 --- !u!50 &807832537379609315
 Rigidbody2D:

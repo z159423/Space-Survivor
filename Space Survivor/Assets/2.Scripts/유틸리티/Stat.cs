@@ -18,13 +18,13 @@ public class Stat
     [SerializeField]
     private float MaxValue = 1000;
 
-    private List<int> IntModifiers = new List<int>();
+    private List<float> FloatModifiers = new List<float>();
     private List<float> PercentModifiers = new List<float>();
 
     public float GetFinalStatValue()
     {
         float finalValue = baseValue;
-        IntModifiers.ForEach(x => finalValue += x);
+        FloatModifiers.ForEach(x => finalValue += x);
 
         float totalPercent = 1;
 
@@ -44,7 +44,7 @@ public class Stat
     public int GetFinalStatValueAsInt()
     {
         float finalValue = baseValue;
-        IntModifiers.ForEach(x => finalValue += x);
+        FloatModifiers.ForEach(x => finalValue += x);
 
         float totalPercent = 1;
 
@@ -61,16 +61,16 @@ public class Stat
         return Mathf.RoundToInt(finalValue);
     }
 
-    public void AddIntModifier(int modifier)
+    public void AddFloatModifier(float modifier)
     {
         if (modifier != 0)
-            IntModifiers.Add(modifier);
+            FloatModifiers.Add(modifier);
     }
 
     public void RemoveIntModifier(int modifier)
     {
         if (modifier != 0)
-            IntModifiers.Remove(modifier);
+            FloatModifiers.Remove(modifier);
     }
 
     public void AddPercentModifier(float modifier)
@@ -87,7 +87,7 @@ public class Stat
 
     public void ClearIntModifier()
     {
-        IntModifiers.Clear();
+        FloatModifiers.Clear();
     }
 
     public void ClearPercentModifier()

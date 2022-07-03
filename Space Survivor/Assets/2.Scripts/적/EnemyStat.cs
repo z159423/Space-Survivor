@@ -53,7 +53,6 @@ public class EnemyStat : MonoBehaviour
             (movedir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), rotationSpeed * Time.deltaTime);
-
     }
 
     public void TakeDamage(int damage)
@@ -108,13 +107,13 @@ public class EnemyStat : MonoBehaviour
         spriteRenderer.material = originalMat;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    /*private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.transform.CompareTag("Player"))
         {
             collision.transform.GetComponent<PlayerStat>().TakeDamage(damage);
         }
-    }
+    }*/
 
     public new EnemyType GetType()
     {
@@ -149,6 +148,11 @@ public class EnemyStat : MonoBehaviour
         yield return new WaitForSeconds(hitEffectTime);
 
         spriteRenderer.material = originalMat;
+    }
+
+    public int GetDamage()
+    {
+        return damage;
     }
 }
 

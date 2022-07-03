@@ -17,7 +17,7 @@ public class UserDataManager : MonoBehaviour
 
     public UserData LoadUserData()
     {
-        string filePath = Application.dataPath + userDataName;
+        string filePath = Application.persistentDataPath + userDataName;
 
         //불러오기 성공
         if(File.Exists(filePath))
@@ -41,7 +41,7 @@ public class UserDataManager : MonoBehaviour
 
     public void SaveUserData(UserData data)
     {
-        string filePath = Application.dataPath + userDataName;
+        string filePath = Application.persistentDataPath + userDataName;
 
         string JsonData = JsonUtility.ToJson(data);
 
@@ -50,10 +50,11 @@ public class UserDataManager : MonoBehaviour
 
     public void AddCrystalValue(int value)
     {
+
         var data = LoadUserData();
 
         data.crystal += value;
-
+        
         SaveUserData(data);
     }
 
