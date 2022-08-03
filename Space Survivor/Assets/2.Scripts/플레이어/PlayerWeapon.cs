@@ -13,6 +13,9 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private PlayerStat playerStat;
 
+    [Space]
+    public List<WeaponSlot> weaponSlotList = new List<WeaponSlot>();
+
 
     private void Update()
     {
@@ -23,6 +26,7 @@ public class PlayerWeapon : MonoBehaviour
         {
             if(weaponPool[i].ready)
             {
+                weaponSlotList[i].weaponCoolTimeImage.StartCoolTime(weaponPool[i].coolTime.GetFinalStatValue());
                 StartCoroutine(ProjectileReload(weaponPool[i]));
                 StartCoroutine(GenerateProjectile(weaponPool[i].type, weaponPool[i].GetFirePos().position));
             }
@@ -129,8 +133,7 @@ public class PlayerWeapon : MonoBehaviour
         FindFirePos(newWeapon);
         FindFireDir(newWeapon);
 
-        LevelUpManager.instance.AddNewWeaponImage(weapon);
-
+        LevelUpManager.instance.AddNewWeaponImage(weapon, weaponSlotList);
     }
 
     public void FindFirePos(WeaponObject weapon)
@@ -242,6 +245,11 @@ public class PlayerWeapon : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ClearWeaponSlotList()
+    {
+        weaponSlotList.Clear();
     }
 }
 

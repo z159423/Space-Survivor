@@ -263,6 +263,8 @@ public class PlayerStat : MonoBehaviour
         {
             Destroy(slots[i].gameObject);
         }
+
+        playerWeapon.ClearWeaponSlotList();
     }
 
     public void Heal(int value)

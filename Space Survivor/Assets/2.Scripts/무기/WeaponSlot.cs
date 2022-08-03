@@ -12,6 +12,7 @@ public class WeaponSlot : MonoBehaviour
 
     [SerializeField] private Transform weaponUpgradeNodeParent;
     [SerializeField] private GameObject weaponUpgradeNode;
+    public WeaponCoolTimeImage weaponCoolTimeImage;
 
     public void SetWeapon(WeaponObject weapon)
     {

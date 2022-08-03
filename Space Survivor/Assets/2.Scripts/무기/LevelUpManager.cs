@@ -129,9 +129,11 @@ public class LevelUpManager : MonoBehaviour
         return playerWeapon.GetMaxWeaponLevel(type);
     }
 
-    public void AddNewWeaponImage(WeaponObject weaponObject)
+    public void AddNewWeaponImage(WeaponObject weaponObject, List<WeaponSlot> slotList)
     {
         var slot = Instantiate(weaponSlot, weaponSlotParent);
+
+        slotList.Add(slot.GetComponent<WeaponSlot>());
 
         slot.GetComponent<WeaponSlot>().SetWeapon(weaponObject);
     }
