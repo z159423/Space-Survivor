@@ -13,7 +13,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private int maxExp = 5;
     private int currentExp = 0;
     private int playerLevel = 1;
-    private int currentCrystal = 0;
+    public int currentCrystal = 0;
     [SerializeField] private TextMeshProUGUI playerLevelText;
 
     [Space]
@@ -44,6 +44,11 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private bool invinsible = false;
 
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
+
+    private void OnEnable()
+    {
+        playerLevelText.text = "Level " + playerLevel.ToString();
+    }
 
     private void FixedUpdate()
     {

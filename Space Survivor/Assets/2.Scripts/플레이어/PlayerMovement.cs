@@ -21,12 +21,12 @@ public class PlayerMovement : MonoBehaviour
         if (playerStat.GetPlayerDie())
             return;
 
-        rigidbody.velocity += joystick.Direction * Time.deltaTime * playerStat.GetMoveSpeed();
+        rigidbody.velocity += fixedTouchField.joystickDir.normalized * Time.deltaTime * playerStat.GetMoveSpeed();
 
-        if(Mathf.Abs(joystick.Direction.x) > 0 || Mathf.Abs(joystick.Direction.y) > 0)
+        if(Mathf.Abs(fixedTouchField.joystickDir.normalized.x) > 0 || Mathf.Abs(fixedTouchField.joystickDir.normalized.y) > 0)
         {
-            angle = Mathf.Atan2((joystick.Direction.y + playerBody.transform.position.y) - playerBody.transform.position.y,
-            (joystick.Direction.x + playerBody.transform.position.x) - playerBody.transform.position.x) * Mathf.Rad2Deg;
+            angle = Mathf.Atan2((fixedTouchField.joystickDir.normalized.y + playerBody.transform.position.y) - playerBody.transform.position.y,
+            (fixedTouchField.joystickDir.normalized.x + playerBody.transform.position.x) - playerBody.transform.position.x) * Mathf.Rad2Deg;
 
             isMoving = true;
         }

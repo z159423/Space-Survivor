@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private TextMeshProUGUI killCount;
-
+    [SerializeField] private TextMeshProUGUI getCrystalCountText;
+    [SerializeField] private TextMeshProUGUI killCountText;
+    [SerializeField] private PlayerStat playerStat;
+    [SerializeField] private CinemachineVirtualCamera cmvc;
 
     [Space]
 
@@ -31,6 +35,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+            
+
+        //print(Input.deviceOrientation);
     }
 
     public void ResetTime()
@@ -68,6 +79,9 @@ public class GameManager : MonoBehaviour
     public void PlayerDie()
     {
         EnemyGenerator.instance.StopEnemySpawn();
+
+        getCrystalCountText.text = playerStat.currentCrystal.ToString();
+        killCountText.text = currentKillCount.ToString();
 
         DieMenu.SetActive(true);
 
