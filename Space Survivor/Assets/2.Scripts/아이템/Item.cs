@@ -78,7 +78,8 @@ public class Item : MonoBehaviour
         }
 
         VFXGenerator.instance.GenerateVFX(VFXType.AtomicExplosion, player.transform.position);
-        EZCameraShake.CameraShaker.Instance.ShakeOnce(6f, 6f, .2f, 1.5f);
+        //EZCameraShake.CameraShaker.Instance.ShakeOnce(6f, 6f, .2f, 1.5f);
+        CinemachinShake.instance.ShakeCamera(5, 1f);
     }
 
     public void EnQueueThisItem()
