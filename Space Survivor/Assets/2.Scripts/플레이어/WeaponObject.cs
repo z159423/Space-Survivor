@@ -326,5 +326,5 @@ public class UpgradeModuleList
     }
 }
 
-public enum WeaponType { SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator
+public enum WeaponType { SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile
 }

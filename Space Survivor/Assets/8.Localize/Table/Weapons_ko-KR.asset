@@ -82,6 +82,15 @@ MonoBehaviour:
       \uB109\uBC31\uC2DC\uD0B5\uB2C8\uB2E4."
     m_Metadata:
       m_Items: []
+  - m_Id: 20464507889283072
+    m_Localized: "\uBA38\uC2E0\uAC74"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20464580912115712
+    m_Localized: "\uC804\uBC29\uC73C\uB85C \uB2E4\uC218\uC758 \uD22C\uC0AC\uCCB4\uB97C
+      \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
