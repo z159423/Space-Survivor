@@ -238,4 +238,9 @@ public class ProjectileLogic : MonoBehaviour
     {
         return weaponObject;
     }
+
+    public Stat GetDamage()
+    {
+        return damage;
+    }
 }
