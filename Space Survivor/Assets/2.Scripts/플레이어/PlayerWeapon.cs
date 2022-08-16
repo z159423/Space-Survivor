@@ -58,7 +58,7 @@ public class PlayerWeapon : MonoBehaviour
 
                     if (success.success)
                     {
-                        var projectileLogic = success.Object.GetComponent<ProjectileLogic>();
+                        var projectileLogic = success.Object.GetComponent<IProjectileLogic>();
                         projectileLogic.ResetProjectile();
                         projectileLogic.SetPlayerWeapon(this);
                         projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
@@ -71,7 +71,7 @@ public class PlayerWeapon : MonoBehaviour
                     {
                         var Object = Instantiate(weaponPool[i].projectilePrefab, position, Quaternion.identity);
 
-                        var projectileLogic = Object.GetComponent<ProjectileLogic>();
+                        var projectileLogic = Object.GetComponent<IProjectileLogic>();
                         projectileLogic.SetWeaponObject(weaponPool[i]);
                         projectileLogic.UpgradeProjectile(Object);
                         projectileLogic.ResetProjectile();

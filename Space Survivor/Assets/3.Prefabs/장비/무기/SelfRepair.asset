@@ -50,14 +50,14 @@ MonoBehaviour:
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
+    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
+    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
+    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
   maxWeaponLevel: 6

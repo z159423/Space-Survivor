@@ -12,6 +12,7 @@ public class ThronSpike : MonoBehaviour
     [SerializeField] private TrailRenderer trailRenderer;
     [SerializeField] private ProjectileLogic projectileLogic;
 
+    
 
     void Update()
     {

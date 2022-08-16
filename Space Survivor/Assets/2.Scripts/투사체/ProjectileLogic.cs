@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class ProjectileLogic : MonoBehaviour
+public interface IProjectileLogic
+{
+    void Fire(Transform target, int fireForce);
+}
+
+public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 {
 
     [SerializeField] private WeaponType type;
