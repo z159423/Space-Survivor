@@ -163,6 +163,8 @@ public class WeaponObject : ScriptableObject
     private void IncreseSize(GameObject projectile, float percent)
     {
         projectile.transform.localScale *= percent;
+
+        Debug.Log(projectile + "SizeUp " + percent);
     }
 
     private void IncreseRotateSpeed(ThronSpike spike, int rotate)

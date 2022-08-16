@@ -92,6 +92,12 @@ public class ProjectileLogic : MonoBehaviour
                 var dir2 = Utility.GetDirection(transform.position, transform.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)));
 
                 rigidbody.AddForce(dir2 * fireForce);
+
+                var angle = Mathf.Atan2((dir2.y + transform.position.y) - transform.position.y,
+            (dir2.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
+
+                transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
             }
             else
             {

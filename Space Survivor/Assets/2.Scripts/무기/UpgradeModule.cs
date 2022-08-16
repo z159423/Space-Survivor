@@ -10,7 +10,6 @@ public class UpgradeModule : ScriptableObject
     public float value1;
     public float value2;
     public float value3;
-
 }
 
 public enum upgradeModuleType { CoolTimeDecrease, DamageIntIncrease, IncreasedProjectiles, IncreaseSize, IncreaseFireForce, IncreseRotateSpeed, IncreseExplodeRadius

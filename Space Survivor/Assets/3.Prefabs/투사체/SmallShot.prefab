@@ -64,8 +64,8 @@ MonoBehaviour:
   spreadOffset: {x: 0, y: 0, z: 0}
   randomSpawn: 1
   randomSpawnOffset: {x: 0.2, y: 0.2, z: 0}
-  fireToNearEnemy: 0
-  fireToNearEnemyRadius: 25
+  fireToNearEnemy: 1
+  fireToNearEnemyRadius: 0
   flak: 0
   rigidbody: {fileID: 4673022242771149064}
   playerWeapon: {fileID: 0}
