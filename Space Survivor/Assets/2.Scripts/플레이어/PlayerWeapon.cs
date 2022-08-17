@@ -60,11 +60,8 @@ public class PlayerWeapon : MonoBehaviour
                     {
                         var projectileLogic = success.Object.GetComponent<IProjectileLogic>();
                         projectileLogic.ResetProjectile();
-                        projectileLogic.SetPlayerWeapon(this);
+                        projectileLogic.playerWeapon = this;
                         projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
-
-                        if (weaponPool[i].type == WeaponType.ThornSatellite)
-                            projectileLogic.GetComponent<ThronSpike>().ChangePosition(weaponPool[i].projectileAmount, j);
 
                     }
                     else
@@ -72,16 +69,14 @@ public class PlayerWeapon : MonoBehaviour
                         var Object = Instantiate(weaponPool[i].projectilePrefab, position, Quaternion.identity);
 
                         var projectileLogic = Object.GetComponent<IProjectileLogic>();
-                        projectileLogic.SetWeaponObject(weaponPool[i]);
+                        projectileLogic.weaponObject = weaponPool[i];
                         projectileLogic.UpgradeProjectile(Object);
                         projectileLogic.ResetProjectile();
-                        projectileLogic.SetPlayerWeapon(this);
-                        projectileLogic.GetWeaponObject().AddActiveProjectile(Object);
+                        projectileLogic.playerWeapon = this;
+                        projectileLogic.weaponObject.AddActiveProjectile(Object);
 
                         projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
 
-                        if (weaponPool[i].type == WeaponType.ThornSatellite)
-                            projectileLogic.GetComponent<ThronSpike>().ChangePosition(weaponPool[i].projectileAmount, j);
                     }
 
                     yield return new WaitForSeconds(weaponPool[i].firingInterval.GetFinalStatValue());
@@ -98,7 +93,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         foreach (WeaponObject pool in weaponPool)
         {
-            if (pool.type == bullet.GetType())
+            if (pool.type == bullet.type)
             {
                 pool.EnQueue(bullet.gameObject);
             }
@@ -109,7 +104,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         foreach (WeaponObject pool in weaponPool)
         {
-            if (pool.type == bullet.GetType())
+            if (pool.type == bullet.type)
             {
                 return pool.IsProjectileContain(bullet.gameObject);
             }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThronSpike : MonoBehaviour
+public class ThronSpike : ProjectileLogic
 {
 
     [SerializeField] private Transform player;
@@ -19,6 +19,12 @@ public class ThronSpike : MonoBehaviour
         transform.transform.RotateAround(player.position, rotateDir, rotateSpeed * Time.deltaTime);
     }
 
+    public override void Fire(Transform target, int fireForce)
+    {
+        base.Fire(target, fireForce);
+
+        ChangePosition(weaponObject.projectileAmount, weaponObject.activeProjectile.Count);
+    }
     public void ChangePosition(int projectileCount, int thisCount)
     {
 
@@ -41,9 +47,9 @@ public class ThronSpike : MonoBehaviour
 
     private void OnDisable()
     {
-        if(!projectileLogic.GetPlayerWeapon().CheckProjectileContainQueue(projectileLogic))
+        if(!GetPlayerWeapon().CheckProjectileContainQueue(this))
         {
-            projectileLogic.OffProjectile();
+            OffProjectile();
         }
         
     }

@@ -18,7 +18,7 @@ public class BurstMissile : MonoBehaviour
     {
         playerStat = stat;
         projectileLogic.AddDamage(playerStat.GetCurrentPlayerLevel() * 10);
-        projectileLogic.SetPlayerWeapon(playerStat.GetComponent<PlayerWeapon>());
+        projectileLogic.playerWeapon = playerStat.GetComponent<PlayerWeapon>();
     }
 
 }

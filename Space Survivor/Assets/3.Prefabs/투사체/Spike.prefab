@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6763005730519926907}
-  - component: {fileID: 7194569554524369616}
   - component: {fileID: 15706700358756952}
   - component: {fileID: 2596404529426074017}
   - component: {fileID: 5662989110531773721}
@@ -37,7 +36,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7194569554524369616
+--- !u!114 &15706700358756952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +45,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8837024627107654669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f1302ced0e35f4fb31f53e14d91a76, type: 3}
+  m_Script: {fileID: 11500000, guid: b50523a4145fed744901e370c4d4a7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
@@ -70,28 +69,14 @@ MonoBehaviour:
   fireToNearEnemyRadius: 7
   flak: 0
   rigidbody: {fileID: 2346821762138843853}
-  playerWeapon: {fileID: 0}
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
-  weaponObject: {fileID: 0}
---- !u!114 &15706700358756952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8837024627107654669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b50523a4145fed744901e370c4d4a7ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   player: {fileID: 0}
   rotateSpeed: 150
   rotateDir: {x: 0, y: 0, z: 1}
   trailRenderer: {fileID: 5662989110531773721}
-  projectileLogic: {fileID: 7194569554524369616}
+  projectileLogic: {fileID: 0}
 --- !u!212 &2596404529426074017
 SpriteRenderer:
   m_ObjectHideFlags: 0

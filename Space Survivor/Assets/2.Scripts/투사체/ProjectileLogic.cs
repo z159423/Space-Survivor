@@ -5,13 +5,19 @@ using UnityEngine.VFX;
 
 public interface IProjectileLogic
 {
+    //public WeaponType type { get; }
+    public PlayerWeapon playerWeapon { get; set; }
+    public WeaponObject weaponObject { get; set;}
+
     void Fire(Transform target, int fireForce);
+    void ResetProjectile();
+    void UpgradeProjectile(GameObject projectile);
 }
 
 public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 {
 
-    [SerializeField] private WeaponType type;
+    public WeaponType type;
     [Space]
 
     //[SerializeField] private float fireForce = 1000f;
@@ -51,10 +57,10 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     [Space]
 
     [SerializeField]new private Rigidbody2D rigidbody;
-    [SerializeField]private PlayerWeapon playerWeapon;
+    [SerializeField] public PlayerWeapon playerWeapon { get; set; }
     [SerializeField] private ParticleSystem[] vfxs;
     [SerializeField] private TrailRenderer[] trails;
-    [SerializeField] private WeaponObject weaponObject;
+    [SerializeField] public WeaponObject weaponObject { get; set; }
 
     private void OnEnable()
     {
@@ -69,7 +75,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         }
     }
 
-    public void Fire(Transform target, int fireForce)
+    public virtual void Fire(Transform target, int fireForce)
     {
         for (int i = 0; i < trails.Length; i++)
         {
@@ -121,8 +127,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
             rigidbody.AddForce(dir * fireForce);
         }
-
-        
 
         void AddForce(Transform target, int fireForce)
         {
@@ -208,16 +212,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         hitCount = 0;
     }
 
-    public new WeaponType GetType()
-    {
-        return type;
-    }
-
-    public void SetPlayerWeapon(PlayerWeapon weapon)
-    {
-        playerWeapon = weapon;
-    }
-
     public PlayerWeapon GetPlayerWeapon()
     {
         return playerWeapon;
@@ -237,17 +231,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     {
         damage.ClearIntModifier();
         damage.ClearPercentModifier();
-
-    }
-
-    public void SetWeaponObject(WeaponObject @object)
-    {
-        weaponObject = @object;
-    }
-
-    public WeaponObject GetWeaponObject()
-    {
-        return weaponObject;
     }
 
     public Stat GetDamage()
