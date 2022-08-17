@@ -50,40 +50,11 @@ public class PlayerStat : MonoBehaviour
         playerLevelText.text = "Level " + playerLevel.ToString();
     }
 
-    private void FixedUpdate()
-    {
-        int totalDamage = 0;
-
-        for (int i = 0; i < enteredEnemyList.Count; i++)
-        {
-            if (enteredEnemyList[i].gameObject.activeSelf)
-                totalDamage += enteredEnemyList[i].GetDamage();
-            else
-            {
-                enteredEnemyList.Remove(enteredEnemyList[i]);
-
-            }
-                
-
-        }
-
-        if (totalDamage > 0)
-            TakeDamage(totalDamage);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Enemy"))
         {
-            enteredEnemyList.Add(collision.transform.GetComponent<EnemyStat>());
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.transform.CompareTag("Enemy"))
-        {
-            enteredEnemyList.Remove(collision.transform.GetComponent<EnemyStat>());
+            TakeDamage(collision.transform.GetComponent<EnemyStat>().GetDamage());
         }
     }
 
