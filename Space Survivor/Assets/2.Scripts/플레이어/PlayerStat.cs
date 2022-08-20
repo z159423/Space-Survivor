@@ -34,6 +34,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] GameObject dieVFX;
 
     private bool playerDie = false;
+    private bool whileLevelUp = false;
     private GameObject currentShipBody;
     public UnityEvent startGameEvent;
     public UnityEvent playerDieEvent;
@@ -48,13 +49,6 @@ public class PlayerStat : MonoBehaviour
     private void OnEnable()
     {
         playerLevelText.text = "Level " + playerLevel.ToString();
-    }
-
-    private void Update() {
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            GetExp(100);
-        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -103,6 +97,9 @@ public class PlayerStat : MonoBehaviour
 
     public void GetExp(int exp)
     {
+        if (whileLevelUp)
+            return;
+            
         currentExp += exp;
 
         OnChangeExp();
@@ -110,7 +107,7 @@ public class PlayerStat : MonoBehaviour
 
     private void OnChangeExp()
     {
-        if(currentExp >= maxExp)                    //래벨업 경험치에 도달했을시
+        if (currentExp >= maxExp)                    //래벨업 경험치에 도달했을시
         {
             LevelUp();
         }
@@ -130,6 +127,7 @@ public class PlayerStat : MonoBehaviour
 
     private void LevelUp()
     {
+        whileLevelUp = true;
         playerLevel++;
 
         LevelUpManager.instance.StartWeaponUpgrade();
@@ -145,6 +143,8 @@ public class PlayerStat : MonoBehaviour
         var remainExp = currentExp - maxExp;
 
         OnChangeExp();
+
+        whileLevelUp = false;
     }
 
     public bool GetPlayerDie()
@@ -173,7 +173,7 @@ public class PlayerStat : MonoBehaviour
         playerWeapon.ResetPlayerWeapon();
         ClearWeaponSlots();
 
-        
+
     }
 
     public void PlayGame()
@@ -244,7 +244,7 @@ public class PlayerStat : MonoBehaviour
     {
         WeaponSlot[] slots = weaponSlotParent.GetComponentsInChildren<WeaponSlot>();
 
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             Destroy(slots[i].gameObject);
         }

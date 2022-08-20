@@ -124,8 +124,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         if(flak)
         {
             var dir = Utility.GetDirection(transform.position, transform.position + weaponObject.GetRandomDir());
-
-            rigidbody.AddForce(dir * fireForce);
+            //rigidbody.AddForce(dir * fireForce);
         }
 
         void AddForce(Transform target, int fireForce)

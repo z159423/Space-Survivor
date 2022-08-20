@@ -32,7 +32,7 @@ public class UpgradeSlot : MonoBehaviour
 
 
 
-        for (int i = 0; i < LevelUpManager.instance.RequestWeaponLevel(weaponObject.type) -1; i++)
+        for (int i = 0; i < LevelUpManager.instance.RequestWeaponLevel(weaponObject.type) - 1; i++)
         {
             Instantiate(upgradeNodePrefab, upgradeNodeSlotparent);
         }
@@ -61,6 +61,7 @@ public class UpgradeSlot : MonoBehaviour
             moduleLevel.text = LevelUpManager.instance.RequestWeaponLevel(weaponObject.type).ToString() + " / " + LevelUpManager.instance.RequestMaxWeaponLevel(weaponObject.type).ToString();
         }*/
 
+        /*
         var keyName1 = weaponObject.type.ToString();
 
         var localizedString1 = new LocalizedString("Weapons", keyName1);
@@ -71,6 +72,35 @@ public class UpgradeSlot : MonoBehaviour
         {
             string str = stringOperation1.Result;
             moduleName.text = str;
+        }*/
+
+        //StartCoroutine(GetLocalizedWeaponNameAsynce());
+
+        
+
+        //무기 이미지로 변경
+        weaponImage.sprite = weaponObject.weaponImage;
+
+
+    }
+
+    public IEnumerator GetLocalizedWeaponTextAsynce()
+    {
+        var keyName1 = weaponObject.type.ToString();
+
+        var localizedString1 = new LocalizedString("Weapons", keyName1);
+
+        var stringOperation1 = localizedString1.GetLocalizedStringAsync();
+        while (true)
+        {
+            if (stringOperation1.IsDone && stringOperation1.Status == AsyncOperationStatus.Succeeded)
+            {
+                string str = stringOperation1.Result;
+                moduleName.text = str;
+
+                break;
+            }
+            yield return null;
         }
 
         int weaponLevel = LevelUpManager.instance.RequestWeaponLevel(weaponObject.type);
@@ -84,10 +114,17 @@ public class UpgradeSlot : MonoBehaviour
 
             //var stringOperation = LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Weapons", keyName);
             var stringOperation = localizedString.GetLocalizedStringAsync();
-            if (stringOperation.IsDone && stringOperation.Status == AsyncOperationStatus.Succeeded)
+
+            while (true)
             {
-                string str = stringOperation.Result;
-                moduleDetail.text = str;
+                if (stringOperation.IsDone && stringOperation.Status == AsyncOperationStatus.Succeeded)
+                {
+                    string str = stringOperation.Result;
+                    moduleDetail.text = str;
+
+                    break;
+                }
+                yield return null;
             }
         }
         else  //아이템의 레벨이 1 이상이면 다음 업그레이드 노드들이 출력되도록
@@ -106,10 +143,17 @@ public class UpgradeSlot : MonoBehaviour
 
                 //var stringOperation = LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Weapons", keyName);
                 var stringOperation = localizedString.GetLocalizedStringAsync();
-                if (stringOperation.IsDone && stringOperation.Status == AsyncOperationStatus.Succeeded)
+
+                while (true)
                 {
-                    string str = stringOperation.Result;
-                    moduleDetail.text = moduleDetail.text + str + "\n";
+                    if (stringOperation.IsDone && stringOperation.Status == AsyncOperationStatus.Succeeded)
+                    {
+                        string str = stringOperation.Result;
+                        moduleDetail.text = moduleDetail.text + str + "\n";
+
+                        break;
+                    }
+                    yield return null;
                 }
 
                 //LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Upgrades").Completed += result => moduleDetail.text = result.DebugName;
@@ -117,16 +161,12 @@ public class UpgradeSlot : MonoBehaviour
 
             }
         }
-
-        //무기 이미지로 변경
-        weaponImage.sprite = weaponObject.weaponImage;
-
-
+        
     }
 
     public void SelectUpgrade()
     {
         LevelUpManager.instance.SelectUpgrade(weaponObject);
-        
+
     }
 }

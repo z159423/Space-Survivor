@@ -69,10 +69,8 @@ MonoBehaviour:
   fireToNearEnemyRadius: 0.01
   flak: 1
   rigidbody: {fileID: 4673022242771149064}
-  playerWeapon: {fileID: 0}
   vfxs: []
   trails: []
-  weaponObject: {fileID: 0}
 --- !u!114 &6314092904246990039
 MonoBehaviour:
   m_ObjectHideFlags: 0

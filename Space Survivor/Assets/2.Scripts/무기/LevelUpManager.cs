@@ -119,6 +119,7 @@ public class LevelUpManager : MonoBehaviour
             var panel = Instantiate(upgradePanelPrefab, UpgradeSlotParent);
             var randomWeaponObject = currentObtainableList[Random.Range(0, currentObtainableList.Count)];
             panel.GetComponent<UpgradeSlot>().InitSlot(randomWeaponObject);
+            StartCoroutine(panel.GetComponent<UpgradeSlot>().GetLocalizedWeaponTextAsynce());
             currentObtainableList.Remove(randomWeaponObject);
             currentUpgradePanel.Add(panel);
         }
