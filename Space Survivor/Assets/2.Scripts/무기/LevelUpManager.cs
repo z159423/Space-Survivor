@@ -16,7 +16,11 @@ public class LevelUpManager : MonoBehaviour
     [Space]
 
     [SerializeField] private PlayerWeapon playerWeapon;
+    public PlayerStat playerStat;
+
     [SerializeField] private GameObject upgradePanelPrefab;
+    [SerializeField] private GameObject crystalPanelPrefab;
+
 
     [Space]
 
@@ -28,6 +32,8 @@ public class LevelUpManager : MonoBehaviour
 
     private List<WeaponObject> currentObtainableList = new List<WeaponObject>();
     private List<GameObject> currentUpgradePanel = new List<GameObject>();
+    private List<GameObject> crystalPanel = new List<GameObject>();
+
 
     public static LevelUpManager instance;
 
@@ -49,10 +55,17 @@ public class LevelUpManager : MonoBehaviour
     {
         UpgradeUI.SetActive(false);
 
-        for(int i = 0; i < currentUpgradePanel.Count; i++)
+        for (int i = 0; i < currentUpgradePanel.Count; i++)
         {
             Destroy(currentUpgradePanel[i]);
         }
+
+        for (int i = 0; i < crystalPanel.Count; i++)
+        {
+            Destroy(crystalPanel[i]);
+        }
+
+        crystalPanel.Clear();
 
         currentUpgradePanel.Clear();
         currentObtainableList.Clear();
@@ -63,14 +76,14 @@ public class LevelUpManager : MonoBehaviour
     private void MakeWeaponsList()
     {
         //획득 가능한 무기들 추가
-        currentObtainableList.AddRange(obtainableWeapons);                  
+        currentObtainableList.AddRange(obtainableWeapons);
 
         var maxWeapons = playerWeapon.GetMaxLevelWeaponList();
 
         //이미 만랩인 무기 리스트에서 제거
-        for (int i = 0; i < maxWeapons.Count; i++)                           
+        for (int i = 0; i < maxWeapons.Count; i++)
         {
-            for(int j = 0; j < currentObtainableList.Count; j++)
+            for (int j = 0; j < currentObtainableList.Count; j++)
             {
                 if (currentObtainableList[j].type == maxWeapons[i].type)
                     currentObtainableList.Remove(currentObtainableList[j]);
@@ -78,17 +91,17 @@ public class LevelUpManager : MonoBehaviour
         }
 
         //만약 무기 슬롯이 꽉차면 새로운 무기가 등장하지 않게 리스트에서 삭제
-        if(playerWeapon.weaponPool.Count >= maxWeaponCount)
+        if (playerWeapon.weaponPool.Count >= maxWeaponCount)
         {
-            for(int i = 0; i < currentObtainableList.Count; i++)
+            for (int i = 0; i < currentObtainableList.Count; i++)
             {
-                if(!playerWeapon.GetIsWeaponHave(currentObtainableList[i].type))
+                if (!playerWeapon.GetIsWeaponHave(currentObtainableList[i].type))
                 {
                     //Debug.LogError(currentObtainableList[i].type);
                     currentObtainableList.Remove(currentObtainableList[i]);
                     i--;
                 }
-                    
+
             }
         }
 
@@ -96,7 +109,12 @@ public class LevelUpManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             if (currentObtainableList.Count <= 0)
-                return;
+            {
+                var crystal = Instantiate(crystalPanelPrefab, UpgradeSlotParent);
+                crystalPanel.Add(crystal);
+                continue;
+            }
+
 
             var panel = Instantiate(upgradePanelPrefab, UpgradeSlotParent);
             var randomWeaponObject = currentObtainableList[Random.Range(0, currentObtainableList.Count)];
@@ -104,13 +122,14 @@ public class LevelUpManager : MonoBehaviour
             currentObtainableList.Remove(randomWeaponObject);
             currentUpgradePanel.Add(panel);
         }
-        
+
     }
 
     public void SelectUpgrade(WeaponObject weaponObject)
     {
         playerWeapon.UpgradeWeapon(weaponObject);
 
+        playerStat.AfterUpgrade();
         EndUpgrade();
     }
 
@@ -155,9 +174,9 @@ public class LevelUpManager : MonoBehaviour
     {
         Transform[] childList = gameObject.GetComponentsInChildren<Transform>();
 
-        if(childList != null)
+        if (childList != null)
         {
-            for(int i = 1; i < childList.Length; i++)
+            for (int i = 1; i < childList.Length; i++)
             {
                 if (childList[i] != transform)
                     Destroy(childList[i].gameObject);

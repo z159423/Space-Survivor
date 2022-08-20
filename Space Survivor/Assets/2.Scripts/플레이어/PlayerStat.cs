@@ -50,6 +50,13 @@ public class PlayerStat : MonoBehaviour
         playerLevelText.text = "Level " + playerLevel.ToString();
     }
 
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            GetExp(100);
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Enemy"))
@@ -106,15 +113,6 @@ public class PlayerStat : MonoBehaviour
         if(currentExp >= maxExp)                    //래벨업 경험치에 도달했을시
         {
             LevelUp();
-
-            currentExp = 0;
-
-            maxExp += 10;
-
-            var remainExp = currentExp - maxExp;
-
-            if (remainExp > 0)
-                GetExp(remainExp); 
         }
 
         float state = (float)currentExp;
@@ -136,6 +134,17 @@ public class PlayerStat : MonoBehaviour
 
         LevelUpManager.instance.StartWeaponUpgrade();
         playerLevelText.text = "Level " + playerLevel.ToString();
+    }
+
+    public void AfterUpgrade()
+    {
+        currentExp = 0;
+
+        maxExp += 10;
+
+        var remainExp = currentExp - maxExp;
+
+        OnChangeExp();
     }
 
     public bool GetPlayerDie()

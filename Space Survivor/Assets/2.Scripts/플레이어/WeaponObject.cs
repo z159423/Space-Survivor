@@ -22,7 +22,7 @@ public class WeaponObject : ScriptableObject
     public string fireDirName = "FireDir1";
 
     public bool ready = true;
-    public Stat coolTime = new Stat();                 //¹ß»ç ÄðÅ¸ÀÓ
+    public Stat coolTime = new Stat();                 //ë°œì‚¬ ì¿¨íƒ€ìž„
 
     [Space]
 
@@ -30,8 +30,8 @@ public class WeaponObject : ScriptableObject
 
     [Space]
 
-    public int projectileAmount = 1;            //¹ß»ç °³¼ö
-    public Stat firingInterval = new Stat();         //¹ß»ç ÁÖ±â
+    public int projectileAmount = 1;            //ë°œì‚¬ ê°œìˆ˜
+    public Stat firingInterval = new Stat();         //ë°œì‚¬ ì£¼ê¸°
 
     [Space]
 
@@ -164,7 +164,7 @@ public class WeaponObject : ScriptableObject
     {
         projectile.transform.localScale *= percent;
 
-        Debug.Log(projectile + "SizeUp " + percent);
+        //Debug.Log(projectile + "SizeUp " + percent);
     }
 
     private void IncreseRotateSpeed(ThronSpike spike, int rotate)
@@ -318,7 +318,7 @@ public class UpgradeModuleList
 {
     public List<UpgradeModule> upgradeModules = new List<UpgradeModule>();
 
-    //»ç¶÷ÀÌ ÀÐÀ» ¼ö ÀÖ´Â ¾ð¾î·Î º¯È¯µÚ return [¿¹ : -0.1f => 10]
+    //ì‚¬ëžŒì´ ì½ì„ ìˆ˜ ìžˆëŠ” ì–¸ì–´ë¡œ ë³€í™˜ë’¤ return [ì˜ˆ : -0.1f => 10]
     public string GetValueHumanReadableValue(int i)
     {
         if (Mathf.Abs(upgradeModules[i].value1) < 1)
