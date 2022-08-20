@@ -34,21 +34,41 @@ public class Utility : MonoBehaviour
         return closestTarget;
     }
 
-    public static void Explode(Vector2 center , float damage, float radius,int knockbackForce, VFXType vfxType, EZCameraShake.CameraShakeInstance cameraShakeInstance = null)
+    public static Transform GetRandomTargetInRadius(Transform origin, float radius)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(origin.position, radius);
+
+        List<EnemyStat> enemyList = new List<EnemyStat>();
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].TryGetComponent<EnemyStat>(out EnemyStat enemy))
+            {
+                enemyList.Add(enemy);
+            }
+        }
+
+        if (enemyList.Count > 0)
+            return enemyList[Random.Range(0, enemyList.Count)].transform;
+        else
+            return null;
+    }
+
+    public static void Explode(Vector2 center, float damage, float radius, int knockbackForce, VFXType vfxType, EZCameraShake.CameraShakeInstance cameraShakeInstance = null)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(center, radius);
 
-        for(int i = 0; i < colliders.Length; i++)
+        for (int i = 0; i < colliders.Length; i++)
         {
-            if(colliders[i].TryGetComponent<EnemyStat>(out EnemyStat enemy))
+            if (colliders[i].TryGetComponent<EnemyStat>(out EnemyStat enemy))
             {
                 enemy.TakeDamage(Utility.RountToInt(damage));
-                enemy.Knockback(center,knockbackForce);
+                enemy.Knockback(center, knockbackForce);
             }
         }
 
         VFXGenerator.instance.GenerateVFX(vfxType, center);
-        
+
 
         if (cameraShakeInstance != null)
             EZCameraShake.CameraShaker.Instance.Shake(cameraShakeInstance);
@@ -63,7 +83,7 @@ public class Utility : MonoBehaviour
     {
         var random = Random.Range(0, 100);
 
-        if(percent > random)
+        if (percent > random)
         {
             return true;
         }

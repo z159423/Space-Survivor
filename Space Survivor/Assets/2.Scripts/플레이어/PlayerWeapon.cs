@@ -28,65 +28,18 @@ public class PlayerWeapon : MonoBehaviour
             {
                 weaponSlotList[i].weaponCoolTimeImage.StartCoolTime(weaponPool[i].coolTime.GetFinalStatValue());
                 StartCoroutine(ProjectileReload(weaponPool[i]));
-                StartCoroutine(GenerateProjectile(weaponPool[i].type, weaponPool[i].GetFirePos().position));
+
+                StartCoroutine(weaponPool[i].Fire(weaponPool[i].GetFirePos().position, this));
             }
         }
     }
 
-
     public IEnumerator ProjectileReload(WeaponObject pool)
     {
-        //var bullet = Instantiate(bullet1, firePos.position, Quaternion.identity);
-        //bullet.GetComponent<ProjectileLogic>().Fire(Utility.GetDirection(firePos.position, fireDir.position));
-
         pool.ready = false;
 
         yield return new WaitForSeconds(pool.coolTime.GetFinalStatValue());
         pool.ready = true;
-    }
-
-    private IEnumerator GenerateProjectile(WeaponType type, Vector2 position)
-    {
-
-        for(int i = 0; i < weaponPool.Count; i++)
-        {
-            if (weaponPool[i].type == type)
-            {
-                for (int j = 0; j < weaponPool[i].projectileAmount; j++)
-                {
-                    var success = weaponPool[i].DeQueue(position);
-
-                    if (success.success)
-                    {
-                        var projectileLogic = success.Object.GetComponent<IProjectileLogic>();
-                        projectileLogic.ResetProjectile();
-                        projectileLogic.playerWeapon = this;
-                        projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
-
-                    }
-                    else
-                    {
-                        var Object = Instantiate(weaponPool[i].projectilePrefab, position, Quaternion.identity);
-
-                        var projectileLogic = Object.GetComponent<IProjectileLogic>();
-                        projectileLogic.weaponObject = weaponPool[i];
-                        projectileLogic.UpgradeProjectile(Object);
-                        projectileLogic.ResetProjectile();
-                        projectileLogic.playerWeapon = this;
-                        projectileLogic.weaponObject.AddActiveProjectile(Object);
-
-                        projectileLogic.Fire(weaponPool[i].GetFireDir(), weaponPool[i].FireForce.GetFinalStatValueAsInt());
-
-                    }
-
-                    yield return new WaitForSeconds(weaponPool[i].firingInterval.GetFinalStatValue());
-
-                }
-
-                if (weaponPool[i].type == WeaponType.MeteoriteFlak)
-                    weaponPool[i].ChangeRandomDir();
-            }
-        }
     }
 
     public void EnQueueBullet(ProjectileLogic bullet)

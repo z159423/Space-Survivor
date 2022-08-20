@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6763005730519926907}
-  - component: {fileID: 7194569554524369616}
+  - component: {fileID: -8362305749650580101}
   - component: {fileID: 2596404529426074017}
   - component: {fileID: 4673022242771149064}
   - component: {fileID: 8210337936861823044}
@@ -36,7 +36,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7194569554524369616
+--- !u!114 &-8362305749650580101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8837024627107654669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f1302ced0e35f4fb31f53e14d91a76, type: 3}
+  m_Script: {fileID: 11500000, guid: b64e47b0812986c4fa54adb46efb5044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
@@ -56,24 +56,22 @@ MonoBehaviour:
     maxValue: 0
     MaxValue: 1000
   hitLimit: 1
-  knockBackForce: 3
+  knockBackForce: 0
   deleteOnTime: 1
   deleteTime: 5
   deleteVFXType: 4
   lookFirePos: 0
   Spread: 1
-  spreadOffset: {x: 0.5, y: 0.5, z: 0}
+  spreadOffset: {x: 0, y: 0, z: 0}
   randomSpawn: 0
   randomSpawnOffset: {x: 0, y: 0, z: 0}
   fireToNearEnemy: 1
   fireToNearEnemyRadius: 7
   flak: 0
   rigidbody: {fileID: 4673022242771149064}
-  playerWeapon: {fileID: 0}
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
-  weaponObject: {fileID: 0}
 --- !u!212 &2596404529426074017
 SpriteRenderer:
   m_ObjectHideFlags: 0
