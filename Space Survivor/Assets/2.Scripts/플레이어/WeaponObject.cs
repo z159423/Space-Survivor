@@ -79,6 +79,8 @@ public class WeaponObject : ScriptableObject
             yield return new WaitForSeconds(firingInterval.GetFinalStatValue());
 
         }
+
+        ChangeRandomDir();
     }
 
     public void UpgradeWeapon(UpgradeModuleList modules)
