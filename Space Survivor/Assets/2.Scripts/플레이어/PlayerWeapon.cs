@@ -191,6 +191,11 @@ public class PlayerWeapon : MonoBehaviour
                 {
                     burstMissile.InitMissile(player.GetComponentInParent<PlayerStat>());
                 }
+
+                if(missile.TryGetComponent<ProjectileLogic>(out ProjectileLogic projectile))
+                {
+                    projectile.Fire(null,0);
+                }
             }
         }
     }
