@@ -22,7 +22,7 @@ public class WeaponObject : ScriptableObject
     public string fireDirName = "FireDir1";
 
     public bool ready = true;
-    public Stat coolTime = new Stat();                 //¹ß»ç ÄðÅ¸ÀÓ
+    public Stat coolTime = new Stat();                 //ë°œì‚¬ ì¿¨íƒ€ìž„
 
     [Space]
 
@@ -30,8 +30,8 @@ public class WeaponObject : ScriptableObject
 
     [Space]
 
-    public int projectileAmount = 1;            //¹ß»ç °³¼ö
-    public Stat firingInterval = new Stat();         //¹ß»ç ÁÖ±â
+    public int projectileAmount = 1;            //ë°œì‚¬ ê°œìˆ˜
+    public Stat firingInterval = new Stat();         //ë°œì‚¬ ì£¼ê¸°
 
     [Space]
 
@@ -47,23 +47,59 @@ public class WeaponObject : ScriptableObject
     public int maxWeaponLevel = 6;
     private int currentWeaponLevel = 1;
 
+    public IEnumerator Fire(Vector2 position, PlayerWeapon playerWeapon)
+    {
+        for (int j = 0; j < projectileAmount; j++)
+        {
+            var success = DeQueue(position);
+
+            if (success.success)
+            {
+                var projectileLogic = success.Object.GetComponent<IProjectileLogic>();
+                projectileLogic.ResetProjectile();
+                projectileLogic.playerWeapon = playerWeapon;
+                projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
+
+            }
+            else
+            {
+                var Object = Instantiate(projectilePrefab, position, Quaternion.identity);
+
+                var projectileLogic = Object.GetComponent<IProjectileLogic>();
+                projectileLogic.weaponObject = this;
+                projectileLogic.UpgradeProjectile(Object);
+                projectileLogic.ResetProjectile();
+                projectileLogic.playerWeapon = playerWeapon;
+                projectileLogic.weaponObject.AddActiveProjectile(Object);
+
+                projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
+
+            }
+
+            yield return new WaitForSeconds(firingInterval.GetFinalStatValue());
+
+        }
+
+        ChangeRandomDir();
+    }
+
     public void UpgradeWeapon(UpgradeModuleList modules)
     {
-        for(int i = 0; i < modules.upgradeModules.Count; i++)
+        for (int i = 0; i < modules.upgradeModules.Count; i++)
         {
             switch (modules.upgradeModules[i].upgradeModuleType)
             {
                 case upgradeModuleType.DamageIntIncrease:
 
-                    foreach(GameObject projectile in bulletStack)
+                    foreach (GameObject projectile in bulletStack)
                     {
-                        if(projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
+                        if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
                         {
                             DamageIncreaseInt(logic, Utility.RountToInt(modules.upgradeModules[i].value1));
                         }
                     }
 
-                    for(int j = 0; j < activeProjectile.Count; j++)
+                    for (int j = 0; j < activeProjectile.Count; j++)
                     {
                         if (activeProjectile[j].TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
                         {
@@ -140,7 +176,7 @@ public class WeaponObject : ScriptableObject
                         }
                     }
 
-                    if(type != VFXType.none)
+                    if (type != VFXType.none)
                         VFXGenerator.instance.AddParticleSize(type, 0.1f);
 
                     break;
@@ -152,7 +188,7 @@ public class WeaponObject : ScriptableObject
         }
 
         currentWeaponLevel++;
-        
+
     }
 
     private void DamageIncreaseInt(ProjectileLogic logic, int value)
@@ -164,7 +200,7 @@ public class WeaponObject : ScriptableObject
     {
         projectile.transform.localScale *= percent;
 
-        Debug.Log(projectile + "SizeUp " + percent);
+        //Debug.Log(projectile + "SizeUp " + percent);
     }
 
     private void IncreseRotateSpeed(ThronSpike spike, int rotate)
@@ -318,7 +354,7 @@ public class UpgradeModuleList
 {
     public List<UpgradeModule> upgradeModules = new List<UpgradeModule>();
 
-    //»ç¶÷ÀÌ ÀÐÀ» ¼ö ÀÖ´Â ¾ð¾î·Î º¯È¯µÚ return [¿¹ : -0.1f => 10]
+    //ì‚¬ëžŒì´ ì½ì„ ìˆ˜ ìžˆëŠ” ì–¸ì–´ë¡œ ë³€í™˜ë’¤ return [ì˜ˆ : -0.1f => 10]
     public string GetValueHumanReadableValue(int i)
     {
         if (Mathf.Abs(upgradeModules[i].value1) < 1)
@@ -328,6 +364,8 @@ public class UpgradeModuleList
     }
 }
 
-public enum WeaponType { SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
+public enum WeaponType
+{
+    SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
     SelfRepair
 }

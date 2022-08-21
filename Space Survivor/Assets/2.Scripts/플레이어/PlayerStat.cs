@@ -34,6 +34,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] GameObject dieVFX;
 
     private bool playerDie = false;
+    private bool whileLevelUp = false;
     private GameObject currentShipBody;
     public UnityEvent startGameEvent;
     public UnityEvent playerDieEvent;
@@ -96,6 +97,9 @@ public class PlayerStat : MonoBehaviour
 
     public void GetExp(int exp)
     {
+        if (whileLevelUp)
+            return;
+            
         currentExp += exp;
 
         OnChangeExp();
@@ -103,18 +107,9 @@ public class PlayerStat : MonoBehaviour
 
     private void OnChangeExp()
     {
-        if(currentExp >= maxExp)                    //래벨업 경험치에 도달했을시
+        if (currentExp >= maxExp)                    //래벨업 경험치에 도달했을시
         {
             LevelUp();
-
-            currentExp = 0;
-
-            maxExp += 10;
-
-            var remainExp = currentExp - maxExp;
-
-            if (remainExp > 0)
-                GetExp(remainExp); 
         }
 
         float state = (float)currentExp;
@@ -132,10 +127,24 @@ public class PlayerStat : MonoBehaviour
 
     private void LevelUp()
     {
+        whileLevelUp = true;
         playerLevel++;
 
         LevelUpManager.instance.StartWeaponUpgrade();
         playerLevelText.text = "Level " + playerLevel.ToString();
+    }
+
+    public void AfterUpgrade()
+    {
+        currentExp = 0;
+
+        maxExp += 10;
+
+        var remainExp = currentExp - maxExp;
+
+        OnChangeExp();
+
+        whileLevelUp = false;
     }
 
     public bool GetPlayerDie()
@@ -164,7 +173,7 @@ public class PlayerStat : MonoBehaviour
         playerWeapon.ResetPlayerWeapon();
         ClearWeaponSlots();
 
-        
+
     }
 
     public void PlayGame()
@@ -235,7 +244,7 @@ public class PlayerStat : MonoBehaviour
     {
         WeaponSlot[] slots = weaponSlotParent.GetComponentsInChildren<WeaponSlot>();
 
-        for(int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
             Destroy(slots[i].gameObject);
         }

@@ -7,7 +7,7 @@ public interface IProjectileLogic
 {
     //public WeaponType type { get; }
     public PlayerWeapon playerWeapon { get; set; }
-    public WeaponObject weaponObject { get; set;}
+    public WeaponObject weaponObject { get; set; }
 
     void Fire(Transform target, int fireForce);
     void ResetProjectile();
@@ -48,7 +48,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     [Space]
 
     [SerializeField] private bool fireToNearEnemy = false;
-    [SerializeField] private float fireToNearEnemyRadius = 25f;
+    [SerializeField] protected float fireToNearEnemyRadius = 25f;
 
     [Space]
 
@@ -56,7 +56,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     [Space]
 
-    [SerializeField]new private Rigidbody2D rigidbody;
+    [SerializeField] new protected Rigidbody2D rigidbody;
     [SerializeField] public PlayerWeapon playerWeapon { get; set; }
     [SerializeField] private ParticleSystem[] vfxs;
     [SerializeField] private TrailRenderer[] trails;
@@ -64,7 +64,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     private void OnEnable()
     {
-        for(int i = 0; i < vfxs.Length; i++)
+        for (int i = 0; i < vfxs.Length; i++)
         {
             vfxs[i].transform.SetParent(transform);
             vfxs[i].transform.localPosition = Vector3.zero;
@@ -82,7 +82,9 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
             trails[i].Clear();
         }
 
-        rigidbody.velocity = Vector2.zero;
+        /* rigidbody.velocity = Vector2.zero;
+
+        Vector2 fireDir = Vector2.zero;
 
         if (lookFirePos)
         {
@@ -124,7 +126,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         if(flak)
         {
             var dir = Utility.GetDirection(transform.position, transform.position + weaponObject.GetRandomDir());
-
             rigidbody.AddForce(dir * fireForce);
         }
 
@@ -148,17 +149,40 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
                 transform.position += new Vector3(Random.Range(-randomSpawnOffset.x, randomSpawnOffset.x), Random.Range(-randomSpawnOffset.y, randomSpawnOffset.y));
             }
 
-        }
+        } */
 
         if (deleteOnTime)
             StartCoroutine(DeleteOnTime());
     }
 
+    protected void AddForce(Transform target, int fireForce)
+    {
+        Vector2 dir;
+
+        if (Spread)
+        {
+            dir = Utility.GetDirection(transform.position, target.position + new Vector3(Random.Range(-spreadOffset.x, spreadOffset.x), Random.Range(-spreadOffset.y, spreadOffset.y)));
+            rigidbody.AddForce(dir * fireForce);
+        }
+        else
+        {
+            dir = Utility.GetDirection(transform.position, target.position);
+            rigidbody.AddForce(dir * fireForce);
+        }
+
+        if (randomSpawn)
+        {
+            transform.position += new Vector3(Random.Range(-randomSpawnOffset.x, randomSpawnOffset.x), Random.Range(-randomSpawnOffset.y, randomSpawnOffset.y));
+        }
+
+    }
+
+    //시간지나면 파괴되도록
     private IEnumerator DeleteOnTime()
     {
         yield return new WaitForSeconds(deleteTime);
 
-        if(gameObject.activeSelf)
+        if (gameObject.activeSelf)
         {
             OffProjectile();
         }
@@ -170,16 +194,17 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         {
             hitCount++;
 
-            if(hitCount >= hitLimit)
+            if (hitCount >= hitLimit)
             {
                 OffProjectile();
             }
-            
+
             collision.GetComponent<EnemyStat>().TakeDamage(damage.GetFinalStatValueAsInt());
             collision.GetComponent<EnemyStat>().Knockback(collision.bounds.center, knockBackForce);
         }
     }
 
+    //발사체와 발사체에 부착되어 있는 vfx해제
     public void OffProjectile()
     {
         for (int i = 0; i < vfxs.Length; i++)
@@ -199,7 +224,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
             VFXGenerator.instance.GenerateVFX(deleteVFXType, transform.position);
         }
 
-        
+
     }
 
     public void UpgradeProjectile(GameObject projectile)

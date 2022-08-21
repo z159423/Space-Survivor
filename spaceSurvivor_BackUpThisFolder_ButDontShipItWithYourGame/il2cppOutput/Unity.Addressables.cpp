@@ -28230,7 +28230,7 @@ IL_00e6_1:
 			String_t* L_93 = V_7;
 			NullCheck(L_92);
 			Type_t* L_94;
-			L_94 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(17 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_92, L_93);
+			L_94 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(18 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_92, L_93);
 			V_9 = L_94;
 			// return JsonUtility.FromJson(jsonText, t);
 			Type_t* L_95 = V_9;
@@ -33917,7 +33917,7 @@ IL_0050:
 		String_t* L_22 = V_2;
 		NullCheck(L_21);
 		Type_t* L_23;
-		L_23 = VirtualFuncInvoker3< Type_t*, String_t*, bool, bool >::Invoke(21 /* System.Type System.Reflection.Assembly::GetType(System.String,System.Boolean,System.Boolean) */, L_21, L_22, (bool)0, (bool)0);
+		L_23 = VirtualFuncInvoker3< Type_t*, String_t*, bool, bool >::Invoke(22 /* System.Type System.Reflection.Assembly::GetType(System.String,System.Boolean,System.Boolean) */, L_21, L_22, (bool)0, (bool)0);
 		V_6 = L_23;
 		// if (t == null)
 		Type_t* L_24 = V_6;

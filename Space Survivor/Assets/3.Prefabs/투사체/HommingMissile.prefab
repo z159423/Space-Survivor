@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3792121462557049152}
-  - component: {fileID: 3792121462557049153}
+  - component: {fileID: 97196115464190484}
   - component: {fileID: 3792121462557049166}
   - component: {fileID: 3792121462557049167}
   - component: {fileID: 3792121462557049164}
   - component: {fileID: 6309359838767010504}
   m_Layer: 0
-  m_Name: Missile
+  m_Name: HommingMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3792121462557049153
+--- !u!114 &97196115464190484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3792121462557049162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f1302ced0e35f4fb31f53e14d91a76, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dbc2436ae052d040ba00adc78c875bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
@@ -58,8 +58,8 @@ MonoBehaviour:
     MaxValue: 1000
   hitLimit: 1
   knockBackForce: 4
-  deleteOnTime: 1
-  deleteTime: 5
+  deleteOnTime: 0
+  deleteTime: 3
   deleteVFXType: 4
   lookFirePos: 0
   Spread: 0
@@ -70,11 +70,9 @@ MonoBehaviour:
   fireToNearEnemyRadius: 25
   flak: 0
   rigidbody: {fileID: 3792121462557049164}
-  playerWeapon: {fileID: 0}
   vfxs:
   - {fileID: 4126045944502290499}
   trails: []
-  weaponObject: {fileID: 0}
 --- !u!114 &3792121462557049166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +93,7 @@ MonoBehaviour:
   findTargetOnMissingTarget: 1
   findTargetRange: 30
   rigid: {fileID: 3792121462557049164}
-  projectileLogic: {fileID: 3792121462557049153}
+  projectileLogic: {fileID: 0}
 --- !u!212 &3792121462557049167
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8100048574099637296}
-  - component: {fileID: 8100048574099637297}
+  - component: {fileID: 2175249797101119644}
   - component: {fileID: 8100048574099637310}
   - component: {fileID: 1700238967989047261}
   - component: {fileID: 4301625762169105483}
@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8100048574099637306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.012, y: 0.012, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38,8 +38,8 @@ Transform:
   - {fileID: 2449201265749496318}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8100048574099637297
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &2175249797101119644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8100048574099637306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f1302ced0e35f4fb31f53e14d91a76, type: 3}
+  m_Script: {fileID: 11500000, guid: 37719b922ec0f1d4a86e83583b742e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 8
@@ -61,7 +61,7 @@ MonoBehaviour:
   hitLimit: 1
   knockBackForce: 4
   deleteOnTime: 1
-  deleteTime: 10
+  deleteTime: 7
   deleteVFXType: 4
   lookFirePos: 0
   Spread: 0
@@ -72,11 +72,9 @@ MonoBehaviour:
   fireToNearEnemyRadius: 25
   flak: 0
   rigidbody: {fileID: 8100048574099637308}
-  playerWeapon: {fileID: 0}
   vfxs:
   - {fileID: 9046568156881440051}
   trails: []
-  weaponObject: {fileID: 0}
 --- !u!114 &8100048574099637310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +95,7 @@ MonoBehaviour:
   findTargetOnMissingTarget: 1
   findTargetRange: 20
   rigid: {fileID: 8100048574099637308}
-  projectileLogic: {fileID: 8100048574099637297}
+  projectileLogic: {fileID: 2175249797101119644}
 --- !u!114 &1700238967989047261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d21afb0299ccb41b719df78ee22cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileLogic: {fileID: 8100048574099637297}
+  projectileLogic: {fileID: 2175249797101119644}
   playerStat: {fileID: 0}
 --- !u!114 &4301625762169105483
 MonoBehaviour:

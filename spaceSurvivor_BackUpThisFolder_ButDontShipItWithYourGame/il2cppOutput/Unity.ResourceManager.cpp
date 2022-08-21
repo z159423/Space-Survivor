@@ -14827,7 +14827,7 @@ IL_001e_1:
 			String_t* L_11 = __this->___m_ClassName_1;
 			NullCheck(L_10);
 			Type_t* L_12;
-			L_12 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(17 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_10, L_11);
+			L_12 = VirtualFuncInvoker1< Type_t*, String_t* >::Invoke(18 /* System.Type System.Reflection.Assembly::GetType(System.String) */, L_10, L_11);
 			__this->___m_CachedType_2 = L_12;
 			Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CachedType_2), (void*)L_12);
 		}

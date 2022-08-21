@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6763005730519926907}
-  - component: {fileID: 7194569554524369616}
+  - component: {fileID: -8413117416544549146}
   - component: {fileID: 2387518430026055367}
   - component: {fileID: 2596404529426074017}
   - component: {fileID: 4673022242771149064}
@@ -37,7 +37,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7194569554524369616
+--- !u!114 &-8413117416544549146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8837024627107654669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f1302ced0e35f4fb31f53e14d91a76, type: 3}
+  m_Script: {fileID: 11500000, guid: 5332bbad41eea7c488bf3856beb1ba50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
@@ -55,26 +55,24 @@ MonoBehaviour:
     minValue: 0
     MinValue: 0
     maxValue: 0
-    MaxValue: 1
+    MaxValue: 1000
   hitLimit: 100
   knockBackForce: 15
   deleteOnTime: 0
-  deleteTime: 5
+  deleteTime: 3
   deleteVFXType: 0
   lookFirePos: 0
-  Spread: 1
-  spreadOffset: {x: 2, y: 2, z: 0}
+  Spread: 0
+  spreadOffset: {x: 0, y: 0, z: 0}
   randomSpawn: 0
   randomSpawnOffset: {x: 0, y: 0, z: 0}
   fireToNearEnemy: 1
   fireToNearEnemyRadius: 10
   flak: 0
   rigidbody: {fileID: 4673022242771149064}
-  playerWeapon: {fileID: 0}
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
-  weaponObject: {fileID: 0}
 --- !u!114 &2387518430026055367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +95,7 @@ MonoBehaviour:
   explodeRadius: 1.8
   knockbackForce: -5
   vfxType: 5
-  projectileLogic: {fileID: 7194569554524369616}
+  projectileLogic: {fileID: -8413117416544549146}
 --- !u!212 &2596404529426074017
 SpriteRenderer:
   m_ObjectHideFlags: 0
