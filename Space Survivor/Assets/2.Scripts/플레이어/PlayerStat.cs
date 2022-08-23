@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class PlayerStat : MonoBehaviour
@@ -25,7 +26,7 @@ public class PlayerStat : MonoBehaviour
 
     [Space]
     [SerializeField] private HpBar hpBar;
-    [SerializeField] private Transform expBar;
+    [SerializeField] private Slider expSlider;
     [SerializeField] private PlayerWeapon playerWeapon;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private TextMeshProUGUI crystalText;
@@ -115,7 +116,8 @@ public class PlayerStat : MonoBehaviour
         float state = (float)currentExp;
         state /= maxExp;
         if (state < 0f) { state = 0f; }
-        expBar.transform.localScale = new Vector3(state, 1f, 1f);
+
+        expSlider.value = state;
     }
 
     public void GetCrystal(int value)
