@@ -5,6 +5,7 @@ using UnityEngine.VFX;
 using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
+using DG.Tweening;
 
 
 public class PlayerStat : MonoBehaviour
@@ -27,6 +28,10 @@ public class PlayerStat : MonoBehaviour
     [Space]
     [SerializeField] private HpBar hpBar;
     [SerializeField] private Slider expSlider;
+    [SerializeField] private Image expFill;
+    [SerializeField] private Color originExpColor;
+    [SerializeField] private Color fadeOutExpColor;
+
     [SerializeField] private PlayerWeapon playerWeapon;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private TextMeshProUGUI crystalText;
@@ -46,6 +51,13 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private bool invinsible = false;
 
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
+
+    private Sequence mySequence;
+
+    private void Start()
+    {
+
+    }
 
     private void OnEnable()
     {
@@ -82,7 +94,7 @@ public class PlayerStat : MonoBehaviour
 
         playerDieEvent.Invoke();
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
         //Instantiate(dieVFX, transform.position, Quaternion.identity);
         VFXGenerator.instance.GenerateVFX(VFXType.playerDie1, transform.position);
@@ -108,7 +120,7 @@ public class PlayerStat : MonoBehaviour
 
     private void OnChangeExp()
     {
-        if (currentExp >= maxExp)                    //·¡º§¾÷ °æÇèÄ¡¿¡ µµ´ÞÇßÀ»½Ã
+        if (currentExp >= maxExp)                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
             LevelUp();
         }
@@ -134,6 +146,9 @@ public class PlayerStat : MonoBehaviour
 
         LevelUpManager.instance.StartWeaponUpgrade();
         playerLevelText.text = "Level " + playerLevel.ToString();
+
+        //mySequence.Restart();
+        //expFill.DOColor(fadeOutExpColor, 1f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
     }
 
     public void AfterUpgrade()
@@ -213,7 +228,7 @@ public class PlayerStat : MonoBehaviour
         return currentShipBody.transform;
     }
 
-    public void GetShipStat(ShipObject shipObject)              //¸¸µé¾îÁø ÇÔ¼± ½ºÅÈÀ» ÇÃ·¹ÀÌ¾îÀÇ ÇÔ¼± ½ºÅÈ¿¡ ºÙ¿©³Ö±â
+    public void GetShipStat(ShipObject shipObject)              //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½È¿ï¿½ ï¿½Ù¿ï¿½ï¿½Ö±ï¿½
     {
         maxHp = shipObject.baseMaxHp;
         moveSpeed = shipObject.baseMoveSpeed;
@@ -242,7 +257,7 @@ public class PlayerStat : MonoBehaviour
         hpBar.SetState(currentHp, maxHp);
     }
 
-    private void ClearWeaponSlots()
+    public void ClearWeaponSlots()
     {
         WeaponSlot[] slots = weaponSlotParent.GetComponentsInChildren<WeaponSlot>();
 

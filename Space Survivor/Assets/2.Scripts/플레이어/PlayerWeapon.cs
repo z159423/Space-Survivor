@@ -16,15 +16,19 @@ public class PlayerWeapon : MonoBehaviour
     [Space]
     public List<WeaponSlot> weaponSlotList = new List<WeaponSlot>();
 
+    [Space]
+
+    public bool allowFire = false;
+
 
     private void Update()
     {
-        if (playerStat.GetPlayerDie())
+        if (playerStat.GetPlayerDie() || !allowFire)
             return;
 
-        for(int i = 0; i < weaponPool.Count; i++)
+        for (int i = 0; i < weaponPool.Count; i++)
         {
-            if(weaponPool[i].ready)
+            if (weaponPool[i].ready)
             {
                 weaponSlotList[i].weaponCoolTimeImage.StartCoolTime(weaponPool[i].coolTime.GetFinalStatValue());
                 StartCoroutine(ProjectileReload(weaponPool[i]));
@@ -68,7 +72,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public void ResetPlayerWeapon()
     {
-        for(int i = 0; i < weaponPool.Count; i++)
+        for (int i = 0; i < weaponPool.Count; i++)
         {
             weaponPool[i].ResetThisWeapon();
         }
@@ -103,7 +107,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         List<WeaponObject> weaponObjects = new List<WeaponObject>();
 
-        for(int i = 0; i < weaponPool.Count; i++)
+        for (int i = 0; i < weaponPool.Count; i++)
         {
             if (weaponPool[i].GetCurrentWeaponLevel() > weaponPool[i].maxWeaponLevel)
                 weaponObjects.Add(weaponPool[i]);
@@ -114,7 +118,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public void UpgradeWeapon(WeaponObject weaponObject)
     {
-        for(int i = 0; i < weaponPool.Count; i++)
+        for (int i = 0; i < weaponPool.Count; i++)
         {
             if (weaponObject.type == weaponPool[i].type)
             {
@@ -129,7 +133,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public WeaponObject GetCurrentWeapon(WeaponType type)
     {
-        for(int i = 0; i < weaponPool.Count; i++)
+        for (int i = 0; i < weaponPool.Count; i++)
         {
             if (weaponPool[i].type == type)
                 return weaponPool[i];
@@ -185,6 +189,9 @@ public class PlayerWeapon : MonoBehaviour
 
                 yield return new WaitForSeconds(.15f);
 
+                if(playerStat.GetPlayerDie())
+                break;
+
                 var missile = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.BurstMissile, player.transform.position);
 
                 if (missile.TryGetComponent<BurstMissile>(out BurstMissile burstMissile))
@@ -192,9 +199,9 @@ public class PlayerWeapon : MonoBehaviour
                     burstMissile.InitMissile(player.GetComponentInParent<PlayerStat>());
                 }
 
-                if(missile.TryGetComponent<ProjectileLogic>(out ProjectileLogic projectile))
+                if (missile.TryGetComponent<ProjectileLogic>(out ProjectileLogic projectile))
                 {
-                    projectile.Fire(null,0);
+                    projectile.Fire(null, 0);
                 }
             }
         }

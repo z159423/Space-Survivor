@@ -22,8 +22,6 @@ public class UpgradeSlot : MonoBehaviour
 
     public WeaponObject weaponObject;
 
-    private Sequence sequence;
-
     public void InitSlot(WeaponObject weaponObject)
     {
         this.weaponObject = weaponObject;

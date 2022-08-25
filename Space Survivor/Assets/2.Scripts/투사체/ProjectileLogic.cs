@@ -36,7 +36,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     [Space]
 
-    [SerializeField] private bool lookFirePos = false;
     [SerializeField] private bool Spread = false;
     [SerializeField] private Vector3 spreadOffset;
 
@@ -47,12 +46,12 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     [Space]
 
-    [SerializeField] private bool fireToNearEnemy = false;
+    //[SerializeField] private bool fireToNearEnemy = false;
     [SerializeField] protected float fireToNearEnemyRadius = 25f;
 
     [Space]
 
-    [SerializeField] private bool flak = false;
+    //[SerializeField] private bool flak = false;
 
     [Space]
 

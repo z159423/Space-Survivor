@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "new Enemy", menuName = "Scriptable Object/Enemy Data", order = int.MaxValue)]
+[CreateAssetMenu(fileName = "new Enemy", menuName = "Scriptable Object/Enemy/Enemy Data", order = int.MaxValue)]
 public class EnemyObject : ScriptableObject
 {
     public Stack<GameObject> enemyStack = new Stack<GameObject>();

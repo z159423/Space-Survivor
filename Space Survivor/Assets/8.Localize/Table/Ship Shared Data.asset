@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Ship Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Ship
+  m_TableCollectionNameGuidString: 73ede78000c6e964fb70a11f89e6cbf1
+  m_Entries:
+  - m_Id: 13546242048
+    m_Key: Attacker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15991521280
+    m_Key: Scout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103375650816
+    m_Key: Boomber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105237921792
+    m_Key: Carrier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107519623168
+    m_Key: BattleShip
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5594262961029382154
+  references:
+    version: 2
+    RefIds:
+    - rid: 5594262961029382154
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1661442588903

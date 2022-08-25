@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Ship", menuName = "Scriptable Object/Ship Data", order = int.MaxValue)]
 public class ShipObject : ScriptableObject
 {
+    public ShipType shipType;
     public GameObject shipBody;
     public List<WeaponObject> basicWeapon = new List<WeaponObject>();
 
@@ -15,3 +16,5 @@ public class ShipObject : ScriptableObject
     public float baseRotationSpeed = 2f;
 
 }
+
+public enum ShipType {Attacker, Scout, Boomber, Carrier, BattleShip}

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using Cinemachine;
+using UnityEngine.Localization;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,16 +13,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject MainMenu;
     [SerializeField] private GameObject DieMenu;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject hpBar;
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private TextMeshProUGUI killCount;
     [SerializeField] private TextMeshProUGUI getCrystalCountText;
     [SerializeField] private TextMeshProUGUI killCountText;
     [SerializeField] private PlayerStat playerStat;
+    [SerializeField] private PlayerWeapon playerWeapon;
+    [SerializeField] private TextMeshProUGUI shipNameText;
+    
     [SerializeField] private CinemachineVirtualCamera cmvc;
 
     [Space]
 
-    [SerializeField] private ShipObject startShip;
+    [SerializeField] private ShipObject currentShip;
+    [SerializeField] private ShipList shipList;
+    [SerializeField] private int currentShipNumber;
 
     public UnityEvent PlayGameEvent;
 
@@ -37,11 +45,8 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
-    {
-            
-
-        //print(Input.deviceOrientation);
+    private void Start() {
+        SelectShip(currentShipNumber);
     }
 
     public void ResetTime()
@@ -52,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        player.GetComponent<PlayerStat>().MakeThisShip(startShip);          //�ӽ� �ڵ�
+        //player.GetComponent<PlayerStat>().MakeThisShip(currentShip);
 
         PlayGameEvent.Invoke();
 
@@ -60,10 +65,18 @@ public class GameManager : MonoBehaviour
         MainMenu.SetActive(false);
         DieMenu.SetActive(false);
         player.SetActive(true);
-
         //EnemyGenerator.instance.StartEnemySpawn();
+        hpBar.SetActive(true);
 
         gameStart = true;
+
+        playerWeapon.allowFire = true;
+        CameraManager.instance.ChangeCamera_PlayCamera();
+    }
+
+    public void ReplayGame()
+    {
+        SelectShip(currentShipNumber);
     }
 
     public void GoMainMenu()
@@ -71,9 +84,16 @@ public class GameManager : MonoBehaviour
         inGameMenu.SetActive(false);
         MainMenu.SetActive(true);
         DieMenu.SetActive(false);
-        player.SetActive(false);
+        //player.SetActive(false);
+        hpBar.SetActive(false);
 
         gameStart = false;
+
+        playerWeapon.allowFire = false;
+
+        SelectShip(currentShipNumber);
+        
+        CameraManager.instance.ChangeCamera_MainMenu();
     }
 
     public void PlayerDie()
@@ -86,11 +106,6 @@ public class GameManager : MonoBehaviour
         DieMenu.SetActive(true);
 
         gameStart = false;
-    }
-
-    public void Replay()
-    {
-
     }
 
     public void AddKillCount()
@@ -141,6 +156,61 @@ public class GameManager : MonoBehaviour
 
             EnemyGenerator.instance.CheckWave();
         }
+    }
+
+    //메인 메뉴에서 선택한 함선으로 변경
+    public void SelectShip(int currentShipNumber)
+    {
+        playerStat.DeleteShipBody();
+        playerStat.ClearWeaponSlots();
+        playerWeapon.ClearAllWeapon();
+
+        var shipObject = shipList.shipList[currentShipNumber];
+
+        player.GetComponent<PlayerStat>().MakeThisShip(shipObject);
+
+        StartCoroutine(ChangeShipNameText());
+
+        IEnumerator ChangeShipNameText()
+        {
+            var keyName = shipObject.shipType.ToString();
+
+            var localizedString = new LocalizedString("Ship", keyName);
+
+            var stringOperation = localizedString.GetLocalizedStringAsync();
+
+            while (true)
+            {
+                if (stringOperation.IsDone && stringOperation.Status == AsyncOperationStatus.Succeeded)
+                {
+                    string str = stringOperation.Result;
+                    shipNameText.text = str;
+
+                    break;
+                }
+                yield return null;
+            }
+        }
+    }
+
+    public void NextShip()
+    {
+        if(currentShipNumber + 1 < 0  || currentShipNumber + 1 >= shipList.shipList.Count)
+        return;
+
+        currentShipNumber++;
+
+        SelectShip(currentShipNumber);
+    }
+
+    public void PreviusShip()
+    {
+        if(currentShipNumber + -1 < 0  || currentShipNumber + -1 > shipList.shipList.Count)
+        return;
+
+        currentShipNumber--;
+
+        SelectShip(currentShipNumber);
     }
 
     public int getCurrentTime()
