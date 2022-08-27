@@ -25,6 +25,6 @@ public class Projectile_MachineGun : ProjectileLogic
         transform.position += new Vector3(Random.Range(-projectileSpawnRandomOffset.x, projectileSpawnRandomOffset.x),
         Random.Range(-projectileSpawnRandomOffset.y,projectileSpawnRandomOffset.y));
 
-        rigidbody.AddForce(transform.up * fireForce);
+        rigid.AddForce(transform.up * fireForce);
     }
 }

@@ -16,7 +16,7 @@ public class Projectile_SquareCannon : ProjectileLogic
         {
             fireDir = Utility.GetDirection(transform.position, transform.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)));
 
-            rigidbody.AddForce(fireDir * fireForce);
+            rigid.AddForce(fireDir * fireForce);
 
             var angle = Mathf.Atan2((fireDir.y + transform.position.y) - transform.position.y,
         (fireDir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;

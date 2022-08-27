@@ -367,5 +367,5 @@ public class UpgradeModuleList
 public enum WeaponType
 {
     SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
-    SelfRepair
+    SelfRepair, RadiationField
 }

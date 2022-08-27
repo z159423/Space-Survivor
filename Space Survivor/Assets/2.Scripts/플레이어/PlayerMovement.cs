@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (playerStat.GetPlayerDie())
             return;
@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
             Vector2 dirToVirtualTarget = Utility.GetDirection(transform.position, virtualTarget.position);
 
-            // rigidbody.velocity += virtualDir.normalized * Time.deltaTime * playerStat.GetMoveSpeed();
-            rigidbody.velocity = playerBody.transform.up * Time.deltaTime * playerStat.GetMoveSpeed() * 10f;
+            rigidbody.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed();
+            // rigidbody.velocity = playerBody.transform.up * Time.deltaTime * playerStat.GetMoveSpeed() * 10f;
 
 
             if (Mathf.Abs(virtualDir.normalized.x) > 0 || Mathf.Abs(virtualDir.normalized.y) > 0)
@@ -62,8 +62,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(fixedTouchField.Pressed)
         {
-            rigidbody.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed();
+            rigidbody.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed() * fixedTouchField.distBetweenJoystickBodyToHandle;
             // rigidbody.velocity = playerBody.transform.up * Time.deltaTime * playerStat.GetMoveSpeed() * 10f;
+
+            // print(fixedTouchField.distBetweenJoystickBodyToHandle);
 
             if (Mathf.Abs(fixedTouchField.joystickDir.normalized.x) > 0 || Mathf.Abs(fixedTouchField.joystickDir.normalized.y) > 0)
             {

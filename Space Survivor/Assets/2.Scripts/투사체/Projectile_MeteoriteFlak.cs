@@ -21,6 +21,6 @@ public class Projectile_MeteoriteFlak : ProjectileLogic
 
         transform.rotation = Quaternion.AngleAxis(angle - 90 + Random.Range(-spreadValue, spreadValue), Vector3.forward);
 
-        rigidbody.AddForce(transform.up * fireForce);
+        rigid.AddForce(transform.up * fireForce);
     }
 }

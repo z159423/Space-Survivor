@@ -55,11 +55,16 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     [Space]
 
-    [SerializeField] new protected Rigidbody2D rigidbody;
+    [SerializeField] protected Rigidbody2D rigid;
     [SerializeField] public PlayerWeapon playerWeapon { get; set; }
     [SerializeField] private ParticleSystem[] vfxs;
     [SerializeField] private TrailRenderer[] trails;
     [SerializeField] public WeaponObject weaponObject { get; set; }
+
+    private void Start()
+    {
+        rigid = GetComponent<Rigidbody2D>();
+    }
 
     private void OnEnable()
     {
@@ -76,6 +81,8 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     public virtual void Fire(Transform target, int fireForce)
     {
+
+
         for (int i = 0; i < trails.Length; i++)
         {
             trails[i].Clear();
@@ -161,12 +168,12 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         if (Spread)
         {
             dir = Utility.GetDirection(transform.position, target.position + new Vector3(Random.Range(-spreadOffset.x, spreadOffset.x), Random.Range(-spreadOffset.y, spreadOffset.y)));
-            rigidbody.AddForce(dir * fireForce);
+            rigid.AddForce(dir * fireForce);
         }
         else
         {
             dir = Utility.GetDirection(transform.position, target.position);
-            rigidbody.AddForce(dir * fireForce);
+            rigid.AddForce(dir * fireForce);
         }
 
         if (randomSpawn)

@@ -19,6 +19,6 @@ public class Projectile_SmallShotCannon : ProjectileLogic
 
         transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
-        rigidbody.AddForce(fireDir * fireForce);
+        rigid.AddForce(fireDir * fireForce);
     }
 }

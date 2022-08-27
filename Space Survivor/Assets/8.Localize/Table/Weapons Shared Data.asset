@@ -87,6 +87,14 @@ MonoBehaviour:
     m_Key: SelfRepair_D
     m_Metadata:
       m_Items: []
+  - m_Id: 26306782612979712
+    m_Key: RadiationField
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26306882600992768
+    m_Key: RadiationField_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

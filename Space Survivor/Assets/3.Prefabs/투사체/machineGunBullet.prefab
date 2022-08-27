@@ -60,15 +60,12 @@ MonoBehaviour:
   deleteOnTime: 1
   deleteTime: 2
   deleteVFXType: 4
-  lookFirePos: 0
   Spread: 0
   spreadOffset: {x: 0, y: 0, z: 0}
   randomSpawn: 0
   randomSpawnOffset: {x: 0, y: 0, z: 0}
-  fireToNearEnemy: 0
   fireToNearEnemyRadius: 25
-  flak: 0
-  rigidbody: {fileID: 3500578402707459845}
+  rigid: {fileID: 3500578402707459845}
   vfxs: []
   trails:
   - {fileID: 4529389693228366612}
@@ -172,10 +169,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.925, y: 2.925}
-      - {x: -2.925, y: -2.925}
-      - {x: 2.925, y: -2.925}
-      - {x: 2.925, y: 2.925}
+    - - {x: -4.2029557, y: 2.925}
+      - {x: -4.2029543, y: -2.9021795}
+      - {x: 4.2942386, y: -2.925}
+      - {x: 4.2942376, y: 2.925}
 --- !u!96 &4529389693228366612
 TrailRenderer:
   serializedVersion: 2

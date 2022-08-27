@@ -20,7 +20,7 @@ public class EnemyStat : MonoBehaviour
     private Material originalMat;
 
     [Space]
-    [SerializeField] new private Rigidbody2D rigidbody;
+    [SerializeField] private Rigidbody2D rigid;
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float rotationSpeed = 0.05f;
     [Space]
@@ -47,7 +47,7 @@ public class EnemyStat : MonoBehaviour
     {
         movedir = (target.position - transform.position).normalized;
 
-        rigidbody.velocity += movedir * Time.deltaTime * moveSpeed;
+        rigid.velocity += movedir * Time.deltaTime * moveSpeed;
 
         angle = Mathf.Atan2((movedir.y + transform.position.y) - transform.position.y,
             (movedir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
@@ -138,7 +138,7 @@ public class EnemyStat : MonoBehaviour
 
     public void Knockback(Vector2 hitPoint ,int force)
     {
-        rigidbody.AddForce(Utility.GetDirection(transform.position, hitPoint) * force, ForceMode2D.Impulse);
+        rigid.AddForce(Utility.GetDirection(hitPoint, transform.position) * force, ForceMode2D.Impulse);
     }
 
     private IEnumerator HitEffect()

@@ -59,19 +59,14 @@ MonoBehaviour:
   deleteOnTime: 1
   deleteTime: 0.01
   deleteVFXType: 0
-  lookFirePos: 0
   Spread: 0
   spreadOffset: {x: 0.5, y: 0.5, z: 0}
   randomSpawn: 0
   randomSpawnOffset: {x: 0, y: 0, z: 0}
-  fireToNearEnemy: 0
   fireToNearEnemyRadius: 7
-  flak: 0
-  rigidbody: {fileID: 7319017219462644021}
-  playerWeapon: {fileID: 0}
+  rigid: {fileID: 7319017219462644021}
   vfxs: []
   trails: []
-  weaponObject: {fileID: 0}
 --- !u!50 &7319017219462644021
 Rigidbody2D:
   serializedVersion: 4

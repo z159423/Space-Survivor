@@ -24,6 +24,7 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     private Vector2 touchStartPoint;
     private Vector2 currentTouchPoint;
     public Vector2 joystickDir;
+    public float distBetweenJoystickBodyToHandle { get; set; }
 
     [SerializeField] private int clampDist = 130;
 
@@ -42,7 +43,7 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                             canvas, new Vector2(Input.mousePosition.x, Input.mousePosition.y),
                             mainCamera, out pos);
 
-                    currentTouchPoint = pos;
+                currentTouchPoint = pos;
 
                 //Vector2 clampJoystickDir = new Vector2(Mathf.Clamp(joystickDir.x, -100, 100), Mathf.Clamp(joystickDir.y, -100, 100));
 
@@ -54,20 +55,23 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
                 if (joystickDist > clampDist)
                 {
-                   float fixPercent = (joystickDist - clampDist) / clampDist;
+                    float fixPercent = (joystickDist - clampDist) / clampDist;
 
                     JoystickHandle.transform.localPosition = currentTouchPoint;
 
-                    JoystickHandle.transform.localPosition = touchStartPoint + (joystickDir / (fixPercent+1));
+                    JoystickHandle.transform.localPosition = touchStartPoint + (joystickDir / (fixPercent + 1));
 
-                    //print(fixPercent);
+                    //print(joystickDist);
                 }
                 else
                 {
                     JoystickHandle.transform.localPosition = currentTouchPoint;
                 }
 
-                
+                joystickDist = Mathf.Clamp(joystickDist, 0, clampDist);
+                distBetweenJoystickBodyToHandle = joystickDist / clampDist;
+
+
             }
             else
             {
@@ -78,6 +82,8 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         else
         {
             TouchDist = new Vector2();
+
+            distBetweenJoystickBodyToHandle = 0;
         }
     }
 

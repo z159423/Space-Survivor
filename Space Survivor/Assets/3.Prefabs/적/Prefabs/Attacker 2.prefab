@@ -106,7 +106,7 @@ MonoBehaviour:
   hitEffectTime: 0.1
   hitMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   spriteRenderer: {fileID: 601496630676670499}
-  rigidbody: {fileID: 601496630676670501}
+  rigid: {fileID: 601496630676670501}
   moveSpeed: 2.5
   rotationSpeed: 1
   dropTable:
