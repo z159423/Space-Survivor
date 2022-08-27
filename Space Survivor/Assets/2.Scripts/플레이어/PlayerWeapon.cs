@@ -11,7 +11,7 @@ public class PlayerWeapon : MonoBehaviour
 
     [Space]
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private PlayerStat playerStat;
+    [SerializeField] public PlayerStat playerStat;
 
     [Space]
     public List<WeaponSlot> weaponSlotList = new List<WeaponSlot>();

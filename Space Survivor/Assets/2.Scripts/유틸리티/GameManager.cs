@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent PlayGameEvent;
 
     public bool gameStart = false;
+    public bool inMainMenu = true;
 
     private int currentTime;
     private float currentKillCount;
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
         hpBar.SetActive(true);
 
         gameStart = true;
+        inMainMenu = false;
 
         playerWeapon.allowFire = true;
         CameraManager.instance.ChangeCamera_PlayCamera();
@@ -88,6 +90,7 @@ public class GameManager : MonoBehaviour
         hpBar.SetActive(false);
 
         gameStart = false;
+        inMainMenu = true;
 
         playerWeapon.allowFire = false;
 
