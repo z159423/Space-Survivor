@@ -15,6 +15,8 @@ public class WeaponObject : ScriptableObject
     public Sprite weaponImage;
     public Transform parent;
     public WeaponType type;
+    public GameObject whileParticlePrefab;
+    public GameObject currenWhileParticle;
     private Transform firePos;
     private Transform fireDir;
     private Vector3 randomDir;
@@ -346,6 +348,19 @@ public class WeaponObject : ScriptableObject
     public void AddActiveProjectile(GameObject Object)
     {
         activeProjectile.Add(Object);
+    }
+
+    public void GenerateWhileParticle(Transform trans)
+    {
+        if (whileParticlePrefab == null)
+            return;
+
+        currenWhileParticle = Instantiate(whileParticlePrefab, trans);
+    }
+
+    public void SizeUpWhileParticle(float percent)
+    {
+        currenWhileParticle.transform.localScale = currenWhileParticle.transform.localScale * percent;
     }
 }
 

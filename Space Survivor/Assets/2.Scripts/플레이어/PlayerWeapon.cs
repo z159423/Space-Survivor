@@ -84,6 +84,7 @@ public class PlayerWeapon : MonoBehaviour
         weaponPool.Add(newWeapon);
         FindFirePos(newWeapon);
         FindFireDir(newWeapon);
+        newWeapon.GenerateWhileParticle(transform);
 
         LevelUpManager.instance.AddNewWeaponImage(weapon, weaponSlotList);
     }
@@ -100,6 +101,12 @@ public class PlayerWeapon : MonoBehaviour
 
     public void ClearAllWeapon()
     {
+        for(int i = 0; i < weaponPool.Count; i++)
+        {
+            if (weaponPool[i].currenWhileParticle != null)
+                Destroy(weaponPool[i].currenWhileParticle);
+        }
+
         weaponPool.Clear();
     }
 
