@@ -85,7 +85,7 @@ MonoBehaviour:
     maxValue: 0
     MaxValue: 1000
   damageRadius:
-    baseValue: 2
+    baseValue: 1.5
     minValue: 0
     MinValue: 0
     maxValue: 0

@@ -23,6 +23,13 @@ public class WeaponObject : ScriptableObject
     public string firePosName = "FirePos1";
     public string fireDirName = "FireDir1";
 
+    [Space]
+
+    public Stat currentDamage = new Stat();
+    public Stat currentSize = new Stat();
+
+    [Space]
+
     public bool ready = true;
     public Stat coolTime = new Stat();                 //발사 쿨타임
 
@@ -55,28 +62,29 @@ public class WeaponObject : ScriptableObject
         {
             var success = DeQueue(position);
 
+            IProjectileLogic projectileLogic;
+
             if (success.success)
             {
-                var projectileLogic = success.Object.GetComponent<IProjectileLogic>();
+                projectileLogic = success.Object.GetComponent<IProjectileLogic>();
                 projectileLogic.ResetProjectile();
                 projectileLogic.playerWeapon = playerWeapon;
-                projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
 
             }
             else
             {
                 var Object = Instantiate(projectilePrefab, position, Quaternion.identity);
 
-                var projectileLogic = Object.GetComponent<IProjectileLogic>();
+                projectileLogic = Object.GetComponent<IProjectileLogic>();
                 projectileLogic.weaponObject = this;
                 projectileLogic.UpgradeProjectile(Object);
                 projectileLogic.ResetProjectile();
                 projectileLogic.playerWeapon = playerWeapon;
                 projectileLogic.weaponObject.AddActiveProjectile(Object);
-
-                projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
-
             }
+
+            projectileLogic.SetSize();
+            projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
 
             yield return new WaitForSeconds(firingInterval.GetFinalStatValue());
 
@@ -92,6 +100,8 @@ public class WeaponObject : ScriptableObject
             switch (modules.upgradeModules[i].upgradeModuleType)
             {
                 case upgradeModuleType.DamageIntIncrease:
+
+                    currentDamage.AddFloatModifier(modules.upgradeModules[i].value1);
 
                     foreach (GameObject projectile in bulletStack)
                     {
@@ -123,6 +133,9 @@ public class WeaponObject : ScriptableObject
                     break;
 
                 case upgradeModuleType.IncreaseSize:
+                    currentSize.AddPercentModifier(modules.upgradeModules[i].value1);
+
+                    /*
                     foreach (GameObject projectile in bulletStack)
                     {
                         IncreseSize(projectile, modules.upgradeModules[i].value1);
@@ -132,6 +145,9 @@ public class WeaponObject : ScriptableObject
                     {
                         IncreseSize(activeProjectile[j], modules.upgradeModules[i].value1);
                     }
+                    */
+
+                    SizeUpWhileParticle(modules.upgradeModules[i].value1);
                     break;
 
                 case upgradeModuleType.IncreseRotateSpeed:
@@ -360,6 +376,9 @@ public class WeaponObject : ScriptableObject
 
     public void SizeUpWhileParticle(float percent)
     {
+        if (currenWhileParticle == null)
+            return;
+
         currenWhileParticle.transform.localScale = currenWhileParticle.transform.localScale * percent;
     }
 }

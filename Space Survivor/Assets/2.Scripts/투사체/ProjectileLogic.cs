@@ -12,6 +12,8 @@ public interface IProjectileLogic
     void Fire(Transform target, int fireForce);
     void ResetProjectile();
     void UpgradeProjectile(GameObject projectile);
+
+    void SetSize();
 }
 
 public class ProjectileLogic : MonoBehaviour, IProjectileLogic
@@ -267,5 +269,13 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     public Stat GetDamage()
     {
         return damage;
+    }
+
+    public void SetSize()
+    {
+        var size = weaponObject.currentSize.GetFinalStatValue();
+
+        print(size);
+        transform.localScale = new Vector3(size, size, size);
     }
 }
