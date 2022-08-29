@@ -14,13 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeProjectile: []
   projectilePrefab: {fileID: 5838637156235729955, guid: 830ade8da1ba9854aa0c6e9d29012475, type: 3}
-  weaponImage: {fileID: 21300000, guid: 893e488aa3bdaf2499e043e267604312, type: 3}
+  weaponImage: {fileID: 21300000, guid: 349adb3ef8cfa284e98ed9847fe4e170, type: 3}
   parent: {fileID: 0}
   type: 10
   whileParticlePrefab: {fileID: 8317791495415771169, guid: 679c4974abb28ac408499cb6eb3cac2f, type: 3}
   currenWhileParticle: {fileID: 0}
   firePosName: FirePos1
   fireDirName: FireDir1
+  currentDamage:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  currentSize:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
   ready: 1
   coolTime:
     baseValue: 0.8
