@@ -10,10 +10,12 @@ public class EnergyShield : MonoBehaviour
     public float shieldReloadTime = 5f;
     public bool shieldActive = false;
 
-    private void GetShield()
+    private void GiveShield()
     {
-        projectileLogic = GetComponent<ProjectileLogic>();
+        var playerStat = GetComponent<ProjectileLogic>().playerWeapon.playerStat;
 
-        projectileLogic.playerWeapon
+        //if(playerStat.maxShieldStack < GetComponent<ProjectileLogic>().playerWeapon.getwea)
+
+        //playerStat
     }
 }

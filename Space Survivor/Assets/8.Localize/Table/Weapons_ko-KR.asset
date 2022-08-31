@@ -105,6 +105,15 @@ MonoBehaviour:
       \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4."
     m_Metadata:
       m_Items: []
+  - m_Id: 27759636562788352
+    m_Localized: "\uB098\uC120 \uBBF8\uC0AC\uC77C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27759743177801728
+    m_Localized: "\uC801\uC744 \uAD00\uD1B5\uD558\uB294 \uD22C\uC0AC\uCCB4\uB97C
+      \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

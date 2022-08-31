@@ -16,6 +16,17 @@ public class PlayerStat : MonoBehaviour
     private int currentExp = 0;
     private int playerLevel = 1;
     public int currentCrystal = 0;
+
+    [Space]
+
+    public int currentShieldStack = 0;
+    public int maxShieldStack = 0;
+    public bool shieldInvinsible = false;
+    public float shieldInvinsibleTime = 1f;
+    public float shieldReloadTime = 5f;
+
+    [Space]
+
     [SerializeField] private TextMeshProUGUI playerLevelText;
 
     [Space]
@@ -281,5 +292,32 @@ public class PlayerStat : MonoBehaviour
     public int GetCurrentPlayerLevel()
     {
         return playerLevel;
+    }
+
+    public void GetShield()
+    {
+        if(currentShieldStack < maxShieldStack)
+        {
+            currentShieldStack++;
+        }
+    }
+
+    public IEnumerator UseShield()
+    {
+        shieldInvinsible = true;
+
+        yield return new WaitForSeconds(shieldInvinsibleTime);
+
+        shieldInvinsible = false;
+        currentShieldStack--;
+
+        StartCoroutine(ReloadShield());
+    }
+
+    public IEnumerator ReloadShield()
+    {
+        yield return new WaitForSeconds(shieldReloadTime);
+
+        GetShield();
     }
 }

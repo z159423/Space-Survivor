@@ -95,6 +95,14 @@ MonoBehaviour:
     m_Key: RadiationField_D
     m_Metadata:
       m_Items: []
+  - m_Id: 27759636562788352
+    m_Key: SawBlade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27759743177801728
+    m_Key: SawBlade_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

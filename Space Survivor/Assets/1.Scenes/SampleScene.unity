@@ -5550,6 +5550,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxExp: 5
   currentCrystal: 0
+  currentShieldStack: 0
+  maxShieldStack: 0
+  shieldInvinsible: 0
+  shieldInvinsibleTime: 1
+  shieldReloadTime: 5
   playerLevelText: {fileID: 1943501809}
   moveSpeed: 1
   rotationSpeed: 1
@@ -17393,6 +17398,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64fe913f9de41da4e9fc6af5fedddccc, type: 2}
   - {fileID: 11400000, guid: 38926a301de4be64da9f8049284993fb, type: 2}
   - {fileID: 11400000, guid: a5ed5bd980839ce4e89c5359b3c3f16b, type: 2}
+  - {fileID: 11400000, guid: 1fa75a0e36b537b4fbb420c76ea914f2, type: 2}
 --- !u!114 &1993698529
 MonoBehaviour:
   m_ObjectHideFlags: 0
