@@ -28,7 +28,7 @@ MonoBehaviour:
     maxValue: 0
     MaxValue: 1000
   currentSize:
-    baseValue: 0
+    baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0

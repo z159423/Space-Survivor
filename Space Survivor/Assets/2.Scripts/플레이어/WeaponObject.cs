@@ -148,7 +148,7 @@ public class WeaponObject : ScriptableObject
                     }
                     */
 
-                    SizeUpWhileParticle(modules.upgradeModules[i].value1);
+                    SetSizeWhileParticle();
                     break;
 
                 case upgradeModuleType.IncreseRotateSpeed:
@@ -375,12 +375,12 @@ public class WeaponObject : ScriptableObject
         currenWhileParticle = Instantiate(whileParticlePrefab, trans);
     }
 
-    public void SizeUpWhileParticle(float percent)
+    public void SetSizeWhileParticle()
     {
         if (currenWhileParticle == null)
             return;
 
-        currenWhileParticle.transform.localScale = currenWhileParticle.transform.localScale * percent;
+        currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue());
     }
 }
 
