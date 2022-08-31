@@ -56,7 +56,7 @@ MonoBehaviour:
     maxValue: 0
     MaxValue: 1000
   hitLimit: 1
-  knockBackForce: 0
+  knockBackForce: 3
   deleteOnTime: 1
   deleteTime: 5
   deleteVFXType: 4

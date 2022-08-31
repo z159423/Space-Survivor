@@ -26,6 +26,7 @@ public class WeaponObject : ScriptableObject
     [Space]
 
     public Stat currentDamage = new Stat();
+    public Vector3 currentSizeVector;
     public Stat currentSize = new Stat();
 
     [Space]

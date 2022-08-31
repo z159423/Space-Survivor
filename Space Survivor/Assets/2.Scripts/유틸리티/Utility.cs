@@ -63,7 +63,7 @@ public class Utility : MonoBehaviour
             if (colliders[i].TryGetComponent<EnemyStat>(out EnemyStat enemy))
             {
                 enemy.TakeDamage(Utility.RountToInt(damage));
-                enemy.Knockback(center, knockbackForce);
+                enemy.Knockback(center, -knockbackForce);
             }
         }
 

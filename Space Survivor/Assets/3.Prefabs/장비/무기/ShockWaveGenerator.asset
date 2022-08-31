@@ -17,8 +17,23 @@ MonoBehaviour:
   weaponImage: {fileID: 21300000, guid: 893e488aa3bdaf2499e043e267604312, type: 3}
   parent: {fileID: 0}
   type: 6
+  whileParticlePrefab: {fileID: 0}
+  currenWhileParticle: {fileID: 0}
   firePosName: FirePos1
   fireDirName: FireDir1
+  currentDamage:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  currentSizeVector: {x: 1, y: 1, z: 1}
+  currentSize:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
   ready: 1
   coolTime:
     baseValue: 5

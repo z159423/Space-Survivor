@@ -276,6 +276,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         var size = weaponObject.currentSize.GetFinalStatValue();
 
         print(size);
-        transform.localScale = new Vector3(size, size, size);
+        transform.localScale = weaponObject.currentSizeVector * weaponObject.currentSize.GetFinalStatValue();
     }
 }

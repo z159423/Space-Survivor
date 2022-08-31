@@ -31,6 +31,8 @@ public class ThronSpike : ProjectileLogic
         player = GetComponent<ProjectileLogic>().GetPlayerWeapon().transform;
         transform.SetParent(player);
 
+        transform.localScale = weaponObject.currentSizeVector * weaponObject.currentSize.GetFinalStatValue();
+
         transform.localPosition = new Vector3(0, 60, 0);
 
         int angle = (360 / projectileCount);

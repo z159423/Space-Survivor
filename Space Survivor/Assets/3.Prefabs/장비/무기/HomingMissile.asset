@@ -27,8 +27,9 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+  currentSizeVector: {x: 0.012, y: 0.012, z: 0.012}
   currentSize:
-    baseValue: 0.012
+    baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0
