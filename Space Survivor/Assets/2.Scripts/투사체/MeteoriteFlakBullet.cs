@@ -18,11 +18,9 @@ public class MeteoriteFlakBullet : MonoBehaviour
     private void Awake()
     {
         originSize = transform.localScale;
-
-        
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
     }

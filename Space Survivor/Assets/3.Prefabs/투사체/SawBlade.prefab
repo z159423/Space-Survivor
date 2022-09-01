@@ -58,7 +58,7 @@ MonoBehaviour:
   hitLimit: 100
   knockBackForce: 1
   deleteOnTime: 1
-  deleteTime: 3
+  deleteTime: 2
   deleteVFXType: 4
   Spread: 0
   spreadOffset: {x: 0, y: 0, z: 0}

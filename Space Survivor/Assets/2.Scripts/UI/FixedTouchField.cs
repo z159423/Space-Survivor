@@ -7,8 +7,8 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public Vector2 TouchDist;
     [HideInInspector]
     public Vector2 PointerOld;
-    [HideInInspector]
-    protected int PointerId;
+    //[HideInInspector]
+    //protected int PointerId;
     [HideInInspector]
     public bool Pressed;
 
@@ -33,10 +33,8 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         if (Pressed)
         {
-            if (PointerId >= 0 && PointerId < Input.touches.Length)
-            {
-                TouchDist = Input.touches[PointerId].position - PointerOld;
-                PointerOld = Input.touches[PointerId].position;
+                TouchDist = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - PointerOld;
+                PointerOld = Input.mousePosition;
 
                 Vector2 pos;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -71,13 +69,11 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                 joystickDist = Mathf.Clamp(joystickDist, 0, clampDist);
                 distBetweenJoystickBodyToHandle = joystickDist / clampDist;
 
-
-            }
-            else
+            /*else
             {
                 TouchDist = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - PointerOld;
                 PointerOld = Input.mousePosition;
-            }
+            }*/
         }
         else
         {
@@ -90,7 +86,7 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     public void OnPointerDown(PointerEventData eventData)
     {
         Pressed = true;
-        PointerId = eventData.pointerId;
+        //PointerId = eventData.pointerId;
         PointerOld = eventData.position;
 
         Vector2 pos;
