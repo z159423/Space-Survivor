@@ -103,6 +103,14 @@ MonoBehaviour:
     m_Key: SawBlade_D
     m_Metadata:
       m_Items: []
+  - m_Id: 28134398388551680
+    m_Key: EnergyShield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28134463299600384
+    m_Key: EnergyShield_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
