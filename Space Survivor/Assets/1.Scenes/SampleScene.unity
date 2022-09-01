@@ -3946,7 +3946,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.75, y: 1}
+    m_SensorSize: {x: 0.5625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5553,8 +5553,9 @@ MonoBehaviour:
   currentShieldStack: 0
   maxShieldStack: 0
   shieldInvinsible: 0
-  shieldInvinsibleTime: 1
+  shieldInvinsibleTime: 2
   shieldReloadTime: 5
+  shieldImage: {fileID: 0}
   playerLevelText: {fileID: 1943501809}
   moveSpeed: 1
   rotationSpeed: 1
@@ -12986,7 +12987,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.75, y: 1}
+    m_SensorSize: {x: 0.5625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -17399,6 +17400,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 38926a301de4be64da9f8049284993fb, type: 2}
   - {fileID: 11400000, guid: a5ed5bd980839ce4e89c5359b3c3f16b, type: 2}
   - {fileID: 11400000, guid: 1fa75a0e36b537b4fbb420c76ea914f2, type: 2}
+  - {fileID: 11400000, guid: aab4b24f5d565b14d85a6ffa27810fb1, type: 2}
 --- !u!114 &1993698529
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class PlayerStat : MonoBehaviour
     public bool shieldInvinsible = false;
     public float shieldInvinsibleTime = 1f;
     public float shieldReloadTime = 5f;
+    public GameObject shieldImage;
 
     [Space]
 
@@ -85,8 +86,15 @@ public class PlayerStat : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (invinsible && playerDie)
+        if (invinsible || playerDie || shieldInvinsible)
             return;
+
+        if(currentShieldStack > 0)
+        {
+            StartCoroutine(UseShield());
+
+            return;
+        }
 
         currentHp -= damage;
 
@@ -294,16 +302,32 @@ public class PlayerStat : MonoBehaviour
         return playerLevel;
     }
 
-    public void GetShield()
+    public void GetShield(GameObject shieldImage)
     {
-        if(currentShieldStack < maxShieldStack)
+        this.maxShieldStack++;
+
+        if(maxShieldStack == 1)
         {
-            currentShieldStack++;
+            this.shieldImage = shieldImage;
+            AddShield();
         }
+    }
+
+    public void AddShield()
+    {
+        if (currentShieldStack == maxShieldStack)
+            return;
+
+        print("쉴드 생성");
+
+        currentShieldStack++;
+
+        shieldImage.SetActive(true);
     }
 
     public IEnumerator UseShield()
     {
+        print("쉴드 사용 무적 시작");
         shieldInvinsible = true;
 
         yield return new WaitForSeconds(shieldInvinsibleTime);
@@ -311,13 +335,19 @@ public class PlayerStat : MonoBehaviour
         shieldInvinsible = false;
         currentShieldStack--;
 
+        if(currentShieldStack == 0)
+            shieldImage.SetActive(false);
+
+        print("쉴드 무적 끝");
+
         StartCoroutine(ReloadShield());
     }
 
     public IEnumerator ReloadShield()
     {
+        print("쉴드 재생성 시작");
         yield return new WaitForSeconds(shieldReloadTime);
 
-        GetShield();
+        AddShield();
     }
 }
