@@ -99,9 +99,14 @@ public class GameManager : MonoBehaviour
         CameraManager.instance.ChangeCamera_MainMenu();
     }
 
+    public void Resurrection()
+    {
+        DieMenu.SetActive(false);
+    }
+
     public void PlayerDie()
     {
-        EnemyGenerator.instance.StopEnemySpawn();
+        //EnemyGenerator.instance.StopEnemySpawn();
 
         getCrystalCountText.text = playerStat.currentCrystal.ToString();
         killCountText.text = currentKillCount.ToString();
@@ -144,7 +149,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator StartTimerCoroutine()
     {
-        timer.text = string.Format("{0:0}:{1:00}", 0, 0);
+        //timer.text = string.Format("{0:0}:{1:00}", 0, 0);
 
         while (true)
         {
@@ -167,6 +172,7 @@ public class GameManager : MonoBehaviour
         playerStat.DeleteShipBody();
         playerStat.ClearWeaponSlots();
         playerWeapon.ClearAllWeapon();
+        playerWeapon.ClearAllPassive();
 
         var shipObject = shipList.shipList[currentShipNumber];
 

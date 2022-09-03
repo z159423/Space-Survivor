@@ -48,10 +48,12 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private TextMeshProUGUI crystalText;
     [SerializeField] private Transform weaponSlotParent;
+    [SerializeField] private Transform passiveSlotParent;
+
     [Space]
     [SerializeField] GameObject dieVFX;
 
-    private bool playerDie = false;
+    public bool playerDie = false;
     private bool whileLevelUp = false;
     private GameObject currentShipBody;
     public UnityEvent startGameEvent;
@@ -89,7 +91,7 @@ public class PlayerStat : MonoBehaviour
         if (invinsible || playerDie || shieldInvinsible)
             return;
 
-        if(currentShieldStack > 0)
+        if (currentShieldStack > 0)
         {
             StartCoroutine(UseShield());
 
@@ -118,7 +120,8 @@ public class PlayerStat : MonoBehaviour
         //Instantiate(dieVFX, transform.position, Quaternion.identity);
         VFXGenerator.instance.GenerateVFX(VFXType.playerDie1, transform.position);
 
-        DeleteShipBody();
+        //DeleteShipBody();
+        DisableShipBody();
 
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
@@ -131,7 +134,7 @@ public class PlayerStat : MonoBehaviour
     {
         if (whileLevelUp)
             return;
-            
+
         currentExp += exp;
 
         OnChangeExp();
@@ -234,6 +237,14 @@ public class PlayerStat : MonoBehaviour
         GetShipStat(ship);
     }
 
+    public void DisableShipBody()
+    {
+        if (currentShipBody == null)
+            return;
+
+        currentShipBody.SetActive(false);
+    }
+
     public void DeleteShipBody()
     {
         if (currentShipBody == null)
@@ -276,16 +287,34 @@ public class PlayerStat : MonoBehaviour
         hpBar.SetState(currentHp, maxHp);
     }
 
+    public void Resurrection()
+    {
+        FullHp();
+        currentShipBody.SetActive(true);
+        playerDie = false;
+
+        ItemGenerator.instance.DeQueueItem(ItemType.AtomicExplosion, transform.position);
+    }
+
     public void ClearWeaponSlots()
     {
-        WeaponSlot[] slots = weaponSlotParent.GetComponentsInChildren<WeaponSlot>();
+        EquipmentSlot[] weaponSlots = weaponSlotParent.GetComponentsInChildren<EquipmentSlot>();
 
-        for (int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < weaponSlots.Length; i++)
         {
-            Destroy(slots[i].gameObject);
+            Destroy(weaponSlots[i].gameObject);
         }
 
         playerWeapon.ClearWeaponSlotList();
+
+        EquipmentSlot[] passiveSlots = passiveSlotParent.GetComponentsInChildren<EquipmentSlot>();
+
+        for (int i = 0; i < passiveSlots.Length; i++)
+        {
+            Destroy(passiveSlots[i].gameObject);
+        }
+
+        playerWeapon.ClearPassiveSlotList();
     }
 
     public void Heal(int value)
@@ -304,9 +333,11 @@ public class PlayerStat : MonoBehaviour
 
     public void GetShield(GameObject shieldImage)
     {
+
+        //print(shieldImage);
         this.maxShieldStack++;
 
-        if(maxShieldStack == 1)
+        if (maxShieldStack == 1)
         {
             this.shieldImage = shieldImage;
             AddShield();
@@ -315,7 +346,7 @@ public class PlayerStat : MonoBehaviour
 
     public void AddShield()
     {
-        if (currentShieldStack == maxShieldStack)
+        if (currentShieldStack == maxShieldStack || playerDie)
             return;
 
         print("쉴드 생성");
@@ -335,7 +366,7 @@ public class PlayerStat : MonoBehaviour
         shieldInvinsible = false;
         currentShieldStack--;
 
-        if(currentShieldStack == 0)
+        if (currentShieldStack == 0)
             shieldImage.SetActive(false);
 
         print("쉴드 무적 끝");
@@ -349,5 +380,13 @@ public class PlayerStat : MonoBehaviour
         yield return new WaitForSeconds(shieldReloadTime);
 
         AddShield();
+    }
+
+    public void ResetShield()
+    {
+        StopCoroutine("ReloadShield");
+
+        currentShieldStack = 0;
+        maxShieldStack = 0;
     }
 }

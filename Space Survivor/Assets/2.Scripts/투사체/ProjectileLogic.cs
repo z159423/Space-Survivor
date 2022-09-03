@@ -19,7 +19,7 @@ public interface IProjectileLogic
 public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 {
 
-    public WeaponType type;
+    public EquipmentType type;
     [Space]
 
     //[SerializeField] private float fireForce = 1000f;

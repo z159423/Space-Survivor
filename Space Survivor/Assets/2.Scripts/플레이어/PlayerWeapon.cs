@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     public List<WeaponObject> weaponPool = new List<WeaponObject>();
+    public List<PassiveObject> passivePool = new List<PassiveObject>();
 
     //[SerializeField] private Transform firePos;
     //[SerializeField] private Transform fireDir;
@@ -14,7 +15,9 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] public PlayerStat playerStat;
 
     [Space]
-    public List<WeaponSlot> weaponSlotList = new List<WeaponSlot>();
+    public List<EquipmentSlot> weaponSlotList = new List<EquipmentSlot>();
+    public List<EquipmentSlot> passiveSlotList = new List<EquipmentSlot>();
+
 
     [Space]
 
@@ -78,15 +81,44 @@ public class PlayerWeapon : MonoBehaviour
         }
     }
 
-    public void AddNewWeapon(WeaponObject weapon)
+    public void AddNewWeapon(IEquipment equipment)
     {
-        var newWeapon = Instantiate(weapon);
-        weaponPool.Add(newWeapon);
-        FindFirePos(newWeapon);
-        FindFireDir(newWeapon);
-        newWeapon.GenerateWhileParticle(transform);
+        switch (equipment.GetAnyEqupment())
+        {
+            case AnyEqupment.Weapon:
+                var newWeapon = Instantiate(equipment.GetWeaponObject());
+                weaponPool.Add(newWeapon);
+                FindFirePos(newWeapon);
+                FindFireDir(newWeapon);
+                newWeapon.GenerateWhileParticle(transform);
 
-        LevelUpManager.instance.AddNewWeaponImage(weapon, weaponSlotList);
+                LevelUpManager.instance.AddNewWeaponImage(equipment, weaponSlotList);
+                break;
+
+            case AnyEqupment.Passive:
+                var newPassive = Instantiate(equipment.GetPassive());
+                passivePool.Add(newPassive);
+                newPassive.GenerateWhileParticle(transform);
+
+                switch (newPassive.GetEquipmentType())
+                {
+                    case EquipmentType.EnergyShield:
+                        newPassive.passiveStat = Instantiate(Resources.Load<EnergyShield>("PassiveStat/EnergyShieldStat"));
+                        break;
+
+                    case EquipmentType.SelfRepair:
+                        newPassive.passiveStat = Instantiate(Resources.Load<SelfRepairStat>("PassiveStat/SelfRepairStat"));
+                        break;
+
+                }
+
+                newPassive.passiveStat.GetPassiveEffect(playerStat);
+                newPassive.passiveStat.SetCoroutine(StartCoroutine(newPassive.passiveStat.StartWhilePassiveEffect()));
+
+                LevelUpManager.instance.AddNewWeaponImage(equipment, passiveSlotList);
+                break;
+        }
+
     }
 
     public void FindFirePos(WeaponObject weapon)
@@ -101,13 +133,24 @@ public class PlayerWeapon : MonoBehaviour
 
     public void ClearAllWeapon()
     {
-        for(int i = 0; i < weaponPool.Count; i++)
+        for (int i = 0; i < weaponPool.Count; i++)
         {
             if (weaponPool[i].currenWhileParticle != null)
                 Destroy(weaponPool[i].currenWhileParticle);
         }
 
         weaponPool.Clear();
+    }
+
+    public void ClearAllPassive()
+    {
+        for (int i = 0; i < passivePool.Count; i++)
+        {
+            if (passivePool[i].currenWhileParticle != null)
+                Destroy(passivePool[i].currenWhileParticle);
+        }
+
+        passivePool.Clear();
     }
 
     public List<WeaponObject> GetMaxLevelWeaponList()
@@ -123,22 +166,62 @@ public class PlayerWeapon : MonoBehaviour
         return weaponObjects;
     }
 
-    public void UpgradeWeapon(WeaponObject weaponObject)
+    public List<IEquipment> GetMaxLevelEquipmentList()
     {
+        List<IEquipment> EquipmentObejcts = new List<IEquipment>();
+
         for (int i = 0; i < weaponPool.Count; i++)
         {
-            if (weaponObject.type == weaponPool[i].type)
-            {
-                weaponPool[i].UpgradeWeapon(weaponPool[i].GetUpgradeModuleList());
-                LevelUpManager.instance.AddUpgradeNode(weaponObject);
-                return;
-            }
+            if (weaponPool[i].GetCurrentWeaponLevel() > weaponPool[i].maxWeaponLevel)
+                EquipmentObejcts.Add(weaponPool[i]);
         }
 
-        AddNewWeapon(weaponObject);
+        for (int i = 0; i < passivePool.Count; i++)
+        {
+            if (passivePool[i].GetCurrentWeaponLevel() > passivePool[i].maxWeaponLevel)
+                EquipmentObejcts.Add(passivePool[i]);
+        }
+
+        return EquipmentObejcts;
     }
 
-    public WeaponObject GetCurrentWeapon(WeaponType type)
+    public void UpgradeWeapon(IEquipment weaponObject)
+    {
+        switch (weaponObject.GetAnyEqupment())
+        {
+            case AnyEqupment.Weapon:
+                for (int i = 0; i < weaponPool.Count; i++)
+                {
+                    if (weaponObject.GetEquipmentType() == weaponPool[i].GetEquipmentType())
+                    {
+                        weaponPool[i].UpgradeWeapon(weaponPool[i].GetUpgradeModuleList());
+                        LevelUpManager.instance.AddUpgradeNode(weaponObject);
+                        return;
+                    }
+                }
+
+                AddNewWeapon(weaponObject);
+                break;
+
+            case AnyEqupment.Passive:
+                for (int i = 0; i < passivePool.Count; i++)
+                {
+                    if (weaponObject.GetEquipmentType() == passivePool[i].GetEquipmentType())
+                    {
+                        passivePool[i].UpgradeEquipment(passivePool[i].GetUpgradeModuleList());
+                        LevelUpManager.instance.AddUpgradeNode(weaponObject);
+                        return;
+                    }
+                }
+
+                AddNewWeapon(weaponObject);
+                break;
+        }
+
+
+    }
+
+    public WeaponObject GetCurrentWeapon(EquipmentType type)
     {
         for (int i = 0; i < weaponPool.Count; i++)
         {
@@ -149,7 +232,7 @@ public class PlayerWeapon : MonoBehaviour
         return null;
     }
 
-    public int GetWeaponLevel(WeaponType type)
+    public int GetWeaponLevel(EquipmentType type)
     {
         for (int i = 0; i < weaponPool.Count; i++)
         {
@@ -160,7 +243,7 @@ public class PlayerWeapon : MonoBehaviour
         return 0;
     }
 
-    public int GetMaxWeaponLevel(WeaponType type)
+    public int GetMaxWeaponLevel(EquipmentType type)
     {
         for (int i = 0; i < weaponPool.Count; i++)
         {
@@ -171,7 +254,7 @@ public class PlayerWeapon : MonoBehaviour
         return 0;
     }
 
-    public bool GetIsWeaponHave(WeaponType type)
+    public bool GetIsWeaponHave(EquipmentType type)
     {
         for (int i = 0; i < weaponPool.Count; i++)
         {
@@ -196,8 +279,8 @@ public class PlayerWeapon : MonoBehaviour
 
                 yield return new WaitForSeconds(.15f);
 
-                if(playerStat.GetPlayerDie())
-                break;
+                if (playerStat.GetPlayerDie())
+                    break;
 
                 var missile = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.BurstMissile, player.transform.position);
 
@@ -217,6 +300,11 @@ public class PlayerWeapon : MonoBehaviour
     public void ClearWeaponSlotList()
     {
         weaponSlotList.Clear();
+    }
+
+    public void ClearPassiveSlotList()
+    {
+        passiveSlotList.Clear();
     }
 }
 

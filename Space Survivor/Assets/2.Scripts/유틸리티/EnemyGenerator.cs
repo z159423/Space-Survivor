@@ -19,9 +19,11 @@ public class EnemyGenerator : MonoBehaviour
     [Space]
     [SerializeField] private Transform player;
 
-    public static EnemyGenerator instance;
+    public bool spawningEnemy = false;
 
     private Coroutine enemySpawnCoroutine;
+
+    public static EnemyGenerator instance;
 
     private void Awake()
     {
@@ -82,7 +84,7 @@ public class EnemyGenerator : MonoBehaviour
         {
             StopCoroutine(enemySpawnCoroutine);
         }
-
+        spawningEnemy = true;
         enemySpawnCoroutine = StartCoroutine(StartSpawnEnemy());
     }
 
@@ -91,6 +93,7 @@ public class EnemyGenerator : MonoBehaviour
         if (enemySpawnCoroutine == null)
             return;
 
+        spawningEnemy = false;
         StopCoroutine(enemySpawnCoroutine);
         enemySpawnCoroutine = null;
     }
@@ -226,6 +229,7 @@ public class EnemyWave
     {
         while (true)
         {
+            if(EnemyGenerator.instance.spawningEnemy)
             EnemyGenerator.instance.GenerateEnemy2(enemyObject);
 
             yield return new WaitForSeconds(summonCycleTime);
