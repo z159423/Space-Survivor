@@ -25,10 +25,13 @@ public class LevelUpManager : MonoBehaviour
     [Space]
 
     [SerializeField] private int maxWeaponCount = 6;
+    [SerializeField] private int maxPassiveCount = 4;
 
     [Space]
 
     [SerializeField] private List<WeaponObject> obtainableWeapons = new List<WeaponObject>();
+
+    private List<Equipment> obtainableEquipment = new List<Equipment>();
 
     private List<WeaponObject> currentObtainableList = new List<WeaponObject>();
     private List<GameObject> currentUpgradePanel = new List<GameObject>();
@@ -77,6 +80,8 @@ public class LevelUpManager : MonoBehaviour
     {
         //È¹µæ °¡´ÉÇÑ ¹«±âµé Ãß°¡
         currentObtainableList.AddRange(obtainableWeapons);
+
+        obtainableEquipment.AddRange(obtainableEquipment);
 
         var maxWeapons = playerWeapon.GetMaxLevelWeaponList();
 

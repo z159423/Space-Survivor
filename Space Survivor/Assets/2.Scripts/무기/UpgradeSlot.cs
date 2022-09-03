@@ -22,13 +22,13 @@ public class UpgradeSlot : MonoBehaviour
 
     public WeaponObject weaponObject;
 
+    public Equipment equipment;
+
     public void InitSlot(WeaponObject weaponObject)
     {
         this.weaponObject = weaponObject;
 
         moduleName.text = weaponObject.type.ToString();
-
-
 
         for (int i = 0; i < LevelUpManager.instance.RequestWeaponLevel(weaponObject.type) - 1; i++)
         {

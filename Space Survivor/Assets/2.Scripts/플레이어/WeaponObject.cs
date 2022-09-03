@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public interface Equipment
+{
+    public void Upgrade();
+
+    public WeaponObject GetWeaponObject();
+    public PassiveObject GetPassive();
+}
 
 [CreateAssetMenu(fileName = "new Weapon", menuName = "Scriptable Object/Weapon Data", order = int.MaxValue)]
-public class WeaponObject : ScriptableObject
+public class WeaponObject : ScriptableObject , Equipment
 {
     public Stack<GameObject> bulletStack = new Stack<GameObject>();
 
@@ -92,6 +99,11 @@ public class WeaponObject : ScriptableObject
         }
 
         ChangeRandomDir();
+    }
+
+    public void Upgrade()
+    {
+        
     }
 
     public void UpgradeWeapon(UpgradeModuleList modules)
@@ -381,6 +393,16 @@ public class WeaponObject : ScriptableObject
             return;
 
         currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue());
+    }
+
+    public WeaponObject GetWeaponObject()
+    {
+        return this;
+    }
+
+    public PassiveObject GetPassive()
+    {
+        return null;
     }
 }
 
