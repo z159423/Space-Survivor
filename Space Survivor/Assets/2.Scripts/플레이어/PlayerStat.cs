@@ -380,6 +380,15 @@ public class PlayerStat : MonoBehaviour
     public IEnumerator ReloadShield()
     {
         print("쉴드 재생성 시작");
+
+        for (int i = 0; i < playerWeapon.passivePool.Count; i++)
+        {
+            if (playerWeapon.passivePool[i].type == EquipmentType.EnergyShield)
+            {
+                playerWeapon.passivePool[i].passiveStat.StartPassiveSlotCoolTimeImage(shieldReloadTime);
+                break;
+            }
+        }
         yield return new WaitForSeconds(shieldReloadTime);
 
         AddShield();

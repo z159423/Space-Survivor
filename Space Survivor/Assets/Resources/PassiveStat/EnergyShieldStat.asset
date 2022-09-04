@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b13ea961b095bc4eba97acc6635fac7, type: 3}
   m_Name: EnergyShieldStat
   m_EditorClassIdentifier: 
-  invinsibleTime: 1
-  shieldReloadTime: 5
+  invinsibleTime:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  shieldReloadTime:
+    baseValue: 5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
   shieldStackAmount: 1
-  shieldActive: 0
   shieldPrefab: {fileID: 435296270060555721, guid: 9f2b4561c784f7740aa316ca43fd4734, type: 3}
   currentShieldObject: {fileID: 0}

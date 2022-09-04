@@ -12,6 +12,9 @@ public interface IPassiveEquipment
     public void UpgradePassive(UpgradeModule upgradeModule);
     public void SetCoroutine(Coroutine coroutine);
     public void ClearPassive();
+    public void GetEquipmentSlot(EquipmentSlot slot);
+    public void StartPassiveSlotCoolTimeImage(float time);
+    public void SetCoolTimeSlot();
 }
 
 [CreateAssetMenu(fileName = "new Passive", menuName = "Scriptable Object/Equipment/New Passive", order = int.MaxValue)]

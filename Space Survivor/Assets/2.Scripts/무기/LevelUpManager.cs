@@ -173,7 +173,7 @@ public class LevelUpManager : MonoBehaviour
         return playerWeapon.GetMaxWeaponLevel(type);
     }
 
-    public void AddNewWeaponImage(IEquipment equipmentObject, List<EquipmentSlot> slotList)
+    public void AddNewWeaponImage(IEquipment equipmentObject, List<EquipmentSlot> slotList, IPassiveEquipment passiveEquipment = null)
     {
         Transform slotParent = null;
 
@@ -194,6 +194,11 @@ public class LevelUpManager : MonoBehaviour
         slotList.Add(slot.GetComponent<EquipmentSlot>());
 
         slot.GetComponent<EquipmentSlot>().SetEquipment(equipmentObject);
+
+        print(passiveEquipment);
+
+        if(passiveEquipment != null)
+            passiveEquipment.GetEquipmentSlot(slot.GetComponent<EquipmentSlot>());
     }
 
     public void AddUpgradeNode(IEquipment weaponObject)

@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class SelfRepairStat : ScriptableObject, IPassiveEquipment
 {
-    public GameObject selfRepairParticlePrefab;
     public ParticleSystem currentSelfRepairParticle { get; set; }
 
     public Stat healValue = new Stat();
@@ -15,6 +14,7 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
     public Coroutine selfRepairCoroutine = null;
 
     private PlayerStat playerStat;
+    private EquipmentSlot CoolTimeSlot;
 
     public void UpgradePassive(UpgradeModule upgradeModule)
     {
@@ -24,6 +24,7 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
     public void GetPassiveEffect(PlayerStat playerStat)
     {
         this.playerStat = playerStat;
+        SetCoolTimeSlot();
     }
 
     public IEnumerator StartWhilePassiveEffect()
@@ -48,6 +49,7 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
         VFXGenerator.instance.GenerateVFX(VFXType.Heal1, playerStat.transform.position);
 
         playerStat.Heal((int)healValue.GetFinalStatValue());
+        StartPassiveSlotCoolTimeImage(coolTime.GetFinalStatValue());
     }
 
     public void SetCoroutine(Coroutine coroutine)
@@ -57,7 +59,22 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
 
     public void ClearPassive()
     {
-        if(selfRepairCoroutine != null)
+        if (selfRepairCoroutine != null)
             CoroutineHelper.StopCoroutine(selfRepairCoroutine);
+    }
+
+    public void SetCoolTimeSlot()
+    {
+        CoolTimeSlot.weaponCoolTimeImage.disableCoolTime();
+    }
+
+    public void StartPassiveSlotCoolTimeImage(float time)
+    {
+        CoolTimeSlot.weaponCoolTimeImage.StartCoolTime(time);
+    }
+
+    public void GetEquipmentSlot(EquipmentSlot slot)
+    {
+        CoolTimeSlot = slot;
     }
 }

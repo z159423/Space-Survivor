@@ -5,14 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new EnergyShield Stat", menuName = "Scriptable Object/Equipment/New EnergyShield Stat", order = int.MaxValue)]
 public class EnergyShield : ScriptableObject, IPassiveEquipment
 {
-
-
-    public float invinsibleTime = 1f;
-    public float shieldReloadTime = 5f;
+    public Stat invinsibleTime;
+    public Stat shieldReloadTime;
     public int shieldStackAmount = 1;
 
     public GameObject shieldPrefab;
     public GameObject currentShieldObject;
+
+    public EquipmentSlot CoolTimeSlot;
 
     public void UpgradePassive(UpgradeModule upgradeModule)
     {
@@ -22,6 +22,7 @@ public class EnergyShield : ScriptableObject, IPassiveEquipment
     public void GetPassiveEffect(PlayerStat playerStat)
     {
         GiveShield(playerStat);
+        SetCoolTimeSlot();
     }
 
     public IEnumerator StartWhilePassiveEffect()
@@ -49,6 +50,21 @@ public class EnergyShield : ScriptableObject, IPassiveEquipment
 
     public void ClearPassive()
     {
-        
+
+    }
+
+    public void SetCoolTimeSlot()
+    {
+        CoolTimeSlot.weaponCoolTimeImage.disableCoolTime();
+    }
+
+    public void StartPassiveSlotCoolTimeImage(float time)
+    {
+        CoolTimeSlot.weaponCoolTimeImage.StartCoolTime(time);
+    }
+
+    public void GetEquipmentSlot(EquipmentSlot slot)
+    {
+        CoolTimeSlot = slot;
     }
 }

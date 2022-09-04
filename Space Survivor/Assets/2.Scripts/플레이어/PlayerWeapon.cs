@@ -112,10 +112,10 @@ public class PlayerWeapon : MonoBehaviour
 
                 }
 
+                LevelUpManager.instance.AddNewWeaponImage(equipment, passiveSlotList, newPassive.passiveStat);
+
                 newPassive.passiveStat.GetPassiveEffect(playerStat);
                 newPassive.passiveStat.SetCoroutine(StartCoroutine(newPassive.passiveStat.StartWhilePassiveEffect()));
-
-                LevelUpManager.instance.AddNewWeaponImage(equipment, passiveSlotList);
                 break;
         }
 
