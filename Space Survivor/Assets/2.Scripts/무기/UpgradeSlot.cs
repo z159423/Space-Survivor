@@ -30,6 +30,7 @@ public class UpgradeSlot : MonoBehaviour
 
         moduleName.text = weaponObject.GetEquipmentType().ToString();
 
+        
         for (int i = 0; i < LevelUpManager.instance.RequestWeaponLevel(weaponObject.GetEquipmentType()) - 1; i++)
         {
             Instantiate(upgradeNodePrefab, upgradeNodeSlotparent);
@@ -74,7 +75,7 @@ public class UpgradeSlot : MonoBehaviour
 
         //StartCoroutine(GetLocalizedWeaponNameAsynce());
 
-        
+
 
         //무기 이미지로 변경
         weaponImage.sprite = weaponObject.GetEquipmentIamge();

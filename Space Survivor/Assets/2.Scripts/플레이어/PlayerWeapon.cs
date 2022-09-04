@@ -234,10 +234,15 @@ public class PlayerWeapon : MonoBehaviour
 
     public int GetWeaponLevel(EquipmentType type)
     {
-        for (int i = 0; i < weaponPool.Count; i++)
+        List<IEquipment> equipmentPool = new List<IEquipment>();
+
+        equipmentPool.AddRange(weaponPool);
+        equipmentPool.AddRange(passivePool);
+
+        for (int i = 0; i < equipmentPool.Count; i++)
         {
-            if (weaponPool[i].type == type)
-                return weaponPool[i].GetCurrentWeaponLevel();
+            if (equipmentPool[i].GetEquipmentType() == type)
+                return equipmentPool[i].GetCurrentWeaponLevel();
         }
 
         return 0;
