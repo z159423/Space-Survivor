@@ -68,7 +68,7 @@ MonoBehaviour:
   rigid: {fileID: 4673022242771149064}
   vfxs: []
   trails: []
-  spreadValue: 15
+  spreadValue: 25
 --- !u!114 &6314092904246990039
 MonoBehaviour:
   m_ObjectHideFlags: 0

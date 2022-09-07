@@ -148,6 +148,8 @@ public class PlayerStat : MonoBehaviour
         if (whileLevelUp)
             return;
 
+        print(getMineralBouse.GetFinalStatValue());
+
         currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
 
         OnChangeExp();
@@ -211,16 +213,25 @@ public class PlayerStat : MonoBehaviour
         currentHp = maxHp;
         playerDie = false;
 
+        currentShieldStack = 0;
+        maxShieldStack = 0;
+
         playerLevel = 1;
         currentExp = 0;
         currentCrystal = 0;
         crystalText.text = currentCrystal.ToString();
         maxExp = 5;
+        getMineralBouse.ClearPercentModifier();
 
         playerLevelText.text = "Level " + playerLevel.ToString();
 
         OnChangeExp();
         hpBar.SetState(currentHp, maxHp);
+
+        for(int i = 0; i < playerWeapon.passivePool.Count; i++)
+        {
+            playerWeapon.passivePool[i].passiveStat.OnEndGame();
+        }
 
         playerWeapon.ResetPlayerWeapon();
         ClearWeaponSlots();

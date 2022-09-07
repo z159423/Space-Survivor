@@ -119,8 +119,9 @@ public class LevelUpManager : MonoBehaviour
         {
             for (int i = 0; i < currentObtainableList.Count; i++)
             {
-                if (!playerWeapon.GetIsWeaponHave(currentObtainableList[i].GetEquipmentType()) && currentObtainableList[i].GetAnyEqupment() == AnyEqupment.Passive)
+                if (!playerWeapon.GetIsPassiveHave(currentObtainableList[i].GetEquipmentType()) && currentObtainableList[i].GetAnyEqupment() == AnyEqupment.Passive)
                 {
+                    print(currentObtainableList[i]);
                     //Debug.LogError(currentObtainableList[i].type);
                     currentObtainableList.Remove(currentObtainableList[i]);
                     i--;

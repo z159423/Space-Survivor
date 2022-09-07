@@ -38,6 +38,11 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
         }
     }
 
+    public void OnEndGame()
+    {
+        CoroutineHelper.StopCoroutine(selfRepairCoroutine);
+    }
+
     public void SelfRepair()
     {
         //if (currentSelfRepairParticle == null)

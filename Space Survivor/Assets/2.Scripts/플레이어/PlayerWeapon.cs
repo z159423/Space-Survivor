@@ -281,6 +281,20 @@ public class PlayerWeapon : MonoBehaviour
         return false;
     }
 
+    public bool GetIsPassiveHave(EquipmentType type)
+    {
+        for (int i = 0; i < passivePool.Count; i++)
+        {
+            if (passivePool[i].type == type)
+            {
+                //Debug.LogError(type);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void MissileBurst(Collider2D player)
     {
         StartCoroutine(Missile());

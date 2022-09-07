@@ -40,6 +40,11 @@ public class ResourceRefinerStat : ScriptableObject, IPassiveEquipment
 
     }
 
+    public void OnEndGame()
+    {
+
+    }
+
     public void ClearPassive()
     {
 

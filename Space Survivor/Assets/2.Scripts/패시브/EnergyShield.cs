@@ -30,6 +30,11 @@ public class EnergyShield : ScriptableObject, IPassiveEquipment
         yield return null;
     }
 
+    public void OnEndGame()
+    {
+        
+    }
+
     private void GiveShield(PlayerStat playerStat)
     {
         if (playerStat.maxShieldStack < shieldStackAmount)

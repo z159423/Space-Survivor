@@ -439,12 +439,28 @@ public class UpgradeModuleList
     public List<UpgradeModule> upgradeModules = new List<UpgradeModule>();
 
     //사람이 읽을 수 있는 언어로 변환뒤 return [예 : -0.1f => 10]
-    public string GetValueHumanReadableValue(int i)
+    public string GetValueHumanReadableValue1(int i)
     {
         if (Mathf.Abs(upgradeModules[i].value1) < 1)
             return (Mathf.Abs(upgradeModules[i].value1) * 100).ToString();
         else
             return upgradeModules[i].value1.ToString();
+    }
+
+    public string GetValueHumanReadableValue2(int i)
+    {
+        if (Mathf.Abs(upgradeModules[i].value2) < 1)
+            return (Mathf.Abs(upgradeModules[i].value2) * 100).ToString();
+        else
+            return upgradeModules[i].value2.ToString();
+    }
+
+    public string GetValueHumanReadableValue3(int i)
+    {
+        if (Mathf.Abs(upgradeModules[i].value3) < 1)
+            return (Mathf.Abs(upgradeModules[i].value3) * 100).ToString();
+        else
+            return upgradeModules[i].value3.ToString();
     }
 }
 

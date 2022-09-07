@@ -47,6 +47,14 @@ MonoBehaviour:
     m_Key: IncreaseMineralBonusPercent
     m_Metadata:
       m_Items: []
+  - m_Id: 30091780840701952
+    m_Key: IncreaseRepairRate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30091900621635584
+    m_Key: IncreaseRepairValue
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

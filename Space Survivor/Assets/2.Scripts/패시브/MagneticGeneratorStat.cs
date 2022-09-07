@@ -41,6 +41,11 @@ public class MagneticGeneratorStat : ScriptableObject, IPassiveEquipment
 
     }
 
+    public void OnEndGame()
+    {
+
+    }
+
     public void ClearPassive()
     {
 
