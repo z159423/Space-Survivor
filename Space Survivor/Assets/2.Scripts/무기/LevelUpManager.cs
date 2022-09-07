@@ -11,7 +11,9 @@ public class LevelUpManager : MonoBehaviour
     [Space]
 
     [SerializeField] private Transform weaponSlotParent;
-    [SerializeField] private GameObject weaponSlot;
+    [SerializeField] private Transform passiveSlotParent;
+
+    [SerializeField] private GameObject equipmentSlot;
 
     [Space]
 
@@ -30,10 +32,12 @@ public class LevelUpManager : MonoBehaviour
     [Space]
 
     [SerializeField] private List<WeaponObject> obtainableWeapons = new List<WeaponObject>();
+    [SerializeField] private List<PassiveObject> obtainablePassives = new List<PassiveObject>();
 
-    private List<Equipment> obtainableEquipment = new List<Equipment>();
 
-    private List<WeaponObject> currentObtainableList = new List<WeaponObject>();
+    // private List<Equipment> obtainableEquipment = new List<Equipment>();
+
+    private List<IEquipment> currentObtainableList = new List<IEquipment>();
     private List<GameObject> currentUpgradePanel = new List<GameObject>();
     private List<GameObject> crystalPanel = new List<GameObject>();
 
@@ -80,17 +84,17 @@ public class LevelUpManager : MonoBehaviour
     {
         //획득 가능한 무기들 추가
         currentObtainableList.AddRange(obtainableWeapons);
+        //획득 가능한 패시브들 추가
+        currentObtainableList.AddRange(obtainablePassives);
 
-        obtainableEquipment.AddRange(obtainableEquipment);
-
-        var maxWeapons = playerWeapon.GetMaxLevelWeaponList();
+        var maxWeapons = playerWeapon.GetMaxLevelEquipmentList();
 
         //이미 만랩인 무기 리스트에서 제거
         for (int i = 0; i < maxWeapons.Count; i++)
         {
             for (int j = 0; j < currentObtainableList.Count; j++)
             {
-                if (currentObtainableList[j].type == maxWeapons[i].type)
+                if (currentObtainableList[j].GetEquipmentType() == maxWeapons[i].GetEquipmentType())
                     currentObtainableList.Remove(currentObtainableList[j]);
             }
         }
@@ -100,7 +104,22 @@ public class LevelUpManager : MonoBehaviour
         {
             for (int i = 0; i < currentObtainableList.Count; i++)
             {
-                if (!playerWeapon.GetIsWeaponHave(currentObtainableList[i].type))
+                if (!playerWeapon.GetIsWeaponHave(currentObtainableList[i].GetEquipmentType()) && currentObtainableList[i].GetAnyEqupment() == AnyEqupment.Weapon)
+                {
+                    //Debug.LogError(currentObtainableList[i].type);
+                    currentObtainableList.Remove(currentObtainableList[i]);
+                    i--;
+                }
+
+            }
+        }
+
+        //만약 패시브 슬롯이 꽉차면 새로운 패시브가 등장하지 않게 리스트에서 삭제
+        if (playerWeapon.passivePool.Count >= maxPassiveCount)
+        {
+            for (int i = 0; i < currentObtainableList.Count; i++)
+            {
+                if (!playerWeapon.GetIsWeaponHave(currentObtainableList[i].GetEquipmentType()) && currentObtainableList[i].GetAnyEqupment() == AnyEqupment.Passive)
                 {
                     //Debug.LogError(currentObtainableList[i].type);
                     currentObtainableList.Remove(currentObtainableList[i]);
@@ -131,48 +150,83 @@ public class LevelUpManager : MonoBehaviour
 
     }
 
-    public void SelectUpgrade(WeaponObject weaponObject)
+    public void SelectUpgrade(IEquipment equipment)
     {
-        playerWeapon.UpgradeWeapon(weaponObject);
+        playerWeapon.UpgradeWeapon(equipment);
 
         playerStat.AfterUpgrade();
         EndUpgrade();
     }
 
-    public WeaponObject RequestPlayerWeapon(WeaponType type)
+    public WeaponObject RequestPlayerWeapon(EquipmentType type)
     {
         return playerWeapon.GetCurrentWeapon(type);
     }
 
-    public int RequestWeaponLevel(WeaponType type)
+    public int RequestWeaponLevel(EquipmentType type)
     {
         return playerWeapon.GetWeaponLevel(type);
     }
 
-    public int RequestMaxWeaponLevel(WeaponType type)
+    public int RequestMaxWeaponLevel(EquipmentType type)
     {
         return playerWeapon.GetMaxWeaponLevel(type);
     }
 
-    public void AddNewWeaponImage(WeaponObject weaponObject, List<WeaponSlot> slotList)
+    public void AddNewWeaponImage(IEquipment equipmentObject, List<EquipmentSlot> slotList, IPassiveEquipment passiveEquipment = null)
     {
-        var slot = Instantiate(weaponSlot, weaponSlotParent);
+        Transform slotParent = null;
 
-        slotList.Add(slot.GetComponent<WeaponSlot>());
+        switch (equipmentObject.GetAnyEqupment())
+        {
+            case AnyEqupment.Weapon:
+                slotParent = weaponSlotParent;
+                break;
 
-        slot.GetComponent<WeaponSlot>().SetWeapon(weaponObject);
+            case AnyEqupment.Passive:
+                slotParent = passiveSlotParent;
+                break;
+
+        }
+
+        var slot = Instantiate(equipmentSlot, slotParent);
+
+        slotList.Add(slot.GetComponent<EquipmentSlot>());
+
+        slot.GetComponent<EquipmentSlot>().SetEquipment(equipmentObject);
+
+        print(passiveEquipment);
+
+        if(passiveEquipment != null)
+            passiveEquipment.GetEquipmentSlot(slot.GetComponent<EquipmentSlot>());
     }
 
-    public void AddUpgradeNode(WeaponObject weaponObject)
+    public void AddUpgradeNode(IEquipment weaponObject)
     {
-        var weaponSlots = weaponSlotParent.GetComponentsInChildren<WeaponSlot>();
+        var weaponSlots = weaponSlotParent.GetComponentsInChildren<EquipmentSlot>();
+        var PassiveSlots = passiveSlotParent.GetComponentsInChildren<EquipmentSlot>();
 
-        for (int i = 0; i < weaponSlots.Length; i++)
+        switch (weaponObject.GetAnyEqupment())
         {
-            if (weaponSlots[i].weaponObject.type == weaponObject.type)
-            {
-                weaponSlots[i].AddUpgradeNode();
-            }
+            case AnyEqupment.Weapon:
+                for (int i = 0; i < weaponSlots.Length; i++)
+                {
+                    if (weaponSlots[i].weaponObject.GetEquipmentType() == weaponObject.GetEquipmentType())
+                    {
+                        weaponSlots[i].AddUpgradeNode();
+                    }
+                }
+                break;
+
+            case AnyEqupment.Passive:
+                for (int i = 0; i < PassiveSlots.Length; i++)
+                {
+                    if (PassiveSlots[i].weaponObject.GetEquipmentType() == weaponObject.GetEquipmentType())
+                    {
+                        PassiveSlots[i].AddUpgradeNode();
+                    }
+                }
+                break;
         }
     }
 

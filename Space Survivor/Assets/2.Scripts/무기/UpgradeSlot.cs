@@ -20,22 +20,23 @@ public class UpgradeSlot : MonoBehaviour
 
     [Space]
 
-    public WeaponObject weaponObject;
+    public IEquipment weaponObject;
 
-    public Equipment equipment;
+    public IEquipment equipment;
 
-    public void InitSlot(WeaponObject weaponObject)
+    public void InitSlot(IEquipment weaponObject)
     {
         this.weaponObject = weaponObject;
 
-        moduleName.text = weaponObject.type.ToString();
+        moduleName.text = weaponObject.GetEquipmentType().ToString();
 
-        for (int i = 0; i < LevelUpManager.instance.RequestWeaponLevel(weaponObject.type) - 1; i++)
+        
+        for (int i = 0; i < LevelUpManager.instance.RequestWeaponLevel(weaponObject.GetEquipmentType()) - 1; i++)
         {
             Instantiate(upgradeNodePrefab, upgradeNodeSlotparent);
         }
 
-        if (LevelUpManager.instance.RequestWeaponLevel(weaponObject.type) > 0)
+        if (LevelUpManager.instance.RequestWeaponLevel(weaponObject.GetEquipmentType()) > 0)
         {
             var expectNode = Instantiate(upgradeNodePrefab, upgradeNodeSlotparent);
 
@@ -74,17 +75,17 @@ public class UpgradeSlot : MonoBehaviour
 
         //StartCoroutine(GetLocalizedWeaponNameAsynce());
 
-        
+
 
         //무기 이미지로 변경
-        weaponImage.sprite = weaponObject.weaponImage;
+        weaponImage.sprite = weaponObject.GetEquipmentIamge();
 
 
     }
 
     public IEnumerator GetLocalizedWeaponTextAsynce()
     {
-        var keyName1 = weaponObject.type.ToString();
+        var keyName1 = weaponObject.GetEquipmentType().ToString();
 
         var localizedString1 = new LocalizedString("Weapons", keyName1);
 
@@ -101,12 +102,12 @@ public class UpgradeSlot : MonoBehaviour
             yield return null;
         }
 
-        int weaponLevel = LevelUpManager.instance.RequestWeaponLevel(weaponObject.type);
+        int weaponLevel = LevelUpManager.instance.RequestWeaponLevel(weaponObject.GetEquipmentType());
 
         //현재 소지중인 무기 래밸이 0일시 아이템의 설명이 출력되도록
         if (weaponLevel == 0)
         {
-            var keyName = weaponObject.type.ToString() + "_D";
+            var keyName = weaponObject.GetEquipmentType().ToString() + "_D";
 
             var localizedString = new LocalizedString("Weapons", keyName);
 
@@ -127,16 +128,16 @@ public class UpgradeSlot : MonoBehaviour
         }
         else  //아이템의 레벨이 1 이상이면 다음 업그레이드 노드들이 출력되도록
         {
-            for (int i = 0; i < weaponObject.UpgradeModulesForLevel[weaponLevel - 1].upgradeModules.Count; i++)
+            for (int i = 0; i < weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules.Count; i++)
             {
-                var keyName = weaponObject.UpgradeModulesForLevel[weaponLevel - 1].upgradeModules[i].upgradeModuleType.ToString();
+                var keyName = weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules[i].upgradeModuleType.ToString();
 
                 List<object> arguments = new List<object>();
 
-                arguments.Add(weaponObject.UpgradeModulesForLevel[weaponLevel - 1].upgradeModules[i].value1);
+                arguments.Add(weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules[i].value1);
 
                 var localizedString = new LocalizedString("Upgrades", keyName);
-                var dict = new Dictionary<string, string> { { "VALUE1", weaponObject.UpgradeModulesForLevel[weaponLevel - 1].GetValueHumanReadableValue(i) } };
+                var dict = new Dictionary<string, string> { { "VALUE1", weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].GetValueHumanReadableValue(i) } };
                 localizedString.Arguments = new object[] { dict };
 
                 //var stringOperation = LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Weapons", keyName);

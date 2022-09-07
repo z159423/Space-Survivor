@@ -19,20 +19,33 @@ public class EnemyGenerator : MonoBehaviour
     [Space]
     [SerializeField] private Transform player;
 
-    public static EnemyGenerator instance;
+    public bool spawningEnemy = false;
 
     private Coroutine enemySpawnCoroutine;
+
+    public static EnemyGenerator instance;
 
     private void Awake()
     {
         instance = this;
     }
 
+    public void StartSpawnEnemy()
+    {
+        spawningEnemy = true;
+    }
+
+    public void StopSpawnEnemy()
+    {
+        spawningEnemy = false;
+    }
+
+
     public void CheckWave()
     {
-        for(int i = 0; i < enemySpawnWaves.Count; i++)
+        for (int i = 0; i < enemySpawnWaves.Count; i++)
         {
-            if(enemySpawnWaves[i].StartWaveTime == GameManager.instance.getCurrentTime())
+            if (enemySpawnWaves[i].StartWaveTime == GameManager.instance.getCurrentTime())
             {
                 StartWave(enemySpawnWaves[i]);
             }
@@ -69,47 +82,17 @@ public class EnemyGenerator : MonoBehaviour
 
     public void StopAllWave()
     {
-        for(int i = 0; i < enemySpawnWaves.Count; i++)
+        for (int i = 0; i < enemySpawnWaves.Count; i++)
         {
             StopWave(enemySpawnWaves[i]);
         }
     }
 
-
-    public void StartEnemySpawn()
-    {
-        if(enemySpawnCoroutine != null)
-        {
-            StopCoroutine(enemySpawnCoroutine);
-        }
-
-        enemySpawnCoroutine = StartCoroutine(StartSpawnEnemy());
-    }
-
-    public void StopEnemySpawn()
-    {
-        if (enemySpawnCoroutine == null)
-            return;
-
-        StopCoroutine(enemySpawnCoroutine);
-        enemySpawnCoroutine = null;
-    }
-
-    private IEnumerator StartSpawnEnemy()
-    {
-        while(true)
-        {
-            GenerateEnemy(EnemyType.Scout1, GenerateSpawnPosition());
-
-            yield return new WaitForSeconds(spawnTime);
-        }
-    }
-
     public void EnQueueEnemy(EnemyStat stat)
     {
-        foreach(EnemyObject pool in enemyPools)
+        foreach (EnemyObject pool in enemyPools)
         {
-            if(pool.type == stat.GetType())
+            if (pool.type == stat.GetType())
             {
                 pool.EnQueue(stat.gameObject);
             }
@@ -126,7 +109,7 @@ public class EnemyGenerator : MonoBehaviour
             {
                 var success = pool.DeQueue(position);
 
-                if(success != null)
+                if (success != null)
                 {
                     var enemy = Instantiate(success, position, Quaternion.identity, parent);
 
@@ -142,8 +125,6 @@ public class EnemyGenerator : MonoBehaviour
 
     public void GenerateEnemy2(EnemyObject enemy)
     {
-        if (!GameManager.instance.gameStart)
-            return;
 
         var success = enemy.DeQueue(GenerateSpawnPosition());
 
@@ -177,7 +158,7 @@ public class EnemyGenerator : MonoBehaviour
         Vector3 position = new Vector3();
 
         float f = Random.value > 0.5f ? -1f : 1f;
-        if(Random.value > 0.5f)
+        if (Random.value > 0.5f)
         {
             position.x = Random.Range(-SpawnArea.x, SpawnArea.x);
             position.y = SpawnArea.y * f;
@@ -195,14 +176,44 @@ public class EnemyGenerator : MonoBehaviour
 
     public void DeleteAllEnemy()
     {
-        for(int i = 0; i < SpawnedEnemy.Count; i++)
+        for (int i = 0; i < SpawnedEnemy.Count; i++)
         {
-            if(SpawnedEnemy[i].gameObject.activeSelf)
+            if (SpawnedEnemy[i].gameObject.activeSelf)
             {
                 SpawnedEnemy[i].GetComponent<EnemyStat>().EnQueueThisEnemy();
             }
         }
     }
+
+    // public void StartEnemySpawn()
+    // {
+    //     if(enemySpawnCoroutine != null)
+    //     {
+    //         StopCoroutine(enemySpawnCoroutine);
+    //     }
+
+    //     enemySpawnCoroutine = StartCoroutine(StartSpawnEnemy());
+    // }
+
+    // public void StopEnemySpawn()
+    // {
+    //     if (enemySpawnCoroutine == null)
+    //         return;
+
+    //     spawningEnemy = false;
+    //     StopCoroutine(enemySpawnCoroutine);
+    //     enemySpawnCoroutine = null;
+    // }
+
+    // private IEnumerator StartSpawnEnemy()
+    // {
+    //     while(true)
+    //     {
+    //         GenerateEnemy(EnemyType.Scout1, GenerateSpawnPosition());
+
+    //         yield return new WaitForSeconds(spawnTime);
+    //     }
+    // }
 }
 
 [System.Serializable]
@@ -226,7 +237,8 @@ public class EnemyWave
     {
         while (true)
         {
-            EnemyGenerator.instance.GenerateEnemy2(enemyObject);
+            if (EnemyGenerator.instance.spawningEnemy)
+                EnemyGenerator.instance.GenerateEnemy2(enemyObject);
 
             yield return new WaitForSeconds(summonCycleTime);
         }

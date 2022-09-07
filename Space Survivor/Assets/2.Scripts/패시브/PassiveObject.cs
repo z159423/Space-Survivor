@@ -2,14 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "new Passive", menuName = "Scriptable Object/Weapon Data", order = int.MaxValue)]
-public class PassiveObject : ScriptableObject, Equipment
+public interface IPassiveEquipment
 {
+    ///<summary>
+    /// 패시브를 처음 획득했을때 발동하는 효과
+    ///</summary>
+    public void GetPassiveEffect(PlayerStat playerStat);
+    public IEnumerator StartWhilePassiveEffect();
+    public void UpgradePassive(UpgradeModule upgradeModule);
+    public void SetCoroutine(Coroutine coroutine);
+    public void ClearPassive();
+    public void GetEquipmentSlot(EquipmentSlot slot);
+    public void StartPassiveSlotCoolTimeImage(float time);
+    public void SetCoolTimeSlot();
+}
+
+[CreateAssetMenu(fileName = "new Passive", menuName = "Scriptable Object/Equipment/New Passive", order = int.MaxValue)]
+public class PassiveObject : ScriptableObject, IEquipment
+{
+
+    public IPassiveEquipment passiveStat;
+
+    public Sprite equipmentImage;
+
+    public AnyEqupment anyEqupment;
+    public EquipmentType type;
+
+    public int maxWeaponLevel = 4;
+    private int currentWeaponLevel = 1;
+
+    public GameObject whileParticlePrefab;
+    public GameObject currenWhileParticle;
+
+    public Coroutine passiveWhileCoroutine = null;
+
+    [Space]
+
+    public List<UpgradeModule> currentUpgradeModules = new List<UpgradeModule>();
+    public List<UpgradeModuleList> UpgradeModulesForLevel = new List<UpgradeModuleList>();
     
-    public void Upgrade()
+    public void UpgradeEquipment(UpgradeModuleList modules)
     {
-        
+
+        currentWeaponLevel++;
     }
+
+    
+    // public void GetPassiveEffect(PlayerStat playerStat)
+    // {
+
+    // }
+
+    // public void WhilePassiveEffect()
+    // {
+
+    // }
 
     public WeaponObject GetWeaponObject()
     {
@@ -21,4 +68,41 @@ public class PassiveObject : ScriptableObject, Equipment
         return this;
     }
 
+    public EquipmentType GetEquipmentType()
+    {
+        return type;
+    }
+
+    public AnyEqupment GetAnyEqupment()
+    {
+        return anyEqupment;
+    }
+
+    public List<UpgradeModuleList> GetUpgradeModuleLists()
+    {
+        return UpgradeModulesForLevel;
+    }
+
+    public UpgradeModuleList GetUpgradeModuleList()
+    {
+        return UpgradeModulesForLevel[currentWeaponLevel - 1];
+    }
+
+    public Sprite GetEquipmentIamge()
+    {
+        return equipmentImage;
+    }
+
+    public void GenerateWhileParticle(Transform trans)
+    {
+        if (whileParticlePrefab == null)
+            return;
+
+        currenWhileParticle = Instantiate(whileParticlePrefab, trans);
+    }
+
+    public int GetCurrentWeaponLevel()
+    {
+        return currentWeaponLevel;
+    }
 }

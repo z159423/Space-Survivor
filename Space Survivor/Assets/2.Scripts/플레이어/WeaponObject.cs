@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public interface Equipment
+public interface IEquipment
 {
-    public void Upgrade();
+    public void UpgradeEquipment(UpgradeModuleList modules);
 
     public WeaponObject GetWeaponObject();
     public PassiveObject GetPassive();
+    public EquipmentType GetEquipmentType();
+    public AnyEqupment GetAnyEqupment();
+    public List<UpgradeModuleList> GetUpgradeModuleLists();
+    public Sprite GetEquipmentIamge();
+    public UpgradeModuleList GetUpgradeModuleList();
+    public void GenerateWhileParticle(Transform trans);
+    public int GetCurrentWeaponLevel();
 }
 
-[CreateAssetMenu(fileName = "new Weapon", menuName = "Scriptable Object/Weapon Data", order = int.MaxValue)]
-public class WeaponObject : ScriptableObject , Equipment
+[CreateAssetMenu(fileName = "new Weapon", menuName = "Scriptable Object/Equipment/New Weapon", order = int.MaxValue)]
+public class WeaponObject : ScriptableObject , IEquipment
 {
     public Stack<GameObject> bulletStack = new Stack<GameObject>();
 
@@ -21,7 +28,8 @@ public class WeaponObject : ScriptableObject , Equipment
     public GameObject projectilePrefab;
     public Sprite weaponImage;
     public Transform parent;
-    public WeaponType type;
+    public AnyEqupment anyEqupment;
+    public EquipmentType type;
     public GameObject whileParticlePrefab;
     public GameObject currenWhileParticle;
     private Transform firePos;
@@ -101,7 +109,7 @@ public class WeaponObject : ScriptableObject , Equipment
         ChangeRandomDir();
     }
 
-    public void Upgrade()
+    public void UpgradeEquipment(UpgradeModuleList modules)
     {
         
     }
@@ -404,6 +412,26 @@ public class WeaponObject : ScriptableObject , Equipment
     {
         return null;
     }
+
+    public EquipmentType GetEquipmentType()
+    {
+        return type;
+    }
+
+    public AnyEqupment GetAnyEqupment()
+    {
+        return anyEqupment;
+    }
+
+    public List<UpgradeModuleList> GetUpgradeModuleLists()
+    {
+        return UpgradeModulesForLevel;
+    }
+
+    public Sprite GetEquipmentIamge()
+    {
+        return weaponImage;
+    }
 }
 
 [System.Serializable]
@@ -421,8 +449,13 @@ public class UpgradeModuleList
     }
 }
 
-public enum WeaponType
+public enum AnyEqupment
+{
+    Weapon, Passive
+}
+
+public enum EquipmentType
 {
     SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
-    SelfRepair, RadiationField, EnergyShield, SawBlade
+    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier
 }

@@ -30,6 +30,11 @@ public class WeaponCoolTimeImage : MonoBehaviour
         }
     }
 
+    public void disableCoolTime()
+    {
+        coolTimeCover.fillAmount = 0;
+    }
+
     public void StartCoolTime(float targetCoolTime)
     {
         currentCoolTime = targetCoolTime;

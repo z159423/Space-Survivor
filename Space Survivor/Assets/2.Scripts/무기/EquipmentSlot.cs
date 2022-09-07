@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponSlot : MonoBehaviour
+public class EquipmentSlot : MonoBehaviour
 {
-    public WeaponObject weaponObject;
+    public IEquipment weaponObject;
     [SerializeField] private Image weaponImage;
 
     [Space]
@@ -14,10 +14,10 @@ public class WeaponSlot : MonoBehaviour
     [SerializeField] private GameObject weaponUpgradeNode;
     public WeaponCoolTimeImage weaponCoolTimeImage;
 
-    public void SetWeapon(WeaponObject weapon)
+    public void SetEquipment(IEquipment weapon)
     {
         weaponObject = weapon;
-        weaponImage.sprite = weapon.weaponImage;
+        weaponImage.sprite = weapon.GetEquipmentIamge();
     }
 
     public void AddUpgradeNode()
