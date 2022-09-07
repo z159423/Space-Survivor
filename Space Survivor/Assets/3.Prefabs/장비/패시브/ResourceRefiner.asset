@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ce739d26d74f84888b356255bb70d5, type: 3}
   m_Name: ResourceRefiner
   m_EditorClassIdentifier: 
-  equipmentImage: {fileID: 21300000, guid: f9d127a83ed81964494af3988cb5ffa2, type: 3}
+  equipmentImage: {fileID: 21300000, guid: f5f1cb85a05bb5241951a1069a5f4377, type: 3}
   anyEqupment: 1
   type: 18
   maxWeaponLevel: 4

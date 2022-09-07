@@ -18,7 +18,16 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
 
     public void UpgradePassive(UpgradeModule upgradeModule)
     {
+        switch (upgradeModule.upgradeModuleType)
+        {
+            case upgradeModuleType.IncreaseRepairValue:
+                healValue.AddFloatModifier(upgradeModule.value1);
+                break;
 
+            case upgradeModuleType.IncreaseRepairRate:
+                coolTime.AddFloatModifier(upgradeModule.value1);
+                break;
+        }
     }
 
     public void GetPassiveEffect(PlayerStat playerStat)
@@ -40,6 +49,9 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
 
     public void OnEndGame()
     {
+        healValue.ClearIntModifier();
+        coolTime.ClearIntModifier();
+
         CoroutineHelper.StopCoroutine(selfRepairCoroutine);
     }
 

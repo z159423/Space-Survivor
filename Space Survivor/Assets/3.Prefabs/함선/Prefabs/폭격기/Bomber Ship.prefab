@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 8812495946540635998}
   - component: {fileID: 8812495946540635995}
   - component: {fileID: 8812495946540635996}
+  - component: {fileID: -8656085899476277548}
   m_Layer: 0
   m_Name: Bomber Ship
   m_TagString: Player
@@ -324,3 +325,15 @@ PolygonCollider2D:
       - {x: 0.6141841, y: 2.4982078}
       - {x: 0.6183658, y: 1.1993226}
       - {x: -0.7259229, y: 1.1970844}
+--- !u!114 &-8656085899476277548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812495946540635999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb598971c4c85a4e89574459f2f8607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -247,9 +247,9 @@ public class PlayerStat : MonoBehaviour
         hpBar.SetState(currentHp, maxHp);
     }
 
-    public void MakeThisShip(ShipObject ship)
+    public void MakeThisShip(ShipObject ship, Quaternion bodyrotation)
     {
-        currentShipBody = Instantiate(ship.shipBody, transform);
+        currentShipBody = Instantiate(ship.shipBody,transform.position,bodyrotation, transform);
 
         playerMovement.SetPlayerBody(currentShipBody.transform);
 

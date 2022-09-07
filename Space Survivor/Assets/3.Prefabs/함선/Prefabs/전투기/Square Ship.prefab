@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 5518835431198223639}
   - component: {fileID: 5518835431198223634}
   - component: {fileID: 5518835431198223637}
+  - component: {fileID: 7080393644431526891}
   m_Layer: 0
   m_Name: Square Ship
   m_TagString: Player
@@ -183,6 +184,18 @@ PolygonCollider2D:
       - {x: 10.24, y: -10.24}
       - {x: 10.24, y: -10.08}
       - {x: 0.08, y: 10.24}
+--- !u!114 &7080393644431526891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518835431198223638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb598971c4c85a4e89574459f2f8607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5518835431692853777
 GameObject:
   m_ObjectHideFlags: 0

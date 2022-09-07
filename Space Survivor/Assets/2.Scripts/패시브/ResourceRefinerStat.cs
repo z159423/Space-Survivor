@@ -42,7 +42,7 @@ public class ResourceRefinerStat : ScriptableObject, IPassiveEquipment
 
     public void OnEndGame()
     {
-
+        playerStat.getMineralBouse.ClearPercentModifier();
     }
 
     public void ClearPassive()

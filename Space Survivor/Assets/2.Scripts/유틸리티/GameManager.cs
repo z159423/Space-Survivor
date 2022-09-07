@@ -169,6 +169,10 @@ public class GameManager : MonoBehaviour
     //메인 메뉴에서 선택한 함선으로 변경
     public void SelectShip(int currentShipNumber)
     {
+        Quaternion bodyRotation = new Quaternion();
+        if (playerStat.GetComponentInChildren<PlayerBodyBeacon>() != null)
+            bodyRotation = playerStat.GetComponentInChildren<PlayerBodyBeacon>().transform.localRotation;
+
         playerStat.DeleteShipBody();
         playerStat.ClearWeaponSlots();
         playerWeapon.ClearAllWeapon();
@@ -176,7 +180,7 @@ public class GameManager : MonoBehaviour
 
         var shipObject = shipList.shipList[currentShipNumber];
 
-        player.GetComponent<PlayerStat>().MakeThisShip(shipObject);
+        player.GetComponent<PlayerStat>().MakeThisShip(shipObject, bodyRotation);
 
         StartCoroutine(ChangeShipNameText());
 
