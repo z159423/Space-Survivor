@@ -5780,6 +5780,7 @@ GameObject:
   - component: {fileID: 923141306}
   - component: {fileID: 923141309}
   - component: {fileID: 923141308}
+  - component: {fileID: 923141310}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5817,7 +5818,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ac3b020ce0a8a4ea0fb157f87528c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxExp: 5
+  maxExp: 50
+  maxExpIncreaseValue: 50
+  getMineralBouse:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
   currentCrystal: 0
   currentShieldStack: 0
   maxShieldStack: 0
@@ -10928,6 +10936,22 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!58 &923141310
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923141300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 30
 --- !u!1001 &928133408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17897,6 +17921,8 @@ MonoBehaviour:
   obtainablePassives:
   - {fileID: 11400000, guid: 6bb5b0d47685ebd43b58ede2f0807dce, type: 2}
   - {fileID: 11400000, guid: 41474693e53b40e4d82d20355f52e7ab, type: 2}
+  - {fileID: 11400000, guid: 5109360a8aa9e074f9d8442631de33a2, type: 2}
+  - {fileID: 11400000, guid: 90546eafa943b1c4d94ec44db0223bff, type: 2}
 --- !u!114 &1993698529
 MonoBehaviour:
   m_ObjectHideFlags: 0

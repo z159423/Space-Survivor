@@ -65,7 +65,7 @@ MonoBehaviour:
   spreadOffset: {x: 0, y: 0, z: 0}
   randomSpawn: 0
   randomSpawnOffset: {x: 0, y: 0, z: 0}
-  fireToNearEnemyRadius: 10
+  fireToNearEnemyRadius: 20
   rigid: {fileID: 4673022242771149064}
   vfxs: []
   trails:

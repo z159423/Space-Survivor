@@ -137,8 +137,9 @@ public class UpgradeSlot : MonoBehaviour
                 arguments.Add(weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules[i].value1);
 
                 var localizedString = new LocalizedString("Upgrades", keyName);
-                var dict = new Dictionary<string, string> { { "VALUE1", weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].GetValueHumanReadableValue(i) } };
-                localizedString.Arguments = new object[] { dict };
+                var dict1 = new Dictionary<string, string> { { "VALUE1", weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].GetValueHumanReadableValue(i) } };
+                var dict2 = new Dictionary<string, string> { { "VALUE2", weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].GetValueHumanReadableValue(i) } };
+                localizedString.Arguments = new object[] { dict1, dict2 };
 
                 //var stringOperation = LocalizationSettings.StringDatabase.GetLocalizedStringAsync("Weapons", keyName);
                 var stringOperation = localizedString.GetLocalizedStringAsync();

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public interface IEquipment
 {
     public void UpgradeEquipment(UpgradeModuleList modules);
-
     public WeaponObject GetWeaponObject();
     public PassiveObject GetPassive();
     public EquipmentType GetEquipmentType();
@@ -457,5 +456,5 @@ public enum AnyEqupment
 public enum EquipmentType
 {
     SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
-    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier
+    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner
 }

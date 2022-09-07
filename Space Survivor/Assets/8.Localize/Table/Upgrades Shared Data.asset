@@ -39,6 +39,14 @@ MonoBehaviour:
     m_Key: IncreaseSize
     m_Metadata:
       m_Items: []
+  - m_Id: 30046568894382080
+    m_Key: IncreaseResourcePullRadius
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30060295026851840
+    m_Key: IncreaseMineralBonusPercent
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 534320061789789083}
   - component: {fileID: 6984086923619206011}
   - component: {fileID: 5143510282866113078}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,6 @@ MonoBehaviour:
   type: 3
   expValue: 0
   crystalValue: 1
-  maxPullForce: 10
   startPullForce: -1
   pullForceIncrease: 100
   rigid: {fileID: 6984086923619206011}
@@ -142,4 +141,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 100
+  m_Radius: 10

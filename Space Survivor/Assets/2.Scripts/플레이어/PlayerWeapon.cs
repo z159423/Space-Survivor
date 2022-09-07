@@ -110,6 +110,14 @@ public class PlayerWeapon : MonoBehaviour
                         newPassive.passiveStat = Instantiate(Resources.Load<SelfRepairStat>("PassiveStat/SelfRepairStat"));
                         break;
 
+                    case EquipmentType.MagneticGenerator:
+                        newPassive.passiveStat = Instantiate(Resources.Load<MagneticGeneratorStat>("PassiveStat/MagneticGeneratorStat"));
+                        break;
+
+                    case EquipmentType.ResourceRefiner:
+                        newPassive.passiveStat = Instantiate(Resources.Load<ResourceRefinerStat>("PassiveStat/ResourceRefinerStat"));
+                        break;
+
                 }
 
                 LevelUpManager.instance.AddNewWeaponImage(equipment, passiveSlotList, newPassive.passiveStat);

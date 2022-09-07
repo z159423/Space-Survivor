@@ -195,7 +195,7 @@ public class LevelUpManager : MonoBehaviour
 
         slot.GetComponent<EquipmentSlot>().SetEquipment(equipmentObject);
 
-        print(passiveEquipment);
+        //print(passiveEquipment);
 
         if(passiveEquipment != null)
             passiveEquipment.GetEquipmentSlot(slot.GetComponent<EquipmentSlot>());

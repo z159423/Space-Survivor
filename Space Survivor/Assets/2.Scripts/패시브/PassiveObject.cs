@@ -43,6 +43,10 @@ public class PassiveObject : ScriptableObject, IEquipment
     
     public void UpgradeEquipment(UpgradeModuleList modules)
     {
+        for(int i = 0; i < modules.upgradeModules.Count; i++)
+        {
+            passiveStat.UpgradePassive(modules.upgradeModules[i]);
+        }
 
         currentWeaponLevel++;
     }

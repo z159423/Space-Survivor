@@ -49,10 +49,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1427024619712020494
+  - m_Id: 30046568894382080
+    m_Localized: "\uC790\uC6D0 \uD68D\uB4DD \uBC94\uC704 \uC99D\uAC00"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30060295026851840
+    m_Localized: "\uBBF8\uB124\uB784 \uD68D\uB4DD\uB7C9 {VALUE2}% \uC99D\uAC00"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020494
   references:
     version: 2
     RefIds:
     - rid: 1427024619712020494
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00703e90020000000070fe54050000000070be2b2400000000707e99240000000070be503c00000000703eee52000000
+        m_Entries: 00703e90020000000070fe54050000000070be2b2400000000707e99240000000070be503c00000000703eee520000000040ebd6adcb6a00

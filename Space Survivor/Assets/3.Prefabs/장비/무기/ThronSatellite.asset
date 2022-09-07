@@ -16,6 +16,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8837024627107654669, guid: 7a0967c018da8924f9683dad5faecbf0, type: 3}
   weaponImage: {fileID: 21300000, guid: 25b2e64593b25a8499e130cdf25f262a, type: 3}
   parent: {fileID: 0}
+  anyEqupment: 0
   type: 5
   whileParticlePrefab: {fileID: 0}
   currenWhileParticle: {fileID: 0}
@@ -80,4 +81,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
     - {fileID: 11400000, guid: b6453bf6de789c64bbe55435a4e9046d, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   maxWeaponLevel: 6

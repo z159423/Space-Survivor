@@ -12,8 +12,10 @@ public class PlayerStat : MonoBehaviour
 {
     private int maxHp = 1000;
     private int currentHp = 1000;
-    [SerializeField] private int maxExp = 5;
+    [SerializeField] private int maxExp = 50;
+    [SerializeField] private int maxExpIncreaseValue = 70;
     private int currentExp = 0;
+    public Stat getMineralBouse = new Stat();
     private int playerLevel = 1;
     public int currentCrystal = 0;
 
@@ -86,6 +88,14 @@ public class PlayerStat : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Resource"))
+        {
+            other.transform.GetComponent<Resource>().StartPull(transform);
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         if (invinsible || playerDie || shieldInvinsible)
@@ -138,7 +148,7 @@ public class PlayerStat : MonoBehaviour
         if (whileLevelUp)
             return;
 
-        currentExp += exp;
+        currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
 
         OnChangeExp();
     }
@@ -180,7 +190,7 @@ public class PlayerStat : MonoBehaviour
     {
         currentExp = 0;
 
-        maxExp += 10;
+        maxExp += maxExpIncreaseValue;
 
         var remainExp = currentExp - maxExp;
 
