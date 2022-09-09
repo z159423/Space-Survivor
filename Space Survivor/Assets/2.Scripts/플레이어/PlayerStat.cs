@@ -148,7 +148,7 @@ public class PlayerStat : MonoBehaviour
         if (whileLevelUp)
             return;
 
-        print(getMineralBouse.GetFinalStatValue());
+        //print(getMineralBouse.GetFinalStatValue());
 
         currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
 

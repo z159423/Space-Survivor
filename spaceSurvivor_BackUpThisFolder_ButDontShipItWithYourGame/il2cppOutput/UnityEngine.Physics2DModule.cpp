@@ -40,6 +40,8 @@ struct ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129;
 struct ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F;
 // UnityEngine.Behaviour
 struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA;
+// UnityEngine.CircleCollider2D
+struct CircleCollider2D_t5D665D58EACA966EA4033BCF0EE91E198552E786;
 // UnityEngine.Collider2D
 struct Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52;
 // UnityEngine.Collision2D
@@ -3164,6 +3166,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Collider2D_OverlapPoint_Injected_mCD54F3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Single UnityEngine.CircleCollider2D::get_radius()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CircleCollider2D_get_radius_m767A7E871FC706A078E903C3A96780884F844444 (CircleCollider2D_t5D665D58EACA966EA4033BCF0EE91E198552E786* __this, const RuntimeMethod* method) 
+{
+	typedef float (*CircleCollider2D_get_radius_m767A7E871FC706A078E903C3A96780884F844444_ftn) (CircleCollider2D_t5D665D58EACA966EA4033BCF0EE91E198552E786*);
+	static CircleCollider2D_get_radius_m767A7E871FC706A078E903C3A96780884F844444_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CircleCollider2D_get_radius_m767A7E871FC706A078E903C3A96780884F844444_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CircleCollider2D::get_radius()");
+	float icallRetVal = _il2cpp_icall_func(__this);
+	return icallRetVal;
+}
+// System.Void UnityEngine.CircleCollider2D::set_radius(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CircleCollider2D_set_radius_m468ECCD06634C48E6837A55B9E8D056BBF15FC52 (CircleCollider2D_t5D665D58EACA966EA4033BCF0EE91E198552E786* __this, float ___value0, const RuntimeMethod* method) 
+{
+	typedef void (*CircleCollider2D_set_radius_m468ECCD06634C48E6837A55B9E8D056BBF15FC52_ftn) (CircleCollider2D_t5D665D58EACA966EA4033BCF0EE91E198552E786*, float);
+	static CircleCollider2D_set_radius_m468ECCD06634C48E6837A55B9E8D056BBF15FC52_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CircleCollider2D_set_radius_m468ECCD06634C48E6837A55B9E8D056BBF15FC52_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CircleCollider2D::set_radius(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
