@@ -127,6 +127,14 @@ MonoBehaviour:
     m_Key: ResourceRefiner_D
     m_Metadata:
       m_Items: []
+  - m_Id: 31031801440706560
+    m_Key: Thruster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31031855329124352
+    m_Key: Thruster_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

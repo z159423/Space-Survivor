@@ -118,6 +118,10 @@ public class PlayerWeapon : MonoBehaviour
                         newPassive.passiveStat = Instantiate(Resources.Load<ResourceRefinerStat>("PassiveStat/ResourceRefinerStat"));
                         break;
 
+                    case EquipmentType.Thruster:
+                        newPassive.passiveStat = Instantiate(Resources.Load<ThrusterStat>("PassiveStat/ThrusterStat"));
+                        break;
+
                 }
 
                 LevelUpManager.instance.AddNewWeaponImage(equipment, passiveSlotList, newPassive.passiveStat);

@@ -4112,7 +4112,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.47368422, y: 1}
+    m_SensorSize: {x: 0.5625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13284,7 +13284,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.47368422, y: 1}
+    m_SensorSize: {x: 0.5625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -17935,6 +17935,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 41474693e53b40e4d82d20355f52e7ab, type: 2}
   - {fileID: 11400000, guid: 5109360a8aa9e074f9d8442631de33a2, type: 2}
   - {fileID: 11400000, guid: 90546eafa943b1c4d94ec44db0223bff, type: 2}
+  - {fileID: 11400000, guid: 8155bb1dc4ac6ee43bf28e7cf561aae2, type: 2}
 --- !u!114 &1993698529
 MonoBehaviour:
   m_ObjectHideFlags: 0

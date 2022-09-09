@@ -94,4 +94,9 @@ public class Stat
     {
         PercentModifiers.Clear();
     }
+
+    public void SetBaseValue(float value)
+    {
+        baseValue = value;
+    }
 }

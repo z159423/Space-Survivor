@@ -33,8 +33,8 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playerLevelText;
 
     [Space]
-    [SerializeField] private float moveSpeed = 1f;
-    [SerializeField] private float rotationSpeed = 1f;
+    [SerializeField] public Stat moveSpeed;
+    [SerializeField] public Stat rotationSpeed;
 
     [Space]
     [SerializeField] private ParticleSystem HitEffect;
@@ -206,12 +206,19 @@ public class PlayerStat : MonoBehaviour
         return playerDie;
     }
 
+    //스탯 초기화
     public void ResetPlayerStat()
     {
         transform.position = Vector2.zero;
 
         currentHp = maxHp;
         playerDie = false;
+
+        moveSpeed.ClearIntModifier();
+        moveSpeed.ClearPercentModifier();
+
+        rotationSpeed.ClearIntModifier();
+        rotationSpeed.ClearPercentModifier();
 
         currentShieldStack = 0;
         maxShieldStack = 0;
@@ -285,18 +292,18 @@ public class PlayerStat : MonoBehaviour
     public void GetShipStat(ShipObject shipObject)              //������� �Լ� ������ �÷��̾��� �Լ� ���ȿ� �ٿ��ֱ�
     {
         maxHp = shipObject.baseMaxHp;
-        moveSpeed = shipObject.baseMoveSpeed;
-        rotationSpeed = shipObject.baseRotationSpeed;
+        moveSpeed.SetBaseValue(shipObject.baseMoveSpeed);
+        rotationSpeed.SetBaseValue(shipObject.baseRotationSpeed);
     }
 
     public float GetMoveSpeed()
     {
-        return moveSpeed;
+        return moveSpeed.GetFinalStatValue();
     }
 
     public float GetRotationSpeed()
     {
-        return rotationSpeed;
+        return rotationSpeed.GetFinalStatValue();
     }
 
     public void ChangeInvinsible()
