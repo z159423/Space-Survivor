@@ -10,8 +10,12 @@ public class EnemyGenerator : MonoBehaviour
 
     public Transform parent;
 
+    [ArrayElementTitle("enemyObject")]
+    [SerializeField]
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
     [Space]
+    [ArrayElementTitle("enemyObject")]
+    [SerializeField]
     public List<EnemyWave> inProgressWaves = new List<EnemyWave>();
 
 
@@ -234,12 +238,14 @@ public class EnemyGenerator : MonoBehaviour
 [System.Serializable]
 public class EnemyWave
 {
+
     [Range(0, 1800)]
     public int StartWaveTime;
     [Range(0, 1800)]
     public int StopWaveTime;
 
     [Space]
+    [SerializeField]
     public waveType waveType;
     [Space]
     public float summonCycleTime = 1f;

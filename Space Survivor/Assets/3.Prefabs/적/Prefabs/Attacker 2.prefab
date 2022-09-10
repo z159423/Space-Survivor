@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  maxHp: 80
+  maxHp: 150
   damage: 5
   hitEffect: 1
   hitEffectTime: 0.1

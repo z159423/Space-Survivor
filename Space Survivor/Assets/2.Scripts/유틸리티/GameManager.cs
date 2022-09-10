@@ -166,6 +166,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SkipTime(int value)
+    {
+        currentTime += value;
+    }
+
     //메인 메뉴에서 선택한 함선으로 변경
     public void SelectShip(int currentShipNumber)
     {

@@ -101,4 +101,4 @@ public class ResourcePool
     }
 }
 
-public enum resourceType {none, Mineral1 , Mineral2, Crystal }
+public enum resourceType {none, Mineral1 , Mineral2, Crystal,Mineral3 }

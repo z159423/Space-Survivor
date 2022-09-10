@@ -110,7 +110,7 @@ MonoBehaviour:
   moveSpeed: 3
   rotationSpeed: 2
   dropTable:
-    expType: 2
+    expType: 4
     crystalType: 3
     crystalDropPercent: 20
     ItemDropPercent: 1
