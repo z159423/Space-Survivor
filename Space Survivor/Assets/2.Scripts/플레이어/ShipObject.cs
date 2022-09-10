@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShipObject : ScriptableObject
 {
     public ShipType shipType;
+    public string shipCode;
     public GameObject shipBody;
     public List<WeaponObject> basicWeapon = new List<WeaponObject>();
 

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c496d3a8f34a0eb4796d5029070701a3, type: 3}
   m_Name: 1_AttackShip
   m_EditorClassIdentifier: 
+  shipType: 0
+  shipCode: Nova
   shipBody: {fileID: 5518835431198223638, guid: a55735f6308bd5a4bb98c0a8246a8bd1, type: 3}
   basicWeapon:
   - {fileID: 11400000, guid: 61d256b2bec31f64e870d297f687a041, type: 2}

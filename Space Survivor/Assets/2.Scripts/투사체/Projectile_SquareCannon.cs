@@ -6,6 +6,7 @@ public class Projectile_SquareCannon : ProjectileLogic
 {
     public override void Fire(Transform target, int fireForce)
     {
+        
         base.Fire(target, fireForce);
 
         Vector2 fireDir;

@@ -35,6 +35,18 @@ MonoBehaviour:
     m_Key: BattleShip
     m_Metadata:
       m_Items: []
+  - m_Id: 5735542773587968
+    m_Key: Nova
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5735606585729024
+    m_Key: Rapier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5735650948882432
+    m_Key: Ray
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

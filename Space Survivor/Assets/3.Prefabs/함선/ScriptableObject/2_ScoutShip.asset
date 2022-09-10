@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 2_ScoutShip
   m_EditorClassIdentifier: 
   shipType: 1
+  shipCode: Rapier
   shipBody: {fileID: 5518835431198223638, guid: 1dc9bc6dcecee514d820630bcaaf08c2, type: 3}
   basicWeapon:
   - {fileID: 11400000, guid: 64fe913f9de41da4e9fc6af5fedddccc, type: 2}

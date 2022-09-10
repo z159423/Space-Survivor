@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 3_BomberShip
   m_EditorClassIdentifier: 
   shipType: 2
+  shipCode: Ray
   shipBody: {fileID: 8812495946540635999, guid: df41d2d7f95c3944a93fdd30d7039680, type: 3}
   basicWeapon:
   - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}

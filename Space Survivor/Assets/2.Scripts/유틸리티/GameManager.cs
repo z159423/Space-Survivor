@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
 
         IEnumerator ChangeShipNameText()
         {
-            var keyName = shipObject.shipType.ToString();
+            var keyName = shipObject.shipCode;
 
             var localizedString = new LocalizedString("Ship", keyName);
 

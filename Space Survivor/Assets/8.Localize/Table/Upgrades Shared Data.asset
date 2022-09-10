@@ -55,6 +55,14 @@ MonoBehaviour:
     m_Key: IncreaseRepairValue
     m_Metadata:
       m_Items: []
+  - m_Id: 31136969851215872
+    m_Key: IncreaseMoveSpeed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31136971369553920
+    m_Key: IncreaseRotationSpeed
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

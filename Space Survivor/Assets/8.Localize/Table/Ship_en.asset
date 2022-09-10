@@ -38,6 +38,18 @@ MonoBehaviour:
     m_Localized: BattleShip
     m_Metadata:
       m_Items: []
+  - m_Id: 5735542773587968
+    m_Localized: Nova
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5735606585729024
+    m_Localized: Rapier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5735650948882432
+    m_Localized: Ray
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

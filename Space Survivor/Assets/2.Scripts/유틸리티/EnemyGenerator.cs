@@ -18,6 +18,7 @@ public class EnemyGenerator : MonoBehaviour
 
     [Space]
     [SerializeField] private Transform player;
+    [SerializeField] private RectTransform canvas;
 
     public bool spawningEnemy = false;
 
@@ -28,6 +29,10 @@ public class EnemyGenerator : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start() {
+        SpawnArea = canvas.sizeDelta * 0.008f;
     }
 
     public void StartSpawnEnemy()

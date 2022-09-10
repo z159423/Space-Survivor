@@ -5834,8 +5834,18 @@ MonoBehaviour:
   shieldReloadTime: 5
   shieldImage: {fileID: 0}
   playerLevelText: {fileID: 1943501809}
-  moveSpeed: 1
-  rotationSpeed: 1
+  moveSpeed:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  rotationSpeed:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
   HitEffect: {fileID: 923141308}
   hpBar: {fileID: 1440320675}
   expSlider: {fileID: 1762525577}
@@ -14022,7 +14032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cab6e88071a54458b1251e913333be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnArea: {x: 10, y: 15}
+  SpawnArea: {x: 8, y: 12}
   spawnTime: 1
   parent: {fileID: 1463551431}
   enemySpawnWaves:
@@ -14046,6 +14056,11 @@ MonoBehaviour:
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+  - StartWaveTime: 130
+    StopWaveTime: 300
+    waveType: 0
+    summonCycleTime: 1
+    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
   - StartWaveTime: 125
     StopWaveTime: 240
     waveType: 0
@@ -14054,12 +14069,12 @@ MonoBehaviour:
   - StartWaveTime: 125
     StopWaveTime: 240
     waveType: 0
-    summonCycleTime: 0.7
+    summonCycleTime: 0.6
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
   - StartWaveTime: 240
-    StopWaveTime: 300
+    StopWaveTime: 420
     waveType: 0
-    summonCycleTime: 0.5
+    summonCycleTime: 0.35
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
   - StartWaveTime: 300
     StopWaveTime: 305
@@ -14067,27 +14082,27 @@ MonoBehaviour:
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
   - StartWaveTime: 300
-    StopWaveTime: 360
+    StopWaveTime: 420
+    waveType: 0
+    summonCycleTime: 0.5
+    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
+  - StartWaveTime: 360
+    StopWaveTime: 545
     waveType: 0
     summonCycleTime: 0.7
-    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
-  - StartWaveTime: 360
-    StopWaveTime: 420
-    waveType: 0
-    summonCycleTime: 1
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
-  - StartWaveTime: 360
-    StopWaveTime: 420
-    waveType: 0
-    summonCycleTime: 1
-    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
   - StartWaveTime: 420
+    StopWaveTime: 540
+    waveType: 0
+    summonCycleTime: 0.6
+    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
+  - StartWaveTime: 425
     StopWaveTime: 540
     waveType: 0
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
-  - StartWaveTime: 480
-    StopWaveTime: 485
+  - StartWaveTime: 420
+    StopWaveTime: 425
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
