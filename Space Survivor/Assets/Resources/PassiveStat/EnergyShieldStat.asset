@@ -19,7 +19,7 @@ MonoBehaviour:
     maxValue: 0
     MaxValue: 1000
   shieldReloadTime:
-    baseValue: 5
+    baseValue: 7
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -27,3 +27,4 @@ MonoBehaviour:
   shieldStackAmount: 1
   shieldPrefab: {fileID: 435296270060555721, guid: 9f2b4561c784f7740aa316ca43fd4734, type: 3}
   currentShieldObject: {fileID: 0}
+  CoolTimeSlot: {fileID: 0}

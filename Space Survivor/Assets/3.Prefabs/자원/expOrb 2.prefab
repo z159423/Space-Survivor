@@ -50,7 +50,7 @@ MonoBehaviour:
   type: 2
   expValue: 50
   crystalValue: 0
-  startPullForce: -1
+  startPullForce: -5
   pullForceIncrease: 20
   rigid: {fileID: 6984086923619206011}
 --- !u!212 &534320061789789083

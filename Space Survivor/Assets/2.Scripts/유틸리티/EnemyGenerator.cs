@@ -11,6 +11,9 @@ public class EnemyGenerator : MonoBehaviour
     public Transform parent;
 
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
+    [Space]
+    public List<EnemyWave> inProgressWaves = new List<EnemyWave>();
+
 
     [Space]
     public List<EnemyObject> enemyPools = new List<EnemyObject>();
@@ -64,10 +67,15 @@ public class EnemyGenerator : MonoBehaviour
 
     private void StartWave(EnemyWave wave)
     {
+
+        //print("웨이브 시작 : " + wave.StartWaveTime + " 시작, " + wave.StopWaveTime + " 끝 " + wave.enemyObject);
+
         switch (wave.waveType)
         {
             case waveType.summonedPeriodically:
                 wave.waveCoroutine = StartCoroutine(wave.SummonPreiodically());
+
+                inProgressWaves.Add(wave);
                 break;
 
             case waveType.summonBoss:
@@ -81,6 +89,9 @@ public class EnemyGenerator : MonoBehaviour
         if (wave.waveCoroutine == null)
             return;
 
+            //print("웨이브 종료 : " + wave.StartWaveTime + " 시작, " + wave.StopWaveTime + " 끝 " + wave.enemyObject);
+
+        inProgressWaves.Remove(wave);
         StopCoroutine(wave.waveCoroutine);
         wave.waveCoroutine = null;
     }
@@ -100,9 +111,8 @@ public class EnemyGenerator : MonoBehaviour
             if (pool.type == stat.GetType())
             {
                 pool.EnQueue(stat.gameObject);
+                break;
             }
-
-            break;
         }
     }
 

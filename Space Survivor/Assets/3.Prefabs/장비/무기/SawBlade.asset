@@ -16,6 +16,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8837024627107654669, guid: b9454ad25f0db2745b982a4a51a85199, type: 3}
   weaponImage: {fileID: 21300000, guid: 9fbd2257a330897428c4cfbdafada525, type: 3}
   parent: {fileID: 0}
+  anyEqupment: 0
   type: 12
   whileParticlePrefab: {fileID: 0}
   currenWhileParticle: {fileID: 0}
@@ -65,17 +66,17 @@ MonoBehaviour:
   - upgradeModules:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
+    - {fileID: 11400000, guid: e9b65b762fc5e0b46bbaafeb064939e2, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
+    - {fileID: 11400000, guid: e9b65b762fc5e0b46bbaafeb064939e2, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
-    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
+    - {fileID: 11400000, guid: e9b65b762fc5e0b46bbaafeb064939e2, type: 2}
   maxWeaponLevel: 6

@@ -4105,7 +4105,7 @@ MonoBehaviour:
   m_Follow: {fileID: 923141303}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 12
+    OrthographicSize: 13
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -13714,7 +13714,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
+          m_IntArgument: 100000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14051,31 +14051,46 @@ MonoBehaviour:
     waveType: 0
     summonCycleTime: 0.4
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+  - StartWaveTime: 90
+    StopWaveTime: 91
+    waveType: 0
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
   - StartWaveTime: 120
     StopWaveTime: 125
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
-  - StartWaveTime: 130
-    StopWaveTime: 300
-    waveType: 0
-    summonCycleTime: 1
-    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
   - StartWaveTime: 125
     StopWaveTime: 240
     waveType: 0
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
-  - StartWaveTime: 125
-    StopWaveTime: 240
+  - StartWaveTime: 180
+    StopWaveTime: 181
     waveType: 0
-    summonCycleTime: 0.6
-    enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
   - StartWaveTime: 240
-    StopWaveTime: 420
+    StopWaveTime: 300
     waveType: 0
     summonCycleTime: 0.35
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+  - StartWaveTime: 300
+    StopWaveTime: 420
+    waveType: 0
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
+  - StartWaveTime: 270
+    StopWaveTime: 271
+    waveType: 0
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
+  - StartWaveTime: 330
+    StopWaveTime: 331
+    waveType: 0
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
   - StartWaveTime: 300
     StopWaveTime: 305
     waveType: 0
@@ -14086,15 +14101,25 @@ MonoBehaviour:
     waveType: 0
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
+  - StartWaveTime: 420
+    StopWaveTime: 540
+    waveType: 0
+    summonCycleTime: 1
+    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
+  - StartWaveTime: 420
+    StopWaveTime: 421
+    waveType: 0
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
   - StartWaveTime: 360
     StopWaveTime: 545
     waveType: 0
-    summonCycleTime: 0.7
+    summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
   - StartWaveTime: 420
     StopWaveTime: 540
     waveType: 0
-    summonCycleTime: 0.6
+    summonCycleTime: 0.4
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
   - StartWaveTime: 425
     StopWaveTime: 540
@@ -14114,12 +14139,56 @@ MonoBehaviour:
   - StartWaveTime: 545
     StopWaveTime: 600
     waveType: 0
-    summonCycleTime: 0.7
+    summonCycleTime: 1
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
+  - StartWaveTime: 600
+    StopWaveTime: 720
+    waveType: 0
+    summonCycleTime: 0.5
+    enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
+  - StartWaveTime: 600
+    StopWaveTime: 660
+    waveType: 0
+    summonCycleTime: 1
+    enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+  - StartWaveTime: 660
+    StopWaveTime: 720
+    waveType: 0
+    summonCycleTime: 0.5
+    enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+  - StartWaveTime: 720
+    StopWaveTime: 725
+    waveType: 0
+    summonCycleTime: 0.02
+    enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+  - StartWaveTime: 725
+    StopWaveTime: 780
+    waveType: 0
+    summonCycleTime: 1
+    enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
+  - StartWaveTime: 780
+    StopWaveTime: 900
+    waveType: 0
+    summonCycleTime: 0.5
+    enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+  - StartWaveTime: 860
+    StopWaveTime: 900
+    waveType: 0
+    summonCycleTime: 1
+    enemyObject: {fileID: 11400000, guid: 0a7065eb4d7fb554682ee0f74d7f5784, type: 2}
+  inProgressWaves: []
   enemyPools:
   - {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+  - {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+  - {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
+  - {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
+  - {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
+  - {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+  - {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
+  - {fileID: 11400000, guid: 0a7065eb4d7fb554682ee0f74d7f5784, type: 2}
   SpawnedEnemy: []
   player: {fileID: 923141303}
+  canvas: {fileID: 1625381616}
   spawningEnemy: 0
 --- !u!1 &1465526447
 GameObject:

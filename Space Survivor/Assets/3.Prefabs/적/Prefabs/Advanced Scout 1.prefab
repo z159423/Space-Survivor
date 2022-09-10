@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 601496630676670503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.39, y: 0.47, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,15 +100,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  maxHp: 500
+  maxHp: 250
   damage: 4
   hitEffect: 1
   hitEffectTime: 0.1
   hitMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   spriteRenderer: {fileID: 601496630676670499}
   rigid: {fileID: 601496630676670501}
-  moveSpeed: 4.5
-  rotationSpeed: 2
+  moveSpeed: 2.5
+  rotationSpeed: 1
   dropTable:
     expType: 0
     crystalType: 2
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
+  m_Mass: 3
   m_LinearDrag: 2
   m_AngularDrag: 0
   m_GravityScale: 0

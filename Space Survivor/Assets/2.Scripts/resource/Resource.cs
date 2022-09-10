@@ -40,6 +40,10 @@ public class Resource : MonoBehaviour
         }
     }
 
+    private void OnEnable() {
+        currentPullForce = startPullForce;
+    }
+
     private void OnDisable()
     {
         player = null;
