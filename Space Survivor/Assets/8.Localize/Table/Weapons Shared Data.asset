@@ -135,6 +135,14 @@ MonoBehaviour:
     m_Key: Thruster_D
     m_Metadata:
       m_Items: []
+  - m_Id: 31644266901872640
+    m_Key: EnhancedSiege
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31644327547314176
+    m_Key: EnhancedSiege_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

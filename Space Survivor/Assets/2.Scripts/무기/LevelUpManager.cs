@@ -20,7 +20,8 @@ public class LevelUpManager : MonoBehaviour
     [SerializeField] private PlayerWeapon playerWeapon;
     public PlayerStat playerStat;
 
-    [SerializeField] private GameObject upgradePanelPrefab;
+    [SerializeField] private GameObject weaponUpgradePanelPrefab;
+    [SerializeField] private GameObject passiveUpgradePanelPrefab;
     [SerializeField] private GameObject crystalPanelPrefab;
 
 
@@ -140,9 +141,22 @@ public class LevelUpManager : MonoBehaviour
                 continue;
             }
 
+            
 
-            var panel = Instantiate(upgradePanelPrefab, UpgradeSlotParent);
+            GameObject panel = null;
             var randomWeaponObject = currentObtainableList[Random.Range(0, currentObtainableList.Count)];
+
+            switch (randomWeaponObject.GetAnyEqupment())
+            {
+                case AnyEqupment.Weapon:
+                    panel = Instantiate(weaponUpgradePanelPrefab, UpgradeSlotParent);
+                    break;
+
+                case AnyEqupment.Passive:
+                    panel = Instantiate(passiveUpgradePanelPrefab, UpgradeSlotParent);
+                    break;
+            }
+
             panel.GetComponent<UpgradeSlot>().InitSlot(randomWeaponObject);
             StartCoroutine(panel.GetComponent<UpgradeSlot>().GetLocalizedWeaponTextAsynce());
             currentObtainableList.Remove(randomWeaponObject);

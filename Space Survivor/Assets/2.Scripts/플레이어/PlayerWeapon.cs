@@ -9,6 +9,7 @@ public class PlayerWeapon : MonoBehaviour
 
     //[SerializeField] private Transform firePos;
     //[SerializeField] private Transform fireDir;
+    public Stat additionalDamage = new Stat();
 
     [Space]
     [SerializeField] private PlayerMovement playerMovement;
@@ -122,6 +123,9 @@ public class PlayerWeapon : MonoBehaviour
                         newPassive.passiveStat = Instantiate(Resources.Load<ThrusterStat>("PassiveStat/ThrusterStat"));
                         break;
 
+                    case EquipmentType.EnhancedSiege:
+                        newPassive.passiveStat = Instantiate(Resources.Load<EnhancedSiegeStat>("PassiveStat/EnhancedSiegeStat"));
+                        break;
                 }
 
                 LevelUpManager.instance.AddNewWeaponImage(equipment, passiveSlotList, newPassive.passiveStat);

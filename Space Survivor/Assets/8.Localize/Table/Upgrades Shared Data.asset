@@ -63,6 +63,10 @@ MonoBehaviour:
     m_Key: IncreaseRotationSpeed
     m_Metadata:
       m_Items: []
+  - m_Id: 31453822477737984
+    m_Key: IncreaseDamagePercent
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

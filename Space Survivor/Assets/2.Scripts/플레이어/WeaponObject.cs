@@ -472,5 +472,5 @@ public enum AnyEqupment
 public enum EquipmentType
 {
     SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
-    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner
+    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner,EnhancedSiege
 }

@@ -207,7 +207,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
                 OffProjectile();
             }
 
-            collision.GetComponent<EnemyStat>().TakeDamage(damage.GetFinalStatValueAsInt());
+            collision.GetComponent<EnemyStat>().TakeDamage(Mathf.RoundToInt(damage.GetFinalStatValueAsInt() * playerWeapon.additionalDamage.GetFinalStatValue()));
             collision.GetComponent<EnemyStat>().Knockback(collision.bounds.center, knockBackForce);
         }
     }

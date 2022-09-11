@@ -243,7 +243,7 @@ public class PlayerStat : MonoBehaviour
         playerWeapon.ResetPlayerWeapon();
         ClearWeaponSlots();
 
-
+        playerWeapon.additionalDamage.ClearPercentModifier();
     }
 
     public void PlayGame()

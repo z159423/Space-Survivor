@@ -1658,6 +1658,12 @@ MonoBehaviour:
     type: 7
     endTime: 5
     particleSize: 1
+  - activeParticle: []
+    Prefab: {fileID: 8641011668772237561, guid: 0ecfc4fc3550ffd49bd0030a42ee2bce, type: 3}
+    parent: {fileID: 248298816}
+    type: 8
+    endTime: 5
+    particleSize: 1
   generatedResource: []
 --- !u!4 &248298816
 Transform:
@@ -5952,7 +5958,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 30
   m_LinearDrag: 2
   m_AngularDrag: 2
   m_GravityScale: 0
@@ -5975,6 +5981,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPool: []
   passivePool: []
+  additionalDamage:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
   playerMovement: {fileID: 923141301}
   playerStat: {fileID: 923141302}
   weaponSlotList: []
@@ -14310,6 +14322,11 @@ MonoBehaviour:
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
   - StartWaveTime: 840
+    StopWaveTime: 845
+    waveType: 0
+    summonCycleTime: 0.02
+    enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
+  - StartWaveTime: 845
     StopWaveTime: 900
     waveType: 0
     summonCycleTime: 1
@@ -17291,6 +17308,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 923141302}
+        m_TargetAssemblyTypeName: PlayerStat, Assembly-CSharp
+        m_MethodName: ResetPlayerStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 923141305}
         m_TargetAssemblyTypeName: PlayerWeapon, Assembly-CSharp
         m_MethodName: ClearAllWeapon
@@ -17318,18 +17347,6 @@ MonoBehaviour:
       - m_Target: {fileID: 923141302}
         m_TargetAssemblyTypeName: PlayerStat, Assembly-CSharp
         m_MethodName: GetCurrentCrystal
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 923141302}
-        m_TargetAssemblyTypeName: PlayerStat, Assembly-CSharp
-        m_MethodName: ResetPlayerStat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18137,7 +18154,8 @@ MonoBehaviour:
   equipmentSlot: {fileID: 9144777923209180007, guid: 8c29a84ab8965a845a8734b1c6816b86, type: 3}
   playerWeapon: {fileID: 923141305}
   playerStat: {fileID: 923141302}
-  upgradePanelPrefab: {fileID: 8406098325818377060, guid: c58d40bac9e372148a98ba2a1f19cf30, type: 3}
+  weaponUpgradePanelPrefab: {fileID: 8406098325818377060, guid: c58d40bac9e372148a98ba2a1f19cf30, type: 3}
+  passiveUpgradePanelPrefab: {fileID: 8406098325818377060, guid: d6cdc5f72b7c0ad4c89877903c074be0, type: 3}
   crystalPanelPrefab: {fileID: 8406098325818377060, guid: ff7275ffb2fe0c141bb043d1bb63bcfc, type: 3}
   maxWeaponCount: 6
   maxPassiveCount: 4
@@ -18158,6 +18176,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5109360a8aa9e074f9d8442631de33a2, type: 2}
   - {fileID: 11400000, guid: 90546eafa943b1c4d94ec44db0223bff, type: 2}
   - {fileID: 11400000, guid: 8155bb1dc4ac6ee43bf28e7cf561aae2, type: 2}
+  - {fileID: 11400000, guid: 6f664867df9aa074e995428931e9524c, type: 2}
 --- !u!114 &1993698529
 MonoBehaviour:
   m_ObjectHideFlags: 0

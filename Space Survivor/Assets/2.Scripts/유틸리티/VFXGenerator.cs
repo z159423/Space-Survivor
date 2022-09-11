@@ -181,4 +181,4 @@ public class VFXPool
     }
 }
 
-public enum VFXType { none, enemyDie1, playerDie1, missileExplode, projectileBlowupSmall, Explode1, Heal1, AtomicExplosion }
+public enum VFXType { none, enemyDie1, playerDie1, missileExplode, projectileBlowupSmall, Explode1, Heal1, AtomicExplosion, enemyDie2 }

@@ -114,7 +114,7 @@ MonoBehaviour:
     crystalType: 3
     crystalDropPercent: 100
     ItemDropPercent: 0
-  dieVFXType: 1
+  dieVFXType: 8
   target: {fileID: 0}
 --- !u!50 &601496630676670501
 Rigidbody2D:
