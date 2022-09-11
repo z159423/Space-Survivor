@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c496d3a8f34a0eb4796d5029070701a3, type: 3}
-  m_Name: 1_AttackShip
+  m_Name: Ray
   m_EditorClassIdentifier: 
-  shipType: 0
-  shipCode: Nova
-  shipBody: {fileID: 5518835431198223638, guid: a55735f6308bd5a4bb98c0a8246a8bd1, type: 3}
+  shipType: 2
+  shipCode: Ray
+  shipBody: {fileID: 8812495946540635999, guid: df41d2d7f95c3944a93fdd30d7039680, type: 3}
   basicWeapon:
-  - {fileID: 11400000, guid: 61d256b2bec31f64e870d297f687a041, type: 2}
-  baseMaxHp: 1000
-  baseMoveSpeed: 5
-  baseRotationSpeed: 3.5
+  - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
+  baseMaxHp: 1200
+  baseMoveSpeed: 5.5
+  baseRotationSpeed: 2.5
+  shipCost: 1000

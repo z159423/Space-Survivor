@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerStat playerStat;
     [SerializeField] private PlayerWeapon playerWeapon;
     [SerializeField] private TextMeshProUGUI shipNameText;
-    
+    [SerializeField] private GameObject shipBuyBtn;
+    [SerializeField] private GameObject shipTrialBtn;
+
     [SerializeField] private CinemachineVirtualCamera cmvc;
 
     [Space]

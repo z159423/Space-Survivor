@@ -16,6 +16,8 @@ public class ShipObject : ScriptableObject
     public float baseMoveSpeed = 7f;
     public float baseRotationSpeed = 2f;
 
+    public int shipCost;
+
 }
 
 public enum ShipType {Attacker, Scout, Boomber, Carrier, BattleShip}
