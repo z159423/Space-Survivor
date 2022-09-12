@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float angle;
     private bool isMoving = false;
 
-    [SerializeField] private new Rigidbody2D rigidbody;
+    [SerializeField] private Rigidbody2D rigid;
 
     private void Start()
     {
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
             Vector2 dirToVirtualTarget = Utility.GetDirection(transform.position, virtualTarget.position);
 
-            rigidbody.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed();
+            rigid.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed();
             // rigidbody.velocity = playerBody.transform.up * Time.deltaTime * playerStat.GetMoveSpeed() * 10f;
 
 
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(fixedTouchField.Pressed)
         {
-            rigidbody.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed() * fixedTouchField.distBetweenJoystickBodyToHandle;
+            rigid.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed() * fixedTouchField.distBetweenJoystickBodyToHandle;
             // rigidbody.velocity = playerBody.transform.up * Time.deltaTime * playerStat.GetMoveSpeed() * 10f;
 
             // print(fixedTouchField.distBetweenJoystickBodyToHandle);

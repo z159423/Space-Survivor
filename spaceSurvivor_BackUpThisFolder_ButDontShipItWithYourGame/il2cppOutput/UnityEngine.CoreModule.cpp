@@ -10898,6 +10898,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Application_get_systemLanguage_mF0C8F
 	int32_t icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
+// UnityEngine.NetworkReachability UnityEngine.Application::get_internetReachability()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Application_get_internetReachability_mBF18F280D8BF621664049E9EB406ECF28FB7DC51 (const RuntimeMethod* method) 
+{
+	typedef int32_t (*Application_get_internetReachability_mBF18F280D8BF621664049E9EB406ECF28FB7DC51_ftn) ();
+	static Application_get_internetReachability_mBF18F280D8BF621664049E9EB406ECF28FB7DC51_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_get_internetReachability_mBF18F280D8BF621664049E9EB406ECF28FB7DC51_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::get_internetReachability()");
+	int32_t icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
 // System.Void UnityEngine.Application::CallLowMemory()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_CallLowMemory_mEDE4C1A091B81B3A96F2BC498EE8467D38A54D0E (const RuntimeMethod* method) 
 {
@@ -29040,6 +29050,25 @@ IL_000b:
 IL_000c:
 	{
 		Texture2D__ctor_m20EA968E1968A169CC798DB95BC7FA1634F422B5(G_B3_4, G_B3_3, G_B3_2, G_B3_1, G_B3_0, (bool)0, (0), NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Texture2D::.ctor(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D__ctor_m3BA82E87442B7F69E118477069AE11101B9DF796 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, int32_t ___width0, int32_t ___height1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___width0;
+		int32_t L_1 = ___height1;
+		il2cpp_codegen_runtime_class_init_inline(Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700_il2cpp_TypeInfo_var);
+		int32_t L_2 = ((Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700_StaticFields*)il2cpp_codegen_static_fields_for(Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700_il2cpp_TypeInfo_var))->___GenerateAllMips_4;
+		Texture2D__ctor_m20EA968E1968A169CC798DB95BC7FA1634F422B5(__this, L_0, L_1, 4, L_2, (bool)0, (0), NULL);
 		return;
 	}
 }

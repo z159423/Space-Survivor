@@ -10,11 +10,12 @@ public class EnemyGenerator : MonoBehaviour
 
     public Transform parent;
 
-    [ArrayElementTitle("enemyObject")]
+    //[ArrayElementTitle("enemyObject")]
     [SerializeField]
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
     [Space]
-    [ArrayElementTitle("enemyObject")]
+
+    //[ArrayElementTitle("enemyObject")]
     [SerializeField]
     public List<EnemyWave> inProgressWaves = new List<EnemyWave>();
 
@@ -38,7 +39,8 @@ public class EnemyGenerator : MonoBehaviour
         instance = this;
     }
 
-    private void Start() {
+    private void Start()
+    {
         SpawnArea = canvas.sizeDelta * 0.008f;
     }
 
@@ -93,7 +95,7 @@ public class EnemyGenerator : MonoBehaviour
         if (wave.waveCoroutine == null)
             return;
 
-            //print("웨이브 종료 : " + wave.StartWaveTime + " 시작, " + wave.StopWaveTime + " 끝 " + wave.enemyObject);
+        //print("웨이브 종료 : " + wave.StartWaveTime + " 시작, " + wave.StopWaveTime + " 끝 " + wave.enemyObject);
 
         inProgressWaves.Remove(wave);
         StopCoroutine(wave.waveCoroutine);
