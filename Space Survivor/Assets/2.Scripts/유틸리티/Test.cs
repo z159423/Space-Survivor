@@ -22,14 +22,14 @@ public class Test : MonoBehaviour
         if (GUILayout.Button("Logout"))
             GPGSBinder.Inst.Logout();
 
-        // if (GUILayout.Button("SaveCloud"))
-        //     GPGSBinder.Inst.SaveCloud("mysave", "want data", success => log = $"{success}");
+        if (GUILayout.Button("SaveCloud"))
+            GPGSBinder.Inst.SaveCloud("mysave", "want data", success => log = $"{success}");
 
-        // if (GUILayout.Button("LoadCloud"))
-        //     GPGSBinder.Inst.LoadCloud("mysave", (success, data) => log = $"{success}, {data}");
+        if (GUILayout.Button("LoadCloud"))
+            GPGSBinder.Inst.LoadCloud("mysave", (success, data) => log = $"{success}, {data}");
 
-        // if (GUILayout.Button("DeleteCloud"))
-        //     GPGSBinder.Inst.DeleteCloud("mysave", success => log = $"{success}");
+        if (GUILayout.Button("DeleteCloud"))
+            GPGSBinder.Inst.DeleteCloud("mysave", success => log = $"{success}");
 
         // if (GUILayout.Button("ShowAchievementUI"))
         //     GPGSBinder.Inst.ShowAchievementUI();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GPGSLogin : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class GPGSLogin : MonoBehaviour
                 //ilocalUser.underage = 플레이어 미성년자 여부
 
                 text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
+                SceneManager.LoadScene("MainScene");
             }
             else
             {
