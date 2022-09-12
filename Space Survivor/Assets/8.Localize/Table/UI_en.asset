@@ -26,6 +26,10 @@ MonoBehaviour:
     m_Localized: UPGRADES
     m_Metadata:
       m_Items: []
+  - m_Id: 37633033157427200
+    m_Localized: Google account login...
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

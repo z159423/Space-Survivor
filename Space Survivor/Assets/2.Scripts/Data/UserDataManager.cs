@@ -9,9 +9,13 @@ public class UserDataManager : MonoBehaviour
 
     public static UserDataManager instance;
 
+    public UserData currentUserData = new UserData();
+
     private void Awake()
     {
         instance = this;
+
+        DontDestroyOnLoad(gameObject);
     }
 
 
