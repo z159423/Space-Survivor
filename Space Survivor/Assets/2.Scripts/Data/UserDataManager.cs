@@ -54,12 +54,25 @@ public class UserDataManager : MonoBehaviour
 
     public void AddCrystalValue(int value)
     {
-
-        var data = LoadUserData();
-
+        print("1");
+        var data = GoogleCloud.instance.LoadUserDataWithCloud();
+        print("2 " + data.crystal + data.testString);
         data.crystal += value;
-        
-        SaveUserData(data);
+        print("3");
+        GoogleCloud.instance.SaveUserDataWithCloud(data);
+        //SaveUserData(data);
+        print("4");
     }
 
+    public UserData LoadCurrentUserDataFromLocal()
+    {
+        currentUserData = LoadUserData();
+
+        return currentUserData;
+    }
+
+    public void SaveCurrentUserDataToLocal()
+    {
+        SaveUserData(currentUserData);
+    }
 }

@@ -28,13 +28,21 @@ public class GPGSLogin : MonoBehaviour
 
                 text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
 
-                //SceneManager.LoadScene("MainScene");
+                GoogleCloud.instance.LoadUserDataWithCloud();
+
+                SceneManager.LoadScene("MainScene");
             }
             else
             {
                 // 로그인 실패
 
+                print("GPGS 로그인 실패하여 로컬 데이터를 불러옵니다.");
+
+                UserDataManager.instance.LoadCurrentUserDataFromLocal();
+
                 text2.text = "GPGS 로그인 실패 + ";
+
+                SceneManager.LoadScene("MainScene");
             }
         });
     }

@@ -30,14 +30,16 @@ public class GoogleCloud : MonoBehaviour
 			{
 				// 데이터 저장 성공시
 
-				print("유저 정보 저장 성공");
+				print("GPGS에 유저 정보 저장 성공");
 
 			}
 			else
 			{
 				// 데이터 저장 실패시
 
-				print("유저 정보 불러오기 실패");
+				print("GPGS에 유저 정보 저장 실패 로컬에 데이터를 저장합니다.");
+
+				UserDataManager.instance.SaveCurrentUserDataToLocal();
 			}
 
 		});
@@ -45,7 +47,7 @@ public class GoogleCloud : MonoBehaviour
 
 	public UserData LoadUserDataWithCloud()
 	{
-		UserData userData = null;
+		UserData userData = new UserData();
 		GPGSManager.Instance.LoadWithCloud("USERDATA", (success, serializedData) => { // 데이터를 클라우드에서 불러옵니다.
 			if (success)
 			{
@@ -54,16 +56,16 @@ public class GoogleCloud : MonoBehaviour
 				
 				userData = JsonConvert.DeserializeObject<UserData>(serializedData); // 불러온 데이터를 역직렬화합니다.
 
-				print(userData.testString);
+				print(userData.testString + " " + userData.crystal);
 
 				UserDataManager.instance.currentUserData = userData;
-
-				SceneManager.LoadScene("MainScene");
 			}
 			else
 			{
-				print("유저 정보 불러오기 실패");
-				userData.testString = "불러오기 실패";
+				print("유저 정보 불러오기 실패 대신 로컬 데이터를 불러옵니다.");
+				//userData = UserDataManager.instance.LoadUserData();
+
+				UserDataManager.instance.LoadCurrentUserDataFromLocal();
 				// 데이터 로드 실패시
 			}
 		});
