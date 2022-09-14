@@ -28,9 +28,7 @@ public class GPGSLogin : MonoBehaviour
 
                 text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
 
-                GoogleCloud.instance.LoadUserDataWithCloud();
-
-                SceneManager.LoadScene("MainScene");
+                GoogleCloud.instance.LoadUserDataWithCloud((suc, str) => SceneManager.LoadScene("MainScene"));
             }
             else
             {

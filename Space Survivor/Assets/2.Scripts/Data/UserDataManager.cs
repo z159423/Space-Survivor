@@ -75,4 +75,17 @@ public class UserDataManager : MonoBehaviour
     {
         SaveUserData(currentUserData);
     }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if(pause)
+        {
+            GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str)=> { print("게임이 일시중지되어 유저 데이터 저장"); });
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str) => { print("게임이 종료되어 유저 데이터 저장"); });
+    }
 }
