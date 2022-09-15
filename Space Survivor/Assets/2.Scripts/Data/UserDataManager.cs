@@ -9,9 +9,15 @@ public class UserDataManager : MonoBehaviour
 
     public static UserDataManager instance;
 
+    public UserData currentUserData = new UserData();
+
     private void Awake()
     {
         instance = this;
+
+        currentUserData = LoadUserData();
+
+        DontDestroyOnLoad(gameObject);
     }
 
 
@@ -50,12 +56,47 @@ public class UserDataManager : MonoBehaviour
 
     public void AddCrystalValue(int value)
     {
+        /*
+        print("1");
+        var data = GoogleCloud.instance.LoadUserDataWithCloud();
+        print("2 " + data.crystal + data.testString);
+        data.crystal += value;
+        print("3");
+        GoogleCloud.instance.SaveUserDataWithCloud(data);
+        //SaveUserData(data);
+        print("4");
+        */
 
         var data = LoadUserData();
 
         data.crystal += value;
-        
+
+        CrystalDisplay.instance.ChangeCrystalText(data.crystal);
         SaveUserData(data);
     }
 
+    public UserData LoadCurrentUserDataFromLocal()
+    {
+        currentUserData = LoadUserData();
+
+        return currentUserData;
+    }
+
+    public void SaveCurrentUserDataToLocal()
+    {
+        SaveUserData(currentUserData);
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if(pause)
+        {
+            GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str)=> { print("게임이 일시중지되어 유저 데이터 저장"); });
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str) => { print("게임이 종료되어 유저 데이터 저장"); });
+    }
 }

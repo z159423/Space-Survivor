@@ -120,7 +120,6 @@ public class PlayerStat : MonoBehaviour
 
     private void Die()
     {
-
         playerDie = true;
 
         playerDieEvent.Invoke();
@@ -145,12 +144,14 @@ public class PlayerStat : MonoBehaviour
 
     public void GetExp(int exp)
     {
-        if (whileLevelUp)
+        if (whileLevelUp || playerDie)
             return;
 
         //print(getMineralBouse.GetFinalStatValue());
 
         currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
+
+        Vibration.Vibrate((long)30);
 
         OnChangeExp();
     }
