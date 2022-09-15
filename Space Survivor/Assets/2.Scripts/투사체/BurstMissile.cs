@@ -17,7 +17,7 @@ public class BurstMissile : MonoBehaviour
     public void InitMissile(PlayerStat stat)
     {
         playerStat = stat;
-        projectileLogic.AddDamage(playerStat.GetCurrentPlayerLevel() * 10);
+        projectileLogic.AddDamage(playerStat.GetCurrentPlayerLevel() * 5);
         projectileLogic.playerWeapon = playerStat.GetComponent<PlayerWeapon>();
     }
 

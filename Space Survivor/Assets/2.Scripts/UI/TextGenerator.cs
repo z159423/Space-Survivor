@@ -12,11 +12,16 @@ public class TextGenerator : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        for(int i = 0; i < textPool.startStack.Length; i++)
+        {
+            textPool.textStack.Enqueue(textPool.startStack[i].gameObject);
+        }
     }
 
-    public void EnqueueText(TextMeshProUGUI text)
+    public void EnqueueText(GameObject text)
     {
-        text.gameObject.SetActive(false);
+        text.SetActive(false);
         textPool.EnQueueText(text);
     }
 
@@ -26,7 +31,7 @@ public class TextGenerator : MonoBehaviour
 
         StartCoroutine(activeText(text));
 
-        IEnumerator activeText(TextMeshProUGUI text)
+        IEnumerator activeText(GameObject text)
         {
             yield return new WaitForSeconds(1f);
 
@@ -38,7 +43,8 @@ public class TextGenerator : MonoBehaviour
 [System.Serializable]
 public class TextPool
 {
-    public Queue<TextMeshProUGUI> textStack = new Queue<TextMeshProUGUI>();
+    public Queue<GameObject> textStack = new Queue<GameObject>();
+    public GameObject[] startStack;
 
     public GameObject textPrefabs;
     public Transform parent;
@@ -50,12 +56,12 @@ public class TextPool
     public Vector2 maxVectorOffset;
 
 
-    public void EnQueueText(TextMeshProUGUI text)
+    public void EnQueueText(GameObject text)
     {
         textStack.Enqueue(text);
     }
 
-    public TextMeshProUGUI DeQueueText(Vector3 position, int damage)
+    public GameObject DeQueueText(Vector3 position, int damage)
     {
 
         if (textStack.Count > 0)
@@ -64,27 +70,27 @@ public class TextPool
 
             text.transform.position = position;
             //text.transform.position = camera.WorldToScreenPoint(position);
-            text.text = damage.ToString();
+            text.GetComponentInChildren<TextMeshProUGUI>().text = damage.ToString();
             var damageText = text.GetComponent<DamageText>();
             damageText.textPosition = position + new Vector3(Random.Range(minVectorOffset.x, maxVectorOffset.x), Random.Range(minVectorOffset.y, maxVectorOffset.y),0);
             damageText.cam = camera;
-            damageText.GetComponent<Animator>().SetTrigger("Active");
             text.gameObject.SetActive(true);
+            damageText.GetComponentInChildren<Animator>().SetTrigger("Active");
 
             return text;
         }
         else
         {
             var text = GameObject.Instantiate(textPrefabs, position,Quaternion.identity, parent);
-            text.GetComponent<TextMeshProUGUI>().text = damage.ToString();
+            text.GetComponentInChildren<TextMeshProUGUI>().text = damage.ToString();
             //text.transform.position = camera.WorldToScreenPoint(position);
             var damageText = text.GetComponent<DamageText>();
             damageText.textPosition = position + new Vector3(Random.Range(minVectorOffset.x, maxVectorOffset.x), Random.Range(minVectorOffset.y, maxVectorOffset.y), 0);
             damageText.cam = camera;
-            damageText.GetComponent<Animator>().SetTrigger("Active");
             text.gameObject.SetActive(true);
+            damageText.GetComponentInChildren<Animator>().SetTrigger("Active");
 
-            return text.GetComponent<TextMeshProUGUI>();
+            return text;
         }
     }
 }

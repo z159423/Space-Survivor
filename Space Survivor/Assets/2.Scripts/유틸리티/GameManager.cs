@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private ShipObject currentShip;
     [SerializeField] private ShipList shipList;
+    [SerializeField] private GameObject tiralBtn;
+    [SerializeField] private GameObject buyShipBtn;
+    [SerializeField] private TextMeshProUGUI shipCostText;
+
+
     [SerializeField] private int currentShipNumber;
 
     public UnityEvent PlayGameEvent;
@@ -211,6 +216,19 @@ public class GameManager : MonoBehaviour
                 yield return null;
             }
         }
+
+        if(!UserDataManager.instance.currentUserData.playerHaveShip.Contains(shipObject) && shipObject.shipCost > 0)
+        {
+            shipBuyBtn.SetActive(true);
+            shipTrialBtn.SetActive(true);
+            shipCostText.text = shipObject.shipCost.ToString();
+        }
+        else
+        {
+            shipBuyBtn.SetActive(false);
+            shipTrialBtn.SetActive(false);
+        }
+
     }
 
     public void NextShip()

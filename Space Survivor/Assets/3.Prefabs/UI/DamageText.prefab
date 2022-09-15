@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3672915461089121926}
   - component: {fileID: 3672915461089121924}
   - component: {fileID: 3672915461089121925}
-  - component: {fileID: 8669324614411742322}
   - component: {fileID: 1545010469}
   m_Layer: 5
   m_Name: DamageText
@@ -19,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3672915461089121926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70,7 +69,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0dbf3f20a5f78ed4283a4571a0ba034e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dc7aaafea30e8746a32fb86cb028328, type: 2}
   m_sharedMaterial: {fileID: 5065376472026370768, guid: 0dbf3f20a5f78ed4283a4571a0ba034e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -134,23 +133,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8669324614411742322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3672915461089121927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060df3d44ad7e6048aaaed5ce50c50b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textPosition: {x: 0, y: 0, z: 0}
-  cam: {fileID: 0}
 --- !u!95 &1545010469
 Animator:
   serializedVersion: 4

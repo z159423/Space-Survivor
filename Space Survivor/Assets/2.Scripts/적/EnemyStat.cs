@@ -61,6 +61,7 @@ public class EnemyStat : MonoBehaviour
             return;
 
         currentHp -= damage;
+
         TextGenerator.instance.DequeueText(transform.position, damage);
 
         OnChangeHp();

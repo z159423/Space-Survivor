@@ -17,7 +17,7 @@ public class UserDataManager : MonoBehaviour
 
         currentUserData = LoadUserData();
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
 
@@ -91,12 +91,12 @@ public class UserDataManager : MonoBehaviour
     {
         if(pause)
         {
-            GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str)=> { print("게임이 일시중지되어 유저 데이터 저장"); });
+            //GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str)=> { print("게임이 일시중지되어 유저 데이터 저장"); });
         }
     }
 
     private void OnApplicationQuit()
     {
-        GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str) => { print("게임이 종료되어 유저 데이터 저장"); });
+        //GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str) => { print("게임이 종료되어 유저 데이터 저장"); });
     }
 }
