@@ -15,6 +15,8 @@ public class UserDataManager : MonoBehaviour
     {
         instance = this;
 
+        currentUserData = LoadUserData();
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -54,6 +56,7 @@ public class UserDataManager : MonoBehaviour
 
     public void AddCrystalValue(int value)
     {
+        /*
         print("1");
         var data = GoogleCloud.instance.LoadUserDataWithCloud();
         print("2 " + data.crystal + data.testString);
@@ -62,6 +65,14 @@ public class UserDataManager : MonoBehaviour
         GoogleCloud.instance.SaveUserDataWithCloud(data);
         //SaveUserData(data);
         print("4");
+        */
+
+        var data = LoadUserData();
+
+        data.crystal += value;
+
+        CrystalDisplay.instance.ChangeCrystalText(data.crystal);
+        SaveUserData(data);
     }
 
     public UserData LoadCurrentUserDataFromLocal()

@@ -21,5 +21,8 @@ public class CrystalDisplay : MonoBehaviour
         crystalText.text = UserDataManager.instance.currentUserData.crystal.ToString();
     }
 
-    
+    public void ChangeCrystalText(int value)
+    {
+        crystalText.text = value.ToString();
+    }
 }
