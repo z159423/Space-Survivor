@@ -35,5 +35,11 @@ public class BottomBanner : MonoBehaviour
                 AdSize.GetCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(AdSize.FullWidth);
 
         this.bannerView = new BannerView(adUnitId, adaptiveSize, AdPosition.Bottom);
+
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
+
+        // Load the banner with the request.
+        this.bannerView.LoadAd(request);
     }
 }
