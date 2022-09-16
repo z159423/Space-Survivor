@@ -217,17 +217,17 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(!UserDataManager.instance.currentUserData.playerHaveShip.Contains(shipObject) && shipObject.shipCost > 0)
-        {
-            shipBuyBtn.SetActive(true);
-            shipTrialBtn.SetActive(true);
-            shipCostText.text = shipObject.shipCost.ToString();
-        }
-        else
-        {
-            shipBuyBtn.SetActive(false);
-            shipTrialBtn.SetActive(false);
-        }
+        // if(!UserDataManager.instance.currentUserData.playerHaveShip.Contains(shipObject) && shipObject.shipCost > 0)
+        // {
+        //     shipBuyBtn.SetActive(true);
+        //     shipTrialBtn.SetActive(true);
+        //     shipCostText.text = shipObject.shipCost.ToString();
+        // }
+        // else
+        // {
+        //     shipBuyBtn.SetActive(false);
+        //     shipTrialBtn.SetActive(false);
+        // }
 
     }
 
