@@ -25800,6 +25800,130 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CrystalDisplay_op_Inequality_mB
 		return;
 	}
 }
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::DamageText_op_Implicit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DamageText_op_Implicit_m3FC2BE506E7EDB1099BEE995B18A1BAF5DA8BFB2 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool conversion = ((bool)(arg0));
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m18E1885C296CC868AC918101523697CFE6413C79(L_0, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75* L_2 = (StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75*)il2cpp_codegen_object_new(StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091(L_2, (MethodInfo_t*)NULL, StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0);
+		StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75* L_3 = L_2;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_4 = V_0;
+		NullCheck(L_3);
+		RuntimeObject* L_5;
+		L_5 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(15 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object) */, L_3, NULL, L_4);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_3);
+		RuntimeObject* L_6;
+		L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_3, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::DamageText_op_Equality()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DamageText_op_Equality_m8EF676FCD23A10F5387AB9FBC5004540F2A64428 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_1 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+		V_1 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool @operator = (arg0 == arg1);
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Equality_mD3DB0D72CE0250C84033DC2A90AEF9D59896E536(L_0, L_1, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_3 = (StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D*)il2cpp_codegen_object_new(StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21(L_3, (MethodInfo_t*)NULL, StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0, arg1);
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_4 = L_3;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_5 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6 = V_1;
+		NullCheck(L_4);
+		RuntimeObject* L_7;
+		L_7 = VirtualFuncInvoker3< RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(16 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object,System.Object) */, L_4, NULL, L_5, L_6);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_4);
+		RuntimeObject* L_8;
+		L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_4, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::DamageText_op_Inequality()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DamageText_op_Inequality_mBF95995328866C761198DEA3377AB42B828DE55F (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_1 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+		V_1 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool @operator = (arg0 != arg1);
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, L_1, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_3 = (StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D*)il2cpp_codegen_object_new(StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21(L_3, (MethodInfo_t*)NULL, StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0, arg1);
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_4 = L_3;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_5 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6 = V_1;
+		NullCheck(L_4);
+		RuntimeObject* L_7;
+		L_7 = VirtualFuncInvoker3< RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(16 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object,System.Object) */, L_4, NULL, L_5, L_6);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_4);
+		RuntimeObject* L_8;
+		L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_4, NULL);
+		// }
+		return;
+	}
+}
 // System.Void Unity.VisualScripting.Generated.Aot.AotStubs::FixedTouchField_op_Implicit()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FixedTouchField_op_Implicit_mB5D6B61E8DB0682A5A658FE6DD57D48025C954CC (const RuntimeMethod* method) 
 {
@@ -26007,6 +26131,130 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FPSDisplay_op_Equality_m0F5074B
 }
 // System.Void Unity.VisualScripting.Generated.Aot.AotStubs::FPSDisplay_op_Inequality()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FPSDisplay_op_Inequality_mCB2517103916FA5BC567B6EF0557DF0D1EAE9B92 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_1 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+		V_1 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool @operator = (arg0 != arg1);
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, L_1, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_3 = (StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D*)il2cpp_codegen_object_new(StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21(L_3, (MethodInfo_t*)NULL, StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0, arg1);
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_4 = L_3;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_5 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6 = V_1;
+		NullCheck(L_4);
+		RuntimeObject* L_7;
+		L_7 = VirtualFuncInvoker3< RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(16 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object,System.Object) */, L_4, NULL, L_5, L_6);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_4);
+		RuntimeObject* L_8;
+		L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_4, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::TextGenerator_op_Implicit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TextGenerator_op_Implicit_m87B9CC58E592E6B66EE180638E025D7E7D50CDF5 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool conversion = ((bool)(arg0));
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m18E1885C296CC868AC918101523697CFE6413C79(L_0, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75* L_2 = (StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75*)il2cpp_codegen_object_new(StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091(L_2, (MethodInfo_t*)NULL, StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0);
+		StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75* L_3 = L_2;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_4 = V_0;
+		NullCheck(L_3);
+		RuntimeObject* L_5;
+		L_5 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(15 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object) */, L_3, NULL, L_4);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_3);
+		RuntimeObject* L_6;
+		L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_3, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::TextGenerator_op_Equality()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TextGenerator_op_Equality_mC6E04058B3264172BB46957BC188C4FB49F0B8B9 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_1 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+		V_1 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool @operator = (arg0 == arg1);
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Equality_mD3DB0D72CE0250C84033DC2A90AEF9D59896E536(L_0, L_1, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_3 = (StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D*)il2cpp_codegen_object_new(StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21(L_3, (MethodInfo_t*)NULL, StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0, arg1);
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_4 = L_3;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_5 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6 = V_1;
+		NullCheck(L_4);
+		RuntimeObject* L_7;
+		L_7 = VirtualFuncInvoker3< RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(16 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object,System.Object) */, L_4, NULL, L_5, L_6);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_4);
+		RuntimeObject* L_8;
+		L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_4, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::TextGenerator_op_Inequality()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TextGenerator_op_Inequality_m160C7B567927B1BCC8E008D7F0E49E051FC334B5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -27867,6 +28115,130 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Equality_m9D2C32
 }
 // System.Void Unity.VisualScripting.Generated.Aot.AotStubs::GameManager_op_Inequality()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Inequality_m12605BBA492C6A23E3838FF0CF8322A558A05EA2 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_1 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+		V_1 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool @operator = (arg0 != arg1);
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_m4D656395C27694A7F33F5AA8DE80A7AAF9E20BA7(L_0, L_1, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_3 = (StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D*)il2cpp_codegen_object_new(StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21(L_3, (MethodInfo_t*)NULL, StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0, arg1);
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_4 = L_3;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_5 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6 = V_1;
+		NullCheck(L_4);
+		RuntimeObject* L_7;
+		L_7 = VirtualFuncInvoker3< RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(16 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object,System.Object) */, L_4, NULL, L_5, L_6);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_4);
+		RuntimeObject* L_8;
+		L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_4, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::GoogleCloud_op_Implicit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleCloud_op_Implicit_mEF8C8D26856913D2A1EF73CD48F9E4397BFEE638 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool conversion = ((bool)(arg0));
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Implicit_m18E1885C296CC868AC918101523697CFE6413C79(L_0, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75* L_2 = (StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75*)il2cpp_codegen_object_new(StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091(L_2, (MethodInfo_t*)NULL, StaticFunctionInvoker_2__ctor_m4CDB31460E5A5BB11EB6135DABDC361799595091_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0);
+		StaticFunctionInvoker_2_tB0037C75DC128BB46023A63D75D3D946527C4F75* L_3 = L_2;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_4 = V_0;
+		NullCheck(L_3);
+		RuntimeObject* L_5;
+		L_5 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(15 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object) */, L_3, NULL, L_4);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_3);
+		RuntimeObject* L_6;
+		L_6 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_3, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::GoogleCloud_op_Equality()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleCloud_op_Equality_m62B3E05A6A09699ED918E581375A6D2FC096094D (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_0 = NULL;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* V_1 = NULL;
+	{
+		// global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+		V_0 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+		V_1 = (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL;
+		// bool @operator = (arg0 == arg1);
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Equality_mD3DB0D72CE0250C84033DC2A90AEF9D59896E536(L_0, L_1, NULL);
+		// global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Unity.VisualScripting.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_3 = (StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D*)il2cpp_codegen_object_new(StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21(L_3, (MethodInfo_t*)NULL, StaticFunctionInvoker_3__ctor_m6ECE0899F63C38E54C67BE22307570E484786E21_RuntimeMethod_var);
+		// optimized.Invoke(null, arg0, arg1);
+		StaticFunctionInvoker_3_t66B4891BE6B11D38C90DB74B008E4FC2BA112D1D* L_4 = L_3;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_5 = V_0;
+		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6 = V_1;
+		NullCheck(L_4);
+		RuntimeObject* L_7;
+		L_7 = VirtualFuncInvoker3< RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject* >::Invoke(16 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object,System.Object,System.Object) */, L_4, NULL, L_5, L_6);
+		// optimized.Invoke(default(object[]));
+		NullCheck(L_4);
+		RuntimeObject* L_8;
+		L_8 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(14 /* System.Object Unity.VisualScripting.InvokerBase::Invoke(System.Object) */, L_4, NULL);
+		// }
+		return;
+	}
+}
+// System.Void Unity.VisualScripting.Generated.Aot.AotStubs::GoogleCloud_op_Inequality()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleCloud_op_Inequality_mE34DA92D89AE345F37002C8F56BA5E443CB6F0B3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)

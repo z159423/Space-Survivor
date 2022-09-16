@@ -22,6 +22,9 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Cinemachine_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_DOTween_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_DOTween_Modules_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Android_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Common_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Core_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_IngameDebugConsole_Runtime_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Newtonsoft_Json_CodeGenModule;
@@ -89,12 +92,15 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_clipper_library_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[70] = 
+const Il2CppCodeGenModule* g_CodeGenModules[73] = 
 {
 	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_Cinemachine_CodeGenModule),
 	(&g_DOTween_CodeGenModule),
 	(&g_DOTween_Modules_CodeGenModule),
+	(&g_GoogleMobileAds_Android_CodeGenModule),
+	(&g_GoogleMobileAds_Common_CodeGenModule),
+	(&g_GoogleMobileAds_Core_CodeGenModule),
 	(&g_IngameDebugConsole_Runtime_CodeGenModule),
 	(&g_Mono_Security_CodeGenModule),
 	(&g_Newtonsoft_Json_CodeGenModule),
@@ -167,18 +173,18 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	10,
 	g_ReversePInvokeWrapperPointers,
-	63607,
+	63617,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	14744,
+	14752,
 	g_Il2CppInvokerPointers,
 	2332,
 	g_UnresolvedVirtualMethodPointers,
-	626,
+	627,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	70,
+	73,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

@@ -1187,6 +1187,8 @@ struct Absolute_1_t2D6B0CE9A7BCF66FEB2D9FECB9D77961310530BC;
 struct Absolute_1_t238132F9E56C287581E21782D8FB7F00384C1121;
 // UnityEngine.UIElements.UQueryState`1/ActionQueryMatcher<System.Object>
 struct ActionQueryMatcher_tB76860A856401075A2CF71D45AC72A9C0F1BB99E;
+// GoogleCloud/Action`1<System.Object>
+struct Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D;
 // System.Action`1<System.Threading.AsyncLocalValueChangedArgs`1<System.Object>>
 struct Action_1_t8962721928CB782B8FD4B406517D3C3ABD5CB4A8;
 // System.Action`1<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle`1<UnityEngine.Localization.Settings.LocalizedDatabase`2/TableEntryResult<System.Object,System.Object>>>
@@ -9026,6 +9028,11 @@ struct Absolute_1_t238132F9E56C287581E21782D8FB7F00384C1121  : public Unit_tEFDD
 	ValueOutput_tADDC9DBF6515A1572E876C3881B5F110DC5EBE1B* ___U3CoutputU3Ek__BackingField_16;
 };
 
+// GoogleCloud/Action`1<System.Object>
+struct Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D  : public MulticastDelegate_t
+{
+};
+
 // System.Action`1<System.Threading.AsyncLocalValueChangedArgs`1<System.Object>>
 struct Action_1_t8962721928CB782B8FD4B406517D3C3ABD5CB4A8  : public MulticastDelegate_t
 {
@@ -15617,6 +15624,129 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActionQueryMatcher__ctor_mC55E3FF32B3E78
 		UQueryMatcher__ctor_m669C00EE8CF4DA08ED95F9A511E6627FAEA0343E((UQueryMatcher_tF8783F54BA397641240DA7025126F6301EF53FF8*)__this, NULL);
 		return;
 	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_Multicast(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* currentDelegate = reinterpret_cast<Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___obj0, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+}
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_Open(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___obj0, method);
+}
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenStaticInvoker(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	InvokerActionInvoker1< RuntimeObject* >::Invoke(__this->___method_ptr_0, method, NULL, ___obj0);
+}
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_ClosedStaticInvoker(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	InvokerActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___obj0);
+}
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenVirtual(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	VirtualActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(method), ___obj0);
+}
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenInterface(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	InterfaceActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(method), il2cpp_codegen_method_get_declaring_type(method), ___obj0);
+}
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenGenericVirtual(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	GenericVirtualActionInvoker0::Invoke(method, ___obj0);
+}
+void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenGenericInterface(Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method)
+{
+	GenericInterfaceActionInvoker0::Invoke(method, ___obj0);
+}
+// System.Void GoogleCloud/Action`1<System.Object>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m68D86F02A7BBD4921485AABC38C1658DF90B60E6_gshared (Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 1;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_Open;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		bool isOpen = parameterCount == 0;
+		if (isOpen)
+		{
+			if (__this->___method_is_virtual_12)
+			{
+				if (il2cpp_codegen_method_is_generic_instance_method((RuntimeMethod*)___method1))
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___method1))
+						__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenGenericInterface;
+					else
+						__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenGenericVirtual;
+				else
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___method1))
+						__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenInterface;
+					else
+						__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_OpenVirtual;
+			}
+			else
+			{
+				__this->___invoke_impl_1 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_Open;
+			}
+		}
+		else
+		{
+			__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+			__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+		}
+	}
+	__this->___extra_arg_5 = (intptr_t)&Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_Multicast;
+}
+// System.Void GoogleCloud/Action`1<System.Object>::Invoke(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_mE8402488F6E9BEB5835FAC32DABB6207CBE6A49B_gshared (Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___obj0, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult GoogleCloud/Action`1<System.Object>::BeginInvoke(T,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Action_1_BeginInvoke_mD035BB25D459E6162B46E7469D240ED357E5A33C_gshared (Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___obj0, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback1, RuntimeObject* ___object2, const RuntimeMethod* method) 
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = ___obj0;
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback1, (RuntimeObject*)___object2);
+}
+// System.Void GoogleCloud/Action`1<System.Object>::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_EndInvoke_mD7ADEE1C39DFCEAFA2C52ADC0321457C8223BD7A_gshared (Action_1_tDFB88DBD92A6DBA93BF77972F72EB82D5078C38D* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
