@@ -85,11 +85,13 @@ public class GameManager : MonoBehaviour
 
     public void ReplayGame()
     {
+        InterstitialAdCaller.instance.CallIrAds();
         SelectShip(currentShipNumber);
     }
 
     public void GoMainMenu()
     {
+        InterstitialAdCaller.instance.CallIrAds();
         inGameMenu.SetActive(false);
         MainMenu.SetActive(true);
         DieMenu.SetActive(false);
