@@ -23,6 +23,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Cinemachine_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_DOTween_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_DOTween_Modules_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Android_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Common_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Core_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_IngameDebugConsole_Runtime_CodeGenModule;
@@ -92,13 +93,14 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_clipper_library_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[73] = 
+const Il2CppCodeGenModule* g_CodeGenModules[74] = 
 {
 	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_Cinemachine_CodeGenModule),
 	(&g_DOTween_CodeGenModule),
 	(&g_DOTween_Modules_CodeGenModule),
 	(&g_GoogleMobileAds_Android_CodeGenModule),
+	(&g_GoogleMobileAds_CodeGenModule),
 	(&g_GoogleMobileAds_Common_CodeGenModule),
 	(&g_GoogleMobileAds_Core_CodeGenModule),
 	(&g_IngameDebugConsole_Runtime_CodeGenModule),
@@ -178,13 +180,13 @@ const Il2CppCodeRegistration g_CodeRegistration =
 	g_Il2CppGenericAdjustorThunks,
 	14752,
 	g_Il2CppInvokerPointers,
-	2332,
+	2333,
 	g_UnresolvedVirtualMethodPointers,
 	627,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	73,
+	74,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

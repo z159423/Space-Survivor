@@ -22304,2027 +22304,2032 @@ static  void UnresolvedVirtualCall_1968 (RuntimeObject* __this, RuntimeObject* p
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1969 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, int32_t p4, int32_t p5, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1969 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, int32_t p4, const RuntimeMethod* method)
+{
+	void* args[] = {p1,p2,&p3,&p4};
+	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
+}
+static  void UnresolvedVirtualCall_1970 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, int32_t p4, int32_t p5, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,&p4,&p5};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1970 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, int32_t p4, RuntimeObject* p5, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1971 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, int32_t p4, RuntimeObject* p5, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,&p4,p5};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1971 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, RuntimeObject* p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1972 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, RuntimeObject* p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1972 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, RuntimeObject* p4, RuntimeObject* p5, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1973 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, RuntimeObject* p4, RuntimeObject* p5, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,p4,p5};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1973 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1974 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,p4,p5,p6};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1974 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1975 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int32_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1975 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, intptr_t p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1976 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, intptr_t p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1976 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, intptr_t p3, RuntimeObject* p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1977 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, intptr_t p3, RuntimeObject* p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1977 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, intptr_t p3, RuntimeObject* p4, intptr_t p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1978 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, intptr_t p3, RuntimeObject* p4, intptr_t p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,p4,&p5,p6,p7,p8};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1978 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1979 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1979 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, AsyncOperationHandle_1_t7854E14EDF49B0D526002237C4BBFAB8D15A5A90 p4, int8_t p5, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1980 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, AsyncOperationHandle_1_t7854E14EDF49B0D526002237C4BBFAB8D15A5A90 p4, int8_t p5, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,&p4,&p5};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1980 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, intptr_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1981 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, intptr_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1981 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, intptr_t p4, RuntimeObject* p5, intptr_t p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1982 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, intptr_t p4, RuntimeObject* p5, intptr_t p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,&p4,p5,&p6,p7,p8,p9};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1982 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1983 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1983 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1984 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1984 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1985 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1985 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1986 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1986 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1987 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1987 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1988 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1988 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1989 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1989 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1990 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1990 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1991 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1991 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1992 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1992 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, RuntimeObject* p14, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1993 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, RuntimeObject* p14, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1993 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, RuntimeObject* p14, RuntimeObject* p15, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1994 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, RuntimeObject* p14, RuntimeObject* p15, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1994 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, RuntimeObject* p14, RuntimeObject* p15, RuntimeObject* p16, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1995 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, RuntimeObject* p6, RuntimeObject* p7, RuntimeObject* p8, RuntimeObject* p9, RuntimeObject* p10, RuntimeObject* p11, RuntimeObject* p12, RuntimeObject* p13, RuntimeObject* p14, RuntimeObject* p15, RuntimeObject* p16, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1995 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, int8_t p5, int8_t p6, int8_t p7, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1996 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, int8_t p5, int8_t p6, int8_t p7, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,p4,&p5,&p6,&p7};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1996 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1997 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1997 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1998 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1998 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_1999 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_1999 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2000 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2000 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int8_t p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2001 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int8_t p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2001 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2002 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2002 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2003 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2003 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2004 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2004 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, TextureId_tFF4B4AAE53408AB10B0B89CCA5F7B50CF2535E58 p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2005 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, TextureId_tFF4B4AAE53408AB10B0B89CCA5F7B50CF2535E58 p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2005 (RuntimeObject* __this, RuntimeObject* p1, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2006 (RuntimeObject* __this, RuntimeObject* p1, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2006 (RuntimeObject* __this, RuntimeObject* p1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2007 (RuntimeObject* __this, RuntimeObject* p1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2007 (RuntimeObject* __this, RuntimeObject* p1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2008 (RuntimeObject* __this, RuntimeObject* p1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2008 (RuntimeObject* __this, RuntimeObject* p1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2009 (RuntimeObject* __this, RuntimeObject* p1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2009 (RuntimeObject* __this, RuntimeObject* p1, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p2, int8_t p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2010 (RuntimeObject* __this, RuntimeObject* p1, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p2, int8_t p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2010 (RuntimeObject* __this, RuntimeObject* p1, RenderTextureDescriptor_t69845881CE6437E4E61F92074F2F84079F23FA46 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2011 (RuntimeObject* __this, RuntimeObject* p1, RenderTextureDescriptor_t69845881CE6437E4E61F92074F2F84079F23FA46 p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2011 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2012 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2012 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, DebugScreenCapture_t859E4E87C94587A08893C726D4FF84BD8F288CC5 p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2013 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, DebugScreenCapture_t859E4E87C94587A08893C726D4FF84BD8F288CC5 p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2013 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2014 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2014 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, int8_t p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2015 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, int8_t p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2015 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2016 (RuntimeObject* __this, RuntimeObject* p1, int8_t p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2016 (RuntimeObject* __this, RuntimeObject* p1, SavedGameMetadataUpdate_tC9E6CAB51B9AF869DB28DFAC4563F8EBC73E0F1B p2, RuntimeObject* p3, RuntimeObject* p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2017 (RuntimeObject* __this, RuntimeObject* p1, SavedGameMetadataUpdate_tC9E6CAB51B9AF869DB28DFAC4563F8EBC73E0F1B p2, RuntimeObject* p3, RuntimeObject* p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3,p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2017 (RuntimeObject* __this, RuntimeObject* p1, float p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2018 (RuntimeObject* __this, RuntimeObject* p1, float p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2018 (RuntimeObject* __this, RuntimeObject* p1, float p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2019 (RuntimeObject* __this, RuntimeObject* p1, float p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2019 (RuntimeObject* __this, RuntimeObject* p1, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2020 (RuntimeObject* __this, RuntimeObject* p1, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2020 (RuntimeObject* __this, RuntimeObject* p1, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2021 (RuntimeObject* __this, RuntimeObject* p1, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2021 (RuntimeObject* __this, RuntimeObject* p1, StyleValues_t4AED947A53B84B62EF2B589A40B74911CA77D11A p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2022 (RuntimeObject* __this, RuntimeObject* p1, StyleValues_t4AED947A53B84B62EF2B589A40B74911CA77D11A p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2022 (RuntimeObject* __this, RuntimeObject* p1, uint32_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2023 (RuntimeObject* __this, RuntimeObject* p1, uint32_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2023 (RuntimeObject* __this, RuntimeObject* p1, uint32_t p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2024 (RuntimeObject* __this, RuntimeObject* p1, uint32_t p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2024 (RuntimeObject* __this, RuntimeObject* p1, uint64_t p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2025 (RuntimeObject* __this, RuntimeObject* p1, uint64_t p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2025 (RuntimeObject* __this, RuntimeObject* p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2026 (RuntimeObject* __this, RuntimeObject* p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2026 (RuntimeObject* __this, RuntimeObject* p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, int32_t p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2027 (RuntimeObject* __this, RuntimeObject* p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, int32_t p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2027 (RuntimeObject* __this, RuntimeObject* p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2028 (RuntimeObject* __this, RuntimeObject* p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2028 (RuntimeObject* __this, RuntimeObject* p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2029 (RuntimeObject* __this, RuntimeObject* p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2029 (RuntimeObject* __this, RuntimeObject* p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2030 (RuntimeObject* __this, RuntimeObject* p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2030 (RuntimeObject* __this, RuntimeObject* p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2031 (RuntimeObject* __this, RuntimeObject* p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2031 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2032 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2032 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, RuntimeObject* p3, int8_t p4, int32_t p5, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2033 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, RuntimeObject* p3, int8_t p4, int32_t p5, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3,&p4,&p5};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2033 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, RuntimeObject* p3, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p4, int8_t p5, int32_t p6, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2034 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, RuntimeObject* p3, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p4, int8_t p5, int32_t p6, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3,&p4,&p5,&p6};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2034 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2035 (RuntimeObject* __this, RuntimeObject* p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, int8_t p3, int8_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2035 (RuntimeObject* __this, RuntimeObject* p1, unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2036 (RuntimeObject* __this, RuntimeObject* p1, unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2036 (RuntimeObject* __this, RuntimeObject* p1, unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2037 (RuntimeObject* __this, RuntimeObject* p1, unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2037 (RuntimeObject* __this, ObjectInitializationData_t78311D34B13F6FC91296EA33C601DB29CB8C84E3 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2038 (RuntimeObject* __this, ObjectInitializationData_t78311D34B13F6FC91296EA33C601DB29CB8C84E3 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2038 (RuntimeObject* __this, ParticleCollisionEvent_t9152F03D9336BAAFEAF1CCA498C0F156ABD19858 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2039 (RuntimeObject* __this, ParticleCollisionEvent_t9152F03D9336BAAFEAF1CCA498C0F156ABD19858 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2039 (RuntimeObject* __this, PathOptions_t76F1CBAC082454349D530B799121EB15BFA4CB3A p1, RuntimeObject* p2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p3, RuntimeObject* p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2040 (RuntimeObject* __this, PathOptions_t76F1CBAC082454349D530B799121EB15BFA4CB3A p1, RuntimeObject* p2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p3, RuntimeObject* p4, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2040 (RuntimeObject* __this, PathOptions_t76F1CBAC082454349D530B799121EB15BFA4CB3A p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, RuntimeObject* p7, RuntimeObject* p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2041 (RuntimeObject* __this, PathOptions_t76F1CBAC082454349D530B799121EB15BFA4CB3A p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, RuntimeObject* p7, RuntimeObject* p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,p7,p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2041 (RuntimeObject* __this, PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE p1, NativeArray_1_tA04FF6E7BE3D24B3E6351C63BF7229421DFE1259 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2042 (RuntimeObject* __this, PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE p1, NativeArray_1_tA04FF6E7BE3D24B3E6351C63BF7229421DFE1259 p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2042 (RuntimeObject* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2043 (RuntimeObject* __this, Playable_t95C6B795846BA0C7D96E4DA14897CCCF2554334F p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2043 (RuntimeObject* __this, PlayableBinding_tB68B3BAC47F4F4C559640472174D5BEF93CB6AB4 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2044 (RuntimeObject* __this, PlayableBinding_tB68B3BAC47F4F4C559640472174D5BEF93CB6AB4 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2044 (RuntimeObject* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2045 (RuntimeObject* __this, PlayableGraph_t4A5B0B45343A240F0761574FD7C672E0CFFF7A6E p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2045 (RuntimeObject* __this, ProvideHandle_t784595962229824EBCC1B2D6B45B069C9A207631 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2046 (RuntimeObject* __this, ProvideHandle_t784595962229824EBCC1B2D6B45B069C9A207631 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2046 (RuntimeObject* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2047 (RuntimeObject* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2047 (RuntimeObject* __this, QuaternionOptions_t1B83700718F7417854E4B6FB0E1726E183F69718 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p7, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2048 (RuntimeObject* __this, QuaternionOptions_t1B83700718F7417854E4B6FB0E1726E183F69718 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p7, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,&p7,&p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2048 (RuntimeObject* __this, RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2049 (RuntimeObject* __this, RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2049 (RuntimeObject* __this, RangePositionInfo_t27BA7EB1EC12061DD5ACFD24BD71A915D412223F p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2050 (RuntimeObject* __this, RangePositionInfo_t27BA7EB1EC12061DD5ACFD24BD71A915D412223F p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2050 (RuntimeObject* __this, RaycastHit2D_t3EAAA06E6603C6BC61AC1291DD881C5C1E23BDFA p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2051 (RuntimeObject* __this, RaycastHit2D_t3EAAA06E6603C6BC61AC1291DD881C5C1E23BDFA p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2051 (RuntimeObject* __this, RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2052 (RuntimeObject* __this, RaycastResult_tEC6A7B7CABA99C386F054F01E498AEC426CF8023 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2052 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2053 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2053 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, RuntimeObject* p2, int8_t p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2054 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, RuntimeObject* p2, int8_t p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2054 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, int8_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2055 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, int8_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2055 (RuntimeObject* __this, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2056 (RuntimeObject* __this, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2056 (RuntimeObject* __this, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p1, int8_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2057 (RuntimeObject* __this, RectInt_t1744D10E1063135DA9D574F95205B98DAC600CB8 p1, int8_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2057 (RuntimeObject* __this, RectOptions_tCE72F3B850FF80059E448A0ED2AA3FF16EE5EDAC p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p7, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2058 (RuntimeObject* __this, RectOptions_tCE72F3B850FF80059E448A0ED2AA3FF16EE5EDAC p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p7, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,&p7,&p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2058 (RuntimeObject* __this, RenderChainTextEntry_t3B07A86ED897E1859552D13B1CF046F585CF9D11 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2059 (RuntimeObject* __this, RenderChainTextEntry_t3B07A86ED897E1859552D13B1CF046F585CF9D11 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2059 (RuntimeObject* __this, RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2060 (RuntimeObject* __this, RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2060 (RuntimeObject* __this, RendererList_t84DD8775E9B0759757DE88FBCB50A06A7C80D20E p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2061 (RuntimeObject* __this, RendererList_t84DD8775E9B0759757DE88FBCB50A06A7C80D20E p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2061 (RuntimeObject* __this, RendererListHandle_t21AFDDE69B0048546497B890088B880F8080C62D p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2062 (RuntimeObject* __this, RendererListHandle_t21AFDDE69B0048546497B890088B880F8080C62D p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2062 (RuntimeObject* __this, ResourceHandle_t0B9B0555328A08152F1EDA2BE4024446D670531A p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2063 (RuntimeObject* __this, ResourceHandle_t0B9B0555328A08152F1EDA2BE4024446D670531A p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2063 (RuntimeObject* __this, RuleMatcher_t327CFEB02C81AA20E639DE949DCBBAB5E92FF28E p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2064 (RuntimeObject* __this, RuleMatcher_t327CFEB02C81AA20E639DE949DCBBAB5E92FF28E p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2064 (RuntimeObject* __this, int8_t p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2065 (RuntimeObject* __this, int8_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2065 (RuntimeObject* __this, int8_t p1, DebugScreenCapture_t859E4E87C94587A08893C726D4FF84BD8F288CC5 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2066 (RuntimeObject* __this, int8_t p1, DebugScreenCapture_t859E4E87C94587A08893C726D4FF84BD8F288CC5 p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2066 (RuntimeObject* __this, int8_t p1, int32_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2067 (RuntimeObject* __this, int8_t p1, int32_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2067 (RuntimeObject* __this, int8_t p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2068 (RuntimeObject* __this, int8_t p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2068 (RuntimeObject* __this, int8_t p1, int8_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2069 (RuntimeObject* __this, int8_t p1, int8_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2069 (RuntimeObject* __this, int8_t p1, int8_t p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2070 (RuntimeObject* __this, int8_t p1, int8_t p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2070 (RuntimeObject* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2071 (RuntimeObject* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2071 (RuntimeObject* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 p1, int32_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2072 (RuntimeObject* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 p1, int32_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2072 (RuntimeObject* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 p1, Scene_tA1DC762B79745EB5140F054C884855B922318356 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2073 (RuntimeObject* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 p1, Scene_tA1DC762B79745EB5140F054C884855B922318356 p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2073 (RuntimeObject* __this, ScriptableRenderContext_t5AB09B3602BEB456E0DC3D53926D3A3BDAF08E36 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2074 (RuntimeObject* __this, ScriptableRenderContext_t5AB09B3602BEB456E0DC3D53926D3A3BDAF08E36 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2074 (RuntimeObject* __this, ScriptableRenderContext_t5AB09B3602BEB456E0DC3D53926D3A3BDAF08E36 p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2075 (RuntimeObject* __this, ScriptableRenderContext_t5AB09B3602BEB456E0DC3D53926D3A3BDAF08E36 p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2075 (RuntimeObject* __this, ScriptableRenderContext_t5AB09B3602BEB456E0DC3D53926D3A3BDAF08E36 p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2076 (RuntimeObject* __this, ScriptableRenderContext_t5AB09B3602BEB456E0DC3D53926D3A3BDAF08E36 p1, RuntimeObject* p2, RuntimeObject* p3, RuntimeObject* p4, RuntimeObject* p5, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,p3,p4,p5};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2076 (RuntimeObject* __this, SelectorMatchRecord_t1E93CDB54312CFB4A67768BB25ABB9AFB31BC5D7 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2077 (RuntimeObject* __this, SelectorMatchRecord_t1E93CDB54312CFB4A67768BB25ABB9AFB31BC5D7 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2077 (RuntimeObject* __this, ShaderTagId_t453E2085B5EE9448FF75E550CAB111EFF690ECB0 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2078 (RuntimeObject* __this, ShaderTagId_t453E2085B5EE9448FF75E550CAB111EFF690ECB0 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2078 (RuntimeObject* __this, float p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2079 (RuntimeObject* __this, float p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2079 (RuntimeObject* __this, float p1, int32_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2080 (RuntimeObject* __this, float p1, int32_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2080 (RuntimeObject* __this, float p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2081 (RuntimeObject* __this, float p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2081 (RuntimeObject* __this, float p1, int8_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2082 (RuntimeObject* __this, float p1, int8_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2082 (RuntimeObject* __this, float p1, float p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2083 (RuntimeObject* __this, float p1, float p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2083 (RuntimeObject* __this, float p1, float p2, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2084 (RuntimeObject* __this, float p1, float p2, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2084 (RuntimeObject* __this, float p1, float p2, int8_t p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2085 (RuntimeObject* __this, float p1, float p2, int8_t p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2085 (RuntimeObject* __this, float p1, float p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2086 (RuntimeObject* __this, float p1, float p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2086 (RuntimeObject* __this, float p1, float p2, float p3, float p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2087 (RuntimeObject* __this, float p1, float p2, float p3, float p4, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2087 (RuntimeObject* __this, float p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p3, RuntimeObject* p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2088 (RuntimeObject* __this, float p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p3, RuntimeObject* p4, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3,p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2088 (RuntimeObject* __this, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2089 (RuntimeObject* __this, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2089 (RuntimeObject* __this, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2090 (RuntimeObject* __this, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2090 (RuntimeObject* __this, StringOptions_tC70D70DB6854CE62E6BBC3AA066517835919E9FA p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, RuntimeObject* p7, RuntimeObject* p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2091 (RuntimeObject* __this, StringOptions_tC70D70DB6854CE62E6BBC3AA066517835919E9FA p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, RuntimeObject* p7, RuntimeObject* p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,p7,p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2091 (RuntimeObject* __this, StyleColor_tFC32BA34A15742AC48D6AACF8A137A6F71F04910 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2092 (RuntimeObject* __this, StyleColor_tFC32BA34A15742AC48D6AACF8A137A6F71F04910 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2092 (RuntimeObject* __this, StyleFloat_t4A100BCCDC275C2302517C5858C9BE9EC43D4841 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2093 (RuntimeObject* __this, StyleFloat_t4A100BCCDC275C2302517C5858C9BE9EC43D4841 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2093 (RuntimeObject* __this, StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2094 (RuntimeObject* __this, StyleLength_tF02B24735FC88BE29BEB36F7A87709CA28AF72D8 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2094 (RuntimeObject* __this, StylePropertyName_tCBE2B561C690538C8514BF56426AC486DC35B6FF p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2095 (RuntimeObject* __this, StylePropertyName_tCBE2B561C690538C8514BF56426AC486DC35B6FF p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2095 (RuntimeObject* __this, StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2096 (RuntimeObject* __this, StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2096 (RuntimeObject* __this, StyleSelectorPart_tEE5B8ADC7D114C7486CC8301FF96C114FF3C9470 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2097 (RuntimeObject* __this, StyleSelectorPart_tEE5B8ADC7D114C7486CC8301FF96C114FF3C9470 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2097 (RuntimeObject* __this, StyleSyntaxToken_tE4474F86F800F298F966FFDE947528453E769E0C p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2098 (RuntimeObject* __this, StyleSyntaxToken_tE4474F86F800F298F966FFDE947528453E769E0C p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2098 (RuntimeObject* __this, StyleTranslate_tF9528CA4B45EE4EB2C4D294336A83D88DB6AF089 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2099 (RuntimeObject* __this, StyleTranslate_tF9528CA4B45EE4EB2C4D294336A83D88DB6AF089 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2099 (RuntimeObject* __this, StyleValue_t56307594EC04E04EFBCC3220595B4AAD66FF93C5 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2100 (RuntimeObject* __this, StyleValue_t56307594EC04E04EFBCC3220595B4AAD66FF93C5 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2100 (RuntimeObject* __this, StyleValueManaged_t68DFBEC1594279E4DC56634FD5092318D1E9A5F4 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2101 (RuntimeObject* __this, StyleValueManaged_t68DFBEC1594279E4DC56634FD5092318D1E9A5F4 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2101 (RuntimeObject* __this, StyleValues_t4AED947A53B84B62EF2B589A40B74911CA77D11A p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2102 (RuntimeObject* __this, StyleValues_t4AED947A53B84B62EF2B589A40B74911CA77D11A p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2102 (RuntimeObject* __this, StyleVariable_t5D4DEC936102A13961F4F2C6214B83D6CDC56269 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2103 (RuntimeObject* __this, StyleVariable_t5D4DEC936102A13961F4F2C6214B83D6CDC56269 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2103 (RuntimeObject* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2104 (RuntimeObject* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2104 (RuntimeObject* __this, TimeValue_t45AE43B219493F9459363F32C79E8986B5F82E0E p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2105 (RuntimeObject* __this, TimeValue_t45AE43B219493F9459363F32C79E8986B5F82E0E p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2105 (RuntimeObject* __this, TimerState_t82C7C29B095D6ACDC06AC172C269E9D5F0508ECE p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2106 (RuntimeObject* __this, TimerState_t82C7C29B095D6ACDC06AC172C269E9D5F0508ECE p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2106 (RuntimeObject* __this, TypedReference_tF20A82297BED597FD80BDA0E41F74746B0FD642B p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2107 (RuntimeObject* __this, TypedReference_tF20A82297BED597FD80BDA0E41F74746B0FD642B p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2107 (RuntimeObject* __this, UICharInfo_t24C2EA0F2F3A938100C271891D9DEB015ABA5FBD p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2108 (RuntimeObject* __this, UICharInfo_t24C2EA0F2F3A938100C271891D9DEB015ABA5FBD p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2108 (RuntimeObject* __this, UILineInfo_tC6FF4F85BD2316FADA2148A1789B3FF0B05A6CAC p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2109 (RuntimeObject* __this, UILineInfo_tC6FF4F85BD2316FADA2148A1789B3FF0B05A6CAC p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2109 (RuntimeObject* __this, UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2110 (RuntimeObject* __this, UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2110 (RuntimeObject* __this, uint16_t p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2111 (RuntimeObject* __this, uint16_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2111 (RuntimeObject* __this, uint32_t p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2112 (RuntimeObject* __this, uint32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2112 (RuntimeObject* __this, uint64_t p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2113 (RuntimeObject* __this, uint64_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2113 (RuntimeObject* __this, uint64_t p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2114 (RuntimeObject* __this, uint64_t p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2114 (RuntimeObject* __this, UintOptions_t06BB035A1F0801FF6D4721F6F98F36DDD93E53A3 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, uint32_t p7, uint32_t p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2115 (RuntimeObject* __this, UintOptions_t06BB035A1F0801FF6D4721F6F98F36DDD93E53A3 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, uint32_t p7, uint32_t p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,&p7,&p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2115 (RuntimeObject* __this, VFXOutputEventArgs_tA170E0868F4EFA82F5AF0835B297C4AF9E571A40 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2116 (RuntimeObject* __this, VFXOutputEventArgs_tA170E0868F4EFA82F5AF0835B297C4AF9E571A40 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2116 (RuntimeObject* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2117 (RuntimeObject* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2117 (RuntimeObject* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p1, int32_t p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2118 (RuntimeObject* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p1, int32_t p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2118 (RuntimeObject* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2119 (RuntimeObject* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2119 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2120 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2120 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2121 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2121 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, float p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2122 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, float p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2122 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, RuntimeObject* p3, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B p4, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2123 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, RuntimeObject* p3, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B p4, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,p3,&p4};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2123 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, RuntimeObject* p3, float p4, float p5, float p6, float p7, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B p8, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2124 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, RuntimeObject* p3, float p4, float p5, float p6, float p7, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B p8, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,p3,&p4,&p5,&p6,&p7,&p8};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2124 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2125 (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2125 (RuntimeObject* __this, Vector3ArrayOptions_t0F50A7A54A860E4604486511E285C952557C6644 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, RuntimeObject* p7, RuntimeObject* p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2126 (RuntimeObject* __this, Vector3ArrayOptions_t0F50A7A54A860E4604486511E285C952557C6644 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, RuntimeObject* p7, RuntimeObject* p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,p7,p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2126 (RuntimeObject* __this, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2127 (RuntimeObject* __this, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2127 (RuntimeObject* __this, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2128 (RuntimeObject* __this, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p1, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2128 (RuntimeObject* __this, VectorOptions_t2814CC842518C92C9DFC5DE6F7A73824758D3EF9 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p7, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2129 (RuntimeObject* __this, VectorOptions_t2814CC842518C92C9DFC5DE6F7A73824758D3EF9 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p7, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,&p7,&p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2129 (RuntimeObject* __this, VectorOptions_t2814CC842518C92C9DFC5DE6F7A73824758D3EF9 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p7, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2130 (RuntimeObject* __this, VectorOptions_t2814CC842518C92C9DFC5DE6F7A73824758D3EF9 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p7, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,&p7,&p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2130 (RuntimeObject* __this, VectorOptions_t2814CC842518C92C9DFC5DE6F7A73824758D3EF9 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p7, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2131 (RuntimeObject* __this, VectorOptions_t2814CC842518C92C9DFC5DE6F7A73824758D3EF9 p1, RuntimeObject* p2, int8_t p3, RuntimeObject* p4, RuntimeObject* p5, float p6, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p7, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 p8, float p9, int8_t p10, int32_t p11, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3,p4,p5,&p6,&p7,&p8,&p9,&p10,&p11};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2131 (RuntimeObject* __this, X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2132 (RuntimeObject* __this, X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2132 (RuntimeObject* __this, XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2133 (RuntimeObject* __this, XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2133 (RuntimeObject* __this, XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2134 (RuntimeObject* __this, XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2134 (RuntimeObject* __this, fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2135 (RuntimeObject* __this, fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2135 (RuntimeObject* __this, ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2136 (RuntimeObject* __this, ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2136 (RuntimeObject* __this, WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2137 (RuntimeObject* __this, WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2137 (RuntimeObject* __this, OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2138 (RuntimeObject* __this, OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2138 (RuntimeObject* __this, Page_t04FE552A388BF55B12C8868E19589136957E00A5 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2139 (RuntimeObject* __this, Page_t04FE552A388BF55B12C8868E19589136957E00A5 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2139 (RuntimeObject* __this, RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2140 (RuntimeObject* __this, RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2140 (RuntimeObject* __this, CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2141 (RuntimeObject* __this, CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2141 (RuntimeObject* __this, CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2142 (RuntimeObject* __this, CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2142 (RuntimeObject* __this, Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2143 (RuntimeObject* __this, Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2143 (RuntimeObject* __this, HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2144 (RuntimeObject* __this, HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2144 (RuntimeObject* __this, PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2145 (RuntimeObject* __this, PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2145 (RuntimeObject* __this, DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2146 (RuntimeObject* __this, DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2146 (RuntimeObject* __this, CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2147 (RuntimeObject* __this, CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2147 (RuntimeObject* __this, DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2148 (RuntimeObject* __this, DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2148 (RuntimeObject* __this, ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2149 (RuntimeObject* __this, ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2149 (RuntimeObject* __this, FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2150 (RuntimeObject* __this, FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2150 (RuntimeObject* __this, TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2151 (RuntimeObject* __this, TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2151 (RuntimeObject* __this, RectangleParams_t0B5A63548DC33EE252AF81E242B719118C235A4B p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2152 (RuntimeObject* __this, RectangleParams_t0B5A63548DC33EE252AF81E242B719118C235A4B p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2152 (RuntimeObject* __this, TextParams_t943244753F8E3A49632BBEC7272DAEAA8E10546F p1, RuntimeObject* p2, float p3, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2153 (RuntimeObject* __this, TextParams_t943244753F8E3A49632BBEC7272DAEAA8E10546F p1, RuntimeObject* p2, float p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2,&p3};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2153 (RuntimeObject* __this, RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2154 (RuntimeObject* __this, RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2154 (RuntimeObject* __this, Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2155 (RuntimeObject* __this, Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2155 (RuntimeObject* __this, ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2156 (RuntimeObject* __this, ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2156 (RuntimeObject* __this, VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2157 (RuntimeObject* __this, VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2157 (RuntimeObject* __this, BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2158 (RuntimeObject* __this, BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2158 (RuntimeObject* __this, ExtraDataActionInput_tD638E613F6D598C7D12ED7342714011390CAC8C2 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2159 (RuntimeObject* __this, ExtraDataActionInput_tD638E613F6D598C7D12ED7342714011390CAC8C2 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2159 (RuntimeObject* __this, SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2160 (RuntimeObject* __this, SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2160 (RuntimeObject* __this, SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2161 (RuntimeObject* __this, SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2161 (RuntimeObject* __this, SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2162 (RuntimeObject* __this, SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2162 (RuntimeObject* __this, SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2163 (RuntimeObject* __this, SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2163 (RuntimeObject* __this, SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2164 (RuntimeObject* __this, SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2164 (RuntimeObject* __this, SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2165 (RuntimeObject* __this, SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2165 (RuntimeObject* __this, RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2166 (RuntimeObject* __this, RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2166 (RuntimeObject* __this, PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2167 (RuntimeObject* __this, PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2167 (RuntimeObject* __this, ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2168 (RuntimeObject* __this, ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2168 (RuntimeObject* __this, DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2169 (RuntimeObject* __this, DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2169 (RuntimeObject* __this, DiagnosticEventContext_tD6FFFE80ABEF14A1A535141596224C7AF837319F p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2170 (RuntimeObject* __this, DiagnosticEventContext_tD6FFFE80ABEF14A1A535141596224C7AF837319F p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2170 (RuntimeObject* __this, Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2171 (RuntimeObject* __this, Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2171 (RuntimeObject* __this, AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2172 (RuntimeObject* __this, AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2172 (RuntimeObject* __this, FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2173 (RuntimeObject* __this, FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2173 (RuntimeObject* __this, BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2174 (RuntimeObject* __this, BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2174 (RuntimeObject* __this, Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2175 (RuntimeObject* __this, Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2175 (RuntimeObject* __this, TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2176 (RuntimeObject* __this, TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2176 (RuntimeObject* __this, NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2177 (RuntimeObject* __this, NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2177 (RuntimeObject* __this, TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2178 (RuntimeObject* __this, TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2178 (RuntimeObject* __this, Entry_tB8765CA56422E2C92887314844384843688DCB9F p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2179 (RuntimeObject* __this, Entry_tB8765CA56422E2C92887314844384843688DCB9F p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2179 (RuntimeObject* __this, AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2180 (RuntimeObject* __this, AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2180 (RuntimeObject* __this, AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2181 (RuntimeObject* __this, AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2181 (RuntimeObject* __this, UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2182 (RuntimeObject* __this, UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2182 (RuntimeObject* __this, WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2183 (RuntimeObject* __this, WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2183 (RuntimeObject* __this, unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2184 (RuntimeObject* __this, unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2184 (RuntimeObject* __this, unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2185 (RuntimeObject* __this, unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2185 (RuntimeObject* __this, Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2186 (RuntimeObject* __this, Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2186 (RuntimeObject* __this, SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2187 (RuntimeObject* __this, SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2187 (RuntimeObject* __this, SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2188 (RuntimeObject* __this, SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2188 (RuntimeObject* __this, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2189 (RuntimeObject* __this, UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2189 (RuntimeObject* __this, XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2190 (RuntimeObject* __this, XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2190 (RuntimeObject* __this, AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2191 (RuntimeObject* __this, AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2191 (RuntimeObject* __this, AttributeQuery_tCBA10DD34B1CEA7A75740A1B98020B551D8445C7 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2192 (RuntimeObject* __this, AttributeQuery_tCBA10DD34B1CEA7A75740A1B98020B551D8445C7 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2192 (RuntimeObject* __this, ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2193 (RuntimeObject* __this, ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2193 (RuntimeObject* __this, InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2194 (RuntimeObject* __this, InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2194 (RuntimeObject* __this, Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2195 (RuntimeObject* __this, Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedVirtualCall_2195 (RuntimeObject* __this, RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2196 (RuntimeObject* __this, RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC UnresolvedVirtualCall_2196 (RuntimeObject* __this, const RuntimeMethod* method)
+static  VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC UnresolvedVirtualCall_2197 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC UnresolvedVirtualCall_2197 (RuntimeObject* __this, RuntimeObject* p1, const RuntimeMethod* method)
+static  VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC UnresolvedVirtualCall_2198 (RuntimeObject* __this, RuntimeObject* p1, const RuntimeMethod* method)
 {
 	void* args[] = {p1};
 	VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC UnresolvedVirtualCall_2198 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC UnresolvedVirtualCall_2199 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2};
 	VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D UnresolvedVirtualCall_2199 (RuntimeObject* __this, const RuntimeMethod* method)
+static  X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D UnresolvedVirtualCall_2200 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D UnresolvedVirtualCall_2200 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D UnresolvedVirtualCall_2201 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	X509ChainStatus_t5A57DDA24AA1FCA9F2B8D70B767CDDF388E4A80D il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 UnresolvedVirtualCall_2201 (RuntimeObject* __this, const RuntimeMethod* method)
+static  XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 UnresolvedVirtualCall_2202 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 UnresolvedVirtualCall_2202 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 UnresolvedVirtualCall_2203 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	XRView_t2ECA2D8B3ACBDF90DAD643B2766AF68A56E12A27 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  YogaSize_tA276812CB1E90E7AA2028A9474EA6EA46B3B38EA UnresolvedVirtualCall_2203 (RuntimeObject* __this, RuntimeObject* p1, float p2, int32_t p3, float p4, int32_t p5, const RuntimeMethod* method)
+static  YogaSize_tA276812CB1E90E7AA2028A9474EA6EA46B3B38EA UnresolvedVirtualCall_2204 (RuntimeObject* __this, RuntimeObject* p1, float p2, int32_t p3, float p4, int32_t p5, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2,&p3,&p4,&p5};
 	YogaSize_tA276812CB1E90E7AA2028A9474EA6EA46B3B38EA il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  YogaSize_tA276812CB1E90E7AA2028A9474EA6EA46B3B38EA UnresolvedVirtualCall_2204 (RuntimeObject* __this, float p1, int32_t p2, float p3, int32_t p4, const RuntimeMethod* method)
+static  YogaSize_tA276812CB1E90E7AA2028A9474EA6EA46B3B38EA UnresolvedVirtualCall_2205 (RuntimeObject* __this, float p1, int32_t p2, float p3, int32_t p4, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,&p3,&p4};
 	YogaSize_tA276812CB1E90E7AA2028A9474EA6EA46B3B38EA il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2205 (RuntimeObject* __this, Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2206 (RuntimeObject* __this, Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2206 (RuntimeObject* __this, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2207 (RuntimeObject* __this, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2207 (RuntimeObject* __this, LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2208 (RuntimeObject* __this, LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2208 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2209 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2209 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2210 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2,p3};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2210 (RuntimeObject* __this, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2211 (RuntimeObject* __this, Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2211 (RuntimeObject* __this, Ray2D_t48EB7C703F8A2363D8A8F4A05D58640BD5721C7A p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2212 (RuntimeObject* __this, Ray2D_t48EB7C703F8A2363D8A8F4A05D58640BD5721C7A p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2212 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 UnresolvedVirtualCall_2213 (RuntimeObject* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	fsResult_tEB0578624BDC55E2B1775451433E6E3CBDA8D974 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 UnresolvedVirtualCall_2213 (RuntimeObject* __this, const RuntimeMethod* method)
+static  fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 UnresolvedVirtualCall_2214 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 UnresolvedVirtualCall_2214 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 UnresolvedVirtualCall_2215 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	fsVersionedType_tE569BD045F7DEDEC2122CC6CC0023B62B95332E8 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA UnresolvedVirtualCall_2215 (RuntimeObject* __this, const RuntimeMethod* method)
+static  ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA UnresolvedVirtualCall_2216 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA UnresolvedVirtualCall_2216 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA UnresolvedVirtualCall_2217 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	ShadowResolutionRequest_tE0E30FA18ACE318D6540C2BA217F4E8B3E6766CA il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 UnresolvedVirtualCall_2217 (RuntimeObject* __this, const RuntimeMethod* method)
+static  WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 UnresolvedVirtualCall_2218 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 UnresolvedVirtualCall_2218 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 UnresolvedVirtualCall_2219 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	WeightInfo_t9942B0D2C77A00A5C9824732AEAA0AB0A55620B0 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 UnresolvedVirtualCall_2219 (RuntimeObject* __this, const RuntimeMethod* method)
+static  OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 UnresolvedVirtualCall_2220 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 UnresolvedVirtualCall_2220 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 UnresolvedVirtualCall_2221 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	OrderBlock_t62FD6F6544F34B5298DEF2F77AAE446F269B7837 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Page_t04FE552A388BF55B12C8868E19589136957E00A5 UnresolvedVirtualCall_2221 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Page_t04FE552A388BF55B12C8868E19589136957E00A5 UnresolvedVirtualCall_2222 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Page_t04FE552A388BF55B12C8868E19589136957E00A5 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Page_t04FE552A388BF55B12C8868E19589136957E00A5 UnresolvedVirtualCall_2222 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Page_t04FE552A388BF55B12C8868E19589136957E00A5 UnresolvedVirtualCall_2223 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Page_t04FE552A388BF55B12C8868E19589136957E00A5 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A UnresolvedVirtualCall_2223 (RuntimeObject* __this, const RuntimeMethod* method)
+static  RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A UnresolvedVirtualCall_2224 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A UnresolvedVirtualCall_2224 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A UnresolvedVirtualCall_2225 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	RenderRequest_t432931B06439AC4704282E924DE8A9A474DB6B9A il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB UnresolvedVirtualCall_2225 (RuntimeObject* __this, const RuntimeMethod* method)
+static  CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB UnresolvedVirtualCall_2226 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB UnresolvedVirtualCall_2226 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB UnresolvedVirtualCall_2227 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	CustomBlendable_t99FF1C1C42F08A7265E2842451D5CB2F4BFF16CB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB UnresolvedVirtualCall_2227 (RuntimeObject* __this, const RuntimeMethod* method)
+static  CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB UnresolvedVirtualCall_2228 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB UnresolvedVirtualCall_2228 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB UnresolvedVirtualCall_2229 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	CharReplacement_t71D7E02F802FEB944299534E40B5B6F58A9C91CB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 UnresolvedVirtualCall_2229 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 UnresolvedVirtualCall_2230 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 UnresolvedVirtualCall_2230 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 UnresolvedVirtualCall_2231 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Pair_t395B1EC1E7854C08811AF7E0584C4BA7AE3C6AF2 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC UnresolvedVirtualCall_2231 (RuntimeObject* __this, const RuntimeMethod* method)
+static  HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC UnresolvedVirtualCall_2232 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC UnresolvedVirtualCall_2232 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC UnresolvedVirtualCall_2233 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	HashPair_t176F7624706A73500F3AB84D61111316D45ECCEC il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C UnresolvedVirtualCall_2233 (RuntimeObject* __this, const RuntimeMethod* method)
+static  PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C UnresolvedVirtualCall_2234 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C UnresolvedVirtualCall_2234 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C UnresolvedVirtualCall_2235 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	PolygonSolution_tAF24FAC932885B257486B439AACD765C7D49CB4C il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D UnresolvedVirtualCall_2235 (RuntimeObject* __this, const RuntimeMethod* method)
+static  DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D UnresolvedVirtualCall_2236 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D UnresolvedVirtualCall_2236 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D UnresolvedVirtualCall_2237 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	DecalEntityItem_tE2209120E111E679725F7022B0C54DEC6783EA5D il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 UnresolvedVirtualCall_2237 (RuntimeObject* __this, const RuntimeMethod* method)
+static  CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 UnresolvedVirtualCall_2238 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 UnresolvedVirtualCall_2238 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 UnresolvedVirtualCall_2239 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	CombinedChunks_tCFB3356163B9F9B0E31E0B194E9B415F83340ED9 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 UnresolvedVirtualCall_2239 (RuntimeObject* __this, const RuntimeMethod* method)
+static  DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 UnresolvedVirtualCall_2240 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 UnresolvedVirtualCall_2240 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 UnresolvedVirtualCall_2241 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	DelegateInfo_t718C124E89FB2703D642911A3CEC87D645D62232 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 UnresolvedVirtualCall_2241 (RuntimeObject* __this, const RuntimeMethod* method)
+static  ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 UnresolvedVirtualCall_2242 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 UnresolvedVirtualCall_2242 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 UnresolvedVirtualCall_2243 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	ExpansionRule_t9C09657D9D37A0C3885F488E0D21896918021950 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF UnresolvedVirtualCall_2243 (RuntimeObject* __this, const RuntimeMethod* method)
+static  FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF UnresolvedVirtualCall_2244 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF UnresolvedVirtualCall_2244 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF UnresolvedVirtualCall_2245 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	FocusedElement_t1EE083A1C5276213C533A38C6B5DC02E9DE5CBEF il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F UnresolvedVirtualCall_2245 (RuntimeObject* __this, const RuntimeMethod* method)
+static  TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F UnresolvedVirtualCall_2246 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F UnresolvedVirtualCall_2246 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F UnresolvedVirtualCall_2247 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	TreeViewItemWrapper_tFA593EC4B06E0C963C0EAA9C18DDC99EEDC05D1F il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB UnresolvedVirtualCall_2247 (RuntimeObject* __this, const RuntimeMethod* method)
+static  LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB UnresolvedVirtualCall_2248 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB UnresolvedVirtualCall_2248 (RuntimeObject* __this, ContourVertex_t58C64DD8B2209C868718C7B50657707A15EEEF32 p1, const RuntimeMethod* method)
+static  LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB UnresolvedVirtualCall_2249 (RuntimeObject* __this, ContourVertex_t58C64DD8B2209C868718C7B50657707A15EEEF32 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	LightMeshVertex_t5E886C7928458EB522BEB49D43C67ACC09EC7DCB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E UnresolvedVirtualCall_2249 (RuntimeObject* __this, const RuntimeMethod* method)
+static  RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E UnresolvedVirtualCall_2250 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E UnresolvedVirtualCall_2250 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E UnresolvedVirtualCall_2251 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	RuntimeBuildLog_tC62F0400E684D90B60B597ECD125F3D154A4156E il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 UnresolvedVirtualCall_2251 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 UnresolvedVirtualCall_2252 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 UnresolvedVirtualCall_2252 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 UnresolvedVirtualCall_2253 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Brick_tCF697F8098B1E364826A55C583A11A9BD61FEE06 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 UnresolvedVirtualCall_2253 (RuntimeObject* __this, const RuntimeMethod* method)
+static  ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 UnresolvedVirtualCall_2254 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 UnresolvedVirtualCall_2254 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 UnresolvedVirtualCall_2255 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	ReservedBrick_t7135A132DCDE993E9045495FEB902DE1445B8415 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 UnresolvedVirtualCall_2255 (RuntimeObject* __this, const RuntimeMethod* method)
+static  VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 UnresolvedVirtualCall_2256 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 UnresolvedVirtualCall_2256 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 UnresolvedVirtualCall_2257 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	VoxelMeta_t68E17D649E8573BDE8903A4931A80C316245FF46 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F UnresolvedVirtualCall_2257 (RuntimeObject* __this, const RuntimeMethod* method)
+static  BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F UnresolvedVirtualCall_2258 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F UnresolvedVirtualCall_2258 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F UnresolvedVirtualCall_2259 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	BrickChunkAlloc_tE20AA1DC63F165DAA678ECF487C52A848589F45F il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 UnresolvedVirtualCall_2259 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 UnresolvedVirtualCall_2260 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 UnresolvedVirtualCall_2260 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 UnresolvedVirtualCall_2261 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SerializableAssetItem_t6A8C418A5D6068E49195CA2F1908A36B36423416 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C UnresolvedVirtualCall_2261 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C UnresolvedVirtualCall_2262 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C UnresolvedVirtualCall_2262 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C UnresolvedVirtualCall_2263 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SerializableBoundItem_tAAC617FC15812D4C15EA67F564DBBB97C91CA76C il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 UnresolvedVirtualCall_2263 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 UnresolvedVirtualCall_2264 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 UnresolvedVirtualCall_2264 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 UnresolvedVirtualCall_2265 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SerializableHasPVItem_tCB43CF2DDF020627DE121934A0031B5A4A418622 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 UnresolvedVirtualCall_2265 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 UnresolvedVirtualCall_2266 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 UnresolvedVirtualCall_2266 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 UnresolvedVirtualCall_2267 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SerializablePVBakeSettings_t4E5B089BA357A2E91A67F570519556876B797877 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 UnresolvedVirtualCall_2267 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 UnresolvedVirtualCall_2268 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 UnresolvedVirtualCall_2268 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 UnresolvedVirtualCall_2269 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SerializablePVProfile_tD3D31A9B22592CE78C6B023E2A4DD629680BD069 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC UnresolvedVirtualCall_2269 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC UnresolvedVirtualCall_2270 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC UnresolvedVirtualCall_2270 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC UnresolvedVirtualCall_2271 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SingleRange_tB50C1C2B62BDC445BDBA41FD3CDC77A45A211BBC il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE UnresolvedVirtualCall_2271 (RuntimeObject* __this, const RuntimeMethod* method)
+static  RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE UnresolvedVirtualCall_2272 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE UnresolvedVirtualCall_2272 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE UnresolvedVirtualCall_2273 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	RenderNodeData_t7527D1643CC280CE2B2E40AB9F5154615B7A99AE il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 UnresolvedVirtualCall_2273 (RuntimeObject* __this, const RuntimeMethod* method)
+static  PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 UnresolvedVirtualCall_2274 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 UnresolvedVirtualCall_2274 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 UnresolvedVirtualCall_2275 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	PassDebugData_tE911DB0148519C33C773511F2D92F57AF1B6D258 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B UnresolvedVirtualCall_2275 (RuntimeObject* __this, const RuntimeMethod* method)
+static  ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B UnresolvedVirtualCall_2276 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B UnresolvedVirtualCall_2276 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B UnresolvedVirtualCall_2277 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	ResourceDebugData_t83301B4E44B1F0B49486E21F019AFEE444809A9B il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD UnresolvedVirtualCall_2277 (RuntimeObject* __this, const RuntimeMethod* method)
+static  DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD UnresolvedVirtualCall_2278 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD UnresolvedVirtualCall_2278 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD UnresolvedVirtualCall_2279 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	DeferredCallbackRegisterRequest_tA5BE4066185FD0EB6B33A28B02B58660CE4A22AD il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB UnresolvedVirtualCall_2279 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB UnresolvedVirtualCall_2280 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB UnresolvedVirtualCall_2280 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB UnresolvedVirtualCall_2281 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Edge_tC0E866D7F28E832CE7BEF95C87BECCD97FB09AAB il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF UnresolvedVirtualCall_2281 (RuntimeObject* __this, const RuntimeMethod* method)
+static  AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF UnresolvedVirtualCall_2282 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF UnresolvedVirtualCall_2282 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF UnresolvedVirtualCall_2283 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	AttributeOverride_t58F1DF22E69714D48ECBEEAD266D443A858BADEF il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 UnresolvedVirtualCall_2283 (RuntimeObject* __this, const RuntimeMethod* method)
+static  FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 UnresolvedVirtualCall_2284 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 UnresolvedVirtualCall_2284 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 UnresolvedVirtualCall_2285 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	FontReferenceMap_t1C0CECF3F0F650BE4A881A50A25EFB26965E7831 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 UnresolvedVirtualCall_2285 (RuntimeObject* __this, const RuntimeMethod* method)
+static  BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 UnresolvedVirtualCall_2286 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 UnresolvedVirtualCall_2286 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 UnresolvedVirtualCall_2287 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	BlitInfo_t6D4C0580BBEF65F5EAD39FB6DBC85F360CF6A357 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD UnresolvedVirtualCall_2287 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD UnresolvedVirtualCall_2288 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD UnresolvedVirtualCall_2288 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD UnresolvedVirtualCall_2289 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Frame_tE254B3BDA010B9114EF1F470C177342FAF3E8FFD il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B UnresolvedVirtualCall_2289 (RuntimeObject* __this, const RuntimeMethod* method)
+static  TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B UnresolvedVirtualCall_2290 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B UnresolvedVirtualCall_2290 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B UnresolvedVirtualCall_2291 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	TextureInfo_t581C305A0444F786E0E7405054714685BE3A5A5B il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 UnresolvedVirtualCall_2291 (RuntimeObject* __this, const RuntimeMethod* method)
+static  NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 UnresolvedVirtualCall_2292 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 UnresolvedVirtualCall_2292 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 UnresolvedVirtualCall_2293 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	NotificationEntry_tBBA39A8ACD63E90360DB0FFC4835E8702DFC2E62 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE UnresolvedVirtualCall_2293 (RuntimeObject* __this, const RuntimeMethod* method)
+static  TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE UnresolvedVirtualCall_2294 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE UnresolvedVirtualCall_2294 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE UnresolvedVirtualCall_2295 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	TreeViewItemWrapper_t8130863A8182C5BF6925A88AF5E77192A4D519CE il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Entry_tB8765CA56422E2C92887314844384843688DCB9F UnresolvedVirtualCall_2295 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Entry_tB8765CA56422E2C92887314844384843688DCB9F UnresolvedVirtualCall_2296 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Entry_tB8765CA56422E2C92887314844384843688DCB9F il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Entry_tB8765CA56422E2C92887314844384843688DCB9F UnresolvedVirtualCall_2296 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Entry_tB8765CA56422E2C92887314844384843688DCB9F UnresolvedVirtualCall_2297 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Entry_tB8765CA56422E2C92887314844384843688DCB9F il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 UnresolvedVirtualCall_2297 (RuntimeObject* __this, const RuntimeMethod* method)
+static  AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 UnresolvedVirtualCall_2298 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 UnresolvedVirtualCall_2298 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 UnresolvedVirtualCall_2299 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	AllocToFree_tC46982856CB8220A92BB724F5FB75CCCD09C67D8 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 UnresolvedVirtualCall_2299 (RuntimeObject* __this, const RuntimeMethod* method)
+static  AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 UnresolvedVirtualCall_2300 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 UnresolvedVirtualCall_2300 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 UnresolvedVirtualCall_2301 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	AllocToUpdate_tD0221D0ABC5378DDE5AAB1DAA219C337E562B512 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 UnresolvedVirtualCall_2301 (RuntimeObject* __this, const RuntimeMethod* method)
+static  UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 UnresolvedVirtualCall_2302 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 UnresolvedVirtualCall_2302 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 UnresolvedVirtualCall_2303 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	UnitPortPreservation_t786FF6E98EAE1CB21E88F11E0C25643BFD1D02F4 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 UnresolvedVirtualCall_2303 (RuntimeObject* __this, const RuntimeMethod* method)
+static  WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 UnresolvedVirtualCall_2304 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 UnresolvedVirtualCall_2304 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 UnresolvedVirtualCall_2305 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	WorkRequest_t8AF542F2E248D9234341817CDB5F76C27D348B44 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  unitytls_errorstate_tC926EE4582920BE2C1DB1F3F65619B810D5AB902 UnresolvedVirtualCall_2305 (RuntimeObject* __this, const RuntimeMethod* method)
+static  unitytls_errorstate_tC926EE4582920BE2C1DB1F3F65619B810D5AB902 UnresolvedVirtualCall_2306 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	unitytls_errorstate_tC926EE4582920BE2C1DB1F3F65619B810D5AB902 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  unitytls_key_ref_t6BD91D013DF11047C53738FEEB12CE290FDC71A2 UnresolvedVirtualCall_2306 (RuntimeObject* __this, RuntimeObject* p1, const RuntimeMethod* method)
+static  unitytls_key_ref_t6BD91D013DF11047C53738FEEB12CE290FDC71A2 UnresolvedVirtualCall_2307 (RuntimeObject* __this, RuntimeObject* p1, const RuntimeMethod* method)
 {
 	void* args[] = {p1};
 	unitytls_key_ref_t6BD91D013DF11047C53738FEEB12CE290FDC71A2 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  unitytls_key_ref_t6BD91D013DF11047C53738FEEB12CE290FDC71A2 UnresolvedVirtualCall_2307 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  unitytls_key_ref_t6BD91D013DF11047C53738FEEB12CE290FDC71A2 UnresolvedVirtualCall_2308 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2};
 	unitytls_key_ref_t6BD91D013DF11047C53738FEEB12CE290FDC71A2 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 UnresolvedVirtualCall_2308 (RuntimeObject* __this, intptr_t p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 UnresolvedVirtualCall_2309 (RuntimeObject* __this, intptr_t p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,p2};
 	unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 UnresolvedVirtualCall_2309 (RuntimeObject* __this, unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 p1, intptr_t p2, RuntimeObject* p3, const RuntimeMethod* method)
+static  unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 UnresolvedVirtualCall_2310 (RuntimeObject* __this, unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 p1, intptr_t p2, RuntimeObject* p3, const RuntimeMethod* method)
 {
 	void* args[] = {&p1,&p2,p3};
 	unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 UnresolvedVirtualCall_2310 (RuntimeObject* __this, RuntimeObject* p1, const RuntimeMethod* method)
+static  unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 UnresolvedVirtualCall_2311 (RuntimeObject* __this, RuntimeObject* p1, const RuntimeMethod* method)
 {
 	void* args[] = {p1};
 	unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 UnresolvedVirtualCall_2311 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
+static  unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 UnresolvedVirtualCall_2312 (RuntimeObject* __this, RuntimeObject* p1, RuntimeObject* p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,p2};
 	unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 UnresolvedVirtualCall_2312 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 UnresolvedVirtualCall_2313 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 UnresolvedVirtualCall_2313 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 UnresolvedVirtualCall_2314 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Bone_t45A5AE3FD1F023346E79F0A823629DF304C64C07 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 UnresolvedVirtualCall_2314 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 UnresolvedVirtualCall_2315 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 UnresolvedVirtualCall_2315 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 UnresolvedVirtualCall_2316 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SlotDefinition_t2E39E965BBE5A336DD1B93A115DD01044D1A66F8 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 UnresolvedVirtualCall_2316 (RuntimeObject* __this, const RuntimeMethod* method)
+static  SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 UnresolvedVirtualCall_2317 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 UnresolvedVirtualCall_2317 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 UnresolvedVirtualCall_2318 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	SlotUsageEntry_t73A628038C799E4FD44436E093EC19D2B9EA1B76 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 UnresolvedVirtualCall_2318 (RuntimeObject* __this, const RuntimeMethod* method)
+static  UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 UnresolvedVirtualCall_2319 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 UnresolvedVirtualCall_2319 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 UnresolvedVirtualCall_2320 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	UsingEntry_t0454AD34026FDFD1733CE07BD4AE807B0FBCE484 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD UnresolvedVirtualCall_2320 (RuntimeObject* __this, const RuntimeMethod* method)
+static  XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD UnresolvedVirtualCall_2321 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD UnresolvedVirtualCall_2321 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD UnresolvedVirtualCall_2322 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	XmlSchemaObjectEntry_t79D1310E1F5CA860FAD243853E59A3C2ACDB83CD il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 UnresolvedVirtualCall_2322 (RuntimeObject* __this, const RuntimeMethod* method)
+static  AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 UnresolvedVirtualCall_2323 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 UnresolvedVirtualCall_2323 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 UnresolvedVirtualCall_2324 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	AotCompilation_t62080A5BAEE4C051A3D097FBE9042DAEE36E1440 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 UnresolvedVirtualCall_2324 (RuntimeObject* __this, const RuntimeMethod* method)
+static  ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 UnresolvedVirtualCall_2325 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 UnresolvedVirtualCall_2325 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 UnresolvedVirtualCall_2326 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	ContextMenuItem_t0D29D1ECB0C1F769EFC9ACA2D0AE6B1A8A4736A9 il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D UnresolvedVirtualCall_2326 (RuntimeObject* __this, const RuntimeMethod* method)
+static  InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D UnresolvedVirtualCall_2327 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D UnresolvedVirtualCall_2327 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D UnresolvedVirtualCall_2328 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	InstructionView_tA381D8A27DEDDEE43C71B3BB3A2FADC0CD059A3D il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E UnresolvedVirtualCall_2328 (RuntimeObject* __this, const RuntimeMethod* method)
+static  Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E UnresolvedVirtualCall_2329 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E UnresolvedVirtualCall_2329 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E UnresolvedVirtualCall_2330 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	Item_t590AA2925A38AA7EA48963775F482E9BA8525B4E il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E UnresolvedVirtualCall_2330 (RuntimeObject* __this, const RuntimeMethod* method)
+static  RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E UnresolvedVirtualCall_2331 (RuntimeObject* __this, const RuntimeMethod* method)
 {
 	RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E il2cppRetVal;
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, NULL, &il2cppRetVal);
 	return il2cppRetVal;
 }
-static  RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E UnresolvedVirtualCall_2331 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
+static  RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E UnresolvedVirtualCall_2332 (RuntimeObject* __this, int32_t p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E il2cppRetVal;
@@ -24332,7 +24337,7 @@ static  RecordingItem_t5CE44E9AB838D651799847F74609435470D50A1E UnresolvedVirtua
 	return il2cppRetVal;
 }
 IL2CPP_EXTERN_C const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[];
-const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[2332] = 
+const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[2333] = 
 {
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_0,
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_1,
@@ -26666,4 +26671,5 @@ const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[2332] =
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_2329,
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_2330,
 	(const Il2CppMethodPointer) UnresolvedVirtualCall_2331,
+	(const Il2CppMethodPointer) UnresolvedVirtualCall_2332,
 };
