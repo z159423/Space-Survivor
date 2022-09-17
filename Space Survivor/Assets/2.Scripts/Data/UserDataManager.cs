@@ -130,6 +130,18 @@ public class UserDataManager : MonoBehaviour
         SaveUserData(currentUserData);
     }
 
+    public bool CheckPlayerHaveShip(string code)
+    {
+        for(int i = 0; i < currentUserData.playerHaveShip.Count; i++)
+        {
+            if(currentUserData.playerHaveShip[i].shipCode.Equals(code))
+                return true;
+        }
+
+        return false;
+        
+    }
+
     private void OnApplicationPause(bool pause)
     {
         if (pause)

@@ -15,9 +15,47 @@ MonoBehaviour:
   shipType: 0
   shipCode: Nova
   shipBody: {fileID: 5518835431198223638, guid: a55735f6308bd5a4bb98c0a8246a8bd1, type: 3}
+  shipImage: {fileID: 21300000, guid: 3fb298ca8520dbd45b67875f3448e48f, type: 3}
+  baseMaxHp:
+    baseValue: 1000
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  baseMoveSpeed:
+    baseValue: 5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  baseRotationSpeed:
+    baseValue: 3.5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  baseDamage:
+    baseValue: 5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+  shipCost: 0
   basicWeapon:
   - {fileID: 11400000, guid: 61d256b2bec31f64e870d297f687a041, type: 2}
-  baseMaxHp: 1000
-  baseMoveSpeed: 5
-  baseRotationSpeed: 3.5
-  shipCost: 0
+  shipUpgradeModuleList:
+  - upgradeType: 0
+    currentUpgrade: 0
+    maxUpgrade: 5
+    statUpgradeValueForLevel: 0
+    upgradeCostForLevel: 100
+  - upgradeType: 1
+    currentUpgrade: 0
+    maxUpgrade: 5
+    statUpgradeValueForLevel: 0
+    upgradeCostForLevel: 100
+  - upgradeType: 2
+    currentUpgrade: 0
+    maxUpgrade: 5
+    statUpgradeValueForLevel: 0
+    upgradeCostForLevel: 100

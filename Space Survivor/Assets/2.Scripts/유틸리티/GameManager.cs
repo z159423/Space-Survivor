@@ -31,12 +31,12 @@ public class GameManager : MonoBehaviour
 
     [Space]
 
-    [SerializeField] private ShipObject currentShip;
+    [SerializeField] public ShipObject currentShip;
     [SerializeField] private ShipList shipList;
     [SerializeField] private GameObject tiralBtn;
     [SerializeField] private GameObject buyShipBtn;
     [SerializeField] private TextMeshProUGUI shipCostText;
-
+    [SerializeField] private GameObject shipUpgradeSlot;
 
     [SerializeField] private int currentShipNumber;
 
@@ -296,4 +296,8 @@ public class GameManager : MonoBehaviour
         SelectShip(currentShipNumber);
     }
 
+    public void ShipUpgradeUIOnOff()
+    {
+        shipUpgradeSlot.SetActive(!shipUpgradeSlot.activeSelf);
+    }
 }

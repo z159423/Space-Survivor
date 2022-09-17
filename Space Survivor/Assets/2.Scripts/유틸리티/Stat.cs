@@ -99,4 +99,9 @@ public class Stat
     {
         baseValue = value;
     }
+
+    public float GetBaseValue()
+    {
+        return baseValue;
+    }
 }

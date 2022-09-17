@@ -292,9 +292,9 @@ public class PlayerStat : MonoBehaviour
 
     public void GetShipStat(ShipObject shipObject)              //������� �Լ� ������ �÷��̾��� �Լ� ���ȿ� �ٿ��ֱ�
     {
-        maxHp = shipObject.baseMaxHp;
-        moveSpeed.SetBaseValue(shipObject.baseMoveSpeed);
-        rotationSpeed.SetBaseValue(shipObject.baseRotationSpeed);
+        maxHp = shipObject.baseMaxHp.GetFinalStatValueAsInt();
+        moveSpeed.SetBaseValue(shipObject.baseMoveSpeed.GetFinalStatValue());
+        rotationSpeed.SetBaseValue(shipObject.baseRotationSpeed.GetFinalStatValue());
     }
 
     public float GetMoveSpeed()
