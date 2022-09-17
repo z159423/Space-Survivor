@@ -20,13 +20,28 @@ public class UserDataManager : MonoBehaviour
         //DontDestroyOnLoad(gameObject);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+            AddCrystalValue(100);
 
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            DeleteUserData();
+            currentUserData = LoadUserData();
+
+            AddCrystalValue(0);
+        }
+            
+    }
+
+    //유저 데이터 불러오기
     public UserData LoadUserData()
     {
         string filePath = Application.persistentDataPath + userDataName;
 
         //불러오기 성공
-        if(File.Exists(filePath))
+        if (File.Exists(filePath))
         {
             print("UserData 불러오기 성공");
             string JsonData = File.ReadAllText(filePath);
@@ -38,13 +53,14 @@ public class UserDataManager : MonoBehaviour
         //불러올 파일이 없을시
         else
         {
-            print("UserData가 없어서 새로운 파일을 생성합니다."); 
+            print("UserData가 없어서 새로운 파일을 생성합니다.");
             UserData userData = new UserData();
 
             return userData;
         }
     }
 
+    //유저 데이터 세이브
     public void SaveUserData(UserData data)
     {
         string filePath = Application.persistentDataPath + userDataName;
@@ -52,6 +68,33 @@ public class UserDataManager : MonoBehaviour
         string JsonData = JsonUtility.ToJson(data);
 
         File.WriteAllText(filePath, JsonData);
+    }
+
+    //유저 데이터 삭제
+    public void DeleteUserData()
+    {
+        string filePath = Application.persistentDataPath + userDataName;
+
+        // check if file exists
+        if (!File.Exists(filePath))
+        {
+            print("유저 데이터가 존재하지 않습니다.");
+        }
+        else
+        {
+            print("유저 데이터를 삭제하였습니다.");
+
+            File.Delete(filePath);
+
+            RefreshEditorProjectWindow();
+        }
+    }
+
+    void RefreshEditorProjectWindow()
+    {
+#if UNITY_EDITOR
+        UnityEditor.AssetDatabase.Refresh();
+#endif
     }
 
     public void AddCrystalValue(int value)
@@ -67,12 +110,12 @@ public class UserDataManager : MonoBehaviour
         print("4");
         */
 
-        var data = LoadUserData();
+        //var data = LoadUserData();
 
-        data.crystal += value;
+        currentUserData.crystal += value;
 
-        CrystalDisplay.instance.ChangeCrystalText(data.crystal);
-        SaveUserData(data);
+        CrystalDisplay.instance.ChangeCrystalText(currentUserData.crystal);
+        SaveUserData(currentUserData);
     }
 
     public UserData LoadCurrentUserDataFromLocal()
@@ -89,7 +132,7 @@ public class UserDataManager : MonoBehaviour
 
     private void OnApplicationPause(bool pause)
     {
-        if(pause)
+        if (pause)
         {
             //GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str)=> { print("게임이 일시중지되어 유저 데이터 저장"); });
         }

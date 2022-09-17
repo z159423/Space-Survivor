@@ -6,6 +6,7 @@ using TMPro;
 using Cinemachine;
 using UnityEngine.Localization;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI shipNameText;
     [SerializeField] private GameObject shipBuyBtn;
     [SerializeField] private GameObject shipTrialBtn;
+    [SerializeField] private Color buyBtnDisableColor;
+    [SerializeField] private Color buyBtnEnableColor;
 
     [SerializeField] private CinemachineVirtualCamera cmvc;
 
@@ -53,7 +56,8 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    private void Start() {
+    private void Start()
+    {
         SelectShip(currentShipNumber);
     }
 
@@ -104,7 +108,7 @@ public class GameManager : MonoBehaviour
         playerWeapon.allowFire = false;
 
         SelectShip(currentShipNumber);
-        
+
         CameraManager.instance.ChangeCamera_MainMenu();
     }
 
@@ -194,10 +198,13 @@ public class GameManager : MonoBehaviour
 
         var shipObject = shipList.shipList[currentShipNumber];
 
+        currentShip = shipObject;
+
         player.GetComponent<PlayerStat>().MakeThisShip(shipObject, bodyRotation);
 
         StartCoroutine(ChangeShipNameText());
 
+        //함선이름 불러오기
         IEnumerator ChangeShipNameText()
         {
             var keyName = shipObject.shipCode;
@@ -219,11 +226,30 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(!UserDataManager.instance.currentUserData.playerHaveShip.Contains(shipObject) && shipObject.shipCost > 0)
+        //플레이어가 소지중인 함선이 아닐경우 함선 구매버튼 활성화
+        if (!UserDataManager.instance.currentUserData.playerHaveShip.Contains(shipObject) && shipObject.shipCost > 0)
         {
             shipBuyBtn.SetActive(true);
             shipTrialBtn.SetActive(true);
             shipCostText.text = shipObject.shipCost.ToString();
+
+            // if (currentShip.shipCost > UserDataManager.instance.currentUserData.crystal)
+            // {
+            //     shipBuyBtn.GetComponent<Image>().color = buyBtnDisableColor;
+            // }
+            // else
+            // {
+            //     shipBuyBtn.GetComponent<Image>().color = buyBtnEnableColor;
+            // }
+
+            if (currentShip.shipCost > UserDataManager.instance.currentUserData.crystal)
+            {
+                shipBuyBtn.GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                shipBuyBtn.GetComponent<Button>().interactable = true;
+            }
         }
         else
         {
@@ -235,8 +261,8 @@ public class GameManager : MonoBehaviour
 
     public void NextShip()
     {
-        if(currentShipNumber + 1 < 0  || currentShipNumber + 1 >= shipList.shipList.Count)
-        return;
+        if (currentShipNumber + 1 < 0 || currentShipNumber + 1 >= shipList.shipList.Count)
+            return;
 
         currentShipNumber++;
 
@@ -245,8 +271,8 @@ public class GameManager : MonoBehaviour
 
     public void PreviusShip()
     {
-        if(currentShipNumber + -1 < 0  || currentShipNumber + -1 > shipList.shipList.Count)
-        return;
+        if (currentShipNumber + -1 < 0 || currentShipNumber + -1 > shipList.shipList.Count)
+            return;
 
         currentShipNumber--;
 
@@ -256,6 +282,18 @@ public class GameManager : MonoBehaviour
     public int getCurrentTime()
     {
         return currentTime;
+    }
+
+    public void BuyShip()
+    {
+        if (currentShip.shipCost > UserDataManager.instance.currentUserData.crystal
+        || UserDataManager.instance.currentUserData.playerHaveShip.Contains(currentShip))
+            return;
+
+        UserDataManager.instance.currentUserData.playerHaveShip.Add(currentShip);
+        UserDataManager.instance.AddCrystalValue(-currentShip.shipCost);
+
+        SelectShip(currentShipNumber);
     }
 
 }
