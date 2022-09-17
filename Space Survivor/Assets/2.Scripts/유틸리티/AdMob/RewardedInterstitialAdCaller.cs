@@ -5,7 +5,6 @@ using GoogleMobileAds.Common;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
-using UnityEngine.UI;
 
 public class RewardedInterstitialAdCaller : MonoBehaviour
 {
@@ -97,7 +96,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             MonoBehaviour.print(
                 "광고 표시를 실패하였습니다: "
-                                 + args.Message);
+                                 + args.AdError.GetMessage());
         }
 
         //사용자가 보상형 광고를 취소하였을때
@@ -166,7 +165,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             MonoBehaviour.print(
                 "광고 표시를 실패하였습니다: "
-                                 + args.Message);
+                                 + args.AdError.GetMessage());
         }
 
         //보상형 광고창이 닫혔을때
@@ -245,7 +244,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             MonoBehaviour.print(
                 "광고 표시를 실패하였습니다: "
-                                 + args.Message);
+                                 + args.AdError.GetMessage());
         }
 
         //보상형 광고창이 닫혔을때
