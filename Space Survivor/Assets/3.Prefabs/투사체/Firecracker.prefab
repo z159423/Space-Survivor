@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeDamage:
-    baseValue: 15
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0

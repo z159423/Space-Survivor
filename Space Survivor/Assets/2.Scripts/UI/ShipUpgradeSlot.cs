@@ -14,13 +14,24 @@ public class ShipUpgradeSlot : MonoBehaviour
     public TextMeshProUGUI upgradeCostText;
     public GameObject upgradeButton;
 
+    public ShipUpgradeUI shipUpgradeUI;
+
     public void OnClickShipModuleUpgrade()
     {
-        for (int i = 0; i < shipObject.shipUpgradeModuleList.Count; i++)
-        {
-            if (shipObject.shipUpgradeModuleList[i].upgradeType == upgradeType)
-                shipObject.shipUpgradeModuleList[i].UpgradeThisModule();
+        ShipObjectData data = UserDataManager.instance.GetShipData(shipObject.shipCode);
 
+        for (int i = 0; i < data.shipUpgradeModuleList.Count; i++)
+        {
+            if (data.shipUpgradeModuleList[i].upgradeType == upgradeType)
+            {
+                data.shipUpgradeModuleList[i].UpgradeThisModule(data);
+            
+                UserDataManager.instance.ChangeShipData(data);
+
+                UserDataManager.instance.AddCrystalValue(-data.shipUpgradeModuleList[i].GetUpgradeCost());
+
+                shipUpgradeUI.SetUpgradeModuleSlot(data, shipObject);
+            }
         }
     }
 }

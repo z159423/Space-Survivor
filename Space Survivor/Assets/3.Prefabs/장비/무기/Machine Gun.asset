@@ -16,13 +16,14 @@ MonoBehaviour:
   projectilePrefab: {fileID: 787582832531112448, guid: fb77dbd1d4202754687ab049670be05f, type: 3}
   weaponImage: {fileID: 21300000, guid: 2f265f9bdb7899443ac797432ff9cb0e, type: 3}
   parent: {fileID: 0}
+  anyEqupment: 0
   type: 7
   whileParticlePrefab: {fileID: 0}
   currenWhileParticle: {fileID: 0}
   firePosName: FirePos1
   fireDirName: FireDir1
   currentDamage:
-    baseValue: 10
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0

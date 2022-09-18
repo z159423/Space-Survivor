@@ -31,7 +31,12 @@ public class Firecracker : MonoBehaviour
 
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
-        Utility.Explode(transform.position,explodeDamage.GetFinalStatValue(), explodeRadius, knockbackForce, vfxType, cameraShakeInstance);
+        float currentDamage = (explodeDamage.GetFinalStatValue()
+         + projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()
+         + projectileLogic.GetDamage().GetFinalStatValueAsInt())
+          * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
+
+        Utility.Explode(transform.position, currentDamage, explodeRadius, knockbackForce, vfxType, cameraShakeInstance);
 
         projectileLogic.OffProjectile();
     }

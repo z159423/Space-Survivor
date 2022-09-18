@@ -71,6 +71,11 @@ public class GameManager : MonoBehaviour
     {
         //player.GetComponent<PlayerStat>().MakeThisShip(currentShip);
 
+        playerWeapon.playerShipData = UserDataManager.instance.GetShipData(currentShip.shipCode);
+
+        if(playerWeapon.playerShipData == null)
+            playerWeapon.playerShipData = shipList.GetShipObject(currentShip.shipCode).shipObjectData;
+            
         PlayGameEvent.Invoke();
 
         inGameMenu.SetActive(true);
@@ -227,7 +232,7 @@ public class GameManager : MonoBehaviour
         }
 
         //플레이어가 소지중인 함선이 아닐경우 함선 구매버튼 활성화
-        if (!UserDataManager.instance.currentUserData.playerHaveShip.Contains(shipObject) && shipObject.shipCost > 0)
+        if (!UserDataManager.instance.CheckPlayerHaveShip(shipObject.shipCode) && shipObject.shipCost > 0)
         {
             shipBuyBtn.SetActive(true);
             shipTrialBtn.SetActive(true);
@@ -287,13 +292,14 @@ public class GameManager : MonoBehaviour
     public void BuyShip()
     {
         if (currentShip.shipCost > UserDataManager.instance.currentUserData.crystal
-        || UserDataManager.instance.currentUserData.playerHaveShip.Contains(currentShip))
+        || UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipCode))
             return;
 
-        UserDataManager.instance.currentUserData.playerHaveShip.Add(currentShip);
-        UserDataManager.instance.AddCrystalValue(-currentShip.shipCost);
-
+        UserDataManager.instance.currentUserData.playerHaveShip.Add(currentShip.shipObjectData);
+    
         SelectShip(currentShipNumber);
+
+        UserDataManager.instance.AddCrystalValue(-currentShip.shipCost);
     }
 
     public void ShipUpgradeUIOnOff()

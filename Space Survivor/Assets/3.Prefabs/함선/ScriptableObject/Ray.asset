@@ -12,6 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c496d3a8f34a0eb4796d5029070701a3, type: 3}
   m_Name: Ray
   m_EditorClassIdentifier: 
+  shipObjectData:
+    shipType: 2
+    shipCode: Ray
+    shipBody: {fileID: 8812495946540635999, guid: df41d2d7f95c3944a93fdd30d7039680, type: 3}
+    shipImage: {fileID: 21300000, guid: 8e3de3461b56b00459bb61bbd1637bdc, type: 3}
+    baseMaxHp:
+      baseValue: 1200
+      minValue: 0
+      MinValue: 0
+      maxValue: 0
+      MaxValue: 1000
+    baseMoveSpeed:
+      baseValue: 5.5
+      minValue: 0
+      MinValue: 0
+      maxValue: 0
+      MaxValue: 1000
+    baseRotationSpeed:
+      baseValue: 2.5
+      minValue: 0
+      MinValue: 0
+      maxValue: 0
+      MaxValue: 1000
+    baseDamage:
+      baseValue: 10
+      minValue: 0
+      MinValue: 0
+      maxValue: 0
+      MaxValue: 1000
+    shipCost: 1000
+    basicWeapon:
+    - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
+    shipUpgradeModuleList:
+    - upgradeType: 0
+      currentUpgrade: 0
+      maxUpgrade: 5
+      statUpgradeValueForLevel: 100
+      upgradeCostForLevel: 100
+    - upgradeType: 1
+      currentUpgrade: 0
+      maxUpgrade: 5
+      statUpgradeValueForLevel: 2
+      upgradeCostForLevel: 100
+    - upgradeType: 2
+      currentUpgrade: 0
+      maxUpgrade: 5
+      statUpgradeValueForLevel: 0.25
+      upgradeCostForLevel: 100
   shipType: 2
   shipCode: Ray
   shipBody: {fileID: 8812495946540635999, guid: df41d2d7f95c3944a93fdd30d7039680, type: 3}
@@ -43,4 +91,19 @@ MonoBehaviour:
   shipCost: 1000
   basicWeapon:
   - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
-  shipUpgradeModuleList: []
+  shipUpgradeModuleList:
+  - upgradeType: 0
+    currentUpgrade: 0
+    maxUpgrade: 5
+    statUpgradeValueForLevel: 100
+    upgradeCostForLevel: 100
+  - upgradeType: 1
+    currentUpgrade: 0
+    maxUpgrade: 5
+    statUpgradeValueForLevel: 2
+    upgradeCostForLevel: 100
+  - upgradeType: 2
+    currentUpgrade: 0
+    maxUpgrade: 5
+    statUpgradeValueForLevel: 0.25
+    upgradeCostForLevel: 100

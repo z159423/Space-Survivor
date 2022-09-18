@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   damage:
-    baseValue: 10
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0

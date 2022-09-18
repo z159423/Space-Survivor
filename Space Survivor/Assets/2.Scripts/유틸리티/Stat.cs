@@ -18,7 +18,9 @@ public class Stat
     [SerializeField]
     private float MaxValue = 1000;
 
+    [SerializeField]
     private List<float> FloatModifiers = new List<float>();
+    [SerializeField]
     private List<float> PercentModifiers = new List<float>();
 
     public float GetFinalStatValue()

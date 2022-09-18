@@ -10,5 +10,5 @@ public class UserData
 
     public string testString = "";
 
-    public List<ShipObject> playerHaveShip = new List<ShipObject>();
+    public List<ShipObjectData> playerHaveShip = new List<ShipObjectData>();
 }

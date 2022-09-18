@@ -84,7 +84,6 @@ public class WeaponObject : ScriptableObject , IEquipment
                 projectileLogic = success.Object.GetComponent<IProjectileLogic>();
                 projectileLogic.ResetProjectile();
                 projectileLogic.playerWeapon = playerWeapon;
-
             }
             else
             {

@@ -207,7 +207,10 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
                 OffProjectile();
             }
 
-            collision.GetComponent<EnemyStat>().TakeDamage(Mathf.RoundToInt(damage.GetFinalStatValueAsInt() * playerWeapon.additionalDamage.GetFinalStatValue()));
+            //적에게 들어가는 실제 데미지
+            int currentDamage = Mathf.RoundToInt((damage.GetFinalStatValueAsInt() + playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()) * playerWeapon.additionalDamage.GetFinalStatValue());
+
+            collision.GetComponent<EnemyStat>().TakeDamage(currentDamage);
             collision.GetComponent<EnemyStat>().Knockback(collision.bounds.center, knockBackForce);
         }
     }

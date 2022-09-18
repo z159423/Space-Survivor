@@ -7,6 +7,9 @@ public class UserDataManager : MonoBehaviour
 {
     private const string userDataName = "UserData";
 
+    [SerializeField] private ShipObject startShip;
+    [SerializeField] private ShipList shipList;
+
     public static UserDataManager instance;
 
     public UserData currentUserData = new UserData();
@@ -32,7 +35,7 @@ public class UserDataManager : MonoBehaviour
 
             AddCrystalValue(0);
         }
-            
+
     }
 
     //유저 데이터 불러오기
@@ -43,7 +46,7 @@ public class UserDataManager : MonoBehaviour
         //불러오기 성공
         if (File.Exists(filePath))
         {
-            print("UserData 불러오기 성공");
+            print("UserData 불러오기 성공 " + filePath);
             string JsonData = File.ReadAllText(filePath);
             UserData userData = JsonUtility.FromJson<UserData>(JsonData);
 
@@ -53,8 +56,10 @@ public class UserDataManager : MonoBehaviour
         //불러올 파일이 없을시
         else
         {
-            print("UserData가 없어서 새로운 파일을 생성합니다.");
+            print("UserData가 없어서 새로운 파일을 생성합니다. " + filePath);
             UserData userData = new UserData();
+
+            userData.playerHaveShip.Add(startShip.shipObjectData);
 
             return userData;
         }
@@ -132,26 +137,34 @@ public class UserDataManager : MonoBehaviour
 
     public bool CheckPlayerHaveShip(string code)
     {
-        for(int i = 0; i < currentUserData.playerHaveShip.Count; i++)
+        for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)
         {
-            if(currentUserData.playerHaveShip[i].shipCode.Equals(code))
+            if (currentUserData.playerHaveShip[i].shipCode.Equals(code))
                 return true;
         }
 
         return false;
-        
     }
 
-    private void OnApplicationPause(bool pause)
+    public ShipObjectData GetShipData(string code)
     {
-        if (pause)
+        for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)
         {
-            //GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str)=> { print("게임이 일시중지되어 유저 데이터 저장"); });
+            if (currentUserData.playerHaveShip[i].shipCode.Equals(code))
+                return currentUserData.playerHaveShip[i];
         }
+
+        return shipList.GetShipObject(code).shipObjectData;
     }
 
-    private void OnApplicationQuit()
+    public void ChangeShipData(ShipObjectData data)
     {
-        //GoogleCloud.instance.SaveUserDataWithCloud(currentUserData, (suc, str) => { print("게임이 종료되어 유저 데이터 저장"); });
+        for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)
+        {
+            if (currentUserData.playerHaveShip[i].shipCode.Equals(data.shipCode))
+            {
+                currentUserData.playerHaveShip[i] = data;
+            }
+        }
     }
 }
