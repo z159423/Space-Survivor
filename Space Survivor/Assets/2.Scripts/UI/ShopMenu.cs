@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ShopMenu : MonoBehaviour
+{
+    [SerializeField] private GameObject shopMenu;
+
+
+    
+
+    public void ShopMenuOnOff()
+    {
+        shopMenu.SetActive(!shopMenu.activeSelf);
+    }
+
+}

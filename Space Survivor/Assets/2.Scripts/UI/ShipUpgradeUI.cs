@@ -116,22 +116,19 @@ public class ShipUpgradeUI : MonoBehaviour
     {
         for (int i = 0; i < data.shipUpgradeModuleList.Count; i++)
         {
-            if (data.shipUpgradeModuleList[i].currentUpgrade > 0)
+            switch (data.shipUpgradeModuleList[i].upgradeType)
             {
-                switch (data.shipUpgradeModuleList[i].upgradeType)
-                {
-                    case ShipUpgradeType.Health:
-                        hpStat.text = data.baseMaxHp.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
-                        break;
+                case ShipUpgradeType.Health:
+                    hpStat.text = data.baseMaxHp.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
+                    break;
 
-                    case ShipUpgradeType.Damage:
-                        damageStat.text = data.baseDamage.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
-                        break;
+                case ShipUpgradeType.Damage:
+                    damageStat.text = data.baseDamage.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
+                    break;
 
-                    case ShipUpgradeType.Speed:
-                        speedStat.text = data.baseMoveSpeed.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
-                        break;
-                }
+                case ShipUpgradeType.Speed:
+                    speedStat.text = data.baseMoveSpeed.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
+                    break;
             }
 
             SetUpgradeSlots(data.shipUpgradeModuleList[i], shipObject);
