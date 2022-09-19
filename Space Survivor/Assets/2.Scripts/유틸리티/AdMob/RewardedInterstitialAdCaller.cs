@@ -5,6 +5,7 @@ using GoogleMobileAds.Common;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
+using TMPro;
 
 public class RewardedInterstitialAdCaller : MonoBehaviour
 {
@@ -18,8 +19,13 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     private RewardedAd rewardedAd;
 
     private RewardedAd crystallAddRewardedAd;
+    [SerializeField] private TextMeshProUGUI crystalValueText;
     private RewardedAd shipTrialRewardedAd;
     [SerializeField] private Button shipTrialButton;
+
+    [Space]
+
+    public int crystalValue = 25;
 
     private void Awake()
     {
@@ -28,6 +34,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public void Start()
     {
+        crystalValueText.text = crystalValue.ToString();
+
         //CreateAndLoadRewardedAd();
 
 #if UNITY_ANDROID
@@ -192,7 +200,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 "보상형 광고를 시청하였습니다. 보상을 지급해야 합니다: "
                             + amount.ToString() + " " + type);
 
-            UserDataManager.instance.AddCrystalValue((int)amount);
+            UserDataManager.instance.AddCrystalValue(crystalValue);
         }
     }
 

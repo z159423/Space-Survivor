@@ -10,5 +10,8 @@ public class UserData
 
     public string testString = "";
 
+    [SerializeField]
+    public bool RemoveAds = false;
+
     public List<ShipObjectData> playerHaveShip = new List<ShipObjectData>();
 }

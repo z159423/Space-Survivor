@@ -13,6 +13,8 @@ public class ShipUpgradeSlot : MonoBehaviour
 
     public TextMeshProUGUI upgradeCostText;
     public GameObject upgradeButton;
+    public GameObject costPanel;
+    public GameObject maxPanel;
 
     public ShipUpgradeUI shipUpgradeUI;
 

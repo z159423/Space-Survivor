@@ -96,13 +96,16 @@ public class InterstitialAdCaller : MonoBehaviour
 
     public void CallIrAds()
     {
-        if (this.interstitial.IsLoaded() && IrAdsReady)
+        if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             this.interstitial.Show();
         }
         else
         {
-            print("전면광고 준비 안됨");
+            if (UserDataManager.instance.currentUserData.RemoveAds)
+                print("광고제거를 구매하여 전면광고가 없습니다");
+            else if(!IrAdsReady)
+                print("광고가 로드되지 않았습니다");
         }
     }
 }

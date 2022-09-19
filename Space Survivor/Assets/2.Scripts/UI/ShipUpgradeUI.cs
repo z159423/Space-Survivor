@@ -152,12 +152,21 @@ public class ShipUpgradeUI : MonoBehaviour
                 && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < modules.maxUpgrade)
                 {
                     shipUpgradeSlot[i].upgradeButton.SetActive(true);
-
                 }
                 else
                 {
                     shipUpgradeSlot[i].upgradeButton.SetActive(false);
+                }
 
+                if (modules.currentUpgrade < modules.maxUpgrade)
+                {
+                    shipUpgradeSlot[i].costPanel.SetActive(true);
+                    shipUpgradeSlot[i].maxPanel.SetActive(false);
+                }
+                else
+                {
+                    shipUpgradeSlot[i].costPanel.SetActive(false);
+                    shipUpgradeSlot[i].maxPanel.SetActive(true);
                 }
 
                 for (int z = 0; z < shipUpgradeSlot[i].upgradeNodeList.Count; z++)
