@@ -26,9 +26,11 @@ public class GPGSLogin : MonoBehaviour
                 //ilocalUser.state = 플레이어 상태
                 //ilocalUser.underage = 플레이어 미성년자 여부
 
-                text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
+                //text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
 
-                GoogleCloud.instance.LoadUserDataWithCloud((suc, str) => SceneManager.LoadScene("MainScene"));
+                //GoogleCloud.instance.LoadUserDataWithCloud((suc, str) => SceneManager.LoadScene("MainScene"));
+
+                print("GPGS 로그인 성공.");
             }
             else
             {
@@ -36,11 +38,11 @@ public class GPGSLogin : MonoBehaviour
 
                 print("GPGS 로그인 실패하여 로컬 데이터를 불러옵니다.");
 
-                UserDataManager.instance.LoadCurrentUserDataFromLocal();
+                //UserDataManager.instance.LoadCurrentUserDataFromLocal();
 
-                text2.text = "GPGS 로그인 실패 + ";
+                //text2.text = "GPGS 로그인 실패 + ";
 
-                SceneManager.LoadScene("MainScene");
+                //SceneManager.LoadScene("MainScene");
             }
         });
     }
