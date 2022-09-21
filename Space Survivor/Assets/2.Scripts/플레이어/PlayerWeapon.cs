@@ -10,6 +10,7 @@ public class PlayerWeapon : MonoBehaviour
     //[SerializeField] private Transform firePos;
     //[SerializeField] private Transform fireDir;
     public Stat additionalDamage = new Stat();
+    public Stat additionalCoolTime = new Stat();
 
     [Space]
     [SerializeField] private PlayerMovement playerMovement;
@@ -47,7 +48,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         pool.ready = false;
 
-        yield return new WaitForSeconds(pool.coolTime.GetFinalStatValue());
+        yield return new WaitForSeconds(pool.coolTime.GetFinalStatValue() * additionalCoolTime.GetFinalStatValue());
         pool.ready = true;
     }
 
@@ -126,6 +127,10 @@ public class PlayerWeapon : MonoBehaviour
 
                     case EquipmentType.EnhancedSiege:
                         newPassive.passiveStat = Instantiate(Resources.Load<EnhancedSiegeStat>("PassiveStat/EnhancedSiegeStat"));
+                        break;
+
+                    case EquipmentType.ReloadingDevice:
+                        newPassive.passiveStat = Instantiate(Resources.Load<ReloadingDeviceStat>("PassiveStat/ReloadingDeiveStat"));
                         break;
                 }
 

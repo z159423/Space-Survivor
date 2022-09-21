@@ -143,6 +143,14 @@ MonoBehaviour:
     m_Key: EnhancedSiege_D
     m_Metadata:
       m_Items: []
+  - m_Id: 35355740766683136
+    m_Key: ReloadingDevice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35355763722108928
+    m_Key: ReloadingDevice_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

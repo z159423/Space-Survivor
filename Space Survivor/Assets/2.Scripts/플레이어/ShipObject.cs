@@ -37,7 +37,9 @@ public class ShipObjectData
 {
     public ShipType shipType;
     public string shipCode;
+    [SerializeField]
     public GameObject shipBody;
+    [SerializeField]
     public Sprite shipImage;
 
     [Space]

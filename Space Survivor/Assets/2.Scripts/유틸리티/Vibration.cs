@@ -3,6 +3,9 @@ using UnityEngine;
 
 public static class Vibration
 {
+    public static bool enableVibration = true;
+    public static float vibraitonCoolTime = 0.3f;
+
 #if UNITY_ANDROID && !UNITY_EDITOR
     public static AndroidJavaClass AndroidPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
     public static AndroidJavaObject AndroidcurrentActivity = AndroidPlayer.GetStatic<AndroidJavaObject>("currentActivity");
@@ -19,7 +22,7 @@ public static class Vibration
 
     public static void Vibrate(long milliseconds)
     {
-        if (!SettingManager.instance.vibration)
+        if (!SettingManager.instance.vibration && enableVibration)
             return;
 
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -27,6 +30,15 @@ public static class Vibration
 #else
         Handheld.Vibrate();
 #endif
+
+        IEnumerator vibrationCoolTime()
+        {
+            enableVibration = false;
+            yield return new WaitForSeconds(vibraitonCoolTime);
+            enableVibration = true;
+        }
+
+        CoroutineHelper.StartCoroutine(vibrationCoolTime());
     }
     public static void Vibrate(long[] pattern, int repeat)
     {

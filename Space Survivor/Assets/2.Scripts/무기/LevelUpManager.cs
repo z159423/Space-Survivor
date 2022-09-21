@@ -141,8 +141,6 @@ public class LevelUpManager : MonoBehaviour
                 continue;
             }
 
-            
-
             GameObject panel = null;
             var randomWeaponObject = currentObtainableList[Random.Range(0, currentObtainableList.Count)];
 
@@ -171,6 +169,8 @@ public class LevelUpManager : MonoBehaviour
 
         playerStat.AfterUpgrade();
         EndUpgrade();
+
+        InterstitialAdCaller.instance.CallIrAds();
     }
 
     public WeaponObject RequestPlayerWeapon(EquipmentType type)

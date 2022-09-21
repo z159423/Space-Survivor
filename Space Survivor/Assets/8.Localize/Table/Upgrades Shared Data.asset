@@ -67,6 +67,10 @@ MonoBehaviour:
     m_Key: IncreaseDamagePercent
     m_Metadata:
       m_Items: []
+  - m_Id: 35165114813071360
+    m_Key: DecreaseCoolTime
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

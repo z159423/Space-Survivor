@@ -19,6 +19,9 @@ public class ShockWave : MonoBehaviour
 
     private void OnEnable()
     {
+        if (projectileLogic.playerWeapon == null)
+            return;
+
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
         float currentDamage = (damage.GetFinalStatValue()

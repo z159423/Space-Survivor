@@ -23,7 +23,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
     private void Start()
     {
         InitializePurchasing();
-        UpdateUI();
+        //UpdateUI();
     }
 
     public void PurchaseRemoveAds()
@@ -73,7 +73,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
-        UpdateUI();
+        //UpdateUI();
     }
 
     void InitializePurchasing()

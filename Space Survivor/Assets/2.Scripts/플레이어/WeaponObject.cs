@@ -82,18 +82,18 @@ public class WeaponObject : ScriptableObject , IEquipment
             if (success.success)
             {
                 projectileLogic = success.Object.GetComponent<IProjectileLogic>();
-                projectileLogic.ResetProjectile();
                 projectileLogic.playerWeapon = playerWeapon;
+                projectileLogic.ResetProjectile();
             }
             else
             {
                 var Object = Instantiate(projectilePrefab, position, Quaternion.identity);
 
                 projectileLogic = Object.GetComponent<IProjectileLogic>();
+                projectileLogic.playerWeapon = playerWeapon;
                 projectileLogic.weaponObject = this;
                 projectileLogic.UpgradeProjectile(Object);
                 projectileLogic.ResetProjectile();
-                projectileLogic.playerWeapon = playerWeapon;
                 projectileLogic.weaponObject.AddActiveProjectile(Object);
             }
 
@@ -471,5 +471,5 @@ public enum AnyEqupment
 public enum EquipmentType
 {
     SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
-    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner,EnhancedSiege
+    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner,EnhancedSiege, ReloadingDevice
 }

@@ -17445,6 +17445,14 @@ MonoBehaviour:
     MaxValue: 1000
     FloatModifiers: []
     PercentModifiers: []
+  additionalCoolTime:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   playerMovement: {fileID: 923141301}
   playerStat: {fileID: 923141302}
   playerShipData:
@@ -27261,7 +27269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1944e07afb613144878aac2c60adf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IrAdsCallTime: 10
+  IrAdsCallTime: 90
   IrAdsReady: 0
   androidAdUnitId: ca-app-pub-3940256099942544/1033173712
   iosAdUnitId: ca-app-pub-3940256099942544/4411468910
@@ -42197,6 +42205,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 90546eafa943b1c4d94ec44db0223bff, type: 2}
   - {fileID: 11400000, guid: 8155bb1dc4ac6ee43bf28e7cf561aae2, type: 2}
   - {fileID: 11400000, guid: 6f664867df9aa074e995428931e9524c, type: 2}
+  - {fileID: 11400000, guid: c267be79138e49b44a13bbc0800b057b, type: 2}
 --- !u!114 &1993698530
 MonoBehaviour:
   m_ObjectHideFlags: 0

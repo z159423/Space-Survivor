@@ -69,7 +69,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
 
     private Sequence mySequence;
-
+    
     private void Start()
     {
 
@@ -151,7 +151,7 @@ public class PlayerStat : MonoBehaviour
 
         currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
 
-        Vibration.Vibrate((long)30);
+        Vibration.Vibrate((long)15);
 
         OnChangeExp();
     }

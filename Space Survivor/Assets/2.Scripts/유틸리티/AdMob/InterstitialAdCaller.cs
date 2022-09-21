@@ -33,6 +33,7 @@ public class InterstitialAdCaller : MonoBehaviour
 
     private IEnumerator StartTickIrAdsTime()
     {
+        IrAdsReady = false;
         yield return new WaitForSeconds(IrAdsCallTime);
 
         IrAdsReady = true;
