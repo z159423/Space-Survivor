@@ -52,7 +52,8 @@ public class EnemyStat : MonoBehaviour
         angle = Mathf.Atan2((movedir.y + transform.position.y) - transform.position.y,
             (movedir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), rotationSpeed * Time.deltaTime);
+        if(rotationSpeed > 0)
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), rotationSpeed * Time.deltaTime);
     }
 
     public void TakeDamage(int damage)
@@ -80,7 +81,7 @@ public class EnemyStat : MonoBehaviour
         }
     }
 
-    private void Die()
+    public virtual void Die()
     {
         EnQueueThisEnemy();
 

@@ -41,16 +41,11 @@ public class ProjectileGenerator : MonoBehaviour
         {
             if (type == projectilePool[i].type)
             {
-                var success = projectilePool[i].DeQueue(position);
+                var projectile = projectilePool[i].DeQueue(position);
 
-                if (success != null)
-                {
-                    var item = Instantiate(success, position, Quaternion.identity, projectilePool[i].parent);
+                generatedProjectile.Add(projectile);
 
-                    generatedProjectile.Add(item);
-
-                    return item;
-                }
+                return projectile;
             }
         }
 
@@ -67,38 +62,40 @@ public class ProjectileGenerator : MonoBehaviour
             }
         }
     }
+    [System.Serializable]
+    public class ProjectilePool
+    {
+        public Stack<GameObject> projectileStack = new Stack<GameObject>();
+
+        public GameObject Object;
+        public Transform parent;
+        public ProjectileType type;
+
+        public void EnQueue(GameObject item)
+        {
+            projectileStack.Push(item);
+        }
+
+        public GameObject DeQueue(Vector2 position)
+        {
+            if (projectileStack.Count > 0)
+            {
+                var item = projectileStack.Pop();
+
+                item.transform.position = position;
+                item.SetActive(true);
+                item.transform.SetParent(parent);
+
+                return item;
+            }
+            else
+            {
+                return Instantiate(Object, position, Quaternion.identity, parent);
+            }
+        }
+
+    }
 }
 
-public enum ProjectileType { none, BurstMissile }
+public enum ProjectileType { none, BurstMissile, StarBubble1 }
 
-[System.Serializable]
-public class ProjectilePool
-{
-    public Stack<GameObject> projectileStack = new Stack<GameObject>();
-
-    public GameObject Object;
-    public Transform parent;
-    public ProjectileType type;
-
-    public void EnQueue(GameObject item)
-    {
-        projectileStack.Push(item);
-    }
-
-    public GameObject DeQueue(Vector2 position)
-    {
-        if (projectileStack.Count > 0)
-        {
-            var item = projectileStack.Pop();
-
-            item.transform.position = position;
-            item.SetActive(true);
-
-            return null;
-        }
-        else
-        {
-            return Object;
-        }
-    }
-}

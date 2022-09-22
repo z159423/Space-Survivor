@@ -234,8 +234,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         {
             VFXGenerator.instance.GenerateVFX(deleteVFXType, transform.position);
         }
-
-
     }
 
     public void UpgradeProjectile(GameObject projectile)

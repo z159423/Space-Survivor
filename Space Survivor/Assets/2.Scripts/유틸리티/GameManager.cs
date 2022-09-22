@@ -173,14 +173,17 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
 
-            currentTime += 1;
+            if(!EnemyGenerator.instance.bossFighting)
+            {
+                currentTime += 1;
 
-            int min = (int)(currentTime / 60f);
-            int second = (int)(currentTime % 60f);
+                int min = (int)(currentTime / 60f);
+                int second = (int)(currentTime % 60f);
 
-            timer.text = string.Format("{0:0}:{1:00}", min, second);
+                timer.text = string.Format("{0:0}:{1:00}", min, second);
 
-            EnemyGenerator.instance.CheckWave();
+                EnemyGenerator.instance.CheckWave();
+            }
         }
     }
 

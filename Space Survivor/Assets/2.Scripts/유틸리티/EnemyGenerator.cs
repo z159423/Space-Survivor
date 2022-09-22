@@ -29,8 +29,13 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private RectTransform canvas;
 
     public bool spawningEnemy = false;
+    public bool bossFighting = false;
 
     private Coroutine enemySpawnCoroutine;
+
+    [SerializeField] private Animator warningPanelAnimator;
+    [SerializeField] private GameObject warningPanel;
+
 
     public static EnemyGenerator instance;
 
@@ -85,7 +90,7 @@ public class EnemyGenerator : MonoBehaviour
                 break;
 
             case waveType.summonBoss:
-
+                wave.waveCoroutine = StartCoroutine(wave.SummonBoss(warningPanel, warningPanelAnimator));
                 break;
         }
     }
@@ -260,13 +265,36 @@ public class EnemyWave
     {
         while (true)
         {
-            if (EnemyGenerator.instance.spawningEnemy)
+            if (EnemyGenerator.instance.spawningEnemy && !EnemyGenerator.instance.bossFighting)
                 EnemyGenerator.instance.GenerateEnemy2(enemyObject);
 
             yield return new WaitForSeconds(summonCycleTime);
         }
-
     }
+
+    public IEnumerator SummonBoss(GameObject panel, Animator animator)
+    {
+        panel.SetActive(true);
+        animator.SetTrigger("Active");
+        EnemyGenerator.instance.bossFighting = true;
+
+        yield return new WaitForSeconds(3f);
+
+        panel.SetActive(false);
+
+        if (EnemyGenerator.instance.spawningEnemy)
+            EnemyGenerator.instance.GenerateEnemy2(enemyObject);
+
+        /*while (true)
+        {
+            if (EnemyGenerator.instance.spawningEnemy)
+                EnemyGenerator.instance.GenerateEnemy2(enemyObject);
+
+            yield return new WaitForSeconds(summonCycleTime);
+        }*/
+    }
+
+
 
     //public WaveObject waveObject;
 }
