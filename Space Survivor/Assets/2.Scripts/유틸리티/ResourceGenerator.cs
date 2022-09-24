@@ -54,7 +54,7 @@ public class ResourceGenerator : MonoBehaviour
                         break;
 
                     case resourceType.Crystal:
-                        dropAmount = Random.Range(dropTable.dropExpMinAmount, dropTable.dropExpmaxAmount);
+                        dropAmount = Random.Range(dropTable.dropCrystalMinAmount, dropTable.dropCrystalmaxAmount);
                         break;
                 }
 

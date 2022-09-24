@@ -3620,6 +3620,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnCultureInfoChangedDelegate__ctor_mDDDB8BFE449BABF15CDB8FFFF44F27E1976796AB (OnCultureInfoChangedDelegate_t643F89A369BE552AC4D546507F51BF998EBA670A* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
 // System.Void System.Globalization.CultureInfo::InitializeUserPreferredCultureInfoInAppX(System.Globalization.CultureInfo/OnCultureInfoChangedDelegate)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_InitializeUserPreferredCultureInfoInAppX_m821E9F6CB30671A7DAF80C93EB3F61EDCD3FBD49 (OnCultureInfoChangedDelegate_t643F89A369BE552AC4D546507F51BF998EBA670A* ___onCultureInfoChangedInAppX0, const RuntimeMethod* method) ;
+// System.Void System.Globalization.CultureInfo::SetUserPreferredCultureInfoInAppX(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_SetUserPreferredCultureInfoInAppX_m4C108F6A85BFF10522DA58C99035C93F93993801 (String_t* ___name0, const RuntimeMethod* method) ;
 // System.Void System.Globalization.Punycode::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Punycode__ctor_mA724ADE4D83C72190185A988C57A8FAF51D94F3F (Punycode_t44EE1AAE844D2794F7B24173D738BC7120E37BF5* __this, const RuntimeMethod* method) ;
 // System.String System.Globalization.IdnMapping::GetAscii(System.String,System.Int32,System.Int32)
@@ -3915,6 +3917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BitArray__ctor_mFA1735F0BF5E206D80940CF8
 // System.Void System.Collections.BitArray/BitArrayEnumeratorSimple::.ctor(System.Collections.BitArray)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BitArrayEnumeratorSimple__ctor_m162E753A341657FAE610C27B4407F942B01AE226 (BitArrayEnumeratorSimple_tEEF5BBAF661AB0D3C48CC63E815CEC29EDE0ECAB* __this, BitArray_tFD42FDEB4A51DD2D6C20DC8E220B1EBE999F2616* ___bitarray0, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C void DEFAULT_CALL InitializeUserPreferredCultureInfoInAppX(Il2CppMethodPointer);
+IL2CPP_EXTERN_C void DEFAULT_CALL SetUserPreferredCultureInfoInAppX(Il2CppChar*);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -11601,6 +11604,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_InitializeUserPreferredCultu
 	reinterpret_cast<PInvokeFunc>(InitializeUserPreferredCultureInfoInAppX)(____onCultureInfoChangedInAppX0_marshaled);
 
 }
+// System.Void System.Globalization.CultureInfo::SetUserPreferredCultureInfoInAppX(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_SetUserPreferredCultureInfoInAppX_m4C108F6A85BFF10522DA58C99035C93F93993801 (String_t* ___name0, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*);
+
+	// Marshaling of parameter '___name0' to native representation
+	Il2CppChar* ____name0_marshaled = NULL;
+	if (___name0 != NULL)
+	{
+		____name0_marshaled = &___name0->____firstChar_5;
+	}
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(SetUserPreferredCultureInfoInAppX)(____name0_marshaled);
+
+}
 // System.Void System.Globalization.CultureInfo::OnCultureInfoChangedInAppX(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_OnCultureInfoChangedInAppX_mDBD419B094B2CFE933BB3F63886A5AB4E44D2DC0 (String_t* ___language0, const RuntimeMethod* method) 
 {
@@ -11668,6 +11687,47 @@ IL_0018:
 		il2cpp_codegen_runtime_class_init_inline(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
 		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_2 = ((CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticFields*)il2cpp_codegen_static_fields_for(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var))->___s_UserPreferredCultureInfoInAppX_38;
 		return L_2;
+	}
+}
+// System.Void System.Globalization.CultureInfo::SetCultureInfoForUserPreferredLanguageInAppX(System.Globalization.CultureInfo)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_SetCultureInfoForUserPreferredLanguageInAppX_m94D64A6DA5BE6DE664BCB62DC2F46D9CFFB8C700 (CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* ___cultureInfo0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CultureInfo_OnCultureInfoChangedInAppX_mDBD419B094B2CFE933BB3F63886A5AB4E44D2DC0_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OnCultureInfoChangedDelegate_t643F89A369BE552AC4D546507F51BF998EBA670A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_0 = ((CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticFields*)il2cpp_codegen_static_fields_for(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var))->___s_UserPreferredCultureInfoInAppX_38;
+		if (L_0)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		OnCultureInfoChangedDelegate_t643F89A369BE552AC4D546507F51BF998EBA670A* L_1 = (OnCultureInfoChangedDelegate_t643F89A369BE552AC4D546507F51BF998EBA670A*)il2cpp_codegen_object_new(OnCultureInfoChangedDelegate_t643F89A369BE552AC4D546507F51BF998EBA670A_il2cpp_TypeInfo_var);
+		NullCheck(L_1);
+		OnCultureInfoChangedDelegate__ctor_mDDDB8BFE449BABF15CDB8FFFF44F27E1976796AB(L_1, NULL, (intptr_t)((void*)CultureInfo_OnCultureInfoChangedInAppX_mDBD419B094B2CFE933BB3F63886A5AB4E44D2DC0_RuntimeMethod_var), NULL);
+		il2cpp_codegen_runtime_class_init_inline(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
+		CultureInfo_InitializeUserPreferredCultureInfoInAppX_m821E9F6CB30671A7DAF80C93EB3F61EDCD3FBD49(L_1, NULL);
+	}
+
+IL_0018:
+	{
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_2 = ___cultureInfo0;
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = VirtualFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Globalization.CultureInfo::get_Name() */, L_2);
+		il2cpp_codegen_runtime_class_init_inline(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
+		CultureInfo_SetUserPreferredCultureInfoInAppX_m4C108F6A85BFF10522DA58C99035C93F93993801(L_3, NULL);
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_4 = ___cultureInfo0;
+		((CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticFields*)il2cpp_codegen_static_fields_for(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var))->___s_UserPreferredCultureInfoInAppX_38 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&((CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_StaticFields*)il2cpp_codegen_static_fields_for(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var))->___s_UserPreferredCultureInfoInAppX_38), (void*)L_4);
+		return;
 	}
 }
 // System.Void System.Globalization.CultureInfo::.cctor()

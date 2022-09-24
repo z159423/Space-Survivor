@@ -10523,7 +10523,7 @@ IL_0059:
 		L_20 = ProcessStartInfo_get_EnvironmentVariables_m2D3A45132BAA93948D2018F9A1E04D465D20776D(L_19, NULL);
 		NullCheck(L_20);
 		RuntimeObject* L_21;
-		L_21 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(6 /* System.Collections.IEnumerator System.Collections.Specialized.StringDictionary::GetEnumerator() */, L_20);
+		L_21 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(7 /* System.Collections.IEnumerator System.Collections.Specialized.StringDictionary::GetEnumerator() */, L_20);
 		V_9 = L_21;
 	}
 	{
@@ -11585,7 +11585,7 @@ IL_006b_1:
 				RuntimeObject* L_21;
 				L_21 = DictionaryEntry_get_Value_m75FD18FE968AE131F28AA2CB0DF4895EBA39075E_inline((&V_1), NULL);
 				NullCheck(L_19);
-				VirtualActionInvoker2< String_t*, String_t* >::Invoke(5 /* System.Void System.Collections.Specialized.StringDictionary::Add(System.String,System.String) */, L_19, ((String_t*)CastclassSealed((RuntimeObject*)L_20, String_t_il2cpp_TypeInfo_var)), ((String_t*)CastclassSealed((RuntimeObject*)L_21, String_t_il2cpp_TypeInfo_var)));
+				VirtualActionInvoker2< String_t*, String_t* >::Invoke(6 /* System.Void System.Collections.Specialized.StringDictionary::Add(System.String,System.String) */, L_19, ((String_t*)CastclassSealed((RuntimeObject*)L_20, String_t_il2cpp_TypeInfo_var)), ((String_t*)CastclassSealed((RuntimeObject*)L_21, String_t_il2cpp_TypeInfo_var)));
 			}
 
 IL_009a_1:
@@ -12610,6 +12610,14 @@ IL_000f:
 		int64_t L_3 = __this->___started_3;
 		int64_t L_4 = __this->___elapsed_2;
 		return ((int64_t)il2cpp_codegen_add(((int64_t)il2cpp_codegen_subtract(L_2, L_3)), L_4));
+	}
+}
+// System.Boolean System.Diagnostics.Stopwatch::get_IsRunning()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Stopwatch_get_IsRunning_mB1C465B7089DFB8A94BF56CC694F5EF72A55E5B6 (Stopwatch_tA188A210449E22C07053A7D3014DD182C7369043* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___is_running_4;
+		return L_0;
 	}
 }
 // System.Void System.Diagnostics.Stopwatch::Start()

@@ -2458,6 +2458,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_set_backgroundColor_Injected_m8CE15E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_get_contentColor_Injected_mA7104651F0E465005246E2D525B705584A634228 (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* ___ret0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GUI::set_contentColor_Injected(UnityEngine.Color&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_set_contentColor_Injected_m2D8DE5754F8B7610037C260DE326EDC12587C6C0 (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* ___value0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GUI::Internal_DoWindow_Injected(System.Int32,System.Int32,UnityEngine.Rect&,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,System.Object,System.Boolean,UnityEngine.Rect&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_Internal_DoWindow_Injected_m0D99295503BEFBFD215F85185101E651ED2D3017 (int32_t ___id0, int32_t ___instanceID1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___clientRect2, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func3, GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* ___title4, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___style5, RuntimeObject* ___skin6, bool ___forceRectOnLayout7, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret8, const RuntimeMethod* method) ;
 // System.Void UnityEngineInternal.GenericStack::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GenericStack__ctor_mD21753D674298C09F3684F19DD42680323055586 (GenericStack_t1FB49AB7D847C97ABAA97AB232CA416CABD24C49* __this, const RuntimeMethod* method) ;
 // System.DateTime System.DateTime::get_Now()
@@ -2754,6 +2756,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Division_m69F64D545E3C023BE9927397572349A569141EBA_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, float ___d1, const RuntimeMethod* method) ;
 // UnityEngine.Vector2 UnityEngine.Vector2::Lerp(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_Lerp_mF3BD6827807680A529E800FD027734D40A3597E1_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b1, float ___t2, const RuntimeMethod* method) ;
+// UnityEngine.GUIStyle UnityEngine.GUISkin::get_window()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* GUISkin_get_window_m760DAF129E72775DFD18CB71720AD306345E91C2 (GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* __this, const RuntimeMethod* method) ;
+// UnityEngine.Rect UnityEngine.GUI::DoWindow(System.Int32,UnityEngine.Rect,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,UnityEngine.GUISkin,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D GUI_DoWindow_mC2B5D23C129574004FCB9C8A390FAB40C2A12B72 (int32_t ___id0, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___clientRect1, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func2, GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* ___title3, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___style4, GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* ___skin5, bool ___forceRectOnLayout6, const RuntimeMethod* method) ;
+// UnityEngine.Rect UnityEngine.GUI::Internal_DoWindow(System.Int32,System.Int32,UnityEngine.Rect,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,System.Object,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D GUI_Internal_DoWindow_m36E10AE130EA9FFBBADEE5F52DE8FAE17CCFD087 (int32_t ___id0, int32_t ___instanceID1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___clientRect2, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func3, GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* ___title4, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___style5, RuntimeObject* ___skin6, bool ___forceRectOnLayout7, const RuntimeMethod* method) ;
 // UnityEngine.GUILayoutUtility/LayoutCache UnityEngine.GUILayoutUtility::SelectIDList(System.Int32,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LayoutCache_tF844B2FAD6933B78FD5EFEBDE0529BCBAC19BA60* GUILayoutUtility_SelectIDList_mB7FB0ADC8613FE86C8B30C7758C81EE8E4CCEAEC (int32_t ___instanceID0, bool ___isWindow1, const RuntimeMethod* method) ;
 // UnityEngine.GUILayoutOption UnityEngine.GUILayout::Width(System.Single)
@@ -7687,6 +7695,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_InternalRepaintEditorWindow_mCB96774
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GUI_InternalRepaintEditorWindow_mCB9677426B0C80FE95118C891634E0FEBCC79890_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::InternalRepaintEditorWindow()");
 	_il2cpp_icall_func();
+}
+// UnityEngine.Rect UnityEngine.GUI::Internal_DoWindow(System.Int32,System.Int32,UnityEngine.Rect,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,System.Object,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D GUI_Internal_DoWindow_m36E10AE130EA9FFBBADEE5F52DE8FAE17CCFD087 (int32_t ___id0, int32_t ___instanceID1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___clientRect2, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func3, GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* ___title4, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___style5, RuntimeObject* ___skin6, bool ___forceRectOnLayout7, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		int32_t L_0 = ___id0;
+		int32_t L_1 = ___instanceID1;
+		WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* L_2 = ___func3;
+		GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* L_3 = ___title4;
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_4 = ___style5;
+		RuntimeObject* L_5 = ___skin6;
+		bool L_6 = ___forceRectOnLayout7;
+		il2cpp_codegen_runtime_class_init_inline(GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		GUI_Internal_DoWindow_Injected_m0D99295503BEFBFD215F85185101E651ED2D3017(L_0, L_1, (&___clientRect2), L_2, L_3, L_4, L_5, L_6, (&V_0), NULL);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_7 = V_0;
+		return L_7;
+	}
 }
 // System.Void UnityEngine.GUI::.cctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI__cctor_m844F2616037B0E030BCDBE552ABD406F37BE14C5 (const RuntimeMethod* method) 
@@ -12952,6 +12985,81 @@ IL_04f7:
 		return;
 	}
 }
+// UnityEngine.Rect UnityEngine.GUI::Window(System.Int32,UnityEngine.Rect,UnityEngine.GUI/WindowFunction,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D GUI_Window_m8154C203DEEB4A86EADA4FC2182FDFCA202B2F35 (int32_t ___id0, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___clientRect1, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func2, String_t* ___text3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		GUIUtility_CheckOnGUI_m96F9DAAD5B8B3000EEA28C4A437B5C292F71D245(NULL);
+		int32_t L_0 = ___id0;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_1 = ___clientRect1;
+		WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* L_2 = ___func2;
+		String_t* L_3 = ___text3;
+		il2cpp_codegen_runtime_class_init_inline(GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2_il2cpp_TypeInfo_var);
+		GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* L_4;
+		L_4 = GUIContent_Temp_m9C3F3629F90F7A1989A26EF5A2D7ED6B1DD17C4F(L_3, NULL);
+		il2cpp_codegen_runtime_class_init_inline(GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* L_5;
+		L_5 = GUI_get_skin_m65083FBB1A0F6F33052E2AED126DD43FA34653B1(NULL);
+		NullCheck(L_5);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_6;
+		L_6 = GUISkin_get_window_m760DAF129E72775DFD18CB71720AD306345E91C2(L_5, NULL);
+		GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* L_7;
+		L_7 = GUI_get_skin_m65083FBB1A0F6F33052E2AED126DD43FA34653B1(NULL);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_8;
+		L_8 = GUI_DoWindow_mC2B5D23C129574004FCB9C8A390FAB40C2A12B72(L_0, L_1, L_2, L_4, L_6, L_7, (bool)1, NULL);
+		V_0 = L_8;
+		goto IL_0028;
+	}
+
+IL_0028:
+	{
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_9 = V_0;
+		return L_9;
+	}
+}
+// UnityEngine.Rect UnityEngine.GUI::DoWindow(System.Int32,UnityEngine.Rect,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,UnityEngine.GUISkin,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D GUI_DoWindow_mC2B5D23C129574004FCB9C8A390FAB40C2A12B72 (int32_t ___id0, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___clientRect1, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func2, GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* ___title3, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___style4, GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* ___skin5, bool ___forceRectOnLayout6, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		int32_t L_0 = ___id0;
+		int32_t L_1 = ((GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_StaticFields*)il2cpp_codegen_static_fields_for(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var))->___s_OriginalID_2;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_2 = ___clientRect1;
+		WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* L_3 = ___func2;
+		GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* L_4 = ___title3;
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_5 = ___style4;
+		GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* L_6 = ___skin5;
+		bool L_7 = ___forceRectOnLayout6;
+		il2cpp_codegen_runtime_class_init_inline(GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_8;
+		L_8 = GUI_Internal_DoWindow_m36E10AE130EA9FFBBADEE5F52DE8FAE17CCFD087(L_0, L_1, L_2, L_3, L_4, L_5, L_6, L_7, NULL);
+		V_0 = L_8;
+		goto IL_0018;
+	}
+
+IL_0018:
+	{
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_9 = V_0;
+		return L_9;
+	}
+}
 // System.Void UnityEngine.GUI::CallWindowDelegate(UnityEngine.GUI/WindowFunction,System.Int32,System.Int32,UnityEngine.GUISkin,System.Int32,System.Single,System.Single,UnityEngine.GUIStyle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_CallWindowDelegate_m95AF13FE1740FC5676B74CBE965F8E4B4C1EED88 (WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func0, int32_t ___id1, int32_t ___instanceID2, GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* ____skin3, int32_t ___forceRect4, float ___width5, float ___height6, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___style7, const RuntimeMethod* method) 
 {
@@ -13150,6 +13258,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_set_contentColor_Injected_m2D8DE5754
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GUI_set_contentColor_Injected_m2D8DE5754F8B7610037C260DE326EDC12587C6C0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::set_contentColor_Injected(UnityEngine.Color&)");
 	_il2cpp_icall_func(___value0);
+}
+// System.Void UnityEngine.GUI::Internal_DoWindow_Injected(System.Int32,System.Int32,UnityEngine.Rect&,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,System.Object,System.Boolean,UnityEngine.Rect&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_Internal_DoWindow_Injected_m0D99295503BEFBFD215F85185101E651ED2D3017 (int32_t ___id0, int32_t ___instanceID1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___clientRect2, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550* ___func3, GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* ___title4, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___style5, RuntimeObject* ___skin6, bool ___forceRectOnLayout7, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret8, const RuntimeMethod* method) 
+{
+	typedef void (*GUI_Internal_DoWindow_Injected_m0D99295503BEFBFD215F85185101E651ED2D3017_ftn) (int32_t, int32_t, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D*, WindowFunction_t0067B6F174FD5BEC3E869A38C2319BA8EE85D550*, GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2*, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580*, RuntimeObject*, bool, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D*);
+	static GUI_Internal_DoWindow_Injected_m0D99295503BEFBFD215F85185101E651ED2D3017_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUI_Internal_DoWindow_Injected_m0D99295503BEFBFD215F85185101E651ED2D3017_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::Internal_DoWindow_Injected(System.Int32,System.Int32,UnityEngine.Rect&,UnityEngine.GUI/WindowFunction,UnityEngine.GUIContent,UnityEngine.GUIStyle,System.Object,System.Boolean,UnityEngine.Rect&)");
+	_il2cpp_icall_func(___id0, ___instanceID1, ___clientRect2, ___func3, ___title4, ___style5, ___skin6, ___forceRectOnLayout7, ___ret8);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

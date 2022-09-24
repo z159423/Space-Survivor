@@ -1,5 +1,6 @@
 using UnityEngine.Events;
 using UnityEngine;
+using System.Collections;
 using GoogleMobileAds.Api;
 using GoogleMobileAds.Common;
 using UnityEngine.UI;
@@ -22,6 +23,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     [SerializeField] private TextMeshProUGUI crystalValueText;
     private RewardedAd shipTrialRewardedAd;
     [SerializeField] private Button shipTrialButton;
+    private RewardedAd reviveRewardedAd;
+    [SerializeField] private Button reviveButton;
+
+    [SerializeField] private GameObject touchProjectPanel;
 
     [Space]
 
@@ -48,6 +53,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
         shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
+        reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
     }
 
     public void CreateAndLoadRewardedAd()
@@ -275,15 +281,117 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             string type = args.Type;
             double amount = args.Amount;
-            MonoBehaviour.print(
-                "보상형 광고를 시청하였습니다. 보상을 지급해야 합니다: "
-                            + amount.ToString() + " " + type);
+            // MonoBehaviour.print(
+            //     "보상형 광고를 시청하였습니다. 보상을 지급해야 합니다: "
+            //                 + amount.ToString() + " " + type);
 
-            shipTrialButton.onClick.Invoke();
+            MonoBehaviour.print("함선 체험광고를 시청하였습니다. 함선 체험을 시작합니다.");
+
+            StartCoroutine(startTrial());
+
+
+            IEnumerator startTrial()
+            {
+                touchProjectPanel.SetActive(true);
+                yield return new WaitForSeconds(0.5f);
+
+                shipTrialButton.onClick.Invoke();
+                touchProjectPanel.SetActive(false);
+            }
+
         }
     }
 
-    //크리스탈 획득 리워드 광고
+    public RewardedAd CreateAndLoadRewardedAd_Revive(string adUnitId)
+    {
+        RewardedAd rewardedAd = new RewardedAd(adUnitId);
+
+        //보상형 광고가 완료되었을때
+        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        //보상형 광고 로드 실패함
+        rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
+        //보상형 광고 표시중
+        rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        //보상형 광고 표시가 실패하였습니다.
+        rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
+        //사용자가 보상형 광고를 취소하였을때
+        rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the rewarded ad with the request.
+        rewardedAd.LoadAd(request);
+        return rewardedAd;
+
+        //보상형 광고 로드가 완료되었을때
+        void HandleRewardedAdLoaded(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("부활 보상형 광고 로드 완료");
+        }
+
+        //보상형 광고 로드 실패함
+        void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+        {
+            MonoBehaviour.print(
+                "보상형 광고 로드를 실패하였습니다: "
+                                 + args.LoadAdError);
+        }
+
+        //보상형 광고 표시중
+        void HandleRewardedAdOpening(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("보상형 광고 표시중");
+        }
+
+        //보상형 광고 표시가 실패하였습니다.
+        void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
+        {
+            MonoBehaviour.print(
+                "광고 표시를 실패하였습니다: "
+                                 + args.AdError.GetMessage());
+        }
+
+        //보상형 광고창이 닫혔을때
+        void HandleRewardedAdClosed(object sender, EventArgs args)
+        {
+#if UNITY_ANDROID
+            adUnitId = androidAdUnitId;
+#elif UNITY_IPHONE
+             adUnitId = iosAdUnitId;
+#else
+             adUnitId = "unexpected_platform";
+#endif
+
+            reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
+            MonoBehaviour.print("보상형 광고창이 닫혔습니다.");
+        }
+
+        //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        void HandleUserEarnedReward(object sender, Reward args)
+        {
+            string type = args.Type;
+            double amount = args.Amount;
+
+            MonoBehaviour.print("부활 리워드 광고를 시청완료했습니다. 부활합니다.");
+
+            StartCoroutine(revive());
+
+            IEnumerator revive()
+            {
+                touchProjectPanel.SetActive(true);
+                yield return new WaitForSeconds(0.3f);
+
+                reviveButton.onClick.Invoke();
+                touchProjectPanel.SetActive(false);
+                GameManager.instance.revivedThisGame = true;
+            }
+
+        }
+    }
+
+    //크리스탈 획득 리워드 광고 호출
     public void WatchRewardAds_Crytal()
     {
         if (this.crystallAddRewardedAd.IsLoaded())
@@ -296,7 +404,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
     }
 
-    //함선 무료 체험 리워드 광고
+    //함선 무료 체험 리워드 광고 호출
     public void WatchRewardAds_TrialShip()
     {
         if (this.shipTrialRewardedAd.IsLoaded())
@@ -308,4 +416,18 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             print("광고가 없습니다");
         }
     }
+
+    //부활 리워드 광고 호출
+    public void WatchRewardAds_Revive()
+    {
+        if (this.reviveRewardedAd.IsLoaded())
+        {
+            this.reviveRewardedAd.Show();
+        }
+        else
+        {
+            print("광고가 없습니다");
+        }
+    }
+
 }

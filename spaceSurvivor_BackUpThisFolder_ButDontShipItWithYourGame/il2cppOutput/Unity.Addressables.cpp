@@ -20952,7 +20952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AddressablesImpl_Equals_m9C9049FC1B9E31A
 		L_8 = InterfaceFuncInvoker0< Type_t* >::Invoke(8 /* System.Type UnityEngine.ResourceManagement.ResourceLocations.IResourceLocation::get_ResourceType() */, IResourceLocation_tB0706DA8EB5339ECB4B64C7D2DAFC1EB35D2915C_il2cpp_TypeInfo_var, L_7);
 		NullCheck(L_6);
 		bool L_9;
-		L_9 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(128 /* System.Boolean System.Type::Equals(System.Type) */, L_6, L_8);
+		L_9 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(129 /* System.Boolean System.Type::Equals(System.Type) */, L_6, L_8);
 		if (!L_9)
 		{
 			goto IL_0038;
@@ -28666,7 +28666,7 @@ IL_01dc:
 		Type_t* L_94 = V_0;
 		NullCheck(L_94);
 		Guid_t L_95;
-		L_95 = VirtualFuncInvoker0< Guid_t >::Invoke(115 /* System.Guid System.Type::get_GUID() */, L_94);
+		L_95 = VirtualFuncInvoker0< Guid_t >::Invoke(116 /* System.Guid System.Type::get_GUID() */, L_94);
 		V_15 = L_95;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_96;
 		L_96 = Guid_ToByteArray_m6EBFB2F42D3760D9143050A3A8ED03F085F3AFE9((&V_15), NULL);

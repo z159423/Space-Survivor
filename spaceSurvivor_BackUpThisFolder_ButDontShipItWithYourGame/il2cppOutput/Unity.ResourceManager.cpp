@@ -8884,7 +8884,7 @@ IL_0072:
 		(L_36)->SetAt(static_cast<il2cpp_array_size_t>(0), (Type_t*)L_37);
 		NullCheck(L_34);
 		Type_t* L_38;
-		L_38 = VirtualFuncInvoker1< Type_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(126 /* System.Type System.Type::MakeGenericType(System.Type[]) */, L_34, L_36);
+		L_38 = VirtualFuncInvoker1< Type_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(127 /* System.Type System.Type::MakeGenericType(System.Type[]) */, L_34, L_36);
 		Type_t* L_39 = L_38;
 		V_3 = L_39;
 		NullCheck(L_31);
@@ -14096,7 +14096,7 @@ IL_0010:
 		L_17 = InterfaceFuncInvoker0< Type_t* >::Invoke(8 /* System.Type UnityEngine.ResourceManagement.ResourceLocations.IResourceLocation::get_ResourceType() */, IResourceLocation_tB0706DA8EB5339ECB4B64C7D2DAFC1EB35D2915C_il2cpp_TypeInfo_var, L_16);
 		NullCheck(L_15);
 		bool L_18;
-		L_18 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(128 /* System.Boolean System.Type::Equals(System.Type) */, L_15, L_17);
+		L_18 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(129 /* System.Boolean System.Type::Equals(System.Type) */, L_15, L_17);
 		return L_18;
 	}
 
@@ -15741,7 +15741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ResourceManagerConfig_CreateLi
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_4 = V_0;
 		NullCheck(L_3);
 		Type_t* L_5;
-		L_5 = VirtualFuncInvoker1< Type_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(126 /* System.Type System.Type::MakeGenericType(System.Type[]) */, L_3, L_4);
+		L_5 = VirtualFuncInvoker1< Type_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(127 /* System.Type System.Type::MakeGenericType(System.Type[]) */, L_3, L_4);
 		// var list = Activator.CreateInstance(listType) as IList;
 		RuntimeObject* L_6;
 		L_6 = Activator_CreateInstance_m0A28F274256F1444949E372089034D9FB66FBD67(L_5, NULL);

@@ -7,12 +7,14 @@ using Cinemachine;
 using UnityEngine.Localization;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject inGameMenu;
     [SerializeField] private GameObject MainMenu;
     [SerializeField] private GameObject DieMenu;
+    [SerializeField] private GameObject reviveButton;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject hpBar;
     [SerializeField] private TextMeshProUGUI timer;
@@ -48,6 +50,8 @@ public class GameManager : MonoBehaviour
     private int currentTime;
     private float currentKillCount;
     private Coroutine timerCoroutine;
+    public bool revivedThisGame = false;
+    private float revivedTimer = 1f;
 
     public static GameManager instance;
 
@@ -73,9 +77,9 @@ public class GameManager : MonoBehaviour
 
         playerWeapon.playerShipData = UserDataManager.instance.GetShipData(currentShip.shipCode);
 
-        if(playerWeapon.playerShipData == null)
+        if (playerWeapon.playerShipData == null)
             playerWeapon.playerShipData = shipList.GetShipObject(currentShip.shipCode).shipObjectData;
-            
+
         PlayGameEvent.Invoke();
 
         inGameMenu.SetActive(true);
@@ -92,6 +96,7 @@ public class GameManager : MonoBehaviour
         CameraManager.instance.ChangeCamera_PlayCamera();
 
         EnemyGenerator.instance.bossFighting = false;
+        revivedThisGame = false;
     }
 
     public void ReplayGame()
@@ -132,6 +137,17 @@ public class GameManager : MonoBehaviour
         killCountText.text = currentKillCount.ToString();
 
         DieMenu.SetActive(true);
+
+        if (!revivedThisGame)
+        {
+            revivedTimer = 1f;
+            reviveButton.SetActive(true);
+
+            var fill = reviveButton.GetComponent<Image>();
+
+            DOTween.To(() => fill.fillAmount, (var) => fill.fillAmount = var, 0, 5).SetEase(Ease.Linear)
+            .OnComplete(() => {reviveButton.SetActive(false); fill.fillAmount = 1f;});
+        }
 
         gameStart = false;
     }
@@ -175,7 +191,7 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
 
-            if(!EnemyGenerator.instance.bossFighting)
+            if (!EnemyGenerator.instance.bossFighting)
             {
                 currentTime += 1;
 
@@ -301,7 +317,7 @@ public class GameManager : MonoBehaviour
             return;
 
         UserDataManager.instance.currentUserData.playerHaveShip.Add(currentShip.shipObjectData);
-    
+
         SelectShip(currentShipNumber);
 
         UserDataManager.instance.AddCrystalValue(-currentShip.shipCost);
