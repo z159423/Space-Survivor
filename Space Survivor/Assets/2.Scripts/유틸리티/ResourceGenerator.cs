@@ -21,9 +21,9 @@ public class ResourceGenerator : MonoBehaviour
 
     public void EnQueueResource(resourceType type, GameObject resource)
     {
-        for(int i = 0; i < resourcePool.Count; i++)
+        for (int i = 0; i < resourcePool.Count; i++)
         {
-            if(type == resourcePool[i].type)
+            if (type == resourcePool[i].type)
             {
                 resourcePool[i].EnQueue(resource);
 
@@ -32,24 +32,48 @@ public class ResourceGenerator : MonoBehaviour
         }
     }
 
-    public void DeQueueResource(resourceType type,Vector2 position)
+    public void DeQueueResource(resourceType type, Vector2 position, DropTable dropTable)
     {
         for (int i = 0; i < resourcePool.Count; i++)
         {
-            if(type == resourcePool[i].type)
+            if (type == resourcePool[i].type)
             {
-                var success = resourcePool[i].DeQueue(position);
-
-                if (success != null)
+                int dropAmount = 1;
+                switch (type)
                 {
-                    Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
+                    case resourceType.Mineral1:
+                        dropAmount = Random.Range(dropTable.dropExpMinAmount, dropTable.dropExpmaxAmount);
+                        break;
 
-                    var enemy = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
+                    case resourceType.Mineral2:
+                        dropAmount = Random.Range(dropTable.dropExpMinAmount, dropTable.dropExpmaxAmount);
+                        break;
 
-                    generatedResource.Add(enemy);
+                    case resourceType.Mineral3:
+                        dropAmount = Random.Range(dropTable.dropExpMinAmount, dropTable.dropExpmaxAmount);
+                        break;
+
+                    case resourceType.Crystal:
+                        dropAmount = Random.Range(dropTable.dropExpMinAmount, dropTable.dropExpmaxAmount);
+                        break;
                 }
 
-                //Debug.Log("spawn resource");
+                for(int z = 0; z < dropAmount; z++)
+                {
+                    var success = resourcePool[i].DeQueue(position);
+
+                    if (success != null)
+                    {
+                        Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
+
+                        var resource = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
+
+                        if(dropTable.maxDropForce > 0)
+                        resource.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(0, dropTable.maxDropForce));
+
+                        generatedResource.Add(resource);
+                    }
+                }
 
                 break;
             }
@@ -101,4 +125,4 @@ public class ResourcePool
     }
 }
 
-public enum resourceType {none, Mineral1 , Mineral2, Crystal,Mineral3 }
+public enum resourceType { none, Mineral1, Mineral2, Crystal, Mineral3 }

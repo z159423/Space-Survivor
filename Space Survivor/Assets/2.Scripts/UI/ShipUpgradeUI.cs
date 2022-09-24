@@ -63,7 +63,7 @@ public class ShipUpgradeUI : MonoBehaviour
 
         ShipObjectData data = UserDataManager.instance.GetShipData(shipObject.shipCode);
 
-        shipImage.sprite = data.shipImage;
+        shipImage.sprite = UserDataManager.instance.GetShipImage(data.shipCode); //data.shipImage;
 
         //hpStat.text = data.baseMaxHp.GetBaseValue().ToString();
         //damageStat.text = data.baseDamage.GetBaseValue().ToString();

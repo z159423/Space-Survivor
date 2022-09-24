@@ -167,4 +167,17 @@ public class UserDataManager : MonoBehaviour
             }
         }
     }
+
+    public Sprite GetShipImage(string shipCode)
+    {
+        for(int i = 0; i < shipList.shipList.Count; i++)
+        {
+            if(shipList.shipList[i].shipCode == shipCode)
+            {
+                return shipList.shipList[i].shipImage;
+            }
+        }
+
+        return null;
+    }
 }

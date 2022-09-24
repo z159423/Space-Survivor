@@ -22,13 +22,14 @@ public class ProjectileGenerator : MonoBehaviour
         DeQueueProjectile(projectilePool[Random.Range(0, projectilePool.Count)].type, position);
     }
 
-    public void EnQueueProjectile(ProjectileType type, GameObject resource)
+    public void EnQueueProjectile(ProjectileType type, GameObject projecile)
     {
         for (int i = 0; i < projectilePool.Count; i++)
         {
             if (type == projectilePool[i].type)
             {
-                projectilePool[i].EnQueue(resource);
+                projecile.SetActive(false);
+                projectilePool[i].EnQueue(projecile);
 
                 break;
             }

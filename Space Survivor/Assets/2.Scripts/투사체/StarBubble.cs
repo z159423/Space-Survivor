@@ -14,29 +14,15 @@ public class StarBubble : MonoBehaviour
 
     private Coroutine deleteCoroutine;
 
-    private void OnEnable()
-    {
-        deleteCoroutine = StartCoroutine(delete());
-        
-        IEnumerator delete()
-        {
-            yield return new WaitForSeconds(deleteTime);
-
-            ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
-        }
-
-    }
-
-    private void OnDisable()
-    {
-        if(deleteCoroutine != null)
-            StopCoroutine(deleteCoroutine);
-
-        VFXGenerator.instance.GenerateVFX(deleteParticleType, transform.position);
-    }
+    // private void OnDisable()
+    // {
+    //     if (deleteCoroutine != null)
+    //         StopCoroutine(deleteCoroutine);
+    // }
 
     public void Fire(Transform target, float fireForce)
     {
+        rigid.velocity = Vector3.zero;
         Vector2 fireDir;
 
         fireDir = Utility.GetDirection(transform.position, target.position);
@@ -47,15 +33,38 @@ public class StarBubble : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
         rigid.AddForce(transform.up * fireForce);
+
+        deleteCoroutine = StartCoroutine(delete());
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    IEnumerator delete()
     {
-        if(collision.gameObject.CompareTag("Player"))
+        yield return new WaitForSeconds(deleteTime);
+
+        if (gameObject.activeSelf)
         {
             ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
+            VFXGenerator.instance.GenerateVFX(deleteParticleType, transform.position);
+        }
+    }
 
-            collision.gameObject.GetComponentInParent<PlayerStat>().TakeDamage(damage);
+    // public void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Player"))
+    //     {
+    //         ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
+
+    //         collision.gameObject.GetComponentInParent<PlayerStat>().TakeDamage(damage);
+    //     }
+    // }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && other.TryGetComponent<PlayerBodyBeacon>(out PlayerBodyBeacon beacon))
+        {
+            ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
+            VFXGenerator.instance.GenerateVFX(deleteParticleType, transform.position);
+            other.gameObject.GetComponentInParent<PlayerStat>().TakeDamage(damage);
         }
     }
 }

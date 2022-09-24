@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
 
         playerWeapon.allowFire = true;
         CameraManager.instance.ChangeCamera_PlayCamera();
+
+        EnemyGenerator.instance.bossFighting = false;
     }
 
     public void ReplayGame()

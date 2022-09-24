@@ -25,9 +25,10 @@ public class TextGenerator : MonoBehaviour
         textPool.EnQueueText(text);
     }
 
-    public void DequeueText(Vector3 position, int damage)
+    public void DequeueText(Vector3 position, int damage, TextGenerateOffset offset)
     {
-        var text = textPool.DeQueueText(position, damage);
+        print(offset.minVectorOffset + " " + offset.maxVectorOffset);
+        var text = textPool.DeQueueText(position, damage, offset);
 
         StartCoroutine(activeText(text));
 
@@ -61,9 +62,8 @@ public class TextPool
         textStack.Enqueue(text);
     }
 
-    public GameObject DeQueueText(Vector3 position, int damage)
+    public GameObject DeQueueText(Vector3 position, int damage, TextGenerateOffset offset)
     {
-
         if (textStack.Count > 0)
         {
             var text = textStack.Dequeue();
@@ -72,7 +72,8 @@ public class TextPool
             //text.transform.position = camera.WorldToScreenPoint(position);
             text.GetComponentInChildren<TextMeshProUGUI>().text = damage.ToString();
             var damageText = text.GetComponent<DamageText>();
-            damageText.textPosition = position + new Vector3(Random.Range(minVectorOffset.x, maxVectorOffset.x), Random.Range(minVectorOffset.y, maxVectorOffset.y),0);
+            damageText.textPosition = position + new Vector3(Random.Range(offset.minVectorOffset.x, offset.maxVectorOffset.x)
+            , Random.Range(offset.minVectorOffset.y, offset.maxVectorOffset.y),0);
             damageText.cam = camera;
             text.gameObject.SetActive(true);
             damageText.GetComponentInChildren<Animator>().SetTrigger("Active");
@@ -85,7 +86,8 @@ public class TextPool
             text.GetComponentInChildren<TextMeshProUGUI>().text = damage.ToString();
             //text.transform.position = camera.WorldToScreenPoint(position);
             var damageText = text.GetComponent<DamageText>();
-            damageText.textPosition = position + new Vector3(Random.Range(minVectorOffset.x, maxVectorOffset.x), Random.Range(minVectorOffset.y, maxVectorOffset.y), 0);
+            damageText.textPosition = position + new Vector3(Random.Range(offset.minVectorOffset.x, offset.maxVectorOffset.x)
+            , Random.Range(offset.minVectorOffset.y, offset.maxVectorOffset.y), 0);
             damageText.cam = camera;
             text.gameObject.SetActive(true);
             damageText.GetComponentInChildren<Animator>().SetTrigger("Active");
@@ -95,4 +97,10 @@ public class TextPool
     }
 }
 
+[System.Serializable]
+public class TextGenerateOffset
+{
+    public Vector2 minVectorOffset = new Vector2(-0.15f, -0.15f);
+    public Vector2 maxVectorOffset = new Vector2(0.15f, 0.15f);
+}
 

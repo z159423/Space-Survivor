@@ -9,7 +9,7 @@ public class EnemyStat : MonoBehaviour
     [SerializeField] private EnemyType type;
 
     [SerializeField] private int maxHp = 10;
-    private int currentHp = 10;
+    protected int currentHp = 10;
 
     [Space]
     [SerializeField] private int damage = 5;
@@ -33,6 +33,7 @@ public class EnemyStat : MonoBehaviour
 
     private Vector2 movedir;
     private float angle;
+    public TextGenerateOffset textGenerateOffset;
 
     [SerializeField] private Transform target;
 
@@ -56,19 +57,19 @@ public class EnemyStat : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), rotationSpeed * Time.deltaTime);
     }
 
-    public void TakeDamage(int damage)
+    public virtual void  TakeDamage(int damage)
     {
         if (damage <= 0)
             return;
 
         currentHp -= damage;
 
-        TextGenerator.instance.DequeueText(transform.position, damage);
+        TextGenerator.instance.DequeueText(transform.position, damage,textGenerateOffset);
 
         OnChangeHp();
     }
 
-    private void OnChangeHp()
+    protected void OnChangeHp()
     {
         if(currentHp <= 0)
         {
@@ -85,22 +86,7 @@ public class EnemyStat : MonoBehaviour
     {
         EnQueueThisEnemy();
 
-        //경험치 드랍
-        if (dropTable.expType != resourceType.none)
-            ResourceGenerator.instance.DeQueueResource(dropTable.expType, transform.position);
-            //Instantiate(expObject,transform.position,Quaternion.identity);
-
-        //크리스탈 드랍
-        if(Utility.PercentageCalculator(dropTable.crystalDropPercent))
-        {
-            ResourceGenerator.instance.DeQueueResource(dropTable.crystalType, transform.position);
-        }
-
-        //아이템 드랍
-        if (Utility.PercentageCalculator(dropTable.ItemDropPercent))
-        {
-            ItemGenerator.instance.GenerateRandomItem(transform.position);
-        }
+        ResourceDrop(dropTable);
 
         //사망 파티클 생성
         if (dieVFXType != VFXType.none)
@@ -111,6 +97,26 @@ public class EnemyStat : MonoBehaviour
         GameManager.instance.AddKillCount();
 
         spriteRenderer.material = originalMat;
+    }
+
+    protected void ResourceDrop(DropTable dropTable)
+    {
+        //경험치 드랍
+        if (dropTable.expType != resourceType.none)
+            ResourceGenerator.instance.DeQueueResource(dropTable.expType, transform.position, dropTable);
+        //Instantiate(expObject,transform.position,Quaternion.identity);
+
+        //크리스탈 드랍
+        if (Utility.PercentageCalculator(dropTable.crystalDropPercent))
+        {
+            ResourceGenerator.instance.DeQueueResource(dropTable.crystalType, transform.position, dropTable);
+        }
+
+        //아이템 드랍
+        if (Utility.PercentageCalculator(dropTable.ItemDropPercent))
+        {
+            ItemGenerator.instance.GenerateRandomItem(transform.position);
+        }
     }
 
     /*private void OnCollisionStay2D(Collision2D collision)
@@ -177,5 +183,17 @@ public class DropTable
     [Range(0, 100)]
     public int ItemDropPercent;
 
+    [Space]
+    public float minDropForce;
+    public float maxDropForce;
 
+    [Space]
+
+    public int dropExpMinAmount = 1;
+    public int dropExpmaxAmount = 1;
+
+    [Space]
+
+    public int dropCrystalMinAmount = 1;
+    public int dropCrystalmaxAmount = 1;
 }

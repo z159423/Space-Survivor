@@ -39,13 +39,6 @@ public class StarLight : MonoBehaviour
                 var starBubble1 = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.StarBubble1, firePos1.position);
                 var starBubble2 = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.StarBubble1, firePos2.position);
                 var starBubble3 = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.StarBubble1, firePos3.position);
-
-                if (starBubble1 == null)
-                    print(1);
-
-                if (starBubble1.GetComponent<StarBubble>() == null)
-                    print(2);
-
                 starBubble1.GetComponent<StarBubble>().Fire(fireDir1, starBubbleFireForce);
                 starBubble2.GetComponent<StarBubble>().Fire(fireDir2, starBubbleFireForce);
                 starBubble3.GetComponent<StarBubble>().Fire(fireDir3, starBubbleFireForce);
