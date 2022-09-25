@@ -12,6 +12,7 @@ public class StarLight : MonoBehaviour
 
     [Space]
 
+    public ProjectileType starBubbleType;
     public float starBubbleFireRate = 0.5f;
     public float starBubbleFireForce = 1f;
 
@@ -36,9 +37,9 @@ public class StarLight : MonoBehaviour
             yield return new WaitForSeconds(5f);
             while (true)
             {
-                var starBubble1 = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.StarBubble1, firePos1.position);
-                var starBubble2 = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.StarBubble1, firePos2.position);
-                var starBubble3 = ProjectileGenerator.instance.DeQueueProjectile(ProjectileType.StarBubble1, firePos3.position);
+                var starBubble1 = ProjectileGenerator.instance.DeQueueProjectile(starBubbleType, firePos1.position);
+                var starBubble2 = ProjectileGenerator.instance.DeQueueProjectile(starBubbleType, firePos2.position);
+                var starBubble3 = ProjectileGenerator.instance.DeQueueProjectile(starBubbleType, firePos3.position);
                 starBubble1.GetComponent<StarBubble>().Fire(fireDir1, starBubbleFireForce);
                 starBubble2.GetComponent<StarBubble>().Fire(fireDir2, starBubbleFireForce);
                 starBubble3.GetComponent<StarBubble>().Fire(fireDir3, starBubbleFireForce);

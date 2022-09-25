@@ -145,6 +145,7 @@ MonoBehaviour:
   firePos3: {fileID: 1095152784742340042}
   fireDir3: {fileID: 1007788714830457099}
   rotateSpeed: 15
+  starBubbleType: 2
   starBubbleFireRate: 0.25
   starBubbleFireForce: 0.04
 --- !u!114 &2098298358969253620

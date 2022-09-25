@@ -146,7 +146,10 @@ public class GameManager : MonoBehaviour
             var fill = reviveButton.GetComponent<Image>();
 
             DOTween.To(() => fill.fillAmount, (var) => fill.fillAmount = var, 0, 5).SetEase(Ease.Linear)
-            .OnComplete(() => {reviveButton.SetActive(false); fill.fillAmount = 1f;});
+            .OnComplete(() => { 
+                reviveButton.SetActive(false); 
+                fill.fillAmount = 1f; 
+                });
         }
 
         gameStart = false;

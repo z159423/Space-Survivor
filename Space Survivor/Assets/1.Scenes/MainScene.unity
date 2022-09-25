@@ -6088,6 +6088,12 @@ MonoBehaviour:
     type: 9
     endTime: 5
     particleSize: 1
+  - activeParticle: []
+    Prefab: {fileID: 8641011668772237561, guid: f937cfcd3c49d6445ba8dcadd7159867, type: 3}
+    parent: {fileID: 248298816}
+    type: 10
+    endTime: 5
+    particleSize: 1
   generatedResource: []
 --- !u!4 &248298816
 Transform:
@@ -30456,6 +30462,12 @@ MonoBehaviour:
   - Object: {fileID: 8100048574099637306, guid: fa41d38f0fc0a304c8123096978d3610, type: 3}
     parent: {fileID: 1353563428}
     type: 2
+  - Object: {fileID: 8100048574099637306, guid: ae9d95b44665a46458cdedcdac5c3954, type: 3}
+    parent: {fileID: 1353563428}
+    type: 3
+  - Object: {fileID: 8100048574099637306, guid: 576030cd6772fbc4f925408435488039, type: 3}
+    parent: {fileID: 1353563428}
+    type: 4
   generatedProjectile: []
 --- !u!1 &1354050576
 GameObject:
@@ -32671,6 +32683,16 @@ MonoBehaviour:
     waveType: 1
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 555653ea8ee5564458f26735db6f335d, type: 2}
+  - StartWaveTime: 60
+    StopWaveTime: 61
+    waveType: 1
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: 234c9809c2894784cbfb9aaf05c17cec, type: 2}
+  - StartWaveTime: 90
+    StopWaveTime: 91
+    waveType: 1
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
   inProgressWaves: []
   enemyPools:
   - {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
