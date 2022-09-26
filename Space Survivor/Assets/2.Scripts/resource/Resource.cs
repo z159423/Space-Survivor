@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Resource : MonoBehaviour
 {
-    [SerializeField] private resourceType type;
+    [SerializeField] public resourceType type;
 
     [Space]
 

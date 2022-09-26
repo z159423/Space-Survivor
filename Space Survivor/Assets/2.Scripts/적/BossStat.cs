@@ -12,13 +12,37 @@ public class BossStat : EnemyStat
 
     [SerializeField] private DropTable bossDropTable;
 
+    [Space]
+
+    [SerializeField] private Transform HP_parent;
+    [SerializeField] private Transform HP_Bar;
+    public Vector3 Hp_offset;
+
+    public bool finalBoss = false;
+
+    private void FixedUpdate()
+    {
+        base.FixedUpdate();
+        HP_parent.transform.position = transform.position + Hp_offset;
+        HP_parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+    }
+
     public override void Die()
     {
         base.Die();
 
-        EnemyGenerator.instance.bossFighting = false;
-
         base.ResourceDrop(bossDropTable);
+
+        if (finalBoss)
+        {
+            Item.HyperAtomicExplosion(transform.position);
+            GameManager.instance.ClearStage();
+        }
+        else
+        {
+            EnemyGenerator.instance.bossFighting = false;
+        }
+            
     }
 
     public override void TakeDamage(int damage)
@@ -31,5 +55,7 @@ public class BossStat : EnemyStat
         TextGenerator.instance.DequeueText(damageTextGeneartePosition.position, damage, textGenerateOffset);
 
         OnChangeHp();
+
+        HP_Bar.localScale = new Vector3((float)currentHp / (float)maxHp, 1, 1);
     }
 }

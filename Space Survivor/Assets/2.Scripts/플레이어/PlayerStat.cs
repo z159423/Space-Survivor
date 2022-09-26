@@ -64,7 +64,7 @@ public class PlayerStat : MonoBehaviour
 
     [Space]
 
-    [SerializeField] private bool invinsible = false;
+    [SerializeField] public bool invinsible = false;
 
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
 

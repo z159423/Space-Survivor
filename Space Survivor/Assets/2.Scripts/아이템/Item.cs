@@ -53,10 +53,27 @@ public class Item : MonoBehaviour
 
         for (int i = 0; i < colliders.Length; i++)
         {
-            
-
             if (colliders[i].GetComponent<Resource>() != null)
                 colliders[i].GetComponent<Resource>().StartPull(player.transform);
+        }
+    }
+
+    public static void CrystalOnlyMagnetic(Transform player)
+    {
+        int layer = 1 << LayerMask.NameToLayer("Resource");
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.transform.position, 50f, layer);
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].GetComponent<Resource>() != null)
+            {
+                if (colliders[i].GetComponent<Resource>().type == resourceType.Crystal)
+                {
+                    colliders[i].GetComponent<Resource>().StartPull(player.transform);
+                }
+            }
+                
         }
     }
 
@@ -78,6 +95,27 @@ public class Item : MonoBehaviour
         }
 
         VFXGenerator.instance.GenerateVFX(VFXType.AtomicExplosion, player.transform.position);
+        //EZCameraShake.CameraShaker.Instance.ShakeOnce(6f, 6f, .2f, 1.5f);
+        CinemachinShake.instance.ShakeCamera(5, 1f);
+    }
+
+    public static void HyperAtomicExplosion(Vector3 position)
+    {
+        int layer = 1 << LayerMask.NameToLayer("Enemy");
+
+        int damage = 9999;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 25f, layer);
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].GetComponent<EnemyStat>() != null)
+            {
+                colliders[i].GetComponent<EnemyStat>().TakeDamage(damage);
+            }
+        }
+
+        VFXGenerator.instance.GenerateVFX(VFXType.AtomicExplosion, position);
         //EZCameraShake.CameraShaker.Instance.ShakeOnce(6f, 6f, .2f, 1.5f);
         CinemachinShake.instance.ShakeCamera(5, 1f);
     }

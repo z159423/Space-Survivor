@@ -28,8 +28,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject shipTrialBtn;
     [SerializeField] private Color buyBtnDisableColor;
     [SerializeField] private Color buyBtnEnableColor;
-
     [SerializeField] private CinemachineVirtualCamera cmvc;
+    [SerializeField] private TextMeshProUGUI clearStage_getCrystalCountText;
+    [SerializeField] private TextMeshProUGUI clearStage_killCountText;
+    [SerializeField] private GameObject clearStageMenu;
 
     [Space]
 
@@ -85,6 +87,7 @@ public class GameManager : MonoBehaviour
         inGameMenu.SetActive(true);
         MainMenu.SetActive(false);
         DieMenu.SetActive(false);
+        clearStageMenu.SetActive(false);
         player.SetActive(true);
         //EnemyGenerator.instance.StartEnemySpawn();
         hpBar.SetActive(true);
@@ -97,6 +100,8 @@ public class GameManager : MonoBehaviour
 
         EnemyGenerator.instance.bossFighting = false;
         revivedThisGame = false;
+
+        playerStat.invinsible = false;
     }
 
     public void ReplayGame()
@@ -111,6 +116,7 @@ public class GameManager : MonoBehaviour
         inGameMenu.SetActive(false);
         MainMenu.SetActive(true);
         DieMenu.SetActive(false);
+        clearStageMenu.SetActive(false);
         //player.SetActive(false);
         hpBar.SetActive(false);
 
@@ -153,6 +159,27 @@ public class GameManager : MonoBehaviour
         }
 
         gameStart = false;
+    }
+
+    public void ClearStage()
+    {
+        playerStat.invinsible = true;
+        clearStage_getCrystalCountText.text = playerStat.currentCrystal.ToString();
+        clearStage_killCountText.text = currentKillCount.ToString();
+
+        inGameMenu.SetActive(false);
+        clearStageMenu.SetActive(true);
+
+        gameStart = false;
+
+        StartCoroutine(LootAllItem());
+
+        IEnumerator LootAllItem()
+        {
+            yield return new WaitForSeconds(0.15f);
+            Item.CrystalOnlyMagnetic(player.transform);
+        }
+        
     }
 
     public void AddKillCount()

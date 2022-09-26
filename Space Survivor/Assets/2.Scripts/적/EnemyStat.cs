@@ -8,7 +8,7 @@ public class EnemyStat : MonoBehaviour
 {
     [SerializeField] private EnemyType type;
 
-    [SerializeField] private int maxHp = 10;
+    [SerializeField] protected int maxHp = 10;
     protected int currentHp = 10;
 
     [Space]
@@ -44,7 +44,7 @@ public class EnemyStat : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    protected void FixedUpdate()
     {
         movedir = (target.position - transform.position).normalized;
 
