@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Projectile_FireworkRocket : ProjectileLogic
 {
+    [Space]
+
+    [SerializeField] private Firecracker firecracker;
+
     public override void Fire(Transform target, int fireForce)
     {
         /*
@@ -46,5 +50,19 @@ public class Projectile_FireworkRocket : ProjectileLogic
         {
             AddForce(randomNearEnemy, fireForce);
         }
+    }
+
+    public override void ResetProjectileStat()
+    {
+        base.ResetProjectileStat();
+
+
+    }
+
+    public override void IncreaseExplodeRadius(float value)
+    {
+        base.IncreaseExplodeRadius(value);
+
+        firecracker.AddExplodeRadius(value);
     }
 }

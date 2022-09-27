@@ -215,10 +215,10 @@ public class PlayerStat : MonoBehaviour
         currentHp = maxHp;
         playerDie = false;
 
-        moveSpeed.ClearIntModifier();
+        moveSpeed.ClearFloatModifier();
         moveSpeed.ClearPercentModifier();
 
-        rotationSpeed.ClearIntModifier();
+        rotationSpeed.ClearFloatModifier();
         rotationSpeed.ClearPercentModifier();
 
         currentShieldStack = 0;

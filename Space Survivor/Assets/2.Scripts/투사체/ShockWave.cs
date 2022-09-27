@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShockWave : MonoBehaviour
 {
-    [SerializeField] private Stat damage = new Stat();
+    //[SerializeField] private Stat damage = new Stat();
     [SerializeField] private Stat damageRadius = new Stat();
     [SerializeField] private int knockbackForce;
 
@@ -24,11 +24,17 @@ public class ShockWave : MonoBehaviour
 
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
-        float currentDamage = (damage.GetFinalStatValue()
+        float currentDamage = (projectileLogic.GetDamage().GetFinalStatValue()
          + projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()
          + projectileLogic.GetDamage().GetFinalStatValueAsInt())
           * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
 
         Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
+    }
+
+    public void ResetStat()
+    {
+        damageRadius.ClearFloatModifier();
+        damageRadius.ClearPercentModifier();
     }
 }

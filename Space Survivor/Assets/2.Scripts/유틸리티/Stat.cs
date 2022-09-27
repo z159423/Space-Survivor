@@ -87,7 +87,7 @@ public class Stat
             PercentModifiers.Remove(modifier);
     }
 
-    public void ClearIntModifier()
+    public void ClearFloatModifier()
     {
         FloatModifiers.Clear();
     }

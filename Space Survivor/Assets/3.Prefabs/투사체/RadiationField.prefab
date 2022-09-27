@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8538666003500955733}
-  - component: {fileID: 5223142546488771326}
+  - component: {fileID: 3544835137201256020}
   - component: {fileID: -8217749681507802013}
   - component: {fileID: 807832537379609315}
   m_Layer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5223142546488771326
+--- !u!114 &3544835137201256020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5838637156235729955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f1302ced0e35f4fb31f53e14d91a76, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bf62f77b079ffd46bf0fae33ffb3d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 10
@@ -53,19 +53,22 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   hitLimit: 10000
-  knockBackForce: 3
+  knockBackForce: 0
   deleteOnTime: 1
   deleteTime: 1
   deleteVFXType: 0
   Spread: 0
-  spreadOffset: {x: 0.5, y: 0.5, z: 0}
+  spreadOffset: {x: 0, y: 0, z: 0}
   randomSpawn: 0
   randomSpawnOffset: {x: 0, y: 0, z: 0}
-  fireToNearEnemyRadius: 7
+  fireToNearEnemyRadius: 25
   rigid: {fileID: 807832537379609315}
   vfxs: []
   trails: []
+  radiationField: {fileID: -8217749681507802013}
 --- !u!114 &-8217749681507802013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,20 +81,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b255daf494d1b4f93176a75470d24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage:
-    baseValue: 0
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
   damageRadius:
     baseValue: 1.5
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   knockbackForce: 1
-  projectileLogic: {fileID: 5223142546488771326}
+  shipDamageFixedPercent: 0.25
+  projectileLogic: {fileID: 3544835137201256020}
 --- !u!50 &807832537379609315
 Rigidbody2D:
   serializedVersion: 4

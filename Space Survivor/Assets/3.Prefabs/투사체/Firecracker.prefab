@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   damage:
-    baseValue: 0
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -74,6 +74,7 @@ MonoBehaviour:
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
+  firecracker: {fileID: 0}
 --- !u!114 &2387518430026055367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +87,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c483f1169caab6048b1b292abd2f0d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explodeDamage:
+  explodeTime:
+    baseValue: 1.8
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  explodeRadius:
+    baseValue: 1.5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  knockbackForce:
     baseValue: 5
     minValue: 0
     MinValue: 0
@@ -94,9 +111,6 @@ MonoBehaviour:
     MaxValue: 1000
     FloatModifiers: []
     PercentModifiers: []
-  explodeTime: 1.5
-  explodeRadius: 1.8
-  knockbackForce: 5
   vfxType: 5
   projectileLogic: {fileID: -8413117416544549146}
 --- !u!212 &2596404529426074017

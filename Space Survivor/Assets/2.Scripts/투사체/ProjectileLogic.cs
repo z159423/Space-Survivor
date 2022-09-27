@@ -238,6 +238,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     public void UpgradeProjectile(GameObject projectile)
     {
+        ResetProjectileStat();
         weaponObject.UpgradeProjectile(projectile);
     }
 
@@ -263,7 +264,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
     public void ClearDamageModifire()
     {
-        damage.ClearIntModifier();
+        damage.ClearFloatModifier();
         damage.ClearPercentModifier();
     }
 
@@ -278,5 +279,27 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
         //print(size);
         transform.localScale = weaponObject.currentSizeVector * weaponObject.currentSize.GetFinalStatValue();
+    }
+
+    public virtual void ResetProjectileStat()
+    {
+        ClearDamageModifire();
+        transform.localScale = weaponObject.currentSizeVector;
+    }
+
+    public virtual void IncreaseExplodeRadius(float value)
+    {
+
+    }
+
+    public virtual void IncreseRotateSpeed(float value)
+    {
+
+    }
+
+    public virtual void IncreaseProjectileSize(float value)
+    {
+        weaponObject.currentSize.AddPercentModifier(value);
+        //transform.localScale += new Vector3(value, value, value);
     }
 }

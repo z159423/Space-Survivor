@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Firecracker : MonoBehaviour
 {
-    [SerializeField] private Stat explodeDamage = new Stat();
-    [SerializeField] private float explodeTime;
-    [SerializeField] private float explodeRadius;
-    [SerializeField] private int knockbackForce;
+    //[SerializeField] private Stat explodeDamage = new Stat();
+    //[SerializeField] private float explodeTime;
+    //[SerializeField] private float explodeRadius;
+    //[SerializeField] private int knockbackForce;
+    [SerializeField] private Stat explodeTime = new Stat();
+    [SerializeField] private Stat explodeRadius = new Stat();
+    [SerializeField] private Stat knockbackForce = new Stat();
     [SerializeField] private VFXType vfxType;
 
     [Space]
@@ -21,22 +24,34 @@ public class Firecracker : MonoBehaviour
 
     public void AddExplodeRadius(float radius)
     {
-        explodeRadius += radius;
+        explodeRadius.AddFloatModifier(radius);
+    }
+
+    public void ResetStat()
+    {
+        explodeTime.ClearFloatModifier();
+        explodeTime.ClearPercentModifier();
+
+        explodeRadius.ClearFloatModifier();
+        explodeRadius.ClearPercentModifier();
+
+        knockbackForce.ClearFloatModifier();
+        knockbackForce.ClearPercentModifier();
     }
 
 
     IEnumerator Explode()
     {
-        yield return new WaitForSeconds(explodeTime);
+        yield return new WaitForSeconds(explodeTime.GetFinalStatValue());
 
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
-        float currentDamage = (explodeDamage.GetFinalStatValue()
+        float currentDamage = (projectileLogic.GetDamage().GetFinalStatValue()
          + projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()
          + projectileLogic.GetDamage().GetFinalStatValueAsInt())
           * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
 
-        Utility.Explode(transform.position, currentDamage, explodeRadius, knockbackForce, vfxType, cameraShakeInstance);
+        Utility.Explode(transform.position, currentDamage, explodeRadius.GetFinalStatValue(), knockbackForce.GetFinalStatValueAsInt(), vfxType, cameraShakeInstance);
 
         projectileLogic.OffProjectile();
     }

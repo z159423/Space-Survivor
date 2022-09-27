@@ -55,6 +55,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   hitLimit: 10000
   knockBackForce: 3
   deleteOnTime: 1
@@ -70,10 +72,16 @@ MonoBehaviour:
   trails:
   - {fileID: 5662989110531773721}
   player: {fileID: 0}
-  rotateSpeed: 150
+  rotateSpeed:
+    baseValue: 150
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   rotateDir: {x: 0, y: 0, z: 1}
   trailRenderer: {fileID: 5662989110531773721}
-  projectileLogic: {fileID: 0}
 --- !u!212 &2596404529426074017
 SpriteRenderer:
   m_ObjectHideFlags: 0

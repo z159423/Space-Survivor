@@ -49,8 +49,8 @@ public class SelfRepairStat : ScriptableObject, IPassiveEquipment
 
     public void OnEndGame()
     {
-        healValue.ClearIntModifier();
-        coolTime.ClearIntModifier();
+        healValue.ClearFloatModifier();
+        coolTime.ClearFloatModifier();
 
         CoroutineHelper.StopCoroutine(selfRepairCoroutine);
     }

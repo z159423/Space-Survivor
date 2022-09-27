@@ -83,6 +83,7 @@ public class WeaponObject : ScriptableObject , IEquipment
             {
                 projectileLogic = success.Object.GetComponent<IProjectileLogic>();
                 projectileLogic.playerWeapon = playerWeapon;
+                projectileLogic.UpgradeProjectile(success.Object);
                 projectileLogic.ResetProjectile();
             }
             else
@@ -118,6 +119,7 @@ public class WeaponObject : ScriptableObject , IEquipment
         {
             switch (modules.upgradeModules[i].upgradeModuleType)
             {
+                /*
                 case upgradeModuleType.DamageIntIncrease:
 
                     currentDamage.AddFloatModifier(modules.upgradeModules[i].value1);
@@ -130,6 +132,7 @@ public class WeaponObject : ScriptableObject , IEquipment
                         }
                     }
 
+                    
                     for (int j = 0; j < activeProjectile.Count; j++)
                     {
                         if (activeProjectile[j].TryGetComponent<ProjectileLogic>(out ProjectileLogic logic))
@@ -137,7 +140,9 @@ public class WeaponObject : ScriptableObject , IEquipment
                             DamageIncreaseInt(logic, Utility.RountToInt(modules.upgradeModules[i].value1));
                         }
                     }
+                    
                     break;
+                    */
 
                 case upgradeModuleType.CoolTimeDecrease:
                     coolTime.AddPercentModifier(modules.upgradeModules[i].value1);
@@ -151,9 +156,11 @@ public class WeaponObject : ScriptableObject , IEquipment
                     FireForce.AddPercentModifier(modules.upgradeModules[i].value1);
                     break;
 
+                    
                 case upgradeModuleType.IncreaseSize:
                     currentSize.AddPercentModifier(modules.upgradeModules[i].value1);
 
+                    SetSizeWhileParticle();
                     /*
                     foreach (GameObject projectile in bulletStack)
                     {
@@ -166,9 +173,10 @@ public class WeaponObject : ScriptableObject , IEquipment
                     }
                     */
 
-                    SetSizeWhileParticle();
+
                     break;
 
+                    /*
                 case upgradeModuleType.IncreseRotateSpeed:
 
                     foreach (GameObject projectile in bulletStack)
@@ -179,6 +187,7 @@ public class WeaponObject : ScriptableObject , IEquipment
                         }
                     }
 
+                    
                     for (int j = 0; j < activeProjectile.Count; j++)
                     {
                         if (activeProjectile[j].TryGetComponent<ThronSpike>(out ThronSpike spike))
@@ -186,9 +195,12 @@ public class WeaponObject : ScriptableObject , IEquipment
                             IncreseRotateSpeed(spike, Utility.RountToInt(modules.upgradeModules[i].value1));
                         }
                     }
+                    
 
                     break;
+                    */
 
+                    /*
                 case upgradeModuleType.IncreseExplodeRadius:
 
                     VFXType type = VFXType.none;
@@ -217,6 +229,7 @@ public class WeaponObject : ScriptableObject , IEquipment
                         VFXGenerator.instance.AddParticleSize(type, 0.1f);
 
                     break;
+                    */
 
 
             }
@@ -231,18 +244,6 @@ public class WeaponObject : ScriptableObject , IEquipment
     private void DamageIncreaseInt(ProjectileLogic logic, int value)
     {
         logic.AddDamage(Utility.RountToInt(value));
-    }
-
-    private void IncreseSize(GameObject projectile, float percent)
-    {
-        projectile.transform.localScale *= percent;
-
-        //Debug.Log(projectile + "SizeUp " + percent);
-    }
-
-    private void IncreseRotateSpeed(ThronSpike spike, int rotate)
-    {
-        spike.AddRotateSpeed(rotate);
     }
 
     public void EnQueue(GameObject bullet)
@@ -300,28 +301,49 @@ public class WeaponObject : ScriptableObject , IEquipment
                     };
                     break;
 
+                    /*
                 case upgradeModuleType.IncreaseSize:
-                    IncreseSize(projectile, currentUpgradeModules[i].value1);
-
-                    if (projectile.TryGetComponent<ShockWave>(out ShockWave shockWave))
+                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
                     {
-                        shockWave.AddRadius(.3f);
+                        logic4.IncreaseProjectileSize(currentUpgradeModules[i].value1);
                     };
+
+                    //IncreseSize(projectile, currentUpgradeModules[i].value1);
+
+                    
                     break;
+                    */
 
                 case upgradeModuleType.IncreseRotateSpeed:
+                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic3))
+                    {
+                        logic3.IncreseRotateSpeed(currentUpgradeModules[i].value1);
+                    };
+
+                    /*
                     if (projectile.TryGetComponent<ThronSpike>(out ThronSpike spike))
                     {
                         IncreseRotateSpeed(spike, Utility.RountToInt(currentUpgradeModules[i].value1));
                     };
+                    */
                     break;
 
                 case upgradeModuleType.IncreseExplodeRadius:
+                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic2))
+                    {
+                        logic2.IncreaseExplodeRadius(currentUpgradeModules[i].value1);
+                    };
+
+                    /*
+                    if (projectile.TryGetComponent<ShockWave>(out ShockWave shockWave))
+                    {
+                        shockWave.AddRadius(.3f);
+                    };
 
                     if (projectile.TryGetComponent<Firecracker>(out Firecracker script))
                     {
                         script.AddExplodeRadius(currentUpgradeModules[i].value1);
-                    }
+                    }*/
 
                     break;
             }

@@ -6,17 +6,13 @@ public class ThronSpike : ProjectileLogic
 {
 
     [SerializeField] private Transform player;
-    [SerializeField] private float rotateSpeed = 1f;
+    [SerializeField] private Stat rotateSpeed = new Stat();
     [SerializeField] private Vector3 rotateDir = new Vector3(0, 0, 1);
 
     [SerializeField] private TrailRenderer trailRenderer;
-    [SerializeField] private ProjectileLogic projectileLogic;
-
-    
-
     void Update()
     {
-        transform.transform.RotateAround(player.position, rotateDir, rotateSpeed * Time.deltaTime);
+        transform.transform.RotateAround(player.position, rotateDir, rotateSpeed.GetFinalStatValue() * Time.deltaTime);
     }
 
     public override void Fire(Transform target, int fireForce)
@@ -42,9 +38,9 @@ public class ThronSpike : ProjectileLogic
         trailRenderer.Clear();
     }
 
-    public void AddRotateSpeed(int speed)
+    public void AddRotateSpeed(float speed)
     {
-        rotateSpeed += speed;
+        rotateSpeed.AddFloatModifier(speed);
     }
 
     private void OnDisable()
@@ -54,5 +50,20 @@ public class ThronSpike : ProjectileLogic
             OffProjectile();
         }
         
+    }
+
+    public override void ResetProjectileStat()
+    {
+        base.ResetProjectileStat();
+
+        rotateSpeed.ClearFloatModifier();
+        rotateSpeed.ClearPercentModifier();
+    }
+
+    public override void IncreseRotateSpeed(float value)
+    {
+        base.IncreseRotateSpeed(value);
+
+        AddRotateSpeed(value);
     }
 }

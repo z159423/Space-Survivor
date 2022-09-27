@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class RadiationField : MonoBehaviour
 {
-    [SerializeField] private Stat damage = new Stat();
+    //[SerializeField] private Stat damage = new Stat();
     [SerializeField] private Stat damageRadius = new Stat();
     [SerializeField] private int knockbackForce;
+
+    [Space]
+
+    [SerializeField] private float shipDamageFixedPercent = 0.25f;
 
     [Space]
 
@@ -17,6 +21,14 @@ public class RadiationField : MonoBehaviour
         damageRadius.AddFloatModifier(addRadius);
     }
 
+    public void ResetStat()
+    {
+        //damage.ClearFloatModifier();
+        //damage.ClearPercentModifier();
+        damageRadius.ClearFloatModifier();
+        damageRadius.ClearPercentModifier();
+    }
+
     private void OnEnable()
     {
         if (projectileLogic.playerWeapon == null)
@@ -24,10 +36,9 @@ public class RadiationField : MonoBehaviour
 
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
-        float currentDamage = (damage.GetFinalStatValue()
-         + projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()
-         + projectileLogic.GetDamage().GetFinalStatValueAsInt())
-          * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
+        float currentDamage = (projectileLogic.GetDamage().GetFinalStatValue()
+         + (projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt() * shipDamageFixedPercent)
+          * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue());
 
         Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
     }
