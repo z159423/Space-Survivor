@@ -56,7 +56,7 @@ public class Projectile_FireworkRocket : ProjectileLogic
     {
         base.ResetProjectileStat();
 
-
+        firecracker.ResetStat();
     }
 
     public override void IncreaseExplodeRadius(float value)

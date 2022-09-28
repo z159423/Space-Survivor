@@ -41,7 +41,7 @@ MonoBehaviour:
     PercentModifiers: []
   ready: 1
   coolTime:
-    baseValue: 5
+    baseValue: 3.5
     minValue: 0
     MinValue: 0
     maxValue: 0

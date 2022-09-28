@@ -74,7 +74,7 @@ MonoBehaviour:
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
-  firecracker: {fileID: 0}
+  firecracker: {fileID: 2387518430026055367}
 --- !u!114 &2387518430026055367
 MonoBehaviour:
   m_ObjectHideFlags: 0

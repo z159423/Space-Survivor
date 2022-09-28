@@ -98,6 +98,7 @@ public class WeaponObject : ScriptableObject , IEquipment
                 projectileLogic.weaponObject.AddActiveProjectile(Object);
             }
 
+            success.Object.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             projectileLogic.SetSize();
             projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
 
