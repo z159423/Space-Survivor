@@ -20,54 +20,70 @@ MonoBehaviour:
     - rid: 1427024619712020493
   m_TableData:
   - m_Id: 11009945600
-    m_Localized: 
+    m_Localized: Reduces Cooldown by {VALUE1}%
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 22900797440
-    m_Localized: 
+    m_Localized: '{VALUE1} Damage Increase'
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 155352723456
-    m_Localized: 
+    m_Localized: '{VALUE1}% increased explosion radius'
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 157194022912
-    m_Localized: 
+    m_Localized: +{VALUE1} Amount projectiles
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 259052695552
-    m_Localized: 
+    m_Localized: increase rotation speed
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 356184387584
-    m_Localized: 
+    m_Localized: increased projectile size
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 30046568894382080
-    m_Localized: 
+    m_Localized: Increased resource acquisition range
     m_Metadata:
       m_Items: []
   - m_Id: 30060295026851840
-    m_Localized: 
+    m_Localized: Increases mineral gain by {VALUE2}%
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 30091780840701952
-    m_Localized: 
+    m_Localized: Reduces repair speed by {VALUE1} seconds
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
   - m_Id: 31453822477737984
-    m_Localized: 
+    m_Localized: Damage increased by {VALUE1}%
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
+  - m_Id: 30091900621635584
+    m_Localized: increase in repair volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31136969851215872
+    m_Localized: movement speed increase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31136971369553920
+    m_Localized: rotation speed increase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35165114813071360
+    m_Localized: increased reload speed
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
