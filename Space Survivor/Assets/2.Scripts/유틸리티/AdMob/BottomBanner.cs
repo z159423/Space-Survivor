@@ -7,6 +7,12 @@ public class BottomBanner : MonoBehaviour
 {
     private BannerView bannerView;
 
+    //Test ID ca-app-pub-3940256099942544/6300978111
+    [SerializeField] private string Aos_bannerAdUnitId = "";
+    //Test ID ca-app-pub-3940256099942544/2934735716
+    [SerializeField] private string Ios_bannerAdUnitId = "";
+
+
     public void Start()
     {
         // Initialize the Google Mobile Ads SDK.
@@ -18,9 +24,9 @@ public class BottomBanner : MonoBehaviour
     private void RequestBanner()
     {
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/6300978111";
+        string adUnitId = Aos_bannerAdUnitId;
 #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/2934735716";
+            string adUnitId = Ios_bannerAdUnitId;
 #else
             string adUnitId = "unexpected_platform";
 #endif

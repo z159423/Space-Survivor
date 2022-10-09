@@ -6,6 +6,11 @@ using System;
 
 public class InterstitialAdCaller : MonoBehaviour
 {
+    //Test ID ca-app-pub-3940256099942544/1033173712
+    public string androidAdUnitId;
+    //Test ID ca-app-pub-3940256099942544/4411468910
+    public string iosAdUnitId;
+
     public static InterstitialAdCaller instance;
 
     public float IrAdsCallTime = 10f;
@@ -13,8 +18,7 @@ public class InterstitialAdCaller : MonoBehaviour
 
     [Space]
 
-    public string androidAdUnitId;
-    public string iosAdUnitId;
+    
 
     string adUnitId;
 

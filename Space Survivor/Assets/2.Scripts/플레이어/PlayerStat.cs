@@ -24,9 +24,14 @@ public class PlayerStat : MonoBehaviour
     public int currentShieldStack = 0;
     public int maxShieldStack = 0;
     public bool shieldInvinsible = false;
-    public float shieldInvinsibleTime = 1f;
-    public float shieldReloadTime = 5f;
+    public Stat shieldInvinsibleTime = new Stat();
+    public Stat shieldReloadTime = new Stat();
     public GameObject shieldImage;
+    public Color oneShieldStackColor;
+    public Color twoShieldStackColor;
+    public Color thereShieldStackColor;
+    private Coroutine shieldReloadCoroutine;
+
 
     [Space]
 
@@ -69,7 +74,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
 
     private Sequence mySequence;
-    
+
     private void Start()
     {
 
@@ -151,7 +156,7 @@ public class PlayerStat : MonoBehaviour
 
         currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
 
-        Vibration.Vibrate((long)15);
+        Vibration.Vibrate((long)30);
 
         OnChangeExp();
     }
@@ -236,7 +241,7 @@ public class PlayerStat : MonoBehaviour
         OnChangeExp();
         hpBar.SetState(currentHp, maxHp);
 
-        for(int i = 0; i < playerWeapon.passivePool.Count; i++)
+        for (int i = 0; i < playerWeapon.passivePool.Count; i++)
         {
             playerWeapon.passivePool[i].passiveStat.OnEndGame();
         }
@@ -245,6 +250,8 @@ public class PlayerStat : MonoBehaviour
         ClearWeaponSlots();
 
         playerWeapon.additionalDamage.ClearPercentModifier();
+        shieldInvinsibleTime.ClearPercentModifier();
+        shieldReloadTime.ClearPercentModifier();
     }
 
     public void PlayGame()
@@ -257,7 +264,7 @@ public class PlayerStat : MonoBehaviour
 
     public void MakeThisShip(ShipObject ship, Quaternion bodyrotation)
     {
-        currentShipBody = Instantiate(ship.shipBody,transform.position,bodyrotation, transform);
+        currentShipBody = Instantiate(ship.shipBody, transform.position, bodyrotation, transform);
 
         playerMovement.SetPlayerBody(currentShipBody.transform);
 
@@ -374,6 +381,11 @@ public class PlayerStat : MonoBehaviour
             this.shieldImage = shieldImage;
             AddShield();
         }
+        else
+        {
+            if (shieldReloadCoroutine == null)
+                shieldReloadCoroutine = StartCoroutine(ReloadShield());
+        }
     }
 
     public void AddShield()
@@ -384,6 +396,7 @@ public class PlayerStat : MonoBehaviour
         print("쉴드 생성");
 
         currentShieldStack++;
+        OnChangeShieldStack();
 
         shieldImage.SetActive(true);
     }
@@ -393,7 +406,7 @@ public class PlayerStat : MonoBehaviour
         print("쉴드 사용 무적 시작");
         shieldInvinsible = true;
 
-        yield return new WaitForSeconds(shieldInvinsibleTime);
+        yield return new WaitForSeconds(shieldInvinsibleTime.GetFinalStatValue());
 
         shieldInvinsible = false;
         currentShieldStack--;
@@ -403,7 +416,10 @@ public class PlayerStat : MonoBehaviour
 
         print("쉴드 무적 끝");
 
-        StartCoroutine(ReloadShield());
+        OnChangeShieldStack();
+
+        if (shieldReloadCoroutine == null)
+            shieldReloadCoroutine = StartCoroutine(ReloadShield());
     }
 
     public IEnumerator ReloadShield()
@@ -414,13 +430,18 @@ public class PlayerStat : MonoBehaviour
         {
             if (playerWeapon.passivePool[i].type == EquipmentType.EnergyShield)
             {
-                playerWeapon.passivePool[i].passiveStat.StartPassiveSlotCoolTimeImage(shieldReloadTime);
+                playerWeapon.passivePool[i].passiveStat.StartPassiveSlotCoolTimeImage(shieldReloadTime.GetFinalStatValue());
                 break;
             }
         }
-        yield return new WaitForSeconds(shieldReloadTime);
+        yield return new WaitForSeconds(shieldReloadTime.GetFinalStatValue());
 
         AddShield();
+
+        shieldReloadCoroutine = null;
+
+        if (currentShieldStack < maxShieldStack)
+            shieldReloadCoroutine = StartCoroutine(ReloadShield());
     }
 
     public void ResetShield()
@@ -429,5 +450,28 @@ public class PlayerStat : MonoBehaviour
 
         currentShieldStack = 0;
         maxShieldStack = 0;
+    }
+
+    private void OnChangeShieldStack()
+    {
+        switch (currentShieldStack)
+        {
+            case 0:
+
+                break;
+
+            case 1:
+                shieldImage.GetComponent<SpriteRenderer>().color = oneShieldStackColor;
+                break;
+
+            case 2:
+                shieldImage.GetComponent<SpriteRenderer>().color = twoShieldStackColor;
+                break;
+
+            case 3:
+                shieldImage.GetComponent<SpriteRenderer>().color = thereShieldStackColor;
+                break;
+
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public static class Vibration
 {
     public static bool enableVibration = true;
-    public static float vibraitonCoolTime = 0.3f;
+    public static float vibraitonCoolTime = 0.1f;
 
 #if UNITY_ANDROID && !UNITY_EDITOR
     public static AndroidJavaClass AndroidPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
@@ -22,7 +22,7 @@ public static class Vibration
 
     public static void Vibrate(long milliseconds)
     {
-        if (!SettingManager.instance.vibration && enableVibration)
+        if (!SettingManager.instance.vibration || !enableVibration)
             return;
 
 #if UNITY_ANDROID && !UNITY_EDITOR

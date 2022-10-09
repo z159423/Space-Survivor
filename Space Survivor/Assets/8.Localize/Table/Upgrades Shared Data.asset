@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: DecreaseCoolTime
     m_Metadata:
       m_Items: []
+  - m_Id: 41745831754498048
+    m_Key: ShieldCountIncrease
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

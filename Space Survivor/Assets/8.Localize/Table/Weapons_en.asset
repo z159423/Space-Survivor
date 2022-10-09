@@ -18,7 +18,144 @@ MonoBehaviour:
   m_Metadata:
     m_Items:
     - rid: 1427024619712020490
-  m_TableData: []
+  m_TableData:
+  - m_Id: 190458282012672
+    m_Localized: Firework Rocket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 190555086548992
+    m_Localized: Homing Missile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 190584593477632
+    m_Localized: Meteorite Flak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 190663521890304
+    m_Localized: Square Turret
+    m_Metadata:
+      m_Items: []
+  - m_Id: 190704651235328
+    m_Localized: Thorn Satellite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192617945919488
+    m_Localized: Fireworks that explode after a certain amount of time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192618658951168
+    m_Localized: Fires missiles that automatically track enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192620634468352
+    m_Localized: "\rFires multiple meteorite fragments in random directions."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192621536243712
+    m_Localized: Fires bullets in random directions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192623075553280
+    m_Localized: Fires bullets in the direction of the enemy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192623851499520
+    m_Localized: Summons a satellite that orbits around the player.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2773398622990336
+    m_Localized: Shockwave Generator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2773485830959104
+    m_Localized: Generates shock waves at regular intervals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20464507889283072
+    m_Localized: "\rMachine Gun"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20464580912115712
+    m_Localized: Fires multiple bullets forward.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20495511274287104
+    m_Localized: "\rSelf Repair"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20495621211189248
+    m_Localized: Self repairing at regular intervals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26306782612979712
+    m_Localized: Radiation Field
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26306882600992768
+    m_Localized: Periodically deals damage to nearby enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27759636562788352
+    m_Localized: Spiral Missile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27759743177801728
+    m_Localized: Fires a projectile that pierces enemies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28134398388551680
+    m_Localized: Energy Shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30236299439587328
+    m_Localized: Magnetic Generator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28134463299600384
+    m_Localized: Creates a shield that blocks enemy attacks for a certain period
+      of time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30236337402232832
+    m_Localized: Increase resource acquisition range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30251343174909952
+    m_Localized: Mineral Refiner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30251434438770688
+    m_Localized: Increases the amount of minerals obtained
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31031801440706560
+    m_Localized: Thruster Reinforcement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31031855329124352
+    m_Localized: Movement speed and rotation speed increase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31644266901872640
+    m_Localized: Enhanced Siege
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31644327547314176
+    m_Localized: Damage is increased by 10%.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35355740766683136
+    m_Localized: Reloading Device
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35355763722108928
+    m_Localized: Increased weapon reload speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 190627044028416
+    m_Localized: Arrow Cannon
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

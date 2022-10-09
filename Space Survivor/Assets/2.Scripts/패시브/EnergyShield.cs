@@ -14,15 +14,28 @@ public class EnergyShield : ScriptableObject, IPassiveEquipment
 
     public EquipmentSlot CoolTimeSlot;
 
+    private PlayerStat playerStat;
+
     public void UpgradePassive(UpgradeModule upgradeModule)
     {
+        switch (upgradeModule.upgradeModuleType)
+        {
+            case upgradeModuleType.DecreaseCoolTime:
+                playerStat.shieldReloadTime.AddPercentModifier(-upgradeModule.value1);
+                break;
 
+            case upgradeModuleType.ShieldCountIncrease:
+                AddShieldStack();
+                break;
+        }
     }
 
     public void GetPassiveEffect(PlayerStat playerStat)
     {
         GiveShield(playerStat);
         SetCoolTimeSlot();
+
+        this.playerStat = playerStat;
     }
 
     public IEnumerator StartWhilePassiveEffect()
@@ -32,20 +45,27 @@ public class EnergyShield : ScriptableObject, IPassiveEquipment
 
     public void OnEndGame()
     {
-        
+
     }
 
     private void GiveShield(PlayerStat playerStat)
     {
         if (playerStat.maxShieldStack < shieldStackAmount)
         {
-            if(currentShieldObject == null)
-            currentShieldObject = Instantiate(shieldPrefab, playerStat.transform);
+            if (currentShieldObject == null)
+                currentShieldObject = Instantiate(shieldPrefab, playerStat.transform);
 
             playerStat.GetShield(currentShieldObject);
         }
-            
+
         //playerStat
+    }
+
+    private void AddShieldStack()
+    {
+        shieldStackAmount++;
+
+        playerStat.GetShield(currentShieldObject);
     }
 
     public void SetCoroutine(Coroutine coroutine)

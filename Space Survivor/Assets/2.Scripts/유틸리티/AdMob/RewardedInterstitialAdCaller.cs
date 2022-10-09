@@ -12,8 +12,12 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 {
     public static RewardedInterstitialAdCaller instance;
 
+    //Test ID ca-app-pub-3940256099942544/5224354917
     public string androidAdUnitId;
+    //Test ID ca-app-pub-3940256099942544/1712485313
     public string iosAdUnitId;
+
+    [Space]
 
     string adUnitId;
 

@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI clearStage_getCrystalCountText;
     [SerializeField] private TextMeshProUGUI clearStage_killCountText;
     [SerializeField] private GameObject clearStageMenu;
+    [SerializeField] private GameObject console;
+    [SerializeField] private GameObject inGameDebug;
 
     [Space]
 
@@ -60,6 +62,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+#if UNITY_EDITOR
+        //console.SetActive(true);
+        //inGameDebug.SetActive(true);
+#endif
+
     }
 
     private void Start()
@@ -152,10 +160,11 @@ public class GameManager : MonoBehaviour
             var fill = reviveButton.GetComponent<Image>();
 
             DOTween.To(() => fill.fillAmount, (var) => fill.fillAmount = var, 0, 5).SetEase(Ease.Linear)
-            .OnComplete(() => { 
-                reviveButton.SetActive(false); 
-                fill.fillAmount = 1f; 
-                });
+            .OnComplete(() =>
+            {
+                reviveButton.SetActive(false);
+                fill.fillAmount = 1f;
+            });
         }
 
         gameStart = false;
@@ -179,7 +188,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
             Item.CrystalOnlyMagnetic(player.transform);
         }
-        
+
     }
 
     public void AddKillCount()
