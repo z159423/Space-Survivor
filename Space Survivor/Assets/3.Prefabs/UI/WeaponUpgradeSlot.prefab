@@ -843,7 +843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBBF8\uC0AC\uC77C \uBC1C\uC0AC\uAE30"
+  m_text: "Missile \uAC00\uB098\uB2E4\uB77C 1234"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d69e098062a7694ead09844e556234d, type: 2}
   m_sharedMaterial: {fileID: -7357127223567517424, guid: 7d69e098062a7694ead09844e556234d, type: 2}

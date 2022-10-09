@@ -23,12 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en
     - Preload
-  - m_GUID: fbd21e39f5ea1d6438690e31b6cd97d6
-    m_Address: Weapons_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
   - m_GUID: 3b767ce50a95d42468669f0722237c41
     m_Address: Upgrades_en
     m_ReadOnly: 1
