@@ -68,10 +68,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
+<<<<<<< HEAD
   - m_Id: 41745831754498048
     m_Localized: Increase Shield Amount
     m_Metadata:
       m_Items: []
+=======
+>>>>>>> 23185973152cb6db0528da969fb311419b73531e
   - m_Id: 30091900621635584
     m_Localized: increase in repair volume
     m_Metadata:

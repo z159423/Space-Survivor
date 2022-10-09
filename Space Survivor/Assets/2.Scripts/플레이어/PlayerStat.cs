@@ -140,6 +140,9 @@ public class PlayerStat : MonoBehaviour
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
         Utility.Explode(transform.position, 0, 20, 10, VFXType.Explode1, cameraShakeInstance);
+
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
     }
 
     public void GetCurrentCrystal()

@@ -107,15 +107,25 @@ MonoBehaviour:
     m_Localized: Energy Shield
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 30236299439587328
     m_Localized: Magnetic Generator
     m_Metadata:
       m_Items: []
+=======
+>>>>>>> 23185973152cb6db0528da969fb311419b73531e
   - m_Id: 28134463299600384
     m_Localized: Creates a shield that blocks enemy attacks for a certain period
       of time.
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
+=======
+  - m_Id: 30236299439587328
+    m_Localized: Magnetic Generator
+    m_Metadata:
+      m_Items: []
+>>>>>>> 23185973152cb6db0528da969fb311419b73531e
   - m_Id: 30236337402232832
     m_Localized: Increase resource acquisition range
     m_Metadata:
@@ -152,10 +162,13 @@ MonoBehaviour:
     m_Localized: Increased weapon reload speed
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 190627044028416
     m_Localized: Arrow Cannon
     m_Metadata:
       m_Items: []
+=======
+>>>>>>> 23185973152cb6db0528da969fb311419b73531e
   references:
     version: 2
     RefIds:
