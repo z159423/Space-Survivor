@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
+using System.Linq;
+using System;
 
 public class SettingManager : MonoBehaviour
 {
@@ -21,6 +25,7 @@ public class SettingManager : MonoBehaviour
     public Image vibrationSliderFill;
     public TextMeshProUGUI soundOnOffText;
     public TextMeshProUGUI vibrationOnOffText;
+    public TMP_Dropdown LanguageDropdown;
 
     [Space]
 
@@ -32,14 +37,48 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private GameObject InGame;
     [SerializeField] private Button mainMenuBtn;
 
-    private void Start()
+    IEnumerator Start()
     {
         LoadSettingData();
+
+        // Wait for the localization system to initialize, loading Locales, preloading etc.
+        yield return LocalizationSettings.InitializationOperation;
+
+        // Generate list of available Locales
+        var options = new List<TMP_Dropdown.OptionData>();
+        int selected = 0;
+        for (int i = 0; i < LocalizationSettings.AvailableLocales.Locales.Count; ++i)
+        {
+            var locale = LocalizationSettings.AvailableLocales.Locales[i];
+            if (LocalizationSettings.SelectedLocale == locale)
+                selected = i;
+            options.Add(new TMP_Dropdown.OptionData(locale.name));
+        }
+        LanguageDropdown.options = options;
+
+        LanguageDropdown.value = selected;
+        LanguageDropdown.onValueChanged.AddListener(LocaleSelected);
     }
 
     private void Awake()
     {
         instance = this;
+
+        IEnumerator LocalInit()
+        {
+            yield return LocalizationSettings.InitializationOperation;
+
+            if (Application.systemLanguage == SystemLanguage.English)
+            {
+                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
+            }
+            else if (Application.systemLanguage == SystemLanguage.Korean)
+            {
+                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+            }
+        }
+
+        StartCoroutine(LocalInit());
     }
 
     public void TurnSettingPanel()
@@ -112,10 +151,10 @@ public class SettingManager : MonoBehaviour
     {
         print("load");
 
-        if(PlayerPrefs.HasKey("Sound"))
-        mainMenuSoundSlider.value = PlayerPrefs.GetInt("Sound");
+        if (PlayerPrefs.HasKey("Sound"))
+            mainMenuSoundSlider.value = PlayerPrefs.GetInt("Sound");
         if (PlayerPrefs.HasKey("Vibration"))
-        mainMenuVibrationSlider.value = PlayerPrefs.GetInt("Vibration");
+            mainMenuVibrationSlider.value = PlayerPrefs.GetInt("Vibration");
 
         print(sound + " " + vibration);
 
@@ -123,4 +162,12 @@ public class SettingManager : MonoBehaviour
         OnChangeVibrationSlider();
     }
 
+
+
+    static void LocaleSelected(int index)
+    {
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+    }
+
 }
+
