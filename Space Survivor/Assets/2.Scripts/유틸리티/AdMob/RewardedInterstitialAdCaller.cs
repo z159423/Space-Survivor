@@ -293,16 +293,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             StartCoroutine(startTrial());
 
-
-            IEnumerator startTrial()
-            {
-                touchProjectPanel.SetActive(true);
-                yield return new WaitForSeconds(0.5f);
-
-                shipTrialButton.onClick.Invoke();
-                touchProjectPanel.SetActive(false);
-            }
-
         }
     }
 
@@ -381,17 +371,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print("부활 리워드 광고를 시청완료했습니다. 부활합니다.");
 
             StartCoroutine(revive());
-
-            IEnumerator revive()
-            {
-                touchProjectPanel.SetActive(true);
-                yield return new WaitForSeconds(0.3f);
-
-                reviveButton.onClick.Invoke();
-                touchProjectPanel.SetActive(false);
-                GameManager.instance.revivedThisGame = true;
-            }
-
         }
     }
 
@@ -418,6 +397,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         else
         {
             print("광고가 없습니다");
+
+            StartCoroutine(startTrial());
         }
     }
 
@@ -431,7 +412,32 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         else
         {
             print("광고가 없습니다");
+
+            StartCoroutine(revive());
         }
     }
 
+    //부활
+    IEnumerator revive()
+    {
+        touchProjectPanel.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+
+        reviveButton.onClick.Invoke();
+        touchProjectPanel.SetActive(false);
+        GameManager.instance.revivedThisGame = true;
+    }
+
+    //함선 체험
+    IEnumerator startTrial()
+    {
+        touchProjectPanel.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+
+        shipTrialButton.onClick.Invoke();
+        touchProjectPanel.SetActive(false);
+    }
+
 }
+
+

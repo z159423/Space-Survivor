@@ -9,21 +9,38 @@ public class IAPManager : MonoBehaviour, IStoreListener
     IStoreController m_StoreController; // The Unity Purchasing system.
 
     //Your products IDs. They should match the ids of your products in your store.
-    public string removeAdsId = "com.TeroGames.spacesurvivor.removeads";
-    public string starterPackId = "com.TeroGames.spacesurvivor.starterpack";
-    public string megaPackId = "com.TeroGames.spacesurvivor.megapack";
-    public string ultraPackId = "com.TeroGames.spacesurvivor.ultrapack";
+    public string removeAdsId = "removeads";
+    public string starterPackId = "starterpack";
+    public string megaPackId = "megapack";
+    public string ultraPackId = "ultrapack";
 
     public TextMeshProUGUI removeAdsText;
     public TextMeshProUGUI starterPackText;
     public TextMeshProUGUI megaPackText;
     public TextMeshProUGUI ultraPackText;
-
-
     private void Start()
     {
-        InitializePurchasing();
+        
         //UpdateUI();
+
+        StartCoroutine(InitIAP());
+
+        IEnumerator InitIAP()
+        {
+            while (true)
+            {
+                yield return null;
+
+                print("iap 동기화 시도중");
+                if(m_StoreController != null)
+                {
+                    HadPurchased();
+                    break;
+                }
+            }
+        }
+
+        InitializePurchasing();
     }
 
     public void PurchaseRemoveAds()
@@ -46,21 +63,21 @@ public class IAPManager : MonoBehaviour, IStoreListener
         m_StoreController.InitiatePurchase(ultraPackId);
     }
 
-    private void PurchageStarterPack_Success()
+    public void PurchageStarterPack_Success()
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(1000);
     }
 
-    private void PurchageMegaPack_Success()
+    public void PurchageMegaPack_Success()
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(2500);
     }
 
-    private void PurchageUltraPack_Success()
+    public void PurchageUltraPack_Success()
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
@@ -87,17 +104,24 @@ public class IAPManager : MonoBehaviour, IStoreListener
         builder.AddProduct(ultraPackId, ProductType.Consumable);
 
         UnityPurchasing.Initialize(this, builder);
+
+        //HadPurchased();
     }
 
     public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
     {
         Debug.Log("In-App Purchasing successfully initialized");
+
+        print("IAP 연동 성공");
         m_StoreController = controller;
+
     }
 
     public void OnInitializeFailed(InitializationFailureReason error)
     {
         Debug.Log($"In-App Purchasing initialize failed: {error}");
+
+        print("IAP 연동 실패 + " + error);
     }
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
@@ -131,29 +155,29 @@ public class IAPManager : MonoBehaviour, IStoreListener
     }
 
     bool IsSubscribedTo(Product subscription)
+    {
+        // If the product doesn't have a receipt, then it wasn't purchased and the user is therefore not subscribed.
+        if (subscription.receipt == null)
         {
-            // If the product doesn't have a receipt, then it wasn't purchased and the user is therefore not subscribed.
-            if (subscription.receipt == null)
-            {
-                return false;
-            }
-
-            //The intro_json parameter is optional and is only used for the App Store to get introductory information.
-            var subscriptionManager = new SubscriptionManager(subscription, null);
-
-            // The SubscriptionInfo contains all of the information about the subscription.
-            // Find out more: https://docs.unity3d.com/Packages/com.unity.purchasing@3.1/manual/UnityIAPSubscriptionProducts.html
-            var info = subscriptionManager.getSubscriptionInfo();
-
-            return info.isSubscribed() == Result.True;
+            return false;
         }
 
-        void UpdateUI()
-        {
-            var subscriptionProduct = m_StoreController.products.WithID(removeAdsId);
+        //The intro_json parameter is optional and is only used for the App Store to get introductory information.
+        var subscriptionManager = new SubscriptionManager(subscription, null);
 
-            try
-            {
+        // The SubscriptionInfo contains all of the information about the subscription.
+        // Find out more: https://docs.unity3d.com/Packages/com.unity.purchasing@3.1/manual/UnityIAPSubscriptionProducts.html
+        var info = subscriptionManager.getSubscriptionInfo();
+
+        return info.isSubscribed() == Result.True;
+    }
+
+    void UpdateUI()
+    {
+        var subscriptionProduct = m_StoreController.products.WithID(removeAdsId);
+
+        try
+        {
             removeAdsText.text = m_StoreController.products.WithID(removeAdsId).metadata.localizedPriceString;
             starterPackText.text = m_StoreController.products.WithID(starterPackId).metadata.localizedPriceString;
             megaPackText.text = m_StoreController.products.WithID(megaPackId).metadata.localizedPrice.ToString();
@@ -163,16 +187,64 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
             string text = isSubscribed ? "You are subscribed" : "You are not subscribed";
             print(text);
-            }
-            catch (StoreSubscriptionInfoNotSupportedException)
-            {
-                var receipt = (Dictionary<string, object>)MiniJson.JsonDecode(subscriptionProduct.receipt);
-                var store = receipt["Store"];
+        }
+        catch (StoreSubscriptionInfoNotSupportedException)
+        {
+            var receipt = (Dictionary<string, object>)MiniJson.JsonDecode(subscriptionProduct.receipt);
+            var store = receipt["Store"];
             print(
                 "Couldn't retrieve subscription information because your current store is not supported.\n" +
                     $"Your store: \"{store}\"\n\n" +
                     "You must use the App Store, Google Play Store or Amazon Store to be able to retrieve subscription information.\n\n" +
                     "For more information, see README.md");
-            }
         }
+    }
+
+    //이미 구입한적 있는 상품인지 확인
+    private void HadPurchased()
+    {
+        var product = m_StoreController.products.WithID(removeAdsId);
+
+        if (product != null)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("광고제거를 구매한 적이 있는 유저");
+        }
+
+        product = m_StoreController.products.WithID(starterPackId);
+
+        if (product != null)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("스타터팩을 구매한 적이 있는 유저");
+        }
+
+        product = m_StoreController.products.WithID(megaPackId);
+
+        if (product != null)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("메가팩을 구매한 적이 있는 유저");
+        }
+
+        product = m_StoreController.products.WithID(ultraPackId);
+
+        if (product != null)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("울트라팩을 구매한 적이 있는 유저");
+        }
+    }
 }

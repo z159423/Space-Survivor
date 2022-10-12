@@ -38,25 +38,25 @@ public class UserDataManager : MonoBehaviour
 
     }
 
-    //À¯Àú µ¥ÀÌÅÍ ºÒ·¯¿À±â
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
     public UserData LoadUserData()
     {
         string filePath = Application.persistentDataPath + userDataName;
 
-        //ºÒ·¯¿À±â ¼º°ø
+        //ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (File.Exists(filePath))
         {
-            print("UserData ºÒ·¯¿À±â ¼º°ø " + filePath);
+            print("UserData ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ " + filePath);
             string JsonData = File.ReadAllText(filePath);
             UserData userData = JsonUtility.FromJson<UserData>(JsonData);
 
             return userData;
 
         }
-        //ºÒ·¯¿Ã ÆÄÀÏÀÌ ¾øÀ»½Ã
+        //ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         else
         {
-            print("UserData°¡ ¾ø¾î¼­ »õ·Î¿î ÆÄÀÏÀ» »ý¼ºÇÕ´Ï´Ù. " + filePath);
+            print("UserDataï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. " + filePath);
             UserData userData = new UserData();
 
             userData.playerHaveShip.Add(startShip.shipObjectData);
@@ -65,7 +65,7 @@ public class UserDataManager : MonoBehaviour
         }
     }
 
-    //À¯Àú µ¥ÀÌÅÍ ¼¼ÀÌºê
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
     public void SaveUserData(UserData data)
     {
         string filePath = Application.persistentDataPath + userDataName;
@@ -75,7 +75,7 @@ public class UserDataManager : MonoBehaviour
         File.WriteAllText(filePath, JsonData);
     }
 
-    //À¯Àú µ¥ÀÌÅÍ »èÁ¦
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void DeleteUserData()
     {
         string filePath = Application.persistentDataPath + userDataName;
@@ -83,11 +83,11 @@ public class UserDataManager : MonoBehaviour
         // check if file exists
         if (!File.Exists(filePath))
         {
-            print("À¯Àú µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+            print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
         }
         else
         {
-            print("À¯Àú µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÏ¿´½À´Ï´Ù.");
+            print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
             File.Delete(filePath);
 
