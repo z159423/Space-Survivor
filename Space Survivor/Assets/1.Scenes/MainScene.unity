@@ -33265,7 +33265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f984e359e690df4fa85b0e9cb977e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  androidAdUnitId: ca-app-pub-5179254807136480/3948701606
+  androidAdUnitId: ca-app-pub-5179254807136480/1031690389
   iosAdUnitId: ca-app-pub-3940256099942544/1712485313
   crystalValueText: {fileID: 1745737301}
   shipTrialButton: {fileID: 1929072308}
@@ -37631,7 +37631,6 @@ GameObject:
   - component: {fileID: 1388042083}
   - component: {fileID: 1388042082}
   - component: {fileID: 1388042084}
-  - component: {fileID: 1388042085}
   m_Layer: 0
   m_Name: IAPManager
   m_TagString: Untagged
@@ -37651,10 +37650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd584ea34ef0d7418e116bd6954e123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  removeAdsId: removeads
-  starterPackId: starterpack
-  megaPackId: megapack
-  ultraPackId: ultrapack
+  removeAdsId: com.TeroGames.spacesurvivor.removeads
+  starterPackId: com.TeroGames.spacesurvivor.starterpack
+  megaPackId: com.TeroGames.spacesurvivor.megapack
+  ultraPackId: com.TeroGames.spacesurvivor.ultrapack
   removeAdsText: {fileID: 2116889596}
   starterPackText: {fileID: 132600100}
   megaPackText: {fileID: 513444293}
@@ -37681,33 +37680,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388042081}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc23d55fbc1354043b20d762112dda6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text1: {fileID: 0}
   text2: {fileID: 0}
---- !u!114 &1388042085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388042081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7dd963c1a8b427b96975fa211478a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  consumePurchase: 1
-  dontDestroyOnLoad: 1
-  onPurchaseComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  onPurchaseFailed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1388773187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8808982301935757557, guid: 3579f6d7f41229c498af40ebfe4dc04a, type: 3}

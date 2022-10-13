@@ -7,7 +7,7 @@ using System;
 public class InterstitialAdCaller : MonoBehaviour
 {
     //Test ID ca-app-pub-3940256099942544/1033173712
-    public string androidAdUnitId;
+    public string androidAdUnitId = "ca-app-pub-5179254807136480/3948701606";
     //Test ID ca-app-pub-3940256099942544/4411468910
     public string iosAdUnitId;
 

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
+using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 using TMPro;
 
 public class IAPManager : MonoBehaviour, IStoreListener
@@ -18,10 +20,13 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public TextMeshProUGUI starterPackText;
     public TextMeshProUGUI megaPackText;
     public TextMeshProUGUI ultraPackText;
+
+
     private void Start()
     {
-        
         //UpdateUI();
+
+        InitializePurchasing();
 
         StartCoroutine(InitIAP());
 
@@ -32,15 +37,18 @@ public class IAPManager : MonoBehaviour, IStoreListener
                 yield return null;
 
                 print("iap 동기화 시도중");
-                if(m_StoreController != null)
+                if (m_StoreController != null)
                 {
                     HadPurchased();
                     break;
                 }
+                else
+                {
+
+                }
             }
         }
 
-        InitializePurchasing();
     }
 
     public void PurchaseRemoveAds()
