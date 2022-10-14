@@ -167,6 +167,8 @@ struct Comparison_1_t9272FEBA2ED9918EE39A8ADFDA4A6348F5AC5606;
 struct Comparison_1_t62E531E7B8260E2C6C2718C3BDB8CF8655139645;
 // System.Collections.Concurrent.ConcurrentQueue`1<System.Action`1<System.Collections.Generic.List`1<UnityEngine.Purchasing.Interfaces.IGooglePurchase>>>
 struct ConcurrentQueue_1_t8A9F4D7FF7120A54515A693FDCBC84740AFA0D93;
+// System.Collections.Concurrent.ConcurrentQueue`1<UnityEngine.Purchasing.Models.ProductDescriptionQuery>
+struct ConcurrentQueue_1_tFE37284E831AEB5C9919F20AB2E1D5EEAD095781;
 // System.Collections.Generic.Dictionary`2<UnityEngine.Purchasing.AppStore,System.String>
 struct Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Threading.Tasks.Task>
@@ -199,6 +201,8 @@ struct Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00;
 struct Func_2_tACBF5A1656250800CE861707354491F0611F6624;
 // System.Func`2<System.Object,System.String>
 struct Func_2_t8A4E59735D50CEA34C30F6CD6B5804A38327CD0B;
+// System.Func`2<UnityEngine.Purchasing.ProductCatalogItem,System.Boolean>
+struct Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826;
 // System.Func`2<UnityEngine.Purchasing.ProductDefinition,System.Boolean>
 struct Func_2_tF977206E695EB64A75B156722E64301B70936032;
 // System.Func`2<UnityEngine.Purchasing.ProductDefinition,UnityEngine.Purchasing.Default.WinProductDescription>
@@ -209,6 +213,8 @@ struct Func_2_tA49485B7893E2B0572B1E7AFE675938D5E7A94C1;
 struct Func_2_t792AC37A5ADDF355FDC89029B528A798F50829F5;
 // System.Collections.Generic.HashSet`1<System.String>
 struct HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178;
+// System.Collections.Generic.ICollection`1<UnityEngine.Purchasing.ProductCatalogItem>
+struct ICollection_1_t72875F7D6704D6E2B2CF57114FAF51DE055AF16B;
 // System.Collections.Generic.IEnumerable`1<<>f__AnonymousType0`2<UnityEngine.Purchasing.Default.WinProductDescription,UnityEngine.Purchasing.ProductMetadata>>
 struct IEnumerable_1_t30678F8FD34CD8FB191E213862B9C9EB899322F7;
 // System.Collections.Generic.IEnumerable`1<UnityEngine.AndroidJavaObject>
@@ -219,6 +225,8 @@ struct IEnumerable_1_tB0D4C9D42D0F386807EF901F8E037DC889F14D09;
 struct IEnumerable_1_tFED46E7EABC14F7A552B021736EF50FFBA542F0D;
 // System.Collections.Generic.IEnumerable`1<System.Object>
 struct IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9;
+// System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.ProductCatalogItem>
+struct IEnumerable_1_t1E8D1779ABD1E98623257F896B4FC7F02C56205B;
 // System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.ProductDefinition>
 struct IEnumerable_1_t707B13255FCBF39B7A3F82634CA5C83716F7902A;
 // System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.Extension.ProductDescription>
@@ -247,18 +255,24 @@ struct List_1_t75A593D0EA566755481CBE3EAF0CD9CACD223EAF;
 struct List_1_t569260CBA9779DCB3A932CC156A3229C3B5A0FF1;
 // System.Collections.Generic.List`1<System.Int32Enum>
 struct List_1_tDA4D291C60B1EFA9EA50BBA3367C657CC9410576;
+// System.Collections.Generic.List`1<UnityEngine.Purchasing.LocalizedProductDescription>
+struct List_1_tBBF0C4A89F4F15C3B5BDDC3A752D02FF043A40E8;
 // System.Collections.Generic.List`1<System.Object>
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 // System.Collections.Generic.List`1<UnityEngine.Purchasing.PayoutDefinition>
 struct List_1_t90C2DD43EBC206D8B33EA68730C68B8DC0D6E9FA;
 // System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogItem>
 struct List_1_tF9E4155F905E46DBB10A4779C193F32620147794;
+// System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogPayout>
+struct List_1_t48BDDF48EBA5EFE2DF289544A05B3FA63F1C6DA5;
 // System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductDefinition>
 struct List_1_tDC3DF36A388F26FC1C0FFAD666306A07C5E199A9;
 // System.Collections.Generic.List`1<UnityEngine.Purchasing.Extension.ProductDescription>
 struct List_1_tC907BA3C053A12CF512BC52B3657F30C756D4B7B;
 // System.Collections.Generic.List`1<UnityEngine.RuntimePlatform>
 struct List_1_tD25B27535A2152F2A5071985C3699F183881E0EA;
+// System.Collections.Generic.List`1<UnityEngine.Purchasing.StoreID>
+struct List_1_t86E14981FC609E067B0863BFFD976BE10F7D760C;
 // System.Collections.Generic.List`1<System.String>
 struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
 // System.Collections.Generic.List`1<UnityEngine.Purchasing.Default.WinProductDescription>
@@ -267,8 +281,6 @@ struct List_1_tE1E599429A7CD2B5A94F14623DFA1E121EB6B4BF;
 struct Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12;
 // System.Predicate`1<System.Threading.Tasks.Task>
 struct Predicate_1_t7F48518B008C1472339EEEBABA3DE203FE1F26ED;
-// System.Collections.Generic.Queue`1<UnityEngine.Purchasing.Models.ProductDescriptionQuery>
-struct Queue_1_t67D67348460E400A1A5872C95020B8CFBC32A7DF;
 // System.Collections.ObjectModel.ReadOnlyCollection`1<UnityEngine.Purchasing.ProductDefinition>
 struct ReadOnlyCollection_1_tA49701F42E3782EB8804C53D26901317BAD43A9E;
 // System.Threading.Tasks.Task`1<System.Threading.Tasks.VoidTaskResult>
@@ -305,6 +317,8 @@ struct Int32EnumU5BU5D_t87B7DB802810C38016332669039EF42C487A081F;
 struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
 // System.Object[]
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+// UnityEngine.Purchasing.ProductCatalogItem[]
+struct ProductCatalogItemU5BU5D_t736755D87F8B9CBBE84DB1DA5DB0B1F2AF1E287E;
 // UnityEngine.Purchasing.ProductDefinition[]
 struct ProductDefinitionU5BU5D_t13505F8F6E21D11DDE178170C0F8179582C9EFC9;
 // UnityEngine.Purchasing.Extension.ProductDescription[]
@@ -369,8 +383,8 @@ struct Exception_t;
 struct ExponentialRetryPolicy_tAF11D74077419067490EDB35F6345A928AAB7035;
 // UnityEngine.Purchasing.FakeAmazonExtensions
 struct FakeAmazonExtensions_t2BB017AD868017668CAF2632A35D9673384C42AA;
-// UnityEngine.Purchasing.FakeAppleConfiguation
-struct FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB;
+// UnityEngine.Purchasing.FakeAppleConfiguration
+struct FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE;
 // UnityEngine.Purchasing.FakeAppleExtensions
 struct FakeAppleExtensions_t043F3D5F84FFE499BDD87D931F558F2DA7FB56F6;
 // UnityEngine.Purchasing.FakeGooglePlayStoreConfiguration
@@ -573,6 +587,10 @@ struct IapCoreInitializeCallback_tD637EC5C7AF20EC75F8ED0F35EA4213AD15DC8EE;
 struct InvalidProductTypeException_tAE9A866F76574220FCE831FCB3EE56890F89EC66;
 // UnityEngine.Purchasing.JSONStore
 struct JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696;
+// Stores.Util.JsonProductDescriptionsDeserializer
+struct JsonProductDescriptionsDeserializer_t72472C8FB06674E5AA27CC1B3788FA050896E0C4;
+// UnityEngine.Purchasing.LocalizedProductDescription
+struct LocalizedProductDescription_t36BA1F51798AD6D84D7501225651BB2EFF207924;
 // System.Reflection.MemberFilter
 struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
 // System.Reflection.MethodInfo
@@ -597,12 +615,16 @@ struct NullProductIdException_t0FFCCE59F36802EB8DD351F1F9AE4954A3868968;
 struct NullReceiptException_t0FD2AFB5F7A401952C466E410DFB55562D3B8B98;
 // UnityEngine.Object
 struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
+// UnityEngine.Purchasing.Price
+struct Price_tEB0E5E45033C6A0BC0C5D2A29C0E6C04D0FDBCDC;
 // UnityEngine.Purchasing.Product
 struct Product_t8CB4C6F2541BB4560097D6E07ABCB3AD3BB6082E;
 // UnityEngine.Purchasing.ProductCatalog
 struct ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1;
 // UnityEngine.Purchasing.ProductCatalogImpl
 struct ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB;
+// UnityEngine.Purchasing.ProductCatalogItem
+struct ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215;
 // UnityEngine.Purchasing.ProductDefinition
 struct ProductDefinition_t0ECCC323EC3E52DE3143F374262050ADCECB1517;
 // UnityEngine.Purchasing.Extension.ProductDescription
@@ -687,6 +709,12 @@ struct U3CU3Ec__DisplayClass6_0_t299BA441599A814CD673C5965457AD87DFC2968F;
 struct U3CU3Ec__DisplayClass6_1_tAFFBA614D02F4257193469D94120F7AB895F5E7E;
 // UnityEngine.Purchasing.Registration.IapCoreInitializeCallback/<>c__DisplayClass2_0
 struct U3CU3Ec__DisplayClass2_0_t8C39FEB00624A4301E783F715ED0F2E9D68CF4DB;
+// UnityEngine.Purchasing.ProductCatalog/<>c
+struct U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155;
+// UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass21_0
+struct U3CU3Ec__DisplayClass21_0_tD0D41DD90F19F88BB768917BEAA357B5A598EBD7;
+// UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass24_0
+struct U3CU3Ec__DisplayClass24_0_t0E56037ED385EDDCE7B8ADE728BC13E962C8F39F;
 // UnityEngine.Purchasing.StandardPurchasingModule/MicrosoftConfiguration
 struct MicrosoftConfiguration_t8433ADE5DCCB152C38CAC9672622E12D30A2C915;
 // UnityEngine.Purchasing.StandardPurchasingModule/StoreInstance
@@ -735,7 +763,7 @@ IL2CPP_EXTERN_C RuntimeClass* Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_il2
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ExponentialRetryPolicy_tAF11D74077419067490EDB35F6345A928AAB7035_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FakeAmazonExtensions_t2BB017AD868017668CAF2632A35D9673384C42AA_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FakeAppleExtensions_t043F3D5F84FFE499BDD87D931F558F2DA7FB56F6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FakeGooglePlayStoreConfiguration_t607477653FD993A02B440D6206650186CECBFF1D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FakeGooglePlayStoreExtensions_t7845A542181F86959911942B2E32ED1CB6225324_il2cpp_TypeInfo_var;
@@ -753,6 +781,7 @@ IL2CPP_EXTERN_C RuntimeClass* Func_2_tA49485B7893E2B0572B1E7AFE675938D5E7A94C1_i
 IL2CPP_EXTERN_C RuntimeClass* Func_2_tBD363E4C3D9D9FB1A4BD4DCBA9F9A1416E476112_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_tC46136D150FD0365AEEF35F449C41EE039A1670C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_tD24B716801B989695090985C9EF07D4297E3D6FC_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_tE0C99770A3AFA484C0972E79BEBCAF38D6EE05DC_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_tF977206E695EB64A75B156722E64301B70936032_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var;
@@ -788,6 +817,7 @@ IL2CPP_EXTERN_C RuntimeClass* ILogger_tD1F573C6DC829FBA987FA1EBA0A5FA64E0C2BC42_
 IL2CPP_EXTERN_C RuntimeClass* IMetricsFactory_t28787E894D3913155A7403F74BD62B562E3F906F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* INativeStoreProvider_t914FA36839115F95C08EEE7AD84B1C86C843CD25_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* INativeUDPStore_t11E28339B28E3AACBC8727B809BB50B4B1FDA39F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IProductCatalogImpl_tDDD62175F121461C97EC07147671B803D2286C0A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IStoreCallback_t497F64D3AFC58671C97A0927F984E5628665E154_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IStoreInternal_t5881024AF7529DE4DEB790161301BA36E1CFBBD0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ITelemetryDiagnosticsInstanceWrapper_tE9C80569B5FADDB74AC6BA62B240969EEC271D78_il2cpp_TypeInfo_var;
@@ -807,6 +837,7 @@ IL2CPP_EXTERN_C RuntimeClass* List_1_tB2FB3A51525B691C3FF8B27FD20E9C31736D1713_i
 IL2CPP_EXTERN_C RuntimeClass* List_1_tD25B27535A2152F2A5071985C3699F183881E0EA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_tDB72209F35D56F62A287633F9450978E90B90987_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_tDC3DF36A388F26FC1C0FFAD666306A07C5E199A9_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_tF9E4155F905E46DBB10A4779C193F32620147794_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MetricizedAppleStoreImpl_t20F106AB08C02472CBAF01515A1CC041468AFB2C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MetricizedGooglePlayStoreExtensions_t215BD5A6C7658EE73143D5483C9DD3800C0F51F2_il2cpp_TypeInfo_var;
@@ -821,6 +852,7 @@ IL2CPP_EXTERN_C RuntimeClass* NullReferenceException_tBDE63A6D24569B964908408389
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ProductDefinition_t0ECCC323EC3E52DE3143F374262050ADCECB1517_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ProductDescription_tAD0DC443EFB3E64FB864AC0EEA3CE4073A1F3E42_il2cpp_TypeInfo_var;
@@ -861,6 +893,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass2_0_t8C39FEB00624A4301E783F71
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass4_0_tEF7EEFCDFD512405CEF6D9F0AA524523A887F0A9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass6_0_t299BA441599A814CD673C5965457AD87DFC2968F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass6_1_tAFFBA614D02F4257193469D94120F7AB895F5E7E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t3EEABDCD1931ABECE7845226EBECFA4E4DD418FE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t4949A2FAAAB7863059A503E71290261664796C53_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t5F4A44F3BE5DBDC253279EFFC260CCE4AC510CC2_il2cpp_TypeInfo_var;
@@ -940,7 +973,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral7FEA58AAF24C61EE697135803E8D03C83500C3F5
 IL2CPP_EXTERN_C String_t* _stringLiteral8055A4A9E767B33586547086A689E15D02BE18B7;
 IL2CPP_EXTERN_C String_t* _stringLiteral81A32E61A5F16E99CF39817CE91BFA3957C33126;
 IL2CPP_EXTERN_C String_t* _stringLiteral82E7FD0A6F1924734BD56BAAC0E26EAAB7666434;
-IL2CPP_EXTERN_C String_t* _stringLiteral830D26873D8A1B263BA6E060E415CDEEA12B9480;
 IL2CPP_EXTERN_C String_t* _stringLiteral8AAAB87B9D0CF10017CA275F666E1DD21098C106;
 IL2CPP_EXTERN_C String_t* _stringLiteral8BBDC2A18D5F5AE48C6CE7DD32753A2729B9B2DE;
 IL2CPP_EXTERN_C String_t* _stringLiteral8C99461589CBC42FE28D0A29D20F63D0EE7E6E00;
@@ -961,6 +993,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA0C8219E9BEE0C416C2D1C503FEB2F36C270F418
 IL2CPP_EXTERN_C String_t* _stringLiteralA44250C90C4461C6F602B3B9DC9B873627787D3B;
 IL2CPP_EXTERN_C String_t* _stringLiteralA5868C1F61F8859D84C803C66A240FA7D48F1E96;
 IL2CPP_EXTERN_C String_t* _stringLiteralA733C7FC19A8317471D21AD091D1A9A6F973A728;
+IL2CPP_EXTERN_C String_t* _stringLiteralADB51A85ACAAF3328A18A4742E0EA03E4A50B112;
 IL2CPP_EXTERN_C String_t* _stringLiteralB11F3EF2D6E4C1C9340A558AF14C8C019E7B9C36;
 IL2CPP_EXTERN_C String_t* _stringLiteralB599F7943E63846FF6287E29254EF871F7C11DD9;
 IL2CPP_EXTERN_C String_t* _stringLiteralB5BA1A0AFC813A0B838EABFB8A4035C5AC5A2B8E;
@@ -1062,17 +1095,22 @@ IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Select_TisRuntimeObject_TisStrin
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Select_TisString_t_TisIAndroidJavaObjectWrapper_tC1A612D0FB5242E0B7B6FE0D545945956CFF7DF4_m045C514A6EDFB81F2C76233D4250B3F8DE8C71A8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Select_TisU3CU3Ef__AnonymousType0_2_tB1E46288D905B3D597E3BB4E8DBE963B5B1A7637_TisProductDescription_tAD0DC443EFB3E64FB864AC0EEA3CE4073A1F3E42_mFBE2C1CCC26118AE3F1992FDE14AC7A6A00D82D5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Select_TisWinProductDescription_tBF22B14F8B3F92A3EEB31026CBD2E29BE31F9974_TisU3CU3Ef__AnonymousType0_2_tB1E46288D905B3D597E3BB4E8DBE963B5B1A7637_m22DF0627A4220B39D94F9FB2F7C976552C389BB0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_ToList_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_mAE4DFA7056D7BF380D2B02351C1E56943707DDDE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_ToList_TisProductDescription_tAD0DC443EFB3E64FB864AC0EEA3CE4073A1F3E42_m276E0832A2661A9C3DA9C20144F168E61220834A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_ToList_TisString_t_mA7BFFF205C0EB2F8CE0436E85FC70A2449EDD7C5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_ToList_TisWinProductDescription_tBF22B14F8B3F92A3EEB31026CBD2E29BE31F9974_mBD216FF4BDEF8C497985ED66BFC7077B2CA4F8E5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Where_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_m2356C22B456552E546FC093EE565699A9B4782A9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Where_TisProductDefinition_t0ECCC323EC3E52DE3143F374262050ADCECB1517_m9E86E5436C109088E666E2BA4616522E090F85EE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m08939C035297A6AE5A7ACB968CFFBF8E5606B730_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m993432E6F59A9F04D89EB6B02C6F902AA380E783_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mA7C78FC10B78BFFDD69A6E1CA050B42D48F8B53F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m4AEB802C574E8B550BAF83C6EA8F835635C542EB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mBB43E0B46CDCD47543052FDB890026C269E6D96E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mDFB6A98329D1C55565DDF0A0600405813AC601D3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m29B914A68B38CB68DBA414C2AB9BD5B5807B9DAF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m57869F3E5ADC7DCD6315970EBC1666B84C2CB700_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mFAD52D332201C947C95ECF69DAE5C3319CA654F1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisUnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383_mCAAEA6996A42A317ADC88315E5234EB6C028921A_RuntimeMethod_var;
@@ -1084,6 +1122,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* IAndroidJavaObjectWrapper_Call_TisBoolean_t
 IL2CPP_EXTERN_C const RuntimeMethod* IAndroidJavaObjectWrapper_Call_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m57AD306FDEC5BDE85E9715C1A0B7CFFFB7C00753_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IAndroidJavaObjectWrapper_Call_TisInt64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_m00DD905F9CC5ABBC293B3996EC3375BE5A4681B7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_m98D3416C512CBAEF46795B8DB55BE83DFF9DF31E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Key_mA64FF29A08423140758B0276333D1A89C71B793A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Value_m2052BF44A3FDE623D98B0E6B6E227B2900034235_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m1ADE5D912BC0B1DB98E94AC9BBB199FE2E955448_RuntimeMethod_var;
@@ -1091,15 +1130,19 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m516CC7340C5C8194052845BC1E0A320
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m5B99D67CB378BFA8A1142343F9DB44D94322EAD3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m8D3A001B04748E316D277F1F7195E4A759B6261B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mECE0AF7F542B680CF593EC4EB1F9BA598CB5C2B1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mFF5BDD22BFB9E6711A4BA41C3A031C8709D15CAA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m344AD90676A608EA37B9DF93050BA9F80C23D17E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Contains_mCC1DF00335ECC0520B9FD7A9E551F6CE8D8CD02F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_CopyTo_mC0579E6985120F719A23A5D47DFB83A186782151_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m0834ECE0C6E8A9614A5536ABEE6CB2070B402036_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m35ECF228FCE04D6BC156DC5841E12EC008F35C25_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_m6642C5780F353A4FD28CD70A3F87487EA32BF7AE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Sort_mC0CA9C17998654AF123D1134E1CD3D53951CACDA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m28B0FD0F2221E9A428AC7053440E7DCCED821913_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mB5530D7206436670741DA242D1CF91EAAFB350CD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mB6DED24B0943B876BE68E5B3CA317D46D9434549_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mBDF4705804BDB810CAF8EAC3B98D7ED2D97D7824_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mBFD6DF02E045EDF3C322E2112C922457016C8212_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mFD5B5846BC30FFDBBCDB78A0F7537F9D8A9074EC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m5E7FCE3DF7B23B6D88C14A04177C1DCD15063858_RuntimeMethod_var;
@@ -1120,6 +1163,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CWrapU3Eb__2_0_mEC9D9F5B5CDBFE565
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3C_ctorU3Eb__26_0_mB666CC9852E094F68F830014EA039871BBF416BA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CfindMostRecentReceiptU3Eb__11_0_m6F59F1652B537921E2705E8DC1D55603C8D4C3E0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CgetGooglePlayStoreSubInfoU3Eb__12_0_m4F386D12BEC0A7E102D3CFE3743E47A4BC8EAE27_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3Cget_allValidProductsU3Eb__9_0_m12807973ABA5A7DEB65B6ECC4AC778C8B260D0B0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass15_0_U3COnProductListReceivedU3Eb__0_mD3DFC23EFF5D3D9758B0804FE3CB6563F23B2D51_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass16_0_U3ClogU3Eb__0_mDEFD4C8E6882F25738026585C345E76132541D3E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass17_0_U3COnPurchaseFailedU3Eb__0_m69666DBBCBFD691113FC35D5F93A2E2778D1903E_RuntimeMethod_var;
@@ -1333,6 +1377,25 @@ struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_StaticFields
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___s_emptyArray_5;
 };
 
+// System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogItem>
+struct List_1_tF9E4155F905E46DBB10A4779C193F32620147794  : public RuntimeObject
+{
+	// T[] System.Collections.Generic.List`1::_items
+	ProductCatalogItemU5BU5D_t736755D87F8B9CBBE84DB1DA5DB0B1F2AF1E287E* ____items_1;
+	// System.Int32 System.Collections.Generic.List`1::_size
+	int32_t ____size_2;
+	// System.Int32 System.Collections.Generic.List`1::_version
+	int32_t ____version_3;
+	// System.Object System.Collections.Generic.List`1::_syncRoot
+	RuntimeObject* ____syncRoot_4;
+};
+
+struct List_1_tF9E4155F905E46DBB10A4779C193F32620147794_StaticFields
+{
+	// T[] System.Collections.Generic.List`1::s_emptyArray
+	ProductCatalogItemU5BU5D_t736755D87F8B9CBBE84DB1DA5DB0B1F2AF1E287E* ___s_emptyArray_5;
+};
+
 // System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductDefinition>
 struct List_1_tDC3DF36A388F26FC1C0FFAD666306A07C5E199A9  : public RuntimeObject
 {
@@ -1537,8 +1600,8 @@ struct FakeAmazonExtensions_t2BB017AD868017668CAF2632A35D9673384C42AA  : public 
 {
 };
 
-// UnityEngine.Purchasing.FakeAppleConfiguation
-struct FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB  : public RuntimeObject
+// UnityEngine.Purchasing.FakeAppleConfiguration
+struct FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE  : public RuntimeObject
 {
 };
 
@@ -1679,10 +1742,10 @@ struct GooglePlayStoreExtensions_t5DF37ECD8ABAABEE995316AD39EA2865FF28249D  : pu
 	RuntimeObject* ___m_GooglePlayStoreService_0;
 	// UnityEngine.Purchasing.IGooglePlayStoreFinishTransactionService UnityEngine.Purchasing.GooglePlayStoreExtensions::m_GooglePlayStoreFinishTransactionService
 	RuntimeObject* ___m_GooglePlayStoreFinishTransactionService_1;
-	// UnityEngine.ILogger UnityEngine.Purchasing.GooglePlayStoreExtensions::m_Logger
-	RuntimeObject* ___m_Logger_2;
 	// UnityEngine.Purchasing.Telemetry.ITelemetryDiagnostics UnityEngine.Purchasing.GooglePlayStoreExtensions::m_TelemetryDiagnostics
-	RuntimeObject* ___m_TelemetryDiagnostics_3;
+	RuntimeObject* ___m_TelemetryDiagnostics_2;
+	// UnityEngine.ILogger UnityEngine.Purchasing.GooglePlayStoreExtensions::m_Logger
+	RuntimeObject* ___m_Logger_3;
 	// UnityEngine.Purchasing.Extension.IStoreCallback UnityEngine.Purchasing.GooglePlayStoreExtensions::m_StoreCallback
 	RuntimeObject* ___m_StoreCallback_4;
 	// System.Action`1<UnityEngine.Purchasing.Product> UnityEngine.Purchasing.GooglePlayStoreExtensions::m_DeferredPurchaseAction
@@ -1735,8 +1798,8 @@ struct GooglePlayStoreService_tCC59CC214BBD06EB1E00E3C136FC6B32E813A311  : publi
 	RuntimeObject* ___m_BillingClientStateListener_3;
 	// UnityEngine.Purchasing.Interfaces.IQuerySkuDetailsService UnityEngine.Purchasing.GooglePlayStoreService::m_QuerySkuDetailsService
 	RuntimeObject* ___m_QuerySkuDetailsService_4;
-	// System.Collections.Generic.Queue`1<UnityEngine.Purchasing.Models.ProductDescriptionQuery> UnityEngine.Purchasing.GooglePlayStoreService::m_ProductsToQuery
-	Queue_1_t67D67348460E400A1A5872C95020B8CFBC32A7DF* ___m_ProductsToQuery_5;
+	// System.Collections.Concurrent.ConcurrentQueue`1<UnityEngine.Purchasing.Models.ProductDescriptionQuery> UnityEngine.Purchasing.GooglePlayStoreService::m_ProductsToQuery
+	ConcurrentQueue_1_tFE37284E831AEB5C9919F20AB2E1D5EEAD095781* ___m_ProductsToQuery_5;
 	// System.Collections.Concurrent.ConcurrentQueue`1<System.Action`1<System.Collections.Generic.List`1<UnityEngine.Purchasing.Interfaces.IGooglePurchase>>> UnityEngine.Purchasing.GooglePlayStoreService::m_OnPurchaseSucceededQueue
 	ConcurrentQueue_1_t8A9F4D7FF7120A54515A693FDCBC84740AFA0D93* ___m_OnPurchaseSucceededQueue_6;
 	// UnityEngine.Purchasing.Interfaces.IGooglePurchaseService UnityEngine.Purchasing.GooglePlayStoreService::m_GooglePurchaseService
@@ -1839,6 +1902,17 @@ struct IapCoreInitializeCallback_tD637EC5C7AF20EC75F8ED0F35EA4213AD15DC8EE  : pu
 {
 };
 
+// UnityEngine.Purchasing.LocalizedProductDescription
+struct LocalizedProductDescription_t36BA1F51798AD6D84D7501225651BB2EFF207924  : public RuntimeObject
+{
+	// UnityEngine.Purchasing.TranslationLocale UnityEngine.Purchasing.LocalizedProductDescription::googleLocale
+	int32_t ___googleLocale_0;
+	// System.String UnityEngine.Purchasing.LocalizedProductDescription::title
+	String_t* ___title_1;
+	// System.String UnityEngine.Purchasing.LocalizedProductDescription::description
+	String_t* ___description_2;
+};
+
 // System.MarshalByRefObject
 struct MarshalByRefObject_t8C2F4C5854177FD60439EB1FCCFC1B3CFAFE8DCE  : public RuntimeObject
 {
@@ -1905,6 +1979,33 @@ struct ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_StaticFields
 // UnityEngine.Purchasing.ProductCatalogImpl
 struct ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB  : public RuntimeObject
 {
+};
+
+// UnityEngine.Purchasing.ProductCatalogItem
+struct ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215  : public RuntimeObject
+{
+	// System.String UnityEngine.Purchasing.ProductCatalogItem::id
+	String_t* ___id_0;
+	// UnityEngine.Purchasing.ProductType UnityEngine.Purchasing.ProductCatalogItem::type
+	int32_t ___type_1;
+	// System.Collections.Generic.List`1<UnityEngine.Purchasing.StoreID> UnityEngine.Purchasing.ProductCatalogItem::storeIDs
+	List_1_t86E14981FC609E067B0863BFFD976BE10F7D760C* ___storeIDs_2;
+	// UnityEngine.Purchasing.LocalizedProductDescription UnityEngine.Purchasing.ProductCatalogItem::defaultDescription
+	LocalizedProductDescription_t36BA1F51798AD6D84D7501225651BB2EFF207924* ___defaultDescription_3;
+	// System.String UnityEngine.Purchasing.ProductCatalogItem::screenshotPath
+	String_t* ___screenshotPath_4;
+	// System.Int32 UnityEngine.Purchasing.ProductCatalogItem::applePriceTier
+	int32_t ___applePriceTier_5;
+	// UnityEngine.Purchasing.Price UnityEngine.Purchasing.ProductCatalogItem::googlePrice
+	Price_tEB0E5E45033C6A0BC0C5D2A29C0E6C04D0FDBCDC* ___googlePrice_6;
+	// System.String UnityEngine.Purchasing.ProductCatalogItem::pricingTemplateID
+	String_t* ___pricingTemplateID_7;
+	// System.Collections.Generic.List`1<UnityEngine.Purchasing.LocalizedProductDescription> UnityEngine.Purchasing.ProductCatalogItem::descriptions
+	List_1_tBBF0C4A89F4F15C3B5BDDC3A752D02FF043A40E8* ___descriptions_8;
+	// UnityEngine.Purchasing.Price UnityEngine.Purchasing.ProductCatalogItem::udpPrice
+	Price_tEB0E5E45033C6A0BC0C5D2A29C0E6C04D0FDBCDC* ___udpPrice_9;
+	// System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogPayout> UnityEngine.Purchasing.ProductCatalogItem::payouts
+	List_1_t48BDDF48EBA5EFE2DF289544A05B3FA63F1C6DA5* ___payouts_10;
 };
 
 // UnityEngine.Purchasing.ProductDefinition
@@ -2210,6 +2311,33 @@ struct U3CU3Ec__DisplayClass2_0_t8C39FEB00624A4301E783F715ED0F2E9D68CF4DB  : pub
 	RuntimeObject* ___diagnosticsInstanceWrapper_1;
 };
 
+// UnityEngine.Purchasing.ProductCatalog/<>c
+struct U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155  : public RuntimeObject
+{
+};
+
+struct U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_StaticFields
+{
+	// UnityEngine.Purchasing.ProductCatalog/<>c UnityEngine.Purchasing.ProductCatalog/<>c::<>9
+	U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155* ___U3CU3E9_0;
+	// System.Func`2<UnityEngine.Purchasing.ProductCatalogItem,System.Boolean> UnityEngine.Purchasing.ProductCatalog/<>c::<>9__9_0
+	Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* ___U3CU3E9__9_0_1;
+};
+
+// UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass21_0
+struct U3CU3Ec__DisplayClass21_0_tD0D41DD90F19F88BB768917BEAA357B5A598EBD7  : public RuntimeObject
+{
+	// UnityEngine.Purchasing.TranslationLocale UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass21_0::locale
+	int32_t ___locale_0;
+};
+
+// UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass24_0
+struct U3CU3Ec__DisplayClass24_0_t0E56037ED385EDDCE7B8ADE728BC13E962C8F39F  : public RuntimeObject
+{
+	// UnityEngine.Purchasing.TranslationLocale UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass24_0::locale
+	int32_t ___locale_0;
+};
+
 // UnityEngine.Purchasing.StandardPurchasingModule/MicrosoftConfiguration
 struct MicrosoftConfiguration_t8433ADE5DCCB152C38CAC9672622E12D30A2C915  : public RuntimeObject
 {
@@ -2352,6 +2480,19 @@ struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A
 	int32_t ____version_2;
 	// T System.Collections.Generic.List`1/Enumerator::_current
 	RuntimeObject* ____current_3;
+};
+
+// System.Collections.Generic.List`1/Enumerator<UnityEngine.Purchasing.ProductCatalogItem>
+struct Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464 
+{
+	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::_list
+	List_1_tF9E4155F905E46DBB10A4779C193F32620147794* ____list_0;
+	// System.Int32 System.Collections.Generic.List`1/Enumerator::_index
+	int32_t ____index_1;
+	// System.Int32 System.Collections.Generic.List`1/Enumerator::_version
+	int32_t ____version_2;
+	// T System.Collections.Generic.List`1/Enumerator::_current
+	ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* ____current_3;
 };
 
 // System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>
@@ -2669,10 +2810,12 @@ struct JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696  : public AbstractSto
 	StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* ___m_Module_5;
 	// UnityEngine.ILogger UnityEngine.Purchasing.JSONStore::m_Logger
 	RuntimeObject* ___m_Logger_6;
+	// Stores.Util.JsonProductDescriptionsDeserializer UnityEngine.Purchasing.JSONStore::m_ProductDescriptionsDeserializer
+	JsonProductDescriptionsDeserializer_t72472C8FB06674E5AA27CC1B3788FA050896E0C4* ___m_ProductDescriptionsDeserializer_7;
 	// UnityEngine.Purchasing.Extension.PurchaseFailureDescription UnityEngine.Purchasing.JSONStore::m_LastPurchaseFailureDescription
-	PurchaseFailureDescription_t3E3F2EE6035C1BAE5EDB48CF61337896AFEAC3E4* ___m_LastPurchaseFailureDescription_7;
+	PurchaseFailureDescription_t3E3F2EE6035C1BAE5EDB48CF61337896AFEAC3E4* ___m_LastPurchaseFailureDescription_8;
 	// UnityEngine.Purchasing.StoreSpecificPurchaseErrorCode UnityEngine.Purchasing.JSONStore::m_LastPurchaseErrorCode
-	int32_t ___m_LastPurchaseErrorCode_8;
+	int32_t ___m_LastPurchaseErrorCode_9;
 };
 
 // UnityEngine.Purchasing.MetricizedGooglePlayStoreExtensions
@@ -2685,10 +2828,10 @@ struct MetricizedGooglePlayStoreExtensions_t215BD5A6C7658EE73143D5483C9DD3800C0F
 // UnityEngine.Purchasing.MetricizedGooglePlayStoreService
 struct MetricizedGooglePlayStoreService_t40077926A533760E9DA174A99AF4BD5C03F69EBA  : public GooglePlayStoreService_tCC59CC214BBD06EB1E00E3C136FC6B32E813A311
 {
-	// UnityEngine.Purchasing.Telemetry.ITelemetryDiagnostics UnityEngine.Purchasing.MetricizedGooglePlayStoreService::m_TelemetryDiagnostics
-	RuntimeObject* ___m_TelemetryDiagnostics_14;
 	// UnityEngine.Purchasing.Telemetry.ITelemetryMetricsService UnityEngine.Purchasing.MetricizedGooglePlayStoreService::m_TelemetryMetricsService
-	RuntimeObject* ___m_TelemetryMetricsService_15;
+	RuntimeObject* ___m_TelemetryMetricsService_14;
+	// UnityEngine.Purchasing.Telemetry.ITelemetryDiagnostics UnityEngine.Purchasing.MetricizedGooglePlayStoreService::m_TelemetryDiagnostics
+	RuntimeObject* ___m_TelemetryDiagnostics_15;
 };
 
 // System.Single
@@ -2703,22 +2846,22 @@ struct StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489  : pub
 {
 	// System.String UnityEngine.Purchasing.StandardPurchasingModule::k_Version
 	String_t* ___k_Version_2;
-	// UnityEngine.Purchasing.AppStore UnityEngine.Purchasing.StandardPurchasingModule::m_AppStorePlatform
-	int32_t ___m_AppStorePlatform_3;
 	// UnityEngine.Purchasing.INativeStoreProvider UnityEngine.Purchasing.StandardPurchasingModule::m_NativeStoreProvider
-	RuntimeObject* ___m_NativeStoreProvider_4;
+	RuntimeObject* ___m_NativeStoreProvider_3;
 	// UnityEngine.RuntimePlatform UnityEngine.Purchasing.StandardPurchasingModule::m_RuntimePlatform
-	int32_t ___m_RuntimePlatform_5;
+	int32_t ___m_RuntimePlatform_4;
 	// Uniject.IUtil UnityEngine.Purchasing.StandardPurchasingModule::<util>k__BackingField
-	RuntimeObject* ___U3CutilU3Ek__BackingField_7;
+	RuntimeObject* ___U3CutilU3Ek__BackingField_6;
 	// UnityEngine.ILogger UnityEngine.Purchasing.StandardPurchasingModule::<logger>k__BackingField
-	RuntimeObject* ___U3CloggerU3Ek__BackingField_8;
+	RuntimeObject* ___U3CloggerU3Ek__BackingField_7;
 	// UnityEngine.Purchasing.StandardPurchasingModule/StoreInstance UnityEngine.Purchasing.StandardPurchasingModule::<storeInstance>k__BackingField
-	StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* ___U3CstoreInstanceU3Ek__BackingField_9;
+	StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* ___U3CstoreInstanceU3Ek__BackingField_8;
 	// UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper UnityEngine.Purchasing.StandardPurchasingModule::<telemetryMetricsInstanceWrapper>k__BackingField
-	RuntimeObject* ___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_10;
+	RuntimeObject* ___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_9;
 	// UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper UnityEngine.Purchasing.StandardPurchasingModule::<telemetryDiagnosticsInstanceWrapper>k__BackingField
-	RuntimeObject* ___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_11;
+	RuntimeObject* ___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_10;
+	// UnityEngine.Purchasing.AppStore UnityEngine.Purchasing.StandardPurchasingModule::<appStore>k__BackingField
+	int32_t ___U3CappStoreU3Ek__BackingField_12;
 	// System.Boolean UnityEngine.Purchasing.StandardPurchasingModule::usingMockMicrosoft
 	bool ___usingMockMicrosoft_13;
 	// UnityEngine.Purchasing.FakeStoreUIMode UnityEngine.Purchasing.StandardPurchasingModule::<useFakeStoreUIMode>k__BackingField
@@ -2732,9 +2875,9 @@ struct StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489  : pub
 struct StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields
 {
 	// UnityEngine.Purchasing.StandardPurchasingModule UnityEngine.Purchasing.StandardPurchasingModule::ModuleInstance
-	StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* ___ModuleInstance_6;
+	StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* ___ModuleInstance_5;
 	// System.Collections.Generic.Dictionary`2<UnityEngine.Purchasing.AppStore,System.String> UnityEngine.Purchasing.StandardPurchasingModule::AndroidStoreNameMap
-	Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* ___AndroidStoreNameMap_12;
+	Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* ___AndroidStoreNameMap_11;
 };
 
 // System.Runtime.CompilerServices.TaskAwaiter
@@ -3050,37 +3193,39 @@ struct AppleReceipt_t16E9FEBF193F54B9B4E5D3323C48E487DCF3414C  : public RuntimeO
 struct AppleStoreImpl_t6AF0033DE5593A0D019BA107012C9C83D21FBD14  : public JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696
 {
 	// System.Action`1<UnityEngine.Purchasing.Product> UnityEngine.Purchasing.AppleStoreImpl::m_DeferredCallback
-	Action_1_tDA104653FA5A324B3D61E32BD15E60D0C4AE63CE* ___m_DeferredCallback_10;
+	Action_1_tDA104653FA5A324B3D61E32BD15E60D0C4AE63CE* ___m_DeferredCallback_11;
+	// System.Action`1<System.Collections.Generic.List`1<UnityEngine.Purchasing.Product>> UnityEngine.Purchasing.AppleStoreImpl::m_RevokedCallback
+	Action_1_t697794677665726C94809C618C5BC9615AF0F913* ___m_RevokedCallback_12;
 	// System.Action UnityEngine.Purchasing.AppleStoreImpl::m_RefreshReceiptError
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_RefreshReceiptError_11;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_RefreshReceiptError_13;
 	// System.Action`1<System.String> UnityEngine.Purchasing.AppleStoreImpl::m_RefreshReceiptSuccess
-	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___m_RefreshReceiptSuccess_12;
+	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___m_RefreshReceiptSuccess_14;
 	// System.Action`1<System.Boolean> UnityEngine.Purchasing.AppleStoreImpl::m_RestoreCallback
-	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* ___m_RestoreCallback_13;
+	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* ___m_RestoreCallback_15;
 	// System.Action UnityEngine.Purchasing.AppleStoreImpl::m_FetchStorePromotionOrderError
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_FetchStorePromotionOrderError_14;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_FetchStorePromotionOrderError_16;
 	// System.Action`1<System.Collections.Generic.List`1<UnityEngine.Purchasing.Product>> UnityEngine.Purchasing.AppleStoreImpl::m_FetchStorePromotionOrderSuccess
-	Action_1_t697794677665726C94809C618C5BC9615AF0F913* ___m_FetchStorePromotionOrderSuccess_15;
+	Action_1_t697794677665726C94809C618C5BC9615AF0F913* ___m_FetchStorePromotionOrderSuccess_17;
 	// System.Action`1<UnityEngine.Purchasing.Product> UnityEngine.Purchasing.AppleStoreImpl::m_PromotionalPurchaseCallback
-	Action_1_tDA104653FA5A324B3D61E32BD15E60D0C4AE63CE* ___m_PromotionalPurchaseCallback_16;
+	Action_1_tDA104653FA5A324B3D61E32BD15E60D0C4AE63CE* ___m_PromotionalPurchaseCallback_18;
 	// System.Action UnityEngine.Purchasing.AppleStoreImpl::m_FetchStorePromotionVisibilityError
-	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_FetchStorePromotionVisibilityError_17;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___m_FetchStorePromotionVisibilityError_19;
 	// System.Action`2<System.String,UnityEngine.Purchasing.AppleStorePromotionVisibility> UnityEngine.Purchasing.AppleStoreImpl::m_FetchStorePromotionVisibilitySuccess
-	Action_2_tA14B21CCF3C0A41FEBFFA42445AF2A84130BE37D* ___m_FetchStorePromotionVisibilitySuccess_18;
+	Action_2_tA14B21CCF3C0A41FEBFFA42445AF2A84130BE37D* ___m_FetchStorePromotionVisibilitySuccess_20;
 	// UnityEngine.Purchasing.INativeAppleStore UnityEngine.Purchasing.AppleStoreImpl::m_Native
-	RuntimeObject* ___m_Native_19;
+	RuntimeObject* ___m_Native_21;
 	// UnityEngine.Purchasing.Telemetry.ITelemetryDiagnostics UnityEngine.Purchasing.AppleStoreImpl::m_TelemetryDiagnostics
-	RuntimeObject* ___m_TelemetryDiagnostics_20;
-	// System.String UnityEngine.Purchasing.AppleStoreImpl::products_json
-	String_t* ___products_json_23;
+	RuntimeObject* ___m_TelemetryDiagnostics_22;
+	// System.String UnityEngine.Purchasing.AppleStoreImpl::m_ProductsJson
+	String_t* ___m_ProductsJson_25;
 };
 
 struct AppleStoreImpl_t6AF0033DE5593A0D019BA107012C9C83D21FBD14_StaticFields
 {
-	// Uniject.IUtil UnityEngine.Purchasing.AppleStoreImpl::util
-	RuntimeObject* ___util_21;
-	// UnityEngine.Purchasing.AppleStoreImpl UnityEngine.Purchasing.AppleStoreImpl::instance
-	AppleStoreImpl_t6AF0033DE5593A0D019BA107012C9C83D21FBD14* ___instance_22;
+	// Uniject.IUtil UnityEngine.Purchasing.AppleStoreImpl::s_Util
+	RuntimeObject* ___s_Util_23;
+	// UnityEngine.Purchasing.AppleStoreImpl UnityEngine.Purchasing.AppleStoreImpl::s_Instance
+	AppleStoreImpl_t6AF0033DE5593A0D019BA107012C9C83D21FBD14* ___s_Instance_24;
 };
 
 // System.Runtime.CompilerServices.AsyncVoidMethodBuilder
@@ -3277,17 +3422,17 @@ struct Exception_t_marshaled_com
 struct FakeStore_tB59149351CDC01449882282D7CBFB8269FDEC16F  : public JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696
 {
 	// UnityEngine.Purchasing.Extension.IStoreCallback UnityEngine.Purchasing.FakeStore::m_Biller
-	RuntimeObject* ___m_Biller_11;
+	RuntimeObject* ___m_Biller_12;
 	// System.Collections.Generic.List`1<System.String> UnityEngine.Purchasing.FakeStore::m_PurchasedProducts
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___m_PurchasedProducts_12;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___m_PurchasedProducts_13;
 	// System.Boolean UnityEngine.Purchasing.FakeStore::purchaseCalled
-	bool ___purchaseCalled_13;
+	bool ___purchaseCalled_14;
 	// System.Boolean UnityEngine.Purchasing.FakeStore::restoreCalled
-	bool ___restoreCalled_14;
+	bool ___restoreCalled_15;
 	// System.String UnityEngine.Purchasing.FakeStore::<unavailableProductId>k__BackingField
-	String_t* ___U3CunavailableProductIdU3Ek__BackingField_15;
+	String_t* ___U3CunavailableProductIdU3Ek__BackingField_16;
 	// UnityEngine.Purchasing.FakeStoreUIMode UnityEngine.Purchasing.FakeStore::UIMode
-	int32_t ___UIMode_16;
+	int32_t ___UIMode_17;
 };
 
 // System.IO.FileStatus
@@ -3345,7 +3490,7 @@ struct Int32Enum_tCBAC8BA2BFF3A845FA599F303093BBBA374B6F0C
 struct MetricizedJsonStore_t9D5DE145B8B816D0BBEEC39A172A7A69098A4EDB  : public JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696
 {
 	// UnityEngine.Purchasing.Telemetry.ITelemetryMetricsService UnityEngine.Purchasing.MetricizedJsonStore::m_TelemetryMetricsService
-	RuntimeObject* ___m_TelemetryMetricsService_10;
+	RuntimeObject* ___m_TelemetryMetricsService_11;
 };
 
 // UnityEngine.Object
@@ -3477,15 +3622,15 @@ struct TelemetryMetricDefinitions_t63284200B00B4201BC469073154A2DC237BF40D9_Stat
 struct UDPImpl_t720E35E37B1DEC515FB45DD28DB57134A17F16B7  : public JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696
 {
 	// UnityEngine.Purchasing.INativeUDPStore UnityEngine.Purchasing.UDPImpl::m_Bindings
-	RuntimeObject* ___m_Bindings_10;
+	RuntimeObject* ___m_Bindings_11;
 	// System.Object UnityEngine.Purchasing.UDPImpl::m_UserInfo
-	RuntimeObject* ___m_UserInfo_11;
+	RuntimeObject* ___m_UserInfo_12;
 	// System.String UnityEngine.Purchasing.UDPImpl::m_LastInitError
-	String_t* ___m_LastInitError_12;
+	String_t* ___m_LastInitError_13;
 	// System.Boolean UnityEngine.Purchasing.UDPImpl::m_Initialized
-	bool ___m_Initialized_14;
+	bool ___m_Initialized_15;
 	// System.Action`1<UnityEngine.Purchasing.Product> UnityEngine.Purchasing.UDPImpl::m_DeferredCallback
-	Action_1_tDA104653FA5A324B3D61E32BD15E60D0C4AE63CE* ___m_DeferredCallback_16;
+	Action_1_tDA104653FA5A324B3D61E32BD15E60D0C4AE63CE* ___m_DeferredCallback_17;
 };
 
 // UnityEngine.Purchasing.Default.WinProductDescription
@@ -3637,7 +3782,7 @@ struct IAPSecurityException_t0CF168A490D20D9F3A643C75A77826B27ABDEA9B  : public 
 struct MetricizedAppleStoreImpl_t20F106AB08C02472CBAF01515A1CC041468AFB2C  : public AppleStoreImpl_t6AF0033DE5593A0D019BA107012C9C83D21FBD14
 {
 	// UnityEngine.Purchasing.Telemetry.ITelemetryMetricsService UnityEngine.Purchasing.MetricizedAppleStoreImpl::m_TelemetryMetricsService
-	RuntimeObject* ___m_TelemetryMetricsService_24;
+	RuntimeObject* ___m_TelemetryMetricsService_26;
 };
 
 // System.MulticastDelegate
@@ -3710,15 +3855,15 @@ struct Type_t_StaticFields
 struct UIFakeStore_tA7A32C2FF04809311D3FA1C9DD3A5051F502119C  : public FakeStore_tB59149351CDC01449882282D7CBFB8269FDEC16F
 {
 	// UnityEngine.Purchasing.DialogRequest UnityEngine.Purchasing.UIFakeStore::m_CurrentDialog
-	DialogRequest_t0F876F63E2F8CBAF6E16542D8A8D70FE9953ED65* ___m_CurrentDialog_20;
+	DialogRequest_t0F876F63E2F8CBAF6E16542D8A8D70FE9953ED65* ___m_CurrentDialog_21;
 	// System.Int32 UnityEngine.Purchasing.UIFakeStore::m_LastSelectedDropdownIndex
-	int32_t ___m_LastSelectedDropdownIndex_21;
+	int32_t ___m_LastSelectedDropdownIndex_22;
 	// UnityEngine.GameObject UnityEngine.Purchasing.UIFakeStore::m_UIFakeStoreWindowObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___m_UIFakeStoreWindowObject_22;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___m_UIFakeStoreWindowObject_23;
 	// UnityEngine.GameObject UnityEngine.Purchasing.UIFakeStore::m_EventSystem
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___m_EventSystem_23;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___m_EventSystem_24;
 	// Uniject.IUtil UnityEngine.Purchasing.UIFakeStore::m_Util
-	RuntimeObject* ___m_Util_24;
+	RuntimeObject* ___m_Util_25;
 };
 
 // UnityEngine.Purchasing.ExponentialRetryPolicy/<>c__DisplayClass4_0/<<Invoke>g__Retry|0>d
@@ -3831,6 +3976,11 @@ struct Func_2_t75667D71F159AEB8D73106C0895991743541AD05  : public MulticastDeleg
 
 // System.Func`2<System.Object,System.String>
 struct Func_2_t8A4E59735D50CEA34C30F6CD6B5804A38327CD0B  : public MulticastDelegate_t
+{
+};
+
+// System.Func`2<UnityEngine.Purchasing.ProductCatalogItem,System.Boolean>
+struct Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826  : public MulticastDelegate_t
 {
 };
 
@@ -4156,6 +4306,28 @@ struct Int32EnumU5BU5D_t87B7DB802810C38016332669039EF42C487A081F  : public Runti
 };
 
 
+// System.Void System.Func`2<System.Object,System.Boolean>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m13C0A7F33154D861E2A041B52E88461832DA1697_gshared (Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Where_TisRuntimeObject_m046DED489E38F15407F5825AD753C4090F103893_gshared (RuntimeObject* ___source0, Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* ___predicate1, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* Enumerable_ToList_TisRuntimeObject_mBDB9895C2D14F2A92043507996018A329BD32A64_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1<System.Object>::Remove(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// T UnityEngine.JsonUtility::FromJson<System.Object>(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonUtility_FromJson_TisRuntimeObject_m3A645CB2B6525E4A5835EA8A8CEBD39C7E2C444A_gshared (String_t* ___json0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::AddComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::BindConfiguration<System.Object>(T)
@@ -4182,10 +4354,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_m703047C213F7AB
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_m7BFCE0BBCF67689D263059B56A8D79161B698587_gshared_inline (Action_2_t156C43F079E7E68155FCDCD12DC77DD11AEF7E3C* __this, RuntimeObject* ___arg10, RuntimeObject* ___arg21, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.Dictionary`2<System.Object,System.Object>::TryGetValue(TKey,TValue&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___key0, RuntimeObject** ___value1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 // System.Void System.Comparison`1<System.Object>::.ctor(System.Object,System.IntPtr)
@@ -4210,12 +4378,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CU3CIn
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833_TisU3CU3CInvokeU3Eg__RetryU7C0U3Ed_tE5AC07E0116BB1D39DDAF27482E3C6C491030528_mB4CF3E94BF0CFC8D2F4D236AC21809FD618B812A_gshared (AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D* __this, TaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833* ___awaiter0, U3CU3CInvokeU3Eg__RetryU7C0U3Ed_tE5AC07E0116BB1D39DDAF27482E3C6C491030528* ___stateMachine1, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,UnityEngine.Purchasing.ExponentialRetryPolicy/<>c__DisplayClass4_0/<<Invoke>g__WaitAndRetry|1>d>(TAwaiter&,TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833_TisU3CU3CInvokeU3Eg__WaitAndRetryU7C1U3Ed_t31DA668B16863141F7188FCF7B12846273225A77_m49C3F218EA9D61615B2641FCD75AAEFB4B7F0AFF_gshared (AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06* __this, TaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833* ___awaiter0, U3CU3CInvokeU3Eg__WaitAndRetryU7C1U3Ed_t31DA668B16863141F7188FCF7B12846273225A77* ___stateMachine1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.Dictionary`2/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2<System.Object,System.Object>::GetEnumerator()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9 Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Dictionary`2/Enumerator<System.Object,System.Object>::Dispose()
@@ -4228,14 +4390,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.Dictionary`2/Enumerator<System.Object,System.Object>::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_gshared (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
-// System.Void System.Func`2<System.Object,System.Boolean>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m13C0A7F33154D861E2A041B52E88461832DA1697_gshared (Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
-// System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Where_TisRuntimeObject_m046DED489E38F15407F5825AD753C4090F103893_gshared (RuntimeObject* ___source0, Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* ___predicate1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* Enumerable_ToList_TisRuntimeObject_mBDB9895C2D14F2A92043507996018A329BD32A64_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
 // System.Void <>f__AnonymousType0`2<System.Object,System.Object>::.ctor(<product>j__TPar,<metadata>j__TPar)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ef__AnonymousType0_2__ctor_m8598C4D6DCE9750ABDFF2C28CEED055C4B51BAB3_gshared (U3CU3Ef__AnonymousType0_2_t1AD75A0A5A3DF13885BFF661FB200157B308385F* __this, RuntimeObject* ___product0, RuntimeObject* ___metadata1, const RuntimeMethod* method) ;
 // <product>j__TPar <>f__AnonymousType0`2<System.Object,System.Object>::get_product()
@@ -4289,6 +4443,83 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_FirstOrDefault_TisR
 // FieldType UnityEngine.AndroidJavaObject::GetStatic<System.Int32>(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___fieldName0, const RuntimeMethod* method) ;
 
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// System.Void System.Func`2<UnityEngine.Purchasing.ProductCatalogItem,System.Boolean>::.ctor(System.Object,System.IntPtr)
+inline void Func_2__ctor_m935B764E6B0410E8BE78B67F4ADC033B6016430A (Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
+{
+	((  void (*) (Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m13C0A7F33154D861E2A041B52E88461832DA1697_gshared)(__this, ___object0, ___method1, method);
+}
+// System.Collections.Generic.IEnumerable`1<TSource> System.Linq.Enumerable::Where<UnityEngine.Purchasing.ProductCatalogItem>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+inline RuntimeObject* Enumerable_Where_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_m2356C22B456552E546FC093EE565699A9B4782A9 (RuntimeObject* ___source0, Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* ___predicate1, const RuntimeMethod* method)
+{
+	return ((  RuntimeObject* (*) (RuntimeObject*, Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826*, const RuntimeMethod*))Enumerable_Where_TisRuntimeObject_m046DED489E38F15407F5825AD753C4090F103893_gshared)(___source0, ___predicate1, method);
+}
+// System.Collections.Generic.List`1<TSource> System.Linq.Enumerable::ToList<UnityEngine.Purchasing.ProductCatalogItem>(System.Collections.Generic.IEnumerable`1<TSource>)
+inline List_1_tF9E4155F905E46DBB10A4779C193F32620147794* Enumerable_ToList_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_mAE4DFA7056D7BF380D2B02351C1E56943707DDDE (RuntimeObject* ___source0, const RuntimeMethod* method)
+{
+	return ((  List_1_tF9E4155F905E46DBB10A4779C193F32620147794* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_ToList_TisRuntimeObject_mBDB9895C2D14F2A92043507996018A329BD32A64_gshared)(___source0, method);
+}
+// System.Void UnityEngine.Purchasing.ProductCatalogImpl::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalogImpl__ctor_mDF5D74610CE45F8F90A052D097F80E180B18B1F6 (ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Purchasing.ProductCatalog::Initialize(UnityEngine.Purchasing.IProductCatalogImpl)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ProductCatalog_Initialize_m25213AB41747E2AD217787E3890D861049F06333_inline (RuntimeObject* ___productCatalogImpl0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogItem>::Add(T)
+inline void List_1_Add_mFF5BDD22BFB9E6711A4BA41C3A031C8709D15CAA_inline (List_1_tF9E4155F905E46DBB10A4779C193F32620147794* __this, ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* ___item0, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tF9E4155F905E46DBB10A4779C193F32620147794*, ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+}
+// System.Boolean System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogItem>::Remove(T)
+inline bool List_1_Remove_m6642C5780F353A4FD28CD70A3F87487EA32BF7AE (List_1_tF9E4155F905E46DBB10A4779C193F32620147794* __this, ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* ___item0, const RuntimeMethod* method)
+{
+	return ((  bool (*) (List_1_tF9E4155F905E46DBB10A4779C193F32620147794*, ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___item0, method);
+}
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogItem>::GetEnumerator()
+inline Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464 List_1_GetEnumerator_m0834ECE0C6E8A9614A5536ABEE6CB2070B402036 (List_1_tF9E4155F905E46DBB10A4779C193F32620147794* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464 (*) (List_1_tF9E4155F905E46DBB10A4779C193F32620147794*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+}
+// System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Purchasing.ProductCatalogItem>::Dispose()
+inline void Enumerator_Dispose_m08939C035297A6AE5A7ACB968CFFBF8E5606B730 (Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+}
+// T System.Collections.Generic.List`1/Enumerator<UnityEngine.Purchasing.ProductCatalogItem>::get_Current()
+inline ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* Enumerator_get_Current_m57869F3E5ADC7DCD6315970EBC1666B84C2CB700_inline (Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464* __this, const RuntimeMethod* method)
+{
+	return ((  ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* (*) (Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+}
+// System.Boolean System.String::IsNullOrEmpty(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A (String_t* ___value0, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.Purchasing.ProductCatalogItem>::MoveNext()
+inline bool Enumerator_MoveNext_mDFB6A98329D1C55565DDF0A0600405813AC601D3 (Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+}
+// System.String UnityEngine.JsonUtility::ToJson(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JsonUtility_ToJson_mD0FB24DC5A8621A2473FC208E9B15AF43944EBCD (RuntimeObject* ___obj0, const RuntimeMethod* method) ;
+// T UnityEngine.JsonUtility::FromJson<UnityEngine.Purchasing.ProductCatalog>(System.String)
+inline ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* JsonUtility_FromJson_TisProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_m98D3416C512CBAEF46795B8DB55BE83DFF9DF31E (String_t* ___json0, const RuntimeMethod* method)
+{
+	return ((  ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m3A645CB2B6525E4A5835EA8A8CEBD39C7E2C444A_gshared)(___json0, method);
+}
+// System.String UnityEngine.TextAsset::get_text()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TextAsset_get_text_m36846042E3CF3D9DD337BF3F8B2B1902D10C8FD9 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* __this, const RuntimeMethod* method) ;
+// UnityEngine.Purchasing.ProductCatalog UnityEngine.Purchasing.ProductCatalog::Deserialize(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* ProductCatalog_Deserialize_m8DBFA0F7923C9F8F28A9EA397F536961D77D81B9 (String_t* ___catalogJSON0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Purchasing.ProductCatalog::Initialize()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalog_Initialize_mC6890001EBE8B950D71002EFD65412B525327CBF (const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<UnityEngine.Purchasing.ProductCatalogItem>::.ctor()
+inline void List_1__ctor_mBDF4705804BDB810CAF8EAC3B98D7ED2D97D7824 (List_1_tF9E4155F905E46DBB10A4779C193F32620147794* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tF9E4155F905E46DBB10A4779C193F32620147794*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+// System.Void UnityEngine.Purchasing.ProductCatalog/<>c::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m845EE6308B35770B09BD3578972415E43BA1A43D (U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155* __this, const RuntimeMethod* method) ;
+// System.String System.String::Trim()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Trim_mCD6D8C6D4CFD15225D12DB7D3E0544CA80FB8DA5 (String_t* __this, const RuntimeMethod* method) ;
+// System.Int32 System.String::get_Length()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) ;
 // UnityEngine.Object UnityEngine.Resources::Load(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* Resources_Load_m9608D2902F542C0B7FD52EFED088323448B9FA35 (String_t* ___path0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
@@ -4297,8 +4528,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_m4D656395C27694A7F3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* ProductCatalog_FromTextAsset_mB12D4B974E6E56A3472F4A1598890D28468F56C8 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* ___asset0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.ProductCatalog::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalog__ctor_m174D3B7D0C5E9CE1F7C008361FD014516FB0285D (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* __this, const RuntimeMethod* method) ;
-// System.Void System.Object::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractPurchasingModule__ctor_mBED233D75772B5243C0D2590A37B1BEF331BAB68 (AbstractPurchasingModule_t2CC681047C9428D3A74AD55F014C31823C70D20D* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.StandardPurchasingModule::set_util(Uniject.IUtil)
@@ -4309,6 +4538,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_useFakeStoreUIMode_m2221C886EC8FF153B0C2210AF2EF6DED271B826D_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, int32_t ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.StandardPurchasingModule::set_useFakeStoreAlways(System.Boolean)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_useFakeStoreAlways_mC217142239C37AA088BC50E0BD995F51A0583C23_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, bool ___value0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Purchasing.StandardPurchasingModule::set_appStore(UnityEngine.Purchasing.AppStore)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, int32_t ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.StandardPurchasingModule::set_telemetryDiagnosticsInstanceWrapper(UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_telemetryDiagnosticsInstanceWrapper_m97A16E0C47FF1CBDB6BB7661AB681BBF6E62B73E_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, RuntimeObject* ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.StandardPurchasingModule::set_telemetryMetricsInstanceWrapper(UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper)
@@ -4328,8 +4559,6 @@ inline UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* GameObject_AddCompon
 {
 	return ((  UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
 }
-// System.String UnityEngine.TextAsset::get_text()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TextAsset_get_text_m36846042E3CF3D9DD337BF3F8B2B1902D10C8FD9 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* __this, const RuntimeMethod* method) ;
 // UnityEngine.Purchasing.StoreConfiguration UnityEngine.Purchasing.StoreConfiguration::Deserialize(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StoreConfiguration_t2D81230C6E8000534E56E8517B9821C448E52CC6* StoreConfiguration_Deserialize_mB091B26AF3B89D405189E3D08466646461EEE2E6 (String_t* ___json0, const RuntimeMethod* method) ;
 // UnityEngine.Purchasing.AppStore UnityEngine.Purchasing.StoreConfiguration::get_androidStore()
@@ -4358,8 +4587,8 @@ inline void AbstractPurchasingModule_BindExtension_TisIGooglePlayStoreExtensions
 {
 	((  void (*) (AbstractPurchasingModule_t2CC681047C9428D3A74AD55F014C31823C70D20D*, RuntimeObject*, const RuntimeMethod*))AbstractPurchasingModule_BindExtension_TisRuntimeObject_m0E47F82C89695FA9368A6B3E4C4062A40C75379C_gshared)(__this, ___instance0, method);
 }
-// System.Void UnityEngine.Purchasing.FakeAppleConfiguation::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FakeAppleConfiguation__ctor_m51FB9071D4347DA7E6FADE033A91EC0FA9B46F4F (FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Purchasing.FakeAppleConfiguration::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FakeAppleConfiguration__ctor_m63E4505C8C9B95858C7BBFB42EA2531479B73F50 (FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::BindConfiguration<UnityEngine.Purchasing.IAppleConfiguration>(T)
 inline void AbstractPurchasingModule_BindConfiguration_TisIAppleConfiguration_t68EA476A6E8A9A62F0386AE82245BF44D49EBA59_mE10D3E23490D9AD85833E5C6F15904DFD4B09830 (AbstractPurchasingModule_t2CC681047C9428D3A74AD55F014C31823C70D20D* __this, RuntimeObject* ___instance0, const RuntimeMethod* method)
 {
@@ -4443,6 +4672,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_Insta
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StoreInstance__ctor_mEB51377D6F9CB9F344D2717ED0EAA999E888D5D3 (StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* __this, String_t* ___name0, RuntimeObject* ___instance1, const RuntimeMethod* method) ;
 // UnityEngine.Purchasing.Extension.IStore UnityEngine.Purchasing.StandardPurchasingModule::InstantiateApple()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_InstantiateApple_m1C37E2A2103096CB3E2BD67FB7061A5F417FCDF9 (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, const RuntimeMethod* method) ;
+// UnityEngine.Purchasing.AppStore UnityEngine.Purchasing.StandardPurchasingModule::get_appStore()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, const RuntimeMethod* method) ;
 // TValue System.Collections.Generic.Dictionary`2<UnityEngine.Purchasing.AppStore,System.String>::get_Item(TKey)
 inline String_t* Dictionary_2_get_Item_m61C5E1747C323CE4D134E64A6B6313AE49235587 (Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* __this, int32_t ___key0, const RuntimeMethod* method)
 {
@@ -4733,8 +4964,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enum_Parse_m2E810F090FE2D6D78D29D87EA6773F8C616E0257 (Type_t* ___enumType0, String_t* ___value1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.InvalidProductTypeException::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidProductTypeException__ctor_m79E0FD982F7188E0D74E438205909876F0A5B486 (InvalidProductTypeException_tAE9A866F76574220FCE831FCB3EE56890F89EC66* __this, const RuntimeMethod* method) ;
-// System.Boolean System.String::IsNullOrEmpty(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A (String_t* ___value0, const RuntimeMethod* method) ;
 // System.String UnityEngine.Purchasing.SerializationExtensions::TryGetString(System.Collections.Generic.Dictionary`2<System.String,System.Object>,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SerializationExtensions_TryGetString_m392070501BE8A99B614E7F9772E39297B3B6ECF7 (Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___dic0, String_t* ___key1, const RuntimeMethod* method) ;
 // System.Int64 System.Convert::ToInt64(System.String)
@@ -4801,8 +5030,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DateTime_Compare_mFE3B56B438BCB6AB84E3A9042F2D4970AB47F10A (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___t10, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___t21, const RuntimeMethod* method) ;
 // System.TimeSpan System.Xml.XmlConvert::ToTimeSpan(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A XmlConvert_ToTimeSpan_m0343E96CF74D5F2F983F690BAEC86D71D8301DB5 (String_t* ___s0, const RuntimeMethod* method) ;
-// System.Int32 System.String::get_Length()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) ;
 // System.Void System.TimeSpan::.ctor(System.Int32,System.Int32,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeSpan__ctor_m513B2AFB80D3350E59FBD23F53B2F1322175C24D (TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* __this, int32_t ___days0, int32_t ___hours1, int32_t ___minutes2, int32_t ___seconds3, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Purchasing.TimeSpanUnits::.ctor(System.Double,System.Int32,System.Int32)
@@ -5490,6 +5717,468 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m48B57EC27CADC3463CA98A33373
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass21_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0__ctor_mAA6CD654A719F4EBB10D885A68D75887C0E29C03 (U3CU3Ec__DisplayClass21_0_tD0D41DD90F19F88BB768917BEAA357B5A598EBD7* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass21_0::<GetDescription>b__0(UnityEngine.Purchasing.LocalizedProductDescription)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass21_0_U3CGetDescriptionU3Eb__0_mE6F811052A77E5E057437E11156E51DD617B2C1A (U3CU3Ec__DisplayClass21_0_tD0D41DD90F19F88BB768917BEAA357B5A598EBD7* __this, LocalizedProductDescription_t36BA1F51798AD6D84D7501225651BB2EFF207924* ___obj0, const RuntimeMethod* method) 
+{
+	{
+		// return descriptions.Find((obj) => obj.googleLocale == locale);
+		LocalizedProductDescription_t36BA1F51798AD6D84D7501225651BB2EFF207924* L_0 = ___obj0;
+		NullCheck(L_0);
+		int32_t L_1 = L_0->___googleLocale_0;
+		int32_t L_2 = __this->___locale_0;
+		return (bool)((((int32_t)L_1) == ((int32_t)L_2))? 1 : 0);
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass24_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass24_0__ctor_m07CE3CBAA66C74890BEDD3D31E54810B48B16BCD (U3CU3Ec__DisplayClass24_0_t0E56037ED385EDDCE7B8ADE728BC13E962C8F39F* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.Purchasing.ProductCatalogItem/<>c__DisplayClass24_0::<RemoveDescription>b__0(UnityEngine.Purchasing.LocalizedProductDescription)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass24_0_U3CRemoveDescriptionU3Eb__0_m07693E9A89CF9DBB51FF85D5FE7631DDCCD62A7F (U3CU3Ec__DisplayClass24_0_t0E56037ED385EDDCE7B8ADE728BC13E962C8F39F* __this, LocalizedProductDescription_t36BA1F51798AD6D84D7501225651BB2EFF207924* ___obj0, const RuntimeMethod* method) 
+{
+	{
+		// descriptions.RemoveAll((obj) => obj.googleLocale == locale);
+		LocalizedProductDescription_t36BA1F51798AD6D84D7501225651BB2EFF207924* L_0 = ___obj0;
+		NullCheck(L_0);
+		int32_t L_1 = L_0->___googleLocale_0;
+		int32_t L_2 = __this->___locale_0;
+		return (bool)((((int32_t)L_1) == ((int32_t)L_2))? 1 : 0);
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Collections.Generic.ICollection`1<UnityEngine.Purchasing.ProductCatalogItem> UnityEngine.Purchasing.ProductCatalog::get_allProducts()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ProductCatalog_get_allProducts_m93A191445C8495D516A695D8708996C8790EF1C7 (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* __this, const RuntimeMethod* method) 
+{
+	{
+		// public ICollection<ProductCatalogItem> allProducts => products;
+		List_1_tF9E4155F905E46DBB10A4779C193F32620147794* L_0 = __this->___products_5;
+		return L_0;
+	}
+}
+// System.Collections.Generic.ICollection`1<UnityEngine.Purchasing.ProductCatalogItem> UnityEngine.Purchasing.ProductCatalog::get_allValidProducts()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ProductCatalog_get_allValidProducts_m6598853A6030B9100FE7555E14F9182FF8C939A1 (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_ToList_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_mAE4DFA7056D7BF380D2B02351C1E56943707DDDE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Where_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_m2356C22B456552E546FC093EE565699A9B4782A9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3Cget_allValidProductsU3Eb__9_0_m12807973ABA5A7DEB65B6ECC4AC778C8B260D0B0_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* G_B2_0 = NULL;
+	List_1_tF9E4155F905E46DBB10A4779C193F32620147794* G_B2_1 = NULL;
+	Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* G_B1_0 = NULL;
+	List_1_tF9E4155F905E46DBB10A4779C193F32620147794* G_B1_1 = NULL;
+	{
+		// public ICollection<ProductCatalogItem> allValidProducts => products.Where(x => !string.IsNullOrEmpty(x.id) && x.id.Trim().Length != 0).ToList();
+		List_1_tF9E4155F905E46DBB10A4779C193F32620147794* L_0 = __this->___products_5;
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var);
+		Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* L_1 = ((U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var))->___U3CU3E9__9_0_1;
+		Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* L_2 = L_1;
+		G_B1_0 = L_2;
+		G_B1_1 = L_0;
+		if (L_2)
+		{
+			G_B2_0 = L_2;
+			G_B2_1 = L_0;
+			goto IL_0025;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var);
+		U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155* L_3 = ((U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var))->___U3CU3E9_0;
+		Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* L_4 = (Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826*)il2cpp_codegen_object_new(Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826_il2cpp_TypeInfo_var);
+		NullCheck(L_4);
+		Func_2__ctor_m935B764E6B0410E8BE78B67F4ADC033B6016430A(L_4, L_3, (intptr_t)((void*)U3CU3Ec_U3Cget_allValidProductsU3Eb__9_0_m12807973ABA5A7DEB65B6ECC4AC778C8B260D0B0_RuntimeMethod_var), NULL);
+		Func_2_tD57688C8570D15BDAAB06662EC2D0EAC19403826* L_5 = L_4;
+		((U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var))->___U3CU3E9__9_0_1 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var))->___U3CU3E9__9_0_1), (void*)L_5);
+		G_B2_0 = L_5;
+		G_B2_1 = G_B1_1;
+	}
+
+IL_0025:
+	{
+		RuntimeObject* L_6;
+		L_6 = Enumerable_Where_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_m2356C22B456552E546FC093EE565699A9B4782A9(G_B2_1, G_B2_0, Enumerable_Where_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_m2356C22B456552E546FC093EE565699A9B4782A9_RuntimeMethod_var);
+		List_1_tF9E4155F905E46DBB10A4779C193F32620147794* L_7;
+		L_7 = Enumerable_ToList_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_mAE4DFA7056D7BF380D2B02351C1E56943707DDDE(L_6, Enumerable_ToList_TisProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215_mAE4DFA7056D7BF380D2B02351C1E56943707DDDE_RuntimeMethod_var);
+		return L_7;
+	}
+}
+// System.Void UnityEngine.Purchasing.ProductCatalog::Initialize()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalog_Initialize_mC6890001EBE8B950D71002EFD65412B525327CBF (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (instance == null)
+		RuntimeObject* L_0 = ((ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_StaticFields*)il2cpp_codegen_static_fields_for(ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var))->___instance_0;
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		// Initialize(new ProductCatalogImpl());
+		ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB* L_1 = (ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB*)il2cpp_codegen_object_new(ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB_il2cpp_TypeInfo_var);
+		NullCheck(L_1);
+		ProductCatalogImpl__ctor_mDF5D74610CE45F8F90A052D097F80E180B18B1F6(L_1, NULL);
+		ProductCatalog_Initialize_m25213AB41747E2AD217787E3890D861049F06333_inline(L_1, NULL);
+	}
+
+IL_0011:
+	{
+		// }
+		return;
+	}
+}
+// System.Void UnityEngine.Purchasing.ProductCatalog::Initialize(UnityEngine.Purchasing.IProductCatalogImpl)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalog_Initialize_m25213AB41747E2AD217787E3890D861049F06333 (RuntimeObject* ___productCatalogImpl0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// instance = productCatalogImpl;
+		RuntimeObject* L_0 = ___productCatalogImpl0;
+		((ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_StaticFields*)il2cpp_codegen_static_fields_for(ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var))->___instance_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_StaticFields*)il2cpp_codegen_static_fields_for(ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var))->___instance_0), (void*)L_0);
+		// }
+		return;
+	}
+}
+// System.Void UnityEngine.Purchasing.ProductCatalog::Add(UnityEngine.Purchasing.ProductCatalogItem)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalog_Add_m1645C12E0437CD58DF414ED5FC2E14194896B8BF (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* __this, ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* ___item0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mFF5BDD22BFB9E6711A4BA41C3A031C8709D15CAA_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// products.Add(item);
+		List_1_tF9E4155F905E46DBB10A4779C193F32620147794* L_0 = __this->___products_5;
+		ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* L_1 = ___item0;
+		NullCheck(L_0);
+		List_1_Add_mFF5BDD22BFB9E6711A4BA41C3A031C8709D15CAA_inline(L_0, L_1, List_1_Add_mFF5BDD22BFB9E6711A4BA41C3A031C8709D15CAA_RuntimeMethod_var);
+		// }
+		return;
+	}
+}
+// System.Void UnityEngine.Purchasing.ProductCatalog::Remove(UnityEngine.Purchasing.ProductCatalogItem)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalog_Remove_mC0AAECF645F47D463E2EE9C2CA6F51B84334ED68 (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* __this, ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* ___item0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_m6642C5780F353A4FD28CD70A3F87487EA32BF7AE_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// products.Remove(item);
+		List_1_tF9E4155F905E46DBB10A4779C193F32620147794* L_0 = __this->___products_5;
+		ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* L_1 = ___item0;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = List_1_Remove_m6642C5780F353A4FD28CD70A3F87487EA32BF7AE(L_0, L_1, List_1_Remove_m6642C5780F353A4FD28CD70A3F87487EA32BF7AE_RuntimeMethod_var);
+		// }
+		return;
+	}
+}
+// System.Boolean UnityEngine.Purchasing.ProductCatalog::IsEmpty()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ProductCatalog_IsEmpty_mE15235CB170A308393E9E5940532887BFBFB4438 (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m08939C035297A6AE5A7ACB968CFFBF8E5606B730_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mDFB6A98329D1C55565DDF0A0600405813AC601D3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m57869F3E5ADC7DCD6315970EBC1666B84C2CB700_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m0834ECE0C6E8A9614A5536ABEE6CB2070B402036_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	{
+		// foreach (var item in products)
+		List_1_tF9E4155F905E46DBB10A4779C193F32620147794* L_0 = __this->___products_5;
+		NullCheck(L_0);
+		Enumerator_tDA5E2431B663170E2480A9AC6E52F43F02BF7464 L_1;
+		L_1 = List_1_GetEnumerator_m0834ECE0C6E8A9614A5536ABEE6CB2070B402036(L_0, List_1_GetEnumerator_m0834ECE0C6E8A9614A5536ABEE6CB2070B402036_RuntimeMethod_var);
+		V_0 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0030:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m08939C035297A6AE5A7ACB968CFFBF8E5606B730((&V_0), Enumerator_Dispose_m08939C035297A6AE5A7ACB968CFFBF8E5606B730_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0025_1;
+			}
+
+IL_000e_1:
+			{
+				// foreach (var item in products)
+				ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* L_2;
+				L_2 = Enumerator_get_Current_m57869F3E5ADC7DCD6315970EBC1666B84C2CB700_inline((&V_0), Enumerator_get_Current_m57869F3E5ADC7DCD6315970EBC1666B84C2CB700_RuntimeMethod_var);
+				// if (!String.IsNullOrEmpty(item.id))
+				NullCheck(L_2);
+				String_t* L_3 = L_2->___id_0;
+				bool L_4;
+				L_4 = String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A(L_3, NULL);
+				if (L_4)
+				{
+					goto IL_0025_1;
+				}
+			}
+			{
+				// return false;
+				V_1 = (bool)0;
+				goto IL_0040;
+			}
+
+IL_0025_1:
+			{
+				// foreach (var item in products)
+				bool L_5;
+				L_5 = Enumerator_MoveNext_mDFB6A98329D1C55565DDF0A0600405813AC601D3((&V_0), Enumerator_MoveNext_mDFB6A98329D1C55565DDF0A0600405813AC601D3_RuntimeMethod_var);
+				if (L_5)
+				{
+					goto IL_000e_1;
+				}
+			}
+			{
+				goto IL_003e;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_003e:
+	{
+		// return true;
+		return (bool)1;
+	}
+
+IL_0040:
+	{
+		// }
+		bool L_6 = V_1;
+		return L_6;
+	}
+}
+// System.String UnityEngine.Purchasing.ProductCatalog::Serialize(UnityEngine.Purchasing.ProductCatalog)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ProductCatalog_Serialize_mF0F1C5E76D912C219BAE12C113F2A8CB9A59A19A (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* ___catalog0, const RuntimeMethod* method) 
+{
+	{
+		// return JsonUtility.ToJson(catalog);
+		ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* L_0 = ___catalog0;
+		String_t* L_1;
+		L_1 = JsonUtility_ToJson_mD0FB24DC5A8621A2473FC208E9B15AF43944EBCD(L_0, NULL);
+		return L_1;
+	}
+}
+// UnityEngine.Purchasing.ProductCatalog UnityEngine.Purchasing.ProductCatalog::Deserialize(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* ProductCatalog_Deserialize_m8DBFA0F7923C9F8F28A9EA397F536961D77D81B9 (String_t* ___catalogJSON0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_m98D3416C512CBAEF46795B8DB55BE83DFF9DF31E_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// return JsonUtility.FromJson<ProductCatalog>(catalogJSON);
+		String_t* L_0 = ___catalogJSON0;
+		ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* L_1;
+		L_1 = JsonUtility_FromJson_TisProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_m98D3416C512CBAEF46795B8DB55BE83DFF9DF31E(L_0, JsonUtility_FromJson_TisProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_m98D3416C512CBAEF46795B8DB55BE83DFF9DF31E_RuntimeMethod_var);
+		return L_1;
+	}
+}
+// UnityEngine.Purchasing.ProductCatalog UnityEngine.Purchasing.ProductCatalog::FromTextAsset(UnityEngine.TextAsset)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* ProductCatalog_FromTextAsset_mB12D4B974E6E56A3472F4A1598890D28468F56C8 (TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* ___asset0, const RuntimeMethod* method) 
+{
+	{
+		// return Deserialize(asset.text);
+		TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* L_0 = ___asset0;
+		NullCheck(L_0);
+		String_t* L_1;
+		L_1 = TextAsset_get_text_m36846042E3CF3D9DD337BF3F8B2B1902D10C8FD9(L_0, NULL);
+		ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* L_2;
+		L_2 = ProductCatalog_Deserialize_m8DBFA0F7923C9F8F28A9EA397F536961D77D81B9(L_1, NULL);
+		return L_2;
+	}
+}
+// UnityEngine.Purchasing.ProductCatalog UnityEngine.Purchasing.ProductCatalog::LoadDefaultCatalog()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* ProductCatalog_LoadDefaultCatalog_m9234528E744434B6C15DB3BC81487D4794FBF9B6 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IProductCatalogImpl_tDDD62175F121461C97EC07147671B803D2286C0A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Initialize();
+		ProductCatalog_Initialize_mC6890001EBE8B950D71002EFD65412B525327CBF(NULL);
+		// return instance.LoadDefaultCatalog();
+		RuntimeObject* L_0 = ((ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_StaticFields*)il2cpp_codegen_static_fields_for(ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var))->___instance_0;
+		NullCheck(L_0);
+		ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* L_1;
+		L_1 = InterfaceFuncInvoker0< ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* >::Invoke(0 /* UnityEngine.Purchasing.ProductCatalog UnityEngine.Purchasing.IProductCatalogImpl::LoadDefaultCatalog() */, IProductCatalogImpl_tDDD62175F121461C97EC07147671B803D2286C0A_il2cpp_TypeInfo_var, L_0);
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Purchasing.ProductCatalog::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProductCatalog__ctor_m174D3B7D0C5E9CE1F7C008361FD014516FB0285D (ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mBDF4705804BDB810CAF8EAC3B98D7ED2D97D7824_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tF9E4155F905E46DBB10A4779C193F32620147794_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// public bool enableCodelessAutoInitialization = true;
+		__this->___enableCodelessAutoInitialization_3 = (bool)1;
+		// List<ProductCatalogItem> products = new List<ProductCatalogItem>();
+		List_1_tF9E4155F905E46DBB10A4779C193F32620147794* L_0 = (List_1_tF9E4155F905E46DBB10A4779C193F32620147794*)il2cpp_codegen_object_new(List_1_tF9E4155F905E46DBB10A4779C193F32620147794_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		List_1__ctor_mBDF4705804BDB810CAF8EAC3B98D7ED2D97D7824(L_0, List_1__ctor_mBDF4705804BDB810CAF8EAC3B98D7ED2D97D7824_RuntimeMethod_var);
+		__this->___products_5 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___products_5), (void*)L_0);
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.Purchasing.ProductCatalog/<>c::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mE1A3E230FAB71945DB12256132A385E4F07E8D21 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155* L_0 = (U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155*)il2cpp_codegen_object_new(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__ctor_m845EE6308B35770B09BD3578972415E43BA1A43D(L_0, NULL);
+		((U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var))->___U3CU3E9_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155_il2cpp_TypeInfo_var))->___U3CU3E9_0), (void*)L_0);
+		return;
+	}
+}
+// System.Void UnityEngine.Purchasing.ProductCatalog/<>c::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m845EE6308B35770B09BD3578972415E43BA1A43D (U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.Purchasing.ProductCatalog/<>c::<get_allValidProducts>b__9_0(UnityEngine.Purchasing.ProductCatalogItem)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3Cget_allValidProductsU3Eb__9_0_m12807973ABA5A7DEB65B6ECC4AC778C8B260D0B0 (U3CU3Ec_t07F7A4BC857876B746A4C175168F7A137AD51155* __this, ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* ___x0, const RuntimeMethod* method) 
+{
+	{
+		// public ICollection<ProductCatalogItem> allValidProducts => products.Where(x => !string.IsNullOrEmpty(x.id) && x.id.Trim().Length != 0).ToList();
+		ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* L_0 = ___x0;
+		NullCheck(L_0);
+		String_t* L_1 = L_0->___id_0;
+		bool L_2;
+		L_2 = String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A(L_1, NULL);
+		if (L_2)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		ProductCatalogItem_tBBB809AC7547B118E718170833CB6729F80F4215* L_3 = ___x0;
+		NullCheck(L_3);
+		String_t* L_4 = L_3->___id_0;
+		NullCheck(L_4);
+		String_t* L_5;
+		L_5 = String_Trim_mCD6D8C6D4CFD15225D12DB7D3E0544CA80FB8DA5(L_4, NULL);
+		NullCheck(L_5);
+		int32_t L_6;
+		L_6 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_5, NULL);
+		return (bool)((!(((uint32_t)L_6) <= ((uint32_t)0)))? 1 : 0);
+	}
+
+IL_0021:
+	{
+		return (bool)0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // UnityEngine.Purchasing.ProductCatalog UnityEngine.Purchasing.ProductCatalogImpl::LoadDefaultCatalog()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1* ProductCatalogImpl_LoadDefaultCatalog_m60AE28DEAACE2BEC92C132DA2E3BD1EAE8D16F9A (ProductCatalogImpl_t39C308CC74CA4C6F9FB3E59A1128C035B9DA44AB* __this, const RuntimeMethod* method) 
 {
@@ -5565,7 +6254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_get_u
 {
 	{
 		// internal IUtil util { get; private set; }
-		RuntimeObject* L_0 = __this->___U3CutilU3Ek__BackingField_7;
+		RuntimeObject* L_0 = __this->___U3CutilU3Ek__BackingField_6;
 		return L_0;
 	}
 }
@@ -5575,8 +6264,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_util_m47ACA
 	{
 		// internal IUtil util { get; private set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CutilU3Ek__BackingField_7 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CutilU3Ek__BackingField_7), (void*)L_0);
+		__this->___U3CutilU3Ek__BackingField_6 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CutilU3Ek__BackingField_6), (void*)L_0);
 		return;
 	}
 }
@@ -5585,7 +6274,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_get_l
 {
 	{
 		// internal ILogger logger { get; private set; }
-		RuntimeObject* L_0 = __this->___U3CloggerU3Ek__BackingField_8;
+		RuntimeObject* L_0 = __this->___U3CloggerU3Ek__BackingField_7;
 		return L_0;
 	}
 }
@@ -5595,8 +6284,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_logger_mF4E
 	{
 		// internal ILogger logger { get; private set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CloggerU3Ek__BackingField_8 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CloggerU3Ek__BackingField_8), (void*)L_0);
+		__this->___U3CloggerU3Ek__BackingField_7 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CloggerU3Ek__BackingField_7), (void*)L_0);
 		return;
 	}
 }
@@ -5605,7 +6294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StoreInstance_tE334F08374C14889F3118AFD0E1F28
 {
 	{
 		// internal StoreInstance storeInstance { get; private set; }
-		StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* L_0 = __this->___U3CstoreInstanceU3Ek__BackingField_9;
+		StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* L_0 = __this->___U3CstoreInstanceU3Ek__BackingField_8;
 		return L_0;
 	}
 }
@@ -5615,8 +6304,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_storeInstan
 	{
 		// internal StoreInstance storeInstance { get; private set; }
 		StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* L_0 = ___value0;
-		__this->___U3CstoreInstanceU3Ek__BackingField_9 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstoreInstanceU3Ek__BackingField_9), (void*)L_0);
+		__this->___U3CstoreInstanceU3Ek__BackingField_8 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstoreInstanceU3Ek__BackingField_8), (void*)L_0);
 		return;
 	}
 }
@@ -5625,7 +6314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_get_t
 {
 	{
 		// internal ITelemetryMetricsInstanceWrapper telemetryMetricsInstanceWrapper { get; set; }
-		RuntimeObject* L_0 = __this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_10;
+		RuntimeObject* L_0 = __this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_9;
 		return L_0;
 	}
 }
@@ -5635,8 +6324,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_telemetryMe
 	{
 		// internal ITelemetryMetricsInstanceWrapper telemetryMetricsInstanceWrapper { get; set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_10 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_10), (void*)L_0);
+		__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_9 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_9), (void*)L_0);
 		return;
 	}
 }
@@ -5645,7 +6334,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_get_t
 {
 	{
 		// internal ITelemetryDiagnosticsInstanceWrapper telemetryDiagnosticsInstanceWrapper { get; set; }
-		RuntimeObject* L_0 = __this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_11;
+		RuntimeObject* L_0 = __this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_10;
 		return L_0;
 	}
 }
@@ -5655,8 +6344,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_telemetryDi
 	{
 		// internal ITelemetryDiagnosticsInstanceWrapper telemetryDiagnosticsInstanceWrapper { get; set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_11 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_11), (void*)L_0);
+		__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_10 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_10), (void*)L_0);
 		return;
 	}
 }
@@ -5666,13 +6355,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule__ctor_m6245E549
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral830D26873D8A1B263BA6E060E415CDEEA12B9480);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralADB51A85ACAAF3328A18A4742E0EA03E4A50B112);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// internal readonly string k_Version = "4.4.1"; // NOTE: Changed using GenerateUnifiedIAP.sh before pack step.
-		__this->___k_Version_2 = _stringLiteral830D26873D8A1B263BA6E060E415CDEEA12B9480;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___k_Version_2), (void*)_stringLiteral830D26873D8A1B263BA6E060E415CDEEA12B9480);
+		// internal readonly string k_Version = "4.5.0"; // NOTE: Changed using GenerateUnifiedIAP.sh before pack step.
+		__this->___k_Version_2 = _stringLiteralADB51A85ACAAF3328A18A4742E0EA03E4A50B112;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___k_Version_2), (void*)_stringLiteralADB51A85ACAAF3328A18A4742E0EA03E4A50B112);
 		// internal StandardPurchasingModule(IUtil util, ILogger logger, INativeStoreProvider nativeStoreProvider,
 		//     RuntimePlatform platform, AppStore android, ITelemetryDiagnosticsInstanceWrapper telemetryDiagnosticsInstanceWrapper, ITelemetryMetricsInstanceWrapper telemetryMetricsInstanceWrapper)
 		AbstractPurchasingModule__ctor_mBED233D75772B5243C0D2590A37B1BEF331BAB68(__this, NULL);
@@ -5684,18 +6373,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule__ctor_m6245E549
 		StandardPurchasingModule_set_logger_mF4E6AF66082ABE09AB49EFBEA8255DE33C90ADE0_inline(__this, L_1, NULL);
 		// m_NativeStoreProvider = nativeStoreProvider;
 		RuntimeObject* L_2 = ___nativeStoreProvider2;
-		__this->___m_NativeStoreProvider_4 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_NativeStoreProvider_4), (void*)L_2);
+		__this->___m_NativeStoreProvider_3 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_NativeStoreProvider_3), (void*)L_2);
 		// m_RuntimePlatform = platform;
 		int32_t L_3 = ___platform3;
-		__this->___m_RuntimePlatform_5 = L_3;
+		__this->___m_RuntimePlatform_4 = L_3;
 		// useFakeStoreUIMode = FakeStoreUIMode.Default;
 		StandardPurchasingModule_set_useFakeStoreUIMode_m2221C886EC8FF153B0C2210AF2EF6DED271B826D_inline(__this, 0, NULL);
 		// useFakeStoreAlways = false;
 		StandardPurchasingModule_set_useFakeStoreAlways_mC217142239C37AA088BC50E0BD995F51A0583C23_inline(__this, (bool)0, NULL);
-		// m_AppStorePlatform = android;
+		// appStore = android;
 		int32_t L_4 = ___android4;
-		__this->___m_AppStorePlatform_3 = L_4;
+		StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271_inline(__this, L_4, NULL);
 		// this.telemetryDiagnosticsInstanceWrapper = telemetryDiagnosticsInstanceWrapper;
 		RuntimeObject* L_5 = ___telemetryDiagnosticsInstanceWrapper5;
 		StandardPurchasingModule_set_telemetryDiagnosticsInstanceWrapper_m97A16E0C47FF1CBDB6BB7661AB681BBF6E62B73E_inline(__this, L_5, NULL);
@@ -5710,9 +6399,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule__ctor_m6245E549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74 (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, const RuntimeMethod* method) 
 {
 	{
-		// return m_AppStorePlatform;
-		int32_t L_0 = __this->___m_AppStorePlatform_3;
+		// public AppStore appStore { get; private set; }
+		int32_t L_0 = __this->___U3CappStoreU3Ek__BackingField_12;
 		return L_0;
+	}
+}
+// System.Void UnityEngine.Purchasing.StandardPurchasingModule::set_appStore(UnityEngine.Purchasing.AppStore)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271 (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, int32_t ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public AppStore appStore { get; private set; }
+		int32_t L_0 = ___value0;
+		__this->___U3CappStoreU3Ek__BackingField_12 = L_0;
+		return;
 	}
 }
 // UnityEngine.Purchasing.FakeStoreUIMode UnityEngine.Purchasing.StandardPurchasingModule::get_useFakeStoreUIMode()
@@ -5802,14 +6501,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StandardPurchasingModule_t988B3F7D9F73F5C6458
 	{
 		// if (null == ModuleInstance)
 		il2cpp_codegen_runtime_class_init_inline(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var);
-		StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* L_0 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_6;
+		StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* L_0 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_5;
 		if (L_0)
 		{
 			goto IL_0086;
 		}
 	}
 	{
-		// var logger = UnityEngine.Debug.unityLogger;
+		// var logger = Debug.unityLogger;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		RuntimeObject* L_1;
 		L_1 = Debug_get_unityLogger_mA872400E9E585FCD6A2DE1717748A458545DE8A4_inline(NULL);
@@ -5830,7 +6529,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StandardPurchasingModule_t988B3F7D9F73F5C6458
 		NullCheck(L_4);
 		UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* L_5;
 		L_5 = GameObject_AddComponent_TisUnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383_mCAAEA6996A42A317ADC88315E5234EB6C028921A(L_4, GameObject_AddComponent_TisUnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383_mCAAEA6996A42A317ADC88315E5234EB6C028921A_RuntimeMethod_var);
-		// var textAsset = (Resources.Load("BillingMode") as TextAsset);
+		// var textAsset = Resources.Load("BillingMode") as TextAsset;
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6;
 		L_6 = Resources_Load_m9608D2902F542C0B7FD52EFED088323448B9FA35(_stringLiteral11ED309737977AB1369057A0E890585244930C2C, NULL);
 		V_1 = ((TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69*)IsInstClass((RuntimeObject*)L_6, TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69_il2cpp_TypeInfo_var));
@@ -5932,15 +6631,15 @@ IL_0066:
 		NullCheck(L_24);
 		StandardPurchasingModule__ctor_m6245E549030B7884B39F1298622CA1E08DDC7DB6(L_24, G_B7_0, L_18, L_19, L_20, L_21, L_22, L_23, NULL);
 		il2cpp_codegen_runtime_class_init_inline(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var);
-		((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_6 = L_24;
-		Il2CppCodeGenWriteBarrier((void**)(&((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_6), (void*)L_24);
+		((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_5 = L_24;
+		Il2CppCodeGenWriteBarrier((void**)(&((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_5), (void*)L_24);
 	}
 
 IL_0086:
 	{
 		// return ModuleInstance;
 		il2cpp_codegen_runtime_class_init_inline(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var);
-		StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* L_25 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_6;
+		StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* L_25 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___ModuleInstance_5;
 		return L_25;
 	}
 }
@@ -5962,7 +6661,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_Configure_m0C02
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AbstractPurchasingModule_BindExtension_TisITransactionHistoryExtensions_t39C3B44556EA4D94379D2277249A9D56B598287E_m38CC206259800FDD8316075E041367D05DC02511_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AbstractPurchasingModule_BindExtension_TisIUDPExtensions_tCDEDCF1A9147E9F5D0CE814A6F3D53056EFE10B6_m21F82CE64C5C0D04583B525E1FD7A7D3EEACD674_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FakeAmazonExtensions_t2BB017AD868017668CAF2632A35D9673384C42AA_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FakeAppleExtensions_t043F3D5F84FFE499BDD87D931F558F2DA7FB56F6_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FakeGooglePlayStoreConfiguration_t607477653FD993A02B440D6206650186CECBFF1D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FakeGooglePlayStoreExtensions_t7845A542181F86959911942B2E32ED1CB6225324_il2cpp_TypeInfo_var);
@@ -5990,10 +6689,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_Configure_m0C02
 		NullCheck(L_1);
 		FakeGooglePlayStoreExtensions__ctor_m7CE5CD272DDABAF44154E2B79578DE525A413891(L_1, NULL);
 		AbstractPurchasingModule_BindExtension_TisIGooglePlayStoreExtensions_t5C73808BD965EB1E0F9F58213D11A16D0ACD2C61_m266482B298E19F73892E4030C1F7C2CAEAE8F7DD(__this, L_1, AbstractPurchasingModule_BindExtension_TisIGooglePlayStoreExtensions_t5C73808BD965EB1E0F9F58213D11A16D0ACD2C61_m266482B298E19F73892E4030C1F7C2CAEAE8F7DD_RuntimeMethod_var);
-		// BindConfiguration<IAppleConfiguration>(new FakeAppleConfiguation());
-		FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB* L_2 = (FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB*)il2cpp_codegen_object_new(FakeAppleConfiguation_t034886273C3558448EA8EA72704C591CFFDE50BB_il2cpp_TypeInfo_var);
+		// BindConfiguration<IAppleConfiguration>(new FakeAppleConfiguration());
+		FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE* L_2 = (FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE*)il2cpp_codegen_object_new(FakeAppleConfiguration_t7DD07857A594C754442ED1EE4118150EA6DEC9CE_il2cpp_TypeInfo_var);
 		NullCheck(L_2);
-		FakeAppleConfiguation__ctor_m51FB9071D4347DA7E6FADE033A91EC0FA9B46F4F(L_2, NULL);
+		FakeAppleConfiguration__ctor_m63E4505C8C9B95858C7BBFB42EA2531479B73F50(L_2, NULL);
 		AbstractPurchasingModule_BindConfiguration_TisIAppleConfiguration_t68EA476A6E8A9A62F0386AE82245BF44D49EBA59_mE10D3E23490D9AD85833E5C6F15904DFD4B09830(__this, L_2, AbstractPurchasingModule_BindConfiguration_TisIAppleConfiguration_t68EA476A6E8A9A62F0386AE82245BF44D49EBA59_mE10D3E23490D9AD85833E5C6F15904DFD4B09830_RuntimeMethod_var);
 		// BindExtension<IAppleExtensions>(new FakeAppleExtensions());
 		FakeAppleExtensions_t043F3D5F84FFE499BDD87D931F558F2DA7FB56F6* L_3 = (FakeAppleExtensions_t043F3D5F84FFE499BDD87D931F558F2DA7FB56F6*)il2cpp_codegen_object_new(FakeAppleExtensions_t043F3D5F84FFE499BDD87D931F558F2DA7FB56F6_il2cpp_TypeInfo_var);
@@ -6084,7 +6783,7 @@ IL_008a:
 
 IL_00c1:
 	{
-		// if ((this.util != null) && this.util.IsClassOrSubclass(typeof(JSONStore), storeInstance.instance.GetType()))
+		// if ((util != null) && util.IsClassOrSubclass(typeof(JSONStore), storeInstance.instance.GetType()))
 		RuntimeObject* L_20;
 		L_20 = StandardPurchasingModule_get_util_m2420EF7333781CE296FAD28A220BF71C71A06BFF_inline(__this, NULL);
 		if (!L_20)
@@ -6116,7 +6815,7 @@ IL_00c1:
 		}
 	}
 	{
-		// JSONStore jsonStore = (JSONStore)storeInstance.instance;
+		// var jsonStore = (JSONStore)storeInstance.instance;
 		StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* L_28;
 		L_28 = StandardPurchasingModule_get_storeInstance_m4DB229ECA4FF6B1D461558C6A88E094A278DB345_inline(__this, NULL);
 		NullCheck(L_28);
@@ -6172,7 +6871,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StoreInstance_tE334F08374C14889F3118AFD0E1F28
 IL_0019:
 	{
 		// switch (m_RuntimePlatform)
-		int32_t L_3 = __this->___m_RuntimePlatform_5;
+		int32_t L_3 = __this->___m_RuntimePlatform_4;
 		V_0 = L_3;
 		int32_t L_4 = V_0;
 		if ((((int32_t)L_4) > ((int32_t)8)))
@@ -6226,8 +6925,8 @@ IL_0031:
 
 IL_0047:
 	{
-		// m_AppStorePlatform = AppStore.MacAppStore;
-		__this->___m_AppStorePlatform_3 = 4;
+		// appStore = AppStore.MacAppStore;
+		StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271_inline(__this, 4, NULL);
 		// return new StoreInstance(MacAppStore.Name, InstantiateApple());
 		RuntimeObject* L_10;
 		L_10 = StandardPurchasingModule_InstantiateApple_m1C37E2A2103096CB3E2BD67FB7061A5F417FCDF9(__this, NULL);
@@ -6239,8 +6938,8 @@ IL_0047:
 
 IL_005f:
 	{
-		// m_AppStorePlatform = AppStore.AppleAppStore;
-		__this->___m_AppStorePlatform_3 = 5;
+		// appStore = AppStore.AppleAppStore;
+		StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271_inline(__this, 5, NULL);
 		// return new StoreInstance(AppleAppStore.Name, InstantiateApple());
 		RuntimeObject* L_12;
 		L_12 = StandardPurchasingModule_InstantiateApple_m1C37E2A2103096CB3E2BD67FB7061A5F417FCDF9(__this, NULL);
@@ -6252,18 +6951,20 @@ IL_005f:
 
 IL_0077:
 	{
-		// switch (m_AppStorePlatform)
-		int32_t L_14 = __this->___m_AppStorePlatform_3;
+		// switch (appStore)
+		int32_t L_14;
+		L_14 = StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74_inline(__this, NULL);
 		if ((!(((uint32_t)L_14) == ((uint32_t)3))))
 		{
 			goto IL_009c;
 		}
 	}
 	{
-		// return new StoreInstance(AndroidStoreNameMap[m_AppStorePlatform], InstantiateUDP());
+		// return new StoreInstance(AndroidStoreNameMap[appStore], InstantiateUDP());
 		il2cpp_codegen_runtime_class_init_inline(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var);
-		Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* L_15 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_12;
-		int32_t L_16 = __this->___m_AppStorePlatform_3;
+		Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* L_15 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_11;
+		int32_t L_16;
+		L_16 = StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74_inline(__this, NULL);
 		NullCheck(L_15);
 		String_t* L_17;
 		L_17 = Dictionary_2_get_Item_m61C5E1747C323CE4D134E64A6B6313AE49235587(L_15, L_16, Dictionary_2_get_Item_m61C5E1747C323CE4D134E64A6B6313AE49235587_RuntimeMethod_var);
@@ -6277,10 +6978,11 @@ IL_0077:
 
 IL_009c:
 	{
-		// return new StoreInstance(AndroidStoreNameMap[m_AppStorePlatform], InstantiateAndroid());
+		// return new StoreInstance(AndroidStoreNameMap[appStore], InstantiateAndroid());
 		il2cpp_codegen_runtime_class_init_inline(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var);
-		Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* L_20 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_12;
-		int32_t L_21 = __this->___m_AppStorePlatform_3;
+		Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* L_20 = ((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_11;
+		int32_t L_21;
+		L_21 = StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74_inline(__this, NULL);
 		NullCheck(L_20);
 		String_t* L_22;
 		L_22 = Dictionary_2_get_Item_m61C5E1747C323CE4D134E64A6B6313AE49235587(L_20, L_21, Dictionary_2_get_Item_m61C5E1747C323CE4D134E64A6B6313AE49235587_RuntimeMethod_var);
@@ -6294,8 +6996,8 @@ IL_009c:
 
 IL_00b8:
 	{
-		// m_AppStorePlatform = AppStore.WinRT;
-		__this->___m_AppStorePlatform_3 = 6;
+		// appStore = AppStore.WinRT;
+		StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271_inline(__this, 6, NULL);
 		// return new StoreInstance(WindowsStore.Name, instantiateWindowsStore());
 		RuntimeObject* L_25;
 		L_25 = StandardPurchasingModule_instantiateWindowsStore_mCCC8645E458D205255D1B8EB7F9CFED6C00B37F0(__this, NULL);
@@ -6307,8 +7009,8 @@ IL_00b8:
 
 IL_00d0:
 	{
-		// m_AppStorePlatform = AppStore.fake;
-		__this->___m_AppStorePlatform_3 = 7;
+		// appStore = AppStore.fake;
+		StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271_inline(__this, 7, NULL);
 		// return new StoreInstance(FakeStore.Name, InstantiateFakeStore());
 		RuntimeObject* L_27;
 		L_27 = StandardPurchasingModule_InstantiateFakeStore_m75B6DD6C4C9DA71E572438ABA1270E57A58C6DEE(__this, NULL);
@@ -6330,8 +7032,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_Insta
 	}
 	MetricizedJsonStore_t9D5DE145B8B816D0BBEEC39A172A7A69098A4EDB* V_0 = NULL;
 	{
-		// if (m_AppStorePlatform == AppStore.GooglePlay)
-		int32_t L_0 = __this->___m_AppStorePlatform_3;
+		// if (appStore == AppStore.GooglePlay)
+		int32_t L_0;
+		L_0 = StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74_inline(__this, NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
 			goto IL_0010;
@@ -6481,7 +7184,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_Insta
 		NullCheck(L_28);
 		MetricizedGooglePlayStoreExtensions__ctor_m7730A5D7D03CAEF22B57BA348C6A0F7E6ABB54D0(L_28, L_20, L_24, L_25, L_26, L_27, NULL);
 		V_9 = L_28;
-		// GooglePlayStore googlePlayStore = new GooglePlayStore(
+		// var googlePlayStore = new GooglePlayStore(
 		//     googlePlayStoreRetrieveProductsService,
 		//     googlePlayStorePurchaseService,
 		//     googleFetchPurchases,
@@ -6799,7 +7502,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_Insta
 		// BindExtension<IUDPExtensions>(store);
 		UDPImpl_t720E35E37B1DEC515FB45DD28DB57134A17F16B7* L_1 = V_0;
 		AbstractPurchasingModule_BindExtension_TisIUDPExtensions_tCDEDCF1A9147E9F5D0CE814A6F3D53056EFE10B6_m21F82CE64C5C0D04583B525E1FD7A7D3EEACD674(__this, L_1, AbstractPurchasingModule_BindExtension_TisIUDPExtensions_tCDEDCF1A9147E9F5D0CE814A6F3D53056EFE10B6_m21F82CE64C5C0D04583B525E1FD7A7D3EEACD674_RuntimeMethod_var);
-		// INativeUDPStore nativeUdpStore = (INativeUDPStore)GetAndroidNativeStore(store);
+		// var nativeUdpStore = (INativeUDPStore)GetAndroidNativeStore(store);
 		UDPImpl_t720E35E37B1DEC515FB45DD28DB57134A17F16B7* L_2 = V_0;
 		RuntimeObject* L_3;
 		L_3 = StandardPurchasingModule_GetAndroidNativeStore_mD9A06FF2B55E51E17017B265A78DEE0996936956(__this, L_2, NULL);
@@ -6840,10 +7543,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_GetAn
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// return m_NativeStoreProvider.GetAndroidStore(store, m_AppStorePlatform, m_Binder, util);
-		RuntimeObject* L_0 = __this->___m_NativeStoreProvider_4;
+		// return m_NativeStoreProvider.GetAndroidStore(store, appStore, m_Binder, util);
+		RuntimeObject* L_0 = __this->___m_NativeStoreProvider_3;
 		JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696* L_1 = ___store0;
-		int32_t L_2 = __this->___m_AppStorePlatform_3;
+		int32_t L_2;
+		L_2 = StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74_inline(__this, NULL);
 		RuntimeObject* L_3 = ((AbstractPurchasingModule_t2CC681047C9428D3A74AD55F014C31823C70D20D*)__this)->___m_Binder_0;
 		RuntimeObject* L_4;
 		L_4 = StandardPurchasingModule_get_util_m2420EF7333781CE296FAD28A220BF71C71A06BFF_inline(__this, NULL);
@@ -6895,7 +7599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_Insta
 		MetricizedAppleStoreImpl__ctor_m078E6A86BD69A77DF4B2A34AC35AF154C4094CE0(L_7, L_4, L_5, L_6, NULL);
 		V_2 = L_7;
 		// var appleBindings = m_NativeStoreProvider.GetStorekit(store);
-		RuntimeObject* L_8 = __this->___m_NativeStoreProvider_4;
+		RuntimeObject* L_8 = __this->___m_NativeStoreProvider_3;
 		MetricizedAppleStoreImpl_t20F106AB08C02472CBAF01515A1CC041468AFB2C* L_9 = V_2;
 		NullCheck(L_8);
 		RuntimeObject* L_10;
@@ -6927,7 +7631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule_UseMockWindowsS
 		}
 	}
 	{
-		// var iap = UnityEngine.Purchasing.Default.Factory.Create(value);
+		// var iap = Default.Factory.Create(value);
 		bool L_1 = ___value0;
 		RuntimeObject* L_2;
 		L_2 = Factory_Create_m279AAA66760919E8AC51DE0DA3DF012136B91A02(L_1, NULL);
@@ -6959,7 +7663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_insta
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		// var iap = UnityEngine.Purchasing.Default.Factory.Create(false);
+		// var iap = Default.Factory.Create(false);
 		RuntimeObject* L_0;
 		L_0 = Factory_Create_m279AAA66760919E8AC51DE0DA3DF012136B91A02((bool)0, NULL);
 		V_0 = L_0;
@@ -7011,17 +7715,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_Insta
 		}
 	}
 	{
-		// fakeStore = new UIFakeStore();
+		// fakeStore = new UIFakeStore
+		// {
+		//     UIMode = useFakeStoreUIMode
+		// };
 		UIFakeStore_tA7A32C2FF04809311D3FA1C9DD3A5051F502119C* L_1 = (UIFakeStore_tA7A32C2FF04809311D3FA1C9DD3A5051F502119C*)il2cpp_codegen_object_new(UIFakeStore_tA7A32C2FF04809311D3FA1C9DD3A5051F502119C_il2cpp_TypeInfo_var);
 		NullCheck(L_1);
 		UIFakeStore__ctor_m64E1D7567F361F1C989B8C4AB16797C59F318A91(L_1, NULL);
-		V_0 = L_1;
-		// fakeStore.UIMode = useFakeStoreUIMode;
-		FakeStore_tB59149351CDC01449882282D7CBFB8269FDEC16F* L_2 = V_0;
+		UIFakeStore_tA7A32C2FF04809311D3FA1C9DD3A5051F502119C* L_2 = L_1;
 		int32_t L_3;
 		L_3 = StandardPurchasingModule_get_useFakeStoreUIMode_m6850C310CFF6F89EA69938EA4052002AACC78CEE_inline(__this, NULL);
 		NullCheck(L_2);
-		L_2->___UIMode_16 = L_3;
+		((FakeStore_tB59149351CDC01449882282D7CBFB8269FDEC16F*)L_2)->___UIMode_17 = L_3;
+		V_0 = L_2;
 	}
 
 IL_001c:
@@ -7063,7 +7769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule__cctor_mE23C58D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// private static Dictionary<AppStore, string> AndroidStoreNameMap = new Dictionary<AppStore, string>() {
+		// private static readonly Dictionary<AppStore, string> AndroidStoreNameMap = new Dictionary<AppStore, string>() {
 		//     { AppStore.AmazonAppStore, AmazonApps.Name },
 		//     { AppStore.GooglePlay, GooglePlay.Name },
 		//     { AppStore.UDP, UDP.Name},
@@ -7086,8 +7792,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StandardPurchasingModule__cctor_mE23C58D
 		Dictionary_2_t74667C424CDD2B5DB81CEC61E57169FA17BCF782* L_5 = L_3;
 		NullCheck(L_5);
 		Dictionary_2_Add_m07F95B04CC956E4FE6A38D79E1C92B573D6E67ED(L_5, 0, _stringLiteral6079AE2B62685587AFC3A5F43EAFD2948D574952, Dictionary_2_Add_m07F95B04CC956E4FE6A38D79E1C92B573D6E67ED_RuntimeMethod_var);
-		((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_12 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_12), (void*)L_5);
+		((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_11 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&((StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_StaticFields*)il2cpp_codegen_static_fields_for(StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489_il2cpp_TypeInfo_var))->___AndroidStoreNameMap_11), (void*)L_5);
 		return;
 	}
 }
@@ -7123,7 +7829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StoreInstance__ctor_mEB51377D6F9CB9F344D
 	{
 		// internal StoreInstance(string name, IStore instance)
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		// this.storeName = name;
+		// storeName = name;
 		String_t* L_0 = ___name0;
 		__this->___U3CstoreNameU3Ek__BackingField_0 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstoreNameU3Ek__BackingField_0), (void*)L_0);
@@ -7161,7 +7867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MicrosoftConfiguration__ctor_mD9DFFF7108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MicrosoftConfiguration_get_useMockBillingSystem_m5B96AAF6618D893B529D06DAA0350CB563B7ABBA (MicrosoftConfiguration_t8433ADE5DCCB152C38CAC9672622E12D30A2C915* __this, const RuntimeMethod* method) 
 {
 	{
-		// return useMock;
+		// get => useMock;
 		bool L_0 = __this->___useMock_0;
 		return L_0;
 	}
@@ -7278,8 +7984,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StoreConfiguration_t2D81230C6E8000534E56E8517
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* V_0 = NULL;
-	int32_t V_1 = 0;
-	String_t* V_2 = NULL;
+	String_t* V_1 = NULL;
+	int32_t G_B3_0 = 0;
 	{
 		// var dic = (Dictionary<string, object>)MiniJson.JsonDecode(json);
 		String_t* L_0 = ___json0;
@@ -7291,30 +7997,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StoreConfiguration_t2D81230C6E8000534E56E8517
 		NullCheck(L_2);
 		RuntimeObject* L_3;
 		L_3 = Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5(L_2, _stringLiteralDB96DD5B2C98650AE5C7D9E7932029E2143614F1, Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5_RuntimeMethod_var);
-		V_2 = ((String_t*)CastclassSealed((RuntimeObject*)L_3, String_t_il2cpp_TypeInfo_var));
-		// if (!Enum.IsDefined(typeof(AppStore), key))
+		V_1 = ((String_t*)CastclassSealed((RuntimeObject*)L_3, String_t_il2cpp_TypeInfo_var));
+		// store = !Enum.IsDefined(typeof(AppStore), key)
+		//     ? AppStore.GooglePlay
+		//     : (AppStore)Enum.Parse(typeof(AppStore), (string)dic["androidStore"], true);
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_4 = { reinterpret_cast<intptr_t> (AppStore_t1A0679644D9F3B2186929F5883B207A1EB156601_0_0_0_var) };
 		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 		Type_t* L_5;
 		L_5 = Type_GetTypeFromHandle_m2570A2A5B32A5E9D9F0F38B37459DA18736C823E(L_4, NULL);
-		String_t* L_6 = V_2;
+		String_t* L_6 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_il2cpp_TypeInfo_var);
 		bool L_7;
 		L_7 = Enum_IsDefined_m715E9AAD26B4AAA4B08E4D6AED73237174E82BB4(L_5, L_6, NULL);
-		if (L_7)
+		if (!L_7)
 		{
-			goto IL_0033;
+			goto IL_0056;
 		}
 	}
 	{
-		// store = AppStore.GooglePlay;
-		V_1 = 1;
-		goto IL_0059;
-	}
-
-IL_0033:
-	{
-		// store = (AppStore)Enum.Parse(typeof(AppStore), (string)dic["androidStore"], true);
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_8 = { reinterpret_cast<intptr_t> (AppStore_t1A0679644D9F3B2186929F5883B207A1EB156601_0_0_0_var) };
 		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 		Type_t* L_9;
@@ -7326,17 +8026,22 @@ IL_0033:
 		il2cpp_codegen_runtime_class_init_inline(Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_il2cpp_TypeInfo_var);
 		RuntimeObject* L_12;
 		L_12 = Enum_Parse_m1ABE53499F05D295104BDE57EE12376CF4513585(L_9, ((String_t*)CastclassSealed((RuntimeObject*)L_11, String_t_il2cpp_TypeInfo_var)), (bool)1, NULL);
-		V_1 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_12, AppStore_t1A0679644D9F3B2186929F5883B207A1EB156601_il2cpp_TypeInfo_var))));
+		G_B3_0 = ((int32_t)(((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_12, AppStore_t1A0679644D9F3B2186929F5883B207A1EB156601_il2cpp_TypeInfo_var))))));
+		goto IL_0057;
 	}
 
-IL_0059:
+IL_0056:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0057:
 	{
 		// return new StoreConfiguration(store);
-		int32_t L_13 = V_1;
-		StoreConfiguration_t2D81230C6E8000534E56E8517B9821C448E52CC6* L_14 = (StoreConfiguration_t2D81230C6E8000534E56E8517B9821C448E52CC6*)il2cpp_codegen_object_new(StoreConfiguration_t2D81230C6E8000534E56E8517B9821C448E52CC6_il2cpp_TypeInfo_var);
-		NullCheck(L_14);
-		StoreConfiguration__ctor_mADD6F4BFB5F946DF21CD51CBAAEEBE9C6DFC57EA(L_14, L_13, NULL);
-		return L_14;
+		StoreConfiguration_t2D81230C6E8000534E56E8517B9821C448E52CC6* L_13 = (StoreConfiguration_t2D81230C6E8000534E56E8517B9821C448E52CC6*)il2cpp_codegen_object_new(StoreConfiguration_t2D81230C6E8000534E56E8517B9821C448E52CC6_il2cpp_TypeInfo_var);
+		NullCheck(L_13);
+		StoreConfiguration__ctor_mADD6F4BFB5F946DF21CD51CBAAEEBE9C6DFC57EA(L_13, G_B3_0, NULL);
+		return L_13;
 	}
 }
 #ifdef __clang__
@@ -7353,13 +8058,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TimeSpanUnits__ctor_m69AF2FA3540250AD07D
 	{
 		// public TimeSpanUnits(double d, int m, int y)
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		// this.days = d;
+		// days = d;
 		double L_0 = ___d0;
 		__this->___days_0 = L_0;
-		// this.months = m;
+		// months = m;
 		int32_t L_1 = ___m1;
 		__this->___months_1 = L_1;
-		// this.years = y;
+		// years = y;
 		int32_t L_2 = ___y2;
 		__this->___years_2 = L_2;
 		// }
@@ -7485,7 +8190,7 @@ IL_004c:
 		// if (payload != null)
 		if (!((String_t*)CastclassSealed((RuntimeObject*)L_13, String_t_il2cpp_TypeInfo_var)))
 		{
-			goto IL_00f4;
+			goto IL_00f2;
 		}
 	}
 	{
@@ -7503,7 +8208,7 @@ IL_004c:
 		L_17 = String_op_Equality_m0D685A924E5CD78078F248ED1726DA5A9D7D6AC0(L_16, _stringLiteral7535A877CC7A258810A546BD47780403A6033D8F, NULL);
 		if (L_17)
 		{
-			goto IL_00e0;
+			goto IL_00de;
 		}
 	}
 	{
@@ -7512,23 +8217,21 @@ IL_004c:
 		L_19 = String_op_Equality_m0D685A924E5CD78078F248ED1726DA5A9D7D6AC0(L_18, _stringLiteralD3FA52E2FCB7530CC7BD3604D153C81F34D48B93, NULL);
 		if (L_19)
 		{
-			goto IL_00e0;
+			goto IL_00de;
 		}
 	}
 	{
-		goto IL_00e9;
+		goto IL_00e7;
 	}
 
 IL_009b:
 	{
-		// SubscriptionManager oldSubscriptionManager = new SubscriptionManager(oldProduct, null);
+		// var oldSubscriptionManager = new SubscriptionManager(oldProduct, null);
 		Product_t8CB4C6F2541BB4560097D6E07ABCB3AD3BB6082E* L_20 = ___oldProduct1;
 		SubscriptionManager_t26B968EFEE38879C4B4DA4BE74237973B837147D* L_21 = (SubscriptionManager_t26B968EFEE38879C4B4DA4BE74237973B837147D*)il2cpp_codegen_object_new(SubscriptionManager_t26B968EFEE38879C4B4DA4BE74237973B837147D_il2cpp_TypeInfo_var);
 		NullCheck(L_21);
 		SubscriptionManager__ctor_m0ECAAC1D1E250FF4913D790B1F9341EEA14C1826(L_21, L_20, (String_t*)NULL, NULL);
 		V_2 = L_21;
-		// SubscriptionInfo oldSubscriptionInfo = null;
-		V_3 = (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB*)NULL;
 	}
 	try
 	{// begin try (depth: 1)
@@ -7539,19 +8242,19 @@ IL_009b:
 		L_23 = SubscriptionManager_getSubscriptionInfo_mDA75086D3BBB5F42857356C9B05B3D3C1282B66E(L_22, NULL);
 		V_3 = L_23;
 		// }
-		goto IL_00c3;
+		goto IL_00c1;
 	}// end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_00ae;
+			goto CATCH_00ac;
 		}
 		throw e;
 	}
 
-CATCH_00ae:
+CATCH_00ac:
 	{// begin catch(System.Exception)
 		// catch (Exception e)
 		V_5 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));
@@ -7564,12 +8267,12 @@ CATCH_00ae:
 		InterfaceActionInvoker2< String_t*, RuntimeObject* >::Invoke(8 /* System.Void UnityEngine.ILogger::LogError(System.String,System.Object) */, ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ILogger_tD1F573C6DC829FBA987FA1EBA0A5FA64E0C2BC42_il2cpp_TypeInfo_var)), L_24, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral351310AAE48329CEA08A21B031C435B78D066E27)), L_25);
 		// return;
 		IL2CPP_POP_ACTIVE_EXCEPTION();
-		goto IL_00f4;
+		goto IL_00f2;
 	}// end catch (depth: 1)
 
-IL_00c3:
+IL_00c1:
 	{
-		// string newSubscriptionId = newProduct.definition.storeSpecificId;
+		// var newSubscriptionId = newProduct.definition.storeSpecificId;
 		Product_t8CB4C6F2541BB4560097D6E07ABCB3AD3BB6082E* L_26 = ___newProduct0;
 		NullCheck(L_26);
 		ProductDefinition_t0ECCC323EC3E52DE3143F374262050ADCECB1517* L_27;
@@ -7591,7 +8294,7 @@ IL_00c3:
 		return;
 	}
 
-IL_00e0:
+IL_00de:
 	{
 		// appleStore(newProduct, developerPayload);
 		Action_2_t0A1F190E0F74FE9814F87CB8B87DD0D60FA4B4CB* L_33 = ___appleStore3;
@@ -7603,7 +8306,7 @@ IL_00e0:
 		return;
 	}
 
-IL_00e9:
+IL_00e7:
 	{
 		// Debug.LogWarning("This store does not support update subscriptions");
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
@@ -7612,7 +8315,7 @@ IL_00e9:
 		return;
 	}
 
-IL_00f4:
+IL_00f2:
 	{
 		// }
 		return;
@@ -7633,14 +8336,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionManager_UpdateSubscriptionIn
 	Exception_t* V_3 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		// SubscriptionManager oldSubscriptionManager = new SubscriptionManager(oldProduct, null);
+		// var oldSubscriptionManager = new SubscriptionManager(oldProduct, null);
 		Product_t8CB4C6F2541BB4560097D6E07ABCB3AD3BB6082E* L_0 = ___oldProduct0;
 		SubscriptionManager_t26B968EFEE38879C4B4DA4BE74237973B837147D* L_1 = (SubscriptionManager_t26B968EFEE38879C4B4DA4BE74237973B837147D*)il2cpp_codegen_object_new(SubscriptionManager_t26B968EFEE38879C4B4DA4BE74237973B837147D_il2cpp_TypeInfo_var);
 		NullCheck(L_1);
 		SubscriptionManager__ctor_m0ECAAC1D1E250FF4913D790B1F9341EEA14C1826(L_1, L_0, (String_t*)NULL, NULL);
 		V_0 = L_1;
-		// SubscriptionInfo oldSubscriptionInfo = null;
-		V_1 = (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB*)NULL;
 	}
 	try
 	{// begin try (depth: 1)
@@ -7651,19 +8352,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionManager_UpdateSubscriptionIn
 		L_3 = SubscriptionManager_getSubscriptionInfo_mDA75086D3BBB5F42857356C9B05B3D3C1282B66E(L_2, NULL);
 		V_1 = L_3;
 		// }
-		goto IL_0026;
+		goto IL_0024;
 	}// end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_0013;
+			goto CATCH_0011;
 		}
 		throw e;
 	}
 
-CATCH_0013:
+CATCH_0011:
 	{// begin catch(System.Exception)
 		// catch (Exception e)
 		V_3 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));
@@ -7676,12 +8377,12 @@ CATCH_0013:
 		InterfaceActionInvoker2< String_t*, RuntimeObject* >::Invoke(8 /* System.Void UnityEngine.ILogger::LogError(System.String,System.Object) */, ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ILogger_tD1F573C6DC829FBA987FA1EBA0A5FA64E0C2BC42_il2cpp_TypeInfo_var)), L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral351310AAE48329CEA08A21B031C435B78D066E27)), L_5);
 		// return;
 		IL2CPP_POP_ACTIVE_EXCEPTION();
-		goto IL_003f;
+		goto IL_003d;
 	}// end catch (depth: 1)
 
-IL_0026:
+IL_0024:
 	{
-		// string newSubscriptionId = newProduct.definition.storeSpecificId;
+		// var newSubscriptionId = newProduct.definition.storeSpecificId;
 		Product_t8CB4C6F2541BB4560097D6E07ABCB3AD3BB6082E* L_6 = ___newProduct1;
 		NullCheck(L_6);
 		ProductDefinition_t0ECCC323EC3E52DE3143F374262050ADCECB1517* L_7;
@@ -7701,7 +8402,7 @@ IL_0026:
 		Action_2_Invoke_m8FA30194997244EC0072D6B437818A22B65F2854_inline(L_9, L_11, L_12, NULL);
 	}
 
-IL_003f:
+IL_003d:
 	{
 		// }
 		return;
@@ -7727,14 +8428,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionManager__ctor_m0ECAAC1D1E250
 	{
 		// public SubscriptionManager(Product product, string intro_json)
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		// this.receipt = product.receipt;
+		// receipt = product.receipt;
 		Product_t8CB4C6F2541BB4560097D6E07ABCB3AD3BB6082E* L_0 = ___product0;
 		NullCheck(L_0);
 		String_t* L_1;
 		L_1 = Product_get_receipt_m0C80E1794DD8A8F287F752B00188679B109BCAFA_inline(L_0, NULL);
 		__this->___receipt_0 = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___receipt_0), (void*)L_1);
-		// this.productId = product.definition.storeSpecificId;
+		// productId = product.definition.storeSpecificId;
 		Product_t8CB4C6F2541BB4560097D6E07ABCB3AD3BB6082E* L_2 = ___product0;
 		NullCheck(L_2);
 		ProductDefinition_t0ECCC323EC3E52DE3143F374262050ADCECB1517* L_3;
@@ -7762,7 +8463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionManager__ctor_m034F30B3FAEEB
 		String_t* L_0 = ___receipt0;
 		__this->___receipt_0 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___receipt_0), (void*)L_0);
-		// this.productId = id;
+		// productId = id;
 		String_t* L_1 = ___id1;
 		__this->___productId_1 = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___productId_1), (void*)L_1);
@@ -7798,7 +8499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4
 	String_t* V_4 = NULL;
 	String_t* V_5 = NULL;
 	{
-		// if (this.receipt != null)
+		// if (receipt != null)
 		String_t* L_0 = __this->___receipt_0;
 		if (!L_0)
 		{
@@ -7886,7 +8587,7 @@ IL_0088:
 
 IL_0091:
 	{
-		// if (this.productId == null)
+		// if (productId == null)
 		String_t* L_20 = __this->___productId_1;
 		if (L_20)
 		{
@@ -7903,7 +8604,7 @@ IL_0091:
 
 IL_009f:
 	{
-		// return getAppleAppStoreSubInfo(payload, this.productId);
+		// return getAppleAppStoreSubInfo(payload, productId);
 		String_t* L_22 = V_4;
 		String_t* L_23 = __this->___productId_1;
 		SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* L_24;
@@ -7913,7 +8614,7 @@ IL_009f:
 
 IL_00ae:
 	{
-		// return getAmazonAppStoreSubInfo(this.productId);
+		// return getAmazonAppStoreSubInfo(productId);
 		String_t* L_25 = __this->___productId_1;
 		SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* L_26;
 		L_26 = SubscriptionManager_getAmazonAppStoreSubInfo_mC2FBA869F8527BB7F45955A219080EB533445F96(__this, L_25, NULL);
@@ -7988,7 +8689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4
 	{
 		// AppleReceipt receipt = null;
 		V_0 = (AppleReceipt_t16E9FEBF193F54B9B4E5D3323C48E487DCF3414C*)NULL;
-		// var logger = UnityEngine.Debug.unityLogger;
+		// var logger = Debug.unityLogger;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		RuntimeObject* L_0;
 		L_0 = Debug_get_unityLogger_mA872400E9E585FCD6A2DE1717748A458545DE8A4_inline(NULL);
@@ -8047,7 +8748,7 @@ CATCH_001b:
 
 CATCH_002a:
 	{// begin catch(UnityEngine.Purchasing.Security.IAPSecurityException)
-		// catch (Security.IAPSecurityException e)
+		// catch (IAPSecurityException e)
 		V_4 = ((IAPSecurityException_t0CF168A490D20D9F3A643C75A77826B27ABDEA9B*)IL2CPP_GET_ACTIVE_EXCEPTION(IAPSecurityException_t0CF168A490D20D9F3A643C75A77826B27ABDEA9B*));
 		// logger.Log("Unable to parse Apple receipt", e);
 		RuntimeObject* L_7 = V_1;
@@ -8075,7 +8776,7 @@ CATCH_003b:
 
 IL_004c:
 	{
-		// List<AppleInAppPurchaseReceipt> inAppPurchaseReceipts = new List<AppleInAppPurchaseReceipt>();
+		// var inAppPurchaseReceipts = new List<AppleInAppPurchaseReceipt>();
 		List_1_t569260CBA9779DCB3A932CC156A3229C3B5A0FF1* L_11 = (List_1_t569260CBA9779DCB3A932CC156A3229C3B5A0FF1*)il2cpp_codegen_object_new(List_1_t569260CBA9779DCB3A932CC156A3229C3B5A0FF1_il2cpp_TypeInfo_var);
 		NullCheck(L_11);
 		List_1__ctor_mB5530D7206436670741DA242D1CF91EAAFB350CD(L_11, List_1__ctor_mB5530D7206436670741DA242D1CF91EAAFB350CD_RuntimeMethod_var);
@@ -8107,7 +8808,7 @@ IL_004c:
 		}
 	}
 	{
-		// foreach (AppleInAppPurchaseReceipt r in receipt.inAppPurchaseReceipts)
+		// foreach (var r in receipt.inAppPurchaseReceipts)
 		AppleReceipt_t16E9FEBF193F54B9B4E5D3323C48E487DCF3414C* L_17 = V_0;
 		NullCheck(L_17);
 		AppleInAppPurchaseReceiptU5BU5D_t8A8951A16B47F87B92AC3879619FB94166150C8A* L_18 = L_17->___inAppPurchaseReceipts_7;
@@ -8118,7 +8819,7 @@ IL_004c:
 
 IL_0073:
 	{
-		// foreach (AppleInAppPurchaseReceipt r in receipt.inAppPurchaseReceipts)
+		// foreach (var r in receipt.inAppPurchaseReceipts)
 		AppleInAppPurchaseReceiptU5BU5D_t8A8951A16B47F87B92AC3879619FB94166150C8A* L_19 = V_6;
 		int32_t L_20 = V_7;
 		NullCheck(L_19);
@@ -8155,7 +8856,7 @@ IL_0091:
 
 IL_0097:
 	{
-		// foreach (AppleInAppPurchaseReceipt r in receipt.inAppPurchaseReceipts)
+		// foreach (var r in receipt.inAppPurchaseReceipts)
 		int32_t L_30 = V_7;
 		AppleInAppPurchaseReceiptU5BU5D_t8A8951A16B47F87B92AC3879619FB94166150C8A* L_31 = V_6;
 		NullCheck(L_31);
@@ -8167,7 +8868,7 @@ IL_0097:
 
 IL_009f:
 	{
-		// return inAppPurchaseReceipts.Count == 0 ? null : new SubscriptionInfo(findMostRecentReceipt(inAppPurchaseReceipts), this.intro_json);
+		// return inAppPurchaseReceipts.Count == 0 ? null : new SubscriptionInfo(findMostRecentReceipt(inAppPurchaseReceipts), intro_json);
 		List_1_t569260CBA9779DCB3A932CC156A3229C3B5A0FF1* L_32 = V_2;
 		NullCheck(L_32);
 		int32_t L_33;
@@ -8211,7 +8912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AppleInAppPurchaseReceipt_t45E81B173E0600832D
 	Comparison_1_t9272FEBA2ED9918EE39A8ADFDA4A6348F5AC5606* G_B1_0 = NULL;
 	List_1_t569260CBA9779DCB3A932CC156A3229C3B5A0FF1* G_B1_1 = NULL;
 	{
-		// receipts.Sort((b, a) => (a.purchaseDate.CompareTo(b.purchaseDate)));
+		// receipts.Sort((b, a) => a.purchaseDate.CompareTo(b.purchaseDate));
 		List_1_t569260CBA9779DCB3A932CC156A3229C3B5A0FF1* L_0 = ___receipts0;
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t4949A2FAAAB7863059A503E71290261664796C53_il2cpp_TypeInfo_var);
 		Comparison_1_t9272FEBA2ED9918EE39A8ADFDA4A6348F5AC5606* L_1 = ((U3CU3Ec_t4949A2FAAAB7863059A503E71290261664796C53_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t4949A2FAAAB7863059A503E71290261664796C53_il2cpp_TypeInfo_var))->___U3CU3E9__11_0_1;
@@ -8403,7 +9104,7 @@ IL_004a:
 		L_15 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_14, _stringLiteralF982A0BE2A926AE46522B50CEC43A42A44F80CBA, (&V_3), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
 		// var isAutoRenewing = false;
 		V_4 = (bool)0;
-		// if (validIsAutoRenewingKey) isAutoRenewing = (bool)autoRenewingObject;
+		// if (validIsAutoRenewingKey)
 		G_B6_0 = L_14;
 		if (!L_15)
 		{
@@ -8412,7 +9113,7 @@ IL_004a:
 		}
 	}
 	{
-		// if (validIsAutoRenewingKey) isAutoRenewing = (bool)autoRenewingObject;
+		// isAutoRenewing = (bool)autoRenewingObject;
 		RuntimeObject* L_16 = V_3;
 		V_4 = ((*(bool*)((bool*)(bool*)UnBox(L_16, Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var))));
 		G_B7_0 = G_B6_0;
@@ -8420,7 +9121,7 @@ IL_004a:
 
 IL_0080:
 	{
-		// DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+		// var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 		DateTime__ctor_mD89390EF215242275A4E8F78C2C3E8BC3EF6F3C3((&V_5), ((int32_t)1970), 1, 1, 0, 0, 0, 1, NULL);
 		// var validPurchaseTimeKey =
 		//     original_json_payload_wrapper.TryGetValue("purchaseTime", out var purchaseTimeObject);
@@ -8430,7 +9131,7 @@ IL_0080:
 		L_18 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_17, _stringLiteral73791369CA6FA6760921EE4FF1AED066DBD398A3, (&V_6), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
 		// long purchaseTime = 0;
 		V_7 = ((int64_t)0);
-		// if (validPurchaseTimeKey) purchaseTime = (long)purchaseTimeObject;
+		// if (validPurchaseTimeKey)
 		G_B8_0 = L_17;
 		if (!L_18)
 		{
@@ -8439,7 +9140,7 @@ IL_0080:
 		}
 	}
 	{
-		// if (validPurchaseTimeKey) purchaseTime = (long)purchaseTimeObject;
+		// purchaseTime = (long)purchaseTimeObject;
 		RuntimeObject* L_19 = V_6;
 		V_7 = ((*(int64_t*)((int64_t*)(int64_t*)UnBox(L_19, Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var))));
 		G_B9_0 = G_B8_0;
@@ -8482,14 +9183,14 @@ IL_00ae:
 		NullCheck(L_25);
 		bool L_26;
 		L_26 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_25, _stringLiteralE2433BCDD0FC596DC6BE25A30596DC79E361AAA0, (&V_14), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
-		// if (validIsFreeTrialKey) isFreeTrial = (bool)isFreeTrialObject;
+		// if (validIsFreeTrialKey)
 		if (!L_26)
 		{
 			goto IL_00fd;
 		}
 	}
 	{
-		// if (validIsFreeTrialKey) isFreeTrial = (bool)isFreeTrialObject;
+		// isFreeTrial = (bool)isFreeTrialObject;
 		RuntimeObject* L_27 = V_14;
 		V_10 = ((*(bool*)((bool*)(bool*)UnBox(L_27, Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var))));
 	}
@@ -8503,14 +9204,14 @@ IL_00fd:
 		NullCheck(L_28);
 		bool L_29;
 		L_29 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_28, _stringLiteral5E888801948A6E06613C0933AAF51C710574BB64, (&V_15), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
-		// if (validHasIntroductoryPriceKey) hasIntroductoryPrice = (bool)hasIntroductoryPriceObject;
+		// if (validHasIntroductoryPriceKey)
 		if (!L_29)
 		{
 			goto IL_0116;
 		}
 	}
 	{
-		// if (validHasIntroductoryPriceKey) hasIntroductoryPrice = (bool)hasIntroductoryPriceObject;
+		// hasIntroductoryPrice = (bool)hasIntroductoryPriceObject;
 		RuntimeObject* L_30 = V_15;
 		V_11 = ((*(bool*)((bool*)(bool*)UnBox(L_30, Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var))));
 	}
@@ -8524,14 +9225,14 @@ IL_0116:
 		L_32 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_31, _stringLiteral41EAC32469BB72FE3CF9159FA4EA177B9C648F90, (&V_16), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
 		// var isUpdated = false;
 		V_17 = (bool)0;
-		// if (validIsUpdatedKey) isUpdated = (bool)isUpdatedObject;
+		// if (validIsUpdatedKey)
 		if (!L_32)
 		{
 			goto IL_0132;
 		}
 	}
 	{
-		// if (validIsUpdatedKey) isUpdated = (bool)isUpdatedObject;
+		// isUpdated = (bool)isUpdatedObject;
 		RuntimeObject* L_33 = V_16;
 		V_17 = ((*(bool*)((bool*)(bool*)UnBox(L_33, Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var))));
 	}
@@ -8552,14 +9253,14 @@ IL_0132:
 		NullCheck(L_35);
 		bool L_36;
 		L_36 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_35, _stringLiteralBB2B73BFA8052A44992D85E72AD1C9DFDB616DD4, (&V_18), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
-		// if (isValidUpdateMetaKey) updateMetadata = (string)updateMetadataObject;
+		// if (isValidUpdateMetaKey)
 		if (!L_36)
 		{
 			goto IL_014f;
 		}
 	}
 	{
-		// if (isValidUpdateMetaKey) updateMetadata = (string)updateMetadataObject;
+		// updateMetadata = (string)updateMetadataObject;
 		RuntimeObject* L_37 = V_18;
 		V_12 = ((String_t*)CastclassSealed((RuntimeObject*)L_37, String_t_il2cpp_TypeInfo_var));
 	}
@@ -8624,7 +9325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CfindMostRecentReceiptU3Eb_
 	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		// receipts.Sort((b, a) => (a.purchaseDate.CompareTo(b.purchaseDate)));
+		// receipts.Sort((b, a) => a.purchaseDate.CompareTo(b.purchaseDate));
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_0 = ___a1;
 		NullCheck(L_0);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1;
@@ -8731,6 +9432,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionInfo__ctor_mCE7F9D5333417F7A
 	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B39_0 = NULL;
 	int32_t G_B41_0 = 0;
 	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B41_1 = NULL;
+	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B44_0 = NULL;
+	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B43_0 = NULL;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A G_B45_0;
+	memset((&G_B45_0), 0, sizeof(G_B45_0));
+	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B45_1 = NULL;
 	{
 		// public SubscriptionInfo(AppleInAppPurchaseReceipt r, string intro_json)
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -8795,7 +9501,7 @@ IL_0036:
 		V_4 = (-1);
 		// var unit = SubscriptionPeriodUnit.NotAvailable;
 		V_5 = 4;
-		// this.introductory_price = intro_wrapper.TryGetString("introductoryPrice") + intro_wrapper.TryGetString("introductoryPriceLocale");
+		// introductory_price = intro_wrapper.TryGetString("introductoryPrice") + intro_wrapper.TryGetString("introductoryPriceLocale");
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_13 = V_3;
 		String_t* L_14;
 		L_14 = SerializationExtensions_TryGetString_m392070501BE8A99B614E7F9772E39297B3B6ECF7(L_13, _stringLiteralDA8BCE10DEAE9B8E6EB9317CF4BFCE9A1D046B73, NULL);
@@ -8806,7 +9512,7 @@ IL_0036:
 		L_17 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_14, L_16, NULL);
 		__this->___introductory_price_11 = L_17;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___introductory_price_11), (void*)L_17);
-		// if (string.IsNullOrEmpty(this.introductory_price))
+		// if (string.IsNullOrEmpty(introductory_price))
 		String_t* L_18 = __this->___introductory_price_11;
 		bool L_19;
 		L_19 = String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A(L_18, NULL);
@@ -8816,7 +9522,7 @@ IL_0036:
 		}
 	}
 	{
-		// this.introductory_price = "not available";
+		// introductory_price = "not available";
 		__this->___introductory_price_11 = _stringLiteral70D01F16EFD33F4DFC81BB8642B5AF4A9C88E069;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___introductory_price_11), (void*)_stringLiteral70D01F16EFD33F4DFC81BB8642B5AF4A9C88E069);
 		goto IL_00e3;
@@ -8827,7 +9533,7 @@ IL_008e:
 	}
 	try
 	{// begin try (depth: 1)
-		// this.introductory_price_cycles = Convert.ToInt64(intro_wrapper.TryGetString("introductoryPriceNumberOfPeriods"));
+		// introductory_price_cycles = Convert.ToInt64(intro_wrapper.TryGetString("introductoryPriceNumberOfPeriods"));
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_20 = V_3;
 		String_t* L_21;
 		L_21 = SerializationExtensions_TryGetString_m392070501BE8A99B614E7F9772E39297B3B6ECF7(L_20, _stringLiteralE33503325A4AA6F5C94BEB2A330809AA305CE841, NULL);
@@ -8882,7 +9588,7 @@ CATCH_00cb:
 
 IL_00e3:
 	{
-		// DateTime now = DateTime.Now;
+		// var now = DateTime.Now;
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_31;
 		L_31 = DateTime_get_Now_mC336498972C48439ADCD5C50D35FAE0F2A48B0F0(NULL);
@@ -8918,7 +9624,7 @@ IL_00e3:
 
 IL_010a:
 	{
-		// this.introductory_price_period = TimeSpan.FromTicks(TimeSpan.FromDays(1).Ticks * nunit);
+		// introductory_price_period = TimeSpan.FromTicks(TimeSpan.FromDays(1).Ticks * nunit);
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_33;
 		L_33 = TimeSpan_FromDays_mD55933360C04611DD9F6BC73CEB37543002A6DF4((1.0), NULL);
@@ -8935,7 +9641,7 @@ IL_010a:
 
 IL_0135:
 	{
-		// TimeSpan month_span = now.AddMonths(1) - now;
+		// var month_span = now.AddMonths(1) - now;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_37;
 		L_37 = DateTime_AddMonths_mF426338945B097998273C1AD421CF809035660AD((&V_6), 1, NULL);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_38 = V_6;
@@ -8943,7 +9649,7 @@ IL_0135:
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_39;
 		L_39 = DateTime_op_Subtraction_m41335EF0E6DCD52B23C64916CB973A0B4A9E0387(L_37, L_38, NULL);
 		V_8 = L_39;
-		// this.introductory_price_period = TimeSpan.FromTicks(month_span.Ticks * nunit);
+		// introductory_price_period = TimeSpan.FromTicks(month_span.Ticks * nunit);
 		int64_t L_40;
 		L_40 = TimeSpan_get_Ticks_mC50131E57621F29FACC53B3241432ABB874FA1B5_inline((&V_8), NULL);
 		int32_t L_41 = V_4;
@@ -8957,7 +9663,7 @@ IL_0135:
 
 IL_0161:
 	{
-		// this.introductory_price_period = TimeSpan.FromTicks(TimeSpan.FromDays(7).Ticks * nunit);
+		// introductory_price_period = TimeSpan.FromTicks(TimeSpan.FromDays(7).Ticks * nunit);
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_43;
 		L_43 = TimeSpan_FromDays_mD55933360C04611DD9F6BC73CEB37543002A6DF4((7.0), NULL);
@@ -8974,7 +9680,7 @@ IL_0161:
 
 IL_0189:
 	{
-		// TimeSpan year_span = now.AddYears(1) - now;
+		// var year_span = now.AddYears(1) - now;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_47;
 		L_47 = DateTime_AddYears_mA68B1642A84DA30E21F6279BE5196FC07B578DEE((&V_6), 1, NULL);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_48 = V_6;
@@ -8982,7 +9688,7 @@ IL_0189:
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_49;
 		L_49 = DateTime_op_Subtraction_m41335EF0E6DCD52B23C64916CB973A0B4A9E0387(L_47, L_48, NULL);
 		V_9 = L_49;
-		// this.introductory_price_period = TimeSpan.FromTicks(year_span.Ticks * nunit);
+		// introductory_price_period = TimeSpan.FromTicks(year_span.Ticks * nunit);
 		int64_t L_50;
 		L_50 = TimeSpan_get_Ticks_mC50131E57621F29FACC53B3241432ABB874FA1B5_inline((&V_9), NULL);
 		int32_t L_51 = V_4;
@@ -8996,11 +9702,11 @@ IL_0189:
 
 IL_01b2:
 	{
-		// this.introductory_price_period = TimeSpan.Zero;
+		// introductory_price_period = TimeSpan.Zero;
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_53 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
 		__this->___introductory_price_period_12 = L_53;
-		// this.introductory_price_cycles = 0;
+		// introductory_price_cycles = 0;
 		__this->___introductory_price_cycles_13 = ((int64_t)0);
 		// break;
 		goto IL_01e5;
@@ -9008,44 +9714,44 @@ IL_01b2:
 
 IL_01c7:
 	{
-		// this.introductory_price = "not available";
+		// introductory_price = "not available";
 		__this->___introductory_price_11 = _stringLiteral70D01F16EFD33F4DFC81BB8642B5AF4A9C88E069;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___introductory_price_11), (void*)_stringLiteral70D01F16EFD33F4DFC81BB8642B5AF4A9C88E069);
-		// this.introductory_price_period = TimeSpan.Zero;
+		// introductory_price_period = TimeSpan.Zero;
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_54 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
 		__this->___introductory_price_period_12 = L_54;
-		// this.introductory_price_cycles = 0;
+		// introductory_price_cycles = 0;
 		__this->___introductory_price_cycles_13 = ((int64_t)0);
 	}
 
 IL_01e5:
 	{
-		// DateTime current_date = DateTime.UtcNow;
+		// var current_date = DateTime.UtcNow;
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_55;
 		L_55 = DateTime_get_UtcNow_m5D776FFEBC81592B361E4C7AF373297C5DFB46FD(NULL);
 		V_1 = L_55;
-		// this.purchaseDate = r.purchaseDate;
+		// purchaseDate = r.purchaseDate;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_56 = ___r0;
 		NullCheck(L_56);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_57;
 		L_57 = AppleInAppPurchaseReceipt_get_purchaseDate_mD0C3B7344A76EE7BFEC69AB815F02B52F98145B9_inline(L_56, NULL);
 		__this->___purchaseDate_7 = L_57;
-		// this.productId = r.productID;
+		// productId = r.productID;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_58 = ___r0;
 		NullCheck(L_58);
 		String_t* L_59;
 		L_59 = AppleInAppPurchaseReceipt_get_productID_m084EF4FFEBF308CE58401DBA48416D05CD01AC6A_inline(L_58, NULL);
 		__this->___productId_6 = L_59;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___productId_6), (void*)L_59);
-		// this.subscriptionExpireDate = r.subscriptionExpirationDate;
+		// subscriptionExpireDate = r.subscriptionExpirationDate;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_60 = ___r0;
 		NullCheck(L_60);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_61;
 		L_61 = AppleInAppPurchaseReceipt_get_subscriptionExpirationDate_m643E75D4AFD8C1D478C51377E72D5809B383648F_inline(L_60, NULL);
 		__this->___subscriptionExpireDate_8 = L_61;
-		// this.subscriptionCancelDate = r.cancellationDate;
+		// subscriptionCancelDate = r.cancellationDate;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_62 = ___r0;
 		NullCheck(L_62);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_63;
@@ -9059,24 +9765,24 @@ IL_01e5:
 		}
 	}
 	{
-		// this.is_subscribed = Result.Unsupported;
+		// is_subscribed = Result.Unsupported;
 		__this->___is_subscribed_0 = 2;
-		// this.is_expired = Result.Unsupported;
+		// is_expired = Result.Unsupported;
 		__this->___is_expired_1 = 2;
-		// this.is_cancelled = Result.Unsupported;
+		// is_cancelled = Result.Unsupported;
 		__this->___is_cancelled_2 = 2;
-		// this.is_free_trial = Result.Unsupported;
+		// is_free_trial = Result.Unsupported;
 		__this->___is_free_trial_3 = 2;
-		// this.is_auto_renewing = Result.Unsupported;
+		// is_auto_renewing = Result.Unsupported;
 		__this->___is_auto_renewing_4 = 2;
-		// this.is_introductory_price_period = Result.Unsupported;
+		// is_introductory_price_period = Result.Unsupported;
 		__this->___is_introductory_price_period_5 = 2;
 		goto IL_0320;
 	}
 
 IL_024e:
 	{
-		// this.is_cancelled = (r.cancellationDate.Ticks > 0) && (r.cancellationDate.Ticks < current_date.Ticks) ? Result.True : Result.False;
+		// is_cancelled = (r.cancellationDate.Ticks > 0) && (r.cancellationDate.Ticks < current_date.Ticks) ? Result.True : Result.False;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_65 = ___r0;
 		NullCheck(L_65);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_66;
@@ -9126,7 +9832,7 @@ IL_027e:
 	{
 		NullCheck(G_B23_1);
 		G_B23_1->___is_cancelled_2 = G_B23_0;
-		// this.is_subscribed = r.subscriptionExpirationDate.Ticks >= current_date.Ticks ? Result.True : Result.False;
+		// is_subscribed = r.subscriptionExpirationDate.Ticks >= current_date.Ticks ? Result.True : Result.False;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_72 = ___r0;
 		NullCheck(L_72);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_73;
@@ -9159,7 +9865,7 @@ IL_02a0:
 	{
 		NullCheck(G_B26_1);
 		G_B26_1->___is_subscribed_0 = G_B26_0;
-		// this.is_expired = (r.subscriptionExpirationDate.Ticks > 0 && r.subscriptionExpirationDate.Ticks < current_date.Ticks) ? Result.True : Result.False;
+		// is_expired = (r.subscriptionExpirationDate.Ticks > 0 && r.subscriptionExpirationDate.Ticks < current_date.Ticks) ? Result.True : Result.False;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_76 = ___r0;
 		NullCheck(L_76);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_77;
@@ -9209,7 +9915,7 @@ IL_02d5:
 	{
 		NullCheck(G_B30_1);
 		G_B30_1->___is_expired_1 = G_B30_0;
-		// this.is_free_trial = (r.isFreeTrial == 1) ? Result.True : Result.False;
+		// is_free_trial = (r.isFreeTrial == 1) ? Result.True : Result.False;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_83 = ___r0;
 		NullCheck(L_83);
 		int32_t L_84;
@@ -9237,8 +9943,8 @@ IL_02e8:
 	{
 		NullCheck(G_B33_1);
 		G_B33_1->___is_free_trial_3 = G_B33_0;
-		// this.is_auto_renewing = ((productType == AppleStoreProductType.AutoRenewingSubscription) && this.is_cancelled == Result.False
-		//         && this.is_expired == Result.False) ? Result.True : Result.False;
+		// is_auto_renewing = ((productType == AppleStoreProductType.AutoRenewingSubscription) && is_cancelled == Result.False
+		//         && is_expired == Result.False) ? Result.True : Result.False;
 		int32_t L_85 = V_0;
 		G_B34_0 = __this;
 		if ((!(((uint32_t)L_85) == ((uint32_t)3))))
@@ -9283,7 +9989,7 @@ IL_0308:
 	{
 		NullCheck(G_B38_1);
 		G_B38_1->___is_auto_renewing_4 = G_B38_0;
-		// this.is_introductory_price_period = r.isIntroductoryPricePeriod == 1 ? Result.True : Result.False;
+		// is_introductory_price_period = r.isIntroductoryPricePeriod == 1 ? Result.True : Result.False;
 		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_88 = ___r0;
 		NullCheck(L_88);
 		int32_t L_89;
@@ -9315,33 +10021,41 @@ IL_031b:
 
 IL_0320:
 	{
-		// if (this.is_subscribed == Result.True)
+		// remainedTime = is_subscribed == Result.True ? r.subscriptionExpirationDate.Subtract(current_date) : TimeSpan.Zero;
 		int32_t L_90 = __this->___is_subscribed_0;
-		if (L_90)
+		G_B43_0 = __this;
+		if (!L_90)
 		{
-			goto IL_033f;
+			G_B44_0 = __this;
+			goto IL_0330;
 		}
 	}
 	{
-		// this.remainedTime = r.subscriptionExpirationDate.Subtract(current_date);
-		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_91 = ___r0;
-		NullCheck(L_91);
-		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_92;
-		L_92 = AppleInAppPurchaseReceipt_get_subscriptionExpirationDate_m643E75D4AFD8C1D478C51377E72D5809B383648F_inline(L_91, NULL);
-		V_11 = L_92;
-		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_93 = V_1;
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_94;
-		L_94 = DateTime_Subtract_m4064A98F489219E9C414DF5C03EE041351B4502A((&V_11), L_93, NULL);
-		__this->___remainedTime_10 = L_94;
-		return;
+		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_91 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
+		G_B45_0 = L_91;
+		G_B45_1 = G_B43_0;
+		goto IL_0340;
 	}
 
-IL_033f:
+IL_0330:
 	{
-		// this.remainedTime = TimeSpan.Zero;
-		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_95 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
-		__this->___remainedTime_10 = L_95;
+		AppleInAppPurchaseReceipt_t45E81B173E0600832D2E259DA4A6CFA9C54A7CD6* L_92 = ___r0;
+		NullCheck(L_92);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_93;
+		L_93 = AppleInAppPurchaseReceipt_get_subscriptionExpirationDate_m643E75D4AFD8C1D478C51377E72D5809B383648F_inline(L_92, NULL);
+		V_11 = L_93;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_94 = V_1;
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_95;
+		L_95 = DateTime_Subtract_m4064A98F489219E9C414DF5C03EE041351B4502A((&V_11), L_94, NULL);
+		G_B45_0 = L_95;
+		G_B45_1 = G_B44_0;
+	}
+
+IL_0340:
+	{
+		NullCheck(G_B45_1);
+		G_B45_1->___remainedTime_10 = G_B45_0;
 		// }
 		return;
 	}
@@ -9400,6 +10114,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionInfo__ctor_mAD14FD7347A1867C
 	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B9_0 = NULL;
 	int32_t G_B11_0 = 0;
 	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B11_1 = NULL;
+	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B26_0 = NULL;
+	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B25_0 = NULL;
+	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B27_0 = NULL;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A G_B28_0;
+	memset((&G_B28_0), 0, sizeof(G_B28_0));
+	SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* G_B28_1 = NULL;
 	double G_B32_0 = 0.0;
 	{
 		// public SubscriptionInfo(string skuDetails, bool isAutoRenewing, DateTime purchaseDate, bool isFreeTrial,
@@ -9450,14 +10170,14 @@ IL_0039:
 		// productId = null;
 		__this->___productId_6 = (String_t*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___productId_6), (void*)(String_t*)NULL);
-		// if (validProductIdKey) productId = productIdObject as string;
+		// if (validProductIdKey)
 		if (!L_8)
 		{
 			goto IL_005b;
 		}
 	}
 	{
-		// if (validProductIdKey) productId = productIdObject as string;
+		// productId = productIdObject as string;
 		RuntimeObject* L_9 = V_2;
 		__this->___productId_6 = ((String_t*)IsInstSealed((RuntimeObject*)L_9, String_t_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___productId_6), (void*)((String_t*)IsInstSealed((RuntimeObject*)L_9, String_t_il2cpp_TypeInfo_var)));
@@ -9468,9 +10188,9 @@ IL_005b:
 		// this.purchaseDate = purchaseDate;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_10 = ___purchaseDate2;
 		__this->___purchaseDate_7 = L_10;
-		// this.is_subscribed = Result.True;
+		// is_subscribed = Result.True;
 		__this->___is_subscribed_0 = 0;
-		// this.is_auto_renewing = isAutoRenewing ? Result.True : Result.False;
+		// is_auto_renewing = isAutoRenewing ? Result.True : Result.False;
 		bool L_11 = ___isAutoRenewing1;
 		G_B6_0 = __this;
 		if (L_11)
@@ -9495,9 +10215,9 @@ IL_0071:
 	{
 		NullCheck(G_B8_1);
 		G_B8_1->___is_auto_renewing_4 = G_B8_0;
-		// this.is_expired = Result.False;
+		// is_expired = Result.False;
 		__this->___is_expired_1 = 1;
-		// this.is_cancelled = isAutoRenewing ? Result.False : Result.True;
+		// is_cancelled = isAutoRenewing ? Result.False : Result.True;
 		bool L_12 = ___isAutoRenewing1;
 		G_B9_0 = __this;
 		if (L_12)
@@ -9522,7 +10242,7 @@ IL_0085:
 	{
 		NullCheck(G_B11_1);
 		G_B11_1->___is_cancelled_2 = G_B11_0;
-		// this.is_free_trial = Result.False;
+		// is_free_trial = Result.False;
 		__this->___is_free_trial_3 = 1;
 		// string sub_period = null;
 		V_3 = (String_t*)NULL;
@@ -9643,14 +10363,14 @@ IL_013a:
 		String_t* L_33 = V_4;
 		__this->___free_trial_period_string_16 = L_33;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___free_trial_period_string_16), (void*)L_33);
-		// this.subscriptionPeriod = computePeriodTimeSpan(parsePeriodTimeSpanUnits(sub_period));
+		// subscriptionPeriod = computePeriodTimeSpan(parsePeriodTimeSpanUnits(sub_period));
 		String_t* L_34 = V_3;
 		TimeSpanUnits_t14D130EBE0765AFEC42E8A3BB916D13B8586AE13* L_35;
 		L_35 = SubscriptionInfo_parsePeriodTimeSpanUnits_m35F883FE27081A3998B5A723683EC875A365085B(__this, L_34, NULL);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_36;
 		L_36 = SubscriptionInfo_computePeriodTimeSpan_m999CB3C5CFF7DBB5579A5C196BBFDDC9D034B6ED(__this, L_35, NULL);
 		__this->___subscriptionPeriod_15 = L_36;
-		// this.freeTrialPeriod = TimeSpan.Zero;
+		// freeTrialPeriod = TimeSpan.Zero;
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_37 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
 		__this->___freeTrialPeriod_14 = L_37;
@@ -9662,7 +10382,7 @@ IL_013a:
 		}
 	}
 	{
-		// this.freeTrialPeriod = parseTimeSpan(free_trial_period);
+		// freeTrialPeriod = parseTimeSpan(free_trial_period);
 		String_t* L_39 = V_4;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_40;
 		L_40 = SubscriptionInfo_parseTimeSpan_m3222C7A089EC328707F30D57576DAF0E0174AA87(__this, L_39, NULL);
@@ -9678,28 +10398,32 @@ IL_0172:
 		// this.introductory_price_cycles = introductory_price_cycles;
 		int64_t L_42 = V_7;
 		__this->___introductory_price_cycles_13 = L_42;
-		// this.introductory_price_period = TimeSpan.Zero;
+		// introductory_price_period = TimeSpan.Zero;
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_43 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
 		__this->___introductory_price_period_12 = L_43;
-		// this.is_introductory_price_period = Result.False;
+		// is_introductory_price_period = Result.False;
 		__this->___is_introductory_price_period_5 = 1;
-		// TimeSpan total_introductory_duration = TimeSpan.Zero;
+		// var total_introductory_duration = TimeSpan.Zero;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_44 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
 		V_8 = L_44;
 		// if (hasIntroductoryPriceTrial)
 		bool L_45 = ___hasIntroductoryPriceTrial4;
 		if (!L_45)
 		{
-			goto IL_01df;
+			goto IL_01d9;
 		}
 	}
 	{
-		// if (introductory_price_period_string != null && introductory_price_period_string.Equals(sub_period))
+		// introductory_price_period = introductory_price_period_string != null && introductory_price_period_string.Equals(sub_period)
+		//     ? subscriptionPeriod
+		//     : parseTimeSpan(introductory_price_period_string);
 		String_t* L_46 = V_6;
+		G_B25_0 = __this;
 		if (!L_46)
 		{
-			goto IL_01bb;
+			G_B26_0 = __this;
+			goto IL_01ae;
 		}
 	}
 	{
@@ -9708,29 +10432,35 @@ IL_0172:
 		NullCheck(L_47);
 		bool L_49;
 		L_49 = String_Equals_mCD5F35DEDCAFE51ACD4E033726FC2EF8DF7E9B4D(L_47, L_48, NULL);
-		if (!L_49)
+		G_B26_0 = G_B25_0;
+		if (L_49)
 		{
-			goto IL_01bb;
+			G_B27_0 = G_B25_0;
+			goto IL_01b8;
 		}
 	}
+
+IL_01ae:
 	{
-		// this.introductory_price_period = this.subscriptionPeriod;
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_50 = __this->___subscriptionPeriod_15;
-		__this->___introductory_price_period_12 = L_50;
-		goto IL_01c9;
+		String_t* L_50 = V_6;
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_51;
+		L_51 = SubscriptionInfo_parseTimeSpan_m3222C7A089EC328707F30D57576DAF0E0174AA87(__this, L_50, NULL);
+		G_B28_0 = L_51;
+		G_B28_1 = G_B26_0;
+		goto IL_01be;
 	}
 
-IL_01bb:
+IL_01b8:
 	{
-		// this.introductory_price_period = parseTimeSpan(introductory_price_period_string);
-		String_t* L_51 = V_6;
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_52;
-		L_52 = SubscriptionInfo_parseTimeSpan_m3222C7A089EC328707F30D57576DAF0E0174AA87(__this, L_51, NULL);
-		__this->___introductory_price_period_12 = L_52;
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_52 = __this->___subscriptionPeriod_15;
+		G_B28_0 = L_52;
+		G_B28_1 = G_B27_0;
 	}
 
-IL_01c9:
+IL_01be:
 	{
+		NullCheck(G_B28_1);
+		G_B28_1->___introductory_price_period_12 = G_B28_0;
 		// total_introductory_duration = accumulateIntroductoryDuration(parsePeriodTimeSpanUnits(introductory_price_period_string), this.introductory_price_cycles);
 		String_t* L_53 = V_6;
 		TimeSpanUnits_t14D130EBE0765AFEC42E8A3BB916D13B8586AE13* L_54;
@@ -9741,13 +10471,13 @@ IL_01c9:
 		V_8 = L_56;
 	}
 
-IL_01df:
+IL_01d9:
 	{
-		// TimeSpan extra_time = TimeSpan.FromSeconds(updateMetadata == null ? 0.0 : computeExtraTime(updateMetadata, this.subscriptionPeriod.TotalSeconds));
+		// var extra_time = TimeSpan.FromSeconds(updateMetadata == null ? 0.0 : computeExtraTime(updateMetadata, subscriptionPeriod.TotalSeconds));
 		String_t* L_57 = ___updateMetadata6;
 		if (!L_57)
 		{
-			goto IL_01f8;
+			goto IL_01f2;
 		}
 	}
 	{
@@ -9758,21 +10488,21 @@ IL_01df:
 		double L_61;
 		L_61 = SubscriptionInfo_computeExtraTime_m45672397041F6C14857C72C446EB0716CAF0DF08(__this, L_58, L_60, NULL);
 		G_B32_0 = L_61;
-		goto IL_0201;
+		goto IL_01fb;
 	}
 
-IL_01f8:
+IL_01f2:
 	{
 		G_B32_0 = (0.0);
 	}
 
-IL_0201:
+IL_01fb:
 	{
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_62;
 		L_62 = TimeSpan_FromSeconds_mE585CC8180040ED064DC8B6546E6C94A129BFFC5(G_B32_0, NULL);
 		V_9 = L_62;
-		// TimeSpan time_since_purchased = DateTime.UtcNow.Subtract(purchaseDate);
+		// var time_since_purchased = DateTime.UtcNow.Subtract(purchaseDate);
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_63;
 		L_63 = DateTime_get_UtcNow_m5D776FFEBC81592B361E4C7AF373297C5DFB46FD(NULL);
@@ -9788,21 +10518,21 @@ IL_0201:
 		L_68 = TimeSpan_op_LessThanOrEqual_m15A091041A6E53861348784744744319A33AA9EA(L_66, L_67, NULL);
 		if (!L_68)
 		{
-			goto IL_0238;
+			goto IL_0232;
 		}
 	}
 	{
-		// this.subscriptionExpireDate = purchaseDate.Add(extra_time);
+		// subscriptionExpireDate = purchaseDate.Add(extra_time);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_69 = V_9;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_70;
 		L_70 = DateTime_Add_mC882C6BBE75862360A1A0C733B4FFE3210D4B9B1((&___purchaseDate2), L_69, NULL);
 		__this->___subscriptionExpireDate_8 = L_70;
-		goto IL_0308;
+		goto IL_0302;
 	}
 
-IL_0238:
+IL_0232:
 	{
-		// else if (time_since_purchased <= this.freeTrialPeriod.Add(extra_time))
+		// else if (time_since_purchased <= freeTrialPeriod.Add(extra_time))
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_71 = V_10;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* L_72 = (&__this->___freeTrialPeriod_14);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_73 = V_9;
@@ -9813,13 +10543,13 @@ IL_0238:
 		L_75 = TimeSpan_op_LessThanOrEqual_m15A091041A6E53861348784744744319A33AA9EA(L_71, L_74, NULL);
 		if (!L_75)
 		{
-			goto IL_0274;
+			goto IL_026e;
 		}
 	}
 	{
-		// this.is_free_trial = Result.True;
+		// is_free_trial = Result.True;
 		__this->___is_free_trial_3 = 0;
-		// this.subscriptionExpireDate = purchaseDate.Add(this.freeTrialPeriod.Add(extra_time));
+		// subscriptionExpireDate = purchaseDate.Add(freeTrialPeriod.Add(extra_time));
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* L_76 = (&__this->___freeTrialPeriod_14);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_77 = V_9;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_78;
@@ -9827,12 +10557,12 @@ IL_0238:
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_79;
 		L_79 = DateTime_Add_mC882C6BBE75862360A1A0C733B4FFE3210D4B9B1((&___purchaseDate2), L_78, NULL);
 		__this->___subscriptionExpireDate_8 = L_79;
-		goto IL_0308;
+		goto IL_0302;
 	}
 
-IL_0274:
+IL_026e:
 	{
-		// else if (time_since_purchased < this.freeTrialPeriod.Add(extra_time).Add(total_introductory_duration))
+		// else if (time_since_purchased < freeTrialPeriod.Add(extra_time).Add(total_introductory_duration))
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_80 = V_10;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* L_81 = (&__this->___freeTrialPeriod_14);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_82 = V_9;
@@ -9847,13 +10577,13 @@ IL_0274:
 		L_86 = TimeSpan_op_LessThan_mCBD324D4CB69C45EF34ABEBE7B19BB23528897BA(L_80, L_85, NULL);
 		if (!L_86)
 		{
-			goto IL_02ce;
+			goto IL_02c8;
 		}
 	}
 	{
-		// this.is_introductory_price_period = Result.True;
+		// is_introductory_price_period = Result.True;
 		__this->___is_introductory_price_period_5 = 0;
-		// DateTime introductory_price_begin_date = this.purchaseDate.Add(this.freeTrialPeriod.Add(extra_time));
+		// var introductory_price_begin_date = this.purchaseDate.Add(freeTrialPeriod.Add(extra_time));
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* L_87 = (&__this->___purchaseDate_7);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* L_88 = (&__this->___freeTrialPeriod_14);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_89 = V_9;
@@ -9862,7 +10592,7 @@ IL_0274:
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_91;
 		L_91 = DateTime_Add_mC882C6BBE75862360A1A0C733B4FFE3210D4B9B1(L_87, L_90, NULL);
 		V_13 = L_91;
-		// this.subscriptionExpireDate = nextBillingDate(introductory_price_begin_date, parsePeriodTimeSpanUnits(introductory_price_period_string));
+		// subscriptionExpireDate = nextBillingDate(introductory_price_begin_date, parsePeriodTimeSpanUnits(introductory_price_period_string));
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_92 = V_13;
 		String_t* L_93 = V_6;
 		TimeSpanUnits_t14D130EBE0765AFEC42E8A3BB916D13B8586AE13* L_94;
@@ -9870,12 +10600,12 @@ IL_0274:
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_95;
 		L_95 = SubscriptionInfo_nextBillingDate_m0FB32D84F4B95E127E6B0C537098AF179831E7BA(__this, L_92, L_94, NULL);
 		__this->___subscriptionExpireDate_8 = L_95;
-		goto IL_0308;
+		goto IL_0302;
 	}
 
-IL_02ce:
+IL_02c8:
 	{
-		// DateTime billing_begin_date = this.purchaseDate.Add(this.freeTrialPeriod.Add(extra_time).Add(total_introductory_duration));
+		// var billing_begin_date = this.purchaseDate.Add(freeTrialPeriod.Add(extra_time).Add(total_introductory_duration));
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* L_96 = (&__this->___purchaseDate_7);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* L_97 = (&__this->___freeTrialPeriod_14);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_98 = V_9;
@@ -9888,7 +10618,7 @@ IL_02ce:
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_102;
 		L_102 = DateTime_Add_mC882C6BBE75862360A1A0C733B4FFE3210D4B9B1(L_96, L_101, NULL);
 		V_14 = L_102;
-		// this.subscriptionExpireDate = nextBillingDate(billing_begin_date, parsePeriodTimeSpanUnits(sub_period));
+		// subscriptionExpireDate = nextBillingDate(billing_begin_date, parsePeriodTimeSpanUnits(sub_period));
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_103 = V_14;
 		String_t* L_104 = V_3;
 		TimeSpanUnits_t14D130EBE0765AFEC42E8A3BB916D13B8586AE13* L_105;
@@ -9898,9 +10628,9 @@ IL_02ce:
 		__this->___subscriptionExpireDate_8 = L_106;
 	}
 
-IL_0308:
+IL_0302:
 	{
-		// this.remainedTime = this.subscriptionExpireDate.Subtract(DateTime.UtcNow);
+		// remainedTime = subscriptionExpireDate.Subtract(DateTime.UtcNow);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* L_107 = (&__this->___subscriptionExpireDate_8);
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_108;
@@ -9908,7 +10638,7 @@ IL_0308:
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_109;
 		L_109 = DateTime_Subtract_m4064A98F489219E9C414DF5C03EE041351B4502A(L_107, L_108, NULL);
 		__this->___remainedTime_10 = L_109;
-		// this.sku_details = skuDetails;
+		// sku_details = skuDetails;
 		String_t* L_110 = ___skuDetails0;
 		__this->___sku_details_17 = L_110;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___sku_details_17), (void*)L_110);
@@ -9932,29 +10662,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionInfo__ctor_mF959D7594682F5F1
 		String_t* L_0 = ___productId0;
 		__this->___productId_6 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___productId_6), (void*)L_0);
-		// this.is_subscribed = Result.True;
+		// is_subscribed = Result.True;
 		__this->___is_subscribed_0 = 0;
-		// this.is_expired = Result.False;
+		// is_expired = Result.False;
 		__this->___is_expired_1 = 1;
-		// this.is_cancelled = Result.Unsupported;
+		// is_cancelled = Result.Unsupported;
 		__this->___is_cancelled_2 = 2;
-		// this.is_free_trial = Result.Unsupported;
+		// is_free_trial = Result.Unsupported;
 		__this->___is_free_trial_3 = 2;
-		// this.is_auto_renewing = Result.Unsupported;
+		// is_auto_renewing = Result.Unsupported;
 		__this->___is_auto_renewing_4 = 2;
-		// this.remainedTime = TimeSpan.MaxValue;
+		// remainedTime = TimeSpan.MaxValue;
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_1 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___MaxValue_20;
 		__this->___remainedTime_10 = L_1;
-		// this.is_introductory_price_period = Result.Unsupported;
+		// is_introductory_price_period = Result.Unsupported;
 		__this->___is_introductory_price_period_5 = 2;
-		// this.introductory_price_period = TimeSpan.MaxValue;
+		// introductory_price_period = TimeSpan.MaxValue;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_2 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___MaxValue_20;
 		__this->___introductory_price_period_12 = L_2;
-		// this.introductory_price = null;
+		// introductory_price = null;
 		__this->___introductory_price_11 = (String_t*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___introductory_price_11), (void*)(String_t*)NULL);
-		// this.introductory_price_cycles = 0;
+		// introductory_price_cycles = 0;
 		__this->___introductory_price_cycles_13 = ((int64_t)0);
 		// }
 		return;
@@ -9964,7 +10694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubscriptionInfo__ctor_mF959D7594682F5F1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getProductId_mB6D1E782580A363645ADF6B0B2FB1D7791E33B2B (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public string getProductId() { return this.productId; }
+		// public string getProductId() { return productId; }
 		String_t* L_0 = __this->___productId_6;
 		return L_0;
 	}
@@ -9973,7 +10703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getProductId_mB6D1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D SubscriptionInfo_getPurchaseDate_m6827BF4032335E14E29F89A7918A8358589D42A1 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public DateTime getPurchaseDate() { return this.purchaseDate; }
+		// public DateTime getPurchaseDate() { return purchaseDate; }
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = __this->___purchaseDate_7;
 		return L_0;
 	}
@@ -9982,7 +10712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isSubscribed_m9EAA4FD5FA07828BDD765F8243F49B8B2CFC0C62 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public Result isSubscribed() { return this.is_subscribed; }
+		// public Result isSubscribed() { return is_subscribed; }
 		int32_t L_0 = __this->___is_subscribed_0;
 		return L_0;
 	}
@@ -9991,7 +10721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isSubscribed_m9EAA4F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isExpired_m289877A70874E038E09275C90697D3EAA23C4535 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public Result isExpired() { return this.is_expired; }
+		// public Result isExpired() { return is_expired; }
 		int32_t L_0 = __this->___is_expired_1;
 		return L_0;
 	}
@@ -10000,7 +10730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isExpired_m289877A70
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isCancelled_m561EFAC63331FB328D5F15695B246337FEFF07D8 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public Result isCancelled() { return this.is_cancelled; }
+		// public Result isCancelled() { return is_cancelled; }
 		int32_t L_0 = __this->___is_cancelled_2;
 		return L_0;
 	}
@@ -10009,7 +10739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isCancelled_m561EFAC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isFreeTrial_m6421AF20326501F46804C8A2753E8FBD1DC62F1F (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public Result isFreeTrial() { return this.is_free_trial; }
+		// public Result isFreeTrial() { return is_free_trial; }
 		int32_t L_0 = __this->___is_free_trial_3;
 		return L_0;
 	}
@@ -10018,7 +10748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isFreeTrial_m6421AF2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isAutoRenewing_m9B8A79892D33A4F4739815952C8994D04D529D48 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public Result isAutoRenewing() { return this.is_auto_renewing; }
+		// public Result isAutoRenewing() { return is_auto_renewing; }
 		int32_t L_0 = __this->___is_auto_renewing_4;
 		return L_0;
 	}
@@ -10027,7 +10757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isAutoRenewing_m9B8A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A SubscriptionInfo_getRemainingTime_mEA621AB764FE456742640B1AB9FF0FB96B21CC11 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public TimeSpan getRemainingTime() { return this.remainedTime; }
+		// public TimeSpan getRemainingTime() { return remainedTime; }
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_0 = __this->___remainedTime_10;
 		return L_0;
 	}
@@ -10036,7 +10766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isIntroductoryPricePeriod_m9B1DD107A4DD0F5F5173DA07D78B6BE3174321D3 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public Result isIntroductoryPricePeriod() { return this.is_introductory_price_period; }
+		// public Result isIntroductoryPricePeriod() { return is_introductory_price_period; }
 		int32_t L_0 = __this->___is_introductory_price_period_5;
 		return L_0;
 	}
@@ -10045,7 +10775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SubscriptionInfo_isIntroductoryPriceP
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A SubscriptionInfo_getIntroductoryPricePeriod_m0980BB1704853615F903C4F7B58021A31DFB4C3C (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public TimeSpan getIntroductoryPricePeriod() { return this.introductory_price_period; }
+		// public TimeSpan getIntroductoryPricePeriod() { return introductory_price_period; }
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_0 = __this->___introductory_price_period_12;
 		return L_0;
 	}
@@ -10060,7 +10790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getIntroductoryPri
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// public string getIntroductoryPrice() { return string.IsNullOrEmpty(this.introductory_price) ? "not available" : this.introductory_price; }
+		// public string getIntroductoryPrice() { return string.IsNullOrEmpty(introductory_price) ? "not available" : introductory_price; }
 		String_t* L_0 = __this->___introductory_price_11;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_m54CF0907E7C4F3AFB2E796A13DC751ECBB8DB64A(L_0, NULL);
@@ -10083,7 +10813,7 @@ IL_0014:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SubscriptionInfo_getIntroductoryPricePeriodCycles_mE0196C244234C7CE50D9BA07C627179F0E1825B5 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public long getIntroductoryPricePeriodCycles() { return this.introductory_price_cycles; }
+		// public long getIntroductoryPricePeriodCycles() { return introductory_price_cycles; }
 		int64_t L_0 = __this->___introductory_price_cycles_13;
 		return L_0;
 	}
@@ -10092,7 +10822,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SubscriptionInfo_getIntroductoryPrice
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D SubscriptionInfo_getExpireDate_m2F7EF006E79571EFECD46A91F83181A3F1CA147C (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public DateTime getExpireDate() { return this.subscriptionExpireDate; }
+		// public DateTime getExpireDate() { return subscriptionExpireDate; }
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = __this->___subscriptionExpireDate_8;
 		return L_0;
 	}
@@ -10101,7 +10831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D SubscriptionInfo_getCancelDate_mD511706CC6764D9339302A95606D1A60AE89666D (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public DateTime getCancelDate() { return this.subscriptionCancelDate; }
+		// public DateTime getCancelDate() { return subscriptionCancelDate; }
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = __this->___subscriptionCancelDate_9;
 		return L_0;
 	}
@@ -10110,7 +10840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A SubscriptionInfo_getFreeTrialPeriod_m35A4CFF4F0E83550FB20F6E80976AF3892BB8E79 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public TimeSpan getFreeTrialPeriod() { return this.freeTrialPeriod; }
+		// public TimeSpan getFreeTrialPeriod() { return freeTrialPeriod; }
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_0 = __this->___freeTrialPeriod_14;
 		return L_0;
 	}
@@ -10119,7 +10849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A SubscriptionInfo_getSubscriptionPeriod_m31E70D795F3BCE669443711ADB558A7495F60DB8 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public TimeSpan getSubscriptionPeriod() { return this.subscriptionPeriod; }
+		// public TimeSpan getSubscriptionPeriod() { return subscriptionPeriod; }
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_0 = __this->___subscriptionPeriod_15;
 		return L_0;
 	}
@@ -10128,7 +10858,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getFreeTrialPeriodString_mD822F0E3C2E946D57166132492ACE55CDA883B48 (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public string getFreeTrialPeriodString() { return this.free_trial_period_string; }
+		// public string getFreeTrialPeriodString() { return free_trial_period_string; }
 		String_t* L_0 = __this->___free_trial_period_string_16;
 		return L_0;
 	}
@@ -10137,7 +10867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getFreeTrialPeriod
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getSkuDetails_mE7326C92697E64C4529EB7388920613F3A7594CE (SubscriptionInfo_t28AC2D41B62C9A4D8579F616FA4F07E49BE0F4EB* __this, const RuntimeMethod* method) 
 {
 	{
-		// public string getSkuDetails() { return this.sku_details; }
+		// public string getSkuDetails() { return sku_details; }
 		String_t* L_0 = __this->___sku_details_17;
 		return L_0;
 	}
@@ -10161,30 +10891,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getSubscriptionInf
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// Dictionary<string, object> dict = new Dictionary<string, object>();
+		// var dict = new Dictionary<string, object>
+		// {
+		//     { "productId", productId },
+		//     { "is_free_trial", is_free_trial },
+		//     { "is_introductory_price_period", is_introductory_price_period == Result.True },
+		//     { "remaining_time_in_seconds", remainedTime.TotalSeconds }
+		// };
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_0 = (Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)il2cpp_codegen_object_new(Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		Dictionary_2__ctor_mC4F3DF292BAD88F4BF193C49CD689FAEBC4570A9(L_0, Dictionary_2__ctor_mC4F3DF292BAD88F4BF193C49CD689FAEBC4570A9_RuntimeMethod_var);
-		// dict.Add("productId", this.productId);
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_1 = L_0;
 		String_t* L_2 = __this->___productId_6;
 		NullCheck(L_1);
 		Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443(L_1, _stringLiteral269B276065AA2FD25E2FC1E4ED6E8FBDFB83D44D, L_2, Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443_RuntimeMethod_var);
-		// dict.Add("is_free_trial", this.is_free_trial);
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_3 = L_1;
 		int32_t L_4 = __this->___is_free_trial_3;
 		int32_t L_5 = L_4;
 		RuntimeObject* L_6 = Box(Result_tBF5FC3501DD4DAE50A29094F884A55666CE71ACE_il2cpp_TypeInfo_var, &L_5);
 		NullCheck(L_3);
 		Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443(L_3, _stringLiteralE2433BCDD0FC596DC6BE25A30596DC79E361AAA0, L_6, Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443_RuntimeMethod_var);
-		// dict.Add("is_introductory_price_period", this.is_introductory_price_period == Result.True);
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_7 = L_3;
 		int32_t L_8 = __this->___is_introductory_price_period_5;
 		bool L_9 = ((bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0));
 		RuntimeObject* L_10 = Box(Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var, &L_9);
 		NullCheck(L_7);
 		Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443(L_7, _stringLiteralFB88AAE385568D0221A016B76B92B8F4ACC87ED7, L_10, Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443_RuntimeMethod_var);
-		// dict.Add("remaining_time_in_seconds", this.remainedTime.TotalSeconds);
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_11 = L_7;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* L_12 = (&__this->___remainedTime_10);
 		double L_13;
@@ -10213,7 +10945,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		// if (units.days == 0.0 && units.months == 0 && units.years == 0) return new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+		// if (units.days == 0.0 && units.months == 0 && units.years == 0)
 		TimeSpanUnits_t14D130EBE0765AFEC42E8A3BB916D13B8586AE13* L_0 = ___units1;
 		NullCheck(L_0);
 		double L_1 = L_0->___days_0;
@@ -10241,7 +10973,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		}
 	}
 	{
-		// if (units.days == 0.0 && units.months == 0 && units.years == 0) return new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+		// return new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_6;
 		memset((&L_6), 0, sizeof(L_6));
 		DateTime__ctor_m30157484F8C1D6527DC8B93AC6C9268EDB0B1168((&L_6), ((int32_t)1970), 1, 1, 0, 0, 0, 0, 1, /*hidden argument*/NULL);
@@ -10250,7 +10982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 
 IL_0033:
 	{
-		// DateTime next_billing_date = billing_begin_date;
+		// var next_billing_date = billing_begin_date;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_7 = ___billing_begin_date0;
 		V_0 = L_7;
 		goto IL_0061;
@@ -10312,7 +11044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 	memset((&V_0), 0, sizeof(V_0));
 	int64_t V_1 = 0;
 	{
-		// TimeSpan result = TimeSpan.Zero;
+		// var result = TimeSpan.Zero;
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_0 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
 		V_0 = L_0;
@@ -10365,7 +11097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		// DateTime now = DateTime.Now;
+		// var now = DateTime.Now;
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
 		L_0 = DateTime_get_Now_mC336498972C48439ADCD5C50D35FAE0F2A48B0F0(NULL);
@@ -10423,18 +11155,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double SubscriptionInfo_computeExtraTime_m456
 		RuntimeObject* L_1;
 		L_1 = MiniJson_JsonDecode_mB172645008C10F37AED494CDFA63967D3315FA58(L_0, NULL);
 		V_0 = ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)CastclassClass((RuntimeObject*)L_1, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
-		// long old_sku_remaining_seconds = (long)wrapper["old_sku_remaining_seconds"];
+		// var old_sku_remaining_seconds = (long)wrapper["old_sku_remaining_seconds"];
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_2 = V_0;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
 		L_3 = Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5(L_2, _stringLiteral5F82F3F3B1AA2D118C693E3DAE50A3EB8A5977B0, Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5_RuntimeMethod_var);
-		// long old_sku_price_in_micros = (long)wrapper["old_sku_price_in_micros"];
+		// var old_sku_price_in_micros = (long)wrapper["old_sku_price_in_micros"];
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_4 = V_0;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
 		L_5 = Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5(L_4, _stringLiteral0506D427EC0329A6EB605888F60B3AFA2264DA50, Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5_RuntimeMethod_var);
 		V_1 = ((*(int64_t*)((int64_t*)(int64_t*)UnBox(L_5, Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var))));
-		// double old_sku_period_in_seconds = (parseTimeSpan((string)wrapper["old_sku_period_string"])).TotalSeconds;
+		// var old_sku_period_in_seconds = parseTimeSpan((string)wrapper["old_sku_period_string"]).TotalSeconds;
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_6 = V_0;
 		NullCheck(L_6);
 		RuntimeObject* L_7;
@@ -10445,13 +11177,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double SubscriptionInfo_computeExtraTime_m456
 		double L_9;
 		L_9 = TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8((&V_4), NULL);
 		V_2 = L_9;
-		// long new_sku_price_in_micros = (long)wrapper["new_sku_price_in_micros"];
+		// var new_sku_price_in_micros = (long)wrapper["new_sku_price_in_micros"];
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_10 = V_0;
 		NullCheck(L_10);
 		RuntimeObject* L_11;
 		L_11 = Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5(L_10, _stringLiteral3D82205049DF1F8E34729B0E7B8FE91ABB6129FF, Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5_RuntimeMethod_var);
 		V_3 = ((*(int64_t*)((int64_t*)(int64_t*)UnBox(L_11, Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3_il2cpp_TypeInfo_var))));
-		// double result = ((((double)old_sku_remaining_seconds / (double)old_sku_period_in_seconds) * (double)old_sku_price_in_micros) / (double)new_sku_price_in_micros) * new_sku_period_in_seconds;
+		// var result = old_sku_remaining_seconds / (double)old_sku_period_in_seconds * old_sku_price_in_micros / new_sku_price_in_micros * new_sku_period_in_seconds;
 		double L_12 = V_2;
 		int64_t L_13 = V_1;
 		int64_t L_14 = V_3;
@@ -10466,90 +11198,83 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XmlConvert_t5D100AFD62FF717BD4F8A6CABA9EDF7A5DF719EA_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
-	{
-		// TimeSpan result = TimeSpan.Zero;
-		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_0 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero_19;
-		V_0 = L_0;
-	}
 	try
 	{// begin try (depth: 1)
 		// result = XmlConvert.ToTimeSpan(period_string);
-		String_t* L_1 = ___period_string0;
+		String_t* L_0 = ___period_string0;
 		il2cpp_codegen_runtime_class_init_inline(XmlConvert_t5D100AFD62FF717BD4F8A6CABA9EDF7A5DF719EA_il2cpp_TypeInfo_var);
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_2;
-		L_2 = XmlConvert_ToTimeSpan_m0343E96CF74D5F2F983F690BAEC86D71D8301DB5(L_1, NULL);
-		V_0 = L_2;
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_1;
+		L_1 = XmlConvert_ToTimeSpan_m0343E96CF74D5F2F983F690BAEC86D71D8301DB5(L_0, NULL);
+		V_0 = L_1;
 		// }
-		goto IL_0030;
+		goto IL_002a;
 	}// end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_000f;
+			goto CATCH_0009;
 		}
 		throw e;
 	}
 
-CATCH_000f:
+CATCH_0009:
 	{// begin catch(System.Exception)
 		{
 			// catch (Exception)
 			// if (period_string == null || period_string.Length == 0)
-			String_t* L_3 = ___period_string0;
-			if (!L_3)
+			String_t* L_2 = ___period_string0;
+			if (!L_2)
 			{
-				goto IL_001b;
+				goto IL_0015;
 			}
 		}
 		{
-			String_t* L_4 = ___period_string0;
-			NullCheck(L_4);
-			int32_t L_5;
-			L_5 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_4, NULL);
-			if (L_5)
+			String_t* L_3 = ___period_string0;
+			NullCheck(L_3);
+			int32_t L_4;
+			L_4 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_3, NULL);
+			if (L_4)
 			{
-				goto IL_0023;
+				goto IL_001d;
 			}
 		}
 
-IL_001b:
+IL_0015:
 		{
 			// result = TimeSpan.Zero;
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var)));
-			TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_6 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))))->___Zero_19;
-			V_0 = L_6;
-			goto IL_002e;
+			TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_5 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))))->___Zero_19;
+			V_0 = L_5;
+			goto IL_0028;
 		}
 
-IL_0023:
+IL_001d:
 		{
 			// result = new TimeSpan(7, 0, 0, 0);
 			TimeSpan__ctor_m513B2AFB80D3350E59FBD23F53B2F1322175C24D((&V_0), 7, 0, 0, 0, NULL);
 		}
 
-IL_002e:
+IL_0028:
 		{
 			// }
 			IL2CPP_POP_ACTIVE_EXCEPTION();
-			goto IL_0030;
+			goto IL_002a;
 		}
 	}// end catch (depth: 1)
 
-IL_0030:
+IL_002a:
 	{
 		// return result;
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_7 = V_0;
-		return L_7;
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_6 = V_0;
+		return L_6;
 	}
 }
 // UnityEngine.Purchasing.TimeSpanUnits UnityEngine.Purchasing.SubscriptionInfo::parsePeriodTimeSpanUnits(System.String)
@@ -10664,7 +11389,7 @@ IL_0087:
 
 IL_0098:
 	{
-		// return new TimeSpanUnits((double)parseTimeSpan(time_span).Days, 0, 0);
+		// return new TimeSpanUnits(parseTimeSpan(time_span).Days, 0, 0);
 		String_t* L_15 = ___time_span0;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_16;
 		L_16 = SubscriptionInfo_parseTimeSpan_m3222C7A089EC328707F30D57576DAF0E0174AA87(__this, L_15, NULL);
@@ -11651,7 +12376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDC3DF36A388F26FC1C0FFAD666306A07C5E19
 	try
 	{// begin try (depth: 1)
 		{
-			// foreach (object product in productsList)
+			// foreach (var product in productsList)
 			List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_1 = ___productsList0;
 			NullCheck(L_1);
 			Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A L_2;
@@ -11676,22 +12401,22 @@ FINALLY_0126_1:
 
 IL_0012_2:
 				{
-					// foreach (object product in productsList)
+					// foreach (var product in productsList)
 					RuntimeObject* L_3;
 					L_3 = Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_inline((&V_1), Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_RuntimeMethod_var);
 					// var productDict = (Dictionary<string, object>)product;
 					V_2 = ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)CastclassClass((RuntimeObject*)L_3, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
-					// productDict.TryGetValue("id", out id);
+					// productDict.TryGetValue("id", out var id);
 					Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_4 = V_2;
 					NullCheck(L_4);
 					bool L_5;
 					L_5 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_4, _stringLiteral996E5360F80E16B2189CC1E536C91CE68083F694, (&V_3), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
-					// productDict.TryGetValue("store_ids", out storeIDs);
+					// productDict.TryGetValue("store_ids", out var storeIDs);
 					Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_6 = V_2;
 					NullCheck(L_6);
 					bool L_7;
 					L_7 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_6, _stringLiteral93E9295B685CD7C639F93DF2223A3DD3E2955B1D, (&V_4), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
-					// productDict.TryGetValue("type", out typeString);
+					// productDict.TryGetValue("type", out var typeString);
 					Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_8 = V_2;
 					NullCheck(L_8);
 					bool L_9;
@@ -11699,7 +12424,7 @@ IL_0012_2:
 					// var idHash = storeIDs as Dictionary<string, object>;
 					RuntimeObject* L_10 = V_4;
 					V_6 = ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)IsInstClass((RuntimeObject*)L_10, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
-					// string storeSpecificId = (string)id;
+					// var storeSpecificId = (string)id;
 					RuntimeObject* L_11 = V_3;
 					V_7 = ((String_t*)CastclassSealed((RuntimeObject*)L_11, String_t_il2cpp_TypeInfo_var));
 					// if (idHash != null)
@@ -11800,12 +12525,12 @@ IL_00aa_3:
 
 IL_00c3_2:
 				{
-					// productDict.TryGetValue("storeSpecificId", out singleStoreSpecificID);
+					// productDict.TryGetValue("storeSpecificId", out var singleStoreSpecificID);
 					Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_27 = V_2;
 					NullCheck(L_27);
 					bool L_28;
 					L_28 = Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8(L_27, _stringLiteralC4FD5B06A6B7174802B6D991C7560C98FB781820, (&V_14), Dictionary_2_TryGetValue_mC14A0401676B34A68B06FC858BA801E7DF99B7D8_RuntimeMethod_var);
-					// string generalStoreSpecificStringID = (string)singleStoreSpecificID;
+					// var generalStoreSpecificStringID = (string)singleStoreSpecificID;
 					RuntimeObject* L_29 = V_14;
 					V_15 = ((String_t*)CastclassSealed((RuntimeObject*)L_29, String_t_il2cpp_TypeInfo_var));
 					// if (generalStoreSpecificStringID != null)
@@ -11850,7 +12575,7 @@ IL_00e2_2:
 
 IL_0118_2:
 				{
-					// foreach (object product in productsList)
+					// foreach (var product in productsList)
 					bool L_42;
 					L_42 = Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB((&V_1), Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_RuntimeMethod_var);
 					if (L_42)
@@ -11976,7 +12701,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WinRTStore__ctor_m0BC571CB12A52612A611A8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WinRTStore_SetWindowsIAP_m072A6254B880720C0E1D57142DAAE0C81A17C76A (WinRTStore_t48E00F03328D89136362A032D73E709EF91A3777* __this, RuntimeObject* ___iap0, const RuntimeMethod* method) 
 {
 	{
-		// this.win8 = iap;
+		// win8 = iap;
 		RuntimeObject* L_0 = ___iap0;
 		__this->___win8_0 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___win8_0), (void*)L_0);
@@ -11988,7 +12713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WinRTStore_SetWindowsIAP_m072A6254B88072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WinRTStore_Initialize_mDEF3CF5B9F0CAA017C44C1878E5D4CB08AC5EF0B (WinRTStore_t48E00F03328D89136362A032D73E709EF91A3777* __this, RuntimeObject* ___biller0, const RuntimeMethod* method) 
 {
 	{
-		// this.callback = biller;
+		// callback = biller;
 		RuntimeObject* L_0 = ___biller0;
 		__this->___callback_1 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___callback_1), (void*)L_0);
@@ -12113,7 +12838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WinRTStore_FinishTransaction_mC624FB22E6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// this.win8.FinaliseTransaction(transactionId);
+		// win8.FinaliseTransaction(transactionId);
 		RuntimeObject* L_0 = __this->___win8_0;
 		String_t* L_1 = ___transactionId1;
 		NullCheck(L_0);
@@ -13181,7 +13906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// get { return DateTime.Now; }
+		// public DateTime currentTime => DateTime.Now;
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
 		L_0 = DateTime_get_Now_mC336498972C48439ADCD5C50D35FAE0F2A48B0F0(NULL);
@@ -13192,7 +13917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_persistentDataPath_m2AAF48A31B21C5A5ADC134ECB14E58D2D6CB5D46 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Application.persistentDataPath; }
+		// public string persistentDataPath => Application.persistentDataPath;
 		String_t* L_0;
 		L_0 = Application_get_persistentDataPath_m787EBC9B0862E7617DCD6CABD2147E61717EAC17(NULL);
 		return L_0;
@@ -13202,7 +13927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_persistentDataPath_m2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_deviceUniqueIdentifier_m1AC62056A917557653A37C47461FB4996C2F0337 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return SystemInfo.deviceUniqueIdentifier; }
+		// public string deviceUniqueIdentifier => SystemInfo.deviceUniqueIdentifier;
 		String_t* L_0;
 		L_0 = SystemInfo_get_deviceUniqueIdentifier_mCA336E71D49E8B830EAFBC13E46FA22A628D0E17(NULL);
 		return L_0;
@@ -13212,7 +13937,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_deviceUniqueIdentifie
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_unityVersion_mE2949234D9C1C02226C7CC83374FC11075EFB241 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Application.unityVersion; }
+		// public string unityVersion => Application.unityVersion;
 		String_t* L_0;
 		L_0 = Application_get_unityVersion_m09F45DDCFA0A4414AA296A595FDB0B59B44F5387(NULL);
 		return L_0;
@@ -13222,7 +13947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_unityVersion_mE294923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_cloudProjectId_m3A658EA17D15C5F63C93B90A3FCC284DB3B8F86F (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Application.cloudProjectId; }
+		// public string cloudProjectId => Application.cloudProjectId;
 		String_t* L_0;
 		L_0 = Application_get_cloudProjectId_mC4A9551019BB135B39D816F55A912CC2E9858F84(NULL);
 		return L_0;
@@ -13239,7 +13964,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_userId_m0D8EA6251AC88
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// get { return PlayerPrefs.GetString("unity.cloud_userid", String.Empty); }
+		// public string userId => PlayerPrefs.GetString("unity.cloud_userid", String.Empty);
 		String_t* L_0 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty_6;
 		String_t* L_1;
 		L_1 = PlayerPrefs_GetString_mC671EDA77D8D35BE514817F54950630327A74F63(_stringLiteral20353326ACF03BB4112F3080DBCA0AC47DBC7BB2, L_0, NULL);
@@ -13250,7 +13975,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_userId_m0D8EA6251AC88
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_gameVersion_m850F0EAB8708FC24BF42A80509CE69DF76405048 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Application.version; }
+		// public string gameVersion => Application.version;
 		String_t* L_0;
 		L_0 = Application_get_version_mD6AC9813ABCAD4D2A1F764F99E26068CA5B830F2(NULL);
 		return L_0;
@@ -13267,7 +13992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t UnityUtil_get_sessionId_m0621F738E17
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// get { return UInt64.Parse(PlayerPrefs.GetString("unity.player_sessionid", "0")); }
+		// public UInt64 sessionId => UInt64.Parse(PlayerPrefs.GetString("unity.player_sessionid", "0"));
 		String_t* L_0;
 		L_0 = PlayerPrefs_GetString_mC671EDA77D8D35BE514817F54950630327A74F63(_stringLiteralC53354E87BDA5285431DDA542D48714F94E95113, _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024, NULL);
 		uint64_t L_1;
@@ -13279,7 +14004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t UnityUtil_get_sessionId_m0621F738E17
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_platform_mF687BB437A671685484C604A86E99863F419302D (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Application.platform; }
+		// public RuntimePlatform platform => Application.platform;
 		int32_t L_0;
 		L_0 = Application_get_platform_m1AB34E71D9885B120F6021EB2B11DCB28CD6008D(NULL);
 		return L_0;
@@ -13289,7 +14014,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_platform_mF687BB437A671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnityUtil_get_isEditor_mDD2E04E6B1CA00D5F06563910E72688974EF418A (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Application.isEditor; }
+		// public bool isEditor => Application.isEditor;
 		bool L_0;
 		L_0 = Application_get_isEditor_m0377DB707B566C8E21DA3CD99963210F6D57D234(NULL);
 		return L_0;
@@ -13299,7 +14024,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnityUtil_get_isEditor_mDD2E04E6B1CA00D5
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_deviceModel_m594551957553EBEEB2704901C5FB8EB86F661AD7 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return SystemInfo.deviceModel; }
+		// public string deviceModel => SystemInfo.deviceModel;
 		String_t* L_0;
 		L_0 = SystemInfo_get_deviceModel_m8587189FA95DA31E470F864208BC6FB6B35F6D06(NULL);
 		return L_0;
@@ -13309,7 +14034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_deviceModel_m59455195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_deviceName_m4026083CFFD874134D2918202EA370E1E4B0864E (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return SystemInfo.deviceName; }
+		// public string deviceName => SystemInfo.deviceName;
 		String_t* L_0;
 		L_0 = SystemInfo_get_deviceName_m191E4B0E9579B2318378D25FA250E7AD4DAA542B(NULL);
 		return L_0;
@@ -13319,7 +14044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_deviceName_m4026083CF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_deviceType_mA5AA09B2292D7A3572DAC584AE95924F9EB2E58E (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return SystemInfo.deviceType; }
+		// public DeviceType deviceType => SystemInfo.deviceType;
 		int32_t L_0;
 		L_0 = SystemInfo_get_deviceType_mB67B9AC09C2BE8A8B0AED6765AD70719D15C889F(NULL);
 		return L_0;
@@ -13329,7 +14054,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_deviceType_mA5AA09B2292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_operatingSystem_mD92A36329BE72E6766CA9E5A2873F48CDE1DA838 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return SystemInfo.operatingSystem; }
+		// public string operatingSystem => SystemInfo.operatingSystem;
 		String_t* L_0;
 		L_0 = SystemInfo_get_operatingSystem_m441DFAEFA81C9B5AF19D5C486469EDBD674490A8(NULL);
 		return L_0;
@@ -13339,7 +14064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_operatingSystem_mD92A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_screenWidth_m8A3081DB40110DD42D952ED8DD378DC16571DF71 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Screen.width; }
+		// public int screenWidth => Screen.width;
 		int32_t L_0;
 		L_0 = Screen_get_width_mCA5D955A53CF6D29C8C7118D517D0FC84AE8056C(NULL);
 		return L_0;
@@ -13349,7 +14074,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_screenWidth_m8A3081DB40
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_screenHeight_m35BCB594BA71E47F19F3A5A08C7BD651E54238DF (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Screen.height; }
+		// public int screenHeight => Screen.height;
 		int32_t L_0;
 		L_0 = Screen_get_height_m624DD2D53F34087064E3B9D09AC2207DB4E86CA8(NULL);
 		return L_0;
@@ -13359,7 +14084,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnityUtil_get_screenHeight_m35BCB594B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UnityUtil_get_screenDpi_mD80E2591FA819A2CACB39F1B2E611AE435A0FDF7 (UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383* __this, const RuntimeMethod* method) 
 {
 	{
-		// get { return Screen.dpi; }
+		// public float screenDpi => Screen.dpi;
 		float L_0;
 		L_0 = Screen_get_dpi_mD5BB95E605FABD335F0D4736EE4860A0AA98A50D(NULL);
 		return L_0;
@@ -13376,7 +14101,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityUtil_get_screenOrientation_mE5
 	}
 	int32_t V_0 = 0;
 	{
-		// get { return Screen.orientation.ToString(); }
+		// public string screenOrientation => Screen.orientation.ToString();
 		int32_t L_0;
 		L_0 = Screen_get_orientation_m7B47A2719DDE296357BB3199AB3BECC49F9F4A6D(NULL);
 		V_0 = L_0;
@@ -13869,7 +14594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityUtil__ctor_mEB92A76AB1B9C942211165A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// private List<Action<bool>> pauseListeners = new List<Action<bool>>();
+		// private readonly List<Action<bool>> pauseListeners = new List<Action<bool>>();
 		List_1_tB2FB3A51525B691C3FF8B27FD20E9C31736D1713* L_0 = (List_1_tB2FB3A51525B691C3FF8B27FD20E9C31736D1713*)il2cpp_codegen_object_new(List_1_tB2FB3A51525B691C3FF8B27FD20E9C31736D1713_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		List_1__ctor_mFD5B5846BC30FFDBBCDB78A0F7537F9D8A9074EC(L_0, List_1__ctor_mFD5B5846BC30FFDBBCDB78A0F7537F9D8A9074EC_RuntimeMethod_var);
@@ -13894,13 +14619,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityUtil__cctor_m7D40372F65D0ACE3DB0448
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// private static List<Action> s_Callbacks = new List<Action>();
+		// private static readonly List<Action> s_Callbacks = new List<Action>();
 		List_1_tDB72209F35D56F62A287633F9450978E90B90987* L_0 = (List_1_tDB72209F35D56F62A287633F9450978E90B90987*)il2cpp_codegen_object_new(List_1_tDB72209F35D56F62A287633F9450978E90B90987_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		List_1__ctor_mBFD6DF02E045EDF3C322E2112C922457016C8212(L_0, List_1__ctor_mBFD6DF02E045EDF3C322E2112C922457016C8212_RuntimeMethod_var);
 		((UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383_StaticFields*)il2cpp_codegen_static_fields_for(UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383_il2cpp_TypeInfo_var))->___s_Callbacks_4 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383_StaticFields*)il2cpp_codegen_static_fields_for(UnityUtil_t5C5297312FAFF7794379E8B75C6FA39FDFE50383_il2cpp_TypeInfo_var))->___s_Callbacks_4), (void*)L_0);
-		// private static List<RuntimePlatform> s_PcControlledPlatforms = new List<RuntimePlatform>
+		// private static readonly List<RuntimePlatform> s_PcControlledPlatforms = new List<RuntimePlatform>
 		// {
 		//     RuntimePlatform.LinuxPlayer,
 		//     RuntimePlatform.OSXEditor,
@@ -14710,21 +15435,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProductDescription_tAD0DC443EFB3E64FB864AC0EE
 	String_t* G_B3_1 = NULL;
 	String_t* G_B3_2 = NULL;
 	{
-		// string sku = skuDetails.Call<string>("getSku");
+		// var sku = skuDetails.Call<string>("getSku");
 		RuntimeObject* L_0 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1;
 		L_1 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
 		NullCheck(L_0);
 		String_t* L_2;
 		L_2 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_0, _stringLiteral1A569D2EAEB9C57AE0D180CFA9396A30C0267A44, L_1);
-		// string price = skuDetails.Call<string>("getPrice");
+		// var price = skuDetails.Call<string>("getPrice");
 		RuntimeObject* L_3 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4;
 		L_4 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
 		NullCheck(L_3);
 		String_t* L_5;
 		L_5 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_3, _stringLiteralBC1453603F9A6DE2102D6964D14E662C2E92AFB2, L_4);
-		// decimal priceAmount = Convert.ToDecimal(skuDetails.Call<long>("getPriceAmountMicros") > 0 ? skuDetails.Call<long>("getPriceAmountMicros") / 1000000.0 : 0);
+		// var priceAmount = Convert.ToDecimal(skuDetails.Call<long>("getPriceAmountMicros") > 0 ? skuDetails.Call<long>("getPriceAmountMicros") / 1000000.0 : 0);
 		RuntimeObject* L_6 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_7;
 		L_7 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14766,7 +15491,7 @@ IL_005a:
 		Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F L_12;
 		L_12 = Convert_ToDecimal_m0817E542B617E7D00740EBA8687EA52092CED34C(G_B3_0, NULL);
 		V_0 = L_12;
-		// string title = skuDetails.Call<string>("getTitle");
+		// var title = skuDetails.Call<string>("getTitle");
 		RuntimeObject* L_13 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_14;
 		L_14 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14774,7 +15499,7 @@ IL_005a:
 		String_t* L_15;
 		L_15 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_13, _stringLiteral92A0367A0299056CA05B86632AFA0D8FA9C6BF91, L_14);
 		V_1 = L_15;
-		// string description = skuDetails.Call<string>("getDescription");
+		// var description = skuDetails.Call<string>("getDescription");
 		RuntimeObject* L_16 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_17;
 		L_17 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14782,7 +15507,7 @@ IL_005a:
 		String_t* L_18;
 		L_18 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_16, _stringLiteralFFA59E17C5130FD6E7E1D5621F39533B1120F332, L_17);
 		V_2 = L_18;
-		// string priceCurrencyCode = skuDetails.Call<string>("getPriceCurrencyCode");
+		// var priceCurrencyCode = skuDetails.Call<string>("getPriceCurrencyCode");
 		RuntimeObject* L_19 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_20;
 		L_20 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14790,7 +15515,7 @@ IL_005a:
 		String_t* L_21;
 		L_21 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_19, _stringLiteral240A4EF75B062CE86A8F921B98896CED0E932E92, L_20);
 		V_3 = L_21;
-		// string originalJson = skuDetails.Call<string>("getOriginalJson");
+		// var originalJson = skuDetails.Call<string>("getOriginalJson");
 		RuntimeObject* L_22 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_23;
 		L_23 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14798,7 +15523,7 @@ IL_005a:
 		String_t* L_24;
 		L_24 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_22, _stringLiteral9303FDBBA3EA9F42A781A1107ABF8F1702BF684C, L_23);
 		V_4 = L_24;
-		// string subscriptionPeriod = skuDetails.Call<string>("getSubscriptionPeriod");
+		// var subscriptionPeriod = skuDetails.Call<string>("getSubscriptionPeriod");
 		RuntimeObject* L_25 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_26;
 		L_26 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14806,7 +15531,7 @@ IL_005a:
 		String_t* L_27;
 		L_27 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_25, _stringLiteralD28EF2C38A0A55BE3AB734DA03B84556FF609C0E, L_26);
 		V_5 = L_27;
-		// string freeTrialPeriod = skuDetails.Call<string>("getFreeTrialPeriod");
+		// var freeTrialPeriod = skuDetails.Call<string>("getFreeTrialPeriod");
 		RuntimeObject* L_28 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_29;
 		L_29 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14814,7 +15539,7 @@ IL_005a:
 		String_t* L_30;
 		L_30 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_28, _stringLiteralE29A7707123E34029B0EAF0AE3CDC0F7855489C0, L_29);
 		V_6 = L_30;
-		// string introductoryPrice = skuDetails.Call<string>("getIntroductoryPrice");
+		// var introductoryPrice = skuDetails.Call<string>("getIntroductoryPrice");
 		RuntimeObject* L_31 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_32;
 		L_32 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14822,7 +15547,7 @@ IL_005a:
 		String_t* L_33;
 		L_33 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_31, _stringLiteral10F8CF3A1DDE08A78622FCE6462E800EDD8AC9F4, L_32);
 		V_7 = L_33;
-		// string introductoryPricePeriod = skuDetails.Call<string>("getIntroductoryPricePeriod");
+		// var introductoryPricePeriod = skuDetails.Call<string>("getIntroductoryPricePeriod");
 		RuntimeObject* L_34 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_35;
 		L_35 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14830,7 +15555,7 @@ IL_005a:
 		String_t* L_36;
 		L_36 = GenericInterfaceFuncInvoker2< String_t*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisString_t_m1A02C80883EF91CD3314D0856FE96818794AA538_RuntimeMethod_var, L_34, _stringLiteralBB41F6AA393B13ACF328552548478F727D430959, L_35);
 		V_8 = L_36;
-		// int introductoryPriceCycles = skuDetails.Call<int>("getIntroductoryPriceCycles");
+		// var introductoryPriceCycles = skuDetails.Call<int>("getIntroductoryPriceCycles");
 		RuntimeObject* L_37 = ___skuDetails0;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_38;
 		L_38 = Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_inline(Array_Empty_TisRuntimeObject_m55011E8360A8199FB239A5787BA8631CDD6116FC_RuntimeMethod_var);
@@ -14838,7 +15563,7 @@ IL_005a:
 		int32_t L_39;
 		L_39 = GenericInterfaceFuncInvoker2< int32_t, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(IAndroidJavaObjectWrapper_Call_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m57AD306FDEC5BDE85E9715C1A0B7CFFFB7C00753_RuntimeMethod_var, L_37, _stringLiteral73576A423C5BB15856742F9FEDFF2FFF8BA5898F, L_38);
 		V_9 = L_39;
-		// GoogleProductMetadata productMetadata = new GoogleProductMetadata(
+		// var productMetadata = new GoogleProductMetadata(
 		//     price,
 		//     title,
 		//     description,
@@ -14884,7 +15609,7 @@ IL_005a:
 		NullCheck(L_55);
 		GoogleProductMetadata_set_introductoryPriceCycles_m5D7A148FCFC8C13188F970F2AB846033CD30EE64_inline(L_55, L_56, NULL);
 		V_10 = L_55;
-		// ProductDescription product = new ProductDescription(
+		// var product = new ProductDescription(
 		//     sku,
 		//     productMetadata,
 		//     "",
@@ -15205,7 +15930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleBillingClient__ctor_m9079FA3D79168
 		RuntimeObject* L_0 = ___util1;
 		__this->___m_Util_10 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Util_10), (void*)L_0);
-		// AndroidJavaObject builder = GetBillingClientClass().CallStatic<AndroidJavaObject>("newBuilder", UnityActivity.GetCurrentActivity());
+		// var builder = GetBillingClientClass().CallStatic<AndroidJavaObject>("newBuilder", UnityActivity.GetCurrentActivity());
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_1;
 		L_1 = GoogleBillingClient_GetBillingClientClass_m3314875407E7A37F79B8E8B0F8A1DDE5A54626BF(NULL);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
@@ -15545,7 +16270,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
 	{
-		// AndroidJavaObject billingFlowParams = GetBillingFlowParamClass().CallStatic<AndroidJavaObject>("newBuilder");
+		// var billingFlowParams = GetBillingFlowParamClass().CallStatic<AndroidJavaObject>("newBuilder");
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_0;
 		L_0 = GoogleBillingClient_GetBillingFlowParamClass_m9E4AC4509CB88E51F239C3A0FE5FF48A7C79F622(NULL);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1;
@@ -15962,7 +16687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// AndroidJavaObject priceChangeFlowParams = GetPriceChangeFlowParamClass().CallStatic<AndroidJavaObject>("newBuilder");
+		// var priceChangeFlowParams = GetPriceChangeFlowParamClass().CallStatic<AndroidJavaObject>("newBuilder");
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_0;
 		L_0 = GoogleBillingClient_GetPriceChangeFlowParamClass_mDA5B4CBE70F96DCA298B2F063C11CDD3C4E34915(NULL);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1;
@@ -16696,13 +17421,37 @@ IL_002a:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ProductCatalog_Initialize_m25213AB41747E2AD217787E3890D861049F06333_inline (RuntimeObject* ___productCatalogImpl0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// instance = productCatalogImpl;
+		RuntimeObject* L_0 = ___productCatalogImpl0;
+		((ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_StaticFields*)il2cpp_codegen_static_fields_for(ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var))->___instance_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_StaticFields*)il2cpp_codegen_static_fields_for(ProductCatalog_t6F6B11865D55D089683F954BB3B223C00B33F8E1_il2cpp_TypeInfo_var))->___instance_0), (void*)L_0);
+		// }
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____stringLength_4;
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_util_m47ACAB6E5D28D0FF96E2E67F76F2BE69CD8F047C_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, RuntimeObject* ___value0, const RuntimeMethod* method) 
 {
 	{
 		// internal IUtil util { get; private set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CutilU3Ek__BackingField_7 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CutilU3Ek__BackingField_7), (void*)L_0);
+		__this->___U3CutilU3Ek__BackingField_6 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CutilU3Ek__BackingField_6), (void*)L_0);
 		return;
 	}
 }
@@ -16711,8 +17460,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set
 	{
 		// internal ILogger logger { get; private set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CloggerU3Ek__BackingField_8 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CloggerU3Ek__BackingField_8), (void*)L_0);
+		__this->___U3CloggerU3Ek__BackingField_7 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CloggerU3Ek__BackingField_7), (void*)L_0);
 		return;
 	}
 }
@@ -16734,13 +17483,22 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_appStore_m8D0ED9CCFF69A230E54A2F29ACB91EE5DDB84271_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, int32_t ___value0, const RuntimeMethod* method) 
+{
+	{
+		// public AppStore appStore { get; private set; }
+		int32_t L_0 = ___value0;
+		__this->___U3CappStoreU3Ek__BackingField_12 = L_0;
+		return;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set_telemetryDiagnosticsInstanceWrapper_m97A16E0C47FF1CBDB6BB7661AB681BBF6E62B73E_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, RuntimeObject* ___value0, const RuntimeMethod* method) 
 {
 	{
 		// internal ITelemetryDiagnosticsInstanceWrapper telemetryDiagnosticsInstanceWrapper { get; set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_11 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_11), (void*)L_0);
+		__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_10 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_10), (void*)L_0);
 		return;
 	}
 }
@@ -16749,8 +17507,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set
 	{
 		// internal ITelemetryMetricsInstanceWrapper telemetryMetricsInstanceWrapper { get; set; }
 		RuntimeObject* L_0 = ___value0;
-		__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_10 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_10), (void*)L_0);
+		__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_9 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_9), (void*)L_0);
 		return;
 	}
 }
@@ -16780,7 +17538,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StoreInstance_tE334F08374C14889F3
 {
 	{
 		// internal StoreInstance storeInstance { get; private set; }
-		StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* L_0 = __this->___U3CstoreInstanceU3Ek__BackingField_9;
+		StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* L_0 = __this->___U3CstoreInstanceU3Ek__BackingField_8;
 		return L_0;
 	}
 }
@@ -16789,8 +17547,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StandardPurchasingModule_set
 	{
 		// internal StoreInstance storeInstance { get; private set; }
 		StoreInstance_tE334F08374C14889F3118AFD0E1F280950C138D6* L_0 = ___value0;
-		__this->___U3CstoreInstanceU3Ek__BackingField_9 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstoreInstanceU3Ek__BackingField_9), (void*)L_0);
+		__this->___U3CstoreInstanceU3Ek__BackingField_8 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstoreInstanceU3Ek__BackingField_8), (void*)L_0);
 		return;
 	}
 }
@@ -16814,7 +17572,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasing
 {
 	{
 		// internal IUtil util { get; private set; }
-		RuntimeObject* L_0 = __this->___U3CutilU3Ek__BackingField_7;
+		RuntimeObject* L_0 = __this->___U3CutilU3Ek__BackingField_6;
 		return L_0;
 	}
 }
@@ -16826,11 +17584,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool StandardPurchasingModule_get
 		return L_0;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t StandardPurchasingModule_get_appStore_m19E96FCA4517781E9166DAA7E3413D7B0D61EE74_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, const RuntimeMethod* method) 
+{
+	{
+		// public AppStore appStore { get; private set; }
+		int32_t L_0 = __this->___U3CappStoreU3Ek__BackingField_12;
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasingModule_get_telemetryMetricsInstanceWrapper_mF393B4FAA53F486752C053600DC1218679486040_inline (StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* __this, const RuntimeMethod* method) 
 {
 	{
 		// internal ITelemetryMetricsInstanceWrapper telemetryMetricsInstanceWrapper { get; set; }
-		RuntimeObject* L_0 = __this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_10;
+		RuntimeObject* L_0 = __this->___U3CtelemetryMetricsInstanceWrapperU3Ek__BackingField_9;
 		return L_0;
 	}
 }
@@ -16838,7 +17604,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasing
 {
 	{
 		// internal ITelemetryDiagnosticsInstanceWrapper telemetryDiagnosticsInstanceWrapper { get; set; }
-		RuntimeObject* L_0 = __this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_11;
+		RuntimeObject* L_0 = __this->___U3CtelemetryDiagnosticsInstanceWrapperU3Ek__BackingField_10;
 		return L_0;
 	}
 }
@@ -16846,7 +17612,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* StandardPurchasing
 {
 	{
 		// internal ILogger logger { get; private set; }
-		RuntimeObject* L_0 = __this->___U3CloggerU3Ek__BackingField_8;
+		RuntimeObject* L_0 = __this->___U3CloggerU3Ek__BackingField_7;
 		return L_0;
 	}
 }
@@ -16866,8 +17632,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UDPImpl_SetNativeStore_mE6BF
 	{
 		// m_Bindings = nativeUdpStore;
 		RuntimeObject* L_0 = ___nativeUdpStore0;
-		__this->___m_Bindings_10 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Bindings_10), (void*)L_0);
+		__this->___m_Bindings_11 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Bindings_11), (void*)L_0);
 		// }
 		return;
 	}
@@ -16875,7 +17641,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UDPImpl_SetNativeStore_mE6BF
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JSONStore_SetNativeStore_mA57807DA54ADEB75FC4CFD90C238E6E0D20095EE_inline (JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696* __this, RuntimeObject* ___native0, const RuntimeMethod* method) 
 {
 	{
-		// this.m_Store = native;
+		// m_Store = native;
 		RuntimeObject* L_0 = ___native0;
 		__this->___m_Store_1 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Store_1), (void*)L_0);
@@ -16886,7 +17652,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JSONStore_SetNativeStore_mA5
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void WinRTStore_SetWindowsIAP_m072A6254B880720C0E1D57142DAAE0C81A17C76A_inline (WinRTStore_t48E00F03328D89136362A032D73E709EF91A3777* __this, RuntimeObject* ___iap0, const RuntimeMethod* method) 
 {
 	{
-		// this.win8 = iap;
+		// win8 = iap;
 		RuntimeObject* L_0 = ___iap0;
 		__this->___win8_0 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___win8_0), (void*)L_0);
@@ -16995,13 +17761,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AppleInAppPurchaseReceipt
 	{
 		// public int isIntroductoryPricePeriod { get; internal set; }
 		int32_t L_0 = __this->___U3CisIntroductoryPricePeriodU3Ek__BackingField_10;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
-{
-	{
-		int32_t L_0 = __this->____stringLength_4;
 		return L_0;
 	}
 }
@@ -17209,11 +17968,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GooglePurchase_get_purcha
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_m7BFCE0BBCF67689D263059B56A8D79161B698587_gshared_inline (Action_2_t156C43F079E7E68155FCDCD12DC77DD11AEF7E3C* __this, RuntimeObject* ___arg10, RuntimeObject* ___arg21, const RuntimeMethod* method) 
-{
-	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
-	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___arg10, ___arg21, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -17251,6 +18005,18 @@ IL_0034:
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = (RuntimeObject*)__this->____current_3;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_m7BFCE0BBCF67689D263059B56A8D79161B698587_gshared_inline (Action_2_t156C43F079E7E68155FCDCD12DC77DD11AEF7E3C* __this, RuntimeObject* ___arg10, RuntimeObject* ___arg21, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___arg10, ___arg21, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17262,13 +18028,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mF2422B2DD29
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___obj0, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
-{
-	{
-		RuntimeObject* L_0 = (RuntimeObject*)__this->____current_3;
-		return L_0;
-	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) 
 {

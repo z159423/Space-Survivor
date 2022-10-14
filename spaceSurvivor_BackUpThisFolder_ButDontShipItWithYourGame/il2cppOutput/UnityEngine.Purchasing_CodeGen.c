@@ -212,377 +212,387 @@ extern void ProductCollection_AddProducts_m7F6C13CEB5F1B743CE4524E9878A47F9B12F2
 extern void ProductCollection_get_set_m5F30331F9C5AF536F4ED8B193D7B1022DDEDD7BE (void);
 // 0x00000070 UnityEngine.Purchasing.Product[] UnityEngine.Purchasing.ProductCollection::get_all()
 extern void ProductCollection_get_all_m37D0E42451E883AAD88D44E70F5B2D5E56763ED7 (void);
-// 0x00000071 UnityEngine.Purchasing.Product UnityEngine.Purchasing.ProductCollection::WithID(System.String)
+// 0x00000071 System.Void UnityEngine.Purchasing.ProductCollection::set_all(UnityEngine.Purchasing.Product[])
+extern void ProductCollection_set_all_m6444F761FD455701461B12786555A42441304D58 (void);
+// 0x00000072 UnityEngine.Purchasing.Product UnityEngine.Purchasing.ProductCollection::WithID(System.String)
 extern void ProductCollection_WithID_m823B1BBFE1B1A91B7AA2E2BDD821F0D24F0C5543 (void);
-// 0x00000072 UnityEngine.Purchasing.Product UnityEngine.Purchasing.ProductCollection::WithStoreSpecificID(System.String)
+// 0x00000073 UnityEngine.Purchasing.Product UnityEngine.Purchasing.ProductCollection::WithStoreSpecificID(System.String)
 extern void ProductCollection_WithStoreSpecificID_mD2C0170E4A8F41D2F3E96163B46009A676B9E830 (void);
-// 0x00000073 System.Void UnityEngine.Purchasing.ProductCollection/<>c::.cctor()
+// 0x00000074 System.Void UnityEngine.Purchasing.ProductCollection/<>c::.cctor()
 extern void U3CU3Ec__cctor_m46883A38CE1604503FA2AE96355D825DC78BB12E (void);
-// 0x00000074 System.Void UnityEngine.Purchasing.ProductCollection/<>c::.ctor()
+// 0x00000075 System.Void UnityEngine.Purchasing.ProductCollection/<>c::.ctor()
 extern void U3CU3Ec__ctor_m0909335C607F7D3D46285097177F2DFA466A7503 (void);
-// 0x00000075 System.String UnityEngine.Purchasing.ProductCollection/<>c::<AddProducts>b__5_0(UnityEngine.Purchasing.Product)
-extern void U3CU3Ec_U3CAddProductsU3Eb__5_0_m449C6AEE054BC2B2ED35D1AA5FD871B0CEC0FB6B (void);
-// 0x00000076 System.String UnityEngine.Purchasing.ProductCollection/<>c::<AddProducts>b__5_1(UnityEngine.Purchasing.Product)
-extern void U3CU3Ec_U3CAddProductsU3Eb__5_1_m84302261302220B01F5437AB80F9FFCA847657CF (void);
-// 0x00000077 System.Void UnityEngine.Purchasing.ProductDefinition::.ctor()
+// 0x00000076 System.String UnityEngine.Purchasing.ProductCollection/<>c::<AddProducts>b__3_0(UnityEngine.Purchasing.Product)
+extern void U3CU3Ec_U3CAddProductsU3Eb__3_0_m29013D41A6F1B82E0CC919E01F64B77D744F4862 (void);
+// 0x00000077 System.String UnityEngine.Purchasing.ProductCollection/<>c::<AddProducts>b__3_1(UnityEngine.Purchasing.Product)
+extern void U3CU3Ec_U3CAddProductsU3Eb__3_1_m797E30DE7D9504B49578F66020B87EF8248F9E52 (void);
+// 0x00000078 System.Void UnityEngine.Purchasing.ProductDefinition::.ctor()
 extern void ProductDefinition__ctor_m27D3DFF4B34CE17FF3354CFA89379012213CA64B (void);
-// 0x00000078 System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType)
+// 0x00000079 System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType)
 extern void ProductDefinition__ctor_m11578282A2F709573A7BE6A5790BA2CF5969B792 (void);
-// 0x00000079 System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType,System.Boolean)
+// 0x0000007A System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType,System.Boolean)
 extern void ProductDefinition__ctor_mE7C536B6F4985FACFD05B872D0B609F4427F359C (void);
-// 0x0000007A System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType,System.Boolean,UnityEngine.Purchasing.PayoutDefinition)
+// 0x0000007B System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType,System.Boolean,UnityEngine.Purchasing.PayoutDefinition)
 extern void ProductDefinition__ctor_m9386926115DEEC6B27AB741430C7A0C34DBC32BB (void);
-// 0x0000007B System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType,System.Boolean,System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.PayoutDefinition>)
+// 0x0000007C System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,System.String,UnityEngine.Purchasing.ProductType,System.Boolean,System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.PayoutDefinition>)
 extern void ProductDefinition__ctor_m79F115614454B4DAAB2662D5E9D1976B92B427E7 (void);
-// 0x0000007C System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,UnityEngine.Purchasing.ProductType)
+// 0x0000007D System.Void UnityEngine.Purchasing.ProductDefinition::.ctor(System.String,UnityEngine.Purchasing.ProductType)
 extern void ProductDefinition__ctor_m4691927A374B5BD09A7A0BB4A7204873AEF8A1D0 (void);
-// 0x0000007D System.String UnityEngine.Purchasing.ProductDefinition::get_id()
+// 0x0000007E System.String UnityEngine.Purchasing.ProductDefinition::get_id()
 extern void ProductDefinition_get_id_mAC2DA1CF1E54C939E2099E9045B09CBAC6BAB99B (void);
-// 0x0000007E System.Void UnityEngine.Purchasing.ProductDefinition::set_id(System.String)
+// 0x0000007F System.Void UnityEngine.Purchasing.ProductDefinition::set_id(System.String)
 extern void ProductDefinition_set_id_m0BCFB65A2FE120D34D84C0499DF7343EB914C076 (void);
-// 0x0000007F System.String UnityEngine.Purchasing.ProductDefinition::get_storeSpecificId()
+// 0x00000080 System.String UnityEngine.Purchasing.ProductDefinition::get_storeSpecificId()
 extern void ProductDefinition_get_storeSpecificId_mEB2CB96C5CD753F11A4DF85F3C7B930110962E36 (void);
-// 0x00000080 System.Void UnityEngine.Purchasing.ProductDefinition::set_storeSpecificId(System.String)
+// 0x00000081 System.Void UnityEngine.Purchasing.ProductDefinition::set_storeSpecificId(System.String)
 extern void ProductDefinition_set_storeSpecificId_m6EE4EEB44943F320E2FBFE7E245E54BEC6AE4833 (void);
-// 0x00000081 UnityEngine.Purchasing.ProductType UnityEngine.Purchasing.ProductDefinition::get_type()
+// 0x00000082 UnityEngine.Purchasing.ProductType UnityEngine.Purchasing.ProductDefinition::get_type()
 extern void ProductDefinition_get_type_m66F4D4D03E3A6B95FD6F312EBACE07FA1B8E18E7 (void);
-// 0x00000082 System.Void UnityEngine.Purchasing.ProductDefinition::set_type(UnityEngine.Purchasing.ProductType)
+// 0x00000083 System.Void UnityEngine.Purchasing.ProductDefinition::set_type(UnityEngine.Purchasing.ProductType)
 extern void ProductDefinition_set_type_m625D8C9A03FB86B278F09CD89F38FB59317BCEDD (void);
-// 0x00000083 System.Boolean UnityEngine.Purchasing.ProductDefinition::get_enabled()
+// 0x00000084 System.Boolean UnityEngine.Purchasing.ProductDefinition::get_enabled()
 extern void ProductDefinition_get_enabled_mCD39A6B3B60AB571102878818EB9B1087AE90EEB (void);
-// 0x00000084 System.Void UnityEngine.Purchasing.ProductDefinition::set_enabled(System.Boolean)
+// 0x00000085 System.Void UnityEngine.Purchasing.ProductDefinition::set_enabled(System.Boolean)
 extern void ProductDefinition_set_enabled_m6A46D2C099819122BA0576167BAF4F06D490E3D4 (void);
-// 0x00000085 System.Boolean UnityEngine.Purchasing.ProductDefinition::Equals(System.Object)
+// 0x00000086 System.Boolean UnityEngine.Purchasing.ProductDefinition::Equals(System.Object)
 extern void ProductDefinition_Equals_mBD26EEFE03AE48087AF391045CC209057066182C (void);
-// 0x00000086 System.Int32 UnityEngine.Purchasing.ProductDefinition::GetHashCode()
+// 0x00000087 System.Int32 UnityEngine.Purchasing.ProductDefinition::GetHashCode()
 extern void ProductDefinition_GetHashCode_mED5C0080546594104C5090C4B0077CB03ABBE0F5 (void);
-// 0x00000087 System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.PayoutDefinition> UnityEngine.Purchasing.ProductDefinition::get_payouts()
+// 0x00000088 System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.PayoutDefinition> UnityEngine.Purchasing.ProductDefinition::get_payouts()
 extern void ProductDefinition_get_payouts_m8DB79B43B18FF1AB41BEEAB7F393596AC1733AB7 (void);
-// 0x00000088 UnityEngine.Purchasing.PayoutDefinition UnityEngine.Purchasing.ProductDefinition::get_payout()
+// 0x00000089 UnityEngine.Purchasing.PayoutDefinition UnityEngine.Purchasing.ProductDefinition::get_payout()
 extern void ProductDefinition_get_payout_m408A5D78A3132B65F873155775D19989E356A468 (void);
-// 0x00000089 System.Void UnityEngine.Purchasing.ProductDefinition::SetPayouts(System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.PayoutDefinition>)
+// 0x0000008A System.Void UnityEngine.Purchasing.ProductDefinition::SetPayouts(System.Collections.Generic.IEnumerable`1<UnityEngine.Purchasing.PayoutDefinition>)
 extern void ProductDefinition_SetPayouts_m1F07A4AEC2E899444B24A07A7B0524F3843A10C5 (void);
-// 0x0000008A System.Void UnityEngine.Purchasing.ProductMetadata::.ctor(System.String,System.String,System.String,System.String,System.Decimal)
+// 0x0000008B System.Void UnityEngine.Purchasing.ProductMetadata::.ctor(System.String,System.String,System.String,System.String,System.Decimal)
 extern void ProductMetadata__ctor_m602D2E51F4C49CD17EDB6F57374A6D4968E606F5 (void);
-// 0x0000008B System.Void UnityEngine.Purchasing.ProductMetadata::.ctor()
+// 0x0000008C System.Void UnityEngine.Purchasing.ProductMetadata::.ctor(UnityEngine.Purchasing.ProductMetadata)
+extern void ProductMetadata__ctor_m3701E6FF0C87A13264E963FFCE2EA1AF0D0837C6 (void);
+// 0x0000008D System.Void UnityEngine.Purchasing.ProductMetadata::.ctor()
 extern void ProductMetadata__ctor_m4D1901A5E816329D3702B6833F1882DA67647686 (void);
-// 0x0000008C System.String UnityEngine.Purchasing.ProductMetadata::get_localizedPriceString()
+// 0x0000008E System.String UnityEngine.Purchasing.ProductMetadata::get_localizedPriceString()
 extern void ProductMetadata_get_localizedPriceString_m83C55E96B4BC39284D88F9BAAC64E60DFF7D408F (void);
-// 0x0000008D System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedPriceString(System.String)
+// 0x0000008F System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedPriceString(System.String)
 extern void ProductMetadata_set_localizedPriceString_m26F6D7C900296E0BF10458BE90D1F866AAF74F94 (void);
-// 0x0000008E System.String UnityEngine.Purchasing.ProductMetadata::get_localizedTitle()
+// 0x00000090 System.String UnityEngine.Purchasing.ProductMetadata::get_localizedTitle()
 extern void ProductMetadata_get_localizedTitle_mBD34BFB3B5913154B4ACBC630A4DF8A664C9E258 (void);
-// 0x0000008F System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedTitle(System.String)
+// 0x00000091 System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedTitle(System.String)
 extern void ProductMetadata_set_localizedTitle_m818CA419C28B75AECD1FCA7F69F94A126BBBE424 (void);
-// 0x00000090 System.String UnityEngine.Purchasing.ProductMetadata::get_localizedDescription()
+// 0x00000092 System.String UnityEngine.Purchasing.ProductMetadata::get_localizedDescription()
 extern void ProductMetadata_get_localizedDescription_mF1507A605C357667ED05FAC2F486D527CA4E2887 (void);
-// 0x00000091 System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedDescription(System.String)
+// 0x00000093 System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedDescription(System.String)
 extern void ProductMetadata_set_localizedDescription_mB97AD70090BD48FA8AD0D9777E7AD45C55CEF110 (void);
-// 0x00000092 System.String UnityEngine.Purchasing.ProductMetadata::get_isoCurrencyCode()
+// 0x00000094 System.String UnityEngine.Purchasing.ProductMetadata::get_isoCurrencyCode()
 extern void ProductMetadata_get_isoCurrencyCode_mB14AD35EB399B34140F8497A96B678F719048FCC (void);
-// 0x00000093 System.Void UnityEngine.Purchasing.ProductMetadata::set_isoCurrencyCode(System.String)
+// 0x00000095 System.Void UnityEngine.Purchasing.ProductMetadata::set_isoCurrencyCode(System.String)
 extern void ProductMetadata_set_isoCurrencyCode_m0443604C3F39BDF6CC4D1605667AC5EA20B6FC23 (void);
-// 0x00000094 System.Decimal UnityEngine.Purchasing.ProductMetadata::get_localizedPrice()
+// 0x00000096 System.Decimal UnityEngine.Purchasing.ProductMetadata::get_localizedPrice()
 extern void ProductMetadata_get_localizedPrice_m265DB58694A71F4608AE2A376B40037D75CB69B9 (void);
-// 0x00000095 System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedPrice(System.Decimal)
+// 0x00000097 System.Void UnityEngine.Purchasing.ProductMetadata::set_localizedPrice(System.Decimal)
 extern void ProductMetadata_set_localizedPrice_m2B056F63E433DFE43E00E1ACC113C2A9ABF357E5 (void);
-// 0x00000096 System.Void UnityEngine.Purchasing.PurchaseEventArgs::.ctor(UnityEngine.Purchasing.Product)
+// 0x00000098 System.Void UnityEngine.Purchasing.PurchaseEventArgs::.ctor(UnityEngine.Purchasing.Product)
 extern void PurchaseEventArgs__ctor_m23F65E3572BA3903FC0362B332D12E4F83715167 (void);
-// 0x00000097 UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchaseEventArgs::get_purchasedProduct()
+// 0x00000099 UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchaseEventArgs::get_purchasedProduct()
 extern void PurchaseEventArgs_get_purchasedProduct_m0CBC223B555D7D331959FF53E7EDCEBE5E304B56 (void);
-// 0x00000098 System.Void UnityEngine.Purchasing.PurchaseEventArgs::set_purchasedProduct(UnityEngine.Purchasing.Product)
+// 0x0000009A System.Void UnityEngine.Purchasing.PurchaseEventArgs::set_purchasedProduct(UnityEngine.Purchasing.Product)
 extern void PurchaseEventArgs_set_purchasedProduct_m341BFA6C75A1DE33A7F1B2B2FCA8579F670B1BB5 (void);
-// 0x00000099 System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::.ctor(UnityEngine.Purchasing.Product,UnityEngine.Purchasing.PurchaseFailureReason,System.String)
+// 0x0000009B System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::.ctor(UnityEngine.Purchasing.Product,UnityEngine.Purchasing.PurchaseFailureReason,System.String)
 extern void PurchaseFailedEventArgs__ctor_m5AC7F1B6997ECA2A043B1C461C7A1D96B7AEC4D8 (void);
-// 0x0000009A UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchaseFailedEventArgs::get_purchasedProduct()
+// 0x0000009C UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchaseFailedEventArgs::get_purchasedProduct()
 extern void PurchaseFailedEventArgs_get_purchasedProduct_m3214F99E07C67771D1A1692645716ABFB448B021 (void);
-// 0x0000009B System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::set_purchasedProduct(UnityEngine.Purchasing.Product)
+// 0x0000009D System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::set_purchasedProduct(UnityEngine.Purchasing.Product)
 extern void PurchaseFailedEventArgs_set_purchasedProduct_mD8D4509A71790CA18C1F725E46FC2E1545C4C5E8 (void);
-// 0x0000009C UnityEngine.Purchasing.PurchaseFailureReason UnityEngine.Purchasing.PurchaseFailedEventArgs::get_reason()
+// 0x0000009E UnityEngine.Purchasing.PurchaseFailureReason UnityEngine.Purchasing.PurchaseFailedEventArgs::get_reason()
 extern void PurchaseFailedEventArgs_get_reason_m10603492C96A24512746AF962AFB4DFEE42E59A1 (void);
-// 0x0000009D System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::set_reason(UnityEngine.Purchasing.PurchaseFailureReason)
+// 0x0000009F System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::set_reason(UnityEngine.Purchasing.PurchaseFailureReason)
 extern void PurchaseFailedEventArgs_set_reason_m04963B2107F112D6F573EBF54A6EA61C002EE08A (void);
-// 0x0000009E System.String UnityEngine.Purchasing.PurchaseFailedEventArgs::get_message()
+// 0x000000A0 System.String UnityEngine.Purchasing.PurchaseFailedEventArgs::get_message()
 extern void PurchaseFailedEventArgs_get_message_m3A62AF2B88EDABE5DC25C059454D6E4404233613 (void);
-// 0x0000009F System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::set_message(System.String)
+// 0x000000A1 System.Void UnityEngine.Purchasing.PurchaseFailedEventArgs::set_message(System.String)
 extern void PurchaseFailedEventArgs_set_message_m446F027B97630930B2804855A32195BD84E4DAEE (void);
-// 0x000000A0 System.Void UnityEngine.Purchasing.PurchasingFactory::.ctor(UnityEngine.Purchasing.Extension.IPurchasingModule,UnityEngine.Purchasing.Extension.IPurchasingModule[])
+// 0x000000A2 System.Void UnityEngine.Purchasing.PurchasingFactory::.ctor(UnityEngine.Purchasing.Extension.IPurchasingModule,UnityEngine.Purchasing.Extension.IPurchasingModule[])
 extern void PurchasingFactory__ctor_m1459FC5C1EB02676DF5DDBDE5D8CBF12ABBFB530 (void);
-// 0x000000A1 System.String UnityEngine.Purchasing.PurchasingFactory::get_storeName()
+// 0x000000A3 System.String UnityEngine.Purchasing.PurchasingFactory::get_storeName()
 extern void PurchasingFactory_get_storeName_m90F704A0005078440D884F0179E2DD69CD845532 (void);
-// 0x000000A2 System.Void UnityEngine.Purchasing.PurchasingFactory::set_storeName(System.String)
+// 0x000000A4 System.Void UnityEngine.Purchasing.PurchasingFactory::set_storeName(System.String)
 extern void PurchasingFactory_set_storeName_mA1F9148E935D0928CB82A00DAD44071AECB9C0D1 (void);
-// 0x000000A3 UnityEngine.Purchasing.Extension.IStore UnityEngine.Purchasing.PurchasingFactory::get_service()
+// 0x000000A5 UnityEngine.Purchasing.Extension.IStore UnityEngine.Purchasing.PurchasingFactory::get_service()
 extern void PurchasingFactory_get_service_mF812B5981F40344A38958D66863F100BA9CEFAFA (void);
-// 0x000000A4 System.Void UnityEngine.Purchasing.PurchasingFactory::set_service(UnityEngine.Purchasing.Extension.IStore)
+// 0x000000A6 System.Void UnityEngine.Purchasing.PurchasingFactory::set_service(UnityEngine.Purchasing.Extension.IStore)
 extern void PurchasingFactory_set_service_mA5DCE97087B8F6E93980B3F5A620FA3251322B85 (void);
-// 0x000000A5 System.Void UnityEngine.Purchasing.PurchasingFactory::RegisterStore(System.String,UnityEngine.Purchasing.Extension.IStore)
+// 0x000000A7 System.Void UnityEngine.Purchasing.PurchasingFactory::RegisterStore(System.String,UnityEngine.Purchasing.Extension.IStore)
 extern void PurchasingFactory_RegisterStore_mFA05E65120EA84AF5D65B912F30EDB0BAF190B96 (void);
-// 0x000000A6 System.Void UnityEngine.Purchasing.PurchasingFactory::RegisterExtension(T)
-// 0x000000A7 System.Void UnityEngine.Purchasing.PurchasingFactory::RegisterConfiguration(T)
-// 0x000000A8 T UnityEngine.Purchasing.PurchasingFactory::GetConfig()
-// 0x000000A9 T UnityEngine.Purchasing.PurchasingFactory::GetExtension()
-// 0x000000AA System.Void UnityEngine.Purchasing.PurchasingFactory::SetCatalogProvider(UnityEngine.Purchasing.Extension.ICatalogProvider)
+// 0x000000A8 System.Void UnityEngine.Purchasing.PurchasingFactory::RegisterExtension(T)
+// 0x000000A9 System.Void UnityEngine.Purchasing.PurchasingFactory::RegisterConfiguration(T)
+// 0x000000AA T UnityEngine.Purchasing.PurchasingFactory::GetConfig()
+// 0x000000AB T UnityEngine.Purchasing.PurchasingFactory::GetExtension()
+// 0x000000AC System.Void UnityEngine.Purchasing.PurchasingFactory::SetCatalogProvider(UnityEngine.Purchasing.Extension.ICatalogProvider)
 extern void PurchasingFactory_SetCatalogProvider_mF2A3349C09C7E1979163DB6F6A5008BA7537B024 (void);
-// 0x000000AB System.Void UnityEngine.Purchasing.PurchasingFactory::SetCatalogProviderFunction(System.Action`1<System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>>)
+// 0x000000AD System.Void UnityEngine.Purchasing.PurchasingFactory::SetCatalogProviderFunction(System.Action`1<System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>>)
 extern void PurchasingFactory_SetCatalogProviderFunction_m016619C10241A678931DB122D78005F9F877C4CE (void);
-// 0x000000AC UnityEngine.Purchasing.Extension.ICatalogProvider UnityEngine.Purchasing.PurchasingFactory::GetCatalogProvider()
+// 0x000000AE UnityEngine.Purchasing.Extension.ICatalogProvider UnityEngine.Purchasing.PurchasingFactory::GetCatalogProvider()
 extern void PurchasingFactory_GetCatalogProvider_mF6F64C5D260A60653D171947B8DB6A7F4E922F56 (void);
-// 0x000000AD System.Boolean UnityEngine.Purchasing.PurchasingManager::get_useTransactionLog()
+// 0x000000AF System.Boolean UnityEngine.Purchasing.PurchasingManager::get_useTransactionLog()
 extern void PurchasingManager_get_useTransactionLog_m2788EF6477AD0E5BA9A982D0774483E1DD8E88F1 (void);
-// 0x000000AE System.Void UnityEngine.Purchasing.PurchasingManager::set_useTransactionLog(System.Boolean)
+// 0x000000B0 System.Void UnityEngine.Purchasing.PurchasingManager::set_useTransactionLog(System.Boolean)
 extern void PurchasingManager_set_useTransactionLog_m7506E4D5162E0DC5017DD5EF787B558C26DE3B32 (void);
-// 0x000000AF System.Void UnityEngine.Purchasing.PurchasingManager::.ctor(UnityEngine.Purchasing.TransactionLog,UnityEngine.ILogger,UnityEngine.Purchasing.Extension.IStore,System.String,UnityEngine.Purchasing.IUnityServicesInitializationChecker)
+// 0x000000B1 System.Void UnityEngine.Purchasing.PurchasingManager::.ctor(UnityEngine.Purchasing.TransactionLog,UnityEngine.ILogger,UnityEngine.Purchasing.Extension.IStore,System.String,UnityEngine.Purchasing.IUnityServicesInitializationChecker)
 extern void PurchasingManager__ctor_mCB0D60087EAFAB1B80E4429384FC486B0D6C84DD (void);
-// 0x000000B0 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(UnityEngine.Purchasing.Product)
+// 0x000000B2 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(UnityEngine.Purchasing.Product)
 extern void PurchasingManager_InitiatePurchase_m70C1EF24E7A657805043936BCB8A2E7665FEA01B (void);
-// 0x000000B1 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(System.String)
+// 0x000000B3 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(System.String)
 extern void PurchasingManager_InitiatePurchase_m9C2FD1C5C88780782BB25F825AE5BE71DBD47FF5 (void);
-// 0x000000B2 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(UnityEngine.Purchasing.Product,System.String)
+// 0x000000B4 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(UnityEngine.Purchasing.Product,System.String)
 extern void PurchasingManager_InitiatePurchase_m2A5BE0E011F34DE8167E99BBFB91E39E2A3242A7 (void);
-// 0x000000B3 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(System.String,System.String)
+// 0x000000B5 System.Void UnityEngine.Purchasing.PurchasingManager::InitiatePurchase(System.String,System.String)
 extern void PurchasingManager_InitiatePurchase_m2795F5F044CED262CC3CE535DF3A98BDC0B759FF (void);
-// 0x000000B4 System.Void UnityEngine.Purchasing.PurchasingManager::ConfirmPendingPurchase(UnityEngine.Purchasing.Product)
+// 0x000000B6 System.Void UnityEngine.Purchasing.PurchasingManager::ConfirmPendingPurchase(UnityEngine.Purchasing.Product)
 extern void PurchasingManager_ConfirmPendingPurchase_m2165315C71C86149C51E5754EE535640CBD21165 (void);
-// 0x000000B5 UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.PurchasingManager::get_products()
+// 0x000000B7 UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.PurchasingManager::get_products()
 extern void PurchasingManager_get_products_m56CB926C1B7BB461DB73C6123AE9A8E75F0053FE (void);
-// 0x000000B6 System.Void UnityEngine.Purchasing.PurchasingManager::set_products(UnityEngine.Purchasing.ProductCollection)
+// 0x000000B8 System.Void UnityEngine.Purchasing.PurchasingManager::set_products(UnityEngine.Purchasing.ProductCollection)
 extern void PurchasingManager_set_products_m44F75BBAF71D24D159E8E6166E0B36B16A28AC43 (void);
-// 0x000000B7 System.Void UnityEngine.Purchasing.PurchasingManager::OnPurchaseSucceeded(System.String,System.String,System.String)
+// 0x000000B9 System.Void UnityEngine.Purchasing.PurchasingManager::OnPurchaseSucceeded(System.String,System.String,System.String)
 extern void PurchasingManager_OnPurchaseSucceeded_m280FF0BEF28B37D87FB7873031B4631488B4E2A7 (void);
-// 0x000000B8 System.Void UnityEngine.Purchasing.PurchasingManager::UpdateProductReceiptAndTrandsactionID(UnityEngine.Purchasing.Product,System.String,System.String)
-extern void PurchasingManager_UpdateProductReceiptAndTrandsactionID_m36538060E942911A6DFF8BAD10C5E5F61E8AD701 (void);
-// 0x000000B9 System.Void UnityEngine.Purchasing.PurchasingManager::OnAllPurchasesRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Product>)
+// 0x000000BA System.Void UnityEngine.Purchasing.PurchasingManager::UpdateProductReceiptAndTransactionID(UnityEngine.Purchasing.Product,System.String,System.String)
+extern void PurchasingManager_UpdateProductReceiptAndTransactionID_m3FB45103128E0A5F2363E61C31B9FEEAEF962A93 (void);
+// 0x000000BB System.Void UnityEngine.Purchasing.PurchasingManager::OnAllPurchasesRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Product>)
 extern void PurchasingManager_OnAllPurchasesRetrieved_m814DB0B13619C95080C9EF8505481C294FCE05D6 (void);
-// 0x000000BA System.Void UnityEngine.Purchasing.PurchasingManager::HandlePurchaseRetrieved(UnityEngine.Purchasing.Product,UnityEngine.Purchasing.Product)
+// 0x000000BC System.Void UnityEngine.Purchasing.PurchasingManager::OnEntitlementRevoked(UnityEngine.Purchasing.Product)
+extern void PurchasingManager_OnEntitlementRevoked_m23E614B87C1227C9E85643CEBEF34B3B4D3C16EF (void);
+// 0x000000BD System.Void UnityEngine.Purchasing.PurchasingManager::HandlePurchaseRetrieved(UnityEngine.Purchasing.Product,UnityEngine.Purchasing.Product)
 extern void PurchasingManager_HandlePurchaseRetrieved_mB895E6539F83AD64A48AB1F29655F360908C51BA (void);
-// 0x000000BB System.Void UnityEngine.Purchasing.PurchasingManager::ClearProductReceipt(UnityEngine.Purchasing.Product)
+// 0x000000BE System.Boolean UnityEngine.Purchasing.PurchasingManager::WasPurchaseAlreadyProcessed(System.String)
+extern void PurchasingManager_WasPurchaseAlreadyProcessed_mB62EF7DE3E4D0918FEA3E543077972BC0F6B2BBE (void);
+// 0x000000BF System.Void UnityEngine.Purchasing.PurchasingManager::ClearProductReceipt(UnityEngine.Purchasing.Product)
 extern void PurchasingManager_ClearProductReceipt_mFB1BBD8294D73A4CABD23DBE039276C3BE678304 (void);
-// 0x000000BC System.Void UnityEngine.Purchasing.PurchasingManager::OnSetupFailed(UnityEngine.Purchasing.InitializationFailureReason)
+// 0x000000C0 System.Void UnityEngine.Purchasing.PurchasingManager::OnSetupFailed(UnityEngine.Purchasing.InitializationFailureReason)
 extern void PurchasingManager_OnSetupFailed_m67E360EE84AC9A4F12DAD3F3B154176B8883E99B (void);
-// 0x000000BD System.Void UnityEngine.Purchasing.PurchasingManager::OnPurchaseFailed(UnityEngine.Purchasing.Extension.PurchaseFailureDescription)
+// 0x000000C1 System.Void UnityEngine.Purchasing.PurchasingManager::OnPurchaseFailed(UnityEngine.Purchasing.Extension.PurchaseFailureDescription)
 extern void PurchasingManager_OnPurchaseFailed_m3F246A54610EAE7AD0222C46A19E7CB47DAB42A8 (void);
-// 0x000000BE System.Void UnityEngine.Purchasing.PurchasingManager::OnProductsRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Extension.ProductDescription>)
+// 0x000000C2 System.Void UnityEngine.Purchasing.PurchasingManager::OnProductsRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Extension.ProductDescription>)
 extern void PurchasingManager_OnProductsRetrieved_m21B8E53F845A62F6D7AC8960B1846283E99D6BF8 (void);
-// 0x000000BF System.String UnityEngine.Purchasing.PurchasingManager::CreateUnifiedReceipt(System.String,System.String)
+// 0x000000C3 System.String UnityEngine.Purchasing.PurchasingManager::CreateUnifiedReceipt(System.String,System.String)
 extern void PurchasingManager_CreateUnifiedReceipt_m589FC4DFAEE334D049CCC5877BCE31F9597C19F1 (void);
-// 0x000000C0 System.Void UnityEngine.Purchasing.PurchasingManager::ProcessPurchaseOnStart()
+// 0x000000C4 System.Void UnityEngine.Purchasing.PurchasingManager::ProcessPurchaseOnStart()
 extern void PurchasingManager_ProcessPurchaseOnStart_m320FBE849060CC66940DD2DB3A886C1EC4716759 (void);
-// 0x000000C1 System.Void UnityEngine.Purchasing.PurchasingManager::FetchAdditionalProducts(System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>,System.Action,System.Action`1<UnityEngine.Purchasing.InitializationFailureReason>)
+// 0x000000C5 System.Void UnityEngine.Purchasing.PurchasingManager::FetchAdditionalProducts(System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>,System.Action,System.Action`1<UnityEngine.Purchasing.InitializationFailureReason>)
 extern void PurchasingManager_FetchAdditionalProducts_m41A2743805662C33D41CE0825E0C38FC4C5BDC9C (void);
-// 0x000000C2 System.Void UnityEngine.Purchasing.PurchasingManager::ProcessPurchaseIfNew(UnityEngine.Purchasing.Product)
+// 0x000000C6 System.Void UnityEngine.Purchasing.PurchasingManager::ProcessPurchaseIfNew(UnityEngine.Purchasing.Product)
 extern void PurchasingManager_ProcessPurchaseIfNew_m2D54C04E78727264E91828FF8CCE516670D122EE (void);
-// 0x000000C3 System.Void UnityEngine.Purchasing.PurchasingManager::CheckForInitialization()
+// 0x000000C7 System.Boolean UnityEngine.Purchasing.PurchasingManager::HasRecordedTransaction(System.String)
+extern void PurchasingManager_HasRecordedTransaction_m8C4360C486C8F52F1F880C6FC19FCA2DC6E1CAB5 (void);
+// 0x000000C8 System.Void UnityEngine.Purchasing.PurchasingManager::CheckForInitialization()
 extern void PurchasingManager_CheckForInitialization_m6144B75126F92494E3EBEC736763C4FC9D77773E (void);
-// 0x000000C4 System.Boolean UnityEngine.Purchasing.PurchasingManager::HasAvailableProductsToPurchase(System.Boolean)
+// 0x000000C9 System.Boolean UnityEngine.Purchasing.PurchasingManager::HasAvailableProductsToPurchase(System.Boolean)
 extern void PurchasingManager_HasAvailableProductsToPurchase_m67C7C445B0E25C36F4C5D719F1B0C600CC3B35F3 (void);
-// 0x000000C5 System.Void UnityEngine.Purchasing.PurchasingManager::Initialize(UnityEngine.Purchasing.IInternalStoreListener,System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>)
+// 0x000000CA System.Void UnityEngine.Purchasing.PurchasingManager::Initialize(UnityEngine.Purchasing.IInternalStoreListener,System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>)
 extern void PurchasingManager_Initialize_mA99E10460D4C1C2FCE0D30423BA3B26215702F19 (void);
-// 0x000000C6 System.Void UnityEngine.Purchasing.PurchasingManager/<>c__DisplayClass24_0::.ctor()
-extern void U3CU3Ec__DisplayClass24_0__ctor_mAB2D1E4C82C02FFC308DE24AF6E0C81D57A6BD71 (void);
-// 0x000000C7 System.Boolean UnityEngine.Purchasing.PurchasingManager/<>c__DisplayClass24_0::<OnAllPurchasesRetrieved>b__0(UnityEngine.Purchasing.Product)
-extern void U3CU3Ec__DisplayClass24_0_U3COnAllPurchasesRetrievedU3Eb__0_mDD0CFFB66941954151AD3FAF03147145D1E98DA4 (void);
-// 0x000000C8 System.Void UnityEngine.Purchasing.PurchasingManager/<>c::.cctor()
+// 0x000000CB System.Void UnityEngine.Purchasing.PurchasingManager/<>c__DisplayClass25_0::.ctor()
+extern void U3CU3Ec__DisplayClass25_0__ctor_m9765610E67C62110B501F365BC4ABD17AEE00CF6 (void);
+// 0x000000CC System.Boolean UnityEngine.Purchasing.PurchasingManager/<>c__DisplayClass25_0::<OnAllPurchasesRetrieved>b__0(UnityEngine.Purchasing.Product)
+extern void U3CU3Ec__DisplayClass25_0_U3COnAllPurchasesRetrievedU3Eb__0_m18639EB7C43A074319F8954204A61706D84BC4FE (void);
+// 0x000000CD System.Void UnityEngine.Purchasing.PurchasingManager/<>c::.cctor()
 extern void U3CU3Ec__cctor_mCFB3600DD71A472580500306B2BDF9EDB69B3B6F (void);
-// 0x000000C9 System.Void UnityEngine.Purchasing.PurchasingManager/<>c::.ctor()
+// 0x000000CE System.Void UnityEngine.Purchasing.PurchasingManager/<>c::.ctor()
 extern void U3CU3Ec__ctor_m58310A3BCE52DBB543D6ED6CDEF5BF0BE6B1400C (void);
-// 0x000000CA UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchasingManager/<>c::<FetchAdditionalProducts>b__32_0(UnityEngine.Purchasing.ProductDefinition)
-extern void U3CU3Ec_U3CFetchAdditionalProductsU3Eb__32_0_mA970846265ED5329CF4AC7D60577047D8218E338 (void);
-// 0x000000CB UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchasingManager/<>c::<Initialize>b__37_0(UnityEngine.Purchasing.ProductDefinition)
-extern void U3CU3Ec_U3CInitializeU3Eb__37_0_mB7FD45A4BCEA81A7BD0AF88608A0A296A41F9B74 (void);
-// 0x000000CC System.Void UnityEngine.Purchasing.SimpleCatalogProvider::.ctor(System.Action`1<System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>>)
+// 0x000000CF UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchasingManager/<>c::<FetchAdditionalProducts>b__35_0(UnityEngine.Purchasing.ProductDefinition)
+extern void U3CU3Ec_U3CFetchAdditionalProductsU3Eb__35_0_m7A3309B353F1D3F1E0F75AE382AFCE10423555A6 (void);
+// 0x000000D0 UnityEngine.Purchasing.Product UnityEngine.Purchasing.PurchasingManager/<>c::<Initialize>b__41_0(UnityEngine.Purchasing.ProductDefinition)
+extern void U3CU3Ec_U3CInitializeU3Eb__41_0_mF20E782543E3988DF4BCF27351D1B4B37E333FC9 (void);
+// 0x000000D1 System.Void UnityEngine.Purchasing.SimpleCatalogProvider::.ctor(System.Action`1<System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>>)
 extern void SimpleCatalogProvider__ctor_m0467C83F95712F8F49DB0BADFC16D103761DA25E (void);
-// 0x000000CD System.Void UnityEngine.Purchasing.SimpleCatalogProvider::FetchProducts(System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>)
+// 0x000000D2 System.Void UnityEngine.Purchasing.SimpleCatalogProvider::FetchProducts(System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>)
 extern void SimpleCatalogProvider_FetchProducts_m0B6529DE33C1F168BF6B69557795AD540B69829D (void);
-// 0x000000CE System.Void UnityEngine.Purchasing.StoreListenerProxy::.ctor(UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.IAnalyticsClient,UnityEngine.Purchasing.IExtensionProvider)
+// 0x000000D3 System.Void UnityEngine.Purchasing.StoreListenerProxy::.ctor(UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.IAnalyticsClient,UnityEngine.Purchasing.IExtensionProvider)
 extern void StoreListenerProxy__ctor_mCFBF42DC965A2C076697C559F973529EDC3FC7CF (void);
-// 0x000000CF System.Void UnityEngine.Purchasing.StoreListenerProxy::OnInitialized(UnityEngine.Purchasing.IStoreController)
+// 0x000000D4 System.Void UnityEngine.Purchasing.StoreListenerProxy::OnInitialized(UnityEngine.Purchasing.IStoreController)
 extern void StoreListenerProxy_OnInitialized_m77FA701D500D01AE3B009ACE7418117F9C1587EE (void);
-// 0x000000D0 System.Void UnityEngine.Purchasing.StoreListenerProxy::OnInitializeFailed(UnityEngine.Purchasing.InitializationFailureReason)
+// 0x000000D5 System.Void UnityEngine.Purchasing.StoreListenerProxy::OnInitializeFailed(UnityEngine.Purchasing.InitializationFailureReason)
 extern void StoreListenerProxy_OnInitializeFailed_mF6BBB5F3A69220DA4C2176A4F926E6EE92390573 (void);
-// 0x000000D1 UnityEngine.Purchasing.PurchaseProcessingResult UnityEngine.Purchasing.StoreListenerProxy::ProcessPurchase(UnityEngine.Purchasing.PurchaseEventArgs)
+// 0x000000D6 UnityEngine.Purchasing.PurchaseProcessingResult UnityEngine.Purchasing.StoreListenerProxy::ProcessPurchase(UnityEngine.Purchasing.PurchaseEventArgs)
 extern void StoreListenerProxy_ProcessPurchase_mA9AB521D12B571937A046CA790B8756BEE8532D7 (void);
-// 0x000000D2 System.Void UnityEngine.Purchasing.StoreListenerProxy::OnPurchaseFailed(UnityEngine.Purchasing.Product,UnityEngine.Purchasing.PurchaseFailureReason)
+// 0x000000D7 System.Void UnityEngine.Purchasing.StoreListenerProxy::OnPurchaseFailed(UnityEngine.Purchasing.Product,UnityEngine.Purchasing.PurchaseFailureReason)
 extern void StoreListenerProxy_OnPurchaseFailed_m786F3854795F64B78ED557955F47F6ACD860C40D (void);
-// 0x000000D3 System.Void UnityEngine.Purchasing.TransactionLog::.ctor(UnityEngine.ILogger,System.String)
+// 0x000000D8 System.Void UnityEngine.Purchasing.TransactionLog::.ctor(UnityEngine.ILogger,System.String)
 extern void TransactionLog__ctor_mC5BB2BB83711CFE938B9A2AD4EA61DEEBF4495B1 (void);
-// 0x000000D4 System.Void UnityEngine.Purchasing.TransactionLog::Clear()
+// 0x000000D9 System.Void UnityEngine.Purchasing.TransactionLog::Clear()
 extern void TransactionLog_Clear_m050EE6A244E544ED4536916CDDF5EC81DD825536 (void);
-// 0x000000D5 System.Boolean UnityEngine.Purchasing.TransactionLog::HasRecordOf(System.String)
+// 0x000000DA System.Boolean UnityEngine.Purchasing.TransactionLog::HasRecordOf(System.String)
 extern void TransactionLog_HasRecordOf_m29C07CD50A9B3BE8070224551D9B901BDCC41A17 (void);
-// 0x000000D6 System.Void UnityEngine.Purchasing.TransactionLog::Record(System.String)
+// 0x000000DB System.Void UnityEngine.Purchasing.TransactionLog::Record(System.String)
 extern void TransactionLog_Record_m8BC4886B4AC93874B0C760DF34DC9F2B4DBABD48 (void);
-// 0x000000D7 System.String UnityEngine.Purchasing.TransactionLog::GetRecordPath(System.String)
+// 0x000000DC System.String UnityEngine.Purchasing.TransactionLog::GetRecordPath(System.String)
 extern void TransactionLog_GetRecordPath_m8147FDA0881E4CB3C16984AB759D3E9BBB5E12BF (void);
-// 0x000000D8 System.String UnityEngine.Purchasing.TransactionLog::ComputeHash(System.String)
+// 0x000000DD System.String UnityEngine.Purchasing.TransactionLog::ComputeHash(System.String)
 extern void TransactionLog_ComputeHash_m1FA0C2F9D584A425915D00C7405C7B113E8BD21C (void);
-// 0x000000D9 System.Void UnityEngine.Purchasing.UnifiedReceipt::.ctor()
+// 0x000000DE System.Void UnityEngine.Purchasing.UnifiedReceipt::.ctor()
 extern void UnifiedReceipt__ctor_mFCC9B55433AF02C9C267C3710A0A40D473051275 (void);
-// 0x000000DA UnityEngine.Purchasing.AnalyticsTransactionReceipt UnityEngine.Purchasing.UnifiedReceiptExtensions::ToReceiptAndSignature(UnityEngine.Purchasing.UnifiedReceipt)
+// 0x000000DF UnityEngine.Purchasing.AnalyticsTransactionReceipt UnityEngine.Purchasing.UnifiedReceiptExtensions::ToReceiptAndSignature(UnityEngine.Purchasing.UnifiedReceipt)
 extern void UnifiedReceiptExtensions_ToReceiptAndSignature_m1BF92D69639A7973812605632C7833A7A2297FB0 (void);
-// 0x000000DB System.Nullable`1<Unity.Services.Analytics.TransactionServer> UnityEngine.Purchasing.UnifiedReceiptExtensions::ToTransactionServer(UnityEngine.Purchasing.UnifiedReceipt)
+// 0x000000E0 System.Nullable`1<Unity.Services.Analytics.TransactionServer> UnityEngine.Purchasing.UnifiedReceiptExtensions::ToTransactionServer(UnityEngine.Purchasing.UnifiedReceipt)
 extern void UnifiedReceiptExtensions_ToTransactionServer_m911979441AF8EA0EE75B8075BD5B3E5517D0EDF2 (void);
-// 0x000000DC System.String UnityEngine.Purchasing.UnifiedReceiptExtensions::EscapeEmbeddedQuotationMarks(System.String)
+// 0x000000E1 System.String UnityEngine.Purchasing.UnifiedReceiptExtensions::EscapeEmbeddedQuotationMarks(System.String)
 extern void UnifiedReceiptExtensions_EscapeEmbeddedQuotationMarks_mED198C1D1F4BB05EC54F3A83B50BD894AED9DAC9 (void);
-// 0x000000DD System.Void UnityEngine.Purchasing.UnityPurchasing::Initialize(UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.ConfigurationBuilder)
+// 0x000000E2 System.Void UnityEngine.Purchasing.UnityPurchasing::Initialize(UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.ConfigurationBuilder)
 extern void UnityPurchasing_Initialize_m3A3660906A52840A068FBEDFDA87BFB7DA4441BF (void);
-// 0x000000DE UnityEngine.Purchasing.IAnalyticsAdapter UnityEngine.Purchasing.UnityPurchasing::GenerateUnityAnalytics()
+// 0x000000E3 UnityEngine.Purchasing.IAnalyticsAdapter UnityEngine.Purchasing.UnityPurchasing::GenerateUnityAnalytics()
 extern void UnityPurchasing_GenerateUnityAnalytics_m9180DCEB1BCAB172B05605371F0D1D99ED3181BE (void);
-// 0x000000DF UnityEngine.Purchasing.IAnalyticsAdapter UnityEngine.Purchasing.UnityPurchasing::GenerateLegacyUnityAnalytics()
+// 0x000000E4 UnityEngine.Purchasing.IAnalyticsAdapter UnityEngine.Purchasing.UnityPurchasing::GenerateLegacyUnityAnalytics()
 extern void UnityPurchasing_GenerateLegacyUnityAnalytics_m845A53E31D0922AFE6D56B6AFD5E37B45B1C902B (void);
-// 0x000000E0 System.Void UnityEngine.Purchasing.UnityPurchasing::ClearTransactionLog()
+// 0x000000E5 System.Void UnityEngine.Purchasing.UnityPurchasing::ClearTransactionLog()
 extern void UnityPurchasing_ClearTransactionLog_m7E1E49AFA1803023B676D03A9BB1E0A26396CE5B (void);
-// 0x000000E1 System.Void UnityEngine.Purchasing.UnityPurchasing::Initialize(UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.ConfigurationBuilder,UnityEngine.ILogger,System.String,UnityEngine.Purchasing.IAnalyticsAdapter,UnityEngine.Purchasing.IAnalyticsAdapter,UnityEngine.Purchasing.Extension.ICatalogProvider,UnityEngine.Purchasing.IUnityServicesInitializationChecker)
+// 0x000000E6 System.Void UnityEngine.Purchasing.UnityPurchasing::Initialize(UnityEngine.Purchasing.IStoreListener,UnityEngine.Purchasing.ConfigurationBuilder,UnityEngine.ILogger,System.String,UnityEngine.Purchasing.IAnalyticsAdapter,UnityEngine.Purchasing.IAnalyticsAdapter,UnityEngine.Purchasing.Extension.ICatalogProvider,UnityEngine.Purchasing.IUnityServicesInitializationChecker)
 extern void UnityPurchasing_Initialize_m2B13C2C4A47EBAE4FE5C6B2768B425626409BA9D (void);
-// 0x000000E2 System.Void UnityEngine.Purchasing.UnityPurchasing::FetchAndMergeProducts(System.Boolean,System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>,UnityEngine.Purchasing.Extension.ICatalogProvider,System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>)
+// 0x000000E7 System.Void UnityEngine.Purchasing.UnityPurchasing::FetchAndMergeProducts(System.Boolean,System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>,UnityEngine.Purchasing.Extension.ICatalogProvider,System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>)
 extern void UnityPurchasing_FetchAndMergeProducts_mBD189B09C4959C970DF2B3AEC936E264372CEC23 (void);
-// 0x000000E3 System.Void UnityEngine.Purchasing.UnityPurchasing::.ctor()
+// 0x000000E8 System.Void UnityEngine.Purchasing.UnityPurchasing::.ctor()
 extern void UnityPurchasing__ctor_m1F3BDA44927E3C83D697CC4424B9CC0F37E0F3A0 (void);
-// 0x000000E4 System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass4_0::.ctor()
+// 0x000000E9 System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass4_0::.ctor()
 extern void U3CU3Ec__DisplayClass4_0__ctor_m26750BDF5E16AD97A87B174FB524DA7B1C065F84 (void);
-// 0x000000E5 System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass4_0::<Initialize>b__0(System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>)
+// 0x000000EA System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass4_0::<Initialize>b__0(System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>)
 extern void U3CU3Ec__DisplayClass4_0_U3CInitializeU3Eb__0_mEA8E7D7E02D994E42486DC0CC7C4ECB36A79974D (void);
-// 0x000000E6 System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass5_0::.ctor()
+// 0x000000EB System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass5_0::.ctor()
 extern void U3CU3Ec__DisplayClass5_0__ctor_m8B4C60527FA6E4E3CB1F8B3A815E815CEFF66ECB (void);
-// 0x000000E7 System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass5_0::<FetchAndMergeProducts>b__0(System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>)
+// 0x000000EC System.Void UnityEngine.Purchasing.UnityPurchasing/<>c__DisplayClass5_0::<FetchAndMergeProducts>b__0(System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>)
 extern void U3CU3Ec__DisplayClass5_0_U3CFetchAndMergeProductsU3Eb__0_m149FB9E4AF229BE98F5420C7F1F1FFB8218C1068 (void);
-// 0x000000E8 System.Void UnityEngine.Purchasing.LoggerExtensions::LogIAPWarning(UnityEngine.ILogger,System.String)
+// 0x000000ED System.Void UnityEngine.Purchasing.LoggerExtensions::LogIAPWarning(UnityEngine.ILogger,System.String)
 extern void LoggerExtensions_LogIAPWarning_mDA0CCDE0966C1E3B7572B90A48F7D481AE7EBE1B (void);
-// 0x000000E9 System.Void UnityEngine.Purchasing.LoggerExtensions::LogIAPError(UnityEngine.ILogger,System.String)
+// 0x000000EE System.Void UnityEngine.Purchasing.LoggerExtensions::LogIAPError(UnityEngine.ILogger,System.String)
 extern void LoggerExtensions_LogIAPError_m3ACFF84FFB205CFA230A0B6D4A67D1CCCB2093B0 (void);
-// 0x000000EA System.Void UnityEngine.Purchasing.ProductPurchaseUpdater::UpdateProductReceiptAndTransactionID(UnityEngine.Purchasing.Product,System.String,System.String,System.String)
+// 0x000000EF System.Void UnityEngine.Purchasing.ProductPurchaseUpdater::UpdateProductReceiptAndTransactionID(UnityEngine.Purchasing.Product,System.String,System.String,System.String)
 extern void ProductPurchaseUpdater_UpdateProductReceiptAndTransactionID_m46DAD3DEFF7F41B001E8095E5FE2FF40FC1F9E96 (void);
-// 0x000000EB System.String UnityEngine.Purchasing.UnifiedReceiptFormatter::FormatUnifiedReceipt(System.String,System.String,System.String)
+// 0x000000F0 System.String UnityEngine.Purchasing.UnifiedReceiptFormatter::FormatUnifiedReceipt(System.String,System.String,System.String)
 extern void UnifiedReceiptFormatter_FormatUnifiedReceipt_mA0A760CC5D63998C854CD2C5405EE68CF6AC683F (void);
-// 0x000000EC System.Void UnityEngine.Purchasing.Telemetry.ITelemetryDiagnostics::SendDiagnostic(System.String,System.Exception)
-// 0x000000ED System.Void UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper::SetDiagnosticsInstance(Unity.Services.Core.Telemetry.Internal.IDiagnostics)
-// 0x000000EE System.Void UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper::SendDiagnostic(System.String,System.String)
-// 0x000000EF System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticParams::.ctor(System.String,System.String)
+// 0x000000F1 System.Void UnityEngine.Purchasing.Telemetry.ITelemetryDiagnostics::SendDiagnostic(System.String,System.Exception)
+// 0x000000F2 System.Void UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper::SetDiagnosticsInstance(Unity.Services.Core.Telemetry.Internal.IDiagnostics)
+// 0x000000F3 System.Void UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper::SendDiagnostic(System.String,System.String)
+// 0x000000F4 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticParams::.ctor(System.String,System.String)
 extern void TelemetryDiagnosticParams__ctor_m485DD43E41AB5F7D907FC2ED7F6923192831FA86 (void);
-// 0x000000F0 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnostics::.ctor(UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper)
+// 0x000000F5 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnostics::.ctor(UnityEngine.Purchasing.Telemetry.ITelemetryDiagnosticsInstanceWrapper)
 extern void TelemetryDiagnostics__ctor_mCF22F64436BA1D11FE306525D456D2B75CF4B4EE (void);
-// 0x000000F1 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnostics::SendDiagnostic(System.String,System.Exception)
+// 0x000000F6 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnostics::SendDiagnostic(System.String,System.Exception)
 extern void TelemetryDiagnostics_SendDiagnostic_m778000CD5E7C7C24D3E6591DAD3CBC7C894BA595 (void);
-// 0x000000F2 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::.ctor()
+// 0x000000F7 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::.ctor()
 extern void TelemetryDiagnosticsInstanceWrapper__ctor_m68AB5832950D86BBAE6A066A444FF1D7426DECBB (void);
-// 0x000000F3 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::SetDiagnosticsInstance(Unity.Services.Core.Telemetry.Internal.IDiagnostics)
+// 0x000000F8 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::SetDiagnosticsInstance(Unity.Services.Core.Telemetry.Internal.IDiagnostics)
 extern void TelemetryDiagnosticsInstanceWrapper_SetDiagnosticsInstance_mB57B07C0E5158B917660A279A39AC15A459AD205 (void);
-// 0x000000F4 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::SendDiagnostic(System.String,System.String)
+// 0x000000F9 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::SendDiagnostic(System.String,System.String)
 extern void TelemetryDiagnosticsInstanceWrapper_SendDiagnostic_m89A44146E85C53ECC7CE562998339194353963D1 (void);
-// 0x000000F5 System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::SendDiagnostic(UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticParams)
+// 0x000000FA System.Void UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticsInstanceWrapper::SendDiagnostic(UnityEngine.Purchasing.Telemetry.TelemetryDiagnosticParams)
 extern void TelemetryDiagnosticsInstanceWrapper_SendDiagnostic_m6A41338822BFDBF5DFE6CD96A2DAA464D00A6797 (void);
-// 0x000000F6 System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent::StartMetric()
-// 0x000000F7 System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent::StopAndSendMetric()
-// 0x000000F8 System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper::SetMetricsInstance(Unity.Services.Core.Telemetry.Internal.IMetrics)
-// 0x000000F9 System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper::SendMetric(UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String,System.Double)
-// 0x000000FA System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricsService::ExecuteTimedAction(System.Action,UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
-// 0x000000FB UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent UnityEngine.Purchasing.Telemetry.ITelemetryMetricsService::CreateAndStartMetricEvent(UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
-// 0x000000FC UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::get_MetricType()
+// 0x000000FB System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent::StartMetric()
+// 0x000000FC System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent::StopAndSendMetric()
+// 0x000000FD System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper::SetMetricsInstance(Unity.Services.Core.Telemetry.Internal.IMetrics)
+// 0x000000FE System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper::SendMetric(UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String,System.Double)
+// 0x000000FF System.Void UnityEngine.Purchasing.Telemetry.ITelemetryMetricsService::ExecuteTimedAction(System.Action,UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
+// 0x00000100 UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent UnityEngine.Purchasing.Telemetry.ITelemetryMetricsService::CreateAndStartMetricEvent(UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
+// 0x00000101 UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::get_MetricType()
 extern void TelemetryMetricDefinition_get_MetricType_m77BC5D460117EEB423B250384D7DEF536AAD8CA8 (void);
-// 0x000000FD System.String UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::get_MetricName()
+// 0x00000102 System.String UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::get_MetricName()
 extern void TelemetryMetricDefinition_get_MetricName_mBEF9562B328293528518CB1BF704BC0DEE695DB9 (void);
-// 0x000000FE System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::.ctor(System.String,UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes)
+// 0x00000103 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::.ctor(System.String,UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes)
 extern void TelemetryMetricDefinition__ctor_mE4BE25ADC8DF4FA2E5B70A30951A01D8A696DCA9 (void);
-// 0x000000FF UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::op_Implicit(System.String)
+// 0x00000104 UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition::op_Implicit(System.String)
 extern void TelemetryMetricDefinition_op_Implicit_mAA59311ED9E73663165AC4F2228BF46A8FB43A45 (void);
-// 0x00000100 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinitions::.cctor()
+// 0x00000105 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinitions::.cctor()
 extern void TelemetryMetricDefinitions__cctor_m4F16C5D3560939CE866DF37B500E6CAC223054DF (void);
-// 0x00000101 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricEvent::.ctor(UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper,UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String)
+// 0x00000106 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricEvent::.ctor(UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper,UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String)
 extern void TelemetryMetricEvent__ctor_mAF840075CFB0E6FDA897F2864EDC59848C11CB91 (void);
-// 0x00000102 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricEvent::StartMetric()
+// 0x00000107 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricEvent::StartMetric()
 extern void TelemetryMetricEvent_StartMetric_mE7B890CE8B4234A9C7405A1116C6BD684F2E659E (void);
-// 0x00000103 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricEvent::StopAndSendMetric()
+// 0x00000108 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricEvent::StopAndSendMetric()
 extern void TelemetryMetricEvent_StopAndSendMetric_m108A726B6D3329D9280CA3AD0809DF6E07EB8F8B (void);
-// 0x00000104 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricParams::.ctor(UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String,System.Double)
+// 0x00000109 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricParams::.ctor(UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String,System.Double)
 extern void TelemetryMetricParams__ctor_mAA11B818AEDE212B298286D08438445EF2864B64 (void);
-// 0x00000105 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::.ctor()
+// 0x0000010A System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::.ctor()
 extern void TelemetryMetricsInstanceWrapper__ctor_m5A523164B96C01D39F27F0C7448E55FA6D852983 (void);
-// 0x00000106 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::SetMetricsInstance(Unity.Services.Core.Telemetry.Internal.IMetrics)
+// 0x0000010B System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::SetMetricsInstance(Unity.Services.Core.Telemetry.Internal.IMetrics)
 extern void TelemetryMetricsInstanceWrapper_SetMetricsInstance_m15AE9CE67DF1163DFD4719589443FF374D4C139E (void);
-// 0x00000107 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::SendMetric(UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String,System.Double)
+// 0x0000010C System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::SendMetric(UnityEngine.Purchasing.Telemetry.TelemetryMetricTypes,System.String,System.Double)
 extern void TelemetryMetricsInstanceWrapper_SendMetric_m9DECCE29ABFBA13330AA723F8615D804E9A5143C (void);
-// 0x00000108 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::SendMetricByType(UnityEngine.Purchasing.Telemetry.TelemetryMetricParams)
+// 0x0000010D System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsInstanceWrapper::SendMetricByType(UnityEngine.Purchasing.Telemetry.TelemetryMetricParams)
 extern void TelemetryMetricsInstanceWrapper_SendMetricByType_m77F39CF45DEE48523A81437A7FECE04C148341C6 (void);
-// 0x00000109 System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsService::.ctor(UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper)
+// 0x0000010E System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsService::.ctor(UnityEngine.Purchasing.Telemetry.ITelemetryMetricsInstanceWrapper)
 extern void TelemetryMetricsService__ctor_mDB35AF4406F2E81A9CDEA8D18F463E06CBEE4DF0 (void);
-// 0x0000010A System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsService::ExecuteTimedAction(System.Action,UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
+// 0x0000010F System.Void UnityEngine.Purchasing.Telemetry.TelemetryMetricsService::ExecuteTimedAction(System.Action,UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
 extern void TelemetryMetricsService_ExecuteTimedAction_m001426D6FC406EAE079522C260C61FDC6584AA16 (void);
-// 0x0000010B UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent UnityEngine.Purchasing.Telemetry.TelemetryMetricsService::CreateAndStartMetricEvent(UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
+// 0x00000110 UnityEngine.Purchasing.Telemetry.ITelemetryMetricEvent UnityEngine.Purchasing.Telemetry.TelemetryMetricsService::CreateAndStartMetricEvent(UnityEngine.Purchasing.Telemetry.TelemetryMetricDefinition)
 extern void TelemetryMetricsService_CreateAndStartMetricEvent_m2950794B140031B3AC30931965A32DE24478540E (void);
-// 0x0000010C System.Void UnityEngine.Purchasing.Telemetry.TelemetryQueue`1::.ctor(System.Action`1<TTelemetryEventParams>)
-// 0x0000010D System.Void UnityEngine.Purchasing.Telemetry.TelemetryQueue`1::QueueEvent(TTelemetryEventParams)
-// 0x0000010E System.Void UnityEngine.Purchasing.Telemetry.TelemetryQueue`1::SendQueuedEvents()
-// 0x0000010F System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::Configure(UnityEngine.Purchasing.Extension.IPurchasingBinder)
+// 0x00000111 System.Void UnityEngine.Purchasing.Telemetry.TelemetryQueue`1::.ctor(System.Action`1<TTelemetryEventParams>)
+// 0x00000112 System.Void UnityEngine.Purchasing.Telemetry.TelemetryQueue`1::QueueEvent(TTelemetryEventParams)
+// 0x00000113 System.Void UnityEngine.Purchasing.Telemetry.TelemetryQueue`1::SendQueuedEvents()
+// 0x00000114 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::Configure(UnityEngine.Purchasing.Extension.IPurchasingBinder)
 extern void AbstractPurchasingModule_Configure_mA2D3F2AFBFCFD572BBF2AE2EFE5F0F57ACB1D6C4 (void);
-// 0x00000110 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::RegisterStore(System.String,UnityEngine.Purchasing.Extension.IStore)
+// 0x00000115 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::RegisterStore(System.String,UnityEngine.Purchasing.Extension.IStore)
 extern void AbstractPurchasingModule_RegisterStore_mCAB1822ADDDBB394D16FA1C4DD22AA04DDD8D3FD (void);
-// 0x00000111 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::BindExtension(T)
-// 0x00000112 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::BindConfiguration(T)
-// 0x00000113 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::Configure()
-// 0x00000114 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::.ctor()
+// 0x00000116 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::BindExtension(T)
+// 0x00000117 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::BindConfiguration(T)
+// 0x00000118 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::Configure()
+// 0x00000119 System.Void UnityEngine.Purchasing.Extension.AbstractPurchasingModule::.ctor()
 extern void AbstractPurchasingModule__ctor_mBED233D75772B5243C0D2590A37B1BEF331BAB68 (void);
-// 0x00000115 System.Void UnityEngine.Purchasing.Extension.AbstractStore::Initialize(UnityEngine.Purchasing.Extension.IStoreCallback)
-// 0x00000116 System.Void UnityEngine.Purchasing.Extension.AbstractStore::RetrieveProducts(System.Collections.ObjectModel.ReadOnlyCollection`1<UnityEngine.Purchasing.ProductDefinition>)
-// 0x00000117 System.Void UnityEngine.Purchasing.Extension.AbstractStore::Purchase(UnityEngine.Purchasing.ProductDefinition,System.String)
-// 0x00000118 System.Void UnityEngine.Purchasing.Extension.AbstractStore::FinishTransaction(UnityEngine.Purchasing.ProductDefinition,System.String)
-// 0x00000119 System.Void UnityEngine.Purchasing.Extension.AbstractStore::.ctor()
+// 0x0000011A System.Void UnityEngine.Purchasing.Extension.AbstractStore::Initialize(UnityEngine.Purchasing.Extension.IStoreCallback)
+// 0x0000011B System.Void UnityEngine.Purchasing.Extension.AbstractStore::RetrieveProducts(System.Collections.ObjectModel.ReadOnlyCollection`1<UnityEngine.Purchasing.ProductDefinition>)
+// 0x0000011C System.Void UnityEngine.Purchasing.Extension.AbstractStore::Purchase(UnityEngine.Purchasing.ProductDefinition,System.String)
+// 0x0000011D System.Void UnityEngine.Purchasing.Extension.AbstractStore::FinishTransaction(UnityEngine.Purchasing.ProductDefinition,System.String)
+// 0x0000011E System.Void UnityEngine.Purchasing.Extension.AbstractStore::.ctor()
 extern void AbstractStore__ctor_mEC2076D59BF2100DABCD577660972095AAF41319 (void);
-// 0x0000011A System.Void UnityEngine.Purchasing.Extension.ICatalogProvider::FetchProducts(System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>)
-// 0x0000011B System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::RegisterStore(System.String,UnityEngine.Purchasing.Extension.IStore)
-// 0x0000011C System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::RegisterExtension(T)
-// 0x0000011D System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::RegisterConfiguration(T)
-// 0x0000011E System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::SetCatalogProvider(UnityEngine.Purchasing.Extension.ICatalogProvider)
-// 0x0000011F System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::SetCatalogProviderFunction(System.Action`1<System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>>)
-// 0x00000120 System.Void UnityEngine.Purchasing.Extension.IPurchasingModule::Configure(UnityEngine.Purchasing.Extension.IPurchasingBinder)
-// 0x00000121 System.Void UnityEngine.Purchasing.Extension.IStore::Initialize(UnityEngine.Purchasing.Extension.IStoreCallback)
-// 0x00000122 System.Void UnityEngine.Purchasing.Extension.IStore::RetrieveProducts(System.Collections.ObjectModel.ReadOnlyCollection`1<UnityEngine.Purchasing.ProductDefinition>)
-// 0x00000123 System.Void UnityEngine.Purchasing.Extension.IStore::Purchase(UnityEngine.Purchasing.ProductDefinition,System.String)
-// 0x00000124 System.Void UnityEngine.Purchasing.Extension.IStore::FinishTransaction(UnityEngine.Purchasing.ProductDefinition,System.String)
-// 0x00000125 UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.Extension.IStoreCallback::get_products()
-// 0x00000126 System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnSetupFailed(UnityEngine.Purchasing.InitializationFailureReason)
-// 0x00000127 System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnProductsRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Extension.ProductDescription>)
-// 0x00000128 System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnPurchaseSucceeded(System.String,System.String,System.String)
-// 0x00000129 System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnAllPurchasesRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Product>)
-// 0x0000012A System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnPurchaseFailed(UnityEngine.Purchasing.Extension.PurchaseFailureDescription)
-// 0x0000012B System.Boolean UnityEngine.Purchasing.Extension.IStoreCallback::get_useTransactionLog()
-// 0x0000012C System.Void UnityEngine.Purchasing.Extension.IStoreCallback::set_useTransactionLog(System.Boolean)
-// 0x0000012D System.Void UnityEngine.Purchasing.Extension.ProductDescription::.ctor(System.String,UnityEngine.Purchasing.ProductMetadata,System.String,System.String)
+// 0x0000011F System.Void UnityEngine.Purchasing.Extension.ICatalogProvider::FetchProducts(System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>)
+// 0x00000120 System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::RegisterStore(System.String,UnityEngine.Purchasing.Extension.IStore)
+// 0x00000121 System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::RegisterExtension(T)
+// 0x00000122 System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::RegisterConfiguration(T)
+// 0x00000123 System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::SetCatalogProvider(UnityEngine.Purchasing.Extension.ICatalogProvider)
+// 0x00000124 System.Void UnityEngine.Purchasing.Extension.IPurchasingBinder::SetCatalogProviderFunction(System.Action`1<System.Action`1<System.Collections.Generic.HashSet`1<UnityEngine.Purchasing.ProductDefinition>>>)
+// 0x00000125 System.Void UnityEngine.Purchasing.Extension.IPurchasingModule::Configure(UnityEngine.Purchasing.Extension.IPurchasingBinder)
+// 0x00000126 System.Void UnityEngine.Purchasing.Extension.IStore::Initialize(UnityEngine.Purchasing.Extension.IStoreCallback)
+// 0x00000127 System.Void UnityEngine.Purchasing.Extension.IStore::RetrieveProducts(System.Collections.ObjectModel.ReadOnlyCollection`1<UnityEngine.Purchasing.ProductDefinition>)
+// 0x00000128 System.Void UnityEngine.Purchasing.Extension.IStore::Purchase(UnityEngine.Purchasing.ProductDefinition,System.String)
+// 0x00000129 System.Void UnityEngine.Purchasing.Extension.IStore::FinishTransaction(UnityEngine.Purchasing.ProductDefinition,System.String)
+// 0x0000012A UnityEngine.Purchasing.ProductCollection UnityEngine.Purchasing.Extension.IStoreCallback::get_products()
+// 0x0000012B System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnSetupFailed(UnityEngine.Purchasing.InitializationFailureReason)
+// 0x0000012C System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnProductsRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Extension.ProductDescription>)
+// 0x0000012D System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnPurchaseSucceeded(System.String,System.String,System.String)
+// 0x0000012E System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnAllPurchasesRetrieved(System.Collections.Generic.List`1<UnityEngine.Purchasing.Product>)
+// 0x0000012F System.Void UnityEngine.Purchasing.Extension.IStoreCallback::OnPurchaseFailed(UnityEngine.Purchasing.Extension.PurchaseFailureDescription)
+// 0x00000130 System.Boolean UnityEngine.Purchasing.Extension.IStoreCallback::get_useTransactionLog()
+// 0x00000131 System.Void UnityEngine.Purchasing.Extension.IStoreCallback::set_useTransactionLog(System.Boolean)
+// 0x00000132 System.Void UnityEngine.Purchasing.Extension.ProductDescription::.ctor(System.String,UnityEngine.Purchasing.ProductMetadata,System.String,System.String)
 extern void ProductDescription__ctor_mB1C3A8337438FCF34BFBFE57377EB18E13BE6020 (void);
-// 0x0000012E System.Void UnityEngine.Purchasing.Extension.ProductDescription::.ctor(System.String,UnityEngine.Purchasing.ProductMetadata,System.String,System.String,UnityEngine.Purchasing.ProductType)
+// 0x00000133 System.Void UnityEngine.Purchasing.Extension.ProductDescription::.ctor(System.String,UnityEngine.Purchasing.ProductMetadata,System.String,System.String,UnityEngine.Purchasing.ProductType)
 extern void ProductDescription__ctor_mB30F8B195F2E33E469A3FEBC9C997506D0121414 (void);
-// 0x0000012F System.Void UnityEngine.Purchasing.Extension.ProductDescription::.ctor(System.String,UnityEngine.Purchasing.ProductMetadata)
+// 0x00000134 System.Void UnityEngine.Purchasing.Extension.ProductDescription::.ctor(System.String,UnityEngine.Purchasing.ProductMetadata)
 extern void ProductDescription__ctor_m3F16513F698277F44805212E0DDAA5918D5FD28F (void);
-// 0x00000130 System.String UnityEngine.Purchasing.Extension.ProductDescription::get_storeSpecificId()
+// 0x00000135 System.String UnityEngine.Purchasing.Extension.ProductDescription::get_storeSpecificId()
 extern void ProductDescription_get_storeSpecificId_mF5D42DDD777C996BB28D5F429AAE62D77864E829 (void);
-// 0x00000131 System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_storeSpecificId(System.String)
+// 0x00000136 System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_storeSpecificId(System.String)
 extern void ProductDescription_set_storeSpecificId_m38ADC834D046591389796C00A712BC657E552C7E (void);
-// 0x00000132 UnityEngine.Purchasing.ProductMetadata UnityEngine.Purchasing.Extension.ProductDescription::get_metadata()
+// 0x00000137 UnityEngine.Purchasing.ProductMetadata UnityEngine.Purchasing.Extension.ProductDescription::get_metadata()
 extern void ProductDescription_get_metadata_mA79854D8165BEDC08C98886D8994B632100FE2F8 (void);
-// 0x00000133 System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_metadata(UnityEngine.Purchasing.ProductMetadata)
+// 0x00000138 System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_metadata(UnityEngine.Purchasing.ProductMetadata)
 extern void ProductDescription_set_metadata_m1FDDE1A707FE9BD3DA9A8E03BE5C136BF8989225 (void);
-// 0x00000134 System.String UnityEngine.Purchasing.Extension.ProductDescription::get_receipt()
+// 0x00000139 System.String UnityEngine.Purchasing.Extension.ProductDescription::get_receipt()
 extern void ProductDescription_get_receipt_m7AF4A337294A62D691D318999309C4E0D7B41DFA (void);
-// 0x00000135 System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_receipt(System.String)
+// 0x0000013A System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_receipt(System.String)
 extern void ProductDescription_set_receipt_mBEDA486AFCF0D0C5BA8511323AD27EA10F9BDD2D (void);
-// 0x00000136 System.String UnityEngine.Purchasing.Extension.ProductDescription::get_transactionId()
+// 0x0000013B System.String UnityEngine.Purchasing.Extension.ProductDescription::get_transactionId()
 extern void ProductDescription_get_transactionId_m27FAF59061EF3B4747076E03C50E590A17F49539 (void);
-// 0x00000137 System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_transactionId(System.String)
+// 0x0000013C System.Void UnityEngine.Purchasing.Extension.ProductDescription::set_transactionId(System.String)
 extern void ProductDescription_set_transactionId_mBCB2A63F60AAF920E8A627DB0EC8FF0A480BD9BF (void);
-// 0x00000138 System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::.ctor(System.String,UnityEngine.Purchasing.PurchaseFailureReason,System.String)
+// 0x0000013D System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::.ctor(System.String,UnityEngine.Purchasing.PurchaseFailureReason,System.String)
 extern void PurchaseFailureDescription__ctor_m467906A609FC873BEF4902C3866F13A3BAFD990D (void);
-// 0x00000139 System.String UnityEngine.Purchasing.Extension.PurchaseFailureDescription::get_productId()
+// 0x0000013E System.String UnityEngine.Purchasing.Extension.PurchaseFailureDescription::get_productId()
 extern void PurchaseFailureDescription_get_productId_m8874D6F939CBAB1C6965E9A56152FB19FA14B614 (void);
-// 0x0000013A System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::set_productId(System.String)
+// 0x0000013F System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::set_productId(System.String)
 extern void PurchaseFailureDescription_set_productId_mBD73DC83502A73DC8B6F23233FC6F034BB13EDE0 (void);
-// 0x0000013B UnityEngine.Purchasing.PurchaseFailureReason UnityEngine.Purchasing.Extension.PurchaseFailureDescription::get_reason()
+// 0x00000140 UnityEngine.Purchasing.PurchaseFailureReason UnityEngine.Purchasing.Extension.PurchaseFailureDescription::get_reason()
 extern void PurchaseFailureDescription_get_reason_m14B3F10AB89B2F558B350D09DF22BFB2DD3345A6 (void);
-// 0x0000013C System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::set_reason(UnityEngine.Purchasing.PurchaseFailureReason)
+// 0x00000141 System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::set_reason(UnityEngine.Purchasing.PurchaseFailureReason)
 extern void PurchaseFailureDescription_set_reason_m43846E285121C07773998BE842DD6924FC05B743 (void);
-// 0x0000013D System.String UnityEngine.Purchasing.Extension.PurchaseFailureDescription::get_message()
+// 0x00000142 System.String UnityEngine.Purchasing.Extension.PurchaseFailureDescription::get_message()
 extern void PurchaseFailureDescription_get_message_m39764440B03F56F4F8063853328C78DB4393FD75 (void);
-// 0x0000013E System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::set_message(System.String)
+// 0x00000143 System.Void UnityEngine.Purchasing.Extension.PurchaseFailureDescription::set_message(System.String)
 extern void PurchaseFailureDescription_set_message_m8579CDFF7E771495BB9BF276228E3F431C9881F1 (void);
-static Il2CppMethodPointer s_methodPointers[318] = 
+static Il2CppMethodPointer s_methodPointers[323] = 
 {
 	EmbeddedAttribute__ctor_m5EFB3FA601C2D9921C8EC469C818708E3C9BCD8A,
 	NullableAttribute__ctor_m9B7FDA2C75D46AE3E5676A3FA828506C153ED3C2,
@@ -696,12 +706,13 @@ static Il2CppMethodPointer s_methodPointers[318] =
 	ProductCollection_AddProducts_m7F6C13CEB5F1B743CE4524E9878A47F9B12F22F8,
 	ProductCollection_get_set_m5F30331F9C5AF536F4ED8B193D7B1022DDEDD7BE,
 	ProductCollection_get_all_m37D0E42451E883AAD88D44E70F5B2D5E56763ED7,
+	ProductCollection_set_all_m6444F761FD455701461B12786555A42441304D58,
 	ProductCollection_WithID_m823B1BBFE1B1A91B7AA2E2BDD821F0D24F0C5543,
 	ProductCollection_WithStoreSpecificID_mD2C0170E4A8F41D2F3E96163B46009A676B9E830,
 	U3CU3Ec__cctor_m46883A38CE1604503FA2AE96355D825DC78BB12E,
 	U3CU3Ec__ctor_m0909335C607F7D3D46285097177F2DFA466A7503,
-	U3CU3Ec_U3CAddProductsU3Eb__5_0_m449C6AEE054BC2B2ED35D1AA5FD871B0CEC0FB6B,
-	U3CU3Ec_U3CAddProductsU3Eb__5_1_m84302261302220B01F5437AB80F9FFCA847657CF,
+	U3CU3Ec_U3CAddProductsU3Eb__3_0_m29013D41A6F1B82E0CC919E01F64B77D744F4862,
+	U3CU3Ec_U3CAddProductsU3Eb__3_1_m797E30DE7D9504B49578F66020B87EF8248F9E52,
 	ProductDefinition__ctor_m27D3DFF4B34CE17FF3354CFA89379012213CA64B,
 	ProductDefinition__ctor_m11578282A2F709573A7BE6A5790BA2CF5969B792,
 	ProductDefinition__ctor_mE7C536B6F4985FACFD05B872D0B609F4427F359C,
@@ -722,6 +733,7 @@ static Il2CppMethodPointer s_methodPointers[318] =
 	ProductDefinition_get_payout_m408A5D78A3132B65F873155775D19989E356A468,
 	ProductDefinition_SetPayouts_m1F07A4AEC2E899444B24A07A7B0524F3843A10C5,
 	ProductMetadata__ctor_m602D2E51F4C49CD17EDB6F57374A6D4968E606F5,
+	ProductMetadata__ctor_m3701E6FF0C87A13264E963FFCE2EA1AF0D0837C6,
 	ProductMetadata__ctor_m4D1901A5E816329D3702B6833F1882DA67647686,
 	ProductMetadata_get_localizedPriceString_m83C55E96B4BC39284D88F9BAAC64E60DFF7D408F,
 	ProductMetadata_set_localizedPriceString_m26F6D7C900296E0BF10458BE90D1F866AAF74F94,
@@ -767,9 +779,11 @@ static Il2CppMethodPointer s_methodPointers[318] =
 	PurchasingManager_get_products_m56CB926C1B7BB461DB73C6123AE9A8E75F0053FE,
 	PurchasingManager_set_products_m44F75BBAF71D24D159E8E6166E0B36B16A28AC43,
 	PurchasingManager_OnPurchaseSucceeded_m280FF0BEF28B37D87FB7873031B4631488B4E2A7,
-	PurchasingManager_UpdateProductReceiptAndTrandsactionID_m36538060E942911A6DFF8BAD10C5E5F61E8AD701,
+	PurchasingManager_UpdateProductReceiptAndTransactionID_m3FB45103128E0A5F2363E61C31B9FEEAEF962A93,
 	PurchasingManager_OnAllPurchasesRetrieved_m814DB0B13619C95080C9EF8505481C294FCE05D6,
+	PurchasingManager_OnEntitlementRevoked_m23E614B87C1227C9E85643CEBEF34B3B4D3C16EF,
 	PurchasingManager_HandlePurchaseRetrieved_mB895E6539F83AD64A48AB1F29655F360908C51BA,
+	PurchasingManager_WasPurchaseAlreadyProcessed_mB62EF7DE3E4D0918FEA3E543077972BC0F6B2BBE,
 	PurchasingManager_ClearProductReceipt_mFB1BBD8294D73A4CABD23DBE039276C3BE678304,
 	PurchasingManager_OnSetupFailed_m67E360EE84AC9A4F12DAD3F3B154176B8883E99B,
 	PurchasingManager_OnPurchaseFailed_m3F246A54610EAE7AD0222C46A19E7CB47DAB42A8,
@@ -778,15 +792,16 @@ static Il2CppMethodPointer s_methodPointers[318] =
 	PurchasingManager_ProcessPurchaseOnStart_m320FBE849060CC66940DD2DB3A886C1EC4716759,
 	PurchasingManager_FetchAdditionalProducts_m41A2743805662C33D41CE0825E0C38FC4C5BDC9C,
 	PurchasingManager_ProcessPurchaseIfNew_m2D54C04E78727264E91828FF8CCE516670D122EE,
+	PurchasingManager_HasRecordedTransaction_m8C4360C486C8F52F1F880C6FC19FCA2DC6E1CAB5,
 	PurchasingManager_CheckForInitialization_m6144B75126F92494E3EBEC736763C4FC9D77773E,
 	PurchasingManager_HasAvailableProductsToPurchase_m67C7C445B0E25C36F4C5D719F1B0C600CC3B35F3,
 	PurchasingManager_Initialize_mA99E10460D4C1C2FCE0D30423BA3B26215702F19,
-	U3CU3Ec__DisplayClass24_0__ctor_mAB2D1E4C82C02FFC308DE24AF6E0C81D57A6BD71,
-	U3CU3Ec__DisplayClass24_0_U3COnAllPurchasesRetrievedU3Eb__0_mDD0CFFB66941954151AD3FAF03147145D1E98DA4,
+	U3CU3Ec__DisplayClass25_0__ctor_m9765610E67C62110B501F365BC4ABD17AEE00CF6,
+	U3CU3Ec__DisplayClass25_0_U3COnAllPurchasesRetrievedU3Eb__0_m18639EB7C43A074319F8954204A61706D84BC4FE,
 	U3CU3Ec__cctor_mCFB3600DD71A472580500306B2BDF9EDB69B3B6F,
 	U3CU3Ec__ctor_m58310A3BCE52DBB543D6ED6CDEF5BF0BE6B1400C,
-	U3CU3Ec_U3CFetchAdditionalProductsU3Eb__32_0_mA970846265ED5329CF4AC7D60577047D8218E338,
-	U3CU3Ec_U3CInitializeU3Eb__37_0_mB7FD45A4BCEA81A7BD0AF88608A0A296A41F9B74,
+	U3CU3Ec_U3CFetchAdditionalProductsU3Eb__35_0_m7A3309B353F1D3F1E0F75AE382AFCE10423555A6,
+	U3CU3Ec_U3CInitializeU3Eb__41_0_mF20E782543E3988DF4BCF27351D1B4B37E333FC9,
 	SimpleCatalogProvider__ctor_m0467C83F95712F8F49DB0BADFC16D103761DA25E,
 	SimpleCatalogProvider_FetchProducts_m0B6529DE33C1F168BF6B69557795AD540B69829D,
 	StoreListenerProxy__ctor_mCFBF42DC965A2C076697C559F973529EDC3FC7CF,
@@ -910,82 +925,75 @@ extern void TelemetryMetricDefinition__ctor_mE4BE25ADC8DF4FA2E5B70A30951A01D8A69
 extern void TelemetryMetricParams__ctor_mAA11B818AEDE212B298286D08438445EF2864B64_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[5] = 
 {
-	{ 0x060000EF, TelemetryDiagnosticParams__ctor_m485DD43E41AB5F7D907FC2ED7F6923192831FA86_AdjustorThunk },
-	{ 0x060000FC, TelemetryMetricDefinition_get_MetricType_m77BC5D460117EEB423B250384D7DEF536AAD8CA8_AdjustorThunk },
-	{ 0x060000FD, TelemetryMetricDefinition_get_MetricName_mBEF9562B328293528518CB1BF704BC0DEE695DB9_AdjustorThunk },
-	{ 0x060000FE, TelemetryMetricDefinition__ctor_mE4BE25ADC8DF4FA2E5B70A30951A01D8A696DCA9_AdjustorThunk },
-	{ 0x06000104, TelemetryMetricParams__ctor_mAA11B818AEDE212B298286D08438445EF2864B64_AdjustorThunk },
+	{ 0x060000F4, TelemetryDiagnosticParams__ctor_m485DD43E41AB5F7D907FC2ED7F6923192831FA86_AdjustorThunk },
+	{ 0x06000101, TelemetryMetricDefinition_get_MetricType_m77BC5D460117EEB423B250384D7DEF536AAD8CA8_AdjustorThunk },
+	{ 0x06000102, TelemetryMetricDefinition_get_MetricName_mBEF9562B328293528518CB1BF704BC0DEE695DB9_AdjustorThunk },
+	{ 0x06000103, TelemetryMetricDefinition__ctor_mE4BE25ADC8DF4FA2E5B70A30951A01D8A696DCA9_AdjustorThunk },
+	{ 0x06000109, TelemetryMetricParams__ctor_mAA11B818AEDE212B298286D08438445EF2864B64_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[318] = 
+static const int32_t s_InvokerIndices[323] = 
 {
-	8935,
-	7107,
-	7229,
-	7107,
-	7229,
-	7229,
-	2018,
-	4218,
-	3458,
-	6527,
-	6527,
-	6381,
-	4226,
-	7229,
-	4218,
-	7229,
-	4218,
-	8935,
+	8936,
+	7108,
+	7230,
+	7108,
+	7230,
+	7230,
+	2019,
+	4219,
+	3459,
+	6528,
+	6528,
+	6382,
+	4227,
+	7230,
+	4219,
+	7230,
+	4219,
+	8936,
 	0,
 	0,
 	0,
 	0,
 	0,
 	0,
-	7229,
-	7229,
-	4218,
-	752,
-	4226,
-	8935,
-	8773,
-	7229,
-	8773,
-	7229,
-	8545,
-	7004,
-	8935,
-	8935,
-	8773,
-	4226,
-	4226,
-	3327,
-	8773,
-	8935,
-	7229,
-	8659,
-	7107,
-	8773,
-	8773,
+	7230,
+	7230,
+	4219,
+	753,
+	4227,
+	8936,
+	8774,
+	7230,
+	8774,
+	7230,
+	8546,
+	7005,
+	8936,
+	8936,
+	8774,
+	4227,
+	4227,
+	3328,
+	8774,
+	8936,
+	7230,
+	8660,
+	7108,
+	8774,
+	8774,
 	0,
-	12248,
-	3323,
-	1921,
-	1309,
-	1309,
-	6469,
+	12249,
+	3324,
+	1922,
+	1310,
+	1310,
+	6470,
 	0,
-	7229,
-	8935,
-	8659,
-	8935,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
+	7230,
+	8936,
+	8660,
+	8936,
 	0,
 	0,
 	0,
@@ -995,258 +1003,270 @@ static const int32_t s_InvokerIndices[318] =
 	0,
 	0,
 	0,
-	8738,
-	7194,
-	8773,
-	8773,
-	7229,
-	8694,
-	7149,
-	8773,
-	7229,
-	8935,
-	2235,
-	1540,
-	4213,
-	2203,
-	2153,
-	1447,
-	2241,
-	4226,
-	8773,
-	7229,
-	8773,
-	7229,
-	8659,
-	7107,
-	8773,
-	7229,
-	8659,
-	8773,
-	7229,
-	5287,
-	8738,
-	7229,
-	7229,
-	8773,
-	8773,
-	6469,
-	6469,
-	15064,
-	8935,
-	6469,
-	6469,
-	8935,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	8739,
+	7195,
+	8774,
+	8774,
+	7230,
+	8695,
+	7150,
+	8774,
+	7230,
+	8936,
 	2236,
-	1546,
-	778,
-	778,
-	4218,
-	8773,
-	7229,
-	8773,
-	7229,
-	8738,
-	7194,
-	8659,
-	7107,
-	5287,
-	8738,
-	8773,
-	8773,
-	7229,
-	792,
-	8935,
-	8773,
-	7229,
-	8773,
-	7229,
-	8773,
-	7229,
-	8773,
-	7229,
-	8686,
-	7141,
-	7229,
-	8773,
-	7229,
-	2216,
-	8773,
-	7229,
-	8738,
-	7194,
-	8773,
-	7229,
-	4226,
-	8773,
-	7229,
-	8773,
-	7229,
-	4226,
-	0,
-	0,
-	0,
-	0,
-	7229,
-	7229,
-	8773,
-	8659,
-	7107,
-	794,
-	7229,
-	7229,
-	4226,
-	4226,
-	7229,
-	8773,
-	7229,
-	2241,
-	2241,
-	7229,
-	4226,
-	14200,
-	7194,
-	7229,
-	7229,
-	3327,
-	8935,
-	2241,
-	7229,
-	8935,
-	5174,
-	4226,
-	8935,
-	5287,
-	15064,
-	8935,
-	6469,
-	6469,
-	7229,
-	7229,
-	2241,
-	7229,
-	7194,
-	6119,
-	4218,
-	4226,
-	8935,
-	5287,
-	7229,
-	6469,
-	13814,
-	8935,
-	13814,
-	13383,
-	13814,
-	12646,
-	15022,
-	15022,
-	15064,
-	9265,
-	10665,
-	8935,
-	8935,
-	7229,
-	8935,
-	7229,
-	12646,
-	12646,
-	10714,
-	11193,
-	0,
-	0,
-	0,
-	4226,
-	7229,
-	4226,
-	8935,
-	7229,
-	4226,
-	7344,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	8738,
-	8773,
-	4218,
-	14031,
-	15064,
-	2216,
-	8935,
-	8935,
-	2153,
-	8935,
-	7229,
-	2153,
-	7345,
-	7229,
-	4240,
-	6484,
-	0,
-	0,
-	0,
-	7229,
-	4226,
-	0,
-	0,
-	0,
-	8935,
-	0,
-	0,
-	0,
-	0,
-	8935,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	1558,
+	1541,
+	4214,
+	2204,
+	2154,
+	1448,
+	2242,
+	4227,
+	8774,
+	7230,
+	8774,
+	7230,
+	8660,
+	7108,
+	8774,
+	7230,
+	8660,
+	8774,
+	7230,
+	5288,
+	8739,
+	7230,
+	7230,
+	8774,
+	8774,
+	7230,
+	6470,
+	6470,
+	15065,
+	8936,
+	6470,
+	6470,
+	8936,
+	2237,
+	1547,
+	779,
+	779,
+	4219,
+	8774,
+	7230,
+	8774,
+	7230,
+	8739,
+	7195,
+	8660,
+	7108,
+	5288,
+	8739,
+	8774,
+	8774,
+	7230,
 	793,
-	4226,
-	8773,
-	7229,
-	8773,
-	7229,
-	8773,
-	7229,
-	8773,
-	7229,
-	2216,
-	8773,
-	7229,
-	8738,
-	7194,
-	8773,
-	7229,
+	7230,
+	8936,
+	8774,
+	7230,
+	8774,
+	7230,
+	8774,
+	7230,
+	8774,
+	7230,
+	8687,
+	7142,
+	7230,
+	8774,
+	7230,
+	2217,
+	8774,
+	7230,
+	8739,
+	7195,
+	8774,
+	7230,
+	4227,
+	8774,
+	7230,
+	8774,
+	7230,
+	4227,
+	0,
+	0,
+	0,
+	0,
+	7230,
+	7230,
+	8774,
+	8660,
+	7108,
+	795,
+	7230,
+	7230,
+	4227,
+	4227,
+	7230,
+	8774,
+	7230,
+	2242,
+	2242,
+	7230,
+	14201,
+	4227,
+	5288,
+	14201,
+	7195,
+	7230,
+	7230,
+	3328,
+	8936,
+	2242,
+	7230,
+	5288,
+	8936,
+	5175,
+	4227,
+	8936,
+	5288,
+	15065,
+	8936,
+	6470,
+	6470,
+	7230,
+	7230,
+	2242,
+	7230,
+	7195,
+	6120,
+	4219,
+	4227,
+	8936,
+	5288,
+	7230,
+	6470,
+	13815,
+	8936,
+	13815,
+	13384,
+	13815,
+	12647,
+	15023,
+	15023,
+	15065,
+	9266,
+	10666,
+	8936,
+	8936,
+	7230,
+	8936,
+	7230,
+	12647,
+	12647,
+	10715,
+	11194,
+	0,
+	0,
+	0,
+	4227,
+	7230,
+	4227,
+	8936,
+	7230,
+	4227,
+	7345,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	8739,
+	8774,
+	4219,
+	14032,
+	15065,
+	2217,
+	8936,
+	8936,
+	2154,
+	8936,
+	7230,
+	2154,
+	7346,
+	7230,
+	4241,
+	6485,
+	0,
+	0,
+	0,
+	7230,
+	4227,
+	0,
+	0,
+	0,
+	8936,
+	0,
+	0,
+	0,
+	0,
+	8936,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	1559,
+	794,
+	4227,
+	8774,
+	7230,
+	8774,
+	7230,
+	8774,
+	7230,
+	8774,
+	7230,
+	2217,
+	8774,
+	7230,
+	8739,
+	7195,
+	8774,
+	7230,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[8] = 
 {
 	{ 0x02000044, { 9, 7 } },
 	{ 0x06000032, { 0, 1 } },
-	{ 0x060000A6, { 1, 2 } },
-	{ 0x060000A7, { 3, 2 } },
-	{ 0x060000A8, { 5, 2 } },
-	{ 0x060000A9, { 7, 2 } },
-	{ 0x06000111, { 16, 1 } },
-	{ 0x06000112, { 17, 1 } },
+	{ 0x060000A8, { 1, 2 } },
+	{ 0x060000A9, { 3, 2 } },
+	{ 0x060000AA, { 5, 2 } },
+	{ 0x060000AB, { 7, 2 } },
+	{ 0x06000116, { 16, 1 } },
+	{ 0x06000117, { 17, 1 } },
 };
 extern const uint32_t g_rgctx_PurchasingFactory_GetConfig_TisT_t0E7CDBA5A24355DD0DD619265D36361F9895DD41_m28EECBFD7154A855C6C3D02F0A905D7C229DC844;
 extern const uint32_t g_rgctx_T_t343E6BEC13A4CED0C8C3843CF099F9DD2FF3F5CF;
@@ -1291,7 +1311,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_Purchasing_CodeGenModule
 const Il2CppCodeGenModule g_UnityEngine_Purchasing_CodeGenModule = 
 {
 	"UnityEngine.Purchasing.dll",
-	318,
+	323,
 	s_methodPointers,
 	5,
 	s_adjustorThunks,

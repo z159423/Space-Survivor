@@ -2226,11 +2226,13 @@ struct RequestCacheValidator_t21CD031336DECDDBA28550AE4353AA82CC37E301  : public
 struct SecureString_t6FBEB334D455CA90093BD446BBEBA47FE5B20C6C  : public RuntimeObject
 {
 	// System.Int32 System.Security.SecureString::length
-	int32_t ___length_0;
+	int32_t ___length_2;
 	// System.Boolean System.Security.SecureString::disposed
-	bool ___disposed_1;
+	bool ___disposed_3;
+	// System.Boolean System.Security.SecureString::read_only
+	bool ___read_only_4;
 	// System.Byte[] System.Security.SecureString::data
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___data_2;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___data_5;
 };
 
 // System.Runtime.Serialization.SerializationInfo

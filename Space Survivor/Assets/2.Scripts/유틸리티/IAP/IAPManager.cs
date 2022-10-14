@@ -9,8 +9,10 @@ using TMPro;
 public class IAPManager : MonoBehaviour, IStoreListener
 {
     IStoreController m_StoreController; // The Unity Purchasing system.
+    IExtensionProvider m_Extension;
 
     //Your products IDs. They should match the ids of your products in your store.
+    //com.TeroGames.spacesurvivor.
     public string removeAdsId = "removeads";
     public string starterPackId = "starterpack";
     public string megaPackId = "megapack";
@@ -106,23 +108,57 @@ public class IAPManager : MonoBehaviour, IStoreListener
         var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
 
         //Add products that will be purchasable and indicate its type.
-        builder.AddProduct(removeAdsId, ProductType.NonConsumable);
-        builder.AddProduct(starterPackId, ProductType.Consumable);
-        builder.AddProduct(megaPackId, ProductType.Consumable);
-        builder.AddProduct(ultraPackId, ProductType.Consumable);
+        // builder.AddProduct(removeAdsId, ProductType.NonConsumable);
+        // builder.AddProduct(starterPackId, ProductType.Consumable);
+        // builder.AddProduct(megaPackId, ProductType.Consumable);
+        // builder.AddProduct(ultraPackId, ProductType.Consumable);
+
+        builder.AddProduct(removeAdsId, ProductType.NonConsumable,
+        new IDs()
+        {
+            {"removeads", GooglePlay.Name}
+        });
+
+        builder.AddProduct(starterPackId, ProductType.Consumable,
+        new IDs()
+        {
+            {"starterpack", GooglePlay.Name}
+        });
+
+        builder.AddProduct(ultraPackId, ProductType.Consumable,
+        new IDs()
+        {
+            {"ultrapack", GooglePlay.Name}
+        });
+
+        builder.AddProduct(megaPackId, ProductType.Consumable,
+        new IDs()
+        {
+            {"megapack", GooglePlay.Name}
+        });
 
         UnityPurchasing.Initialize(this, builder);
 
         //HadPurchased();
     }
 
+    // public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
+    // {
+    //     Debug.Log("In-App Purchasing successfully initialized");
+
+    //     print("IAP 연동 성공");
+    //     m_StoreController = controller;
+
+    // }
+
     public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
     {
         Debug.Log("In-App Purchasing successfully initialized");
 
-        print("IAP 연동 성공");
-        m_StoreController = controller;
+        this.m_StoreController = controller;
+        this.m_Extension = extensions;
 
+        //UpdateUI();
     }
 
     public void OnInitializeFailed(InitializationFailureReason error)

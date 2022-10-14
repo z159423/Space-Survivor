@@ -125,6 +125,8 @@ struct AsymmetricSignatureDeformatter_tBB96AAAC1F942F159021BF6815E4E9ED0AEB1F3B;
 struct AsymmetricSignatureFormatter_t7635973FC93FEE7916DB89B4E0ED9A52F17557F0;
 // Mono.Math.BigInteger
 struct BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED;
+// System.Security.AccessControl.CryptoKeySecurity
+struct CryptoKeySecurity_tEFFD9D03832C8DD8A184B0FA143E85C6C4C3BAC7;
 // System.Security.Cryptography.CryptoStream
 struct CryptoStream_t8258B5E90AA951C21358547EA7C7BEB444441F65;
 // System.Security.Cryptography.CryptographicException
@@ -233,6 +235,8 @@ struct SHA384Managed_t10907EEA0832F2385FAD9D46B00B3789D6C547AC;
 struct SHA512Managed_tB1AB3D2ABFCDE9EFB2A43D3FFC3008B4FE85A89B;
 // System.Runtime.Serialization.SafeSerializationManager
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+// System.Security.SecureString
+struct SecureString_t6FBEB334D455CA90093BD446BBEBA47FE5B20C6C;
 // System.Security.SecurityDocument
 struct SecurityDocument_t1EF9C739012187A2E853E30DA404D76829A108AE;
 // System.Security.SecurityElement
@@ -475,21 +479,6 @@ struct AsymmetricSignatureDeformatter_tBB96AAAC1F942F159021BF6815E4E9ED0AEB1F3B 
 // System.Security.Cryptography.AsymmetricSignatureFormatter
 struct AsymmetricSignatureFormatter_t7635973FC93FEE7916DB89B4E0ED9A52F17557F0  : public RuntimeObject
 {
-};
-
-// System.Security.Cryptography.CspParameters
-struct CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3  : public RuntimeObject
-{
-	// System.Int32 System.Security.Cryptography.CspParameters::ProviderType
-	int32_t ___ProviderType_0;
-	// System.String System.Security.Cryptography.CspParameters::ProviderName
-	String_t* ___ProviderName_1;
-	// System.String System.Security.Cryptography.CspParameters::KeyContainerName
-	String_t* ___KeyContainerName_2;
-	// System.Int32 System.Security.Cryptography.CspParameters::KeyNumber
-	int32_t ___KeyNumber_3;
-	// System.Int32 System.Security.Cryptography.CspParameters::m_flags
-	int32_t ___m_flags_4;
 };
 
 // System.EventArgs
@@ -1059,6 +1048,27 @@ struct CryptoStream_t8258B5E90AA951C21358547EA7C7BEB444441F65  : public Stream_t
 	bool ____leaveOpen_17;
 };
 
+// System.Security.Cryptography.CspParameters
+struct CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3  : public RuntimeObject
+{
+	// System.Int32 System.Security.Cryptography.CspParameters::ProviderType
+	int32_t ___ProviderType_0;
+	// System.String System.Security.Cryptography.CspParameters::ProviderName
+	String_t* ___ProviderName_1;
+	// System.String System.Security.Cryptography.CspParameters::KeyContainerName
+	String_t* ___KeyContainerName_2;
+	// System.Int32 System.Security.Cryptography.CspParameters::KeyNumber
+	int32_t ___KeyNumber_3;
+	// System.Int32 System.Security.Cryptography.CspParameters::m_flags
+	int32_t ___m_flags_4;
+	// System.Security.AccessControl.CryptoKeySecurity System.Security.Cryptography.CspParameters::m_cryptoKeySecurity
+	CryptoKeySecurity_tEFFD9D03832C8DD8A184B0FA143E85C6C4C3BAC7* ___m_cryptoKeySecurity_5;
+	// System.Security.SecureString System.Security.Cryptography.CspParameters::m_keyPassword
+	SecureString_t6FBEB334D455CA90093BD446BBEBA47FE5B20C6C* ___m_keyPassword_6;
+	// System.IntPtr System.Security.Cryptography.CspParameters::m_parentWindowHandle
+	intptr_t ___m_parentWindowHandle_7;
+};
+
 // System.Delegate
 struct Delegate_t  : public RuntimeObject
 {
@@ -1305,17 +1315,17 @@ struct RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170_Static
 struct RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C  : public RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A
 {
 	// Mono.Security.Cryptography.KeyPairPersistence System.Security.Cryptography.RSACryptoServiceProvider::store
-	KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* ___store_3;
+	KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* ___store_6;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::persistKey
-	bool ___persistKey_4;
+	bool ___persistKey_7;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::persisted
-	bool ___persisted_5;
+	bool ___persisted_8;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::privateKeyExportable
-	bool ___privateKeyExportable_6;
+	bool ___privateKeyExportable_9;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::m_disposed
-	bool ___m_disposed_7;
+	bool ___m_disposed_10;
 	// Mono.Security.Cryptography.RSAManaged System.Security.Cryptography.RSACryptoServiceProvider::rsa
-	RSAManaged_t897B29EF76C459408E11A42680C942716D809001* ___rsa_8;
+	RSAManaged_t897B29EF76C459408E11A42680C942716D809001* ___rsa_11;
 };
 
 struct RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C_StaticFields
@@ -1328,31 +1338,31 @@ struct RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C_Static
 struct RSAManaged_t897B29EF76C459408E11A42680C942716D809001  : public RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A
 {
 	// System.Boolean Mono.Security.Cryptography.RSAManaged::isCRTpossible
-	bool ___isCRTpossible_2;
+	bool ___isCRTpossible_3;
 	// System.Boolean Mono.Security.Cryptography.RSAManaged::keyBlinding
-	bool ___keyBlinding_3;
+	bool ___keyBlinding_4;
 	// System.Boolean Mono.Security.Cryptography.RSAManaged::keypairGenerated
-	bool ___keypairGenerated_4;
+	bool ___keypairGenerated_5;
 	// System.Boolean Mono.Security.Cryptography.RSAManaged::m_disposed
-	bool ___m_disposed_5;
+	bool ___m_disposed_6;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::d
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___d_6;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___d_7;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::p
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___p_7;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___p_8;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::q
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___q_8;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___q_9;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::dp
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___dp_9;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___dp_10;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::dq
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___dq_10;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___dq_11;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::qInv
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___qInv_11;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___qInv_12;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::n
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___n_12;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___n_13;
 	// Mono.Math.BigInteger Mono.Security.Cryptography.RSAManaged::e
-	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___e_13;
+	BigInteger_t558902B37952162AF8408D05F8341E49AACAC1ED* ___e_14;
 	// Mono.Security.Cryptography.RSAManaged/KeyGeneratedEventHandler Mono.Security.Cryptography.RSAManaged::KeyGenerated
-	KeyGeneratedEventHandler_tB6F6C235FC6C71F4B5F6D6C87A5E4A38BC3549FC* ___KeyGenerated_14;
+	KeyGeneratedEventHandler_tB6F6C235FC6C71F4B5F6D6C87A5E4A38BC3549FC* ___KeyGenerated_15;
 };
 
 // System.Security.Cryptography.RijndaelManaged
@@ -12785,7 +12795,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider__ctor_mA3DCFA05
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider__ctor_m74A4B904FEAADB8D68D54E0DD680AE532042FFE9 (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, int32_t ___dwKeySize0, const RuntimeMethod* method) 
 {
 	{
-		__this->___privateKeyExportable_6 = (bool)1;
+		__this->___privateKeyExportable_9 = (bool)1;
 		RSA__ctor_mBBB2BDB3545EC263517C4882739F3D79990F7630(__this, NULL);
 		int32_t L_0 = ___dwKeySize0;
 		RSACryptoServiceProvider_Common_mB4886190942D48EED5F08EAA87516FA7BC7EE37B(__this, L_0, (bool)0, NULL);
@@ -12797,7 +12807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider__ctor_m95594DB8
 {
 	bool V_0 = false;
 	{
-		__this->___privateKeyExportable_6 = (bool)1;
+		__this->___privateKeyExportable_9 = (bool)1;
 		RSA__ctor_mBBB2BDB3545EC263517C4882739F3D79990F7630(__this, NULL);
 		CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* L_0 = ___parameters1;
 		V_0 = (bool)((!(((RuntimeObject*)(CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -12854,16 +12864,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_Common_mB488619
 		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_5 = (RSAManaged_t897B29EF76C459408E11A42680C942716D809001*)il2cpp_codegen_object_new(RSAManaged_t897B29EF76C459408E11A42680C942716D809001_il2cpp_TypeInfo_var);
 		NullCheck(L_5);
 		RSAManaged__ctor_m4B552B282B99F6BC184D8CB99FF5A2ECE82714C3(L_5, L_4, NULL);
-		__this->___rsa_8 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___rsa_8), (void*)L_5);
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_6 = __this->___rsa_8;
+		__this->___rsa_11 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___rsa_11), (void*)L_5);
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_6 = __this->___rsa_11;
 		KeyGeneratedEventHandler_tB6F6C235FC6C71F4B5F6D6C87A5E4A38BC3549FC* L_7 = (KeyGeneratedEventHandler_tB6F6C235FC6C71F4B5F6D6C87A5E4A38BC3549FC*)il2cpp_codegen_object_new(KeyGeneratedEventHandler_tB6F6C235FC6C71F4B5F6D6C87A5E4A38BC3549FC_il2cpp_TypeInfo_var);
 		NullCheck(L_7);
 		KeyGeneratedEventHandler__ctor_m5175361C70B5DFE4CDDE90986969DCDF098DD58F(L_7, __this, (intptr_t)((void*)RSACryptoServiceProvider_OnKeyGenerated_mF4F409622B100A87075A653C416A882CAB51030F_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		RSAManaged_add_KeyGenerated_m7FA3B020FB6D782A60C45165A1B753D9EC4549A2(L_6, L_7, NULL);
 		bool L_8 = ___parameters1;
-		__this->___persistKey_4 = L_8;
+		__this->___persistKey_7 = L_8;
 		bool L_9 = ___parameters1;
 		if (!L_9)
 		{
@@ -12903,8 +12913,8 @@ IL_007a:
 		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_16 = (KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6*)il2cpp_codegen_object_new(KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6_il2cpp_TypeInfo_var);
 		NullCheck(L_16);
 		KeyPairPersistence__ctor_mEDAD0CB8925F5188D527B6FF85B481D94DEDD5DC(L_16, L_15, NULL);
-		__this->___store_3 = L_16;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___store_3), (void*)L_16);
+		__this->___store_6 = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___store_6), (void*)L_16);
 		return;
 	}
 }
@@ -12923,9 +12933,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_Common_mFBF1A75
 		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_1 = (KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6*)il2cpp_codegen_object_new(KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6_il2cpp_TypeInfo_var);
 		NullCheck(L_1);
 		KeyPairPersistence__ctor_mEDAD0CB8925F5188D527B6FF85B481D94DEDD5DC(L_1, L_0, NULL);
-		__this->___store_3 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___store_3), (void*)L_1);
-		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_2 = __this->___store_3;
+		__this->___store_6 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___store_6), (void*)L_1);
+		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_2 = __this->___store_6;
 		NullCheck(L_2);
 		bool L_3;
 		L_3 = KeyPairPersistence_Load_m54CA39F726BE9A2A0E1F68C36ED67FA3A4C49A78(L_2, NULL);
@@ -12938,7 +12948,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_Common_mFBF1A75
 		NullCheck(L_6);
 		int32_t L_7;
 		L_7 = CspParameters_get_Flags_m94410636C81B30D1232D916A537A9E52AA04A15F_inline(L_6, NULL);
-		__this->___privateKeyExportable_6 = (bool)((((int32_t)((int32_t)((int32_t)L_7&4))) == ((int32_t)0))? 1 : 0);
+		__this->___privateKeyExportable_9 = (bool)((((int32_t)((int32_t)((int32_t)L_7&4))) == ((int32_t)0))? 1 : 0);
 		if (!((!(((uint32_t)((int32_t)((int32_t)L_5&8))) <= ((uint32_t)0)))? 1 : 0))
 		{
 			goto IL_0044;
@@ -12960,7 +12970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_Common_mFBF1A75
 
 IL_0044:
 	{
-		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_10 = __this->___store_3;
+		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_10 = __this->___store_6;
 		NullCheck(L_10);
 		String_t* L_11;
 		L_11 = KeyPairPersistence_get_KeyValue_m331C51273F86453500778DC1B87DDC3CEAE0EF32_inline(L_10, NULL);
@@ -12970,8 +12980,8 @@ IL_0044:
 		}
 	}
 	{
-		__this->___persisted_5 = (bool)1;
-		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_12 = __this->___store_3;
+		__this->___persisted_8 = (bool)1;
+		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_12 = __this->___store_6;
 		NullCheck(L_12);
 		String_t* L_13;
 		L_13 = KeyPairPersistence_get_KeyValue_m331C51273F86453500778DC1B87DDC3CEAE0EF32_inline(L_12, NULL);
@@ -13016,7 +13026,7 @@ IL_0010:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RSACryptoServiceProvider_get_KeySize_mC7FB61738E1B657A1CBD1E238D43C242455E6040 (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, const RuntimeMethod* method) 
 {
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_11;
 		if (L_0)
 		{
 			goto IL_000f;
@@ -13029,7 +13039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RSACryptoServiceProvider_get_KeySize_
 
 IL_000f:
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_2 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_2 = __this->___rsa_11;
 		NullCheck(L_2);
 		int32_t L_3;
 		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 System.Security.Cryptography.AsymmetricAlgorithm::get_KeySize() */, L_2);
@@ -13040,7 +13050,7 @@ IL_000f:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RSACryptoServiceProvider_get_PublicOnly_mA9FB1ABFDF5D4E7355DC09980EF5C2EEF6236504 (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, const RuntimeMethod* method) 
 {
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_11;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = RSAManaged_get_PublicOnly_m342FC195A5AADA4012C269D2F45486C5729EFE6F(L_0, NULL);
@@ -13051,7 +13061,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RSACryptoServiceProvider_get_PublicOnly_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* RSACryptoServiceProvider_EncryptValue_m9597A92349632F5A2F2C053300ECA00308AD7445 (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___rgb0, const RuntimeMethod* method) 
 {
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_11;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = ___rgb0;
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2;
@@ -13072,7 +13082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RSAParameters_t14B738B69F9D1EB594D5F391BDF8E4
 		}
 	}
 	{
-		bool L_1 = __this->___privateKeyExportable_6;
+		bool L_1 = __this->___privateKeyExportable_9;
 		if (L_1)
 		{
 			goto IL_0016;
@@ -13087,7 +13097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RSAParameters_t14B738B69F9D1EB594D5F391BDF8E4
 
 IL_0016:
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_3 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_3 = __this->___rsa_11;
 		bool L_4 = ___includePrivateParameters0;
 		NullCheck(L_3);
 		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_5;
@@ -13174,7 +13184,7 @@ IL_006c:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_ImportParameters_m8C78A6FB239B313820DA1B4ABD177B1913BC157C (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF ___parameters0, const RuntimeMethod* method) 
 {
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_0 = __this->___rsa_11;
 		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_1 = ___parameters0;
 		NullCheck(L_0);
 		VirtualActionInvoker1< RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF >::Invoke(12 /* System.Void System.Security.Cryptography.RSA::ImportParameters(System.Security.Cryptography.RSAParameters) */, L_0, L_1);
@@ -13364,49 +13374,49 @@ IL_002d:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_Dispose_m4C2471DFA9B6E886B786BF6D7B33C4CA099CF002 (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, bool ___disposing0, const RuntimeMethod* method) 
 {
 	{
-		bool L_0 = __this->___m_disposed_7;
+		bool L_0 = __this->___m_disposed_10;
 		if (L_0)
 		{
 			goto IL_003d;
 		}
 	}
 	{
-		bool L_1 = __this->___persisted_5;
+		bool L_1 = __this->___persisted_8;
 		if (!L_1)
 		{
 			goto IL_0023;
 		}
 	}
 	{
-		bool L_2 = __this->___persistKey_4;
+		bool L_2 = __this->___persistKey_7;
 		if (L_2)
 		{
 			goto IL_0023;
 		}
 	}
 	{
-		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_3 = __this->___store_3;
+		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_3 = __this->___store_6;
 		NullCheck(L_3);
 		KeyPairPersistence_Remove_mBF912685AFD920126AACBF2950893576F4308888(L_3, NULL);
 	}
 
 IL_0023:
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_4 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_4 = __this->___rsa_11;
 		if (!L_4)
 		{
 			goto IL_0036;
 		}
 	}
 	{
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_5 = __this->___rsa_8;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_5 = __this->___rsa_11;
 		NullCheck(L_5);
 		AsymmetricAlgorithm_Clear_m786C408F7FFE6844D1C2A44F085D28055B61DEE6(L_5, NULL);
 	}
 
 IL_0036:
 	{
-		__this->___m_disposed_7 = (bool)1;
+		__this->___m_disposed_10 = (bool)1;
 	}
 
 IL_003d:
@@ -13418,22 +13428,22 @@ IL_003d:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_OnKeyGenerated_mF4F409622B100A87075A653C416A882CAB51030F (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, RuntimeObject* ___sender0, EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377* ___e1, const RuntimeMethod* method) 
 {
 	{
-		bool L_0 = __this->___persistKey_4;
+		bool L_0 = __this->___persistKey_7;
 		if (!L_0)
 		{
 			goto IL_0041;
 		}
 	}
 	{
-		bool L_1 = __this->___persisted_5;
+		bool L_1 = __this->___persisted_8;
 		if (L_1)
 		{
 			goto IL_0041;
 		}
 	}
 	{
-		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_2 = __this->___store_3;
-		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_3 = __this->___rsa_8;
+		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_2 = __this->___store_6;
+		RSAManaged_t897B29EF76C459408E11A42680C942716D809001* L_3 = __this->___rsa_11;
 		NullCheck(L_3);
 		bool L_4;
 		L_4 = RSAManaged_get_PublicOnly_m342FC195A5AADA4012C269D2F45486C5729EFE6F(L_3, NULL);
@@ -13441,10 +13451,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_OnKeyGenerated_
 		L_5 = VirtualFuncInvoker1< String_t*, bool >::Invoke(9 /* System.String System.Security.Cryptography.AsymmetricAlgorithm::ToXmlString(System.Boolean) */, __this, (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0));
 		NullCheck(L_2);
 		KeyPairPersistence_set_KeyValue_m4FFF2A6100E07BF33C1EB0D4C98E3ECDC536D6EB(L_2, L_5, NULL);
-		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_6 = __this->___store_3;
+		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_6 = __this->___store_6;
 		NullCheck(L_6);
 		KeyPairPersistence_Save_m19F91B457374C019AB4BDDECA7E02A30DBFBC801(L_6, NULL);
-		__this->___persisted_5 = (bool)1;
+		__this->___persisted_8 = (bool)1;
 	}
 
 IL_0041:

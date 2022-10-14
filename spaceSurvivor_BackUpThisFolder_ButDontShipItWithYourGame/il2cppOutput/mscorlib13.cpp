@@ -222,6 +222,8 @@ struct Claim_tC8C7CACAF0F1EAB2F79A4B59E98C5FA44EFE3C14;
 struct ClaimsIdentity_tF926D758CB543B2C0FC3D0620E1F9BC597889206;
 // System.Globalization.CompareInfo
 struct CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57;
+// System.Security.AccessControl.CryptoKeySecurity
+struct CryptoKeySecurity_tEFFD9D03832C8DD8A184B0FA143E85C6C4C3BAC7;
 // System.Security.Cryptography.CryptoStream
 struct CryptoStream_t8258B5E90AA951C21358547EA7C7BEB444441F65;
 // System.Security.Cryptography.CryptographicException
@@ -362,6 +364,8 @@ struct SHA512Managed_tB1AB3D2ABFCDE9EFB2A43D3FFC3008B4FE85A89B;
 struct SafePasswordHandle_t07A3BFCF046DFE44216ACE030F838C8AE2564463;
 // System.Runtime.Serialization.SafeSerializationManager
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+// System.Security.SecureString
+struct SecureString_t6FBEB334D455CA90093BD446BBEBA47FE5B20C6C;
 // System.Security.SecurityException
 struct SecurityException_t025CB4C23107E67E07CF085826B40EDE72F8165C;
 // System.Runtime.Serialization.SerializationException
@@ -474,6 +478,7 @@ IL2CPP_EXTERN_C RuntimeClass* SHA256Managed_tEAE28B435F58357D5C98CDA1AD29B2130C1
 IL2CPP_EXTERN_C RuntimeClass* SHA384Managed_t10907EEA0832F2385FAD9D46B00B3789D6C547AC_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SHA512Managed_tB1AB3D2ABFCDE9EFB2A43D3FFC3008B4FE85A89B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SecurityException_t025CB4C23107E67E07CF085826B40EDE72F8165C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SerializationException_t09D5CC39CEF9CC37AC9D2E0C6DBE050B4E3F8CA7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringBuilder_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SymmetricAlgorithm_t8C631E4E7B9073CCBD856F8D559A62EB5616BBE8_il2cpp_TypeInfo_var;
@@ -945,21 +950,6 @@ struct CryptoConfigForwarder_tAA06848C1F732BAF4484A73C45B34F3E8F2F9877  : public
 {
 };
 
-// System.Security.Cryptography.CspParameters
-struct CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3  : public RuntimeObject
-{
-	// System.Int32 System.Security.Cryptography.CspParameters::ProviderType
-	int32_t ___ProviderType_0;
-	// System.String System.Security.Cryptography.CspParameters::ProviderName
-	String_t* ___ProviderName_1;
-	// System.String System.Security.Cryptography.CspParameters::KeyContainerName
-	String_t* ___KeyContainerName_2;
-	// System.Int32 System.Security.Cryptography.CspParameters::KeyNumber
-	int32_t ___KeyNumber_3;
-	// System.Int32 System.Security.Cryptography.CspParameters::m_flags
-	int32_t ___m_flags_4;
-};
-
 // System.Globalization.CultureInfo
 struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0  : public RuntimeObject
 {
@@ -1230,6 +1220,11 @@ struct HashAlgorithm_t299ECE61BBF4582B1F75734D43A96DDEC9B2004D  : public Runtime
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___HashValue_2;
 	// System.Int32 System.Security.Cryptography.HashAlgorithm::State
 	int32_t ___State_3;
+};
+
+// System.Security.Principal.IdentityReference
+struct IdentityReference_t5DEC59C089EDACE7B0B19339E5E16B196C9C08CB  : public RuntimeObject
+{
 };
 
 // Mono.Security.Cryptography.KeyPairPersistence
@@ -1795,6 +1790,21 @@ struct SHA512_t4D716D49F898611875B880291C726B1D1DE354C8  : public HashAlgorithm_
 {
 };
 
+// System.Security.Principal.SecurityIdentifier
+struct SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026  : public IdentityReference_t5DEC59C089EDACE7B0B19339E5E16B196C9C08CB
+{
+	// System.Byte[] System.Security.Principal.SecurityIdentifier::buffer
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___buffer_0;
+};
+
+struct SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026_StaticFields
+{
+	// System.Int32 System.Security.Principal.SecurityIdentifier::MaxBinaryLength
+	int32_t ___MaxBinaryLength_1;
+	// System.Int32 System.Security.Principal.SecurityIdentifier::MinBinaryLength
+	int32_t ___MinBinaryLength_2;
+};
+
 // System.Runtime.Serialization.StreamingContext
 struct StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 
 {
@@ -1877,6 +1887,27 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 		};
 		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
 	};
+};
+
+// System.Security.Cryptography.CspParameters
+struct CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3  : public RuntimeObject
+{
+	// System.Int32 System.Security.Cryptography.CspParameters::ProviderType
+	int32_t ___ProviderType_0;
+	// System.String System.Security.Cryptography.CspParameters::ProviderName
+	String_t* ___ProviderName_1;
+	// System.String System.Security.Cryptography.CspParameters::KeyContainerName
+	String_t* ___KeyContainerName_2;
+	// System.Int32 System.Security.Cryptography.CspParameters::KeyNumber
+	int32_t ___KeyNumber_3;
+	// System.Int32 System.Security.Cryptography.CspParameters::m_flags
+	int32_t ___m_flags_4;
+	// System.Security.AccessControl.CryptoKeySecurity System.Security.Cryptography.CspParameters::m_cryptoKeySecurity
+	CryptoKeySecurity_tEFFD9D03832C8DD8A184B0FA143E85C6C4C3BAC7* ___m_cryptoKeySecurity_5;
+	// System.Security.SecureString System.Security.Cryptography.CspParameters::m_keyPassword
+	SecureString_t6FBEB334D455CA90093BD446BBEBA47FE5B20C6C* ___m_keyPassword_6;
+	// System.IntPtr System.Security.Cryptography.CspParameters::m_parentWindowHandle
+	intptr_t ___m_parentWindowHandle_7;
 };
 
 // System.Security.Cryptography.DESCryptoServiceProvider
@@ -2184,17 +2215,17 @@ struct RNGCryptoServiceProvider_tAD9D75EFF3D2ED0929EEE27A53BE82AB83D78170_Static
 struct RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C  : public RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A
 {
 	// Mono.Security.Cryptography.KeyPairPersistence System.Security.Cryptography.RSACryptoServiceProvider::store
-	KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* ___store_3;
+	KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* ___store_6;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::persistKey
-	bool ___persistKey_4;
+	bool ___persistKey_7;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::persisted
-	bool ___persisted_5;
+	bool ___persisted_8;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::privateKeyExportable
-	bool ___privateKeyExportable_6;
+	bool ___privateKeyExportable_9;
 	// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::m_disposed
-	bool ___m_disposed_7;
+	bool ___m_disposed_10;
 	// Mono.Security.Cryptography.RSAManaged System.Security.Cryptography.RSACryptoServiceProvider::rsa
-	RSAManaged_t897B29EF76C459408E11A42680C942716D809001* ___rsa_8;
+	RSAManaged_t897B29EF76C459408E11A42680C942716D809001* ___rsa_11;
 };
 
 struct RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C_StaticFields
@@ -19905,6 +19936,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CertificateImpl_tF590E81705CE1FE152C590E5
 		X509CertificateImpl_tF590E81705CE1FE152C590E5A875D4FE3BE348EF* L_4;
 		L_4 = InterfaceFuncInvoker4< X509CertificateImpl_tF590E81705CE1FE152C590E5A875D4FE3BE348EF*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, SafePasswordHandle_t07A3BFCF046DFE44216ACE030F838C8AE2564463*, int32_t, int32_t >::Invoke(1 /* System.Security.Cryptography.X509Certificates.X509CertificateImpl Mono.ISystemCertificateProvider::Import(System.Byte[],Microsoft.Win32.SafeHandles.SafePasswordHandle,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,Mono.CertificateImportFlags) */, ISystemCertificateProvider_tD96B63AE8138FB217E95424DDE8330800003146D_il2cpp_TypeInfo_var, L_0, L_1, L_2, L_3, 0);
 		return L_4;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Security.Principal.SecurityIdentifier::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SecurityIdentifier__cctor_mD4F558FED6EDFFC2102821D47CDB93336428333A (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		((SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026_StaticFields*)il2cpp_codegen_static_fields_for(SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026_il2cpp_TypeInfo_var))->___MaxBinaryLength_1 = ((int32_t)68);
+		((SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026_StaticFields*)il2cpp_codegen_static_fields_for(SecurityIdentifier_t98BF4E3CA88D1FB4FD864E4507ABB73AFEA2C026_il2cpp_TypeInfo_var))->___MinBinaryLength_2 = 8;
+		return;
 	}
 }
 #ifdef __clang__

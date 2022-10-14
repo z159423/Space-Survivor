@@ -450,7 +450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OSXStoreBindings_FinishTransaction_mE289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OSXStoreBindings_get_appReceipt_mECA7C48A499AA98C8EAFCFC0D420AAB157508DBE (OSXStoreBindings_t07AE7B9ED38F91E24390B891BF76B405FD3163CD* __this, const RuntimeMethod* method) 
 {
 	{
-		// throw new NotImplementedException();
+		// public string appReceipt => throw new NotImplementedException();
 		NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8* L_0 = (NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotImplementedException__ctor_mDAB47BC6BD0E342E8F2171E5CABE3E67EA049F1C(L_0, NULL);
@@ -461,7 +461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OSXStoreBindings_get_appReceipt_mEC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OSXStoreBindings_get_canMakePayments_mEB48EBA32F72DFB585C9910969ED5A55D8A3C622 (OSXStoreBindings_t07AE7B9ED38F91E24390B891BF76B405FD3163CD* __this, const RuntimeMethod* method) 
 {
 	{
-		// throw new NotImplementedException();
+		// public bool canMakePayments => throw new NotImplementedException();
 		NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8* L_0 = (NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotImplementedException__ctor_mDAB47BC6BD0E342E8F2171E5CABE3E67EA049F1C(L_0, NULL);
@@ -472,7 +472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OSXStoreBindings_get_canMakePayments_mEB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OSXStoreBindings_get_simulateAskToBuy_m0CD09D81A173C83E2AF59CF2B97CFC275AA6F358 (OSXStoreBindings_t07AE7B9ED38F91E24390B891BF76B405FD3163CD* __this, const RuntimeMethod* method) 
 {
 	{
-		// throw new NotImplementedException();
+		// get => throw new NotImplementedException();
 		NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8* L_0 = (NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotImplementedException__ctor_mDAB47BC6BD0E342E8F2171E5CABE3E67EA049F1C(L_0, NULL);
@@ -483,7 +483,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OSXStoreBindings_get_simulateAskToBuy_m0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OSXStoreBindings_set_simulateAskToBuy_m4CCABCEE43807955F49C43DC869574BE86F21440 (OSXStoreBindings_t07AE7B9ED38F91E24390B891BF76B405FD3163CD* __this, bool ___value0, const RuntimeMethod* method) 
 {
 	{
-		// throw new NotImplementedException();
+		// set => throw new NotImplementedException();
 		NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8* L_0 = (NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotImplementedException__ctor_mDAB47BC6BD0E342E8F2171E5CABE3E67EA049F1C(L_0, NULL);

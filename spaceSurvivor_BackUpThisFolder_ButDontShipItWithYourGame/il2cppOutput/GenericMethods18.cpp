@@ -9329,7 +9329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MiniJsonExtensions_Get_TisRunt
 
 IL_0016:
 	{
-		// return default(T);
+		// return default;
 		il2cpp_codegen_initobj((&V_0), sizeof(RuntimeObject*));
 		RuntimeObject* L_6 = V_0;
 		return L_6;
@@ -9382,7 +9382,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MiniJsonExtensions_GetEnum_Tis
 
 IL_002b:
 	{
-		// return default(T);
+		// return default;
 		il2cpp_codegen_initobj((&V_0), sizeof(RuntimeObject*));
 		RuntimeObject* L_10 = V_0;
 		return L_10;

@@ -15346,7 +15346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass10_0_1_U3CStartUIU3
 	}
 	int32_t V_0 = 0;
 	{
-		// T value = (T)(object)codeValue;
+		// var value = (T)(object)codeValue;
 		int32_t L_0 = ___codeValue1;
 		int32_t L_1 = L_0;
 		RuntimeObject* L_2 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_1);
@@ -15388,7 +15388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass10_0_1_U3CStartUIU3
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		// T value = (T)(object)codeValue;
+		// var value = (T)(object)codeValue;
 		int32_t L_0 = ___codeValue1;
 		int32_t L_1 = L_0;
 		RuntimeObject* L_2 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_1);

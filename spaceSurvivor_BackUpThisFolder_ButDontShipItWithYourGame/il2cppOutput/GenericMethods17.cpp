@@ -1195,6 +1195,8 @@ struct JsonConverterCollection_t6EEC84565C08B14107276B5023CE9E978DFCDF89;
 struct JsonFormatterConverter_t71B1F9BBCA14FC1C76418EA5A76F5C118D2BAD99;
 // Newtonsoft.Json.Serialization.JsonISerializableContract
 struct JsonISerializableContract_tF211386C51292464AAB5B3F0B452C58B91CFE247;
+// Stores.Util.JsonProductDescriptionsDeserializer
+struct JsonProductDescriptionsDeserializer_t72472C8FB06674E5AA27CC1B3788FA050896E0C4;
 // Newtonsoft.Json.Serialization.JsonProperty
 struct JsonProperty_t8AC6AE6C6E97559E27739FDD2B6A3DA659FF04F3;
 // Newtonsoft.Json.JsonReader
@@ -6152,10 +6154,12 @@ struct JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696  : public AbstractSto
 	StandardPurchasingModule_t988B3F7D9F73F5C6458E0DBB35AC92CDD3DA2489* ___m_Module_5;
 	// UnityEngine.ILogger UnityEngine.Purchasing.JSONStore::m_Logger
 	RuntimeObject* ___m_Logger_6;
+	// Stores.Util.JsonProductDescriptionsDeserializer UnityEngine.Purchasing.JSONStore::m_ProductDescriptionsDeserializer
+	JsonProductDescriptionsDeserializer_t72472C8FB06674E5AA27CC1B3788FA050896E0C4* ___m_ProductDescriptionsDeserializer_7;
 	// UnityEngine.Purchasing.Extension.PurchaseFailureDescription UnityEngine.Purchasing.JSONStore::m_LastPurchaseFailureDescription
-	PurchaseFailureDescription_t3E3F2EE6035C1BAE5EDB48CF61337896AFEAC3E4* ___m_LastPurchaseFailureDescription_7;
+	PurchaseFailureDescription_t3E3F2EE6035C1BAE5EDB48CF61337896AFEAC3E4* ___m_LastPurchaseFailureDescription_8;
 	// UnityEngine.Purchasing.StoreSpecificPurchaseErrorCode UnityEngine.Purchasing.JSONStore::m_LastPurchaseErrorCode
-	int32_t ___m_LastPurchaseErrorCode_8;
+	int32_t ___m_LastPurchaseErrorCode_9;
 };
 
 // Newtonsoft.Json.Linq.JValue
@@ -7840,17 +7844,17 @@ struct Exception_t_marshaled_com
 struct FakeStore_tB59149351CDC01449882282D7CBFB8269FDEC16F  : public JSONStore_t4F4299E0B4B18E75E186730A5F005114C144B696
 {
 	// UnityEngine.Purchasing.Extension.IStoreCallback UnityEngine.Purchasing.FakeStore::m_Biller
-	RuntimeObject* ___m_Biller_11;
+	RuntimeObject* ___m_Biller_12;
 	// System.Collections.Generic.List`1<System.String> UnityEngine.Purchasing.FakeStore::m_PurchasedProducts
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___m_PurchasedProducts_12;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___m_PurchasedProducts_13;
 	// System.Boolean UnityEngine.Purchasing.FakeStore::purchaseCalled
-	bool ___purchaseCalled_13;
+	bool ___purchaseCalled_14;
 	// System.Boolean UnityEngine.Purchasing.FakeStore::restoreCalled
-	bool ___restoreCalled_14;
+	bool ___restoreCalled_15;
 	// System.String UnityEngine.Purchasing.FakeStore::<unavailableProductId>k__BackingField
-	String_t* ___U3CunavailableProductIdU3Ek__BackingField_15;
+	String_t* ___U3CunavailableProductIdU3Ek__BackingField_16;
 	// UnityEngine.Purchasing.FakeStoreUIMode UnityEngine.Purchasing.FakeStore::UIMode
-	int32_t ___UIMode_16;
+	int32_t ___UIMode_17;
 };
 
 // System.Runtime.InteropServices.GCHandle

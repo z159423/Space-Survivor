@@ -1709,25 +1709,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Version_t369469EEC2175C381EC194CBB5D7AD26161F
 	Version_t369469EEC2175C381EC194CBB5D7AD26161F45D3 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		// Version v = new Version();
+		// var v = new Version
+		// {
+		//     major = MajorVersion(version),
+		//     minor = MinorVersion(version),
+		//     patch = PatchVersion(version)
+		// };
 		il2cpp_codegen_initobj((&V_0), sizeof(Version_t369469EEC2175C381EC194CBB5D7AD26161F45D3));
-		// v.major = MajorVersion(version);
 		String_t* L_0 = ___version0;
 		int32_t L_1;
 		L_1 = VersionCheck_MajorVersion_mF4D5D679E841A5783FA888665919932B4A59465D(L_0, NULL);
 		(&V_0)->___major_0 = L_1;
-		// v.minor = MinorVersion(version);
 		String_t* L_2 = ___version0;
 		int32_t L_3;
 		L_3 = VersionCheck_MinorVersion_m17752BBF5334A22FAC2678DEA1783EEA525C4B75(L_2, NULL);
 		(&V_0)->___minor_1 = L_3;
-		// v.patch = PatchVersion(version);
 		String_t* L_4 = ___version0;
 		int32_t L_5;
 		L_5 = VersionCheck_PatchVersion_m958BC754897A5E336F4D0F1757ECD7AFE8A14DE3(L_4, NULL);
 		(&V_0)->___patch_2 = L_5;
-		// return v;
 		Version_t369469EEC2175C381EC194CBB5D7AD26161F45D3 L_6 = V_0;
+		// return v;
 		return L_6;
 	}
 }
@@ -1744,7 +1746,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t VersionCheck_PartialVersion_mC7BF8C74
 	int32_t V_0 = 0;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_1 = NULL;
 	{
-		// string[] parts = version.Split(new char[] { 'a', 'b', 'f', 'p' });
+		// var parts = version.Split(new char[] { 'a', 'b', 'f', 'p' });
 		String_t* L_0 = ___version0;
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_1 = (CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)SZArrayNew(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB_il2cpp_TypeInfo_var, (uint32_t)4);
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_2 = L_1;
@@ -1757,9 +1759,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t VersionCheck_PartialVersion_mC7BF8C74
 		NullCheck(L_4);
 		int32_t L_5 = 0;
 		String_t* L_6 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
-		// int result = 0;
+		// var result = 0;
 		V_0 = 0;
-		// string[] versions = prefix.Split('.');
+		// var versions = prefix.Split('.');
 		NullCheck(L_6);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7;
 		L_7 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_6, ((int32_t)46), 0, NULL);
@@ -2009,7 +2011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1A
 	String_t* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		// Dictionary<string, object> table = new Dictionary<string, object>();
+		// var table = new Dictionary<string, object>();
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_0 = (Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)il2cpp_codegen_object_new(Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		Dictionary_2__ctor_mC4F3DF292BAD88F4BF193C49CD689FAEBC4570A9(L_0, Dictionary_2__ctor_mC4F3DF292BAD88F4BF193C49CD689FAEBC4570A9_RuntimeMethod_var);
@@ -2066,7 +2068,7 @@ IL_0028:
 
 IL_002a:
 	{
-		// string name = ParseString();
+		// var name = ParseString();
 		String_t* L_8;
 		L_8 = Parser_ParseString_m96982EF2B3A96E2AF0C5BFE56D7BF069F5D5B0CB(__this, NULL);
 		V_1 = L_8;
@@ -2131,7 +2133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9
 	int32_t V_2 = 0;
 	RuntimeObject* V_3 = NULL;
 	{
-		// List<object> array = new List<object>();
+		// var array = new List<object>();
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_0 = (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)il2cpp_codegen_object_new(List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690(L_0, List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_RuntimeMethod_var);
@@ -2148,7 +2150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9
 
 IL_0016:
 	{
-		// TOKEN nextToken = NextToken;
+		// var nextToken = NextToken;
 		int32_t L_3;
 		L_3 = Parser_get_NextToken_m12BEE52A4D5389619AB3BF2F7975B98168A6E355(__this, NULL);
 		V_2 = L_3;
@@ -2192,7 +2194,7 @@ IL_002c:
 
 IL_0030:
 	{
-		// object value = ParseByToken(nextToken);
+		// var value = ParseByToken(nextToken);
 		int32_t L_7 = V_2;
 		RuntimeObject* L_8;
 		L_8 = Parser_ParseByToken_m3B16890600DA42CE38616668ADC8630B8D45E374(__this, L_7, NULL);
@@ -2224,7 +2226,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Parser_ParseValue_m5BFFB59E2A9
 {
 	int32_t V_0 = 0;
 	{
-		// TOKEN nextToken = NextToken;
+		// var nextToken = NextToken;
 		int32_t L_0;
 		L_0 = Parser_get_NextToken_m12BEE52A4D5389619AB3BF2F7975B98168A6E355(__this, NULL);
 		V_0 = L_0;
@@ -2375,7 +2377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Parser_ParseString_m96982EF2B3A96E2
 	CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* V_3 = NULL;
 	int32_t V_4 = 0;
 	{
-		// StringBuilder s = new StringBuilder();
+		// var s = new StringBuilder();
 		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_0, NULL);
@@ -2385,9 +2387,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Parser_ParseString_m96982EF2B3A96E2
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(10 /* System.Int32 System.IO.TextReader::Read() */, L_1);
-		// bool parsing = true;
+		// var parsing = true;
 		V_2 = (bool)1;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
 IL_0019:
@@ -2397,19 +2399,11 @@ IL_0019:
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(9 /* System.Int32 System.IO.TextReader::Peek() */, L_3);
-		if ((!(((uint32_t)L_4) == ((uint32_t)(-1)))))
+		if ((((int32_t)L_4) == ((int32_t)(-1))))
 		{
-			goto IL_002e;
+			goto IL_0139;
 		}
 	}
-	{
-		// parsing = false;
-		V_2 = (bool)0;
-		// break;
-		goto IL_013d;
-	}
-
-IL_002e:
 	{
 		// c = NextChar;
 		Il2CppChar L_5;
@@ -2418,29 +2412,29 @@ IL_002e:
 		Il2CppChar L_6 = V_1;
 		if ((((int32_t)L_6) == ((int32_t)((int32_t)34))))
 		{
-			goto IL_0044;
+			goto IL_0040;
 		}
 	}
 	{
 		Il2CppChar L_7 = V_1;
 		if ((((int32_t)L_7) == ((int32_t)((int32_t)92))))
 		{
-			goto IL_004b;
+			goto IL_0047;
 		}
 	}
 	{
-		goto IL_012f;
+		goto IL_012b;
 	}
 
-IL_0044:
+IL_0040:
 	{
 		// parsing = false;
 		V_2 = (bool)0;
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_004b:
+IL_0047:
 	{
 		// if (json.Peek() == -1)
 		StringReader_t1A336148FF22A9584E759A9D720CC96C23E35DD8* L_8 = __this->___json_1;
@@ -2449,17 +2443,17 @@ IL_004b:
 		L_9 = VirtualFuncInvoker0< int32_t >::Invoke(9 /* System.Int32 System.IO.TextReader::Peek() */, L_8);
 		if ((!(((uint32_t)L_9) == ((uint32_t)(-1)))))
 		{
-			goto IL_0060;
+			goto IL_005c;
 		}
 	}
 	{
 		// parsing = false;
 		V_2 = (bool)0;
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_0060:
+IL_005c:
 	{
 		// c = NextChar;
 		Il2CppChar L_10;
@@ -2468,66 +2462,66 @@ IL_0060:
 		Il2CppChar L_11 = V_1;
 		if ((!(((uint32_t)L_11) <= ((uint32_t)((int32_t)92)))))
 		{
-			goto IL_0080;
+			goto IL_007c;
 		}
 	}
 	{
 		Il2CppChar L_12 = V_1;
 		if ((((int32_t)L_12) == ((int32_t)((int32_t)34))))
 		{
-			goto IL_00b7;
+			goto IL_00b3;
 		}
 	}
 	{
 		Il2CppChar L_13 = V_1;
 		if ((((int32_t)L_13) == ((int32_t)((int32_t)47))))
 		{
-			goto IL_00b7;
+			goto IL_00b3;
 		}
 	}
 	{
 		Il2CppChar L_14 = V_1;
 		if ((((int32_t)L_14) == ((int32_t)((int32_t)92))))
 		{
-			goto IL_00b7;
+			goto IL_00b3;
 		}
 	}
 	{
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_0080:
+IL_007c:
 	{
 		Il2CppChar L_15 = V_1;
 		if ((!(((uint32_t)L_15) <= ((uint32_t)((int32_t)102)))))
 		{
-			goto IL_0094;
+			goto IL_0090;
 		}
 	}
 	{
 		Il2CppChar L_16 = V_1;
 		if ((((int32_t)L_16) == ((int32_t)((int32_t)98))))
 		{
-			goto IL_00c1;
+			goto IL_00bd;
 		}
 	}
 	{
 		Il2CppChar L_17 = V_1;
 		if ((((int32_t)L_17) == ((int32_t)((int32_t)102))))
 		{
-			goto IL_00cb;
+			goto IL_00c7;
 		}
 	}
 	{
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_0094:
+IL_0090:
 	{
 		Il2CppChar L_18 = V_1;
 		if ((((int32_t)L_18) == ((int32_t)((int32_t)110))))
 		{
-			goto IL_00d6;
+			goto IL_00d2;
 		}
 	}
 	{
@@ -2536,27 +2530,27 @@ IL_0094:
 		{
 			case 0:
 			{
-				goto IL_00e1;
+				goto IL_00dd;
 			}
 			case 1:
 			{
-				goto IL_0137;
+				goto IL_0133;
 			}
 			case 2:
 			{
-				goto IL_00ec;
+				goto IL_00e8;
 			}
 			case 3:
 			{
-				goto IL_00f7;
+				goto IL_00f3;
 			}
 		}
 	}
 	{
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_00b7:
+IL_00b3:
 	{
 		// s.Append(c);
 		StringBuilder_t* L_20 = V_0;
@@ -2565,10 +2559,10 @@ IL_00b7:
 		StringBuilder_t* L_22;
 		L_22 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_20, L_21, NULL);
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_00c1:
+IL_00bd:
 	{
 		// s.Append('\b');
 		StringBuilder_t* L_23 = V_0;
@@ -2576,10 +2570,10 @@ IL_00c1:
 		StringBuilder_t* L_24;
 		L_24 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_23, 8, NULL);
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_00cb:
+IL_00c7:
 	{
 		// s.Append('\f');
 		StringBuilder_t* L_25 = V_0;
@@ -2587,10 +2581,10 @@ IL_00cb:
 		StringBuilder_t* L_26;
 		L_26 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_25, ((int32_t)12), NULL);
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_00d6:
+IL_00d2:
 	{
 		// s.Append('\n');
 		StringBuilder_t* L_27 = V_0;
@@ -2598,10 +2592,10 @@ IL_00d6:
 		StringBuilder_t* L_28;
 		L_28 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_27, ((int32_t)10), NULL);
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_00e1:
+IL_00dd:
 	{
 		// s.Append('\r');
 		StringBuilder_t* L_29 = V_0;
@@ -2609,10 +2603,10 @@ IL_00e1:
 		StringBuilder_t* L_30;
 		L_30 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_29, ((int32_t)13), NULL);
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_00ec:
+IL_00e8:
 	{
 		// s.Append('\t');
 		StringBuilder_t* L_31 = V_0;
@@ -2620,20 +2614,20 @@ IL_00ec:
 		StringBuilder_t* L_32;
 		L_32 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_31, ((int32_t)9), NULL);
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_00f7:
+IL_00f3:
 	{
 		// var hex = new char[4];
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_33 = (CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)SZArrayNew(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB_il2cpp_TypeInfo_var, (uint32_t)4);
 		V_3 = L_33;
-		// for (int i = 0; i < 4; i++)
+		// for (var i = 0; i < 4; i++)
 		V_4 = 0;
-		goto IL_0113;
+		goto IL_010f;
 	}
 
-IL_0103:
+IL_00ff:
 	{
 		// hex[i] = NextChar;
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_34 = V_3;
@@ -2642,18 +2636,18 @@ IL_0103:
 		L_36 = Parser_get_NextChar_m5701B6754644C372935D11CFC79F036997D7AFD3(__this, NULL);
 		NullCheck(L_34);
 		(L_34)->SetAt(static_cast<il2cpp_array_size_t>(L_35), (Il2CppChar)L_36);
-		// for (int i = 0; i < 4; i++)
+		// for (var i = 0; i < 4; i++)
 		int32_t L_37 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_37, 1));
 	}
 
-IL_0113:
+IL_010f:
 	{
-		// for (int i = 0; i < 4; i++)
+		// for (var i = 0; i < 4; i++)
 		int32_t L_38 = V_4;
 		if ((((int32_t)L_38) < ((int32_t)4)))
 		{
-			goto IL_0103;
+			goto IL_00ff;
 		}
 	}
 	{
@@ -2669,10 +2663,10 @@ IL_0113:
 		StringBuilder_t* L_43;
 		L_43 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_39, ((int32_t)(uint16_t)L_42), NULL);
 		// break;
-		goto IL_0137;
+		goto IL_0133;
 	}
 
-IL_012f:
+IL_012b:
 	{
 		// s.Append(c);
 		StringBuilder_t* L_44 = V_0;
@@ -2682,7 +2676,7 @@ IL_012f:
 		L_46 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_44, L_45, NULL);
 	}
 
-IL_0137:
+IL_0133:
 	{
 		// while (parsing)
 		bool L_47 = V_2;
@@ -2692,7 +2686,7 @@ IL_0137:
 		}
 	}
 
-IL_013d:
+IL_0139:
 	{
 		// return s.ToString();
 		StringBuilder_t* L_48 = V_0;
@@ -2717,7 +2711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Parser_ParseNumber_mD21E421C94
 	double V_1 = 0.0;
 	int64_t V_2 = 0;
 	{
-		// string number = NextWord;
+		// var number = NextWord;
 		String_t* L_0;
 		L_0 = Parser_get_NextWord_m24A013D958324096C9ABC7E43FA7807D17156579(__this, NULL);
 		V_0 = L_0;
@@ -2752,7 +2746,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Parser_ParseNumber_mD21E421C94
 		}
 	}
 	{
-		// Int64.TryParse(number, NumberStyles.Any, CultureInfo.InvariantCulture, out parsedInt);
+		// Int64.TryParse(number, NumberStyles.Any, CultureInfo.InvariantCulture, out var parsedInt);
 		String_t* L_7 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
 		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_8;
@@ -2768,7 +2762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Parser_ParseNumber_mD21E421C94
 
 IL_0042:
 	{
-		// Double.TryParse(number, NumberStyles.Any, CultureInfo.InvariantCulture, out parsedDouble);
+		// Double.TryParse(number, NumberStyles.Any, CultureInfo.InvariantCulture, out var parsedDouble);
 		String_t* L_13 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
 		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_14;
@@ -2843,7 +2837,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar Parser_get_PeekChar_m50E157E099775
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// return Convert.ToChar(json.Peek());
+		// char PeekChar => Convert.ToChar(json.Peek());
 		StringReader_t1A336148FF22A9584E759A9D720CC96C23E35DD8* L_0 = __this->___json_1;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -2864,7 +2858,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar Parser_get_NextChar_m5701B6754644C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// return Convert.ToChar(json.Read());
+		// char NextChar => Convert.ToChar(json.Read());
 		StringReader_t1A336148FF22A9584E759A9D720CC96C23E35DD8* L_0 = __this->___json_1;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -2886,7 +2880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Parser_get_NextWord_m24A013D9583240
 	}
 	StringBuilder_t* V_0 = NULL;
 	{
-		// StringBuilder word = new StringBuilder();
+		// var word = new StringBuilder();
 		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_0, NULL);
@@ -3482,14 +3476,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeObject_m344032DCE67E
 	RuntimeObject* V_2 = NULL;
 	RuntimeObject* V_3 = NULL;
 	{
-		// bool first = true;
+		// var first = true;
 		V_0 = (bool)1;
 		// builder.Append('{');
 		StringBuilder_t* L_0 = __this->___builder_0;
 		NullCheck(L_0);
 		StringBuilder_t* L_1;
 		L_1 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_0, ((int32_t)123), NULL);
-		// foreach (object e in obj.Keys)
+		// foreach (var e in obj.Keys)
 		RuntimeObject* L_2 = ___obj0;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
@@ -3534,7 +3528,7 @@ IL_0079:
 
 IL_001e_1:
 			{
-				// foreach (object e in obj.Keys)
+				// foreach (var e in obj.Keys)
 				RuntimeObject* L_8 = V_1;
 				NullCheck(L_8);
 				RuntimeObject* L_9;
@@ -3581,7 +3575,7 @@ IL_0036_1:
 
 IL_005f_1:
 			{
-				// foreach (object e in obj.Keys)
+				// foreach (var e in obj.Keys)
 				RuntimeObject* L_20 = V_1;
 				NullCheck(L_20);
 				bool L_21;
@@ -3633,9 +3627,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeArray_m4C726B75C57DE
 		NullCheck(L_0);
 		StringBuilder_t* L_1;
 		L_1 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_0, ((int32_t)91), NULL);
-		// bool first = true;
+		// var first = true;
 		V_0 = (bool)1;
-		// foreach (object obj in anArray)
+		// foreach (var obj in anArray)
 		RuntimeObject* L_2 = ___anArray0;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
@@ -3677,7 +3671,7 @@ IL_0054:
 
 IL_0019_1:
 			{
-				// foreach (object obj in anArray)
+				// foreach (var obj in anArray)
 				RuntimeObject* L_7 = V_1;
 				NullCheck(L_7);
 				RuntimeObject* L_8;
@@ -3709,7 +3703,7 @@ IL_0031_1:
 
 IL_003a_1:
 			{
-				// foreach (object obj in anArray)
+				// foreach (var obj in anArray)
 				RuntimeObject* L_13 = V_1;
 				NullCheck(L_13);
 				bool L_14;
@@ -3768,7 +3762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeString_mC88515C25FF2
 		NullCheck(L_0);
 		StringBuilder_t* L_1;
 		L_1 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_0, ((int32_t)34), NULL);
-		// char[] charArray = str.ToCharArray();
+		// var charArray = str.ToCharArray();
 		String_t* L_2 = ___str0;
 		NullCheck(L_2);
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_3;
@@ -3914,7 +3908,7 @@ IL_00cd:
 
 IL_00e0:
 	{
-		// int codepoint = Convert.ToInt32(c);
+		// var codepoint = Convert.ToInt32(c);
 		Il2CppChar L_25 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
 		int32_t L_26;
@@ -4038,13 +4032,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeOther_m8BD246EE7E689
 IL_002d:
 	{
 		// else if (value is int
-		//          || value is uint
-		//          || value is long
-		//          || value is sbyte
-		//          || value is byte
-		//          || value is short
-		//          || value is ushort
-		//          || value is ulong)
+		//            || value is uint
+		//            || value is long
+		//            || value is sbyte
+		//            || value is byte
+		//            || value is short
+		//            || value is ushort
+		//            || value is ulong)
 		RuntimeObject* L_6 = ___value0;
 		if (((RuntimeObject*)IsInstSealed((RuntimeObject*)L_6, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)))
 		{
@@ -4115,7 +4109,7 @@ IL_006d:
 IL_007b:
 	{
 		// else if (value is double
-		//          || value is decimal)
+		//            || value is decimal)
 		RuntimeObject* L_17 = ___value0;
 		if (((RuntimeObject*)IsInstSealed((RuntimeObject*)L_17, Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_il2cpp_TypeInfo_var)))
 		{
@@ -4310,7 +4304,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD
 		}
 	}
 	{
-		// List<string> result = new List<string>();
+		// var result = new List<string>();
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_3 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		NullCheck(L_3);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_3, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);

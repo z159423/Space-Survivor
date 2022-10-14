@@ -15281,7 +15281,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -32240,7 +32240,7 @@ MonoBehaviour:
   m_text: ShipName
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d69e098062a7694ead09844e556234d, type: 2}
-  m_sharedMaterial: {fileID: 3189604902274701373, guid: a23a60c6b5e77f540b7185170b3673f5, type: 2}
+  m_sharedMaterial: {fileID: -7357127223567517424, guid: 7d69e098062a7694ead09844e556234d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36455,7 +36455,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -37631,6 +37631,7 @@ GameObject:
   - component: {fileID: 1388042083}
   - component: {fileID: 1388042082}
   - component: {fileID: 1388042084}
+  - component: {fileID: 1388042085}
   m_Layer: 0
   m_Name: IAPManager
   m_TagString: Untagged
@@ -37650,10 +37651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd584ea34ef0d7418e116bd6954e123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  removeAdsId: com.TeroGames.spacesurvivor.removeads
-  starterPackId: com.TeroGames.spacesurvivor.starterpack
-  megaPackId: com.TeroGames.spacesurvivor.megapack
-  ultraPackId: com.TeroGames.spacesurvivor.ultrapack
+  removeAdsId: removeads
+  starterPackId: starterpack
+  megaPackId: megapack
+  ultraPackId: ultrapack
   removeAdsText: {fileID: 2116889596}
   starterPackText: {fileID: 132600100}
   megaPackText: {fileID: 513444293}
@@ -37687,6 +37688,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text1: {fileID: 0}
   text2: {fileID: 0}
+--- !u!114 &1388042085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388042081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d070cf48df2d4d3db819987c544aa328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  informationText: {fileID: 0}
 --- !u!4 &1388773187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8808982301935757557, guid: 3579f6d7f41229c498af40ebfe4dc04a, type: 3}
