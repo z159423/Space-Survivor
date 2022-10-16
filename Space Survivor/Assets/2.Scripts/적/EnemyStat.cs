@@ -57,14 +57,15 @@ public class EnemyStat : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), rotationSpeed * Time.deltaTime);
     }
 
-    public virtual void  TakeDamage(int damage)
+    public virtual void  TakeDamage(int damage, bool damageText = true)
     {
         if (damage <= 0)
             return;
 
         currentHp -= damage;
 
-        TextGenerator.instance.DequeueText(transform.position, damage,textGenerateOffset);
+        if(damageText)
+            TextGenerator.instance.DequeueText(transform.position, damage,textGenerateOffset);
 
         OnChangeHp();
     }
@@ -107,13 +108,13 @@ public class EnemyStat : MonoBehaviour
         //Instantiate(expObject,transform.position,Quaternion.identity);
 
         //크리스탈 드랍
-        if (Utility.PercentageCalculator(dropTable.crystalDropPercent))
+        if (Utility.PercentageCalculator(dropTable.crystalDropPercent, 100))
         {
             ResourceGenerator.instance.DeQueueResource(dropTable.crystalType, transform.position, dropTable);
         }
 
         //아이템 드랍
-        if (Utility.PercentageCalculator(dropTable.ItemDropPercent))
+        if (Utility.PercentageCalculator(dropTable.ItemDropPercent, 1000))
         {
             ItemGenerator.instance.GenerateRandomItem(transform.position);
         }
@@ -180,7 +181,7 @@ public class DropTable
     public int crystalDropPercent;
 
     [Space]
-    [Range(0, 100)]
+    [Range(0, 1000)]
     public int ItemDropPercent;
 
     [Space]

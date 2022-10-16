@@ -23,6 +23,10 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public TextMeshProUGUI megaPackText;
     public TextMeshProUGUI ultraPackText;
 
+    [Space]
+
+    public GameObject removeAdsButton;
+
 
     private void Start()
     {
@@ -61,6 +65,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public void PurchageStarterPack()
     {
         m_StoreController.InitiatePurchase(starterPackId);
+        
     }
 
     public void PurchageMegaPack()
@@ -78,6 +83,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(1000);
+
+        CheckRemoveAdsHasPurchase();
     }
 
     public void PurchageMegaPack_Success()
@@ -85,6 +92,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(2500);
+
+        CheckRemoveAdsHasPurchase();
     }
 
     public void PurchageUltraPack_Success()
@@ -92,6 +101,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(5000);
+
+        CheckRemoveAdsHasPurchase();
     }
 
     public void PurchaseRemoveAds_Success()
@@ -101,6 +112,20 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
         //UpdateUI();
+    }
+
+    private void CheckRemoveAdsHasPurchase()
+    {
+        var product = m_StoreController.products.WithID(removeAdsId);
+
+        if (!product.hasReceipt)
+        {
+            PurchaseRemoveAds();
+
+            UpdateUI2();
+
+            print("스타터팩 이상을 구매하였고 광고제거를 구매한적이 없기 때문에 광고제거 상품도 함께 구매");
+        }
     }
 
     void InitializePurchasing()
@@ -244,12 +269,25 @@ public class IAPManager : MonoBehaviour, IStoreListener
         }
     }
 
+    private void UpdateUI2()
+    {
+        var product = m_StoreController.products.WithID(removeAdsId);
+
+        if (!product.hasReceipt)
+        {
+            removeAdsButton.SetActive(false);
+            print("광고 제거를 구매하였기 때문에 버튼 비활성화");
+        }
+    }
+
     //이미 구입한적 있는 상품인지 확인
     private void HadPurchased()
     {
         var product = m_StoreController.products.WithID(removeAdsId);
 
-        if (product != null)
+        print(product.receipt);
+
+        if (product.hasReceipt)
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 
@@ -260,7 +298,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         product = m_StoreController.products.WithID(starterPackId);
 
-        if (product != null)
+        print(product.receipt);
+
+        if (product.hasReceipt)
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 
@@ -271,7 +311,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         product = m_StoreController.products.WithID(megaPackId);
 
-        if (product != null)
+        print(product.receipt);
+
+        if (product.hasReceipt)
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 
@@ -282,7 +324,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         product = m_StoreController.products.WithID(ultraPackId);
 
-        if (product != null)
+        print(product.receipt);
+
+        if (product.hasReceipt)
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  maxHp: 160
+  maxHp: 220
   damage: 4
   hitEffect: 1
   hitEffectTime: 0.1
@@ -112,8 +112,8 @@ MonoBehaviour:
   dropTable:
     expType: 2
     crystalType: 3
-    crystalDropPercent: 15
-    ItemDropPercent: 2
+    crystalDropPercent: 6
+    ItemDropPercent: 6
     minDropForce: 0
     maxDropForce: 0
     dropExpMinAmount: 1

@@ -112,8 +112,8 @@ MonoBehaviour:
   dropTable:
     expType: 1
     crystalType: 3
-    crystalDropPercent: 10
-    ItemDropPercent: 1
+    crystalDropPercent: 3
+    ItemDropPercent: 5
     minDropForce: 0
     maxDropForce: 0
     dropExpMinAmount: 1

@@ -49,7 +49,7 @@ public class Item : MonoBehaviour
 
     private void Magnetic(Collider2D player)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 50f, resourceLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 20f, resourceLayer);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -89,7 +89,7 @@ public class Item : MonoBehaviour
         {
             if (colliders[i].GetComponent<EnemyStat>() != null)
             {
-                colliders[i].GetComponent<EnemyStat>().TakeDamage(damage);
+                colliders[i].GetComponent<EnemyStat>().TakeDamage(damage, false);
                 colliders[i].GetComponent<EnemyStat>().Knockback(Utility.GetDirection(player.transform.position, colliders[i].transform.position), 5);
             }
         }
