@@ -6,6 +6,11 @@ public class CrystalSlot : MonoBehaviour
 {
 
     public int crystalValue = 100;
+    public string crystalString = "";
+
+    private void Awake() {
+        crystalString = crystalValue.ToString();
+    }
     
     public void SelectThis()
     {

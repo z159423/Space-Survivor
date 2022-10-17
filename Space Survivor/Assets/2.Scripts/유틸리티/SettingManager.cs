@@ -76,6 +76,10 @@ public class SettingManager : MonoBehaviour
             {
                 LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
             }
+            else
+            {
+                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
+            }
         }
 
         StartCoroutine(LocalInit());

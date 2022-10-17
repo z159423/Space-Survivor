@@ -27,6 +27,14 @@ MonoBehaviour:
     m_Key: Login...
     m_Metadata:
       m_Items: []
+  - m_Id: 50365162848993280
+    m_Key: Crystal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50365214405378048
+    m_Key: CrystalGet
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
