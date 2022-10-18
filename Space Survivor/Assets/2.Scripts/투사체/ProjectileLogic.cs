@@ -25,7 +25,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     //[SerializeField] private float fireForce = 1000f;
     [SerializeField] private Stat damage = new Stat();
 
-    [SerializeField] private int hitLimit = 1;
+    [SerializeField] private Stat hitLimit = new Stat();
     private int hitCount = 0;
 
     [SerializeField] private int knockBackForce = 0;
@@ -202,7 +202,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         {
             hitCount++;
 
-            if (hitCount >= hitLimit)
+            if (hitCount >= hitLimit.GetFinalStatValue())
             {
                 OffProjectile();
             }
@@ -268,6 +268,11 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         damage.ClearPercentModifier();
     }
 
+    public void AddHitCount(float value)
+    {
+        hitLimit.AddFloatModifier(value);
+    }
+
     public Stat GetDamage()
     {
         return damage;
@@ -285,6 +290,8 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     {
         ClearDamageModifire();
         transform.localScale = weaponObject.currentSizeVector;
+
+        hitLimit.ClearFloatModifier();
     }
 
     public virtual void IncreaseExplodeRadius(float value)

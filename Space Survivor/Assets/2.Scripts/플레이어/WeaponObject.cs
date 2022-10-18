@@ -18,7 +18,7 @@ public interface IEquipment
 }
 
 [CreateAssetMenu(fileName = "new Weapon", menuName = "Scriptable Object/Equipment/New Weapon", order = int.MaxValue)]
-public class WeaponObject : ScriptableObject , IEquipment
+public class WeaponObject : ScriptableObject, IEquipment
 {
     public Stack<GameObject> bulletStack = new Stack<GameObject>();
 
@@ -83,6 +83,7 @@ public class WeaponObject : ScriptableObject , IEquipment
             {
                 projectileLogic = success.Object.GetComponent<IProjectileLogic>();
                 projectileLogic.playerWeapon = playerWeapon;
+                projectileLogic.weaponObject = this;
                 projectileLogic.UpgradeProjectile(success.Object);
                 projectileLogic.ResetProjectile();
             }
@@ -111,7 +112,7 @@ public class WeaponObject : ScriptableObject , IEquipment
 
     public void UpgradeEquipment(UpgradeModuleList modules)
     {
-        
+
     }
 
     public void UpgradeWeapon(UpgradeModuleList modules)
@@ -157,7 +158,7 @@ public class WeaponObject : ScriptableObject , IEquipment
                     FireForce.AddPercentModifier(modules.upgradeModules[i].value1);
                     break;
 
-                    
+
                 case upgradeModuleType.IncreaseSize:
                     currentSize.AddPercentModifier(modules.upgradeModules[i].value1);
 
@@ -247,6 +248,11 @@ public class WeaponObject : ScriptableObject , IEquipment
         logic.AddDamage(Utility.RountToInt(value));
     }
 
+    private void HitCountIncrease(ProjectileLogic logic, int value)
+    {
+        logic.AddHitCount(Utility.RountToInt(value));
+    }
+
     public void EnQueue(GameObject bullet)
     {
         bulletStack.Push(bullet);
@@ -302,18 +308,18 @@ public class WeaponObject : ScriptableObject , IEquipment
                     };
                     break;
 
-                    /*
-                case upgradeModuleType.IncreaseSize:
-                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
-                    {
-                        logic4.IncreaseProjectileSize(currentUpgradeModules[i].value1);
-                    };
+                /*
+            case upgradeModuleType.IncreaseSize:
+                if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
+                {
+                    logic4.IncreaseProjectileSize(currentUpgradeModules[i].value1);
+                };
 
-                    //IncreseSize(projectile, currentUpgradeModules[i].value1);
+                //IncreseSize(projectile, currentUpgradeModules[i].value1);
 
-                    
-                    break;
-                    */
+
+                break;
+                */
 
                 case upgradeModuleType.IncreseRotateSpeed:
                     if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic3))
@@ -347,6 +353,16 @@ public class WeaponObject : ScriptableObject , IEquipment
                     }*/
 
                     break;
+
+                    case upgradeModuleType.IncreaseHitCount:
+                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
+                    {
+                        HitCountIncrease(logic4, (int)currentUpgradeModules[i].value1);
+                    };
+
+                    break;
+
+                    
             }
         }
     }
@@ -421,7 +437,7 @@ public class WeaponObject : ScriptableObject , IEquipment
         if (currenWhileParticle == null)
             return;
 
-        currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue());
+        currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue());
     }
 
     public WeaponObject GetWeaponObject()
@@ -494,5 +510,5 @@ public enum AnyEqupment
 public enum EquipmentType
 {
     SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
-    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner,EnhancedSiege, ReloadingDevice
+    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner, EnhancedSiege, ReloadingDevice
 }

@@ -54,7 +54,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  hitLimit: 1
+    FloatModifiers: []
+    PercentModifiers: []
+  hitLimit:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   knockBackForce: 3
   deleteOnTime: 1
   deleteTime: 0.01

@@ -88,10 +88,15 @@ MonoBehaviour:
     m_Localized: increased reload speed
     m_Metadata:
       m_Items: []
+  - m_Id: 44928243616923648
+    m_Localized: "\rPenetration increased by {VALUE1}"
+    m_Metadata:
+      m_Items:
+      - rid: 1427024619712020493
   references:
     version: 2
     RefIds:
     - rid: 1427024619712020493
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00703e90020000000070fe54050000000070be2b2400000000707e99240000000070be503c00000000703eee520000000040ebd6adcb6a000040abb350e86a0000209dbb15bf6f00
+        m_Entries: 00703e90020000000070fe54050000000070be2b2400000000707e99240000000070be503c00000000703eee520000000040ebd6adcb6a000040abb350e86a0000209dbb15bf6f0000402be1ff9d9f00

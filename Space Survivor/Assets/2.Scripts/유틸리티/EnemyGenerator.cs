@@ -268,6 +268,8 @@ public class EnemyWave
             if (EnemyGenerator.instance.spawningEnemy && !EnemyGenerator.instance.bossFighting)
                 EnemyGenerator.instance.GenerateEnemy2(enemyObject);
 
+                //MonoBehaviour.print(enemyObject + " / " + StartWaveTime + " / " + StopWaveTime);
+
             yield return new WaitForSeconds(summonCycleTime);
         }
     }
@@ -284,6 +286,8 @@ public class EnemyWave
 
         if (EnemyGenerator.instance.spawningEnemy)
             EnemyGenerator.instance.GenerateEnemy2(enemyObject);
+
+            //MonoBehaviour.print(enemyObject + " / " + StartWaveTime + " / " + StopWaveTime);
 
         /*while (true)
         {

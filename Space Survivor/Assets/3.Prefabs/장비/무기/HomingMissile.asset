@@ -28,6 +28,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentSizeVector: {x: 0.012, y: 0.012, z: 0.012}
   currentSize:
     baseValue: 1
@@ -35,6 +37,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   ready: 1
   coolTime:
     baseValue: 3
@@ -42,12 +46,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   damageMultifly:
     baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   projectileAmount: 1
   firingInterval:
     baseValue: 0.1
@@ -55,29 +63,37 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   FireForce:
     baseValue: 0
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentUpgradeModules: []
   UpgradeModulesForLevel:
   - upgradeModules:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   maxWeaponLevel: 6

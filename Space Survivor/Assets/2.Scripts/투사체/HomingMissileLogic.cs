@@ -19,6 +19,7 @@ public class HomingMissileLogic : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rigid;
     [SerializeField] private ProjectileLogic projectileLogic;
+    [SerializeField] private LayerMask layerMask;
 
 
     private void OnEnable()
@@ -62,7 +63,7 @@ public class HomingMissileLogic : MonoBehaviour
 
     private void FindTarget()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, findTargetRange);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, findTargetRange, layerMask);
 
         float closestDist = float.PositiveInfinity;
 

@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: ShieldCountIncrease
     m_Metadata:
       m_Items: []
+  - m_Id: 44928243616923648
+    m_Key: IncreaseHitCount
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

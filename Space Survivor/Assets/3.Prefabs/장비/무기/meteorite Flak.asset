@@ -28,6 +28,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentSizeVector: {x: 0.05, y: 0.05, z: 0.05}
   currentSize:
     baseValue: 1
@@ -35,6 +37,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   ready: 1
   coolTime:
     baseValue: 1.5
@@ -42,12 +46,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   damageMultifly:
     baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   projectileAmount: 3
   firingInterval:
     baseValue: 0.01
@@ -55,12 +63,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   FireForce:
     baseValue: 70
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentUpgradeModules: []
   UpgradeModulesForLevel:
   - upgradeModules:
@@ -72,6 +84,7 @@ MonoBehaviour:
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 2209831c0482e67449dd5f888fa0c2e4, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
     - {fileID: 11400000, guid: e9b65b762fc5e0b46bbaafeb064939e2, type: 2}
@@ -83,4 +96,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
     - {fileID: 11400000, guid: e9b65b762fc5e0b46bbaafeb064939e2, type: 2}
+    - {fileID: 11400000, guid: 2209831c0482e67449dd5f888fa0c2e4, type: 2}
   maxWeaponLevel: 6
