@@ -42,6 +42,7 @@ public class WeaponObject : ScriptableObject, IEquipment
     public Stat currentDamage = new Stat();
     public Vector3 currentSizeVector;
     public Stat currentSize = new Stat();
+    public Stat currentTrailSize = new Stat();
 
     [Space]
 
@@ -161,6 +162,7 @@ public class WeaponObject : ScriptableObject, IEquipment
 
                 case upgradeModuleType.IncreaseSize:
                     currentSize.AddPercentModifier(modules.upgradeModules[i].value1);
+                    currentTrailSize.AddPercentModifier(modules.upgradeModules[i].value1);
 
                     SetSizeWhileParticle();
                     /*
@@ -438,6 +440,8 @@ public class WeaponObject : ScriptableObject, IEquipment
             return;
 
         currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue());
+
+        
     }
 
     public WeaponObject GetWeaponObject()

@@ -62,6 +62,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     [SerializeField] private ParticleSystem[] vfxs;
     [SerializeField] private TrailRenderer[] trails;
     [SerializeField] public WeaponObject weaponObject { get; set; }
+    [SerializeField] private TrailRenderer trail;
 
     private void Start()
     {
@@ -284,12 +285,17 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
         //print(size);
         transform.localScale = weaponObject.currentSizeVector * weaponObject.currentSize.GetFinalStatValue();
+
+        if (trail != null)
+            trail.widthMultiplier = weaponObject.currentTrailSize.GetFinalStatValue();
     }
 
     public virtual void ResetProjectileStat()
     {
         ClearDamageModifire();
         transform.localScale = weaponObject.currentSizeVector;
+        if (trail != null)
+            trail.widthMultiplier = weaponObject.currentTrailSize.GetBaseValue();
 
         hitLimit.ClearFloatModifier();
     }
