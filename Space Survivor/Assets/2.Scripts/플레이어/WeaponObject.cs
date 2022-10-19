@@ -104,7 +104,8 @@ public class WeaponObject : ScriptableObject, IEquipment
             projectileLogic.SetSize();
             projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
 
-            yield return new WaitForSeconds(firingInterval.GetFinalStatValue());
+            if (firingInterval.GetFinalStatValue() > 0)
+                yield return new WaitForSecondsRealtime(firingInterval.GetFinalStatValue());
 
         }
 
@@ -341,6 +342,8 @@ public class WeaponObject : ScriptableObject, IEquipment
                     if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic2))
                     {
                         logic2.IncreaseExplodeRadius(currentUpgradeModules[i].value1);
+                        if (type == EquipmentType.ShockWaveGenerator)
+                            currentSize.AddPercentModifier(currentUpgradeModules[i].value1 * 1.5f);
                     };
 
                     /*
@@ -356,7 +359,7 @@ public class WeaponObject : ScriptableObject, IEquipment
 
                     break;
 
-                    case upgradeModuleType.IncreaseHitCount:
+                case upgradeModuleType.IncreaseHitCount:
                     if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
                     {
                         HitCountIncrease(logic4, (int)currentUpgradeModules[i].value1);
@@ -364,7 +367,7 @@ public class WeaponObject : ScriptableObject, IEquipment
 
                     break;
 
-                    
+
             }
         }
     }
@@ -441,7 +444,7 @@ public class WeaponObject : ScriptableObject, IEquipment
 
         currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue());
 
-        
+
     }
 
     public WeaponObject GetWeaponObject()

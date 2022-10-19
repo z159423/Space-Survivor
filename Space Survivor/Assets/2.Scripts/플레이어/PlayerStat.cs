@@ -75,11 +75,6 @@ public class PlayerStat : MonoBehaviour
 
     private Sequence mySequence;
 
-    private void Start()
-    {
-
-    }
-
     private void OnEnable()
     {
         playerLevelText.text = "Level " + playerLevel.ToString();

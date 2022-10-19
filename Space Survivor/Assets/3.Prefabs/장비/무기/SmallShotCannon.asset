@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeProjectile: []
   projectilePrefab: {fileID: 8837024627107654669, guid: c508e929b9fe97e4887fbd6ce925dcc8, type: 3}
-  weaponImage: {fileID: 21300000, guid: 66b5c0b34fcef654a855f41601cffb3c, type: 3}
+  weaponImage: {fileID: 21300000, guid: 6ccb514468ca5b246869431f6f0bfe3f, type: 3}
   parent: {fileID: 0}
   anyEqupment: 0
   type: 1
@@ -28,6 +28,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentSizeVector: {x: 0.05, y: 0.05, z: 0.05}
   currentSize:
     baseValue: 1
@@ -35,6 +37,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentTrailSize:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   ready: 1
   coolTime:
     baseValue: 1
@@ -42,25 +54,33 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   damageMultifly:
     baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  projectileAmount: 2
+    FloatModifiers: []
+    PercentModifiers: []
+  projectileAmount: 3
   firingInterval:
     baseValue: 0.03
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   FireForce:
     baseValue: 150
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentUpgradeModules: []
   UpgradeModulesForLevel:
   - upgradeModules:
@@ -83,4 +103,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
     - {fileID: 11400000, guid: e9b65b762fc5e0b46bbaafeb064939e2, type: 2}
+    - {fileID: 11400000, guid: 2209831c0482e67449dd5f888fa0c2e4, type: 2}
   maxWeaponLevel: 6
