@@ -72,11 +72,11 @@ public class WeaponObject : ScriptableObject, IEquipment
     public int maxWeaponLevel = 6;
     private int currentWeaponLevel = 1;
 
-    public IEnumerator Fire(Vector2 position, PlayerWeapon playerWeapon)
+    public IEnumerator Fire(Transform firepos, PlayerWeapon playerWeapon)
     {
         for (int j = 0; j < projectileAmount; j++)
         {
-            var success = DeQueue(position);
+            var success = DeQueue(firepos.position);
 
             IProjectileLogic projectileLogic;
 
@@ -90,7 +90,7 @@ public class WeaponObject : ScriptableObject, IEquipment
             }
             else
             {
-                var Object = Instantiate(projectilePrefab, position, Quaternion.identity);
+                var Object = Instantiate(projectilePrefab, firepos.position, Quaternion.identity);
 
                 projectileLogic = Object.GetComponent<IProjectileLogic>();
                 projectileLogic.playerWeapon = playerWeapon;

@@ -39,7 +39,7 @@ public class PlayerWeapon : MonoBehaviour
                 weaponSlotList[i].weaponCoolTimeImage.StartCoolTime(weaponPool[i].coolTime.GetFinalStatValue());
                 StartCoroutine(ProjectileReload(weaponPool[i]));
 
-                StartCoroutine(weaponPool[i].Fire(weaponPool[i].GetFirePos().position, this));
+                StartCoroutine(weaponPool[i].Fire(weaponPool[i].GetFirePos(), this));
             }
         }
     }
