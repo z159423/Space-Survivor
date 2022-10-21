@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class Resource : MonoBehaviour
 {
@@ -94,5 +96,10 @@ public class Resource : MonoBehaviour
         ResourceGenerator.instance.EnQueueResource(type, gameObject);
         gameObject.SetActive(false);
         isTriggered = false;
+    }
+
+    public async Task AsyncTest()
+    {
+        await Task.Delay(1000);
     }
 }
