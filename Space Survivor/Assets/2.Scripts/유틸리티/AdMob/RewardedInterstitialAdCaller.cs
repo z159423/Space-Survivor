@@ -35,6 +35,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     [Space]
 
     public int crystalValue = 25;
+    [SerializeField] private int freeCrystalWaitTime = 1800;
+    [SerializeField] private int shipTrialWaitTime = 1800;
 
     private void Awake()
     {
@@ -210,6 +212,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 "보상형 광고를 시청하였습니다. 보상을 지급해야 합니다: "
                             + amount.ToString() + " " + type);
 
+            UserDataManager.instance.currentUserData.usingFreeCrystalTime = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+            UserDataManager.instance.SaveCurrentDate();
+
             UserDataManager.instance.AddCrystalValue(crystalValue);
         }
     }
@@ -292,6 +297,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print("함선 체험광고를 시청하였습니다. 함선 체험을 시작합니다.");
 
             StartCoroutine(startTrial());
+
+            UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"); ;
+            UserDataManager.instance.SaveCurrentDate();
 
         }
     }
@@ -377,8 +385,19 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //크리스탈 획득 리워드 광고 호출
     public void WatchRewardAds_Crytal()
     {
+        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+
+        if (timeDiff < freeCrystalWaitTime)
+        {
+            print("무료 크리스탈 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
+            return;
+        }
+
         if (this.crystallAddRewardedAd.IsLoaded())
         {
+            if (UserDataManager.instance.currentUserData.usingFreeCrystalTime != null)
+                print(timeDiff);
+
             this.crystallAddRewardedAd.Show();
         }
         else
@@ -390,6 +409,14 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //함선 무료 체험 리워드 광고 호출
     public void WatchRewardAds_TrialShip()
     {
+        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+
+        if (timeDiff < shipTrialWaitTime)
+        {
+            print("함선 체험 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
+            return;
+        }
+
         if (this.shipTrialRewardedAd.IsLoaded())
         {
             this.shipTrialRewardedAd.Show();
@@ -405,7 +432,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //부활 리워드 광고 호출
     public void WatchRewardAds_Revive()
     {
-        if (this.reviveRewardedAd.IsLoaded())
+        if (this.reviveRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             this.reviveRewardedAd.Show();
         }
@@ -436,6 +463,36 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         shipTrialButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
+    }
+
+    public bool IsFreeCrystalReady()
+    {
+        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+
+        if (timeDiff < freeCrystalWaitTime)
+            return false;
+        else
+            return true;
+    }
+
+    public bool IsshipTrialReady()
+    {
+        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+
+        if (timeDiff < shipTrialWaitTime)
+            return false;
+        else
+            return true;
+    }
+
+    public double GetFreeCrystalLeftTime()
+    {
+        return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+    }
+
+    public double GetTrialShipLeftTime()
+    {
+        return shipTrialWaitTime - Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
     }
 
 }

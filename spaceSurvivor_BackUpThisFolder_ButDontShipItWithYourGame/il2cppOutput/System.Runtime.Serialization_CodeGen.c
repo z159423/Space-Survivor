@@ -41,14 +41,14 @@ static Il2CppMethodPointer s_methodPointers[8] =
 };
 static const int32_t s_InvokerIndices[8] = 
 {
-	8660,
-	8774,
-	8739,
-	8660,
-	8660,
-	8936,
-	8774,
-	7230,
+	8661,
+	8775,
+	8740,
+	8661,
+	8661,
+	8937,
+	8775,
+	7231,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Runtime_Serialization_CodeGenModule;
 const Il2CppCodeGenModule g_System_Runtime_Serialization_CodeGenModule = 

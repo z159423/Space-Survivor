@@ -10890,6 +10890,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getSubscriptionInf
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFB88AAE385568D0221A016B76B92B8F4ACC87ED7);
 		s_Il2CppMethodInitialized = true;
 	}
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	{
 		// var dict = new Dictionary<string, object>
 		// {
@@ -10918,9 +10920,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SubscriptionInfo_getSubscriptionInf
 		NullCheck(L_7);
 		Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443(L_7, _stringLiteralFB88AAE385568D0221A016B76B92B8F4ACC87ED7, L_10, Dictionary_2_Add_m5875DF2ACE933D734119C088B2E7C9C63F49B443_RuntimeMethod_var);
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_11 = L_7;
-		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* L_12 = (&__this->___remainedTime_10);
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_12 = __this->___remainedTime_10;
+		V_0 = L_12;
 		double L_13;
-		L_13 = TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8(L_12, NULL);
+		L_13 = TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8((&V_0), NULL);
 		double L_14 = L_13;
 		RuntimeObject* L_15 = Box(Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_il2cpp_TypeInfo_var, &L_14);
 		NullCheck(L_11);

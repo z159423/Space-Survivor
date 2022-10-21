@@ -75,6 +75,15 @@ public class UserDataManager : MonoBehaviour
         File.WriteAllText(filePath, JsonData);
     }
 
+    public void SaveCurrentDate()
+    {
+        string filePath = Application.persistentDataPath + userDataName;
+
+        string JsonData = JsonUtility.ToJson(currentUserData);
+
+        File.WriteAllText(filePath, JsonData);
+    }
+
     //���� ������ ����
     public void DeleteUserData()
     {

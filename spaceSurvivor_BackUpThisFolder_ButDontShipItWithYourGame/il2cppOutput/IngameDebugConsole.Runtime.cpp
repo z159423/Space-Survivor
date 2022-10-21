@@ -16691,6 +16691,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugLogEntryTimestamp_AppendTime_m16132
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_3;
+	memset((&V_3), 0, sizeof(V_3));
 	{
 		// sb.Append( "[" );
 		StringBuilder_t* L_0 = ___sb0;
@@ -16698,15 +16700,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugLogEntryTimestamp_AppendTime_m16132
 		StringBuilder_t* L_1;
 		L_1 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_0, _stringLiteralD9691C4FD8A1F6B09DB1147CA32B442772FB46A1, NULL);
 		// int hour = dateTime.Hour;
-		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* L_2 = (&__this->___dateTime_0);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_2 = __this->___dateTime_0;
+		V_3 = L_2;
 		int32_t L_3;
-		L_3 = DateTime_get_Hour_m350B2AEB6ED8AAD80F0779C1FD37EEE13952A7F3(L_2, NULL);
+		L_3 = DateTime_get_Hour_m350B2AEB6ED8AAD80F0779C1FD37EEE13952A7F3((&V_3), NULL);
 		V_0 = L_3;
 		// if( hour >= 10 )
 		int32_t L_4 = V_0;
 		if ((((int32_t)L_4) < ((int32_t)((int32_t)10))))
 		{
-			goto IL_0027;
+			goto IL_002a;
 		}
 	}
 	{
@@ -16716,10 +16719,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugLogEntryTimestamp_AppendTime_m16132
 		NullCheck(L_5);
 		StringBuilder_t* L_7;
 		L_7 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_5, L_6, NULL);
-		goto IL_0039;
+		goto IL_003c;
 	}
 
-IL_0027:
+IL_002a:
 	{
 		// sb.Append( "0" ).Append( hour );
 		StringBuilder_t* L_8 = ___sb0;
@@ -16732,7 +16735,7 @@ IL_0027:
 		L_11 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_9, L_10, NULL);
 	}
 
-IL_0039:
+IL_003c:
 	{
 		// sb.Append( ":" );
 		StringBuilder_t* L_12 = ___sb0;
@@ -16740,15 +16743,16 @@ IL_0039:
 		StringBuilder_t* L_13;
 		L_13 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_12, _stringLiteral876C4B39B6E4D0187090400768899C71D99DE90D, NULL);
 		// int minute = dateTime.Minute;
-		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* L_14 = (&__this->___dateTime_0);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_14 = __this->___dateTime_0;
+		V_3 = L_14;
 		int32_t L_15;
-		L_15 = DateTime_get_Minute_m73003491DA85D2C9951ECCF890D9BF6AFFB9E973(L_14, NULL);
+		L_15 = DateTime_get_Minute_m73003491DA85D2C9951ECCF890D9BF6AFFB9E973((&V_3), NULL);
 		V_1 = L_15;
 		// if( minute >= 10 )
 		int32_t L_16 = V_1;
 		if ((((int32_t)L_16) < ((int32_t)((int32_t)10))))
 		{
-			goto IL_0060;
+			goto IL_0066;
 		}
 	}
 	{
@@ -16758,10 +16762,10 @@ IL_0039:
 		NullCheck(L_17);
 		StringBuilder_t* L_19;
 		L_19 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_17, L_18, NULL);
-		goto IL_0072;
+		goto IL_0078;
 	}
 
-IL_0060:
+IL_0066:
 	{
 		// sb.Append( "0" ).Append( minute );
 		StringBuilder_t* L_20 = ___sb0;
@@ -16774,7 +16778,7 @@ IL_0060:
 		L_23 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_21, L_22, NULL);
 	}
 
-IL_0072:
+IL_0078:
 	{
 		// sb.Append( ":" );
 		StringBuilder_t* L_24 = ___sb0;
@@ -16782,15 +16786,16 @@ IL_0072:
 		StringBuilder_t* L_25;
 		L_25 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_24, _stringLiteral876C4B39B6E4D0187090400768899C71D99DE90D, NULL);
 		// int second = dateTime.Second;
-		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* L_26 = (&__this->___dateTime_0);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_26 = __this->___dateTime_0;
+		V_3 = L_26;
 		int32_t L_27;
-		L_27 = DateTime_get_Second_mC860BA28DED65249BE9EA46E4898730C7828B3EA(L_26, NULL);
+		L_27 = DateTime_get_Second_mC860BA28DED65249BE9EA46E4898730C7828B3EA((&V_3), NULL);
 		V_2 = L_27;
 		// if( second >= 10 )
 		int32_t L_28 = V_2;
 		if ((((int32_t)L_28) < ((int32_t)((int32_t)10))))
 		{
-			goto IL_0099;
+			goto IL_00a2;
 		}
 	}
 	{
@@ -16800,10 +16805,10 @@ IL_0072:
 		NullCheck(L_29);
 		StringBuilder_t* L_31;
 		L_31 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_29, L_30, NULL);
-		goto IL_00ab;
+		goto IL_00b4;
 	}
 
-IL_0099:
+IL_00a2:
 	{
 		// sb.Append( "0" ).Append( second );
 		StringBuilder_t* L_32 = ___sb0;
@@ -16816,7 +16821,7 @@ IL_0099:
 		L_35 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_33, L_34, NULL);
 	}
 
-IL_00ab:
+IL_00b4:
 	{
 		// sb.Append( "]" );
 		StringBuilder_t* L_36 = ___sb0;
@@ -16847,6 +16852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugLogEntryTimestamp_AppendFullTimesta
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE166C9564FBDE461738077E3B1B506525EB6ACCC);
 		s_Il2CppMethodInitialized = true;
 	}
+	float V_0 = 0.0f;
 	{
 		// AppendTime( sb );
 		StringBuilder_t* L_0 = ___sb0;
@@ -16856,9 +16862,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugLogEntryTimestamp_AppendFullTimesta
 		NullCheck(L_1);
 		StringBuilder_t* L_2;
 		L_2 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_1, _stringLiteralD9691C4FD8A1F6B09DB1147CA32B442772FB46A1, NULL);
-		float* L_3 = (&__this->___elapsedSeconds_1);
+		float L_3 = __this->___elapsedSeconds_1;
+		V_0 = L_3;
 		String_t* L_4;
-		L_4 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D(L_3, _stringLiteralC613D4D2FE3F5D74727D376F793286A2BCBB1391, NULL);
+		L_4 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_0), _stringLiteralC613D4D2FE3F5D74727D376F793286A2BCBB1391, NULL);
 		NullCheck(L_2);
 		StringBuilder_t* L_5;
 		L_5 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_2, L_4, NULL);

@@ -15345,7 +15345,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16304,6 +16304,8 @@ MonoBehaviour:
     testString: 
     RemoveAds: 0
     playerHaveShip: []
+    usingShipTrialTime: 
+    usingFreeCrystalTime: 
 --- !u!4 &666147752
 Transform:
   m_ObjectHideFlags: 0
@@ -31201,6 +31203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopMenu: {fileID: 1088762495}
   removeAdsButton: {fileID: 1244073469}
+  removeAdsButtonImage: {fileID: 1814950713}
+  removeAdsButtonTimeText: {fileID: 1788092323}
 --- !u!1 &1089702552
 GameObject:
   m_ObjectHideFlags: 0
@@ -33336,6 +33340,8 @@ MonoBehaviour:
   reviveButton: {fileID: 413925744}
   touchProjectPanel: {fileID: 1994649743}
   crystalValue: 25
+  freeCrystalWaitTime: 1800
+  shipTrialWaitTime: 1800
 --- !u!114 &1191666597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36519,7 +36525,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -48010,7 +48016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unlock
+  m_text: 1 - 32 - 12
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -48019,8 +48025,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -48037,8 +48043,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
