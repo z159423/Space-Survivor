@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject clearStageMenu;
     [SerializeField] private GameObject console;
     [SerializeField] private GameObject inGameDebug;
+    public Transform playerTrans;
 
     [Space]
 
@@ -116,6 +117,8 @@ public class GameManager : MonoBehaviour
     {
         InterstitialAdCaller.instance.CallIrAds();
         SelectShip(currentShipNumber);
+
+        EnemyGenerator.instance.deleteBossWall();
     }
 
     public void GoMainMenu()
@@ -136,6 +139,8 @@ public class GameManager : MonoBehaviour
         SelectShip(currentShipNumber);
 
         CameraManager.instance.ChangeCamera_MainMenu();
+
+        EnemyGenerator.instance.deleteBossWall();
     }
 
     public void Resurrection()
@@ -188,7 +193,6 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
             Item.CrystalOnlyMagnetic(player.transform);
         }
-
     }
 
     public void AddKillCount()

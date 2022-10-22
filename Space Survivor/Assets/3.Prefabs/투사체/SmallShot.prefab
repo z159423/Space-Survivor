@@ -57,7 +57,7 @@ MonoBehaviour:
     FloatModifiers: []
     PercentModifiers: []
   hitLimit:
-    baseValue: 1
+    baseValue: 2
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   rigid: {fileID: 4673022242771149064}
   vfxs: []
   trails: []
+  trail: {fileID: 0}
 --- !u!212 &2596404529426074017
 SpriteRenderer:
   m_ObjectHideFlags: 0

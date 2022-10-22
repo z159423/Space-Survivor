@@ -35,7 +35,7 @@ public class InterstitialAdCaller : MonoBehaviour
         StartCoroutine(StartTickIrAdsTime());
     }
 
-    private IEnumerator StartTickIrAdsTime()
+    public IEnumerator StartTickIrAdsTime()
     {
         IrAdsReady = false;
         yield return new WaitForSeconds(IrAdsCallTime);

@@ -36,6 +36,9 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private Animator warningPanelAnimator;
     [SerializeField] private GameObject warningPanel;
 
+    [SerializeField] private GameObject bossBarrior;
+    private GameObject barrior;
+
 
     public static EnemyGenerator instance;
 
@@ -90,7 +93,12 @@ public class EnemyGenerator : MonoBehaviour
                 break;
 
             case waveType.summonBoss:
+                barrior = Instantiate(bossBarrior, player.position, Quaternion.identity);
                 wave.waveCoroutine = StartCoroutine(wave.SummonBoss(warningPanel, warningPanelAnimator));
+                break;
+
+            case waveType.blobBurstSummon:
+                wave.waveCoroutine = StartCoroutine(wave.blobBurstSummon());
                 break;
         }
     }
@@ -166,6 +174,35 @@ public class EnemyGenerator : MonoBehaviour
         //Debug.Log("spawn enemy");
     }
 
+    public void GenerateOneSpot(EnemyObject enemy, int count)
+    {
+        var point = GenerateSpawnPosition();
+
+        StartCoroutine(generate());
+
+        IEnumerator generate()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return null;
+                var success = enemy.DeQueue(point);
+
+                if (success != null)
+                {
+                    var spawnEnemy = Instantiate(success, point, Quaternion.identity, parent);
+
+                    spawnEnemy.GetComponent<EnemyStat>().SetTarget(player);
+                    spawnEnemy.GetComponent<EnemyStat>().SetMoveStrate();
+
+
+                    SpawnedEnemy.Add(spawnEnemy);
+                }
+            }
+        }
+
+
+    }
+
     private GameObject GetEnemyPrefab(EnemyType type)
     {
         foreach (EnemyObject enemyPool in enemyPools)
@@ -209,6 +246,11 @@ public class EnemyGenerator : MonoBehaviour
                 SpawnedEnemy[i].GetComponent<EnemyStat>().EnQueueThisEnemy();
             }
         }
+    }
+
+    public void deleteBossWall()
+    {
+        Destroy(barrior ?? null);
     }
 
     // public void StartEnemySpawn()
@@ -268,7 +310,7 @@ public class EnemyWave
             if (EnemyGenerator.instance.spawningEnemy && !EnemyGenerator.instance.bossFighting)
                 EnemyGenerator.instance.GenerateEnemy2(enemyObject);
 
-                //MonoBehaviour.print(enemyObject + " / " + StartWaveTime + " / " + StopWaveTime);
+            //MonoBehaviour.print(enemyObject + " / " + StartWaveTime + " / " + StopWaveTime);
 
             yield return new WaitForSeconds(summonCycleTime);
         }
@@ -287,7 +329,7 @@ public class EnemyWave
         if (EnemyGenerator.instance.spawningEnemy)
             EnemyGenerator.instance.GenerateEnemy2(enemyObject);
 
-            //MonoBehaviour.print(enemyObject + " / " + StartWaveTime + " / " + StopWaveTime);
+        //MonoBehaviour.print(enemyObject + " / " + StartWaveTime + " / " + StopWaveTime);
 
         /*while (true)
         {
@@ -298,7 +340,14 @@ public class EnemyWave
         }*/
     }
 
+    public IEnumerator blobBurstSummon()
+    {
 
+        if (EnemyGenerator.instance.spawningEnemy)
+            EnemyGenerator.instance.GenerateOneSpot(enemyObject, 50);
+
+            yield return null;
+    }
 
     //public WaveObject waveObject;
 }

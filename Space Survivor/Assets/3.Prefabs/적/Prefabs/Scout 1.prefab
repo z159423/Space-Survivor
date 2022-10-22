@@ -101,14 +101,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   maxHp: 10
-  damage: 4
+  damage:
+    baseValue: 5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   hitEffect: 1
   hitEffectTime: 0.1
   hitMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   spriteRenderer: {fileID: 601496630676670499}
   rigid: {fileID: 601496630676670501}
-  moveSpeed: 3
-  rotationSpeed: 2
+  moveSpeed:
+    baseValue: 2.5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  rotationSpeed:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   dropTable:
     expType: 1
     crystalType: 3
@@ -121,6 +142,7 @@ MonoBehaviour:
     dropCrystalMinAmount: 1
     dropCrystalmaxAmount: 1
   dieVFXType: 1
+  moveStrate: 0
   textGenerateOffset:
     minVectorOffset: {x: -0.15, y: -0.15}
     maxVectorOffset: {x: 0.15, y: 0.15}

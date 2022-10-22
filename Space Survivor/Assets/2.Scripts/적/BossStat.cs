@@ -43,6 +43,8 @@ public class BossStat : EnemyStat
             EnemyGenerator.instance.bossFighting = false;
         }
 
+        EnemyGenerator.instance.deleteBossWall();
+
     }
 
     public override void TakeDamage(int damage, bool damageText)

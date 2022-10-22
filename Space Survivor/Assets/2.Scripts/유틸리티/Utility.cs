@@ -96,6 +96,7 @@ public class Utility : MonoBehaviour
 
     public static TimeSpan GetTimeDiff(DateTime time)
     {
+        //print(DateTime.Now + " - " +  time);
         TimeSpan timeDiff = DateTime.Now - time;
 
         return timeDiff;

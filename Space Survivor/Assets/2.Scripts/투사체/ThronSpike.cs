@@ -37,7 +37,7 @@ public class ThronSpike : ProjectileLogic
 
         trailRenderer.Clear();
 
-        print(transform.rotation.eulerAngles);
+        //print(transform.rotation.eulerAngles);
     }
 
     public void AddRotateSpeed(float speed)

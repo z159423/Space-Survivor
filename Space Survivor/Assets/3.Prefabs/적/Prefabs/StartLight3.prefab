@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 601496630676670498}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &601496630676670503
 GameObject:
@@ -68,6 +68,7 @@ Transform:
   - {fileID: 4281856953053812938}
   - {fileID: 8599108321615046618}
   - {fileID: 1095152784742340042}
+  - {fileID: 6000759310902789134}
   - {fileID: 895475571107443074}
   - {fileID: 4503927204635033198}
   - {fileID: 1007788714830457099}
@@ -149,6 +150,11 @@ MonoBehaviour:
   starBubbleType: 4
   starBubbleFireRate: 0.25
   starBubbleFireForce: 0.04
+  starBubbleBurstAmount: 5
+  starBubbleBurstAngle: 15
+  starBubbleBurstCoolTime: 3.5
+  starBubbleBurstFireForce: 0.07
+  burstFirePos: {fileID: 6000759310902789134}
 --- !u!114 &2098298358969253620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,14 +169,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 10
   maxHp: 8000
-  damage: 25
+  damage:
+    baseValue: 40
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   hitEffect: 1
   hitEffectTime: 0.1
   hitMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   spriteRenderer: {fileID: 1783410621894429207}
   rigid: {fileID: 601496630676670501}
-  moveSpeed: 2
-  rotationSpeed: 0
+  moveSpeed:
+    baseValue: 1.5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  rotationSpeed:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   dropTable:
     expType: 4
     crystalType: 3
@@ -183,6 +210,7 @@ MonoBehaviour:
     dropCrystalMinAmount: 0
     dropCrystalmaxAmount: 0
   dieVFXType: 9
+  moveStrate: 0
   textGenerateOffset:
     minVectorOffset: {x: -1, y: -1}
     maxVectorOffset: {x: 1, y: 1}
@@ -385,7 +413,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 601496630676670498}
-  m_RootOrder: 6
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1659762193182076794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6000759310902789134}
+  m_Layer: 7
+  m_Name: BurstFireForce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6000759310902789134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659762193182076794}
+  m_LocalRotation: {x: -0, y: -0, z: -0.020449141, w: 0.99979097}
+  m_LocalPosition: {x: 0.7305941, y: -1.8009262, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 601496630676670498}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712677261582136587
 GameObject:
@@ -478,7 +537,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 601496630676670498}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3997391418175687012
 GameObject:
@@ -595,7 +654,7 @@ Transform:
   m_Children:
   - {fileID: 3191724367601780672}
   m_Father: {fileID: 601496630676670498}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6916944490438658199
 GameObject:

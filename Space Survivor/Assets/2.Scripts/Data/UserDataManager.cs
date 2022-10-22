@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using TMPro;
 
 public class UserDataManager : MonoBehaviour
 {
@@ -14,6 +15,14 @@ public class UserDataManager : MonoBehaviour
 
     public UserData currentUserData = new UserData();
 
+    [Space]
+    [SerializeField] private GameObject freeCrystalButtonImage;
+    [SerializeField] private TextMeshProUGUI freeCrystalButtonTimeText;
+
+    [SerializeField] private GameObject trialShipButtonImage;
+    [SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
+
+
     private void Awake()
     {
         instance = this;
@@ -21,6 +30,10 @@ public class UserDataManager : MonoBehaviour
         currentUserData = LoadUserData();
 
         //DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start() {
+        StartCoroutine(RewardAdsTimeChecking());
     }
 
     private void Update()
@@ -179,14 +192,46 @@ public class UserDataManager : MonoBehaviour
 
     public Sprite GetShipImage(string shipCode)
     {
-        for(int i = 0; i < shipList.shipList.Count; i++)
+        for (int i = 0; i < shipList.shipList.Count; i++)
         {
-            if(shipList.shipList[i].shipCode == shipCode)
+            if (shipList.shipList[i].shipCode == shipCode)
             {
                 return shipList.shipList[i].shipImage;
             }
         }
 
         return null;
+    }
+
+    IEnumerator RewardAdsTimeChecking()
+    {
+        while (true)
+        {
+            if (RewardedInterstitialAdCaller.instance.IsFreeCrystalReady())
+            {
+                freeCrystalButtonImage.SetActive(true);
+                freeCrystalButtonTimeText.gameObject.SetActive(false);
+            }
+            else
+            {
+                freeCrystalButtonImage.SetActive(false);
+                freeCrystalButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetFreeCrystalLeftTime());
+                freeCrystalButtonTimeText.gameObject.SetActive(true);
+            }
+
+            if (RewardedInterstitialAdCaller.instance.IsShipTrialReady())
+            {
+                trialShipButtonImage.SetActive(true);
+                trialShipButtonTimeText.gameObject.SetActive(false);
+            }
+            else
+            {
+                trialShipButtonImage.SetActive(false);
+                trialShipButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetTrialShipLeftTime());
+                trialShipButtonTimeText.gameObject.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
