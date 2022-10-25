@@ -395,7 +395,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         if (timeDiff < freeCrystalWaitTime)
         {
-            print("무료 크리스탈 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
+            //print("무료 크리스탈 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
             return;
         }
 
@@ -419,7 +419,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         if (timeDiff < shipTrialWaitTime)
         {
-            print("함선 체험 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
+            //print("함선 체험 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
             return;
         }
 

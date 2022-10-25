@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject console;
     [SerializeField] private GameObject inGameDebug;
     public Transform playerTrans;
+    [SerializeField] private GameObject[] editmodeUI;
 
     [Space]
 
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
 
     public bool gameStart = false;
     public bool inMainMenu = true;
+    public bool editmode = false;
 
     private int currentTime;
     private float currentKillCount;
@@ -68,7 +70,14 @@ public class GameManager : MonoBehaviour
         //console.SetActive(true);
         //inGameDebug.SetActive(true);
 #endif
-
+    
+    if(editmode)
+    {
+        for(int i = 0 ; i < editmodeUI.Length; i++)
+        {
+            editmodeUI[i].SetActive(true);
+        }
+    }
     }
 
     private void Start()
