@@ -53466,7 +53466,7 @@ MonoBehaviour:
         m_CallState: 2
   gameStart: 0
   inMainMenu: 1
-  editmode: 0
+  editmode: 1
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:

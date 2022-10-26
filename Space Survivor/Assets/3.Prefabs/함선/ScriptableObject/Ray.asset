@@ -23,24 +23,32 @@ MonoBehaviour:
       MinValue: 0
       maxValue: 0
       MaxValue: 1000
+      FloatModifiers: []
+      PercentModifiers: []
     baseMoveSpeed:
       baseValue: 5.5
       minValue: 0
       MinValue: 0
       maxValue: 0
       MaxValue: 1000
+      FloatModifiers: []
+      PercentModifiers: []
     baseRotationSpeed:
       baseValue: 2.5
       minValue: 0
       MinValue: 0
       maxValue: 0
       MaxValue: 1000
+      FloatModifiers: []
+      PercentModifiers: []
     baseDamage:
       baseValue: 10
       minValue: 0
       MinValue: 0
       maxValue: 0
       MaxValue: 1000
+      FloatModifiers: []
+      PercentModifiers: []
     shipCost: 1000
     basicWeapon:
     - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
@@ -70,24 +78,32 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   baseMoveSpeed:
     baseValue: 5.5
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   baseRotationSpeed:
-    baseValue: 2.5
+    baseValue: 8
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   baseDamage:
     baseValue: 10
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   shipCost: 1000
   basicWeapon:
   - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
