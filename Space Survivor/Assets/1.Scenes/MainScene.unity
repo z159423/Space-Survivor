@@ -11132,7 +11132,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StartSpawnEnemy
         m_Mode: 1
@@ -21944,7 +21944,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StopSpawnEnemy
         m_Mode: 1
@@ -21961,6 +21961,7 @@ MonoBehaviour:
       m_Calls: []
   invinsible: 0
   enteredEnemyList: []
+  stopLevelUp: 0
 --- !u!4 &923141303
 Transform:
   m_ObjectHideFlags: 0
@@ -29381,7 +29382,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: DeleteAllEnemy
         m_Mode: 1
@@ -29441,7 +29442,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StopAllWave
         m_Mode: 1
@@ -29513,7 +29514,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StartSpawnEnemy
         m_Mode: 1
@@ -29972,7 +29973,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StartSpawnEnemy
         m_Mode: 1
@@ -39919,57 +39920,57 @@ MonoBehaviour:
   spawnTime: 1
   parent: {fileID: 1463551431}
   enemySpawnWaves:
-  - StartWaveTime: 1
+  - StartWaveTime: 1800
     StopWaveTime: 60
     waveType: 0
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
-  - StartWaveTime: 30
-    StopWaveTime: 90
+  - StartWaveTime: 15
+    StopWaveTime: 1800
     waveType: 0
-    summonCycleTime: 0.8
-    enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
-  - StartWaveTime: 60
+    summonCycleTime: 0.01
+    enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+  - StartWaveTime: 1800
     StopWaveTime: 120
     waveType: 0
     summonCycleTime: 0.3
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
-  - StartWaveTime: 90
+  - StartWaveTime: 1800
     StopWaveTime: 91
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
-  - StartWaveTime: 120
+  - StartWaveTime: 1800
     StopWaveTime: 125
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
-  - StartWaveTime: 125
+  - StartWaveTime: 1800
     StopWaveTime: 300
     waveType: 0
     summonCycleTime: 0.25
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
-  - StartWaveTime: 180
+  - StartWaveTime: 1800
     StopWaveTime: 181
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
-  - StartWaveTime: 240
+  - StartWaveTime: 1800
     StopWaveTime: 295
     waveType: 0
     summonCycleTime: 1.2
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
-  - StartWaveTime: 305
+  - StartWaveTime: 1800
     StopWaveTime: 420
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
-  - StartWaveTime: 270
+  - StartWaveTime: 1800
     StopWaveTime: 271
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
-  - StartWaveTime: 330
+  - StartWaveTime: 1800
     StopWaveTime: 331
     waveType: 0
     summonCycleTime: 1.5
@@ -40074,27 +40075,27 @@ MonoBehaviour:
     waveType: 1
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
-  - StartWaveTime: 90
+  - StartWaveTime: 1800
     StopWaveTime: 91
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
-  - StartWaveTime: 180
+  - StartWaveTime: 1800
     StopWaveTime: 181
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
-  - StartWaveTime: 360
+  - StartWaveTime: 1800
     StopWaveTime: 361
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
-  - StartWaveTime: 420
+  - StartWaveTime: 1800
     StopWaveTime: 421
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
-  - StartWaveTime: 480
+  - StartWaveTime: 421
     StopWaveTime: 481
     waveType: 2
     summonCycleTime: 2
@@ -40118,7 +40119,7 @@ MonoBehaviour:
   SpawnedEnemy: []
   player: {fileID: 923141303}
   canvas: {fileID: 1625381616}
-  spawningEnemy: 0
+  spawningEnemy: 1
   bossFighting: 0
   warningPanelAnimator: {fileID: 151151189}
   warningPanel: {fileID: 151151186}
@@ -47807,7 +47808,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: DeleteAllEnemy
         m_Mode: 1
@@ -47867,7 +47868,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StopAllWave
         m_Mode: 1
@@ -51483,7 +51484,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: DeleteAllEnemy
         m_Mode: 1
@@ -51543,7 +51544,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StopAllWave
         m_Mode: 1
@@ -51615,7 +51616,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StartSpawnEnemy
         m_Mode: 1
@@ -52350,7 +52351,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StartSpawnEnemy
         m_Mode: 1
@@ -56192,7 +56193,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: DeleteAllEnemy
         m_Mode: 1
@@ -56252,7 +56253,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1463551432}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyGenerator, Assembly-CSharp
         m_MethodName: StopAllWave
         m_Mode: 1

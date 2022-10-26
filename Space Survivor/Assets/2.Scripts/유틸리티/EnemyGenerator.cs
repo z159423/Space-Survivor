@@ -159,7 +159,7 @@ public class EnemyGenerator : MonoBehaviour
 
     public void GenerateEnemy2(EnemyObject enemy)
     {
-
+        print("1234");
         var success = enemy.DeQueue(GenerateSpawnPosition());
 
         if (success != null)
@@ -169,6 +169,8 @@ public class EnemyGenerator : MonoBehaviour
             spawnEnemy.GetComponent<EnemyStat>().SetTarget(player);
 
             SpawnedEnemy.Add(spawnEnemy);
+
+            
         }
 
         //Debug.Log("spawn enemy");

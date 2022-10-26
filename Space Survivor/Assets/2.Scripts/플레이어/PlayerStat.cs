@@ -75,6 +75,8 @@ public class PlayerStat : MonoBehaviour
 
     private Sequence mySequence;
 
+    public bool stopLevelUp = false;
+
     private void OnEnable()
     {
         playerLevelText.text = "Level " + playerLevel.ToString();
@@ -158,7 +160,7 @@ public class PlayerStat : MonoBehaviour
 
     private void OnChangeExp()
     {
-        if (currentExp >= maxExp)                    //������ ����ġ�� ����������
+        if (currentExp >= maxExp && !stopLevelUp)                    //������ ����ġ�� ����������
         {
             LevelUp();
         }
