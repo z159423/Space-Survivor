@@ -18,12 +18,12 @@ MonoBehaviour:
   m_GUID: 5b4b5f798c5279d4ca1d2107a8e1f6c3
   m_SerializeEntries:
   - m_GUID: f9c0dfcf02438f64d948e0527b9882b8
-    m_Address: English (en)
+    m_Address: English
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
   - m_GUID: 9de093f088f7346448b5d87dba564307
-    m_Address: Korean (South Korea) (ko-KR)
+    m_Address: "\uD55C\uAD6D\uC5B4"
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
