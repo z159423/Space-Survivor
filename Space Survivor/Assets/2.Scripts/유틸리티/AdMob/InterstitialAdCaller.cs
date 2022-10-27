@@ -18,11 +18,11 @@ public class InterstitialAdCaller : MonoBehaviour
 
     [Space]
 
-    
-
     string adUnitId;
 
     private InterstitialAd interstitial;
+
+    private Coroutine irAdCoolTimeCoroutine = null;
 
     private void Awake()
     {
@@ -32,16 +32,39 @@ public class InterstitialAdCaller : MonoBehaviour
     private void Start()
     {
         RequestInterstitial();
-        StartCoroutine(StartTickIrAdsTime());
     }
 
-    public IEnumerator StartTickIrAdsTime()
+    public void StartIrAdsCoolTime()
     {
-        IrAdsReady = false;
-        yield return new WaitForSeconds(IrAdsCallTime);
+        if(irAdCoolTimeCoroutine == null)
+            irAdCoolTimeCoroutine = StartCoroutine(StartTickIrAdsTime());
 
-        IrAdsReady = true;
-        print("전면광고 시간 준비됨");
+        IEnumerator StartTickIrAdsTime()
+        {
+            IrAdsReady = false;
+            yield return new WaitForSeconds(IrAdsCallTime);
+
+            IrAdsReady = true;
+            print("전면광고 시간 준비됨");
+        }
+    }
+
+    public void StopIrAdsCoolTime()
+    {
+        if(irAdCoolTimeCoroutine != null)
+        {
+            StopCoroutine(irAdCoolTimeCoroutine);
+            irAdCoolTimeCoroutine = null;
+            IrAdsReady = false;
+
+            print("전면광고 시간 취소됨");
+        }
+    }
+
+    public void RestartIrAdsCoolTime()
+    {
+        StopIrAdsCoolTime();
+        StartIrAdsCoolTime();
     }
 
     private void RequestInterstitial()
@@ -95,7 +118,7 @@ public class InterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print("전면광고 꺼짐");
 
             RequestInterstitial();
-            StartCoroutine(StartTickIrAdsTime());
+            RestartIrAdsCoolTime();
         }
     }
 
@@ -109,7 +132,7 @@ public class InterstitialAdCaller : MonoBehaviour
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
                 print("광고제거를 구매하여 전면광고가 없습니다");
-            else if(!IrAdsReady)
+            else if (!IrAdsReady)
                 print("광고가 로드되지 않았습니다");
         }
     }

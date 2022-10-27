@@ -18,6 +18,7 @@ public class PlayerStat : MonoBehaviour
     public Stat getMineralBouse = new Stat();
     private int playerLevel = 1;
     public int currentCrystal = 0;
+    private int lastGameCurrentCrystal = 0;
 
     [Space]
 
@@ -142,6 +143,12 @@ public class PlayerStat : MonoBehaviour
         UserDataManager.instance.AddCrystalValue(currentCrystal);
     }
 
+    public void GetCrystalDouble()
+    {
+        UserDataManager.instance.AddCrystalValue(lastGameCurrentCrystal);
+        GameManager.instance.ChangeGetCrystalText(lastGameCurrentCrystal);
+    }
+
     public void GetExp(int exp)
     {
         if (whileLevelUp || playerDie)
@@ -175,6 +182,8 @@ public class PlayerStat : MonoBehaviour
         currentCrystal += value;
 
         crystalText.text = currentCrystal.ToString();
+
+        lastGameCurrentCrystal = currentCrystal;
     }
 
     private void LevelUp()

@@ -29,8 +29,12 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     [SerializeField] private Button shipTrialButton;
     private RewardedAd reviveRewardedAd;
     [SerializeField] private Button reviveButton;
+    private RewardedAd crystalDoubleRewardAd;
+    [SerializeField] private Button crystalDoubleButton;
 
     [SerializeField] private GameObject touchProjectPanel;
+    [SerializeField] private PlayerStat playerStat;
+    
 
     [Space]
 
@@ -60,6 +64,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
         shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
         reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
+        crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
     }
 
     public void CreateAndLoadRewardedAd()
@@ -217,7 +222,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             UserDataManager.instance.AddCrystalValue(crystalValue);
 
-            StartCoroutine(InterstitialAdCaller.instance.StartTickIrAdsTime());
+            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
         }
     }
 
@@ -303,7 +308,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
             UserDataManager.instance.SaveCurrentDate();
 
-            StartCoroutine(InterstitialAdCaller.instance.StartTickIrAdsTime());
+            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
         }
     }
@@ -384,7 +389,87 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             StartCoroutine(revive());
 
-            StartCoroutine(InterstitialAdCaller.instance.StartTickIrAdsTime());
+            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+        }
+    }
+
+    public RewardedAd CreateAndLoadRewardedAd_CrystalDouble(string adUnitId)
+    {
+        RewardedAd rewardedAd = new RewardedAd(adUnitId);
+
+        //보상형 광고가 완료되었을때
+        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        //보상형 광고 로드 실패함
+        rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
+        //보상형 광고 표시중
+        rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        //보상형 광고 표시가 실패하였습니다.
+        rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
+        //사용자가 보상형 광고를 취소하였을때
+        rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the rewarded ad with the request.
+        rewardedAd.LoadAd(request);
+        return rewardedAd;
+
+        //보상형 광고 로드가 완료되었을때
+        void HandleRewardedAdLoaded(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("크리스탈 두배 보상형 광고 로드 완료");
+        }
+
+        //보상형 광고 로드 실패함
+        void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+        {
+            MonoBehaviour.print(
+                "크리스탈 두배 광고 로드를 실패하였습니다: "
+                                 + args.LoadAdError);
+        }
+
+        //보상형 광고 표시중
+        void HandleRewardedAdOpening(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("크리스탈 두배 광고 표시중");
+        }
+
+        //보상형 광고 표시가 실패하였습니다.
+        void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
+        {
+            MonoBehaviour.print(
+                "크리스탈 두배 표시를 실패하였습니다: "
+                                 + args.AdError.GetMessage());
+        }
+
+        //보상형 광고창이 닫혔을때
+        void HandleRewardedAdClosed(object sender, EventArgs args)
+        {
+#if UNITY_ANDROID
+            adUnitId = androidAdUnitId;
+#elif UNITY_IPHONE
+             adUnitId = iosAdUnitId;
+#else
+             adUnitId = "unexpected_platform";
+#endif
+
+            crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
+            MonoBehaviour.print("크리스탈 두배 보상형 광고창이 닫혔습니다.");
+        }
+
+        //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        void HandleUserEarnedReward(object sender, Reward args)
+        {
+            string type = args.Type;
+            double amount = args.Amount;
+
+            MonoBehaviour.print("크리스탈 두배 리워드 광고를 시청완료했습니다.");
+
+            StartCoroutine(crystalDouble());
+
+            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
         }
     }
 
@@ -450,6 +535,21 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
     }
 
+    //크리스탈 2배 리워드 광고 호출
+    public void WatchRewardAds_CrystalDouble()
+    {
+        if (this.crystalDoubleRewardAd.IsLoaded())
+        {
+            this.crystalDoubleRewardAd.Show();
+        }
+        else
+        {
+            print("광고가 없습니다");
+
+            StartCoroutine(crystalDouble());
+        }
+    }
+
     //부활
     IEnumerator revive()
     {
@@ -469,6 +569,18 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         shipTrialButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
+        
+    }
+
+    //크리스탈 두배
+    IEnumerator crystalDouble()
+    {
+        
+        yield return null;
+        //crystalDoubleButton.onClick.Invoke();
+        GameManager.instance.crystalDouble = true;
+        crystalDoubleButton.gameObject.SetActive(false);
+        playerStat.GetCrystalDouble();
     }
 
     public bool IsFreeCrystalReady()

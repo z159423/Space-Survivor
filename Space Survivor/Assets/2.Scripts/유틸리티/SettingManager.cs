@@ -26,6 +26,7 @@ public class SettingManager : MonoBehaviour
     public TextMeshProUGUI soundOnOffText;
     public TextMeshProUGUI vibrationOnOffText;
     public TMP_Dropdown LanguageDropdown;
+    public Text versionText;
 
     [Space]
 
@@ -58,6 +59,8 @@ public class SettingManager : MonoBehaviour
 
         LanguageDropdown.value = selected;
         LanguageDropdown.onValueChanged.AddListener(LocaleSelected);
+
+        versionText.text = "version : " + Application.version;
     }
 
     private void Awake()

@@ -120,12 +120,11 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         if (!product.hasReceipt)
         {
-            PurchaseRemoveAds();
-
-            UpdateUI2();
-
+            //PurchaseRemoveAds();
             print("스타터팩 이상을 구매하였고 광고제거를 구매한적이 없기 때문에 광고제거 상품도 함께 구매");
         }
+
+        UpdateUI2();
     }
 
     void InitializePurchasing()
@@ -273,7 +272,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
     {
         var product = m_StoreController.products.WithID(removeAdsId);
 
-        if (!product.hasReceipt)
+        if (!product.hasReceipt || UserDataManager.instance.currentUserData.RemoveAds)
         {
             removeAdsButton.SetActive(false);
             print("광고 제거를 구매하였기 때문에 버튼 비활성화");

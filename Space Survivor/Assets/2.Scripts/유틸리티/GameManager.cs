@@ -60,6 +60,9 @@ public class GameManager : MonoBehaviour
     public bool revivedThisGame = false;
     private float revivedTimer = 1f;
 
+    public bool crystalDouble = false;
+    [SerializeField] private GameObject crystalDoubleButton; 
+
     public static GameManager instance;
 
     private void Awake()
@@ -118,13 +121,17 @@ public class GameManager : MonoBehaviour
 
         EnemyGenerator.instance.bossFighting = false;
         revivedThisGame = false;
+        crystalDouble = false;
+        crystalDoubleButton.SetActive(true);
 
         playerStat.invinsible = false;
+
+        InterstitialAdCaller.instance.StartIrAdsCoolTime();
     }
 
     public void ReplayGame()
     {
-        InterstitialAdCaller.instance.CallIrAds();
+        //InterstitialAdCaller.instance.CallIrAds();
         SelectShip(currentShipNumber);
 
         EnemyGenerator.instance.deleteBossWall();
@@ -132,7 +139,7 @@ public class GameManager : MonoBehaviour
 
     public void GoMainMenu()
     {
-        InterstitialAdCaller.instance.CallIrAds();
+        //InterstitialAdCaller.instance.CallIrAds();
         inGameMenu.SetActive(false);
         MainMenu.SetActive(true);
         DieMenu.SetActive(false);
@@ -150,6 +157,7 @@ public class GameManager : MonoBehaviour
         CameraManager.instance.ChangeCamera_MainMenu();
 
         EnemyGenerator.instance.deleteBossWall();
+        InterstitialAdCaller.instance.StopIrAdsCoolTime();
     }
 
     public void Resurrection()
@@ -378,5 +386,10 @@ public class GameManager : MonoBehaviour
     public void ShipUpgradeUIOnOff()
     {
         shipUpgradeSlot.SetActive(!shipUpgradeSlot.activeSelf);
+    }
+
+    public void ChangeGetCrystalText(int crystal)
+    {
+        getCrystalCountText.text = (int.Parse(getCrystalCountText.text) + crystal).ToString();
     }
 }

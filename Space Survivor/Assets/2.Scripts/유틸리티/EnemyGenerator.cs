@@ -49,7 +49,10 @@ public class EnemyGenerator : MonoBehaviour
 
     private void Start()
     {
-        SpawnArea = canvas.sizeDelta * 0.008f;
+        //SpawnArea = canvas.sizeDelta * 0.01f;
+        SpawnArea.x = canvas.position.x * 0.015f;
+        SpawnArea.y = canvas.position.y * 0.015f;
+
     }
 
     public void StartSpawnEnemy()
@@ -220,17 +223,48 @@ public class EnemyGenerator : MonoBehaviour
     {
         Vector3 position = new Vector3();
 
-        float f = Random.value > 0.5f ? -1f : 1f;
-        if (Random.value > 0.5f)
+        float r = Random.Range(0, SpawnArea.x + SpawnArea.y);
+        //float f = r < SpawnArea.x ? -1f : 1f;
+
+        if (r < SpawnArea.x)
         {
             position.x = Random.Range(-SpawnArea.x, SpawnArea.x);
-            position.y = SpawnArea.y * f;
+
+            if (Random.value > 0.5f)
+            {
+                position.y = SpawnArea.y * -1;
+            }
+            else
+            {
+                position.y = SpawnArea.y;
+            }
         }
         else
         {
             position.y = Random.Range(-SpawnArea.y, SpawnArea.y);
-            position.x = SpawnArea.x * f;
+
+            if (Random.value > 0.5f)
+            {
+                position.x = SpawnArea.x * -1;
+            }
+            else
+            {
+                position.x = SpawnArea.x;
+            }
         }
+
+        //float f = Random.value > 0.5f ? -1f : 1f;
+
+        // if (Random.Range(0, SpawnArea.x + SpawnArea.y) > SpawnArea.x)
+        // {
+        //     position.x = Random.Range(-SpawnArea.x, SpawnArea.x);
+        //     position.y = SpawnArea.y * f;
+        // }
+        // else
+        // {
+        //     position.y = Random.Range(-SpawnArea.y, SpawnArea.y);
+        //     position.x = SpawnArea.x * f;
+        // }
 
         position.z = 0;
 
@@ -346,7 +380,7 @@ public class EnemyWave
         if (EnemyGenerator.instance.spawningEnemy)
             EnemyGenerator.instance.GenerateOneSpot(enemyObject, 50);
 
-            yield return null;
+        yield return null;
     }
 
     //public WaveObject waveObject;
