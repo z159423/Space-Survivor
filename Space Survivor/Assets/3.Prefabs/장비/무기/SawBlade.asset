@@ -23,7 +23,7 @@ MonoBehaviour:
   firePosName: FirePos1
   fireDirName: FireDir1
   currentDamage:
-    baseValue: 3
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0

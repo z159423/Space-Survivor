@@ -16,6 +16,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8837024627107654669, guid: 9c7933f276283c849ba6ce3f37b8d1f3, type: 3}
   weaponImage: {fileID: 21300000, guid: ac19f341e67332944b05c678ca6d1544, type: 3}
   parent: {fileID: 0}
+  anyEqupment: 0
   type: 4
   whileParticlePrefab: {fileID: 0}
   currenWhileParticle: {fileID: 0}
@@ -27,6 +28,8 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentSizeVector: {x: 0.013, y: 0.013, z: 0.013}
   currentSize:
     baseValue: 1
@@ -34,6 +37,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentTrailSize:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   ready: 1
   coolTime:
     baseValue: 4
@@ -41,12 +54,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   damageMultifly:
     baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   projectileAmount: 1
   firingInterval:
     baseValue: 0.2
@@ -54,12 +71,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   FireForce:
     baseValue: 100
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentUpgradeModules: []
   UpgradeModulesForLevel:
   - upgradeModules:
@@ -69,7 +90,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
-    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: 724ba58641c764345add7e819884c9b1, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}

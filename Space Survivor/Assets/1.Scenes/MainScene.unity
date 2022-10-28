@@ -40512,12 +40512,12 @@ MonoBehaviour:
     summonCycleTime: 0.4
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
   - StartWaveTime: 420
-    StopWaveTime: 425
+    StopWaveTime: 423
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
   - StartWaveTime: 540
-    StopWaveTime: 545
+    StopWaveTime: 543
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}

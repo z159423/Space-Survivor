@@ -102,7 +102,7 @@ MonoBehaviour:
   type: 0
   maxHp: 50
   damage:
-    baseValue: 10
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0
