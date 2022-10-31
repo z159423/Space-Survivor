@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Firebase.Analytics;
 
 public class RewardedInterstitialAdCaller : MonoBehaviour
 {
@@ -223,6 +224,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             UserDataManager.instance.AddCrystalValue(crystalValue);
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+            FirebaseAnalytics.LogEvent("RvAdsComplete");
         }
     }
 
@@ -310,6 +313,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
+            FirebaseAnalytics.LogEvent("RvAdsComplete");
+
         }
     }
 
@@ -390,6 +395,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             StartCoroutine(revive());
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+            FirebaseAnalytics.LogEvent("RvAdsComplete");
         }
     }
 
@@ -470,6 +477,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             StartCoroutine(crystalDouble());
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+            FirebaseAnalytics.LogEvent("RvAdsComplete");
         }
     }
 
@@ -483,6 +492,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             //print("무료 크리스탈 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
             return;
         }
+
+        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
         if (this.crystallAddRewardedAd.IsLoaded())
         {
@@ -508,6 +519,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             return;
         }
 
+        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
+
         if (this.shipTrialRewardedAd.IsLoaded())
         {
             this.shipTrialRewardedAd.Show();
@@ -523,6 +536,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //부활 리워드 광고 호출
     public void WatchRewardAds_Revive()
     {
+        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
+
         if (this.reviveRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             this.reviveRewardedAd.Show();
@@ -538,6 +553,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //크리스탈 2배 리워드 광고 호출
     public void WatchRewardAds_CrystalDouble()
     {
+        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
         if (this.crystalDoubleRewardAd.IsLoaded())
         {
             this.crystalDoubleRewardAd.Show();

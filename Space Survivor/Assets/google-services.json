@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "997553477781",
+    "project_id": "space-survivor-80069176",
+    "storage_bucket": "space-survivor-80069176.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997553477781:android:68796bab832ccc1fe1239c",
+        "android_client_info": {
+          "package_name": "com.TeroGames.spacesurvivor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997553477781-5n1nk4nri21t9q3i4ob0sk2slvjq1rl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXpnFTOzUbpu033Pq5Zs_iPQ_hiOnFhxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997553477781-5n1nk4nri21t9q3i4ob0sk2slvjq1rl7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

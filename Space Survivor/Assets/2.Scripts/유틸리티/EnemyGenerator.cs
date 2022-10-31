@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public Vector2 SpawnArea;
+    public float spawnAreaMulti = 0.02f;
 
     public float spawnTime = 0.5f;
 
@@ -50,8 +51,8 @@ public class EnemyGenerator : MonoBehaviour
     private void Start()
     {
         //SpawnArea = canvas.sizeDelta * 0.01f;
-        SpawnArea.x = canvas.position.x * 0.015f;
-        SpawnArea.y = canvas.position.y * 0.015f;
+        SpawnArea.x = canvas.position.x * spawnAreaMulti;
+        SpawnArea.y = canvas.position.y * spawnAreaMulti;
 
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
+using Firebase.Analytics;
 
 public class InterstitialAdCaller : MonoBehaviour
 {
@@ -111,6 +112,8 @@ public class InterstitialAdCaller : MonoBehaviour
         void HandleOnAdOpening(object sender, EventArgs args)
         {
             MonoBehaviour.print("전면 광고 실행중");
+
+            FirebaseAnalytics.LogEvent("IrAdsWatchingEvent");
         }
 
         void HandleOnAdClosed(object sender, EventArgs args)
@@ -124,6 +127,8 @@ public class InterstitialAdCaller : MonoBehaviour
 
     public void CallIrAds()
     {
+        FirebaseAnalytics.LogEvent("IrAdsCallEvent");
+
         if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             this.interstitial.Show();
@@ -131,7 +136,11 @@ public class InterstitialAdCaller : MonoBehaviour
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
+            {
                 print("광고제거를 구매하여 전면광고가 없습니다");
+                FirebaseAnalytics.LogEvent("IrAdsCallEvent");
+            }
+                
             else if (!IrAdsReady)
                 print("광고가 로드되지 않았습니다");
         }

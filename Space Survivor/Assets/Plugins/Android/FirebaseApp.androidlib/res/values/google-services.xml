@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">997553477781</string>
+  <string name="google_storage_bucket" translatable="false">space-survivor-80069176.appspot.com</string>
+  <string name="project_id" translatable="false">space-survivor-80069176</string>
+  <string name="google_api_key" translatable="false">AIzaSyCXpnFTOzUbpu033Pq5Zs_iPQ_hiOnFhxw</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCXpnFTOzUbpu033Pq5Zs_iPQ_hiOnFhxw</string>
+  <string name="google_app_id" translatable="false">1:997553477781:android:68796bab832ccc1fe1239c</string>
+  <string name="default_web_client_id" translatable="false">997553477781-5n1nk4nri21t9q3i4ob0sk2slvjq1rl7.apps.googleusercontent.com</string>
+</resources>

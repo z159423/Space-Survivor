@@ -8,6 +8,7 @@ using UnityEngine.Localization;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using DG.Tweening;
+using Firebase.Analytics;
 
 public class GameManager : MonoBehaviour
 {
@@ -127,6 +128,8 @@ public class GameManager : MonoBehaviour
         playerStat.invinsible = false;
 
         InterstitialAdCaller.instance.StartIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelStart);
     }
 
     public void ReplayGame()
@@ -158,6 +161,8 @@ public class GameManager : MonoBehaviour
 
         EnemyGenerator.instance.deleteBossWall();
         InterstitialAdCaller.instance.StopIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelEnd);
     }
 
     public void Resurrection()
