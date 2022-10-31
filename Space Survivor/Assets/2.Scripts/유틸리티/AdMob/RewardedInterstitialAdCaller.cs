@@ -35,7 +35,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     [SerializeField] private GameObject touchProjectPanel;
     [SerializeField] private PlayerStat playerStat;
-    
+
 
     [Space]
 
@@ -218,10 +218,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 "보상형 광고를 시청하였습니다. 보상을 지급해야 합니다: "
                             + amount.ToString() + " " + type);
 
-            UserDataManager.instance.currentUserData.usingFreeCrystalTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-            UserDataManager.instance.SaveCurrentDate();
-
-            UserDataManager.instance.AddCrystalValue(crystalValue);
+            StartCoroutine(getFreeCrystal());
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
@@ -307,9 +304,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print("함선 체험광고를 시청하였습니다. 함선 체험을 시작합니다.");
 
             StartCoroutine(startTrial());
-
-            UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
-            UserDataManager.instance.SaveCurrentDate();
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
@@ -495,7 +489,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.crystallAddRewardedAd.IsLoaded())
+        if (this.crystallAddRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             if (UserDataManager.instance.currentUserData.usingFreeCrystalTime != null)
                 print(timeDiff);
@@ -504,7 +498,12 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
         else
         {
-            print("광고가 없습니다");
+            if (UserDataManager.instance.currentUserData.RemoveAds)
+                print("광고 제거를 구매해 광고 호출을 안함");
+            else
+                print("광고가 없습니다");
+
+            StartCoroutine(getFreeCrystal());
         }
     }
 
@@ -521,13 +520,16 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.shipTrialRewardedAd.IsLoaded())
+        if (this.shipTrialRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             this.shipTrialRewardedAd.Show();
         }
         else
         {
-            print("광고가 없습니다");
+            if (UserDataManager.instance.currentUserData.RemoveAds)
+                print("광고 제거를 구매해 광고 호출을 안함");
+            else
+                print("광고가 없습니다");
 
             StartCoroutine(startTrial());
         }
@@ -544,7 +546,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
         else
         {
-            print("광고가 없습니다");
+            if (UserDataManager.instance.currentUserData.RemoveAds)
+                print("광고 제거를 구매해 광고 호출을 안함");
+            else
+                print("광고가 없습니다");
 
             StartCoroutine(revive());
         }
@@ -554,13 +559,16 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public void WatchRewardAds_CrystalDouble()
     {
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-        if (this.crystalDoubleRewardAd.IsLoaded())
+        if (this.crystalDoubleRewardAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             this.crystalDoubleRewardAd.Show();
         }
         else
         {
-            print("광고가 없습니다");
+            if (UserDataManager.instance.currentUserData.RemoveAds)
+                print("광고 제거를 구매해 광고 호출을 안함");
+            else
+                print("광고가 없습니다");
 
             StartCoroutine(crystalDouble());
         }
@@ -580,23 +588,36 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //함선 체험
     IEnumerator startTrial()
     {
+        UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
+        UserDataManager.instance.SaveCurrentDate();
+
         touchProjectPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
 
         shipTrialButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
-        
     }
 
     //크리스탈 두배
     IEnumerator crystalDouble()
     {
-        
+
         yield return null;
         //crystalDoubleButton.onClick.Invoke();
         GameManager.instance.crystalDouble = true;
         crystalDoubleButton.gameObject.SetActive(false);
         playerStat.GetCrystalDouble();
+    }
+
+    //무료 크리스탈
+    IEnumerator getFreeCrystal()
+    {
+        yield return null;
+
+        UserDataManager.instance.currentUserData.usingFreeCrystalTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+        UserDataManager.instance.SaveCurrentDate();
+
+        UserDataManager.instance.AddCrystalValue(crystalValue);
     }
 
     public bool IsFreeCrystalReady()
