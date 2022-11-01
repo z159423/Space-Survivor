@@ -31,4 +31,4 @@ public class WaveObject : ScriptableObject
     }
 }
 
-public enum waveType { summonedPeriodically, summonBoss, blobBurstSummon }
+public enum waveType { summonedPeriodically, summonBoss, blobBurstSummon, hyperBurstSummon }

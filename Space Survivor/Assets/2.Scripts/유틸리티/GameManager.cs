@@ -130,6 +130,8 @@ public class GameManager : MonoBehaviour
         InterstitialAdCaller.instance.StartIrAdsCoolTime();
 
         FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelStart);
+
+        FPSDisplay.instance.ResetMinFPS();
     }
 
     public void ReplayGame()
@@ -163,6 +165,9 @@ public class GameManager : MonoBehaviour
         InterstitialAdCaller.instance.StopIrAdsCoolTime();
 
         FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelEnd);
+
+        FPSDisplay.instance.SaveFPS();
+
     }
 
     public void Resurrection()

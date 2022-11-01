@@ -58,12 +58,17 @@ public class ResourceGenerator : MonoBehaviour
                         break;
                 }
 
-                for(int z = 0; z < dropAmount; z++)
+                StartCoroutine(force());
+
+                IEnumerator force()
+                {
+                    for(int z = 0; z < dropAmount; z++)
                 {
                     var success = resourcePool[i].DeQueue(position);
 
                     if (success != null)
                     {
+                        yield return null;
                         Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
 
                         var resource = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
@@ -72,8 +77,13 @@ public class ResourceGenerator : MonoBehaviour
                         resource.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(0, dropTable.maxDropForce));
 
                         generatedResource.Add(resource);
+
+                        print("보스 드랍 아이템 드랍!");
                     }
                 }
+                }
+
+                
 
                 break;
             }

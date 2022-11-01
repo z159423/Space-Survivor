@@ -104,6 +104,10 @@ public class EnemyGenerator : MonoBehaviour
             case waveType.blobBurstSummon:
                 wave.waveCoroutine = StartCoroutine(wave.blobBurstSummon());
                 break;
+
+            case waveType.hyperBurstSummon:
+                wave.waveCoroutine = StartCoroutine(wave.hyperBurstSummon(warningPanel, warningPanelAnimator));
+                break;
         }
     }
 
@@ -336,6 +340,8 @@ public class EnemyWave
 
     public EnemyObject enemyObject;
 
+    public int count;
+
     public Coroutine waveCoroutine;
 
     public IEnumerator SummonPreiodically()
@@ -382,6 +388,38 @@ public class EnemyWave
             EnemyGenerator.instance.GenerateOneSpot(enemyObject, 50);
 
         yield return null;
+    }
+
+    public IEnumerator hyperBurstSummon(GameObject panel, Animator animator)
+    {
+        panel.SetActive(true);
+        animator.SetTrigger("Active");
+
+        MonoBehaviour.print("11");
+
+        EnemyGenerator.instance.bossFighting = true;
+
+        yield return new WaitForSeconds(3f);
+
+        MonoBehaviour.print("22");
+
+        panel.SetActive(false);
+
+        for (int i = 0; i < count; i++)
+        {
+            yield return null;
+            if (EnemyGenerator.instance.spawningEnemy)
+                EnemyGenerator.instance.GenerateEnemy2(enemyObject);
+        }
+
+        MonoBehaviour.print("33");
+
+        yield return new WaitForSeconds(10f);
+
+        MonoBehaviour.print("44");
+
+
+        EnemyGenerator.instance.bossFighting = false;
     }
 
     //public WaveObject waveObject;

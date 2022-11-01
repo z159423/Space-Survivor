@@ -37,7 +37,7 @@ public class InterstitialAdCaller : MonoBehaviour
 
     public void StartIrAdsCoolTime()
     {
-        if(irAdCoolTimeCoroutine == null)
+        if (irAdCoolTimeCoroutine == null)
             irAdCoolTimeCoroutine = StartCoroutine(StartTickIrAdsTime());
 
         IEnumerator StartTickIrAdsTime()
@@ -52,7 +52,7 @@ public class InterstitialAdCaller : MonoBehaviour
 
     public void StopIrAdsCoolTime()
     {
-        if(irAdCoolTimeCoroutine != null)
+        if (irAdCoolTimeCoroutine != null)
         {
             StopCoroutine(irAdCoolTimeCoroutine);
             irAdCoolTimeCoroutine = null;
@@ -122,6 +122,8 @@ public class InterstitialAdCaller : MonoBehaviour
 
             RequestInterstitial();
             RestartIrAdsCoolTime();
+
+            FirebaseAnalytics.LogEvent("IrAdsClosedEvent");
         }
     }
 
@@ -138,11 +140,15 @@ public class InterstitialAdCaller : MonoBehaviour
             if (UserDataManager.instance.currentUserData.RemoveAds)
             {
                 print("광고제거를 구매하여 전면광고가 없습니다");
-                FirebaseAnalytics.LogEvent("IrAdsCallEvent");
+                FirebaseAnalytics.LogEvent("IrAdsNoBecausePurchasedNoAdsEvent");
             }
-                
+
             else if (!IrAdsReady)
+            {
                 print("광고가 로드되지 않았습니다");
+                FirebaseAnalytics.LogEvent("IrAdsNotReadyEvent");
+            }
+
         }
     }
 }
