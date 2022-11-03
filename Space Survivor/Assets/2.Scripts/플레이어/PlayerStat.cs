@@ -147,6 +147,12 @@ public class PlayerStat : MonoBehaviour
     {
         UserDataManager.instance.AddCrystalValue(lastGameCurrentCrystal);
         GameManager.instance.ChangeGetCrystalText(lastGameCurrentCrystal);
+
+        //if (playerDie)
+        //    CrystalMotion.instance.StartCrystalMotion(0, lastGameCurrentCrystal);
+        //else
+        //    CrystalMotion.instance.StartCrystalMotion(0, lastGameCurrentCrystal);
+
     }
 
     public void GetExp(int exp)

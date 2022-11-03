@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public Vector2 SpawnArea;
+    public float spawnCircleRadius = 14.5f;
     public float spawnAreaMulti = 0.02f;
 
     public float spawnTime = 0.5f;
@@ -40,6 +41,8 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private GameObject bossBarrior;
     private GameObject barrior;
 
+    [SerializeField] private Transform enemyGeneratorDummy;
+
 
     public static EnemyGenerator instance;
 
@@ -51,9 +54,16 @@ public class EnemyGenerator : MonoBehaviour
     private void Start()
     {
         //SpawnArea = canvas.sizeDelta * 0.01f;
-        SpawnArea.x = canvas.position.x * spawnAreaMulti;
-        SpawnArea.y = canvas.position.y * spawnAreaMulti;
 
+        //float maxvalue = (canvas.rect.width > canvas.rect.height) ? canvas.rect.width : canvas.rect.height;
+
+        //SpawnArea.x = maxvalue * spawnAreaMulti;
+        //SpawnArea.y = maxvalue * spawnAreaMulti;
+
+        SpawnArea.x = spawnCircleRadius;
+        SpawnArea.y = spawnCircleRadius;
+
+        print("적 스폰 거리 : " + SpawnArea);
     }
 
     public void StartSpawnEnemy()
@@ -168,11 +178,11 @@ public class EnemyGenerator : MonoBehaviour
     public void GenerateEnemy2(EnemyObject enemy)
     {
 
-        var success = enemy.DeQueue(GenerateSpawnPosition());
+        var success = enemy.DeQueue(GenerateSpawnPositon_Circle(player.transform));
 
         if (success != null)
         {
-            var spawnEnemy = Instantiate(success, GenerateSpawnPosition(), Quaternion.identity, parent);
+            var spawnEnemy = Instantiate(success, GenerateSpawnPositon_Circle(player.transform), Quaternion.identity, parent);
 
             spawnEnemy.GetComponent<EnemyStat>().SetTarget(player);
 
@@ -222,6 +232,15 @@ public class EnemyGenerator : MonoBehaviour
         }
 
         return null;
+    }
+
+    private Vector3 GenerateSpawnPositon_Circle(Transform target)
+    {
+        enemyGeneratorDummy.position = target.position + new Vector3(SpawnArea.x, 0, 0);
+
+        enemyGeneratorDummy.RotateAround(target.position, new Vector3(0,0,1), Random.Range(0,360));
+
+        return enemyGeneratorDummy.position;
     }
 
     private Vector3 GenerateSpawnPosition()

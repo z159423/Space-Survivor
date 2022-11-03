@@ -176,8 +176,6 @@ public class LevelUpManager : MonoBehaviour
 
         playerStat.AfterUpgrade();
         EndUpgrade();
-
-        InterstitialAdCaller.instance.CallIrAds();
     }
 
     public WeaponObject RequestPlayerWeapon(EquipmentType type)

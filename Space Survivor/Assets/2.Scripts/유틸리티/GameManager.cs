@@ -140,6 +140,8 @@ public class GameManager : MonoBehaviour
         SelectShip(currentShipNumber);
 
         EnemyGenerator.instance.deleteBossWall();
+
+        InterstitialAdCaller.instance.CallIrAds();
     }
 
     public void GoMainMenu()
@@ -168,6 +170,7 @@ public class GameManager : MonoBehaviour
 
         FPSDisplay.instance.SaveFPS();
 
+        InterstitialAdCaller.instance.CallIrAds();
     }
 
     public void Resurrection()
@@ -184,6 +187,8 @@ public class GameManager : MonoBehaviour
 
         DieMenu.SetActive(true);
 
+        //CrystalMotion.instance.StartCrystalMotion(0,playerStat.currentCrystal);
+
         if (!revivedThisGame)
         {
             revivedTimer = 1f;
@@ -196,6 +201,7 @@ public class GameManager : MonoBehaviour
             {
                 reviveButton.SetActive(false);
                 fill.fillAmount = 1f;
+
             });
         }
 
@@ -220,6 +226,8 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
             Item.CrystalOnlyMagnetic(player.transform);
         }
+
+        //CrystalMotion.instance.StartCrystalMotion(1,playerStat.currentCrystal);
     }
 
     public void AddKillCount()

@@ -1069,6 +1069,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21850093}
   m_CullTransparentMesh: 1
+--- !u!1 &26352810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26352811}
+  m_Layer: 0
+  m_Name: dummy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26352811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26352810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1463551431}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &27261771
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,7 +4208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &118606509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9961,6 +9992,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3579f6d7f41229c498af40ebfe4dc04a, type: 3}
+--- !u!1 &354827148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354827149}
+  - component: {fileID: 354827150}
+  m_Layer: 0
+  m_Name: CrystalMotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &354827149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354827148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993698527}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &354827150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354827148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74cbd4a003f48d948957d424b6fd5f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieMenuCrystalStart: {fileID: 709216046}
+  dieMenuCrystalMotionParent: {fileID: 459931186}
+  dieMenu: {fileID: 900682417}
+  clearMenuCrystalStart: {fileID: 744353180}
+  clearMenuCrystalMotionParent: {fileID: 459931186}
+  clearMenu: {fileID: 1645339523}
+  crystalEnd: {fileID: 940069669}
+  crystalText: {fileID: 505503844}
+  motionCrystalPool:
+    objectPrefabs: {fileID: 7126936471878364183, guid: 379a53eec0ef87c47a88597c273c2c6d, type: 3}
 --- !u!1 &356441386
 GameObject:
   m_ObjectHideFlags: 0
@@ -12424,6 +12509,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458444799}
   m_CullTransparentMesh: 1
+--- !u!1 &459931185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459931186}
+  m_Layer: 5
+  m_Name: CrystalMotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &459931186
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459931185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 900682418}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &467328025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15773,7 +15894,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.47368422, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -21597,6 +21718,7 @@ RectTransform:
   - {fileID: 1810399676}
   - {fileID: 1899863333}
   - {fileID: 2116729611}
+  - {fileID: 459931186}
   m_Father: {fileID: 1625381616}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22145,7 +22267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxExp: 50
-  maxExpIncreaseValue: 50
+  maxExpIncreaseValue: 60
   getMineralBouse:
     baseValue: 1
     minValue: 0
@@ -37252,7 +37374,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.47368422, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -40499,7 +40621,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 26352811}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40516,7 +40639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnArea: {x: 8, y: 12}
-  spawnAreaMulti: 0.02
+  spawnCircleRadius: 14.5
+  spawnAreaMulti: 0.01
   spawnTime: 1
   parent: {fileID: 1463551431}
   enemySpawnWaves:
@@ -40548,6 +40672,18 @@ MonoBehaviour:
     StopWaveTime: 125
     waveType: 0
     summonCycleTime: 0.02
+    enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+    count: 0
+  - StartWaveTime: 210
+    StopWaveTime: 215
+    waveType: 0
+    summonCycleTime: 0.02
+    enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+    count: 0
+  - StartWaveTime: 130
+    StopWaveTime: 240
+    waveType: 0
+    summonCycleTime: 0.2
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
   - StartWaveTime: 125
@@ -40706,11 +40842,23 @@ MonoBehaviour:
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
     count: 0
+  - StartWaveTime: 45
+    StopWaveTime: 46
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+    count: 0
   - StartWaveTime: 90
     StopWaveTime: 91
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
+    count: 0
+  - StartWaveTime: 135
+    StopWaveTime: 136
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
   - StartWaveTime: 180
     StopWaveTime: 181
@@ -40718,11 +40866,29 @@ MonoBehaviour:
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
+  - StartWaveTime: 215
+    StopWaveTime: 216
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+    count: 0
+  - StartWaveTime: 250
+    StopWaveTime: 251
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+    count: 0
+  - StartWaveTime: 315
+    StopWaveTime: 316
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
+    count: 0
   - StartWaveTime: 360
     StopWaveTime: 361
     waveType: 2
     summonCycleTime: 2
-    enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+    enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
   - StartWaveTime: 420
     StopWaveTime: 421
@@ -40741,6 +40907,42 @@ MonoBehaviour:
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+    count: 0
+  - StartWaveTime: 700
+    StopWaveTime: 701
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+    count: 0
+  - StartWaveTime: 735
+    StopWaveTime: 736
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+    count: 0
+  - StartWaveTime: 770
+    StopWaveTime: 770
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
+    count: 0
+  - StartWaveTime: 815
+    StopWaveTime: 816
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
+    count: 0
+  - StartWaveTime: 840
+    StopWaveTime: 841
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
+    count: 0
+  - StartWaveTime: 875
+    StopWaveTime: 776
+    waveType: 2
+    summonCycleTime: 2
+    enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
     count: 0
   - StartWaveTime: 150
     StopWaveTime: 151
@@ -40779,6 +40981,7 @@ MonoBehaviour:
   warningPanelAnimator: {fileID: 151151189}
   warningPanel: {fileID: 151151186}
   bossBarrior: {fileID: 7879367833413709392, guid: 65b7e841821f10240b21a85174082c54, type: 3}
+  enemyGeneratorDummy: {fileID: 26352811}
 --- !u!1 &1465526447
 GameObject:
   m_ObjectHideFlags: 0
@@ -54452,7 +54655,8 @@ Transform:
   m_LocalPosition: {x: 0.23999977, y: 0.23999977, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 354827149}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -57612,7 +57816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2133330736
 MonoBehaviour:
   m_ObjectHideFlags: 0
