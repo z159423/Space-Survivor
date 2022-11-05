@@ -12402,7 +12402,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: inGame2
     clip: {fileID: 8300000, guid: 0c3e52d7a9e6ff042bd6119b07077c44, type: 3}
-    volume: 0.15
+    volume: 0.125
     pitch: 1
     time: 0
     loop: 1
