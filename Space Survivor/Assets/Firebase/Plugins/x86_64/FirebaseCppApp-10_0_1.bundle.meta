@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 590090df30d142acba7e7be939fd2988
+guid: 81d78e878b144da582a61160503b871f
 labels:
 - gvh
 - gvh_version-10.0.1
-- gvhp_exportpath-Firebase/Plugins/x86_64/FirebaseCppAnalytics.so
+- gvhp_exportpath-Firebase/Plugins/x86_64/FirebaseCppApp-10_0_1.bundle
 timeCreated: 1480838400
 PluginImporter:
   serializedVersion: 1
@@ -29,25 +29,25 @@ PluginImporter:
       settings:
         CPU: None
     Linux64:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86_64
+        CPU: None
     LinuxUniversal:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: AnyCPU
+        CPU: None
     OSXIntel:
       enabled: 0
       settings:
         CPU: None
     OSXIntel64:
-      enabled: 0
+      enabled: 1
       settings:
-        CPU: None
+        CPU: x86_64
     OSXUniversal:
-      enabled: 0
+      enabled: 1
       settings:
-        CPU: None
+        CPU: AnyCPU
     Web:
       enabled: 0
       settings: {}
