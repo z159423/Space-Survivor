@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     private string nowBgmName = "";
 
     private bool isFadeOut = false;
+    [SerializeField] private bool oneAudioSource = false;
 
     [Space]
     public Sound[] SFX;
@@ -165,9 +166,30 @@ public class AudioManager : MonoBehaviour
             return null;
         }
 
-        var audio = audioPool.DequeueObject(position);
+        GameObject audio = null;
+        AudioSource audioSource = null;
+
+        if(s.useOneAudioSource)
+        {
+            if(s.useableAudioSource == null)
+            {
+                audio = audioPool.DequeueObject(position);
+                audioSource = audio.GetComponent<AudioSource>();
+                s.useableAudioSource = audio.GetComponent<AudioSource>();
+            }
+            else
+            {
+                s.useableAudioSource.transform.position = position;
+                audioSource = s.useableAudioSource;
+            }
+        }
+        else
+        {
+            audio = audioPool.DequeueObject(position);
+            audioSource = audio.GetComponent<AudioSource>();
+        }
+        
         //audio.AddComponent<AudioSource>();
-        var audioSource = audio.GetComponent<AudioSource>();
 
         audioSource.clip = s.clip;
 
@@ -179,7 +201,8 @@ public class AudioManager : MonoBehaviour
 
         audioSource.Play();
 
-        StartCoroutine(enqueue());
+        if(!s.useOneAudioSource)
+            StartCoroutine(enqueue());
 
         IEnumerator enqueue()
         {
@@ -297,5 +320,10 @@ public class Sound
 
     [HideInInspector]
     public AudioSource source;
+
+    [Space]
+    public bool useOneAudioSource = false;
+    [HideInInspector]
+    public AudioSource useableAudioSource;
 
 }

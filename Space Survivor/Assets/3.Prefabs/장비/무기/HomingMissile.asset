@@ -22,6 +22,7 @@ MonoBehaviour:
   currenWhileParticle: {fileID: 0}
   firePosName: FirePos1
   fireDirName: FireDir1
+  fireSFX: missile1
   currentDamage:
     baseValue: 10
     minValue: 0

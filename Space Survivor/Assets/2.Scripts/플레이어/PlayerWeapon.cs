@@ -334,6 +334,8 @@ public class PlayerWeapon : MonoBehaviour
                 {
                     projectile.Fire(null, 0);
                 }
+
+                AudioManager.instance.GenerateAudioAndPlaySFX("missile1", transform.position);
             }
         }
     }
