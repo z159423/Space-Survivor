@@ -109,6 +109,8 @@ public class PlayerStat : MonoBehaviour
             return;
         }
 
+        Vibration.Vibrate((long)15);
+
         currentHp -= damage;
 
         hpBar.SetState(currentHp, maxHp);
@@ -164,7 +166,7 @@ public class PlayerStat : MonoBehaviour
 
         currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
 
-        Vibration.Vibrate((long)30);
+        //Vibration.Vibrate((long)30);
 
         OnChangeExp();
     }
