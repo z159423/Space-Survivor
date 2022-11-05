@@ -87,6 +87,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SelectShip(currentShipNumber);
+
+        AudioManager.instance.FindBGM("menu2");
     }
 
     public void ResetTime()
@@ -132,6 +134,8 @@ public class GameManager : MonoBehaviour
         FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelStart);
 
         FPSDisplay.instance.ResetMinFPS();
+
+        AudioManager.instance.FindBGM("inGame2");
     }
 
     public void ReplayGame()
@@ -171,6 +175,8 @@ public class GameManager : MonoBehaviour
         FPSDisplay.instance.SaveFPS();
 
         InterstitialAdCaller.instance.CallIrAds();
+
+        AudioManager.instance.FindBGM("menu2");
     }
 
     public void Resurrection()
