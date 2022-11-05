@@ -8,7 +8,7 @@ public class ObjectPool
     Queue<GameObject> pool = new Queue<GameObject>();
 
     [SerializeField] private GameObject objectPrefabs;
-    [SerializeField] public Transform objectParent {get; set;}
+    [SerializeField] public Transform objectParent;
 
     public GameObject DequeueObject(Vector3 position)
     {

@@ -482,6 +482,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &13966995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10077,6 +10089,7 @@ MonoBehaviour:
   crystalText: {fileID: 505503844}
   motionCrystalPool:
     objectPrefabs: {fileID: 7126936471878364183, guid: 379a53eec0ef87c47a88597c273c2c6d, type: 3}
+    objectParent: {fileID: 0}
 --- !u!1 &356441386
 GameObject:
   m_ObjectHideFlags: 0
@@ -10178,6 +10191,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &365814680
@@ -10915,6 +10940,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: upgrade3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &391147822
@@ -12410,8 +12447,164 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
   bgmPrefab: {fileID: 249666381}
-  SFX: []
+  SFX:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: levelup1
+    clip: {fileID: 8300000, guid: 84bd57214449e774ba21ef91086677cc, type: 3}
+    volume: 0.2
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: upgrade1
+    clip: {fileID: 8300000, guid: 49f6a2557495b6640ac2e9496bd1ba2b, type: 3}
+    volume: 0.15
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: click1
+    clip: {fileID: 8300000, guid: 8b02e6d249da9184691660ba6dc2aa68, type: 3}
+    volume: 0.1
+    pitch: 1
+    time: 0.08
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: upgrade2
+    clip: {fileID: 8300000, guid: 31a7443a396407844beacc39df584acc, type: 3}
+    volume: 0.15
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: click2
+    clip: {fileID: 8300000, guid: 39dc198fd37f9d24a8224450a8005ff4, type: 3}
+    volume: 0.2
+    pitch: 1
+    time: 0.05
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: upgrade3
+    clip: {fileID: 8300000, guid: cf56af4a5e2eda847ae199e3060a56bd, type: 3}
+    volume: 0.15
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: machinegun1
+    clip: {fileID: 8300000, guid: fde1987b6306ffe44b44b9170a74f967, type: 3}
+    volume: 0.11
+    pitch: 1
+    time: 0.05
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: cannon1
+    clip: {fileID: 8300000, guid: 484761639e813354c9dc4e7953945a9c, type: 3}
+    volume: 0.2
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: cannon2
+    clip: {fileID: 8300000, guid: 2f7f2f3e7e24e324c99aff30a3e5e263, type: 3}
+    volume: 0.2
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: explosion1
+    clip: {fileID: 8300000, guid: 5f7fbeeb9f96ded4fb98bbbb43ef3d0b, type: 3}
+    volume: 0.4
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: explosion2
+    clip: {fileID: 8300000, guid: a216a2b6cb7d228468290e49b222e73a, type: 3}
+    volume: 0.2
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: explosion3
+    clip: {fileID: 8300000, guid: a58dc0b5647770d4ba10d7bf460f29f4, type: 3}
+    volume: 0.2
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: exp1
+    clip: {fileID: 8300000, guid: 5693db7babd97a54f85b9b2017e1dcde, type: 3}
+    volume: 0.25
+    pitch: 1
+    time: 0.1
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: siren
+    clip: {fileID: 8300000, guid: 4697e3be71c0c68409105177519f7937, type: 3}
+    volume: 0.2
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: shield1
+    clip: {fileID: 8300000, guid: 18a17200c0815c341aaa43afee369abf, type: 3}
+    volume: 0.45
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+  - name: missile1
+    clip: {fileID: 8300000, guid: 5ac15be01a7c37245a084adfc655fe50, type: 3}
+    volume: 0.15
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
   SFXPrefab: {fileID: 924167434}
+  audioPool:
+    objectPrefabs: {fileID: 357228789322597588, guid: 4c9b53a7ae0392d4181ba68801d83ae6, type: 3}
+    objectParent: {fileID: 924167435}
 --- !u!1001 &458305168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16577,6 +16770,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &629086498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18374,6 +18579,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &727853895
@@ -36293,6 +36510,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1268231477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37014,6 +37243,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: upgrade3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1280868003
@@ -38463,6 +38704,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: upgrade3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1354050579
@@ -40828,7 +41081,7 @@ MonoBehaviour:
   - StartWaveTime: 120
     StopWaveTime: 125
     waveType: 0
-    summonCycleTime: 0.02
+    summonCycleTime: 0.01
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
   - StartWaveTime: 210
@@ -45774,6 +46027,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1652907049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48565,6 +48830,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1764658725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50892,6 +51169,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1829594180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53089,6 +53378,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1905968838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53228,6 +53529,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!4 &1917120550 stripped
@@ -54797,7 +55110,7 @@ MonoBehaviour:
         m_CallState: 2
   gameStart: 0
   inMainMenu: 1
-  editmode: 0
+  editmode: 1
   revivedThisGame: 0
   crystalDouble: 1
   crystalDoubleButton: {fileID: 1577849806}

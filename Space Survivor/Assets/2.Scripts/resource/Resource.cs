@@ -79,6 +79,7 @@ public class Resource : MonoBehaviour
         playerStat.GetExp(expValue);
         playerStat.GetCrystal(crystalValue);
 
+        AudioManager.instance.GenerateAudioAndPlaySFX("exp1", transform.position);
     }
 
     public void TriggerChange(bool trigger)

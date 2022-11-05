@@ -138,6 +138,8 @@ public class PlayerStat : MonoBehaviour
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
         Utility.Explode(transform.position, 0, 20, 10, VFXType.Explode1, cameraShakeInstance);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("explosion1",transform.position);
     }
 
     public void GetCurrentCrystal()
@@ -201,6 +203,8 @@ public class PlayerStat : MonoBehaviour
 
         LevelUpManager.instance.StartWeaponUpgrade();
         playerLevelText.text = "Level " + playerLevel.ToString();
+
+        AudioManager.instance.PlaySFX("levelup1");
 
         //mySequence.Restart();
         //expFill.DOColor(fadeOutExpColor, 1f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
@@ -375,6 +379,8 @@ public class PlayerStat : MonoBehaviour
         currentHp = Mathf.Clamp(currentHp, 0, maxHp);
 
         hpBar.SetState(currentHp, maxHp);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("upgrade2",transform.position);
     }
 
     public int GetCurrentPlayerLevel()
@@ -411,6 +417,8 @@ public class PlayerStat : MonoBehaviour
         OnChangeShieldStack();
 
         shieldImage.SetActive(true);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("shield1", transform.position);
     }
 
     public IEnumerator UseShield()

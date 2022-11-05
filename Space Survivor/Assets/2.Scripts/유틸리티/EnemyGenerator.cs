@@ -382,6 +382,8 @@ public class EnemyWave
         animator.SetTrigger("Active");
         EnemyGenerator.instance.bossFighting = true;
 
+        AudioManager.instance.GenerateAudioAndPlaySFX("siren", Vector3.zero);
+
         yield return new WaitForSeconds(3f);
 
         panel.SetActive(false);
@@ -417,6 +419,8 @@ public class EnemyWave
         MonoBehaviour.print("11");
 
         EnemyGenerator.instance.bossFighting = true;
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("siren", Vector3.zero);
 
         yield return new WaitForSeconds(3f);
 

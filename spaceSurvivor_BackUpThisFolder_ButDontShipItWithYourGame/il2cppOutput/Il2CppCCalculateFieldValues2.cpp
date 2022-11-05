@@ -13873,20 +13873,20 @@ struct U3CSummonPreiodicallyU3Ed__4_tA840406B89AAC749FF1D556969BD44F8AB8F10AF  :
 	WaveObject_t1062D19032E478351FAA3B1CBFD5AB281E5883CE* ___U3CU3E4__this_2;
 };
 
-// WeaponObject/<Fire>d__28
-struct U3CFireU3Ed__28_t846DDC6B0E754C11E14D907B0514AF07F4B23CBF  : public RuntimeObject
+// WeaponObject/<Fire>d__29
+struct U3CFireU3Ed__29_t9470A4EE1A799A4F0E24CD6AD4D3388A98561A75  : public RuntimeObject
 {
-	// System.Int32 WeaponObject/<Fire>d__28::<>1__state
+	// System.Int32 WeaponObject/<Fire>d__29::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object WeaponObject/<Fire>d__28::<>2__current
+	// System.Object WeaponObject/<Fire>d__29::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// WeaponObject WeaponObject/<Fire>d__28::<>4__this
+	// WeaponObject WeaponObject/<Fire>d__29::<>4__this
 	WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553* ___U3CU3E4__this_2;
-	// UnityEngine.Transform WeaponObject/<Fire>d__28::firepos
+	// UnityEngine.Transform WeaponObject/<Fire>d__29::firepos
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___firepos_3;
-	// PlayerWeapon WeaponObject/<Fire>d__28::playerWeapon
+	// PlayerWeapon WeaponObject/<Fire>d__29::playerWeapon
 	PlayerWeapon_t7CB5E61DEB162895ED5ECC21D7F947004DE89B01* ___playerWeapon_4;
-	// System.Int32 WeaponObject/<Fire>d__28::<j>5__2
+	// System.Int32 WeaponObject/<Fire>d__29::<j>5__2
 	int32_t ___U3CjU3E5__2_5;
 };
 
@@ -30364,34 +30364,36 @@ struct WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553  : public Scriptab
 	String_t* ___firePosName_16;
 	// System.String WeaponObject::fireDirName
 	String_t* ___fireDirName_17;
+	// System.String WeaponObject::fireSFX
+	String_t* ___fireSFX_18;
 	// Stat WeaponObject::currentDamage
-	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___currentDamage_18;
+	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___currentDamage_19;
 	// UnityEngine.Vector3 WeaponObject::currentSizeVector
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___currentSizeVector_19;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___currentSizeVector_20;
 	// Stat WeaponObject::currentSize
-	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___currentSize_20;
+	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___currentSize_21;
 	// Stat WeaponObject::currentTrailSize
-	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___currentTrailSize_21;
+	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___currentTrailSize_22;
 	// System.Boolean WeaponObject::ready
-	bool ___ready_22;
+	bool ___ready_23;
 	// Stat WeaponObject::coolTime
-	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___coolTime_23;
+	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___coolTime_24;
 	// Stat WeaponObject::damageMultifly
-	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___damageMultifly_24;
+	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___damageMultifly_25;
 	// System.Int32 WeaponObject::projectileAmount
-	int32_t ___projectileAmount_25;
+	int32_t ___projectileAmount_26;
 	// Stat WeaponObject::firingInterval
-	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___firingInterval_26;
+	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___firingInterval_27;
 	// Stat WeaponObject::FireForce
-	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___FireForce_27;
+	Stat_t347C80C1BA9D0F03E87EA478FF9E0234B28F8505* ___FireForce_28;
 	// System.Collections.Generic.List`1<UpgradeModule> WeaponObject::currentUpgradeModules
-	List_1_t9D9A75A60621F214CCAA4167E56FDAFB3E0C4138* ___currentUpgradeModules_28;
+	List_1_t9D9A75A60621F214CCAA4167E56FDAFB3E0C4138* ___currentUpgradeModules_29;
 	// System.Collections.Generic.List`1<UpgradeModuleList> WeaponObject::UpgradeModulesForLevel
-	List_1_tCDF22C4DF661E459B34D265CD6D1B382E981B99F* ___UpgradeModulesForLevel_29;
+	List_1_tCDF22C4DF661E459B34D265CD6D1B382E981B99F* ___UpgradeModulesForLevel_30;
 	// System.Int32 WeaponObject::maxWeaponLevel
-	int32_t ___maxWeaponLevel_30;
+	int32_t ___maxWeaponLevel_31;
 	// System.Int32 WeaponObject::currentWeaponLevel
-	int32_t ___currentWeaponLevel_31;
+	int32_t ___currentWeaponLevel_32;
 };
 
 // TMPro.WordWrapState
@@ -38879,10 +38881,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6632[2] =
 	static_cast<int32_t>(offsetof(Return_tAB63CC0D64192DC4851228BFFC76F530DB278E61, ___Object_0)),static_cast<int32_t>(offsetof(Return_tAB63CC0D64192DC4851228BFFC76F530DB278E61, ___success_1)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6633[6] = 
 {
-	static_cast<int32_t>(offsetof(U3CFireU3Ed__28_t846DDC6B0E754C11E14D907B0514AF07F4B23CBF, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CFireU3Ed__28_t846DDC6B0E754C11E14D907B0514AF07F4B23CBF, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CFireU3Ed__28_t846DDC6B0E754C11E14D907B0514AF07F4B23CBF, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CFireU3Ed__28_t846DDC6B0E754C11E14D907B0514AF07F4B23CBF, ___firepos_3)),static_cast<int32_t>(offsetof(U3CFireU3Ed__28_t846DDC6B0E754C11E14D907B0514AF07F4B23CBF, ___playerWeapon_4)),static_cast<int32_t>(offsetof(U3CFireU3Ed__28_t846DDC6B0E754C11E14D907B0514AF07F4B23CBF, ___U3CjU3E5__2_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6634[28] = 
+	static_cast<int32_t>(offsetof(U3CFireU3Ed__29_t9470A4EE1A799A4F0E24CD6AD4D3388A98561A75, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CFireU3Ed__29_t9470A4EE1A799A4F0E24CD6AD4D3388A98561A75, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CFireU3Ed__29_t9470A4EE1A799A4F0E24CD6AD4D3388A98561A75, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CFireU3Ed__29_t9470A4EE1A799A4F0E24CD6AD4D3388A98561A75, ___firepos_3)),static_cast<int32_t>(offsetof(U3CFireU3Ed__29_t9470A4EE1A799A4F0E24CD6AD4D3388A98561A75, ___playerWeapon_4)),static_cast<int32_t>(offsetof(U3CFireU3Ed__29_t9470A4EE1A799A4F0E24CD6AD4D3388A98561A75, ___U3CjU3E5__2_5)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6634[29] = 
 {
-	static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___bulletStack_4)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___activeProjectile_5)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___projectilePrefab_6)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___weaponImage_7)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___parent_8)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___anyEqupment_9)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___type_10)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___whileParticlePrefab_11)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currenWhileParticle_12)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___firePos_13)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___fireDir_14)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___randomDir_15)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___firePosName_16)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___fireDirName_17)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentDamage_18)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentSizeVector_19)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentSize_20)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentTrailSize_21)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___ready_22)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___coolTime_23)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___damageMultifly_24)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___projectileAmount_25)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___firingInterval_26)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___FireForce_27)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentUpgradeModules_28)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___UpgradeModulesForLevel_29)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___maxWeaponLevel_30)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentWeaponLevel_31)),};
+	static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___bulletStack_4)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___activeProjectile_5)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___projectilePrefab_6)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___weaponImage_7)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___parent_8)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___anyEqupment_9)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___type_10)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___whileParticlePrefab_11)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currenWhileParticle_12)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___firePos_13)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___fireDir_14)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___randomDir_15)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___firePosName_16)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___fireDirName_17)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___fireSFX_18)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentDamage_19)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentSizeVector_20)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentSize_21)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentTrailSize_22)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___ready_23)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___coolTime_24)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___damageMultifly_25)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___projectileAmount_26)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___firingInterval_27)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___FireForce_28)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentUpgradeModules_29)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___UpgradeModulesForLevel_30)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___maxWeaponLevel_31)),static_cast<int32_t>(offsetof(WeaponObject_t935F89959852AC7F38A975486B1640EEE21D9553, ___currentWeaponLevel_32)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6635[1] = 
 {
 	static_cast<int32_t>(offsetof(UpgradeModuleList_tE49E7EA7FAC44C9DD7866D17D86FEC27A695F6B0, ___upgradeModules_0)),};

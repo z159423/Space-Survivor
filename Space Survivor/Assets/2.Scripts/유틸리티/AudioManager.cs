@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour
     public GameObject SFXPrefab;
     private AudioSource SFXaudioSource;
 
+    [SerializeField] private ObjectPool audioPool;
+
     public static AudioManager instance;
 
     private static bool Initialized = false;
@@ -163,8 +165,8 @@ public class AudioManager : MonoBehaviour
             return null;
         }
 
-        var audio = new GameObject();
-        audio.AddComponent<AudioSource>();
+        var audio = audioPool.DequeueObject(position);
+        //audio.AddComponent<AudioSource>();
         var audioSource = audio.GetComponent<AudioSource>();
 
         audioSource.clip = s.clip;
@@ -177,7 +179,15 @@ public class AudioManager : MonoBehaviour
 
         audioSource.Play();
 
-        Destroy(audio, s.clip.length + 1);
+        StartCoroutine(enqueue());
+
+        IEnumerator enqueue()
+        {
+            yield return new WaitForSeconds(s.clip.length + 1);
+            audioPool.EnqueueObject(audio);
+        }
+
+        //Destroy(audio, s.clip.length + 1);
 
         return audioSource;
     }

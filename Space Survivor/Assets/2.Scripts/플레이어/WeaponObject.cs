@@ -39,6 +39,10 @@ public class WeaponObject : ScriptableObject, IEquipment
 
     [Space]
 
+    public string fireSFX = "";
+
+    [Space]
+
     public Stat currentDamage = new Stat();
     public Vector3 currentSizeVector;
     public Stat currentSize = new Stat();
@@ -106,6 +110,9 @@ public class WeaponObject : ScriptableObject, IEquipment
 
             if (firingInterval.GetFinalStatValue() > 0)
                 yield return new WaitForSecondsRealtime(firingInterval.GetFinalStatValue());
+
+            if (fireSFX != "")
+                AudioManager.instance.GenerateAudioAndPlaySFX(fireSFX,firepos.position);
 
         }
 

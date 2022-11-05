@@ -2373,18 +2373,18 @@ extern void WeaponObject_GetEquipmentIamge_mD80842BF298628FFBFF2CC41C0A197C63A02
 extern void WeaponObject__ctor_m16BBBA79EEA0572F9E9141E25DB37BE93D2BE7B8 (void);
 // 0x000004AC System.Void WeaponObject/Return::.ctor()
 extern void Return__ctor_mD8E9DF80B7D13D6A8B969D860876257C3564578B (void);
-// 0x000004AD System.Void WeaponObject/<Fire>d__28::.ctor(System.Int32)
-extern void U3CFireU3Ed__28__ctor_mEE043610C98D68552EF59F7DCA4A940512E0A3BA (void);
-// 0x000004AE System.Void WeaponObject/<Fire>d__28::System.IDisposable.Dispose()
-extern void U3CFireU3Ed__28_System_IDisposable_Dispose_m8052D9CF711D1ECAEC4AFBFEDA4AAE4F8BFDDBF1 (void);
-// 0x000004AF System.Boolean WeaponObject/<Fire>d__28::MoveNext()
-extern void U3CFireU3Ed__28_MoveNext_m0BF75CFC32FBB191AFCFBD23193E6A96859A2A94 (void);
-// 0x000004B0 System.Object WeaponObject/<Fire>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CFireU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA7CEDADD977E12163E8036E5A241685E828E4818 (void);
-// 0x000004B1 System.Void WeaponObject/<Fire>d__28::System.Collections.IEnumerator.Reset()
-extern void U3CFireU3Ed__28_System_Collections_IEnumerator_Reset_m6803C9C8B5EF27861F43BFC3144572E121B91CC1 (void);
-// 0x000004B2 System.Object WeaponObject/<Fire>d__28::System.Collections.IEnumerator.get_Current()
-extern void U3CFireU3Ed__28_System_Collections_IEnumerator_get_Current_m0115D14FF3DB61E2CC7FF64E5FC7E3E9D71AA3F7 (void);
+// 0x000004AD System.Void WeaponObject/<Fire>d__29::.ctor(System.Int32)
+extern void U3CFireU3Ed__29__ctor_mECA656011DB4CC5C52578D47C5130A001F094D06 (void);
+// 0x000004AE System.Void WeaponObject/<Fire>d__29::System.IDisposable.Dispose()
+extern void U3CFireU3Ed__29_System_IDisposable_Dispose_m216B695088B541552356BD555A11E0771048FC08 (void);
+// 0x000004AF System.Boolean WeaponObject/<Fire>d__29::MoveNext()
+extern void U3CFireU3Ed__29_MoveNext_m2CB42BAA3B3BE81C8273162B8B2CFEA1FB8AB53A (void);
+// 0x000004B0 System.Object WeaponObject/<Fire>d__29::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CFireU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1E290AD655E77FCE1735630FC8BDAF52B4EA7C39 (void);
+// 0x000004B1 System.Void WeaponObject/<Fire>d__29::System.Collections.IEnumerator.Reset()
+extern void U3CFireU3Ed__29_System_Collections_IEnumerator_Reset_m430DD1206C02F5D4ABC1C5685785860BD163A053 (void);
+// 0x000004B2 System.Object WeaponObject/<Fire>d__29::System.Collections.IEnumerator.get_Current()
+extern void U3CFireU3Ed__29_System_Collections_IEnumerator_get_Current_m460FAB0E66720BF7DE2CB819D3DAEB097A193F80 (void);
 // 0x000004B3 System.String UpgradeModuleList::GetValueHumanReadableValue1(System.Int32)
 extern void UpgradeModuleList_GetValueHumanReadableValue1_m37F23A6E0FC569DB55E26E95648CA6C9EAA6825E (void);
 // 0x000004B4 System.String UpgradeModuleList::GetValueHumanReadableValue2(System.Int32)
@@ -8670,12 +8670,12 @@ static Il2CppMethodPointer s_methodPointers[3830] =
 	WeaponObject_GetEquipmentIamge_mD80842BF298628FFBFF2CC41C0A197C63A0243DC,
 	WeaponObject__ctor_m16BBBA79EEA0572F9E9141E25DB37BE93D2BE7B8,
 	Return__ctor_mD8E9DF80B7D13D6A8B969D860876257C3564578B,
-	U3CFireU3Ed__28__ctor_mEE043610C98D68552EF59F7DCA4A940512E0A3BA,
-	U3CFireU3Ed__28_System_IDisposable_Dispose_m8052D9CF711D1ECAEC4AFBFEDA4AAE4F8BFDDBF1,
-	U3CFireU3Ed__28_MoveNext_m0BF75CFC32FBB191AFCFBD23193E6A96859A2A94,
-	U3CFireU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA7CEDADD977E12163E8036E5A241685E828E4818,
-	U3CFireU3Ed__28_System_Collections_IEnumerator_Reset_m6803C9C8B5EF27861F43BFC3144572E121B91CC1,
-	U3CFireU3Ed__28_System_Collections_IEnumerator_get_Current_m0115D14FF3DB61E2CC7FF64E5FC7E3E9D71AA3F7,
+	U3CFireU3Ed__29__ctor_mECA656011DB4CC5C52578D47C5130A001F094D06,
+	U3CFireU3Ed__29_System_IDisposable_Dispose_m216B695088B541552356BD555A11E0771048FC08,
+	U3CFireU3Ed__29_MoveNext_m2CB42BAA3B3BE81C8273162B8B2CFEA1FB8AB53A,
+	U3CFireU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1E290AD655E77FCE1735630FC8BDAF52B4EA7C39,
+	U3CFireU3Ed__29_System_Collections_IEnumerator_Reset_m430DD1206C02F5D4ABC1C5685785860BD163A053,
+	U3CFireU3Ed__29_System_Collections_IEnumerator_get_Current_m460FAB0E66720BF7DE2CB819D3DAEB097A193F80,
 	UpgradeModuleList_GetValueHumanReadableValue1_m37F23A6E0FC569DB55E26E95648CA6C9EAA6825E,
 	UpgradeModuleList_GetValueHumanReadableValue2_mB305C034C5C8D60EA0A9D94F4477492411B673C0,
 	UpgradeModuleList_GetValueHumanReadableValue3_m20CA41A3F82F7FC069DC4F84D44EF289A2E1AC9B,

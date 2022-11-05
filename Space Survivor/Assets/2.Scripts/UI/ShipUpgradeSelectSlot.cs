@@ -25,5 +25,7 @@ public class ShipUpgradeSelectSlot : MonoBehaviour
     public void onClickUpgradeSelectSlot()
     {
         shipUpgradeUI.SelectShip(shipObject);
+
+        AudioManager.instance.PlaySFX("click2");
     }
 }

@@ -30,6 +30,7 @@ public class ShockWave : MonoBehaviour
           * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
 
         Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
+        AudioManager.instance.GenerateAudioAndPlaySFX("explosion2", transform.position);
     }
 
     public void ResetStat()

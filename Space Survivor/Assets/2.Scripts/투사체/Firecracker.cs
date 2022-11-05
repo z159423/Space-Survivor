@@ -54,6 +54,8 @@ public class Firecracker : MonoBehaviour
         Utility.Explode(transform.position, currentDamage, explodeRadius.GetFinalStatValue(), knockbackForce.GetFinalStatValueAsInt(), vfxType, cameraShakeInstance);
 
         projectileLogic.OffProjectile();
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("explosion2",transform.position);
     }
 
     public VFXType GetVFXType()

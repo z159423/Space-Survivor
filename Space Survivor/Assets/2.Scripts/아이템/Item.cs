@@ -97,6 +97,8 @@ public class Item : MonoBehaviour
         VFXGenerator.instance.GenerateVFX(VFXType.AtomicExplosion, player.transform.position);
         //EZCameraShake.CameraShaker.Instance.ShakeOnce(6f, 6f, .2f, 1.5f);
         CinemachinShake.instance.ShakeCamera(5, 1f);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("explosion1", transform.position);
     }
 
     public static void HyperAtomicExplosion(Vector3 position)
