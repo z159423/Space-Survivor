@@ -7,6 +7,7 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using System.Linq;
 using System;
+using Google.Play.Review;
 
 public class SettingManager : MonoBehaviour
 {

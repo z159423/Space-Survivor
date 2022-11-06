@@ -9,6 +9,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using DG.Tweening;
 using Firebase.Analytics;
+using Google.Play.Review;
 
 public class GameManager : MonoBehaviour
 {
@@ -62,7 +63,10 @@ public class GameManager : MonoBehaviour
     private float revivedTimer = 1f;
 
     public bool crystalDouble = false;
-    [SerializeField] private GameObject crystalDoubleButton; 
+    [SerializeField] private GameObject crystalDoubleButton;
+
+    ReviewManager _reviewManager = new ReviewManager();
+    PlayReviewInfo _playReviewInfo;
 
     public static GameManager instance;
 
@@ -74,14 +78,14 @@ public class GameManager : MonoBehaviour
         //console.SetActive(true);
         //inGameDebug.SetActive(true);
 #endif
-    
-    if(editmode)
-    {
-        for(int i = 0 ; i < editmodeUI.Length; i++)
+
+        if (editmode)
         {
-            editmodeUI[i].SetActive(true);
+            for (int i = 0; i < editmodeUI.Length; i++)
+            {
+                editmodeUI[i].SetActive(true);
+            }
         }
-    }
     }
 
     private void Start()
@@ -415,5 +419,39 @@ public class GameManager : MonoBehaviour
     public void ChangeGetCrystalText(int crystal)
     {
         getCrystalCountText.text = (int.Parse(getCrystalCountText.text) + crystal).ToString();
+    }
+
+    public void RequestReview()
+    {
+        StartCoroutine(requestFlow());
+
+        IEnumerator requestFlow()
+        {
+
+            var requestFlowOperation = _reviewManager.RequestReviewFlow();
+
+            yield return requestFlowOperation;
+
+            if (requestFlowOperation.Error != ReviewErrorCode.NoError)
+            {
+                print(requestFlowOperation.Error.ToString());
+                yield break;
+            }
+
+            _playReviewInfo = requestFlowOperation.GetResult();
+
+            var launchFlowOperation = _reviewManager.LaunchReviewFlow(_playReviewInfo);
+
+            yield return launchFlowOperation;
+
+            _playReviewInfo = null;
+            if (launchFlowOperation.Error != ReviewErrorCode.NoError)
+            {
+                print(requestFlowOperation.Error.ToString());
+                yield break;
+            }
+
+            print("리뷰 요청 완료!");
+        }
     }
 }
