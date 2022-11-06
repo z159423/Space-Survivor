@@ -22,6 +22,7 @@ MonoBehaviour:
   currenWhileParticle: {fileID: 0}
   firePosName: FirePos1
   fireDirName: FireDir1
+  fireSFX: cannon1
   currentDamage:
     baseValue: 10
     minValue: 0
@@ -33,6 +34,14 @@ MonoBehaviour:
   currentSizeVector: {x: 0.05, y: 0.05, z: 0.05}
   currentSize:
     baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentTrailSize:
+    baseValue: 0
     minValue: 0
     MinValue: 0
     maxValue: 0

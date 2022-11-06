@@ -95,7 +95,7 @@ public class EnemyStat : MonoBehaviour
 
         ResourceDrop(dropTable);
 
-        //»ç¸Á ÆÄÆ¼Å¬ »ý¼º
+        //ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼Å¬ ï¿½ï¿½ï¿½ï¿½
         if (dieVFXType != VFXType.none)
         {
             VFXGenerator.instance.GenerateVFX(dieVFXType, transform.position);
@@ -104,22 +104,24 @@ public class EnemyStat : MonoBehaviour
         GameManager.instance.AddKillCount();
 
         spriteRenderer.material = originalMat;
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("kill1", transform.position);
     }
 
     protected void ResourceDrop(DropTable dropTable)
     {
-        //°æÇèÄ¡ µå¶ø
+        //ï¿½ï¿½ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½
         if (dropTable.expType != resourceType.none)
             ResourceGenerator.instance.DeQueueResource(dropTable.expType, transform.position, dropTable);
         //Instantiate(expObject,transform.position,Quaternion.identity);
 
-        //Å©¸®½ºÅ» µå¶ø
+        //Å©ï¿½ï¿½ï¿½ï¿½Å» ï¿½ï¿½ï¿½
         if (Utility.PercentageCalculator(dropTable.crystalDropPercent, 100))
         {
             ResourceGenerator.instance.DeQueueResource(dropTable.crystalType, transform.position, dropTable);
         }
 
-        //¾ÆÀÌÅÛ µå¶ø
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         if (Utility.PercentageCalculator(dropTable.ItemDropPercent, 1000))
         {
             ItemGenerator.instance.GenerateRandomItem(transform.position);

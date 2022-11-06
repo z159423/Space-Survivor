@@ -112,12 +112,14 @@ public class SettingManager : MonoBehaviour
             soundSliderFill.color = offColor;
             soundOnOffText.text = "OFF";
             sound = false;
+            AudioListener.volume = 0;
         }
         else
         {
             soundSliderFill.color = onColor;
             soundOnOffText.text = "ON";
             sound = true;
+            AudioListener.volume = 1;
         }
     }
 

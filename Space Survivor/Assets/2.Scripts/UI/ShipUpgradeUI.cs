@@ -194,5 +194,7 @@ public class ShipUpgradeUI : MonoBehaviour
         SelectShip(currentShipObject);
 
         UserDataManager.instance.AddCrystalValue(-currentShipObject.shipCost);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("upgrade3", transform.position);
     }
 }
