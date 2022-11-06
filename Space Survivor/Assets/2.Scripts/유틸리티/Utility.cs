@@ -70,7 +70,6 @@ public class Utility : MonoBehaviour
 
         VFXGenerator.instance.GenerateVFX(vfxType, center);
 
-
         if (cameraShakeInstance != null)
             EZCameraShake.CameraShaker.Instance.Shake(cameraShakeInstance);
     }
