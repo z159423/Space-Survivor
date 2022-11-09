@@ -71,7 +71,7 @@ MonoBehaviour:
   shipType: 2
   shipCode: Ray
   shipBody: {fileID: 8812495946540635999, guid: df41d2d7f95c3944a93fdd30d7039680, type: 3}
-  shipImage: {fileID: 21300000, guid: 8e3de3461b56b00459bb61bbd1637bdc, type: 3}
+  shipImage: {fileID: 2329625816017176074, guid: b0047f570e043ac4aaf82d673879f6be, type: 3}
   baseMaxHp:
     baseValue: 1200
     minValue: 0
