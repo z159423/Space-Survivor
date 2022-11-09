@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
   m_Name: HyperAdvancedScout1
   m_EditorClassIdentifier: 
-  Object: {fileID: 601496630676670503, guid: c1f1a028a60e6e247b505d062dab5d06, type: 3}
+  Object: {fileID: 601496630676670503, guid: cc3e888f116227143a51c0991090ea55, type: 3}
   type: 7

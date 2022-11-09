@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
   m_Name: HyperScout1
   m_EditorClassIdentifier: 
-  Object: {fileID: 601496630676670503, guid: 41b9a56bd11e20f46a23ca8a64dd00df, type: 3}
+  Object: {fileID: 601496630676670503, guid: bf395078aecce8e468bb9c210fd37d38, type: 3}
   type: 5

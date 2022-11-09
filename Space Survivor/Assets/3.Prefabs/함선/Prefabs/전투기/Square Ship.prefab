@@ -574,9 +574,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6047866749583793374, guid: 33f76880fc9049543b6513b5465e4db1, type: 3}
     - target: {fileID: 7221220700530360570, guid: 097dea495e4551940b0c1b80a5738cfb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221220700530360570, guid: 097dea495e4551940b0c1b80a5738cfb, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221220700530360570, guid: 097dea495e4551940b0c1b80a5738cfb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221220700530360570, guid: 097dea495e4551940b0c1b80a5738cfb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: fd5a2fddee125ea4e868b4fa9d8205d4, type: 2}
     - target: {fileID: 7221220700530360571, guid: 097dea495e4551940b0c1b80a5738cfb, type: 3}
       propertyPath: m_Name
       value: Spaceships_55
