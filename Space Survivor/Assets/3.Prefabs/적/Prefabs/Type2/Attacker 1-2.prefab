@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  maxHp: 50
+  maxHp: 400
   damage:
-    baseValue: 5
+    baseValue: 20
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -132,10 +132,10 @@ MonoBehaviour:
     FloatModifiers: []
     PercentModifiers: []
   dropTable:
-    expType: 1
+    expType: 2
     crystalType: 3
-    crystalDropPercent: 3
-    ItemDropPercent: 5
+    crystalDropPercent: 6
+    ItemDropPercent: 7
     minDropForce: 0
     maxDropForce: 0
     dropExpMinAmount: 1

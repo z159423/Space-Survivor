@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b6176ba7c69b4bb4aa25a9f33cd3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  maxHp: 10
+  type: 3
+  maxHp: 220
   damage:
-    baseValue: 3
+    baseValue: 15
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -132,10 +132,10 @@ MonoBehaviour:
     FloatModifiers: []
     PercentModifiers: []
   dropTable:
-    expType: 1
+    expType: 2
     crystalType: 3
-    crystalDropPercent: 2
-    ItemDropPercent: 5
+    crystalDropPercent: 6
+    ItemDropPercent: 6
     minDropForce: 0
     maxDropForce: 0
     dropExpMinAmount: 1
