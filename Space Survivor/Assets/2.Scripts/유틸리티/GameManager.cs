@@ -212,6 +212,8 @@ public class GameManager : MonoBehaviour
         }
 
         gameStart = false;
+
+        FirebaseAnalytics.LogEvent("playerDieEvent");
     }
 
     public void ClearStage()
@@ -234,6 +236,8 @@ public class GameManager : MonoBehaviour
         }
 
         //CrystalMotion.instance.StartCrystalMotion(1,playerStat.currentCrystal);
+
+        FirebaseAnalytics.LogEvent("stageClearEvent");
     }
 
     public void AddKillCount()

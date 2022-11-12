@@ -10,40 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: UI_en
+  m_Name: Map_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 3c3b68b6e5ac0b8419a9da0f55f3ad36, type: 2}
+  m_SharedData: {fileID: 11400000, guid: 1fc1a0ce1c8c30840ad6c66e2e185fca, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 5560793772748800
-    m_Localized: PLAY
+  - m_Id: 12034801664
+    m_Localized: Void
     m_Metadata:
       m_Items: []
-  - m_Id: 5560847115907072
-    m_Localized: UPGRADES
+  - m_Id: 56087576576
+    m_Localized: Nebula
     m_Metadata:
       m_Items: []
-  - m_Id: 37633033157427200
-    m_Localized: Google account login...
+  - m_Id: 45488570368
+    m_Localized: 'It is a quiet and empty space.
+
+      but don''t be vigilant'
     m_Metadata:
       m_Items: []
-  - m_Id: 50365162848993280
-    m_Localized: Crystal
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50365214405378048
-    m_Localized: Obtain 25 crystals.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 59726171278180352
-    m_Localized: Select
-    m_Metadata:
-      m_Items: []
-  - m_Id: 59726137295929344
-    m_Localized: MAP SELECT
+  - m_Id: 74844504064
+    m_Localized: "\rThis space full of corrupted beings threatens your survival."
     m_Metadata:
       m_Items: []
   references:
