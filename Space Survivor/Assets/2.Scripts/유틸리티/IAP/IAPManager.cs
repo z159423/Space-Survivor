@@ -65,7 +65,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public void PurchageStarterPack()
     {
         m_StoreController.InitiatePurchase(starterPackId);
-        
+
     }
 
     public void PurchageMegaPack()
@@ -85,6 +85,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.AddCrystalValue(1000);
 
         CheckRemoveAdsHasPurchase();
+
+        UpdateUI2();
     }
 
     public void PurchageMegaPack_Success()
@@ -94,6 +96,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.AddCrystalValue(2500);
 
         CheckRemoveAdsHasPurchase();
+
+        UpdateUI2();
+
     }
 
     public void PurchageUltraPack_Success()
@@ -103,6 +108,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.AddCrystalValue(5000);
 
         CheckRemoveAdsHasPurchase();
+
+        UpdateUI2();
+
     }
 
     public void PurchaseRemoveAds_Success()
@@ -111,7 +119,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
-        //UpdateUI();
+        UpdateUI2();
     }
 
     private void CheckRemoveAdsHasPurchase()
@@ -126,6 +134,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         UpdateUI2();
     }
+
+
 
     void InitializePurchasing()
     {
@@ -334,4 +344,5 @@ public class IAPManager : MonoBehaviour, IStoreListener
             print("울트라팩을 구매한 적이 있는 유저");
         }
     }
+
 }

@@ -12,6 +12,13 @@ public class BottomBanner : MonoBehaviour
     //Test ID ca-app-pub-3940256099942544/2934735716
     [SerializeField] private string Ios_bannerAdUnitId = "";
 
+    public static BottomBanner instance;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void Start()
     {
@@ -48,5 +55,13 @@ public class BottomBanner : MonoBehaviour
 
         // Load the banner with the request.
         this.bannerView.LoadAd(request);
+    }
+
+    public void DestoryBanner()
+    {
+        if (this.bannerView != null)
+        {
+            this.bannerView.Destroy();
+        }
     }
 }
