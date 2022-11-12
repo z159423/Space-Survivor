@@ -10,5 +10,5 @@ public class Stage : ScriptableObject
     [field: SerializeField] public Sprite stageImage {get; private set;}
     [field: SerializeField] public string stageNameKey {get; private set;}
     [field: SerializeField] public string stageDescriptionKey { get; private set; }
-    [SerializeField] private SpawnWaveObject spawnWaveObject;
+    [field: SerializeField] public SpawnWaveObject spawnWaveObject {get; private set;}
 }

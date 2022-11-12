@@ -25238,7 +25238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmartExtensions_WriteLineSmart_m37289156
 		// writer.WriteLine();
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_3 = ___writer0;
 		NullCheck(L_3);
-		VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine() */, L_3);
+		VirtualActionInvoker0::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine() */, L_3);
 		// }
 		return;
 	}

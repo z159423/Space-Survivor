@@ -15,4 +15,4 @@ MonoBehaviour:
   <stageImage>k__BackingField: {fileID: 21300000, guid: 4ecb598b03c4c5b45bea92168edb3474, type: 3}
   <stageNameKey>k__BackingField: void
   <stageDescriptionKey>k__BackingField: void-d
-  spawnWaveObject: {fileID: 11400000, guid: 6da3bd6ce49c0e347ad191c15c18c792, type: 2}
+  <spawnWaveObject>k__BackingField: {fileID: 11400000, guid: 6da3bd6ce49c0e347ad191c15c18c792, type: 2}

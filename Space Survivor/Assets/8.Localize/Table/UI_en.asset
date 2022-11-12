@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: MAP SELECT
     m_Metadata:
       m_Items: []
+  - m_Id: 59788782447394816
+    m_Localized: You must clear the previous map to proceed
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

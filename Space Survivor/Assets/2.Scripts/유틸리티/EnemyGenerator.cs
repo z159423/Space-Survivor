@@ -17,7 +17,7 @@ public class EnemyGenerator : MonoBehaviour
     //[ArrayElementTitle("enemyObject")]
     [SerializeField]
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
-    [field: SerializeField] public SpawnWaveObject currentEnemySpawnWaveObject {get; private set;}
+    [field: SerializeField] public SpawnWaveObject currentEnemySpawnWaveObject {get; set;}
     [Space]
 
     //[ArrayElementTitle("enemyObject")]

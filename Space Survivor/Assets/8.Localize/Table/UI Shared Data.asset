@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: Select
     m_Metadata:
       m_Items: []
+  - m_Id: 59788782447394816
+    m_Key: LockedMap
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

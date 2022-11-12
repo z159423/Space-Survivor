@@ -6328,7 +6328,7 @@ IL_0013:
 		FieldInfo_t* L_9 = V_0;
 		NullCheck(L_9);
 		RuntimeObject* L_10;
-		L_10 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_9, NULL);
+		L_10 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(FirebaseLogger_t17574FB770AB2CB02AF3459B2EF9D27FC9C24F42_il2cpp_TypeInfo_var);
 		bool L_11;
 		L_11 = FirebaseLogger_IsStackTraceLogTypeIncompatibleWithNativeLogs_m017E8BD41D237084924DDCF88CB2C6ABABF237DB(((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_10, StackTraceLogType_t2AD431F7181A4203AAE2D538963997CB3A917DF6_il2cpp_TypeInfo_var)))), NULL);
@@ -7028,7 +7028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseEditorDispatcher_ListenToPlaySta
 		(L_18)->SetAt(static_cast<il2cpp_array_size_t>(0), (Type_t*)L_19);
 		NullCheck(L_16);
 		MethodInfo_t* L_20;
-		L_20 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(43 /* System.Reflection.MethodInfo System.Reflection.MethodInfo::MakeGenericMethod(System.Type[]) */, L_16, L_18);
+		L_20 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(44 /* System.Reflection.MethodInfo System.Reflection.MethodInfo::MakeGenericMethod(System.Type[]) */, L_16, L_18);
 		V_6 = L_20;
 		EventInfo_t* L_21 = V_2;
 		NullCheck(L_21);
@@ -7234,7 +7234,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseEditorDispatcher_AddRemoveCallba
 		FieldInfo_t* L_3 = ___eventField0;
 		NullCheck(L_3);
 		RuntimeObject* L_4;
-		L_4 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_3, NULL);
+		L_4 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_3, NULL);
 		V_1 = ((Delegate_t*)IsInstClass((RuntimeObject*)L_4, Delegate_t_il2cpp_TypeInfo_var));
 		bool L_5 = ___add3;
 		V_2 = L_5;

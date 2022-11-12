@@ -13,6 +13,10 @@ public class StageSelect : MonoBehaviour
     [SerializeField] private InfinityBackground[] backgrounds;
     [SerializeField] private GameObject nextButton;
     [SerializeField] private GameObject previusButton;
+    [SerializeField] private GameObject lockedMapCover;
+    [SerializeField] private GameObject stageselectButton;
+
+
 
 
     [Header("스테이지")]
@@ -53,9 +57,12 @@ public class StageSelect : MonoBehaviour
             if (selectedStage.stageNameKey == backgrounds[i].stage.stageNameKey)
             {
                 backgrounds[i].gameObject.SetActive(true);
-                break;
+                //break;
             }
         }
+
+
+        EnemyGenerator.instance.currentEnemySpawnWaveObject = selectedStage.spawnWaveObject;
 
         UpdateUI();
     }
@@ -67,9 +74,20 @@ public class StageSelect : MonoBehaviour
         stageImage.sprite = currentStage.stageImage;
 
         //스테이지 이름, 설명 현지화 가져오기
-
         LocalizeManager.CallLocalizedString(stageName, "Map", currentStage.stageNameKey);
         LocalizeManager.CallLocalizedString(stageDescription, "Map", currentStage.stageNameKey + "-d");
+
+        //언락된 맵인지 확인
+        if (UserDataManager.instance.currentUserData.clearedStageNumber.Contains(mapNumber) || mapNumber == 0)
+        {
+            lockedMapCover.SetActive(false);
+            stageselectButton.SetActive(true);
+        }
+        else
+        {
+            lockedMapCover.SetActive(true);
+            stageselectButton.SetActive(false);
+        }
 
         UpdateUI();
     }

@@ -9859,7 +9859,7 @@ IL_0286:
 		MethodBase_t* L_104 = V_13;
 		NullCheck(L_104);
 		bool L_105;
-		L_105 = VirtualFuncInvoker0< bool >::Invoke(30 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_104);
+		L_105 = VirtualFuncInvoker0< bool >::Invoke(31 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_104);
 		if (!L_105)
 		{
 			goto IL_0299;
@@ -9898,7 +9898,7 @@ IL_0299:
 		MethodInfo_t* L_112 = V_16;
 		NullCheck(L_112);
 		Type_t* L_113;
-		L_113 = VirtualFuncInvoker0< Type_t* >::Invoke(41 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_112);
+		L_113 = VirtualFuncInvoker0< Type_t* >::Invoke(42 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_112);
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_114 = { reinterpret_cast<intptr_t> (Void_t4861ACF8F4594C3437BB48B6E56783494B843915_0_0_0_var) };
 		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 		Type_t* L_115;
@@ -10035,7 +10035,7 @@ IL_033a:
 		MethodInfo_t* L_132 = V_16;
 		NullCheck(L_132);
 		Type_t* L_133;
-		L_133 = VirtualFuncInvoker0< Type_t* >::Invoke(41 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_132);
+		L_133 = VirtualFuncInvoker0< Type_t* >::Invoke(42 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_132);
 		NullCheck(L_131);
 		bool L_134;
 		L_134 = TypeFilter_ValidateType_mA0638F36D7C9B45B306C4AEF52301AF3A01EE568(L_131, L_133, NULL);
@@ -10087,7 +10087,7 @@ IL_0360:
 		MethodInfo_t* L_140 = V_16;
 		NullCheck(L_140);
 		Type_t* L_141;
-		L_141 = VirtualFuncInvoker0< Type_t* >::Invoke(41 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_140);
+		L_141 = VirtualFuncInvoker0< Type_t* >::Invoke(42 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_140);
 		NullCheck(L_141);
 		String_t* L_142;
 		L_142 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_141);
@@ -10982,7 +10982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MethodInfo_t* MemberUtility_MakeGenericMethod
 		MethodInfo_t* L_5 = ___openConstructedMethod0;
 		NullCheck(L_5);
 		bool L_6;
-		L_6 = VirtualFuncInvoker0< bool >::Invoke(30 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_5);
+		L_6 = VirtualFuncInvoker0< bool >::Invoke(31 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_5);
 		if (L_6)
 		{
 			goto IL_0030;
@@ -11110,7 +11110,7 @@ IL_009d:
 		MethodInfo_t* L_37 = ___openConstructedMethod0;
 		NullCheck(L_37);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_38;
-		L_38 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(29 /* System.Type[] System.Reflection.MethodBase::GetGenericArguments() */, L_37);
+		L_38 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(30 /* System.Type[] System.Reflection.MethodBase::GetGenericArguments() */, L_37);
 		// var closedConstructedGenericArguments = openConstructedGenericArguments.Select(openConstructedGenericArgument =>
 		// {
 		//     // If the generic argument has been successfully resolved, use it;
@@ -11139,7 +11139,7 @@ IL_009d:
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_44 = V_2;
 		NullCheck(L_43);
 		MethodInfo_t* L_45;
-		L_45 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(43 /* System.Reflection.MethodInfo System.Reflection.MethodInfo::MakeGenericMethod(System.Type[]) */, L_43, L_44);
+		L_45 = VirtualFuncInvoker1< MethodInfo_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(44 /* System.Reflection.MethodInfo System.Reflection.MethodInfo::MakeGenericMethod(System.Type[]) */, L_43, L_44);
 		return L_45;
 	}
 }
@@ -13013,7 +13013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MemberUtility_GenericArgumentsMatch_m446
 		MethodInfo_t* L_2 = ___method0;
 		NullCheck(L_2);
 		bool L_3;
-		L_3 = VirtualFuncInvoker0< bool >::Invoke(30 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_2);
+		L_3 = VirtualFuncInvoker0< bool >::Invoke(31 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_2);
 		if (!L_3)
 		{
 			goto IL_001a;
@@ -13030,7 +13030,7 @@ IL_001a:
 		MethodInfo_t* L_4 = ___method0;
 		NullCheck(L_4);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_5;
-		L_5 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(29 /* System.Type[] System.Reflection.MethodBase::GetGenericArguments() */, L_4);
+		L_5 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(30 /* System.Type[] System.Reflection.MethodBase::GetGenericArguments() */, L_4);
 		RuntimeObject* L_6 = ___genericArgumentTypes1;
 		bool L_7;
 		L_7 = Enumerable_SequenceEqual_TisType_t_m50C2BC373C31967EC5880242115E32B0BC90B2A5((RuntimeObject*)L_5, L_6, Enumerable_SequenceEqual_TisType_t_m50C2BC373C31967EC5880242115E32B0BC90B2A5_RuntimeMethod_var);
@@ -13147,7 +13147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MemberUtility_SignatureMatches_m49E4435E
 		MethodInfo_t* L_7 = ___method0;
 		NullCheck(L_7);
 		bool L_8;
-		L_8 = VirtualFuncInvoker0< bool >::Invoke(30 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_7);
+		L_8 = VirtualFuncInvoker0< bool >::Invoke(31 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_7);
 		return (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
 	}
 
@@ -14089,7 +14089,7 @@ IL_0045:
 		MethodInfo_t* L_17 = V_2;
 		NullCheck(L_17);
 		bool L_18;
-		L_18 = VirtualFuncInvoker0< bool >::Invoke(30 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_17);
+		L_18 = VirtualFuncInvoker0< bool >::Invoke(31 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_17);
 		if (!L_18)
 		{
 			goto IL_00ed;
@@ -14560,7 +14560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass58_0_U3CDisambiguat
 		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_3 = ___m0;
 		NullCheck(L_3);
 		bool L_4;
-		L_4 = VirtualFuncInvoker0< bool >::Invoke(30 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_3);
+		L_4 = VirtualFuncInvoker0< bool >::Invoke(31 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_3);
 		return (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
 	}
 
@@ -14614,7 +14614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass59_0_U3CDisambiguat
 		MethodInfo_t* L_6 = ___m0;
 		NullCheck(L_6);
 		bool L_7;
-		L_7 = VirtualFuncInvoker0< bool >::Invoke(30 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_6);
+		L_7 = VirtualFuncInvoker0< bool >::Invoke(31 /* System.Boolean System.Reflection.MethodBase::get_ContainsGenericParameters() */, L_6);
 		return (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
 	}
 

@@ -22233,7 +22233,7 @@ IL_00dc_1:
 				RuntimeObject* L_48 = V_8;
 				NullCheck(L_47);
 				RuntimeObject* L_49;
-				L_49 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_47, L_48);
+				L_49 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_47, L_48);
 				NullCheck(L_45);
 				Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341(L_45, _stringLiteral6B866DCFF4A3EC3D3C30879F029D88106601B1B2, L_49, Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341_RuntimeMethod_var);
 				// payoutDict["st"] = payoutType.GetField("subtype").GetValue(payout);
@@ -22245,7 +22245,7 @@ IL_00dc_1:
 				RuntimeObject* L_53 = V_8;
 				NullCheck(L_52);
 				RuntimeObject* L_54;
-				L_54 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_52, L_53);
+				L_54 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_52, L_53);
 				NullCheck(L_50);
 				Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341(L_50, _stringLiteral696503371F599A19297E2701AB163FB5A863D770, L_54, Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341_RuntimeMethod_var);
 				// payoutDict["q"] = payoutType.GetField("quantity").GetValue(payout);
@@ -22257,7 +22257,7 @@ IL_00dc_1:
 				RuntimeObject* L_58 = V_8;
 				NullCheck(L_57);
 				RuntimeObject* L_59;
-				L_59 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_57, L_58);
+				L_59 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_57, L_58);
 				NullCheck(L_55);
 				Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341(L_55, _stringLiteral430E518F836082E0683698AB9E3F79D39C7F5140, L_59, Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341_RuntimeMethod_var);
 				// payoutDict["d"] = payoutType.GetField("data").GetValue(payout);
@@ -22269,7 +22269,7 @@ IL_00dc_1:
 				RuntimeObject* L_63 = V_8;
 				NullCheck(L_62);
 				RuntimeObject* L_64;
-				L_64 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_62, L_63);
+				L_64 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_62, L_63);
 				NullCheck(L_60);
 				Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341(L_60, _stringLiteralA02431CF7C501A5B368C91E41283419D8FA9FB03, L_64, Dictionary_2_set_Item_m7CCA97075B48AFB2B97E5A072B94BC7679374341_RuntimeMethod_var);
 				// payoutsArray.Add(payoutDict);
@@ -22372,7 +22372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1A
 		ProductDescription_tAD0DC443EFB3E64FB864AC0EEA3CE4073A1F3E42* L_10 = ___product0;
 		NullCheck(L_9);
 		RuntimeObject* L_11;
-		L_11 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_9, L_10);
+		L_11 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_9, L_10);
 		V_2 = L_11;
 		// prod.Add("type", typeValue.ToString());
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_12 = V_0;
@@ -26147,7 +26147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BuildConfigInterface_GetApiEndpoint
 		L_0 = BuildConfigInterface_GetApiEndpointField_mD8FD2A3929DAD51E6811415573673B7514C2418B(NULL);
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
+		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
 		return ((String_t*)CastclassSealed((RuntimeObject*)L_1, String_t_il2cpp_TypeInfo_var));
 	}
 }
@@ -26185,7 +26185,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BuildConfigInterface_GetIdEndpoint_
 		L_0 = BuildConfigInterface_GetIdEndpointField_m6603A270FBC5EEC8B0B7D7CE678ACD0CEF77292F(NULL);
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
+		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
 		return ((String_t*)CastclassSealed((RuntimeObject*)L_1, String_t_il2cpp_TypeInfo_var));
 	}
 }
@@ -26223,7 +26223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BuildConfigInterface_GetUdpEndpoint
 		L_0 = BuildConfigInterface_GetUdpEndpointField_mBA46512CCAA6684C3CD25D768B681B245A8932CE(NULL);
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
+		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
 		return ((String_t*)CastclassSealed((RuntimeObject*)L_1, String_t_il2cpp_TypeInfo_var));
 	}
 }
@@ -26261,7 +26261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BuildConfigInterface_GetVersion_m87
 		L_0 = BuildConfigInterface_GetVersionField_m4ED235903A728B4DD84453F7A3BD6283FB9CE178(NULL);
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
+		L_1 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_0, NULL);
 		return ((String_t*)CastclassSealed((RuntimeObject*)L_1, String_t_il2cpp_TypeInfo_var));
 	}
 }

@@ -1062,17 +1062,17 @@ struct DataRow_t4C2743279B40E332809F4E6EE3443B75E4C38388_StaticFields
 struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095  : public RuntimeObject
 {
 	// System.Int32 System.Text.Encoding::m_codePage
-	int32_t ___m_codePage_9;
+	int32_t ___m_codePage_55;
 	// System.Globalization.CodePageDataItem System.Text.Encoding::dataItem
-	CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2* ___dataItem_10;
+	CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2* ___dataItem_56;
 	// System.Boolean System.Text.Encoding::m_deserializedFromEverett
-	bool ___m_deserializedFromEverett_11;
+	bool ___m_deserializedFromEverett_57;
 	// System.Boolean System.Text.Encoding::m_isReadOnly
-	bool ___m_isReadOnly_12;
+	bool ___m_isReadOnly_58;
 	// System.Text.EncoderFallback System.Text.Encoding::encoderFallback
-	EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293* ___encoderFallback_13;
+	EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293* ___encoderFallback_59;
 	// System.Text.DecoderFallback System.Text.Encoding::decoderFallback
-	DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90* ___decoderFallback_14;
+	DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90* ___decoderFallback_60;
 };
 
 struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
@@ -1096,7 +1096,7 @@ struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
 	// System.Collections.Generic.Dictionary`2<System.Int32,System.Text.Encoding> modreq(System.Runtime.CompilerServices.IsVolatile) System.Text.Encoding::encodings
 	Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54* ___encodings_8;
 	// System.Object System.Text.Encoding::s_InternalSyncObject
-	RuntimeObject* ___s_InternalSyncObject_15;
+	RuntimeObject* ___s_InternalSyncObject_61;
 };
 
 // System.Collections.Hashtable
@@ -10529,7 +10529,7 @@ IL_0039:
 		FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8* L_10 = V_0;
 		NullCheck(L_10);
 		String_t* L_11;
-		L_11 = VirtualFuncInvoker0< String_t* >::Invoke(37 /* System.String System.IO.FileStream::get_Name() */, L_10);
+		L_11 = VirtualFuncInvoker0< String_t* >::Invoke(38 /* System.String System.IO.FileStream::get_Name() */, L_10);
 		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
 		String_t* L_12;
 		L_12 = Path_GetDirectoryName_mB9369289430566A15BB0A0CFCCBED3C6ECA7F30C(L_11, NULL);
@@ -10538,7 +10538,7 @@ IL_0039:
 		FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8* L_13 = V_0;
 		NullCheck(L_13);
 		String_t* L_14;
-		L_14 = VirtualFuncInvoker0< String_t* >::Invoke(37 /* System.String System.IO.FileStream::get_Name() */, L_13);
+		L_14 = VirtualFuncInvoker0< String_t* >::Invoke(38 /* System.String System.IO.FileStream::get_Name() */, L_13);
 		String_t* L_15;
 		L_15 = Path_GetFileNameWithoutExtension_mD24A7CA7C45FF7A265EF7F8D5E19D1F3C014D90F(L_14, NULL);
 		__this->____fileName_12 = L_15;
@@ -10546,7 +10546,7 @@ IL_0039:
 		FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8* L_16 = V_0;
 		NullCheck(L_16);
 		String_t* L_17;
-		L_17 = VirtualFuncInvoker0< String_t* >::Invoke(37 /* System.String System.IO.FileStream::get_Name() */, L_16);
+		L_17 = VirtualFuncInvoker0< String_t* >::Invoke(38 /* System.String System.IO.FileStream::get_Name() */, L_16);
 		String_t* L_18;
 		L_18 = Path_GetExtension_m52A28295599B87FA550D0654E531B56354C540C7(L_17, NULL);
 		__this->____fileExt_13 = L_18;

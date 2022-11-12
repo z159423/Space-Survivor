@@ -22793,7 +22793,7 @@ IL_0068_1:
 				RuntimeObject* L_26 = ___o0;
 				NullCheck(L_25);
 				RuntimeObject* L_27;
-				L_27 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_25, L_26);
+				L_27 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_25, L_26);
 				NullCheck(L_24);
 				List_1_Add_m41976D01C8FCDDE9E48BFC59CED8E33B2C365E13_inline(L_24, ((VolumeParameter_t95994C89644D2CC4C11F666571492420D16BED72*)CastclassClass((RuntimeObject*)L_27, VolumeParameter_t95994C89644D2CC4C11F666571492420D16BED72_il2cpp_TypeInfo_var)), List_1_Add_m41976D01C8FCDDE9E48BFC59CED8E33B2C365E13_RuntimeMethod_var);
 				goto IL_00a6_1;
@@ -22833,7 +22833,7 @@ IL_007e_1:
 				RuntimeObject* L_35 = ___o0;
 				NullCheck(L_34);
 				RuntimeObject* L_36;
-				L_36 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(26 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_34, L_35);
+				L_36 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(27 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_34, L_35);
 				List_1_tD19F7E0FCBD7C3E8D363733582EF93B341DD3039* L_37 = ___parameters1;
 				Func_2_t03668587D04B8ECC3E6CE9EF3B2852118286E630* L_38 = ___filter2;
 				VolumeComponent_FindParameters_m091D5D04E70F1CF4D4F1EAC60463DBD22E0B64E0(L_36, L_37, L_38, NULL);

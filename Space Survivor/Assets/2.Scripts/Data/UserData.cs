@@ -18,4 +18,6 @@ public class UserData
 
     public string usingShipTrialTime = "2000-01-01 01:01:01";
     public string usingFreeCrystalTime = "2000-01-01 01:01:01";
+
+    public List<int> clearedStageNumber = new List<int>();
 }
