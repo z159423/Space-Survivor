@@ -71,7 +71,7 @@ MonoBehaviour:
   shipType: 1
   shipCode: Rapier
   shipBody: {fileID: 5518835431198223638, guid: 1dc9bc6dcecee514d820630bcaaf08c2, type: 3}
-  shipImage: {fileID: 21300000, guid: a79a6d111986a11449c9be1c1045d738, type: 3}
+  shipImage: {fileID: 866357888316854992, guid: b0047f570e043ac4aaf82d673879f6be, type: 3}
   baseMaxHp:
     baseValue: 700
     minValue: 0

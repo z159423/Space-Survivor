@@ -71,7 +71,7 @@ MonoBehaviour:
   shipType: 0
   shipCode: Nova
   shipBody: {fileID: 5518835431198223638, guid: a55735f6308bd5a4bb98c0a8246a8bd1, type: 3}
-  shipImage: {fileID: 21300000, guid: 3fb298ca8520dbd45b67875f3448e48f, type: 3}
+  shipImage: {fileID: -6047866749583793374, guid: b0047f570e043ac4aaf82d673879f6be, type: 3}
   baseMaxHp:
     baseValue: 1000
     minValue: 0

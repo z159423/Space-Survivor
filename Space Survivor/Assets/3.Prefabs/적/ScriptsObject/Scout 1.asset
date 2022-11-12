@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
   m_Name: Scout 1
   m_EditorClassIdentifier: 
-  Object: {fileID: 601496630676670503, guid: 195f5567674ccb24ab1c28a8caf32fe7, type: 3}
+  Object: {fileID: 601496630676670503, guid: a9a598449e8e92b42b0f6b6437dbe93b, type: 3}
   type: 1

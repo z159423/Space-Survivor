@@ -1,0 +1,1660 @@
+fileFormatVersion: 2
+guid: 03ecaa0d63e2d104b89096bb75fa288a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spaceships Colormap2_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 295
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fa6288fe0283c479f1e9a7383526b0
+      internalID: 939264838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_4
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 293
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d6ac816f47e824e83aa497a4a09023
+      internalID: 1064968253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_6
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 295
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1f323944137a54b94c234c28abe525
+      internalID: 37360654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 297
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05dc8a3bc6686048bfb78cf1dd865da
+      internalID: -384750579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 297
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee4527a01dce0c4197c322cb4978d24
+      internalID: 97077034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_9
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 298
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54226b6e0c74034ba2099d82d8c04cf
+      internalID: 228991928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 262
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e88450da18df344bc99a0e47349625
+      internalID: -1329652159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_14
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 265
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fd3655e114ac640989b62c455735c1
+      internalID: -1524882101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_15
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 264
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823f61df270c44746998af7c90133533
+      internalID: -1984337827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_17
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 267
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8598c5c956c553a4090f75db3b2aa3f0
+      internalID: -1197238938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_18
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 266
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a133efa3366db2147b5069dad906c2af
+      internalID: -1484180641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_19
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 265
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a318e8814bcfc846a6fcfd796a1e5bb
+      internalID: 591218683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_20
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 270
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c2e3d8cd652e242b1c0f2765b321c3
+      internalID: 1299984919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcb969452199f640b31ecd507d1c210
+      internalID: -261178988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_25
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 230
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fa70de77ad77342beedc688d516bb3
+      internalID: -325486833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_27
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 233
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1ab0f23a4ab7c4da1153a7d6139429
+      internalID: 1213522486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 233
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d0a11995d729a4291ab06c62f498fb
+      internalID: 1014810081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_29
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 235
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b198589c1aee7240964b00a39f5f524
+      internalID: -1724382686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_31
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 232
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fdcce18af65b146987f1ff115d355e
+      internalID: 1301272676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_32
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 166
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfafe89d2fcfe74ca1968ef5715e535
+      internalID: 526368269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 167
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ac2f78a5a05f54bbabd4f207c28837
+      internalID: -981521105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_34
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 198
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be2f4a38b795b34f9a9d0b0c8b144c1
+      internalID: 129886621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_36
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 201
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1ef64432c680e418d2feb9b396bc33
+      internalID: -202876746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_37
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 197
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc44b585367b02543b58792ee0a6c829
+      internalID: -1601550919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_38
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 164
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8423d8b55b5c884cb8bc32b75077fcf
+      internalID: 816166332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_40
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 171
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c4e3e2d66c60242aa25c5bdda0a093
+      internalID: 514571572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_41
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 171
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2667e41a84a53f446b8067e33f72597d
+      internalID: -1929244289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_43
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 168
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1feac6182c3c9c428b2aa9f34e3e7f4
+      internalID: -230683843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_44
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 136
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8f83bdd7532d446a84fca2460bfe24
+      internalID: 899857985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_45
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 156
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbd598fbedbed140bc29c472bcf820b
+      internalID: -2088029212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_46
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 132
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0125c7c2ce12604fb5e49477b8cdd8e
+      internalID: 971447335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_47
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 136
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5b97c1eb7c5604ba780808fe911043
+      internalID: 603536060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_48
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 136
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d390e7c247c089641b0d16b21fdf8fe2
+      internalID: -1558069975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_49
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 134
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33e8aa77ccf95c4fb2da97a568e69d1
+      internalID: -967128226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_50
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 138
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9430494fe2ae3e5409ece6925031a4fe
+      internalID: -1950711674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_52
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 104
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd09338f450729a428b455cbd6d084eb
+      internalID: 171987554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_54
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 106
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34d8f4e7e5b16543be00dfeb62d8d06
+      internalID: -1827542713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_55
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 107
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b4be0bfb4142146b57c4162202fd66
+      internalID: -42717614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_56
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 107
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77d9fb45253c0c4088a5d66139f263f
+      internalID: 896180126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_57
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 120
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f90d9e784bc8c648b6e9f52900d3423
+      internalID: 2123041958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_58
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 106
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6607c1fadf5c0045bc0ea4bd092ce30
+      internalID: -121361571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_60
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 105
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca642266edc2f34ba951ab947daaa80
+      internalID: 1106258929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_61
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 68
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1dcbf5a4d84e540be07c1d480981a4
+      internalID: 1546557480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_64
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 76
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df762fa90e5b0b3479cd6f0852bba075
+      internalID: -1588048913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_66
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 73
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc5619010aa12349b6d14db1d83a622
+      internalID: -1545086728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_67
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 72
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcd38c1d90cded4cbe71814286e8cfc
+      internalID: -868283927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_68
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 71
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789998a2480601d45a6c528891c3d1d2
+      internalID: -1507938329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_72
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 66
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305fe5465c6771b44909201184c9d73c
+      internalID: -91579170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_73
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 40
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d5779176b575d4897c3441dc194b2f
+      internalID: -1280924382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_74
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 40
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c4bb563a46b644cab6bfe93f44b563
+      internalID: 1927530878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_76
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 40
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1724fd987b780984ba18231fcfc1cfbd
+      internalID: 968405993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_77
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 41
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d10ff3f5e6093940baaf8631075f602
+      internalID: -52724141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_78
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 42
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79b93fbd40cc1e48a9abb048d37ae03
+      internalID: 121060002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_79
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 42
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c9136386a1e5c439fe6a3715d2f8d4
+      internalID: -463121004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_80
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 42
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e906a02e99f33418c4521df347fedb
+      internalID: 114103868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_84
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 8
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03f98d3078484b45a82cfad12948f7a
+      internalID: -1937496818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_90
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 7
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d38887d18998e4dad3b51b56882d80
+      internalID: 1106064357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_91
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 8
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8175dc8f8f3ac49a0dd8a69986872c
+      internalID: -2022927297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_92
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 10
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24344dd3e2f149943ae4ecc61930b2d0
+      internalID: -897423734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_93
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 10
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fb7331b28718f44842ac5ddeb03e7e
+      internalID: -1096442282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_95
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 8
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94ba37fdb543f149b83f14e6d591d43
+      internalID: -663782142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_96
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 9
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a063bfd3d385d654c829afc734b1088b
+      internalID: -583578512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_102
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 293
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12eb4fc34a883014991e39594e369526
+      internalID: 1117380120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_103
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 198
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30be558844468b4ab390d97d6f01a89
+      internalID: 461099601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_104
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 198
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98909b9916a7bd84f870350ce68cf667
+      internalID: -1503224607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_105
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 165
+        width: 57
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4abeba93cb8fd42b4e555c6c6b49e3
+      internalID: -1928052758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceships Colormap2_106
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 106
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a227cbdc45c9d2a46b72f969010fae17
+      internalID: 92179896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Spaceships Colormap2_82: -742001312
+      Spaceships Colormap2_41: -1929244289
+      Spaceships Colormap2_95: -663782142
+      Spaceships Colormap2_14: -1524882101
+      Spaceships Colormap2_66: -1545086728
+      Spaceships Colormap2_8: 97077034
+      Spaceships Colormap2_69: -556939155
+      Spaceships Colormap2_84: -1937496818
+      Spaceships Colormap2_98: -2087444072
+      Spaceships Colormap2_100: -1523353729
+      Spaceships Colormap2_34: 129886621
+      Spaceships Colormap2_39: -345302139
+      Spaceships Colormap2_35: 1577011183
+      Spaceships Colormap2_47: 603536060
+      Spaceships Colormap2_37: -1601550919
+      Spaceships Colormap2_49: -967128226
+      Spaceships Colormap2_61: 1546557480
+      Spaceships Colormap2_3: 1235369115
+      Spaceships Colormap2_67: -868283927
+      Spaceships Colormap2_99: -1504026033
+      Spaceships Colormap2_54: -1827542713
+      Spaceships Colormap2_11: -581317470
+      Spaceships Colormap2_10: -1329652159
+      Spaceships Colormap2_0: 212340654
+      Spaceships Colormap2_4: 1064968253
+      Spaceships Colormap2_44: 899857985
+      Spaceships Colormap2_79: -463121004
+      Spaceships Colormap2_25: -325486833
+      Spaceships Colormap2_9: 228991928
+      Spaceships Colormap2_12: -33392994
+      Spaceships Colormap2_20: 1299984919
+      Spaceships Colormap2_103: 461099601
+      Spaceships Colormap2_77: -52724141
+      Spaceships Colormap2_64: -1588048913
+      Spaceships Colormap2_78: 121060002
+      Spaceships Colormap2_73: -1280924382
+      Spaceships Colormap2_75: -177636246
+      Spaceships Colormap2_87: 855308320
+      Spaceships Colormap2_26: -1729460124
+      Spaceships Colormap2_30: -1545328709
+      Spaceships Colormap2_38: 816166332
+      Spaceships Colormap2_27: 1213522486
+      Spaceships Colormap2_7: -384750579
+      Spaceships Colormap2_16: 1609865623
+      Spaceships Colormap2_57: 2123041958
+      Spaceships Colormap2_93: -1096442282
+      Spaceships Colormap2_51: 698472355
+      Spaceships Colormap2_96: -583578512
+      Spaceships Colormap2_101: -1987401892
+      Spaceships Colormap2_74: 1927530878
+      Spaceships Colormap2_58: -121361571
+      Spaceships Colormap2_52: 171987554
+      Spaceships Colormap2_46: 971447335
+      Spaceships Colormap2_55: -42717614
+      Spaceships Colormap2_105: -1928052758
+      Spaceships Colormap2_1: 939264838
+      Spaceships Colormap2_28: 1014810081
+      Spaceships Colormap2_43: -230683843
+      Spaceships Colormap2_23: -629129235
+      Spaceships Colormap2_65: -1854467680
+      Spaceships Colormap2_89: 581937688
+      Spaceships Colormap2_97: 514313774
+      Spaceships Colormap2_94: -1068661479
+      Spaceships Colormap2_86: -1574845662
+      Spaceships Colormap2_104: -1503224607
+      Spaceships Colormap2_59: -322602340
+      Spaceships Colormap2_68: -1507938329
+      Spaceships Colormap2_90: 1106064357
+      Spaceships Colormap2_33: -981521105
+      Spaceships Colormap2_92: -897423734
+      Spaceships Colormap2_13: 2039817247
+      Spaceships Colormap2_29: -1724382686
+      Spaceships Colormap2_62: 814524040
+      Spaceships Colormap2_15: -1984337827
+      Spaceships Colormap2_106: 92179896
+      Spaceships Colormap2_48: -1558069975
+      Spaceships Colormap2_5: -1266830660
+      Spaceships Colormap2_36: -202876746
+      Spaceships Colormap2_17: -1197238938
+      Spaceships Colormap2_63: -561762485
+      Spaceships Colormap2_53: 193030578
+      Spaceships Colormap2_19: 591218683
+      Spaceships Colormap2_22: -896625815
+      Spaceships Colormap2_56: 896180126
+      Spaceships Colormap2_70: -1077306299
+      Spaceships Colormap2_45: -2088029212
+      Spaceships Colormap2_31: 1301272676
+      Spaceships Colormap2_80: 114103868
+      Spaceships Colormap2_88: -421342460
+      Spaceships Colormap2_91: -2022927297
+      Spaceships Colormap2_21: -1252788832
+      Spaceships Colormap2_2: -1986168472
+      Spaceships Colormap2_71: -1574586503
+      Spaceships Colormap2_40: 514571572
+      Spaceships Colormap2_18: -1484180641
+      Spaceships Colormap2_60: 1106258929
+      Spaceships Colormap2_42: 1849082610
+      Spaceships Colormap2_50: -1950711674
+      Spaceships Colormap2_85: 2008536774
+      Spaceships Colormap2_83: -993699728
+      Spaceships Colormap2_72: -91579170
+      Spaceships Colormap2_6: 37360654
+      Spaceships Colormap2_76: 968405993
+      Spaceships Colormap2_102: 1117380120
+      Spaceships Colormap2_81: -2032384306
+      Spaceships Colormap2_32: 526368269
+      Spaceships Colormap2_24: -261178988
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

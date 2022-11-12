@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
   m_Name: Attacker 2
   m_EditorClassIdentifier: 
-  Object: {fileID: 601496630676670503, guid: d199f856bb6ce254181563a893ea8a96, type: 3}
+  Object: {fileID: 601496630676670503, guid: 9cdccc8e04c6e9a469db059c0b2378f7, type: 3}
   type: 2
