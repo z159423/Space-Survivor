@@ -50,6 +50,30 @@ MonoBehaviour:
     m_Localized: You must clear the previous map to proceed
     m_Metadata:
       m_Items: []
+  - m_Id: 59985664910065664
+    m_Localized: REMOVE FORCED ADS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59985758203969536
+    m_Localized: STARTER PACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59985895877804032
+    m_Localized: SUPER PACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59986023653081088
+    m_Localized: MEGA PACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59986129760583680
+    m_Localized: ULTRA PACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59987173819318272
+    m_Localized: REMOVE ADS
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

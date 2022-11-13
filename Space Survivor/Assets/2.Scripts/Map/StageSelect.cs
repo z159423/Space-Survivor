@@ -16,9 +16,6 @@ public class StageSelect : MonoBehaviour
     [SerializeField] private GameObject lockedMapCover;
     [SerializeField] private GameObject stageselectButton;
 
-
-
-
     [Header("스테이지")]
     [SerializeField] private StageData stageData;
 
@@ -26,7 +23,7 @@ public class StageSelect : MonoBehaviour
 
     private Stage currentStage;
 
-    private int currentStageNumber;
+    [field: SerializeField] public int currentStageNumber {get; private set;}
 
     private void Start()
     {
@@ -78,7 +75,7 @@ public class StageSelect : MonoBehaviour
         LocalizeManager.CallLocalizedString(stageDescription, "Map", currentStage.stageNameKey + "-d");
 
         //언락된 맵인지 확인
-        if (UserDataManager.instance.currentUserData.clearedStageNumber.Contains(mapNumber) || mapNumber == 0)
+        if (UserDataManager.instance.currentUserData.clearedStageNumber.Contains(mapNumber - 1) || mapNumber == 0)
         {
             lockedMapCover.SetActive(false);
             stageselectButton.SetActive(true);

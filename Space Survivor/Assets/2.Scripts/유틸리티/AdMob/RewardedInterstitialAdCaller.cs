@@ -222,7 +222,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-            FirebaseAnalytics.LogEvent("RvAdsComplete-FreeCrystal");
+            FirebaseAnalytics.LogEvent("RvAdsComplete_FreeCrystal");
         }
     }
 
@@ -307,7 +307,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-            FirebaseAnalytics.LogEvent("RvAdsComplete-TrialShip");
+            FirebaseAnalytics.LogEvent("RvAdsComplete_TrialShip");
 
         }
     }
@@ -390,7 +390,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-            FirebaseAnalytics.LogEvent("RvAdsComplete-Revive");
+            FirebaseAnalytics.LogEvent("RvAdsComplete_Revive");
         }
     }
 
@@ -472,7 +472,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-            FirebaseAnalytics.LogEvent("RvAdsComplete-DoubleCrystal");
+            FirebaseAnalytics.LogEvent("RvAdsComplete_DoubleCrystal");
         }
     }
 

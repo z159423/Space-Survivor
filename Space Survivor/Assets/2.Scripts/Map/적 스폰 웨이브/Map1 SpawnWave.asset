@@ -37,10 +37,10 @@ MonoBehaviour:
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
     count: 0
-  - StartWaveTime: 120
-    StopWaveTime: 122
+  - StartWaveTime: 90
+    StopWaveTime: 91
     waveType: 0
-    summonCycleTime: 0.02
+    summonCycleTime: 0.03
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
   - StartWaveTime: 130

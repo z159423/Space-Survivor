@@ -5,6 +5,7 @@ using UnityEngine.Purchasing;
 using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using TMPro;
+using Firebase.Analytics;
 
 public class IAPManager : MonoBehaviour, IStoreListener
 {
@@ -84,6 +85,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         UserDataManager.instance.AddCrystalValue(1000);
 
+        FirebaseAnalytics.LogEvent("IAP_StarterPackPurchaseSuccess");
+
         CheckRemoveAdsHasPurchase();
 
         UpdateUI2();
@@ -94,6 +97,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(2500);
+
+        FirebaseAnalytics.LogEvent("IAP_MegaPackPurchaseSuccess");
 
         CheckRemoveAdsHasPurchase();
 
@@ -107,6 +112,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         UserDataManager.instance.AddCrystalValue(5000);
 
+        FirebaseAnalytics.LogEvent("IAP_UltraPackPurchaseSuccess");
+
         CheckRemoveAdsHasPurchase();
 
         UpdateUI2();
@@ -118,6 +125,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+        FirebaseAnalytics.LogEvent("IAP_RemoveAdsPurchaseSuccess");
 
         UpdateUI2();
     }

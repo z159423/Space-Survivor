@@ -32,7 +32,8 @@ public class UserDataManager : MonoBehaviour
         //DontDestroyOnLoad(gameObject);
     }
 
-    private void Start() {
+    private void Start()
+    {
         StartCoroutine(RewardAdsTimeChecking());
     }
 
@@ -233,5 +234,13 @@ public class UserDataManager : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    public void StageClearSaveData(int stageNum)
+    {
+        if (!currentUserData.clearedStageNumber.Contains(stageNum))
+            currentUserData.clearedStageNumber.Add(stageNum);
+
+        SaveCurrentDate();
     }
 }

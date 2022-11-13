@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject inGameDebug;
     public Transform playerTrans;
     [SerializeField] private GameObject[] editmodeUI;
+    [SerializeField] private StageSelect stageSelect;
 
     [Space]
 
@@ -238,6 +239,8 @@ public class GameManager : MonoBehaviour
         //CrystalMotion.instance.StartCrystalMotion(1,playerStat.currentCrystal);
 
         FirebaseAnalytics.LogEvent("stageClearEvent");
+
+        UserDataManager.instance.StageClearSaveData(stageSelect.currentStageNumber);
     }
 
     public void AddKillCount()
