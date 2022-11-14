@@ -23,12 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ko-KR
     - Preload
-  - m_GUID: 160c1bf4505751a4e8e425673b857715
-    m_Address: Upgrades_ko-KR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ko-KR
-    - Preload
   - m_GUID: fc56a7cc759290149b3606b4b2f3ee9b
     m_Address: Ship_ko-KR
     m_ReadOnly: 1

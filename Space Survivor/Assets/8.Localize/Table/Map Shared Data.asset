@@ -31,6 +31,10 @@ MonoBehaviour:
     m_Key: nebula-d
     m_Metadata:
       m_Items: []
+  - m_Id: 793669341495296
+    m_Key: map3-d
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
