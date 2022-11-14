@@ -225,8 +225,8 @@ MonoBehaviour:
     maxDropForce: 250
     dropExpMinAmount: 0
     dropExpmaxAmount: 0
-    dropCrystalMinAmount: 75
-    dropCrystalmaxAmount: 100
+    dropCrystalMinAmount: 45
+    dropCrystalmaxAmount: 60
   HP_parent: {fileID: 3371734825996580433}
   HP_Bar: {fileID: 1121296295680603479}
   Hp_offset: {x: 0, y: -0.87, z: 0}

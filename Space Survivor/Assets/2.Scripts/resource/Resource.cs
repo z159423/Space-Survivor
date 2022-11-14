@@ -26,7 +26,7 @@ public class Resource : MonoBehaviour
 
     private void Update()
     {
-        if(isTriggered && player != null)
+        if(isTriggered && player != null )
         {
             currentPullForce += Time.deltaTime * pullForceIncrease;
 
@@ -38,7 +38,11 @@ public class Resource : MonoBehaviour
 
             if (Vector2.Distance(player.position, transform.position) < 0.5f)
                 playerGetResource(player);
+        }
 
+        if(GameManager.instance.gameclear)
+        {
+            StartPull(GameManager.instance.playerTrans);
         }
     }
 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
-  m_Name: StarLight3 1
+  m_Name: StarLight3
   m_EditorClassIdentifier: 
   Object: {fileID: 601496630676670503, guid: b8e88286367c56e408de5d3417072f8f, type: 3}
   type: 10
