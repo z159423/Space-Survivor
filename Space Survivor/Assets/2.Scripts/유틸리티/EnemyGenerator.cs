@@ -17,7 +17,7 @@ public class EnemyGenerator : MonoBehaviour
     //[ArrayElementTitle("enemyObject")]
     [SerializeField]
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
-    [field: SerializeField] public SpawnWaveObject currentEnemySpawnWaveObject {get; set;}
+    [field: SerializeField] public SpawnWaveObject currentEnemySpawnWaveObject { get; set; }
     [Space]
 
     //[ArrayElementTitle("enemyObject")]
@@ -82,18 +82,34 @@ public class EnemyGenerator : MonoBehaviour
 
     public void CheckWave()
     {
-        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves.Count; i++)
+        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves2.Count; i++)
         {
-            if (currentEnemySpawnWaveObject.enemySpawnWaves[i].StartWaveTime == GameManager.instance.getCurrentTime())
+            for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
             {
-                StartWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
-            }
+                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].StartWaveTime == GameManager.instance.getCurrentTime())
+                {
+                    StartWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
+                }
 
-            if (currentEnemySpawnWaveObject.enemySpawnWaves[i].StopWaveTime == GameManager.instance.getCurrentTime())
-            {
-                StopWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].StopWaveTime == GameManager.instance.getCurrentTime())
+                {
+                    StopWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
+                }
             }
         }
+
+        // for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves.Count; i++)
+        // {
+        //     if (currentEnemySpawnWaveObject.enemySpawnWaves[i].StartWaveTime == GameManager.instance.getCurrentTime())
+        //     {
+        //         StartWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+        //     }
+
+        //     if (currentEnemySpawnWaveObject.enemySpawnWaves[i].StopWaveTime == GameManager.instance.getCurrentTime())
+        //     {
+        //         StopWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+        //     }
+        // }
     }
 
     private void StartWave(EnemyWave wave)
@@ -138,10 +154,18 @@ public class EnemyGenerator : MonoBehaviour
 
     public void StopAllWave()
     {
-        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves.Count; i++)
+        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves2.Count; i++)
         {
-            StopWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+            for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
+            {
+                StopWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
+            }
         }
+
+        // for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves.Count; i++)
+        // {
+        //     StopWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+        // }
     }
 
     public void EnQueueEnemy(EnemyStat stat)
@@ -241,7 +265,7 @@ public class EnemyGenerator : MonoBehaviour
     {
         enemyGeneratorDummy.position = target.position + new Vector3(SpawnArea.x, 0, 0);
 
-        enemyGeneratorDummy.RotateAround(target.position, new Vector3(0,0,1), Random.Range(0,360));
+        enemyGeneratorDummy.RotateAround(target.position, new Vector3(0, 0, 1), Random.Range(0, 360));
 
         return enemyGeneratorDummy.position;
     }
@@ -307,6 +331,11 @@ public class EnemyGenerator : MonoBehaviour
                 SpawnedEnemy[i].GetComponent<EnemyStat>().EnQueueThisEnemy();
             }
         }
+    }
+
+    public void ClearInProgressWaves()
+    {
+        inProgressWaves.Clear();
     }
 
     public void deleteBossWall()

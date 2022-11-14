@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent PlayGameEvent;
 
     public bool gameStart = false;
+    [field: SerializeField] public bool gameclear {get; private set;} = false;
     public bool inMainMenu = true;
     public bool editmode = false;
 
@@ -119,6 +120,7 @@ public class GameManager : MonoBehaviour
 
         gameStart = true;
         inMainMenu = false;
+        gameclear = false;
 
         playerWeapon.allowFire = true;
         CameraManager.instance.ChangeCamera_PlayCamera();
@@ -161,6 +163,7 @@ public class GameManager : MonoBehaviour
 
         gameStart = false;
         inMainMenu = true;
+        gameclear = false;
 
         playerWeapon.allowFire = false;
 
@@ -178,6 +181,8 @@ public class GameManager : MonoBehaviour
         InterstitialAdCaller.instance.CallIrAds();
 
         AudioManager.instance.FindBGM("menu2");
+
+        
     }
 
     public void Resurrection()
@@ -241,6 +246,8 @@ public class GameManager : MonoBehaviour
         FirebaseAnalytics.LogEvent("stageClearEvent");
 
         UserDataManager.instance.StageClearSaveData(stageSelect.currentStageNumber);
+
+        gameclear = true;
     }
 
     public void AddKillCount()

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7482298fa9ff1640ac41bfb664059a2, type: 3}
   m_Name: Gohos 3
   m_EditorClassIdentifier: 
-  Object: {fileID: 601496630676670503, guid: c024730dae7c24841bbe47e9080777fc, type: 3}
+  Object: {fileID: 601496630676670503, guid: 82cb62c81d613be44a72690616b70d01, type: 3}
   type: 13
