@@ -34,4 +34,4 @@ public class EnemyObject : ScriptableObject
     }
 }
 
-public enum EnemyType { Attacker1, Scout1, Attacker2, Scout2, AdvancedScout1, HyperScout1, HyperAttacker1, HyperAdvancedScout1, StarLight1 ,StarLight2, StarLight3 }
+public enum EnemyType { Attacker1, Scout1, Attacker2, Scout2, AdvancedScout1, HyperScout1, HyperAttacker1, HyperAdvancedScout1, StarLight1 ,StarLight2, StarLight3, Gohos1, Gohos2, Gohos3 }

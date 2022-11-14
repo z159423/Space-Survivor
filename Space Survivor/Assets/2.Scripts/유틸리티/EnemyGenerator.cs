@@ -156,27 +156,27 @@ public class EnemyGenerator : MonoBehaviour
         }
     }
 
-    public void GenerateEnemy(EnemyType type, Vector2 position)
-    {
-        foreach (EnemyObject pool in enemyPools)
-        {
-            if (pool.type == type)
-            {
-                var success = pool.DeQueue(position);
+    // public void GenerateEnemy(EnemyType type, Vector2 position)
+    // {
+    //     foreach (EnemyObject pool in enemyPools)
+    //     {
+    //         if (pool.type == type)
+    //         {
+    //             var success = pool.DeQueue(position);
 
-                if (success != null)
-                {
-                    var enemy = Instantiate(success, position, Quaternion.identity, parent);
+    //             if (success != null)
+    //             {
+    //                 var enemy = Instantiate(success, position, Quaternion.identity, parent);
 
-                    enemy.GetComponent<EnemyStat>().SetTarget(player);
+    //                 enemy.GetComponent<EnemyStat>().SetTarget(player);
 
-                    SpawnedEnemy.Add(enemy);
-                }
+    //                 SpawnedEnemy.Add(enemy);
+    //             }
 
-                //Debug.Log("spawn enemy");
-            }
-        }
-    }
+    //             //Debug.Log("spawn enemy");
+    //         }
+    //     }
+    // }
 
     public void GenerateEnemy2(EnemyObject enemy)
     {
@@ -224,18 +224,18 @@ public class EnemyGenerator : MonoBehaviour
 
     }
 
-    private GameObject GetEnemyPrefab(EnemyType type)
-    {
-        foreach (EnemyObject enemyPool in enemyPools)
-        {
-            if (enemyPool.type == EnemyType.Attacker1)
-            {
-                return enemyPool.Object;
-            }
-        }
+    // private GameObject GetEnemyPrefab(EnemyType type)
+    // {
+    //     foreach (EnemyObject enemyPool in enemyPools)
+    //     {
+    //         if (enemyPool.type == EnemyType.Attacker1)
+    //         {
+    //             return enemyPool.Object;
+    //         }
+    //     }
 
-        return null;
-    }
+    //     return null;
+    // }
 
     private Vector3 GenerateSpawnPositon_Circle(Transform target)
     {

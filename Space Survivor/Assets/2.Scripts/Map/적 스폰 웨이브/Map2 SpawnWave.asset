@@ -191,19 +191,19 @@ MonoBehaviour:
     StopWaveTime: 301
     waveType: 1
     summonCycleTime: 2
-    enemyObject: {fileID: 11400000, guid: 555653ea8ee5564458f26735db6f335d, type: 2}
+    enemyObject: {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
     count: 0
   - StartWaveTime: 600
     StopWaveTime: 601
     waveType: 1
     summonCycleTime: 2
-    enemyObject: {fileID: 11400000, guid: 234c9809c2894784cbfb9aaf05c17cec, type: 2}
+    enemyObject: {fileID: 11400000, guid: d2c40246896637c4cbc5d61cbf6441b2, type: 2}
     count: 0
   - StartWaveTime: 900
     StopWaveTime: 901
     waveType: 1
     summonCycleTime: 2
-    enemyObject: {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
+    enemyObject: {fileID: 11400000, guid: ac3711b73675a4646bfeafd8d02288d2, type: 2}
     count: 0
   - StartWaveTime: 45
     StopWaveTime: 46

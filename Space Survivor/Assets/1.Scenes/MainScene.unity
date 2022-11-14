@@ -10839,7 +10839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &377971724
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44441,6 +44441,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
   - {fileID: 11400000, guid: 0a7065eb4d7fb554682ee0f74d7f5784, type: 2}
   - {fileID: 11400000, guid: 555653ea8ee5564458f26735db6f335d, type: 2}
+  - {fileID: 11400000, guid: 234c9809c2894784cbfb9aaf05c17cec, type: 2}
+  - {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
   SpawnedEnemy: []
   player: {fileID: 923141303}
   canvas: {fileID: 1625381616}
