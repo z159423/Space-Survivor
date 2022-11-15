@@ -7016,15 +7016,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 15
+    m_Left: 10
     m_Right: 10
     m_Top: 10
     m_Bottom: 15
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 40, y: 40}
-  m_Spacing: {x: 15, y: 0}
+  m_CellSize: {x: 18, y: 40}
+  m_Spacing: {x: 10, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &224085262
@@ -44494,7 +44494,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0a7065eb4d7fb554682ee0f74d7f5784, type: 2}
   - {fileID: 11400000, guid: 555653ea8ee5564458f26735db6f335d, type: 2}
   - {fileID: 11400000, guid: 234c9809c2894784cbfb9aaf05c17cec, type: 2}
+  - {fileID: 11400000, guid: 5593d85b2449d1b4bb781734dc73d9cf, type: 2}
+  - {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
+  - {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
+  - {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
+  - {fileID: 11400000, guid: ae10baa982bf309449a7ce1ba310b129, type: 2}
+  - {fileID: 11400000, guid: ce9a5a1d6ef126548ae8e1d9174933a5, type: 2}
+  - {fileID: 11400000, guid: ddd5d429317b1e14cb1c5bcae176423e, type: 2}
+  - {fileID: 11400000, guid: d33e5725f7976d543b10d92d7a0face1, type: 2}
+  - {fileID: 11400000, guid: 67e6cd3d7b59b654393e6aefb4484478, type: 2}
   - {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
+  - {fileID: 11400000, guid: d2c40246896637c4cbc5d61cbf6441b2, type: 2}
+  - {fileID: 11400000, guid: ac3711b73675a4646bfeafd8d02288d2, type: 2}
   SpawnedEnemy: []
   player: {fileID: 923141303}
   canvas: {fileID: 1625381616}
@@ -48888,15 +48899,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 15
+    m_Left: 10
     m_Right: 10
     m_Top: 10
     m_Bottom: 15
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 40, y: 40}
-  m_Spacing: {x: 15, y: 0}
+  m_CellSize: {x: 18, y: 40}
+  m_Spacing: {x: 10, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1638789594
@@ -60357,15 +60368,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 15
+    m_Left: 10
     m_Right: 10
     m_Top: 10
     m_Bottom: 15
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 40, y: 40}
-  m_Spacing: {x: 15, y: 0}
+  m_CellSize: {x: 18, y: 40}
+  m_Spacing: {x: 10, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &2024829072

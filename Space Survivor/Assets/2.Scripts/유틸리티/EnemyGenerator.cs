@@ -26,6 +26,7 @@ public class EnemyGenerator : MonoBehaviour
 
 
     [Space]
+    [Tooltip("적 오브젝트 풀을 만들어줘야 오브젝트 재활용 가능")]
     public List<EnemyObject> enemyPools = new List<EnemyObject>();
     public List<GameObject> SpawnedEnemy = new List<GameObject>();
 

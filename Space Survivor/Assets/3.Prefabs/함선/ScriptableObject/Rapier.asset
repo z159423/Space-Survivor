@@ -110,16 +110,16 @@ MonoBehaviour:
   shipUpgradeModuleList:
   - upgradeType: 0
     currentUpgrade: 0
-    maxUpgrade: 5
+    maxUpgrade: 10
     statUpgradeValueForLevel: 100
     upgradeCostForLevel: 100
   - upgradeType: 1
     currentUpgrade: 0
-    maxUpgrade: 5
+    maxUpgrade: 10
     statUpgradeValueForLevel: 2
     upgradeCostForLevel: 100
   - upgradeType: 2
     currentUpgrade: 0
-    maxUpgrade: 5
+    maxUpgrade: 10
     statUpgradeValueForLevel: 0.25
     upgradeCostForLevel: 100

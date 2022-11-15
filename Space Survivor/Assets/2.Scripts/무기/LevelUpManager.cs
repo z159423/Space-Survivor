@@ -86,6 +86,8 @@ public class LevelUpManager : MonoBehaviour
 
         UpgradeSlotParent.localScale = new Vector3(0,0,0);
         upgradeSlotCover.SetActive(true);
+
+        playerStat.whileLevelUp = false;
     }
 
     private void MakeWeaponsList()

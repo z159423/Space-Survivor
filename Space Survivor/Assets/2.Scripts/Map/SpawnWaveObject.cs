@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemySpawnWaveObject", menuName = "Scriptable Object/New Enemy SpawnWave Object", order = int.MaxValue)]
 public class SpawnWaveObject : ScriptableObject
 {
+    
+    [Space]
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
 
     [SerializeField]

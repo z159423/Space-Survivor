@@ -62,7 +62,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] GameObject dieVFX;
 
     public bool playerDie = false;
-    private bool whileLevelUp = false;
+    public bool whileLevelUp { get; set; } = false;
     private GameObject currentShipBody;
     public UnityEvent startGameEvent;
     public UnityEvent playerDieEvent;
@@ -139,7 +139,7 @@ public class PlayerStat : MonoBehaviour
 
         Utility.Explode(transform.position, 0, 20, 10, VFXType.AtomicExplosion, cameraShakeInstance);
 
-        AudioManager.instance.GenerateAudioAndPlaySFX("explosion1",transform.position);
+        AudioManager.instance.GenerateAudioAndPlaySFX("explosion1", transform.position);
     }
 
     public void GetCurrentCrystal()
@@ -268,6 +268,10 @@ public class PlayerStat : MonoBehaviour
         playerWeapon.additionalDamage.ClearPercentModifier();
         shieldInvinsibleTime.ClearPercentModifier();
         shieldReloadTime.ClearPercentModifier();
+        if (shieldReloadCoroutine != null)
+            StopCoroutine(shieldReloadCoroutine);
+        if (shieldImage != null)
+            shieldImage.SetActive(false);
     }
 
     public void PlayGame()
@@ -380,7 +384,7 @@ public class PlayerStat : MonoBehaviour
 
         hpBar.SetState(currentHp, maxHp);
 
-        AudioManager.instance.GenerateAudioAndPlaySFX("upgrade2",transform.position);
+        AudioManager.instance.GenerateAudioAndPlaySFX("upgrade2", transform.position);
     }
 
     public int GetCurrentPlayerLevel()

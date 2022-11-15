@@ -169,6 +169,9 @@ public class UserDataManager : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// code로 함선 데이터 가져오기
+    /// </summary>
     public ShipObjectData GetShipData(string code)
     {
         for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)

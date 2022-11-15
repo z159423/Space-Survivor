@@ -32,7 +32,7 @@ public class ObjectPool
 
     public void EnqueueObject(GameObject obj)
     {
-        MonoBehaviour.print("enQueue");
+        //MonoBehaviour.print("enQueue");
 
         obj.SetActive(false);
         pool.Enqueue(obj);
