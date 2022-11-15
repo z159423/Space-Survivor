@@ -139,6 +139,8 @@ public class GameManager : MonoBehaviour
         FPSDisplay.instance.ResetMinFPS();
 
         AudioManager.instance.FindBGM("inGame2");
+
+        playerStat.AddBasicEquipment(currentShip);
     }
 
     public void ReplayGame()
@@ -380,7 +382,6 @@ public class GameManager : MonoBehaviour
             shipBuyBtn.SetActive(false);
             shipTrialBtn.SetActive(false);
         }
-
     }
 
     public void NextShip()

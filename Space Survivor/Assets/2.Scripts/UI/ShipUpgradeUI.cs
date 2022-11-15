@@ -149,7 +149,7 @@ public class ShipUpgradeUI : MonoBehaviour
                 shipUpgradeSlot[i].upgradeCostText.text = upgradeCost.ToString();
 
                 if (UserDataManager.instance.currentUserData.crystal >= upgradeCost && UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipCode)
-                && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < modules.maxUpgrade)
+                && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < /*modules.maxUpgrade*/ 10)
                 {
                     shipUpgradeSlot[i].upgradeButton.SetActive(true);
                 }
@@ -158,7 +158,7 @@ public class ShipUpgradeUI : MonoBehaviour
                     shipUpgradeSlot[i].upgradeButton.SetActive(false);
                 }
 
-                if (modules.currentUpgrade < modules.maxUpgrade)
+                if (modules.currentUpgrade < /*modules.maxUpgrade*/ 10)
                 {
                     shipUpgradeSlot[i].costPanel.SetActive(true);
                     shipUpgradeSlot[i].maxPanel.SetActive(false);

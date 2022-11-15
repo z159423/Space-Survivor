@@ -288,12 +288,30 @@ public class PlayerStat : MonoBehaviour
 
         playerMovement.SetPlayerBody(currentShipBody.transform);
 
+        //for (int i = 0; i < ship.basicWeapon.Count; i++)
+        //{
+        //    playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
+        //}
+
+        //for (int i = 0; i < ship.basicPassive.Count; i++)
+        //{
+        //    playerWeapon.AddNewWeapon(ship.basicPassive[i]);
+        //}
+
+        GetShipStat(ship);
+    }
+
+    public void AddBasicEquipment(ShipObject ship)
+    {
         for (int i = 0; i < ship.basicWeapon.Count; i++)
         {
             playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
         }
 
-        GetShipStat(ship);
+        for (int i = 0; i < ship.basicPassive.Count; i++)
+        {
+            playerWeapon.AddNewWeapon(ship.basicPassive[i]);
+        }
     }
 
     public void DisableShipBody()

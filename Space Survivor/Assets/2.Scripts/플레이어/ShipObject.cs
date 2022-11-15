@@ -27,6 +27,7 @@ public class ShipObject : ScriptableObject
     [Space]
 
     public List<WeaponObject> basicWeapon = new List<WeaponObject>();
+    public List<PassiveObject> basicPassive = new List<PassiveObject>();
     public List<ShipUpgradeModules> shipUpgradeModuleList = new List<ShipUpgradeModules>();
 
 
