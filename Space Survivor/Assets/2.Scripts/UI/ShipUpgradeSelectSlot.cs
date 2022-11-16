@@ -13,6 +13,10 @@ public class ShipUpgradeSelectSlot : MonoBehaviour
 
     public ShipUpgradeUI shipUpgradeUI;
 
+    private void Start() {
+        GetComponent<Button>().onClick.AddListener(() =>AudioManager.instance.PlaySFX("click1"));
+    }
+
     public void InitShip(ShipObject shipObject, ShipUpgradeUI ui)
     {
         this.shipObject = shipObject;

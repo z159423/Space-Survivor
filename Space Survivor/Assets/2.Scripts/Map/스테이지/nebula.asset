@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4907e50710df5e64387aeb8c26e8b500, type: 3}
   m_Name: nebula
   m_EditorClassIdentifier: 
-  <stageImage>k__BackingField: {fileID: 21300000, guid: 9812f2980061634489a0ebc6b84c0068, type: 3}
+  <stageImage>k__BackingField: {fileID: 21300000, guid: ba19271514773e2429b1b18c84678841, type: 3}
   <stageNameKey>k__BackingField: nebula
   <stageDescriptionKey>k__BackingField: nebula-d
   <spawnWaveObject>k__BackingField: {fileID: 11400000, guid: 26afcda0bda5b214f8eeaed9212b8631, type: 2}
