@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: RemoveAds2
     m_Metadata:
       m_Items: []
+  - m_Id: 61219974847086592
+    m_Key: Upgrade
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

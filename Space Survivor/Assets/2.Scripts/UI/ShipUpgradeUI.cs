@@ -87,7 +87,7 @@ public class ShipUpgradeUI : MonoBehaviour
             shipUnlockButton.SetActive(true);
         }
 
-        shopCostText.text = data.shipCost.ToString();
+        shopCostText.text =  data.shipCost.ToString();
 
 
         if (UserDataManager.instance.currentUserData.crystal >= currentShipObject.shipCost)

@@ -9662,6 +9662,7 @@ GameObject:
   - component: {fileID: 313742272}
   - component: {fileID: 313742274}
   - component: {fileID: 313742273}
+  - component: {fileID: 313742275}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9709,7 +9710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: UPGRADES
+  m_text: UPGRADE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a23a60c6b5e77f540b7185170b3673f5, type: 2}
   m_sharedMaterial: {fileID: 3189604902274701373, guid: a23a60c6b5e77f540b7185170b3673f5, type: 2}
@@ -9786,6 +9787,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313742271}
   m_CullTransparentMesh: 1
+--- !u!114 &313742275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313742271}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:3c3b68b6e5ac0b8419a9da0f55f3ad36
+    m_TableEntryReference:
+      m_KeyId: 61219974847086592
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 313742273}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!4 &318659986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8808982301935757557, guid: 3579f6d7f41229c498af40ebfe4dc04a, type: 3}
@@ -44213,6 +44254,9 @@ MonoBehaviour:
   - Object: {fileID: 8100048574099637306, guid: 576030cd6772fbc4f925408435488039, type: 3}
     parent: {fileID: 1353563428}
     type: 4
+  - Object: {fileID: 3247581751477423340, guid: 5270e8c4d8470a847baa26a617059083, type: 3}
+    parent: {fileID: 1353563428}
+    type: 5
   generatedProjectile: []
 --- !u!1 &1354050576
 GameObject:
@@ -64570,6 +64614,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64fe913f9de41da4e9fc6af5fedddccc, type: 2}
   - {fileID: 11400000, guid: a5ed5bd980839ce4e89c5359b3c3f16b, type: 2}
   - {fileID: 11400000, guid: 1fa75a0e36b537b4fbb420c76ea914f2, type: 2}
+  - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
   obtainablePassives:
   - {fileID: 11400000, guid: 6bb5b0d47685ebd43b58ede2f0807dce, type: 2}
   - {fileID: 11400000, guid: 41474693e53b40e4d82d20355f52e7ab, type: 2}

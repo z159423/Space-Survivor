@@ -106,7 +106,8 @@ MonoBehaviour:
     PercentModifiers: []
   shipCost: 0
   basicWeapon:
-  - {fileID: 11400000, guid: 61d256b2bec31f64e870d297f687a041, type: 2}
+  - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
+  basicPassive: []
   shipUpgradeModuleList:
   - upgradeType: 0
     currentUpgrade: 0

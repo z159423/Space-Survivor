@@ -49,7 +49,7 @@ MonoBehaviour:
       MaxValue: 1000
       FloatModifiers: []
       PercentModifiers: []
-    shipCost: 200
+    shipCost: 1000
     basicWeapon:
     - {fileID: 11400000, guid: 64fe913f9de41da4e9fc6af5fedddccc, type: 2}
     shipUpgradeModuleList:
@@ -106,7 +106,7 @@ MonoBehaviour:
     PercentModifiers: []
   shipCost: 1000
   basicWeapon:
-  - {fileID: 11400000, guid: 64fe913f9de41da4e9fc6af5fedddccc, type: 2}
+  - {fileID: 11400000, guid: 1fa75a0e36b537b4fbb420c76ea914f2, type: 2}
   basicPassive:
   - {fileID: 11400000, guid: 6bb5b0d47685ebd43b58ede2f0807dce, type: 2}
   shipUpgradeModuleList:

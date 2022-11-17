@@ -279,6 +279,11 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         return damage;
     }
 
+    public int GetKnockbackForce()
+    {
+        return knockBackForce;
+    }
+
     public void SetSize()
     {
         var size = weaponObject.currentSize.GetFinalStatValue();

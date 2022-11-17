@@ -297,6 +297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+  deleteTime: 3
+  deleteParticleType: 0
+  trail: {fileID: 7915928722646745578}
+  rigid: {fileID: 0}
 --- !u!1 &8254177355855402782
 GameObject:
   m_ObjectHideFlags: 0
