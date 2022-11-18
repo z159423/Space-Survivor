@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using TMPro;
 
 public class UserDataManager : MonoBehaviour
 {
@@ -14,6 +15,14 @@ public class UserDataManager : MonoBehaviour
 
     public UserData currentUserData = new UserData();
 
+    [Space]
+    [SerializeField] private GameObject freeCrystalButtonImage;
+    [SerializeField] private TextMeshProUGUI freeCrystalButtonTimeText;
+
+    [SerializeField] private GameObject trialShipButtonImage;
+    [SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
+
+
     private void Awake()
     {
         instance = this;
@@ -21,6 +30,11 @@ public class UserDataManager : MonoBehaviour
         currentUserData = LoadUserData();
 
         //DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        StartCoroutine(RewardAdsTimeChecking());
     }
 
     private void Update()
@@ -38,25 +52,25 @@ public class UserDataManager : MonoBehaviour
 
     }
 
-    //À¯Àú µ¥ÀÌÅÍ ºÒ·¯¿À±â
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
     public UserData LoadUserData()
     {
         string filePath = Application.persistentDataPath + userDataName;
 
-        //ºÒ·¯¿À±â ¼º°ø
+        //ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (File.Exists(filePath))
         {
-            print("UserData ºÒ·¯¿À±â ¼º°ø " + filePath);
+            print("UserData ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ " + filePath);
             string JsonData = File.ReadAllText(filePath);
             UserData userData = JsonUtility.FromJson<UserData>(JsonData);
 
             return userData;
 
         }
-        //ºÒ·¯¿Ã ÆÄÀÏÀÌ ¾øÀ»½Ã
+        //ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         else
         {
-            print("UserData°¡ ¾ø¾î¼­ »õ·Î¿î ÆÄÀÏÀ» »ı¼ºÇÕ´Ï´Ù. " + filePath);
+            print("UserDataï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. " + filePath);
             UserData userData = new UserData();
 
             userData.playerHaveShip.Add(startShip.shipObjectData);
@@ -65,7 +79,7 @@ public class UserDataManager : MonoBehaviour
         }
     }
 
-    //À¯Àú µ¥ÀÌÅÍ ¼¼ÀÌºê
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
     public void SaveUserData(UserData data)
     {
         string filePath = Application.persistentDataPath + userDataName;
@@ -75,7 +89,16 @@ public class UserDataManager : MonoBehaviour
         File.WriteAllText(filePath, JsonData);
     }
 
-    //À¯Àú µ¥ÀÌÅÍ »èÁ¦
+    public void SaveCurrentDate()
+    {
+        string filePath = Application.persistentDataPath + userDataName;
+
+        string JsonData = JsonUtility.ToJson(currentUserData);
+
+        File.WriteAllText(filePath, JsonData);
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void DeleteUserData()
     {
         string filePath = Application.persistentDataPath + userDataName;
@@ -83,11 +106,11 @@ public class UserDataManager : MonoBehaviour
         // check if file exists
         if (!File.Exists(filePath))
         {
-            print("À¯Àú µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+            print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
         }
         else
         {
-            print("À¯Àú µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÏ¿´½À´Ï´Ù.");
+            print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
             File.Delete(filePath);
 
@@ -146,6 +169,9 @@ public class UserDataManager : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// codeë¡œ í•¨ì„  ë°ì´í„° ê°€ì ¸ì˜¤ê¸°
+    /// </summary>
     public ShipObjectData GetShipData(string code)
     {
         for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)
@@ -170,14 +196,54 @@ public class UserDataManager : MonoBehaviour
 
     public Sprite GetShipImage(string shipCode)
     {
-        for(int i = 0; i < shipList.shipList.Count; i++)
+        for (int i = 0; i < shipList.shipList.Count; i++)
         {
-            if(shipList.shipList[i].shipCode == shipCode)
+            if (shipList.shipList[i].shipCode == shipCode)
             {
                 return shipList.shipList[i].shipImage;
             }
         }
 
         return null;
+    }
+
+    IEnumerator RewardAdsTimeChecking()
+    {
+        while (true)
+        {
+            if (RewardedInterstitialAdCaller.instance.IsFreeCrystalReady())
+            {
+                freeCrystalButtonImage.SetActive(true);
+                freeCrystalButtonTimeText.gameObject.SetActive(false);
+            }
+            else
+            {
+                freeCrystalButtonImage.SetActive(false);
+                freeCrystalButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetFreeCrystalLeftTime());
+                freeCrystalButtonTimeText.gameObject.SetActive(true);
+            }
+
+            if (RewardedInterstitialAdCaller.instance.IsShipTrialReady())
+            {
+                trialShipButtonImage.SetActive(true);
+                trialShipButtonTimeText.gameObject.SetActive(false);
+            }
+            else
+            {
+                trialShipButtonImage.SetActive(false);
+                trialShipButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetTrialShipLeftTime());
+                trialShipButtonTimeText.gameObject.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    public void StageClearSaveData(int stageNum)
+    {
+        if (!currentUserData.clearedStageNumber.Contains(stageNum))
+            currentUserData.clearedStageNumber.Add(stageNum);
+
+        SaveCurrentDate();
     }
 }

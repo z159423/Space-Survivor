@@ -167,5 +167,6 @@ public class UpgradeSlot : MonoBehaviour
     {
         LevelUpManager.instance.SelectUpgrade(weaponObject);
 
+        AudioManager.instance.PlaySFX("upgrade1");
     }
 }

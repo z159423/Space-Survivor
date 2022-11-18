@@ -50,12 +50,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 12
   damage:
-    baseValue: 0
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  hitLimit: 100
+    FloatModifiers: []
+    PercentModifiers: []
+  hitLimit:
+    baseValue: 99999
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   knockBackForce: 1
   deleteOnTime: 1
   deleteTime: 2
@@ -69,6 +78,7 @@ MonoBehaviour:
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
+  trail: {fileID: 0}
 --- !u!50 &4673022242771149064
 Rigidbody2D:
   serializedVersion: 4

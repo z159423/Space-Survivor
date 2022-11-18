@@ -22,12 +22,15 @@ MonoBehaviour:
   currenWhileParticle: {fileID: 0}
   firePosName: FirePos1
   fireDirName: FireDir1
+  fireSFX: cannon1
   currentDamage:
-    baseValue: 3
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentSizeVector: {x: 0.25, y: 0.25, z: 0.25}
   currentSize:
     baseValue: 1
@@ -35,6 +38,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentTrailSize:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   ready: 1
   coolTime:
     baseValue: 2
@@ -42,12 +55,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   damageMultifly:
     baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   projectileAmount: 1
   firingInterval:
     baseValue: 0.05
@@ -55,18 +72,23 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   FireForce:
     baseValue: 80
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentUpgradeModules: []
   UpgradeModulesForLevel:
   - upgradeModules:
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: e9b65b762fc5e0b46bbaafeb064939e2, type: 2}
+    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}

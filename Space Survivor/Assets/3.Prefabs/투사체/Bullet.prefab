@@ -50,15 +50,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   damage:
-    baseValue: 15
+    baseValue: 10
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  hitLimit: 1
+    FloatModifiers: []
+    PercentModifiers: []
+  hitLimit:
+    baseValue: 2
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   knockBackForce: 0
   deleteOnTime: 1
-  deleteTime: 5
+  deleteTime: 2.5
   deleteVFXType: 4
   Spread: 1
   spreadOffset: {x: 0, y: 0, z: 0}
@@ -69,6 +78,7 @@ MonoBehaviour:
   vfxs: []
   trails:
   - {fileID: 5662989110531773721}
+  trail: {fileID: 5662989110531773721}
 --- !u!212 &2596404529426074017
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,7 +226,7 @@ TrailRenderer:
   m_Time: 0.2
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:

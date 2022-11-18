@@ -5,14 +5,19 @@ using UnityEngine;
 public class EnemyGenerator : MonoBehaviour
 {
     public Vector2 SpawnArea;
+    public float spawnCircleRadius = 14.5f;
+    public float spawnAreaMulti = 0.02f;
 
     public float spawnTime = 0.5f;
 
     public Transform parent;
 
+    [Space]
+
     //[ArrayElementTitle("enemyObject")]
     [SerializeField]
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
+    [field: SerializeField] public SpawnWaveObject currentEnemySpawnWaveObject { get; set; }
     [Space]
 
     //[ArrayElementTitle("enemyObject")]
@@ -21,6 +26,7 @@ public class EnemyGenerator : MonoBehaviour
 
 
     [Space]
+    [Tooltip("적 오브젝트 풀을 만들어줘야 오브젝트 재활용 가능")]
     public List<EnemyObject> enemyPools = new List<EnemyObject>();
     public List<GameObject> SpawnedEnemy = new List<GameObject>();
 
@@ -36,6 +42,11 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private Animator warningPanelAnimator;
     [SerializeField] private GameObject warningPanel;
 
+    [SerializeField] private GameObject bossBarrior;
+    private GameObject barrior;
+
+    [SerializeField] private Transform enemyGeneratorDummy;
+
 
     public static EnemyGenerator instance;
 
@@ -46,7 +57,17 @@ public class EnemyGenerator : MonoBehaviour
 
     private void Start()
     {
-        SpawnArea = canvas.sizeDelta * 0.008f;
+        //SpawnArea = canvas.sizeDelta * 0.01f;
+
+        //float maxvalue = (canvas.rect.width > canvas.rect.height) ? canvas.rect.width : canvas.rect.height;
+
+        //SpawnArea.x = maxvalue * spawnAreaMulti;
+        //SpawnArea.y = maxvalue * spawnAreaMulti;
+
+        SpawnArea.x = spawnCircleRadius;
+        SpawnArea.y = spawnCircleRadius;
+
+        print("적 스폰 거리 : " + SpawnArea);
     }
 
     public void StartSpawnEnemy()
@@ -62,18 +83,34 @@ public class EnemyGenerator : MonoBehaviour
 
     public void CheckWave()
     {
-        for (int i = 0; i < enemySpawnWaves.Count; i++)
+        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves2.Count; i++)
         {
-            if (enemySpawnWaves[i].StartWaveTime == GameManager.instance.getCurrentTime())
+            for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
             {
-                StartWave(enemySpawnWaves[i]);
-            }
+                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].StartWaveTime == GameManager.instance.getCurrentTime())
+                {
+                    StartWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
+                }
 
-            if (enemySpawnWaves[i].StopWaveTime == GameManager.instance.getCurrentTime())
-            {
-                StopWave(enemySpawnWaves[i]);
+                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].StopWaveTime == GameManager.instance.getCurrentTime())
+                {
+                    StopWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
+                }
             }
         }
+
+        // for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves.Count; i++)
+        // {
+        //     if (currentEnemySpawnWaveObject.enemySpawnWaves[i].StartWaveTime == GameManager.instance.getCurrentTime())
+        //     {
+        //         StartWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+        //     }
+
+        //     if (currentEnemySpawnWaveObject.enemySpawnWaves[i].StopWaveTime == GameManager.instance.getCurrentTime())
+        //     {
+        //         StopWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+        //     }
+        // }
     }
 
     private void StartWave(EnemyWave wave)
@@ -90,7 +127,16 @@ public class EnemyGenerator : MonoBehaviour
                 break;
 
             case waveType.summonBoss:
+                barrior = Instantiate(bossBarrior, player.position, Quaternion.identity);
                 wave.waveCoroutine = StartCoroutine(wave.SummonBoss(warningPanel, warningPanelAnimator));
+                break;
+
+            case waveType.blobBurstSummon:
+                wave.waveCoroutine = StartCoroutine(wave.blobBurstSummon());
+                break;
+
+            case waveType.hyperBurstSummon:
+                wave.waveCoroutine = StartCoroutine(wave.hyperBurstSummon(warningPanel, warningPanelAnimator));
                 break;
         }
     }
@@ -109,10 +155,18 @@ public class EnemyGenerator : MonoBehaviour
 
     public void StopAllWave()
     {
-        for (int i = 0; i < enemySpawnWaves.Count; i++)
+        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves2.Count; i++)
         {
-            StopWave(enemySpawnWaves[i]);
+            for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
+            {
+                StopWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
+            }
         }
+
+        // for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves.Count; i++)
+        // {
+        //     StopWave(currentEnemySpawnWaveObject.enemySpawnWaves[i]);
+        // }
     }
 
     public void EnQueueEnemy(EnemyStat stat)
@@ -127,36 +181,36 @@ public class EnemyGenerator : MonoBehaviour
         }
     }
 
-    public void GenerateEnemy(EnemyType type, Vector2 position)
-    {
-        foreach (EnemyObject pool in enemyPools)
-        {
-            if (pool.type == type)
-            {
-                var success = pool.DeQueue(position);
+    // public void GenerateEnemy(EnemyType type, Vector2 position)
+    // {
+    //     foreach (EnemyObject pool in enemyPools)
+    //     {
+    //         if (pool.type == type)
+    //         {
+    //             var success = pool.DeQueue(position);
 
-                if (success != null)
-                {
-                    var enemy = Instantiate(success, position, Quaternion.identity, parent);
+    //             if (success != null)
+    //             {
+    //                 var enemy = Instantiate(success, position, Quaternion.identity, parent);
 
-                    enemy.GetComponent<EnemyStat>().SetTarget(player);
+    //                 enemy.GetComponent<EnemyStat>().SetTarget(player);
 
-                    SpawnedEnemy.Add(enemy);
-                }
+    //                 SpawnedEnemy.Add(enemy);
+    //             }
 
-                //Debug.Log("spawn enemy");
-            }
-        }
-    }
+    //             //Debug.Log("spawn enemy");
+    //         }
+    //     }
+    // }
 
     public void GenerateEnemy2(EnemyObject enemy)
     {
 
-        var success = enemy.DeQueue(GenerateSpawnPosition());
+        var success = enemy.DeQueue(GenerateSpawnPositon_Circle(player.transform));
 
         if (success != null)
         {
-            var spawnEnemy = Instantiate(success, GenerateSpawnPosition(), Quaternion.identity, parent);
+            var spawnEnemy = Instantiate(success, GenerateSpawnPositon_Circle(player.transform), Quaternion.identity, parent);
 
             spawnEnemy.GetComponent<EnemyStat>().SetTarget(player);
 
@@ -166,34 +220,103 @@ public class EnemyGenerator : MonoBehaviour
         //Debug.Log("spawn enemy");
     }
 
-    private GameObject GetEnemyPrefab(EnemyType type)
+    public void GenerateOneSpot(EnemyObject enemy, int count)
     {
-        foreach (EnemyObject enemyPool in enemyPools)
+        var point = GenerateSpawnPosition();
+
+        StartCoroutine(generate());
+
+        IEnumerator generate()
         {
-            if (enemyPool.type == EnemyType.Attacker1)
+            for (int i = 0; i < count; i++)
             {
-                return enemyPool.Object;
+                yield return null;
+                var success = enemy.DeQueue(point);
+
+                if (success != null)
+                {
+                    var spawnEnemy = Instantiate(success, point, Quaternion.identity, parent);
+
+                    spawnEnemy.GetComponent<EnemyStat>().SetTarget(player);
+                    spawnEnemy.GetComponent<EnemyStat>().SetMoveStrate();
+
+
+                    SpawnedEnemy.Add(spawnEnemy);
+                }
             }
         }
 
-        return null;
+
+    }
+
+    // private GameObject GetEnemyPrefab(EnemyType type)
+    // {
+    //     foreach (EnemyObject enemyPool in enemyPools)
+    //     {
+    //         if (enemyPool.type == EnemyType.Attacker1)
+    //         {
+    //             return enemyPool.Object;
+    //         }
+    //     }
+
+    //     return null;
+    // }
+
+    private Vector3 GenerateSpawnPositon_Circle(Transform target)
+    {
+        enemyGeneratorDummy.position = target.position + new Vector3(SpawnArea.x, 0, 0);
+
+        enemyGeneratorDummy.RotateAround(target.position, new Vector3(0, 0, 1), Random.Range(0, 360));
+
+        return enemyGeneratorDummy.position;
     }
 
     private Vector3 GenerateSpawnPosition()
     {
         Vector3 position = new Vector3();
 
-        float f = Random.value > 0.5f ? -1f : 1f;
-        if (Random.value > 0.5f)
+        float r = Random.Range(0, SpawnArea.x + SpawnArea.y);
+        //float f = r < SpawnArea.x ? -1f : 1f;
+
+        if (r < SpawnArea.x)
         {
             position.x = Random.Range(-SpawnArea.x, SpawnArea.x);
-            position.y = SpawnArea.y * f;
+
+            if (Random.value > 0.5f)
+            {
+                position.y = SpawnArea.y * -1;
+            }
+            else
+            {
+                position.y = SpawnArea.y;
+            }
         }
         else
         {
             position.y = Random.Range(-SpawnArea.y, SpawnArea.y);
-            position.x = SpawnArea.x * f;
+
+            if (Random.value > 0.5f)
+            {
+                position.x = SpawnArea.x * -1;
+            }
+            else
+            {
+                position.x = SpawnArea.x;
+            }
         }
+
+        //float f = Random.value > 0.5f ? -1f : 1f;
+
+        // if (Random.Range(0, SpawnArea.x + SpawnArea.y) > SpawnArea.x)
+        // {
+        //     position.x = Random.Range(-SpawnArea.x, SpawnArea.x);
+        //     position.y = SpawnArea.y * f;
+        // }
+        // else
+        // {
+        //     position.y = Random.Range(-SpawnArea.y, SpawnArea.y);
+        //     position.x = SpawnArea.x * f;
+        // }
 
         position.z = 0;
 
@@ -209,6 +332,16 @@ public class EnemyGenerator : MonoBehaviour
                 SpawnedEnemy[i].GetComponent<EnemyStat>().EnQueueThisEnemy();
             }
         }
+    }
+
+    public void ClearInProgressWaves()
+    {
+        inProgressWaves.Clear();
+    }
+
+    public void deleteBossWall()
+    {
+        Destroy(barrior ?? null);
     }
 
     // public void StartEnemySpawn()
@@ -242,62 +375,7 @@ public class EnemyGenerator : MonoBehaviour
     // }
 }
 
-[System.Serializable]
-public class EnemyWave
-{
 
-    [Range(0, 1800)]
-    public int StartWaveTime;
-    [Range(0, 1800)]
-    public int StopWaveTime;
-
-    [Space]
-    [SerializeField]
-    public waveType waveType;
-    [Space]
-    public float summonCycleTime = 1f;
-
-    public EnemyObject enemyObject;
-
-    public Coroutine waveCoroutine;
-
-    public IEnumerator SummonPreiodically()
-    {
-        while (true)
-        {
-            if (EnemyGenerator.instance.spawningEnemy && !EnemyGenerator.instance.bossFighting)
-                EnemyGenerator.instance.GenerateEnemy2(enemyObject);
-
-            yield return new WaitForSeconds(summonCycleTime);
-        }
-    }
-
-    public IEnumerator SummonBoss(GameObject panel, Animator animator)
-    {
-        panel.SetActive(true);
-        animator.SetTrigger("Active");
-        EnemyGenerator.instance.bossFighting = true;
-
-        yield return new WaitForSeconds(3f);
-
-        panel.SetActive(false);
-
-        if (EnemyGenerator.instance.spawningEnemy)
-            EnemyGenerator.instance.GenerateEnemy2(enemyObject);
-
-        /*while (true)
-        {
-            if (EnemyGenerator.instance.spawningEnemy)
-                EnemyGenerator.instance.GenerateEnemy2(enemyObject);
-
-            yield return new WaitForSeconds(summonCycleTime);
-        }*/
-    }
-
-
-
-    //public WaveObject waveObject;
-}
 
 /*[System.Serializable]
 public class EnemyPool

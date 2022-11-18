@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
+using Firebase.Analytics;
 
 public class InterstitialAdCaller : MonoBehaviour
 {
     //Test ID ca-app-pub-3940256099942544/1033173712
-    public string androidAdUnitId;
+    public string androidAdUnitId = "ca-app-pub-5179254807136480/3948701606";
     //Test ID ca-app-pub-3940256099942544/4411468910
     public string iosAdUnitId;
 
@@ -18,11 +19,11 @@ public class InterstitialAdCaller : MonoBehaviour
 
     [Space]
 
-    
-
     string adUnitId;
 
     private InterstitialAd interstitial;
+
+    private Coroutine irAdCoolTimeCoroutine = null;
 
     private void Awake()
     {
@@ -32,16 +33,39 @@ public class InterstitialAdCaller : MonoBehaviour
     private void Start()
     {
         RequestInterstitial();
-        StartCoroutine(StartTickIrAdsTime());
     }
 
-    private IEnumerator StartTickIrAdsTime()
+    public void StartIrAdsCoolTime()
     {
-        IrAdsReady = false;
-        yield return new WaitForSeconds(IrAdsCallTime);
+        if (irAdCoolTimeCoroutine == null)
+            irAdCoolTimeCoroutine = StartCoroutine(StartTickIrAdsTime());
 
-        IrAdsReady = true;
-        print("전면광고 시간 준비됨");
+        IEnumerator StartTickIrAdsTime()
+        {
+            IrAdsReady = false;
+            yield return new WaitForSeconds(IrAdsCallTime);
+
+            IrAdsReady = true;
+            print("전면광고 시간 준비됨");
+        }
+    }
+
+    public void StopIrAdsCoolTime()
+    {
+        if (irAdCoolTimeCoroutine != null)
+        {
+            StopCoroutine(irAdCoolTimeCoroutine);
+            irAdCoolTimeCoroutine = null;
+            IrAdsReady = false;
+
+            print("전면광고 시간 취소됨");
+        }
+    }
+
+    public void RestartIrAdsCoolTime()
+    {
+        StopIrAdsCoolTime();
+        StartIrAdsCoolTime();
     }
 
     private void RequestInterstitial()
@@ -88,6 +112,8 @@ public class InterstitialAdCaller : MonoBehaviour
         void HandleOnAdOpening(object sender, EventArgs args)
         {
             MonoBehaviour.print("전면 광고 실행중");
+
+            FirebaseAnalytics.LogEvent("IrAdsWatchingEvent");
         }
 
         void HandleOnAdClosed(object sender, EventArgs args)
@@ -95,12 +121,16 @@ public class InterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print("전면광고 꺼짐");
 
             RequestInterstitial();
-            StartCoroutine(StartTickIrAdsTime());
+            RestartIrAdsCoolTime();
+
+            FirebaseAnalytics.LogEvent("IrAdsClosedEvent");
         }
     }
 
     public void CallIrAds()
     {
+        FirebaseAnalytics.LogEvent("IrAdsCallEvent");
+
         if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds)
         {
             this.interstitial.Show();
@@ -108,9 +138,17 @@ public class InterstitialAdCaller : MonoBehaviour
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
+            {
                 print("광고제거를 구매하여 전면광고가 없습니다");
-            else if(!IrAdsReady)
+                FirebaseAnalytics.LogEvent("IrAdsNoBecausePurchasedNoAdsEvent");
+            }
+
+            else if (!IrAdsReady)
+            {
                 print("광고가 로드되지 않았습니다");
+                FirebaseAnalytics.LogEvent("IrAdsNotReadyEvent");
+            }
+
         }
     }
 }

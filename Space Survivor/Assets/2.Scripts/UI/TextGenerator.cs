@@ -27,7 +27,7 @@ public class TextGenerator : MonoBehaviour
 
     public void DequeueText(Vector3 position, int damage, TextGenerateOffset offset)
     {
-        print(offset.minVectorOffset + " " + offset.maxVectorOffset);
+        //print(offset.minVectorOffset + " " + offset.maxVectorOffset);
         var text = textPool.DeQueueText(position, damage, offset);
 
         StartCoroutine(activeText(text));

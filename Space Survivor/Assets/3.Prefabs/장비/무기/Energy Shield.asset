@@ -16,6 +16,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5838637156235729955, guid: a7e54a0c1f28ebd439366ffd9f89ed15, type: 3}
   weaponImage: {fileID: 21300000, guid: 143225f3cb2ef614f9eec0122120dae9, type: 3}
   parent: {fileID: 0}
+  anyEqupment: 0
   type: 11
   whileParticlePrefab: {fileID: 435296270060555721, guid: 9f2b4561c784f7740aa316ca43fd4734, type: 3}
   currenWhileParticle: {fileID: 0}
@@ -27,13 +28,25 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentSizeVector: {x: 0, y: 0, z: 0}
   currentSize:
-    baseValue: 1
+    baseValue: 0.1
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentTrailSize:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   ready: 1
   coolTime:
     baseValue: 1
@@ -41,12 +54,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   damageMultifly:
     baseValue: 1
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   projectileAmount: 1
   firingInterval:
     baseValue: 0.1
@@ -54,12 +71,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   FireForce:
     baseValue: 0
     minValue: 0
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   currentUpgradeModules: []
   UpgradeModulesForLevel:
   - upgradeModules:

@@ -102,8 +102,8 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_UNITYADS_RUNTIME
 --compilation-defines=UNITY_UNITYADS_API
 --compilation-defines=ENABLE_MONO
---compilation-defines=NET_STANDARD_2_0
---compilation-defines=NET_STANDARD
+--compilation-defines=NET_4_6
+--compilation-defines=NET_UNITY_4_8
 --compilation-defines=ENABLE_CUSTOM_RENDER_TEXTURE
 --compilation-defines=ENABLE_DIRECTOR
 --compilation-defines=ENABLE_LOCALIZATION
@@ -160,11 +160,11 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.WinRTCore.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Unity.Localization.dll
+--root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Core.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleCore.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.Internal.dll
---root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\DOTween.Modules.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll
 --root-assembly=C:\Users\pc\Documents\SpaceSurvivor\Space-Survivor\Space Survivor\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll

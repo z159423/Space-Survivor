@@ -39,7 +39,7 @@ public class PlayerWeapon : MonoBehaviour
                 weaponSlotList[i].weaponCoolTimeImage.StartCoolTime(weaponPool[i].coolTime.GetFinalStatValue());
                 StartCoroutine(ProjectileReload(weaponPool[i]));
 
-                StartCoroutine(weaponPool[i].Fire(weaponPool[i].GetFirePos().position, this));
+                StartCoroutine(weaponPool[i].Fire(weaponPool[i].GetFirePos(), this));
             }
         }
     }
@@ -334,6 +334,8 @@ public class PlayerWeapon : MonoBehaviour
                 {
                     projectile.Fire(null, 0);
                 }
+
+                AudioManager.instance.GenerateAudioAndPlaySFX("missile1", transform.position);
             }
         }
     }

@@ -8,23 +8,31 @@ public class BottomBanner : MonoBehaviour
     private BannerView bannerView;
 
     //Test ID ca-app-pub-3940256099942544/6300978111
-    [SerializeField] private string Aos_bannerAdUnitId = "";
+    [SerializeField] private string Aos_bannerAdUnitId = "ca-app-pub-5179254807136480/2536343741";
     //Test ID ca-app-pub-3940256099942544/2934735716
     [SerializeField] private string Ios_bannerAdUnitId = "";
 
+    public static BottomBanner instance;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void Start()
     {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(initStatus => { });
 
-        this.RequestBanner();
+        if (!UserDataManager.instance.currentUserData.RemoveAds)
+            this.RequestBanner();
     }
 
     private void RequestBanner()
     {
 #if UNITY_ANDROID
-        string adUnitId = Aos_bannerAdUnitId;
+        string adUnitId = "ca-app-pub-5179254807136480/2536343741";
 #elif UNITY_IPHONE
             string adUnitId = Ios_bannerAdUnitId;
 #else
@@ -47,5 +55,13 @@ public class BottomBanner : MonoBehaviour
 
         // Load the banner with the request.
         this.bannerView.LoadAd(request);
+    }
+
+    public void DestoryBanner()
+    {
+        if (this.bannerView != null)
+        {
+            this.bannerView.Destroy();
+        }
     }
 }

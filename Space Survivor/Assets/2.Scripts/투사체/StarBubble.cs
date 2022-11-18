@@ -37,6 +37,24 @@ public class StarBubble : MonoBehaviour
         deleteCoroutine = StartCoroutine(delete());
     }
 
+    public void FireToHead(Transform target, float fireForce, Vector3 extraAngle)
+    {
+        rigid.velocity = Vector3.zero;
+        Vector2 fireDir;
+
+        fireDir = Utility.GetDirection(transform.position, target.position);
+
+        var angle = Mathf.Atan2((fireDir.y + transform.position.y) - transform.position.y,
+        (fireDir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        transform.Rotate(extraAngle);
+
+        rigid.AddForce(transform.up * fireForce);
+
+        deleteCoroutine = StartCoroutine(delete());
+    }
+
     IEnumerator delete()
     {
         yield return new WaitForSeconds(deleteTime);
@@ -45,6 +63,8 @@ public class StarBubble : MonoBehaviour
         {
             ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
             VFXGenerator.instance.GenerateVFX(deleteParticleType, transform.position);
+            if(GetComponentInChildren<TrailRenderer>() != null)
+                GetComponentInChildren<TrailRenderer>().enabled = false;
         }
     }
 

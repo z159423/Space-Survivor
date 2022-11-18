@@ -42,17 +42,20 @@ public class BossStat : EnemyStat
         {
             EnemyGenerator.instance.bossFighting = false;
         }
-            
+
+        EnemyGenerator.instance.deleteBossWall();
+
     }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(int damage, bool damageText)
     {
         if (damage <= 0)
             return;
 
         currentHp -= damage;
 
-        TextGenerator.instance.DequeueText(damageTextGeneartePosition.position, damage, textGenerateOffset);
+        if (damageText)
+            TextGenerator.instance.DequeueText(damageTextGeneartePosition.position, damage, textGenerateOffset);
 
         OnChangeHp();
 

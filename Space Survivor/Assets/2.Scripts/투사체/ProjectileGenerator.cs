@@ -98,5 +98,5 @@ public class ProjectileGenerator : MonoBehaviour
     }
 }
 
-public enum ProjectileType { none, BurstMissile, StarBubble1, StarBubble2, StarBubble3 }
+public enum ProjectileType { none, BurstMissile, StarBubble1, StarBubble2, StarBubble3, droneShot }
 

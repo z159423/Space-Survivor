@@ -56,7 +56,16 @@ MonoBehaviour:
     MinValue: 0
     maxValue: 0
     MaxValue: 1000
-  hitLimit: 1
+    FloatModifiers: []
+    PercentModifiers: []
+  hitLimit:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
   knockBackForce: 4
   deleteOnTime: 0
   deleteTime: 3
@@ -91,6 +100,9 @@ MonoBehaviour:
   findTargetRange: 30
   rigid: {fileID: 3792121462557049164}
   projectileLogic: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!212 &3792121462557049167
 SpriteRenderer:
   m_ObjectHideFlags: 0

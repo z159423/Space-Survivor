@@ -26,6 +26,7 @@ public class SettingManager : MonoBehaviour
     public TextMeshProUGUI soundOnOffText;
     public TextMeshProUGUI vibrationOnOffText;
     public TMP_Dropdown LanguageDropdown;
+    public Text versionText;
 
     [Space]
 
@@ -58,6 +59,8 @@ public class SettingManager : MonoBehaviour
 
         LanguageDropdown.value = selected;
         LanguageDropdown.onValueChanged.AddListener(LocaleSelected);
+
+        versionText.text = "version : " + Application.version;
     }
 
     private void Awake()
@@ -68,13 +71,17 @@ public class SettingManager : MonoBehaviour
         {
             yield return LocalizationSettings.InitializationOperation;
 
-            if(Application.systemLanguage == SystemLanguage.English)
+            if (Application.systemLanguage == SystemLanguage.English)
             {
                 LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
             }
-            else if(Application.systemLanguage == SystemLanguage.Korean)
+            else if (Application.systemLanguage == SystemLanguage.Korean)
             {
                 LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+            }
+            else
+            {
+                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
             }
         }
 
@@ -105,12 +112,14 @@ public class SettingManager : MonoBehaviour
             soundSliderFill.color = offColor;
             soundOnOffText.text = "OFF";
             sound = false;
+            AudioListener.volume = 0;
         }
         else
         {
             soundSliderFill.color = onColor;
             soundOnOffText.text = "ON";
             sound = true;
+            AudioListener.volume = 1;
         }
     }
 
@@ -162,7 +171,7 @@ public class SettingManager : MonoBehaviour
         OnChangeVibrationSlider();
     }
 
-    
+
 
     static void LocaleSelected(int index)
     {

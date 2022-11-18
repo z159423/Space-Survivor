@@ -19,6 +19,9 @@ public class HomingMissileLogic : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rigid;
     [SerializeField] private ProjectileLogic projectileLogic;
+    [SerializeField] private LayerMask layerMask;
+
+    private Coroutine findTargetCoroutine;
 
 
     private void OnEnable()
@@ -27,7 +30,7 @@ public class HomingMissileLogic : MonoBehaviour
 
         if (findTargetOnStart)
         {
-            FindTarget();
+            findTargetCoroutine = StartCoroutine(FindTarget());
         }
     }
 
@@ -37,13 +40,13 @@ public class HomingMissileLogic : MonoBehaviour
     {
         if(homingProjecile)
         {
-            if (findTargetOnMissingTarget && homingProjectileTarget == null)
-                FindTarget();
+            if (findTargetOnMissingTarget && homingProjectileTarget == null && findTargetCoroutine == null)
+                findTargetCoroutine = StartCoroutine(FindTarget());
 
             if (homingProjectileTarget != null)
             {
-                if(!homingProjectileTarget.gameObject.activeSelf)
-                    FindTarget();
+                if(!homingProjectileTarget.gameObject.activeSelf && findTargetCoroutine == null)
+                    findTargetCoroutine = StartCoroutine(FindTarget());
 
                 Vector2 dir = Utility.GetDirection(rigid.position, homingProjectileTarget.position);
 
@@ -60,9 +63,9 @@ public class HomingMissileLogic : MonoBehaviour
         }
     }
 
-    private void FindTarget()
+    IEnumerator FindTarget()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, findTargetRange);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, findTargetRange, layerMask);
 
         float closestDist = float.PositiveInfinity;
 
@@ -79,5 +82,9 @@ public class HomingMissileLogic : MonoBehaviour
                 }
             }
         }
+
+        yield return new WaitForSeconds(1f);
+
+        findTargetCoroutine = null;
     }
 }

@@ -18,6 +18,7 @@ public class PlayerStat : MonoBehaviour
     public Stat getMineralBouse = new Stat();
     private int playerLevel = 1;
     public int currentCrystal = 0;
+    private int lastGameCurrentCrystal = 0;
 
     [Space]
 
@@ -61,7 +62,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] GameObject dieVFX;
 
     public bool playerDie = false;
-    private bool whileLevelUp = false;
+    public bool whileLevelUp { get; set; } = false;
     private GameObject currentShipBody;
     public UnityEvent startGameEvent;
     public UnityEvent playerDieEvent;
@@ -74,11 +75,6 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
 
     private Sequence mySequence;
-
-    private void Start()
-    {
-
-    }
 
     private void OnEnable()
     {
@@ -113,6 +109,8 @@ public class PlayerStat : MonoBehaviour
             return;
         }
 
+        Vibration.Vibrate((long)15);
+
         currentHp -= damage;
 
         hpBar.SetState(currentHp, maxHp);
@@ -139,15 +137,26 @@ public class PlayerStat : MonoBehaviour
 
         EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
-        Utility.Explode(transform.position, 0, 20, 10, VFXType.Explode1, cameraShakeInstance);
+        Utility.Explode(transform.position, 0, 20, 10, VFXType.AtomicExplosion, cameraShakeInstance);
 
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
+        AudioManager.instance.GenerateAudioAndPlaySFX("explosion1", transform.position);
     }
 
     public void GetCurrentCrystal()
     {
         UserDataManager.instance.AddCrystalValue(currentCrystal);
+    }
+
+    public void GetCrystalDouble()
+    {
+        UserDataManager.instance.AddCrystalValue(lastGameCurrentCrystal);
+        GameManager.instance.ChangeGetCrystalText(lastGameCurrentCrystal);
+
+        //if (playerDie)
+        //    CrystalMotion.instance.StartCrystalMotion(0, lastGameCurrentCrystal);
+        //else
+        //    CrystalMotion.instance.StartCrystalMotion(0, lastGameCurrentCrystal);
+
     }
 
     public void GetExp(int exp)
@@ -159,7 +168,7 @@ public class PlayerStat : MonoBehaviour
 
         currentExp += Mathf.RoundToInt(exp * getMineralBouse.GetFinalStatValue());
 
-        Vibration.Vibrate((long)30);
+        //Vibration.Vibrate((long)30);
 
         OnChangeExp();
     }
@@ -183,6 +192,8 @@ public class PlayerStat : MonoBehaviour
         currentCrystal += value;
 
         crystalText.text = currentCrystal.ToString();
+
+        lastGameCurrentCrystal = currentCrystal;
     }
 
     private void LevelUp()
@@ -192,6 +203,8 @@ public class PlayerStat : MonoBehaviour
 
         LevelUpManager.instance.StartWeaponUpgrade();
         playerLevelText.text = "Level " + playerLevel.ToString();
+
+        AudioManager.instance.PlaySFX("levelup1");
 
         //mySequence.Restart();
         //expFill.DOColor(fadeOutExpColor, 1f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
@@ -255,6 +268,10 @@ public class PlayerStat : MonoBehaviour
         playerWeapon.additionalDamage.ClearPercentModifier();
         shieldInvinsibleTime.ClearPercentModifier();
         shieldReloadTime.ClearPercentModifier();
+        if (shieldReloadCoroutine != null)
+            StopCoroutine(shieldReloadCoroutine);
+        if (shieldImage != null)
+            shieldImage.SetActive(false);
     }
 
     public void PlayGame()
@@ -271,12 +288,30 @@ public class PlayerStat : MonoBehaviour
 
         playerMovement.SetPlayerBody(currentShipBody.transform);
 
+        //for (int i = 0; i < ship.basicWeapon.Count; i++)
+        //{
+        //    playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
+        //}
+
+        //for (int i = 0; i < ship.basicPassive.Count; i++)
+        //{
+        //    playerWeapon.AddNewWeapon(ship.basicPassive[i]);
+        //}
+
+        GetShipStat(ship);
+    }
+
+    public void AddBasicEquipment(ShipObject ship)
+    {
         for (int i = 0; i < ship.basicWeapon.Count; i++)
         {
             playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
         }
 
-        GetShipStat(ship);
+        for (int i = 0; i < ship.basicPassive.Count; i++)
+        {
+            playerWeapon.AddNewWeapon(ship.basicPassive[i]);
+        }
     }
 
     public void DisableShipBody()
@@ -366,6 +401,8 @@ public class PlayerStat : MonoBehaviour
         currentHp = Mathf.Clamp(currentHp, 0, maxHp);
 
         hpBar.SetState(currentHp, maxHp);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("upgrade2", transform.position);
     }
 
     public int GetCurrentPlayerLevel()
@@ -402,6 +439,8 @@ public class PlayerStat : MonoBehaviour
         OnChangeShieldStack();
 
         shieldImage.SetActive(true);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("shield1", transform.position);
     }
 
     public IEnumerator UseShield()

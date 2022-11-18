@@ -29112,7 +29112,7 @@ CATCH_000f:
 			Exception_t* L_7 = V_0;
 			NullCheck(L_7);
 			String_t* L_8;
-			L_8 = VirtualFuncInvoker0< String_t* >::Invoke(9 /* System.String System.Exception::get_StackTrace() */, L_7);
+			L_8 = VirtualFuncInvoker0< String_t* >::Invoke(10 /* System.String System.Exception::get_StackTrace() */, L_7);
 			String_t* L_9;
 			L_9 = String_Format_m76BF8F3A6AD789E38B708848A2688D400AAC250A(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral278373D355249DCD52C81E9CB9F5FDA676BBEAC4)), L_4, L_6, L_8, NULL);
 			Tween_t8CB06EBC48A5B6F5065C490E4F4909C18CE7983C* L_10 = ___t1;

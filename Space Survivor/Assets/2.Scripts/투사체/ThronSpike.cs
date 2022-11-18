@@ -36,6 +36,8 @@ public class ThronSpike : ProjectileLogic
         transform.RotateAround(player.position, new Vector3(0, 0, 1), angle * (thisCount + 1));
 
         trailRenderer.Clear();
+
+        //print(transform.rotation.eulerAngles);
     }
 
     public void AddRotateSpeed(float speed)

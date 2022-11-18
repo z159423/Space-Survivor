@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a95a1ab3daffc6e49b2a3d295c9f852e, type: 3}
+  m_Name: Drone
+  m_EditorClassIdentifier: 
+  activeProjectile: []
+  projectilePrefab: {fileID: 4308418215453120606, guid: 2e3f5eec896836146b6980e161ce8d40, type: 3}
+  weaponImage: {fileID: 21300000, guid: 9e7282cebd6ade04c8e555000a997a2e, type: 3}
+  parent: {fileID: 0}
+  anyEqupment: 0
+  type: 21
+  whileParticlePrefab: {fileID: 0}
+  currenWhileParticle: {fileID: 0}
+  firePosName: FirePos1
+  fireDirName: FireDir1
+  fireSFX: cannon1
+  currentDamage:
+    baseValue: 5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentSizeVector: {x: 3, y: 3, z: 1}
+  currentSize:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentTrailSize:
+    baseValue: 0.2
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  ready: 1
+  coolTime:
+    baseValue: 10
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  damageMultifly:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  projectileAmount: 1
+  firingInterval:
+    baseValue: 0.2
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  FireForce:
+    baseValue: 130
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  currentUpgradeModules: []
+  UpgradeModulesForLevel:
+  - upgradeModules:
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+  - upgradeModules:
+    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
+    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+  - upgradeModules:
+    - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: 2209831c0482e67449dd5f888fa0c2e4, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+  - upgradeModules:
+    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
+    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+  - upgradeModules:
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+  - upgradeModules:
+    - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
+    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
+    - {fileID: 11400000, guid: 2209831c0482e67449dd5f888fa0c2e4, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+  maxWeaponLevel: 6

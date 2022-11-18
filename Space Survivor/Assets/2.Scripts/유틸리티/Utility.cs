@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Utility : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class Utility : MonoBehaviour
         }
 
         if (enemyList.Count > 0)
-            return enemyList[Random.Range(0, enemyList.Count)].transform;
+            return enemyList[UnityEngine.Random.Range(0, enemyList.Count)].transform;
         else
             return null;
     }
@@ -69,7 +70,6 @@ public class Utility : MonoBehaviour
 
         VFXGenerator.instance.GenerateVFX(vfxType, center);
 
-
         if (cameraShakeInstance != null)
             EZCameraShake.CameraShaker.Instance.Shake(cameraShakeInstance);
     }
@@ -79,9 +79,9 @@ public class Utility : MonoBehaviour
         return Mathf.RoundToInt(value);
     }
 
-    public static bool PercentageCalculator(int percent)
+    public static bool PercentageCalculator(int percent, int maxValue)
     {
-        var random = Random.Range(0, 100);
+        var random = UnityEngine.Random.Range(0, maxValue);
 
         if (percent > random)
         {
@@ -91,5 +91,22 @@ public class Utility : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public static TimeSpan GetTimeDiff(DateTime time)
+    {
+        //print(DateTime.Now + " - " +  time);
+        TimeSpan timeDiff = DateTime.Now - time;
+
+        return timeDiff;
+    }
+
+    public static string GetFormatedStringFromSecond(int second)
+    {
+        int min = second / 60;
+        int hour = min / 60;
+        int sec = second % 60;
+
+        return hour + " : " + min + " : " + sec;
     }
 }

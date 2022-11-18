@@ -1142,17 +1142,17 @@ struct DFA_t68E40FB2261FCCE22383DC845FCC24D69A0A067F  : public RuntimeObject
 struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095  : public RuntimeObject
 {
 	// System.Int32 System.Text.Encoding::m_codePage
-	int32_t ___m_codePage_9;
+	int32_t ___m_codePage_55;
 	// System.Globalization.CodePageDataItem System.Text.Encoding::dataItem
-	CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2* ___dataItem_10;
+	CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2* ___dataItem_56;
 	// System.Boolean System.Text.Encoding::m_deserializedFromEverett
-	bool ___m_deserializedFromEverett_11;
+	bool ___m_deserializedFromEverett_57;
 	// System.Boolean System.Text.Encoding::m_isReadOnly
-	bool ___m_isReadOnly_12;
+	bool ___m_isReadOnly_58;
 	// System.Text.EncoderFallback System.Text.Encoding::encoderFallback
-	EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293* ___encoderFallback_13;
+	EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293* ___encoderFallback_59;
 	// System.Text.DecoderFallback System.Text.Encoding::decoderFallback
-	DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90* ___decoderFallback_14;
+	DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90* ___decoderFallback_60;
 };
 
 struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
@@ -1176,7 +1176,7 @@ struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
 	// System.Collections.Generic.Dictionary`2<System.Int32,System.Text.Encoding> modreq(System.Runtime.CompilerServices.IsVolatile) System.Text.Encoding::encodings
 	Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54* ___encodings_8;
 	// System.Object System.Text.Encoding::s_InternalSyncObject
-	RuntimeObject* ___s_InternalSyncObject_15;
+	RuntimeObject* ___s_InternalSyncObject_61;
 };
 
 // Unity.VisualScripting.Antlr3.Runtime.Misc.ErrorManager
@@ -10019,7 +10019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRecognizer_EmitErrorMessage_m26A76F8
 		L_0 = Console_get_Error_m8DA94D4EFFF9756FF8B44263E256C7341761BD49_inline(NULL);
 		String_t* L_1 = ___msg0;
 		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_0, L_1);
+		VirtualActionInvoker1< String_t* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_0, L_1);
 		return;
 	}
 }
@@ -10890,7 +10890,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRecognizer_TraceIn_mE3FAE977EB7787C6
 		String_t* L_9;
 		L_9 = String_Concat_m33F64A335B610F305AEA5FA8CF4C8BAAAAF257DC(L_8, NULL);
 		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_0, L_9);
+		VirtualActionInvoker1< String_t* >::Invoke(20 /* System.Void System.IO.TextWriter::Write(System.String) */, L_0, L_9);
 		RecognizerSharedState_t9D2FBFC05CB434CF1781D38CE444232CD5C52CF0* L_10 = __this->___state_6;
 		NullCheck(L_10);
 		int32_t L_11 = L_10->___backtracking_6;
@@ -10911,7 +10911,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRecognizer_TraceIn_mE3FAE977EB7787C6
 		String_t* L_17;
 		L_17 = String_Concat_mE4A010CB7CF79DB447EA695143BB9402FF04D82A(_stringLiteralF7967E9CB45D48EA8EDD9AD59D1084C1E6A0FCC9, L_16, NULL);
 		NullCheck(L_12);
-		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_12, L_17);
+		VirtualActionInvoker1< String_t* >::Invoke(20 /* System.Void System.IO.TextWriter::Write(System.String) */, L_12, L_17);
 	}
 
 IL_0061:
@@ -10920,7 +10920,7 @@ IL_0061:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_18;
 		L_18 = Console_get_Out_m72318B95607CE18F153B9415D85045DAC0169ABD_inline(NULL);
 		NullCheck(L_18);
-		VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine() */, L_18);
+		VirtualActionInvoker0::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine() */, L_18);
 		return;
 	}
 }
@@ -10970,7 +10970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRecognizer_TraceOut_m1D0C438AEE66176
 		String_t* L_9;
 		L_9 = String_Concat_m33F64A335B610F305AEA5FA8CF4C8BAAAAF257DC(L_8, NULL);
 		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_0, L_9);
+		VirtualActionInvoker1< String_t* >::Invoke(20 /* System.Void System.IO.TextWriter::Write(System.String) */, L_0, L_9);
 		RecognizerSharedState_t9D2FBFC05CB434CF1781D38CE444232CD5C52CF0* L_10 = __this->___state_6;
 		NullCheck(L_10);
 		int32_t L_11 = L_10->___backtracking_6;
@@ -10991,7 +10991,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRecognizer_TraceOut_m1D0C438AEE66176
 		String_t* L_17;
 		L_17 = String_Concat_mE4A010CB7CF79DB447EA695143BB9402FF04D82A(_stringLiteralF7967E9CB45D48EA8EDD9AD59D1084C1E6A0FCC9, L_16, NULL);
 		NullCheck(L_12);
-		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_12, L_17);
+		VirtualActionInvoker1< String_t* >::Invoke(20 /* System.Void System.IO.TextWriter::Write(System.String) */, L_12, L_17);
 		RecognizerSharedState_t9D2FBFC05CB434CF1781D38CE444232CD5C52CF0* L_18 = __this->___state_6;
 		NullCheck(L_18);
 		bool L_19 = L_18->___failed_4;
@@ -11012,7 +11012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRecognizer_TraceOut_m1D0C438AEE66176
 		String_t* L_25;
 		L_25 = String_Concat_mE4A010CB7CF79DB447EA695143BB9402FF04D82A(_stringLiteralA5421735C67AC5A0AE793A21C6A026FDFEAD5209, L_24, NULL);
 		NullCheck(L_20);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_20, L_25);
+		VirtualActionInvoker1< String_t* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_20, L_25);
 		goto IL_00b8;
 	}
 
@@ -11029,7 +11029,7 @@ IL_0094:
 		String_t* L_31;
 		L_31 = String_Concat_mE4A010CB7CF79DB447EA695143BB9402FF04D82A(_stringLiteral6450C40A859F0407D577A8488A0C52E3D45B3184, L_30, NULL);
 		NullCheck(L_26);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_26, L_31);
+		VirtualActionInvoker1< String_t* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_26, L_31);
 	}
 
 IL_00b8:
@@ -11038,7 +11038,7 @@ IL_00b8:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_32;
 		L_32 = Console_get_Out_m72318B95607CE18F153B9415D85045DAC0169ABD_inline(NULL);
 		NullCheck(L_32);
-		VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.TextWriter::WriteLine() */, L_32);
+		VirtualActionInvoker0::Invoke(21 /* System.Void System.IO.TextWriter::WriteLine() */, L_32);
 		return;
 	}
 }
@@ -11363,7 +11363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NoViableAltException_ToString_m8E5B
 		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteral831E78D748882CC97BD9765EB1675D24CE94B470);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3 = V_0;
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(13 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
+		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
 		Il2CppChar L_5 = ((Il2CppChar)((int32_t)(uint16_t)L_4));
 		RuntimeObject* L_6 = Box(Char_t521A6F19B456D956AF452D926C32709DC03D6B17_il2cpp_TypeInfo_var, &L_5);
 		NullCheck(L_3);
@@ -11398,7 +11398,7 @@ IL_004b:
 		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteral2A1AEDB5CAEE8E90D62850F6BDC43033E49619F2);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_15 = V_1;
 		int32_t L_16;
-		L_16 = VirtualFuncInvoker0< int32_t >::Invoke(13 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
+		L_16 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
 		int32_t L_17 = L_16;
 		RuntimeObject* L_18 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_17);
 		NullCheck(L_15);
@@ -14242,7 +14242,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MismatchedTokenException_ToString_m
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteral5344162BAF253B06CDAC1B2EC90C6B5A8233C777);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = V_0;
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(13 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
+		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_4);
 		NullCheck(L_2);
@@ -14462,7 +14462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MismatchedTreeNodeException_ToStrin
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteral67BDD04DFC424EFEBF0D139BB53B98B27AB2A5F1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = V_0;
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(13 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
+		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_4);
 		NullCheck(L_2);
@@ -14540,7 +14540,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MismatchedSetException_ToString_mB9
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteral010FD1A4E7CFE170E6B749B2D8B6E689C923A6F1);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = V_0;
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(13 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
+		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_4);
 		NullCheck(L_2);
@@ -14736,7 +14736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MismatchedNotSetException_ToString_
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteralD151B7BEBE7273A8FCA17D122CAB836868C0EB9C);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = V_0;
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(13 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
+		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_4);
 		NullCheck(L_2);
@@ -16202,7 +16202,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MismatchedRangeException_ToString_m
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteralD151B7BEBE7273A8FCA17D122CAB836868C0EB9C);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = V_0;
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(13 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
+		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 Unity.VisualScripting.Antlr3.Runtime.RecognitionException::get_UnexpectedType() */, __this);
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_4);
 		NullCheck(L_2);
@@ -18971,7 +18971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TreePatternParser_ParseTree_mD
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_1;
 		L_1 = Console_get_Out_m72318B95607CE18F153B9415D85045DAC0169ABD_inline(NULL);
 		NullCheck(L_1);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_1, _stringLiteral7981AB7CA4CE61A5C260B2DFF198A221D652BDCA);
+		VirtualActionInvoker1< String_t* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_1, _stringLiteral7981AB7CA4CE61A5C260B2DFF198A221D652BDCA);
 		return NULL;
 	}
 
@@ -19080,7 +19080,7 @@ IL_006f:
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_21;
 		L_21 = Console_get_Out_m72318B95607CE18F153B9415D85045DAC0169ABD_inline(NULL);
 		NullCheck(L_21);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_21, _stringLiteral64B32FB0CB81D0F0A391902C979F10FE23EAD37D);
+		VirtualActionInvoker1< String_t* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_21, _stringLiteral64B32FB0CB81D0F0A391902C979F10FE23EAD37D);
 		return NULL;
 	}
 
@@ -23027,7 +23027,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CommonTreeNodeStream_ToString_m5B7A
 		TextWriter_tA9E5461506CF806E17B6BBBF2119359DEDA3F0F3* L_0;
 		L_0 = Console_get_Out_m72318B95607CE18F153B9415D85045DAC0169ABD_inline(NULL);
 		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_0, _stringLiteral2AD49508FEEE2ED6B87C00368D21B2C11D90DEDA);
+		VirtualActionInvoker1< String_t* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_0, _stringLiteral2AD49508FEEE2ED6B87C00368D21B2C11D90DEDA);
 		RuntimeObject* L_1 = ___start0;
 		if (!L_1)
 		{
@@ -23078,7 +23078,7 @@ IL_0026:
 		String_t* L_8;
 		L_8 = String_Concat_mA299F8BBD1426934E2DAA95859E11C2063A116C8(_stringLiteral2BF61A442B8A05DF6D469AF91A031B3E389FDD0C, L_7, _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, NULL);
 		NullCheck(L_5);
-		VirtualActionInvoker1< String_t* >::Invoke(17 /* System.Void System.IO.TextWriter::Write(System.String) */, L_5, L_8);
+		VirtualActionInvoker1< String_t* >::Invoke(20 /* System.Void System.IO.TextWriter::Write(System.String) */, L_5, L_8);
 		goto IL_005f;
 	}
 
@@ -23089,7 +23089,7 @@ IL_0054:
 		L_9 = Console_get_Out_m72318B95607CE18F153B9415D85045DAC0169ABD_inline(NULL);
 		RuntimeObject* L_10 = ___start0;
 		NullCheck(L_9);
-		VirtualActionInvoker1< RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.Object) */, L_9, L_10);
+		VirtualActionInvoker1< RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.Object) */, L_9, L_10);
 	}
 
 IL_005f:
@@ -23109,7 +23109,7 @@ IL_005f:
 		RuntimeObject* L_14;
 		L_14 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(56 /* Unity.VisualScripting.Antlr3.Runtime.IToken Unity.VisualScripting.Antlr3.Runtime.Tree.CommonTree::get_Token() */, ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_13, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
 		NullCheck(L_12);
-		VirtualActionInvoker1< RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.Object) */, L_12, L_14);
+		VirtualActionInvoker1< RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.Object) */, L_12, L_14);
 		goto IL_0089;
 	}
 
@@ -23120,7 +23120,7 @@ IL_007e:
 		L_15 = Console_get_Out_m72318B95607CE18F153B9415D85045DAC0169ABD_inline(NULL);
 		RuntimeObject* L_16 = ___stop1;
 		NullCheck(L_15);
-		VirtualActionInvoker1< RuntimeObject* >::Invoke(20 /* System.Void System.IO.TextWriter::WriteLine(System.Object) */, L_15, L_16);
+		VirtualActionInvoker1< RuntimeObject* >::Invoke(23 /* System.Void System.IO.TextWriter::WriteLine(System.Object) */, L_15, L_16);
 	}
 
 IL_0089:
@@ -24452,7 +24452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Stats_WriteReport_m949534690B710B0EFAB26
 		StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_9 = V_2;
 		String_t* L_10 = ___data1;
 		NullCheck(L_9);
-		VirtualActionInvoker1< String_t* >::Invoke(19 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_9, L_10);
+		VirtualActionInvoker1< String_t* >::Invoke(22 /* System.Void System.IO.TextWriter::WriteLine(System.String) */, L_9, L_10);
 		StreamWriter_t6E7DF7D524AA3C018A65F62EE80779873ED4D1E4* L_11 = V_2;
 		NullCheck(L_11);
 		VirtualActionInvoker0::Invoke(8 /* System.Void System.IO.TextWriter::Close() */, L_11);

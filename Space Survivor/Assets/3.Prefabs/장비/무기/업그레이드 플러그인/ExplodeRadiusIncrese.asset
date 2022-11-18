@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ExplodeRadiusIncrese
   m_EditorClassIdentifier: 
   upgradeModuleType: 6
-  value1: 0.5
+  value1: 0.2
   value2: 0
   value3: 0

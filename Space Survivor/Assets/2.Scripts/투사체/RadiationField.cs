@@ -40,6 +40,6 @@ public class RadiationField : MonoBehaviour
          + (projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt() * shipDamageFixedPercent)
           * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue());
 
-        Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
+        Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue() * projectileLogic.weaponObject.currentSize.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
     }
 }

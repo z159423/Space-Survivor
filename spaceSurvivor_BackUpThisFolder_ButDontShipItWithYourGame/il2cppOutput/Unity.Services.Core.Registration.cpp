@@ -3529,7 +3529,7 @@ CATCH_006c_1:
 			Exception_t* L_16 = V_3;
 			NullCheck(L_16);
 			String_t* L_17;
-			L_17 = VirtualFuncInvoker0< String_t* >::Invoke(9 /* System.String System.Exception::get_StackTrace() */, L_16);
+			L_17 = VirtualFuncInvoker0< String_t* >::Invoke(10 /* System.String System.Exception::get_StackTrace() */, L_16);
 			String_t* L_18;
 			L_18 = String_Concat_mF8B69BE42B5C5ABCAD3C176FBBE3010E0815D65D(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72A108E053F65E47DD8EFDC2C7EB71B5E7879550)), L_15, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD)), L_17, NULL);
 			CoreLogger_LogError_m60BDFED5C2144A408C9641D048F9A7C5141B8195(L_18, NULL);

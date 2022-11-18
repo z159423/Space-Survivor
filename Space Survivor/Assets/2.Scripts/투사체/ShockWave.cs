@@ -19,17 +19,27 @@ public class ShockWave : MonoBehaviour
 
     private void OnEnable()
     {
-        if (projectileLogic.playerWeapon == null)
-            return;
+        StartCoroutine(generatorShockWave());
 
-        EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
+        IEnumerator generatorShockWave()
+        {
+            yield return null;
 
-        float currentDamage = (projectileLogic.GetDamage().GetFinalStatValue()
-         + projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()
-         + projectileLogic.GetDamage().GetFinalStatValueAsInt())
-          * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
+            if (projectileLogic.playerWeapon == null)
+                yield break;
 
-        Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
+            EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
+
+            float currentDamage = (projectileLogic.GetDamage().GetFinalStatValue()
+             + projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()
+             + projectileLogic.GetDamage().GetFinalStatValueAsInt())
+              * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
+
+            Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
+            AudioManager.instance.GenerateAudioAndPlaySFX("explosion2", transform.position);
+        }
+
+
     }
 
     public void ResetStat()

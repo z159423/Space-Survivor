@@ -58,20 +58,26 @@ public class ResourceGenerator : MonoBehaviour
                         break;
                 }
 
-                for(int z = 0; z < dropAmount; z++)
+                StartCoroutine(force());
+
+                IEnumerator force()
                 {
-                    var success = resourcePool[i].DeQueue(position);
-
-                    if (success != null)
+                    for (int z = 0; z < dropAmount; z++)
                     {
-                        Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
+                        var success = resourcePool[i].DeQueue(position);
 
-                        var resource = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
+                        if (success != null)
+                        {
+                            yield return null;
+                            Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
 
-                        if(dropTable.maxDropForce > 0)
-                        resource.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(0, dropTable.maxDropForce));
+                            var resource = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
 
-                        generatedResource.Add(resource);
+                            if (dropTable.maxDropForce > 0)
+                                resource.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(0, dropTable.maxDropForce));
+
+                            generatedResource.Add(resource);
+                        }
                     }
                 }
 

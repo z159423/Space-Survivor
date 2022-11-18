@@ -25,7 +25,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     //[SerializeField] private float fireForce = 1000f;
     [SerializeField] private Stat damage = new Stat();
 
-    [SerializeField] private int hitLimit = 1;
+    [SerializeField] private Stat hitLimit = new Stat();
     private int hitCount = 0;
 
     [SerializeField] private int knockBackForce = 0;
@@ -62,6 +62,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     [SerializeField] private ParticleSystem[] vfxs;
     [SerializeField] private TrailRenderer[] trails;
     [SerializeField] public WeaponObject weaponObject { get; set; }
+    [SerializeField] private TrailRenderer trail;
 
     private void Start()
     {
@@ -202,7 +203,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         {
             hitCount++;
 
-            if (hitCount >= hitLimit)
+            if (hitCount >= hitLimit.GetFinalStatValue())
             {
                 OffProjectile();
             }
@@ -268,9 +269,19 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         damage.ClearPercentModifier();
     }
 
+    public void AddHitCount(float value)
+    {
+        hitLimit.AddFloatModifier(value);
+    }
+
     public Stat GetDamage()
     {
         return damage;
+    }
+
+    public int GetKnockbackForce()
+    {
+        return knockBackForce;
     }
 
     public void SetSize()
@@ -279,12 +290,19 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
 
         //print(size);
         transform.localScale = weaponObject.currentSizeVector * weaponObject.currentSize.GetFinalStatValue();
+
+        if (trail != null)
+            trail.widthMultiplier = weaponObject.currentTrailSize.GetFinalStatValue();
     }
 
     public virtual void ResetProjectileStat()
     {
         ClearDamageModifire();
         transform.localScale = weaponObject.currentSizeVector;
+        if (trail != null)
+            trail.widthMultiplier = weaponObject.currentTrailSize.GetBaseValue();
+
+        hitLimit.ClearFloatModifier();
     }
 
     public virtual void IncreaseExplodeRadius(float value)

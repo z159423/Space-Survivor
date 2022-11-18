@@ -35,6 +35,15 @@ public class ShipUpgradeUI : MonoBehaviour
     public Transform shipUpgradeSelectSlotParent;
     public ShipList shipList;
 
+    [Space]
+
+    [SerializeField] private GameObject shipSelectNextBtn;
+    [SerializeField] private GameObject shipSelectPreviousBtn;
+
+    private int shipSelectPageNum;
+    private int currentShipSelectPageNum = 0;
+    private List<GameObject> shipSelectNodeList = new List<GameObject>();
+
     private void OnEnable()
     {
         if (currentShipObject == null)
@@ -45,11 +54,9 @@ public class ShipUpgradeUI : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < shipList.shipList.Count; i++)
-        {
-            var slot = Instantiate(shipUpgradeSelectSlot, shipUpgradeSelectSlotParent);
-            slot.GetComponent<ShipUpgradeSelectSlot>().InitShip(Instantiate(shipList.shipList[i]), this);
-        }
+        shipSelectPageNum = shipList.shipList.Count / 3;
+
+        GenerateShipSelectNode();
     }
 
     private void Update()
@@ -80,7 +87,7 @@ public class ShipUpgradeUI : MonoBehaviour
             shipUnlockButton.SetActive(true);
         }
 
-        shopCostText.text = data.shipCost.ToString();
+        shopCostText.text =  data.shipCost.ToString();
 
 
         if (UserDataManager.instance.currentUserData.crystal >= currentShipObject.shipCost)
@@ -149,7 +156,7 @@ public class ShipUpgradeUI : MonoBehaviour
                 shipUpgradeSlot[i].upgradeCostText.text = upgradeCost.ToString();
 
                 if (UserDataManager.instance.currentUserData.crystal >= upgradeCost && UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipCode)
-                && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < modules.maxUpgrade)
+                && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < /*modules.maxUpgrade*/ 10)
                 {
                     shipUpgradeSlot[i].upgradeButton.SetActive(true);
                 }
@@ -158,7 +165,7 @@ public class ShipUpgradeUI : MonoBehaviour
                     shipUpgradeSlot[i].upgradeButton.SetActive(false);
                 }
 
-                if (modules.currentUpgrade < modules.maxUpgrade)
+                if (modules.currentUpgrade < /*modules.maxUpgrade*/ 10)
                 {
                     shipUpgradeSlot[i].costPanel.SetActive(true);
                     shipUpgradeSlot[i].maxPanel.SetActive(false);
@@ -194,5 +201,59 @@ public class ShipUpgradeUI : MonoBehaviour
         SelectShip(currentShipObject);
 
         UserDataManager.instance.AddCrystalValue(-currentShipObject.shipCost);
+
+        AudioManager.instance.GenerateAudioAndPlaySFX("upgrade3", transform.position);
+    }
+
+    public void OnClickShipSelectNextBtn()
+    {
+        currentShipSelectPageNum++;
+        GenerateShipSelectNode();
+    }
+
+    public void OnClickShipSelectPreviousBtn()
+    {
+        currentShipSelectPageNum--;
+        GenerateShipSelectNode();
+    }
+
+    /// <summary>
+    /// 함선 선택 버튼들 생성, 한 페이지당 최대 3개의 버튼이 생성됨
+    /// </summary>
+    public void GenerateShipSelectNode()
+    {
+        for (int i = 0; i < shipSelectNodeList.Count; i++)
+        {
+            Destroy(shipSelectNodeList[i]);
+        }
+
+        shipSelectNodeList.Clear();
+
+        for (int i = 0; i < shipList.shipList.Count - (3 * currentShipSelectPageNum) && i < 3; i++)
+        {
+            var slot = Instantiate(shipUpgradeSelectSlot, shipUpgradeSelectSlotParent);
+            slot.GetComponent<ShipUpgradeSelectSlot>().InitShip(Instantiate(shipList.shipList[i + (3 * currentShipSelectPageNum)]), this);
+
+            shipSelectNodeList.Add(slot);
+        }
+
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        if (currentShipSelectPageNum < shipSelectPageNum)
+        {
+            shipSelectNextBtn.SetActive(true);
+        }
+        else
+            shipSelectNextBtn.SetActive(false);
+
+        if (0 < currentShipSelectPageNum)
+        {
+            shipSelectPreviousBtn.SetActive(true);
+        }
+        else
+            shipSelectPreviousBtn.SetActive(false);
     }
 }

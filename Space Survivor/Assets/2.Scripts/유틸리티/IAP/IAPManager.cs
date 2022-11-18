@@ -2,28 +2,60 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
+using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 using TMPro;
+using Firebase.Analytics;
 
 public class IAPManager : MonoBehaviour, IStoreListener
 {
     IStoreController m_StoreController; // The Unity Purchasing system.
+    IExtensionProvider m_Extension;
 
     //Your products IDs. They should match the ids of your products in your store.
-    public string removeAdsId = "com.TeroGames.spacesurvivor.removeads";
-    public string starterPackId = "com.TeroGames.spacesurvivor.starterpack";
-    public string megaPackId = "com.TeroGames.spacesurvivor.megapack";
-    public string ultraPackId = "com.TeroGames.spacesurvivor.ultrapack";
+    //com.TeroGames.spacesurvivor.
+    public string removeAdsId = "removeads";
+    public string starterPackId = "starterpack";
+    public string megaPackId = "megapack";
+    public string ultraPackId = "ultrapack";
 
     public TextMeshProUGUI removeAdsText;
     public TextMeshProUGUI starterPackText;
     public TextMeshProUGUI megaPackText;
     public TextMeshProUGUI ultraPackText;
 
+    [Space]
+
+    public GameObject removeAdsButton;
+
 
     private void Start()
     {
-        InitializePurchasing();
         //UpdateUI();
+
+        InitializePurchasing();
+
+        StartCoroutine(InitIAP());
+
+        IEnumerator InitIAP()
+        {
+            while (true)
+            {
+                yield return null;
+
+                print("iap 동기화 시도중");
+                if (m_StoreController != null)
+                {
+                    HadPurchased();
+                    break;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
     }
 
     public void PurchaseRemoveAds()
@@ -34,6 +66,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public void PurchageStarterPack()
     {
         m_StoreController.InitiatePurchase(starterPackId);
+
     }
 
     public void PurchageMegaPack()
@@ -46,25 +79,45 @@ public class IAPManager : MonoBehaviour, IStoreListener
         m_StoreController.InitiatePurchase(ultraPackId);
     }
 
-    private void PurchageStarterPack_Success()
+    public void PurchageStarterPack_Success()
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(1000);
+
+        FirebaseAnalytics.LogEvent("IAP_StarterPackPurchaseSuccess");
+
+        CheckRemoveAdsHasPurchase();
+
+        UpdateUI2();
     }
 
-    private void PurchageMegaPack_Success()
+    public void PurchageMegaPack_Success()
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(2500);
+
+        FirebaseAnalytics.LogEvent("IAP_MegaPackPurchaseSuccess");
+
+        CheckRemoveAdsHasPurchase();
+
+        UpdateUI2();
+
     }
 
-    private void PurchageUltraPack_Success()
+    public void PurchageUltraPack_Success()
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
         UserDataManager.instance.AddCrystalValue(5000);
+
+        FirebaseAnalytics.LogEvent("IAP_UltraPackPurchaseSuccess");
+
+        CheckRemoveAdsHasPurchase();
+
+        UpdateUI2();
+
     }
 
     public void PurchaseRemoveAds_Success()
@@ -73,31 +126,89 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
         UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
-        //UpdateUI();
+        FirebaseAnalytics.LogEvent("IAP_RemoveAdsPurchaseSuccess");
+
+        UpdateUI2();
     }
+
+    private void CheckRemoveAdsHasPurchase()
+    {
+        var product = m_StoreController.products.WithID(removeAdsId);
+
+        if (!product.hasReceipt)
+        {
+            //PurchaseRemoveAds();
+            print("스타터팩 이상을 구매하였고 광고제거를 구매한적이 없기 때문에 광고제거 상품도 함께 구매");
+        }
+
+        UpdateUI2();
+    }
+
+
 
     void InitializePurchasing()
     {
         var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
 
         //Add products that will be purchasable and indicate its type.
-        builder.AddProduct(removeAdsId, ProductType.NonConsumable);
-        builder.AddProduct(starterPackId, ProductType.Consumable);
-        builder.AddProduct(megaPackId, ProductType.Consumable);
-        builder.AddProduct(ultraPackId, ProductType.Consumable);
+        // builder.AddProduct(removeAdsId, ProductType.NonConsumable);
+        // builder.AddProduct(starterPackId, ProductType.Consumable);
+        // builder.AddProduct(megaPackId, ProductType.Consumable);
+        // builder.AddProduct(ultraPackId, ProductType.Consumable);
+
+        builder.AddProduct(removeAdsId, ProductType.NonConsumable,
+        new IDs()
+        {
+            {"removeads", GooglePlay.Name}
+        });
+
+        builder.AddProduct(starterPackId, ProductType.Consumable,
+        new IDs()
+        {
+            {"starterpack", GooglePlay.Name}
+        });
+
+        builder.AddProduct(ultraPackId, ProductType.Consumable,
+        new IDs()
+        {
+            {"ultrapack", GooglePlay.Name}
+        });
+
+        builder.AddProduct(megaPackId, ProductType.Consumable,
+        new IDs()
+        {
+            {"megapack", GooglePlay.Name}
+        });
 
         UnityPurchasing.Initialize(this, builder);
+
+        //HadPurchased();
     }
+
+    // public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
+    // {
+    //     Debug.Log("In-App Purchasing successfully initialized");
+
+    //     print("IAP 연동 성공");
+    //     m_StoreController = controller;
+
+    // }
 
     public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
     {
         Debug.Log("In-App Purchasing successfully initialized");
-        m_StoreController = controller;
+
+        this.m_StoreController = controller;
+        this.m_Extension = extensions;
+
+        //UpdateUI();
     }
 
     public void OnInitializeFailed(InitializationFailureReason error)
     {
         Debug.Log($"In-App Purchasing initialize failed: {error}");
+
+        print("IAP 연동 실패 + " + error);
     }
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
@@ -131,29 +242,29 @@ public class IAPManager : MonoBehaviour, IStoreListener
     }
 
     bool IsSubscribedTo(Product subscription)
+    {
+        // If the product doesn't have a receipt, then it wasn't purchased and the user is therefore not subscribed.
+        if (subscription.receipt == null)
         {
-            // If the product doesn't have a receipt, then it wasn't purchased and the user is therefore not subscribed.
-            if (subscription.receipt == null)
-            {
-                return false;
-            }
-
-            //The intro_json parameter is optional and is only used for the App Store to get introductory information.
-            var subscriptionManager = new SubscriptionManager(subscription, null);
-
-            // The SubscriptionInfo contains all of the information about the subscription.
-            // Find out more: https://docs.unity3d.com/Packages/com.unity.purchasing@3.1/manual/UnityIAPSubscriptionProducts.html
-            var info = subscriptionManager.getSubscriptionInfo();
-
-            return info.isSubscribed() == Result.True;
+            return false;
         }
 
-        void UpdateUI()
-        {
-            var subscriptionProduct = m_StoreController.products.WithID(removeAdsId);
+        //The intro_json parameter is optional and is only used for the App Store to get introductory information.
+        var subscriptionManager = new SubscriptionManager(subscription, null);
 
-            try
-            {
+        // The SubscriptionInfo contains all of the information about the subscription.
+        // Find out more: https://docs.unity3d.com/Packages/com.unity.purchasing@3.1/manual/UnityIAPSubscriptionProducts.html
+        var info = subscriptionManager.getSubscriptionInfo();
+
+        return info.isSubscribed() == Result.True;
+    }
+
+    void UpdateUI()
+    {
+        var subscriptionProduct = m_StoreController.products.WithID(removeAdsId);
+
+        try
+        {
             removeAdsText.text = m_StoreController.products.WithID(removeAdsId).metadata.localizedPriceString;
             starterPackText.text = m_StoreController.products.WithID(starterPackId).metadata.localizedPriceString;
             megaPackText.text = m_StoreController.products.WithID(megaPackId).metadata.localizedPrice.ToString();
@@ -163,16 +274,84 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
             string text = isSubscribed ? "You are subscribed" : "You are not subscribed";
             print(text);
-            }
-            catch (StoreSubscriptionInfoNotSupportedException)
-            {
-                var receipt = (Dictionary<string, object>)MiniJson.JsonDecode(subscriptionProduct.receipt);
-                var store = receipt["Store"];
+        }
+        catch (StoreSubscriptionInfoNotSupportedException)
+        {
+            var receipt = (Dictionary<string, object>)MiniJson.JsonDecode(subscriptionProduct.receipt);
+            var store = receipt["Store"];
             print(
                 "Couldn't retrieve subscription information because your current store is not supported.\n" +
                     $"Your store: \"{store}\"\n\n" +
                     "You must use the App Store, Google Play Store or Amazon Store to be able to retrieve subscription information.\n\n" +
                     "For more information, see README.md");
-            }
         }
+    }
+
+    private void UpdateUI2()
+    {
+        var product = m_StoreController.products.WithID(removeAdsId);
+
+        if (!product.hasReceipt || UserDataManager.instance.currentUserData.RemoveAds)
+        {
+            removeAdsButton.SetActive(false);
+            print("광고 제거를 구매하였기 때문에 버튼 비활성화");
+        }
+    }
+
+    //이미 구입한적 있는 상품인지 확인
+    private void HadPurchased()
+    {
+        var product = m_StoreController.products.WithID(removeAdsId);
+
+        print(product.receipt);
+
+        if (product.hasReceipt)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("광고제거를 구매한 적이 있는 유저");
+        }
+
+        product = m_StoreController.products.WithID(starterPackId);
+
+        print(product.receipt);
+
+        if (product.hasReceipt)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("스타터팩을 구매한 적이 있는 유저");
+        }
+
+        product = m_StoreController.products.WithID(megaPackId);
+
+        print(product.receipt);
+
+        if (product.hasReceipt)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("메가팩을 구매한 적이 있는 유저");
+        }
+
+        product = m_StoreController.products.WithID(ultraPackId);
+
+        print(product.receipt);
+
+        if (product.hasReceipt)
+        {
+            UserDataManager.instance.currentUserData.RemoveAds = true;
+
+            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            print("울트라팩을 구매한 적이 있는 유저");
+        }
+    }
+
 }

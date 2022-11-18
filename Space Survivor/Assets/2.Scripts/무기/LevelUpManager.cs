@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class LevelUpManager : MonoBehaviour
 {
     [SerializeField] private GameObject UpgradeUI;
     [SerializeField] private Transform UpgradeSlotParent;
+    [SerializeField] private GameObject upgradeSlotCover;
 
     [Space]
 
@@ -56,6 +58,8 @@ public class LevelUpManager : MonoBehaviour
 
         UpgradeUI.SetActive(true);
 
+        UpgradeSlotParent.DOScale(new Vector3(1,1,1),0.2f).SetEase(Ease.Linear).OnComplete(()=> upgradeSlotCover.SetActive(false)).SetUpdate(true);
+
         Time.timeScale = 0;
     }
 
@@ -79,18 +83,23 @@ public class LevelUpManager : MonoBehaviour
         currentObtainableList.Clear();
 
         Time.timeScale = 1;
+
+        UpgradeSlotParent.localScale = new Vector3(0,0,0);
+        upgradeSlotCover.SetActive(true);
+
+        playerStat.whileLevelUp = false;
     }
 
     private void MakeWeaponsList()
     {
-        //È¹µæ °¡´ÉÇÑ ¹«±âµé Ãß°¡
+        //È¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
         currentObtainableList.AddRange(obtainableWeapons);
-        //È¹µæ °¡´ÉÇÑ ÆÐ½Ãºêµé Ãß°¡
+        //È¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð½Ãºï¿½ï¿½ ï¿½ß°ï¿½
         currentObtainableList.AddRange(obtainablePassives);
 
         var maxWeapons = playerWeapon.GetMaxLevelEquipmentList();
 
-        //ÀÌ¹Ì ¸¸·¦ÀÎ ¹«±â ¸®½ºÆ®¿¡¼­ Á¦°Å
+        //ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i < maxWeapons.Count; i++)
         {
             for (int j = 0; j < currentObtainableList.Count; j++)
@@ -100,7 +109,7 @@ public class LevelUpManager : MonoBehaviour
             }
         }
 
-        //¸¸¾à ¹«±â ½½·ÔÀÌ ²ËÂ÷¸é »õ·Î¿î ¹«±â°¡ µîÀåÇÏÁö ¾Ê°Ô ¸®½ºÆ®¿¡¼­ »èÁ¦
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½â°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (playerWeapon.weaponPool.Count >= maxWeaponCount)
         {
             for (int i = 0; i < currentObtainableList.Count; i++)
@@ -115,7 +124,7 @@ public class LevelUpManager : MonoBehaviour
             }
         }
 
-        //¸¸¾à ÆÐ½Ãºê ½½·ÔÀÌ ²ËÂ÷¸é »õ·Î¿î ÆÐ½Ãºê°¡ µîÀåÇÏÁö ¾Ê°Ô ¸®½ºÆ®¿¡¼­ »èÁ¦
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½Ð½Ãºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ð½Ãºê°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (playerWeapon.passivePool.Count >= maxPassiveCount)
         {
             for (int i = 0; i < currentObtainableList.Count; i++)
@@ -131,7 +140,7 @@ public class LevelUpManager : MonoBehaviour
             }
         }
 
-        //»õ·Î¿î ¾÷±×·¹ÀÌµå ½½·Ô »ý¼º
+        //ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½×·ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i < 3; i++)
         {
             if (currentObtainableList.Count <= 0)
@@ -169,8 +178,6 @@ public class LevelUpManager : MonoBehaviour
 
         playerStat.AfterUpgrade();
         EndUpgrade();
-
-        InterstitialAdCaller.instance.CallIrAds();
     }
 
     public WeaponObject RequestPlayerWeapon(EquipmentType type)

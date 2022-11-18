@@ -8,6 +8,7 @@ using UnityEngine.Localization;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using DG.Tweening;
+using Firebase.Analytics;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +35,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject clearStageMenu;
     [SerializeField] private GameObject console;
     [SerializeField] private GameObject inGameDebug;
+    public Transform playerTrans;
+    [SerializeField] private GameObject[] editmodeUI;
+    [SerializeField] private StageSelect stageSelect;
 
     [Space]
 
@@ -49,13 +53,18 @@ public class GameManager : MonoBehaviour
     public UnityEvent PlayGameEvent;
 
     public bool gameStart = false;
+    [field: SerializeField] public bool gameclear {get; private set;} = false;
     public bool inMainMenu = true;
+    public bool editmode = false;
 
     private int currentTime;
     private float currentKillCount;
     private Coroutine timerCoroutine;
     public bool revivedThisGame = false;
     private float revivedTimer = 1f;
+
+    public bool crystalDouble = false;
+    [SerializeField] private GameObject crystalDoubleButton; 
 
     public static GameManager instance;
 
@@ -67,12 +76,21 @@ public class GameManager : MonoBehaviour
         //console.SetActive(true);
         //inGameDebug.SetActive(true);
 #endif
-
+    
+    if(editmode)
+    {
+        for(int i = 0 ; i < editmodeUI.Length; i++)
+        {
+            editmodeUI[i].SetActive(true);
+        }
+    }
     }
 
     private void Start()
     {
         SelectShip(currentShipNumber);
+
+        AudioManager.instance.FindBGM("menu2");
     }
 
     public void ResetTime()
@@ -102,25 +120,42 @@ public class GameManager : MonoBehaviour
 
         gameStart = true;
         inMainMenu = false;
+        gameclear = false;
 
         playerWeapon.allowFire = true;
         CameraManager.instance.ChangeCamera_PlayCamera();
 
         EnemyGenerator.instance.bossFighting = false;
         revivedThisGame = false;
+        crystalDouble = false;
+        crystalDoubleButton.SetActive(true);
 
         playerStat.invinsible = false;
+
+        InterstitialAdCaller.instance.StartIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelStart);
+
+        FPSDisplay.instance.ResetMinFPS();
+
+        AudioManager.instance.FindBGM("inGame2");
+
+        playerStat.AddBasicEquipment(currentShip);
     }
 
     public void ReplayGame()
     {
-        InterstitialAdCaller.instance.CallIrAds();
+        //InterstitialAdCaller.instance.CallIrAds();
         SelectShip(currentShipNumber);
+
+        EnemyGenerator.instance.deleteBossWall();
+
+        InterstitialAdCaller.instance.CallIrAds();
     }
 
     public void GoMainMenu()
     {
-        InterstitialAdCaller.instance.CallIrAds();
+        //InterstitialAdCaller.instance.CallIrAds();
         inGameMenu.SetActive(false);
         MainMenu.SetActive(true);
         DieMenu.SetActive(false);
@@ -130,12 +165,26 @@ public class GameManager : MonoBehaviour
 
         gameStart = false;
         inMainMenu = true;
+        gameclear = false;
 
         playerWeapon.allowFire = false;
 
         SelectShip(currentShipNumber);
 
         CameraManager.instance.ChangeCamera_MainMenu();
+
+        EnemyGenerator.instance.deleteBossWall();
+        InterstitialAdCaller.instance.StopIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLevelEnd);
+
+        FPSDisplay.instance.SaveFPS();
+
+        InterstitialAdCaller.instance.CallIrAds();
+
+        AudioManager.instance.FindBGM("menu2");
+
+        
     }
 
     public void Resurrection()
@@ -152,6 +201,8 @@ public class GameManager : MonoBehaviour
 
         DieMenu.SetActive(true);
 
+        //CrystalMotion.instance.StartCrystalMotion(0,playerStat.currentCrystal);
+
         if (!revivedThisGame)
         {
             revivedTimer = 1f;
@@ -164,10 +215,13 @@ public class GameManager : MonoBehaviour
             {
                 reviveButton.SetActive(false);
                 fill.fillAmount = 1f;
+
             });
         }
 
         gameStart = false;
+
+        FirebaseAnalytics.LogEvent("playerDieEvent");
     }
 
     public void ClearStage()
@@ -189,6 +243,13 @@ public class GameManager : MonoBehaviour
             Item.CrystalOnlyMagnetic(player.transform);
         }
 
+        //CrystalMotion.instance.StartCrystalMotion(1,playerStat.currentCrystal);
+
+        FirebaseAnalytics.LogEvent("stageClearEvent");
+
+        UserDataManager.instance.StageClearSaveData(stageSelect.currentStageNumber);
+
+        gameclear = true;
     }
 
     public void AddKillCount()
@@ -321,7 +382,6 @@ public class GameManager : MonoBehaviour
             shipBuyBtn.SetActive(false);
             shipTrialBtn.SetActive(false);
         }
-
     }
 
     public void NextShip()
@@ -365,5 +425,10 @@ public class GameManager : MonoBehaviour
     public void ShipUpgradeUIOnOff()
     {
         shipUpgradeSlot.SetActive(!shipUpgradeSlot.activeSelf);
+    }
+
+    public void ChangeGetCrystalText(int crystal)
+    {
+        getCrystalCountText.text = (int.Parse(getCrystalCountText.text) + crystal).ToString();
     }
 }

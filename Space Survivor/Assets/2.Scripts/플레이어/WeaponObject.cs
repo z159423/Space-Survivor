@@ -18,7 +18,7 @@ public interface IEquipment
 }
 
 [CreateAssetMenu(fileName = "new Weapon", menuName = "Scriptable Object/Equipment/New Weapon", order = int.MaxValue)]
-public class WeaponObject : ScriptableObject , IEquipment
+public class WeaponObject : ScriptableObject, IEquipment
 {
     public Stack<GameObject> bulletStack = new Stack<GameObject>();
 
@@ -39,9 +39,14 @@ public class WeaponObject : ScriptableObject , IEquipment
 
     [Space]
 
+    public string fireSFX = "";
+
+    [Space]
+
     public Stat currentDamage = new Stat();
     public Vector3 currentSizeVector;
     public Stat currentSize = new Stat();
+    public Stat currentTrailSize = new Stat();
 
     [Space]
 
@@ -71,11 +76,11 @@ public class WeaponObject : ScriptableObject , IEquipment
     public int maxWeaponLevel = 6;
     private int currentWeaponLevel = 1;
 
-    public IEnumerator Fire(Vector2 position, PlayerWeapon playerWeapon)
+    public IEnumerator Fire(Transform firepos, PlayerWeapon playerWeapon)
     {
         for (int j = 0; j < projectileAmount; j++)
         {
-            var success = DeQueue(position);
+            var success = DeQueue(firepos.position);
 
             IProjectileLogic projectileLogic;
 
@@ -83,12 +88,13 @@ public class WeaponObject : ScriptableObject , IEquipment
             {
                 projectileLogic = success.Object.GetComponent<IProjectileLogic>();
                 projectileLogic.playerWeapon = playerWeapon;
+                projectileLogic.weaponObject = this;
                 projectileLogic.UpgradeProjectile(success.Object);
                 projectileLogic.ResetProjectile();
             }
             else
             {
-                var Object = Instantiate(projectilePrefab, position, Quaternion.identity);
+                var Object = Instantiate(projectilePrefab, firepos.position, Quaternion.identity);
 
                 projectileLogic = Object.GetComponent<IProjectileLogic>();
                 projectileLogic.playerWeapon = playerWeapon;
@@ -102,7 +108,11 @@ public class WeaponObject : ScriptableObject , IEquipment
             projectileLogic.SetSize();
             projectileLogic.Fire(GetFireDir(), FireForce.GetFinalStatValueAsInt());
 
-            yield return new WaitForSeconds(firingInterval.GetFinalStatValue());
+            if (firingInterval.GetFinalStatValue() > 0)
+                yield return new WaitForSecondsRealtime(firingInterval.GetFinalStatValue());
+
+            if (fireSFX != "")
+                AudioManager.instance.GenerateAudioAndPlaySFX(fireSFX,firepos.position);
 
         }
 
@@ -111,7 +121,7 @@ public class WeaponObject : ScriptableObject , IEquipment
 
     public void UpgradeEquipment(UpgradeModuleList modules)
     {
-        
+
     }
 
     public void UpgradeWeapon(UpgradeModuleList modules)
@@ -157,9 +167,10 @@ public class WeaponObject : ScriptableObject , IEquipment
                     FireForce.AddPercentModifier(modules.upgradeModules[i].value1);
                     break;
 
-                    
+
                 case upgradeModuleType.IncreaseSize:
                     currentSize.AddPercentModifier(modules.upgradeModules[i].value1);
+                    currentTrailSize.AddPercentModifier(modules.upgradeModules[i].value1);
 
                     SetSizeWhileParticle();
                     /*
@@ -247,6 +258,11 @@ public class WeaponObject : ScriptableObject , IEquipment
         logic.AddDamage(Utility.RountToInt(value));
     }
 
+    private void HitCountIncrease(ProjectileLogic logic, int value)
+    {
+        logic.AddHitCount(Utility.RountToInt(value));
+    }
+
     public void EnQueue(GameObject bullet)
     {
         bulletStack.Push(bullet);
@@ -302,18 +318,18 @@ public class WeaponObject : ScriptableObject , IEquipment
                     };
                     break;
 
-                    /*
-                case upgradeModuleType.IncreaseSize:
-                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
-                    {
-                        logic4.IncreaseProjectileSize(currentUpgradeModules[i].value1);
-                    };
+                /*
+            case upgradeModuleType.IncreaseSize:
+                if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
+                {
+                    logic4.IncreaseProjectileSize(currentUpgradeModules[i].value1);
+                };
 
-                    //IncreseSize(projectile, currentUpgradeModules[i].value1);
+                //IncreseSize(projectile, currentUpgradeModules[i].value1);
 
-                    
-                    break;
-                    */
+
+                break;
+                */
 
                 case upgradeModuleType.IncreseRotateSpeed:
                     if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic3))
@@ -333,6 +349,8 @@ public class WeaponObject : ScriptableObject , IEquipment
                     if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic2))
                     {
                         logic2.IncreaseExplodeRadius(currentUpgradeModules[i].value1);
+                        if (type == EquipmentType.ShockWaveGenerator)
+                            currentSize.AddPercentModifier(currentUpgradeModules[i].value1 * 1.5f);
                     };
 
                     /*
@@ -347,6 +365,16 @@ public class WeaponObject : ScriptableObject , IEquipment
                     }*/
 
                     break;
+
+                case upgradeModuleType.IncreaseHitCount:
+                    if (projectile.TryGetComponent<ProjectileLogic>(out ProjectileLogic logic4))
+                    {
+                        HitCountIncrease(logic4, (int)currentUpgradeModules[i].value1);
+                    };
+
+                    break;
+
+
             }
         }
     }
@@ -421,7 +449,9 @@ public class WeaponObject : ScriptableObject , IEquipment
         if (currenWhileParticle == null)
             return;
 
-        currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue(),currentSize.GetFinalStatValue());
+        currenWhileParticle.transform.localScale = new Vector3(currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue(), currentSize.GetFinalStatValue());
+
+
     }
 
     public WeaponObject GetWeaponObject()
@@ -494,5 +524,5 @@ public enum AnyEqupment
 public enum EquipmentType
 {
     SquareCannon, SmallShotCannon, HomingMissile, MeteoriteFlak, FireworkRocket, ThornSatellite, ShockWaveGenerator, MachineGun, BurstMissile,
-    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner,EnhancedSiege, ReloadingDevice
+    SelfRepair, RadiationField, EnergyShield, SawBlade, Armor, Thruster, Magnetic, MineralPurifier, MagneticGenerator, ResourceRefiner, EnhancedSiege, ReloadingDevice, Drone
 }

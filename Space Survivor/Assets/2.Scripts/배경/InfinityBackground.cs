@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InfinityBackground : MonoBehaviour
 {
+    [field: SerializeField] public Stage stage {get; private set;}
+
     [SerializeField] Transform playerPosition;
     [SerializeField] Vector2Int currentPlayerTilePosition;
     [Space]
