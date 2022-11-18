@@ -489,7 +489,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.crystallAddRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
+        if (this.crystallAddRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             if (UserDataManager.instance.currentUserData.usingFreeCrystalTime != null)
                 print(timeDiff);
@@ -520,7 +520,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.shipTrialRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
+        if (this.shipTrialRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             this.shipTrialRewardedAd.Show();
         }
@@ -540,7 +540,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     {
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.reviveRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds)
+        if (this.reviveRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             this.reviveRewardedAd.Show();
         }

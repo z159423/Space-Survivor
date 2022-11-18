@@ -370,9 +370,9 @@ MonoBehaviour:
   - {fileID: 4308418215734954104}
   - {fileID: 4308418214491884243}
   trail: {fileID: 0}
-  moveSpeed: 10
+  moveSpeed: 13
   rotationSpeed: 5
-  fireLate: 0.8
+  fireLate: 0.5
   fireForce: 150
   findTargetRadius: 10
   minDistBetweenEnemy: 1.8
@@ -397,7 +397,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 30
   m_LinearDrag: 2
-  m_AngularDrag: 2
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 1

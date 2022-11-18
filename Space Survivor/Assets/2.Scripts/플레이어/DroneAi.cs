@@ -35,7 +35,7 @@ public class DroneAi : ProjectileLogic
 
         IEnumerator FlyStrate()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.6f);
 
             flyStrate = false;
         }
@@ -143,7 +143,7 @@ public class DroneAi : ProjectileLogic
         {
             while (target == null)
             {
-                target = Utility.GetRandomTargetInRadius(GameManager.instance.playerTrans, findTargetRadius);
+                target = Utility.GetClosestTargetInRadius(transform, findTargetRadius);
 
                 yield return new WaitForSeconds(0.5f);
             }

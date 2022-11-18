@@ -30,7 +30,7 @@ public class UpgradeSlot : MonoBehaviour
 
         moduleName.text = weaponObject.GetEquipmentType().ToString();
 
-        
+
         for (int i = 0; i < LevelUpManager.instance.RequestWeaponLevel(weaponObject.GetEquipmentType()) - 1; i++)
         {
             Instantiate(upgradeNodePrefab, upgradeNodeSlotparent);
@@ -148,6 +148,10 @@ public class UpgradeSlot : MonoBehaviour
                     if (stringOperation.IsDone && stringOperation.Status == AsyncOperationStatus.Succeeded)
                     {
                         string str = stringOperation.Result;
+
+                        if (i != 0)
+                            moduleDetail.text = moduleDetail.text + ",";
+
                         moduleDetail.text = moduleDetail.text + str + "\n";
 
                         break;
@@ -160,7 +164,7 @@ public class UpgradeSlot : MonoBehaviour
 
             }
         }
-        
+
     }
 
     public void SelectUpgrade()

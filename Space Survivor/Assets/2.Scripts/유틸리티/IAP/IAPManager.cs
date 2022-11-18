@@ -6,6 +6,7 @@ using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using TMPro;
 using Firebase.Analytics;
+using System;
 
 public class IAPManager : MonoBehaviour, IStoreListener
 {
@@ -28,6 +29,15 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
     public GameObject removeAdsButton;
 
+    [field: SerializeField] public bool initialized { get; private set; } = false;
+
+    public static IAPManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
 
     private void Start()
     {
@@ -46,6 +56,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
                 print("iap 동기화 시도중");
                 if (m_StoreController != null)
                 {
+                    initialized = true;
                     HadPurchased();
                     break;
                 }
@@ -66,7 +77,6 @@ public class IAPManager : MonoBehaviour, IStoreListener
     public void PurchageStarterPack()
     {
         m_StoreController.InitiatePurchase(starterPackId);
-
     }
 
     public void PurchageMegaPack()
@@ -289,19 +299,36 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
     private void UpdateUI2()
     {
-        var product = m_StoreController.products.WithID(removeAdsId);
-
-        if (!product.hasReceipt || UserDataManager.instance.currentUserData.RemoveAds)
+        try
         {
-            removeAdsButton.SetActive(false);
-            print("광고 제거를 구매하였기 때문에 버튼 비활성화");
+            var product = m_StoreController.products.WithID(removeAdsId);
+
+            print(UserDataManager.instance);
+            print(UserDataManager.instance.currentUserData);
+            print(UserDataManager.instance.currentUserData.RemoveAds);
+            print(product.hasReceipt);
+
+            if (product.hasReceipt || UserDataManager.instance.currentUserData.RemoveAds)
+            {
+                removeAdsButton.SetActive(false);
+                print("광고 제거를 구매하였기 때문에 버튼 비활성화");
+                BottomBanner.instance.DestoryBanner();
+            }
         }
+        catch (NullReferenceException e)
+        {
+            Debug.LogError(e + " \n " + e.HResult + " \n " + e.InnerException + " \n " + e.Message + " \n " + e.Source);
+        }
+
     }
 
-    //이미 구입한적 있는 상품인지 확인
-    private void HadPurchased()
+    /// <summary>
+    /// 광고 제거 기능이 있는 iap를 구매한적 있는지 반환
+    /// </summary>
+    public bool HadPurchased()
     {
         var product = m_StoreController.products.WithID(removeAdsId);
+        bool purchased = false;
 
         print(product.receipt);
 
@@ -312,6 +339,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
             UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
             print("광고제거를 구매한 적이 있는 유저");
+            purchased = true;
         }
 
         product = m_StoreController.products.WithID(starterPackId);
@@ -325,6 +353,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
             UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
             print("스타터팩을 구매한 적이 있는 유저");
+            purchased = true;
         }
 
         product = m_StoreController.products.WithID(megaPackId);
@@ -338,6 +367,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
             UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
             print("메가팩을 구매한 적이 있는 유저");
+            purchased = true;
         }
 
         product = m_StoreController.products.WithID(ultraPackId);
@@ -351,7 +381,13 @@ public class IAPManager : MonoBehaviour, IStoreListener
             UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
 
             print("울트라팩을 구매한 적이 있는 유저");
+            purchased = true;
         }
+
+        return purchased;
+
     }
+
+
 
 }

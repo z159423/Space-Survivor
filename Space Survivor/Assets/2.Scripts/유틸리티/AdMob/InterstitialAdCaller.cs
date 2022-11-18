@@ -131,13 +131,13 @@ public class InterstitialAdCaller : MonoBehaviour
     {
         FirebaseAnalytics.LogEvent("IrAdsCallEvent");
 
-        if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds)
+        if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             this.interstitial.Show();
         }
         else
         {
-            if (UserDataManager.instance.currentUserData.RemoveAds)
+            if (UserDataManager.instance.currentUserData.RemoveAds || IAPManager.instance.HadPurchased())
             {
                 print("광고제거를 구매하여 전면광고가 없습니다");
                 FirebaseAnalytics.LogEvent("IrAdsNoBecausePurchasedNoAdsEvent");

@@ -25,8 +25,33 @@ public class BottomBanner : MonoBehaviour
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(initStatus => { });
 
-        if (!UserDataManager.instance.currentUserData.RemoveAds)
-            this.RequestBanner();
+        StartCoroutine(requestBanner());
+
+        IEnumerator requestBanner()
+        {
+            while (true)
+            {
+                yield return null;
+
+                if (IAPManager.instance.initialized)
+                {
+                    if (!UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+                    {
+                        this.RequestBanner();
+
+                        print("NoAds가 없기 때문에 배너 광고 시작");
+                    }
+                    else
+                    {
+                        print("NoAds가 있기 때문에 배너광고가 호출되지 않습니다.");
+                    }
+
+                    break;
+                }
+            }
+        }
+
+
     }
 
     private void RequestBanner()

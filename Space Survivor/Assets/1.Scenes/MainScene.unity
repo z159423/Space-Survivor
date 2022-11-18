@@ -15984,7 +15984,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 2001
   m_Sprite: {fileID: 21300000, guid: 261e0d6687e1a7c45ad05c93976142a7, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -18489,7 +18489,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -43417,7 +43417,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -44893,7 +44893,8 @@ MonoBehaviour:
   starterPackText: {fileID: 132600100}
   megaPackText: {fileID: 513444293}
   ultraPackText: {fileID: 1827164617}
-  removeAdsButton: {fileID: 0}
+  removeAdsButton: {fileID: 1244073469}
+  <initialized>k__BackingField: 0
 --- !u!4 &1388042083
 Transform:
   m_ObjectHideFlags: 0
@@ -46342,7 +46343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1440320673
 Transform:
   m_ObjectHideFlags: 0
@@ -46399,9 +46400,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 2000
   m_Sprite: {fileID: 21300000, guid: 261e0d6687e1a7c45ad05c93976142a7, type: 3}
-  m_Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+  m_Color: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

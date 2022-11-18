@@ -156,6 +156,14 @@ MonoBehaviour:
     m_Localized: Arrow Turrect
     m_Metadata:
       m_Items: []
+  - m_Id: 56383384247894016
+    m_Localized: Interceptor Drone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56383402472144896
+    m_Localized: Spawns a drone that intercepts nearby enemies.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

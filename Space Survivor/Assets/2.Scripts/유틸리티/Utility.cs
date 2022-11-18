@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
+
 
 public class Utility : MonoBehaviour
 {
@@ -37,7 +39,7 @@ public class Utility : MonoBehaviour
 
     public static Transform GetRandomTargetInRadius(Transform origin, float radius)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(origin.position, radius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(origin.position, radius, 1 << LayerMask.NameToLayer("Enemy"));
 
         List<EnemyStat> enemyList = new List<EnemyStat>();
 
@@ -51,6 +53,32 @@ public class Utility : MonoBehaviour
 
         if (enemyList.Count > 0)
             return enemyList[UnityEngine.Random.Range(0, enemyList.Count)].transform;
+        else
+            return null;
+    }
+
+    public static Transform GetClosestTargetInRadius(Transform origin, float radius)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(origin.position, radius, 1 << LayerMask.NameToLayer("Enemy"));
+
+        List<EnemyStat> enemyList = new List<EnemyStat>();
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].TryGetComponent<EnemyStat>(out EnemyStat enemy))
+            {
+                enemyList.Add(enemy);
+            }
+        }
+
+        var enemyQuery = from enemy in enemyList
+                         orderby (Vector3.Distance(origin.position, enemy.transform.position))
+                         select enemy;
+
+        var reslut = enemyList.ToArray();
+
+        if (enemyList.Count > 0)
+            return reslut[0].transform;
         else
             return null;
     }

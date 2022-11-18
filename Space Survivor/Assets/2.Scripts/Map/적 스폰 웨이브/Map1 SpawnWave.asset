@@ -416,10 +416,10 @@ MonoBehaviour:
       enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
       count: 0
     - name: Attacker 1
-      StartWaveTime: 125
+      StartWaveTime: 181
       StopWaveTime: 300
       waveType: 0
-      summonCycleTime: 0.25
+      summonCycleTime: 0.3
       enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
       count: 0
     - name: Advanced Scout 1
@@ -560,6 +560,13 @@ MonoBehaviour:
     - name: Attacker 1
       StartWaveTime: 302
       StopWaveTime: 305
+      waveType: 0
+      summonCycleTime: 0.02
+      enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+      count: 0
+    - name: Attacker 1
+      StartWaveTime: 240
+      StopWaveTime: 243
       waveType: 0
       summonCycleTime: 0.02
       enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}

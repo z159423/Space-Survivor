@@ -75,6 +75,8 @@ public class UserDataManager : MonoBehaviour
 
             userData.playerHaveShip.Add(startShip.shipObjectData);
 
+            SaveUserData(userData);
+
             return userData;
         }
     }
@@ -139,6 +141,8 @@ public class UserDataManager : MonoBehaviour
         */
 
         //var data = LoadUserData();
+
+        print(value);
 
         currentUserData.crystal += value;
 

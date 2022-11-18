@@ -151,6 +151,14 @@ MonoBehaviour:
     m_Key: ReloadingDevice_D
     m_Metadata:
       m_Items: []
+  - m_Id: 56383384247894016
+    m_Key: Drone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56383402472144896
+    m_Key: Drone_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
