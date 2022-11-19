@@ -68,7 +68,7 @@ public class ShipUpgradeUI : MonoBehaviour
     {
         currentShipObject = shipObject;
 
-        ShipObjectData data = UserDataManager.instance.GetShipData_currentVersion(shipObject.shipCode);
+        ShipObjectData data = UserDataManager.instance.GetShipData_currentVersion(shipObject.shipObjectData.shipCode);
 
         shipImage.sprite = UserDataManager.instance.GetShipImage(data.shipCode); //data.shipImage;
 
@@ -90,7 +90,7 @@ public class ShipUpgradeUI : MonoBehaviour
         shopCostText.text =  data.shipCost.ToString();
 
 
-        if (UserDataManager.instance.currentUserData.crystal >= currentShipObject.shipCost)
+        if (UserDataManager.instance.currentUserData.crystal >= currentShipObject.shipObjectData.shipCost)
             shipUnlockButton.GetComponent<Button>().interactable = true;
         else
             shipUnlockButton.GetComponent<Button>().interactable = false;
@@ -140,7 +140,8 @@ public class ShipUpgradeUI : MonoBehaviour
                     break;
             }
 
-            SetUpgradeSlots(data.shipUpgradeModuleList[i], shipObject);
+            
+            SetUpgradeSlots(UserDataManager.instance.GetShipData(data.shipCode).GetCurrentModule(data.shipUpgradeModuleList[i].upgradeType), shipObject);
 
         }
     }
@@ -155,13 +156,13 @@ public class ShipUpgradeUI : MonoBehaviour
                 shipUpgradeSlot[i].shipObject = currentShip;
 
                 //최신버전의 업그레이드 정보 가져오기
-                var currentVersionShipData = UserDataManager.instance.GetShipData_currentVersion(currentShip.shipCode);
+                var currentVersionShipData = UserDataManager.instance.GetShipData_currentVersion(currentShip.shipObjectData.shipCode);
                 var currentVersionUpgradeModule = currentVersionShipData.GetModule(modules.upgradeType);
 
                 int upgradeCost = (modules.currentUpgrade + 1) * modules.upgradeCostForLevel;
                 shipUpgradeSlot[i].upgradeCostText.text = upgradeCost.ToString();
 
-                if (UserDataManager.instance.currentUserData.crystal >= upgradeCost && UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipCode)
+                if (UserDataManager.instance.currentUserData.crystal >= upgradeCost && UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipObjectData.shipCode)
                 && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < currentVersionUpgradeModule.maxUpgrade)
                 {
                     shipUpgradeSlot[i].upgradeButton.SetActive(true);
@@ -198,15 +199,17 @@ public class ShipUpgradeUI : MonoBehaviour
 
     public void BuyShip()
     {
-        if (currentShipObject.shipCost > UserDataManager.instance.currentUserData.crystal
-        || UserDataManager.instance.CheckPlayerHaveShip(currentShipObject.shipCode))
+        if (currentShipObject.shipObjectData.shipCost > UserDataManager.instance.currentUserData.crystal
+        || UserDataManager.instance.CheckPlayerHaveShip(currentShipObject.shipObjectData.shipCode))
             return;
 
-        UserDataManager.instance.currentUserData.playerHaveShip.Add(currentShipObject.shipObjectData);
+        var newShipData = Instantiate(currentShipObject);
+
+        UserDataManager.instance.currentUserData.playerHaveShip.Add(newShipData.shipObjectData);
 
         SelectShip(currentShipObject);
 
-        UserDataManager.instance.AddCrystalValue(-currentShipObject.shipCost);
+        UserDataManager.instance.AddCrystalValue(-currentShipObject.shipObjectData.shipCost);
 
         AudioManager.instance.GenerateAudioAndPlaySFX("upgrade3", transform.position);
     }

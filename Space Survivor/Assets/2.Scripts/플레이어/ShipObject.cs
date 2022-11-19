@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [CreateAssetMenu(fileName = "new Ship", menuName = "Scriptable Object/Ship Data", order = int.MaxValue)]
 public class ShipObject : ScriptableObject
@@ -57,6 +58,7 @@ public class ShipObjectData
     [Space]
 
     public List<WeaponObject> basicWeapon = new List<WeaponObject>();
+    public List<PassiveObject> basicPassive = new List<PassiveObject>();
     public List<ShipUpgradeModules> shipUpgradeModuleList = new List<ShipUpgradeModules>();
 
     public ShipUpgradeModules GetModule(ShipUpgradeType type)
@@ -68,7 +70,46 @@ public class ShipObjectData
         }
 
         return null;
+    }
 
+    /// <summary>
+    /// 이 함선의 해당 모듈을 업그레이드 하는 함수
+    /// </summary>
+    public void UpgradeShipData(ShipUpgradeType upgradeType, ShipObjectData lastestShipData)
+    {
+        var module = lastestShipData.GetCurrentModule(upgradeType);
+
+        switch (upgradeType)
+        {
+            case ShipUpgradeType.Health:
+                baseMaxHp.AddFloatModifier(module.statUpgradeValueForLevel);
+                break;
+
+            case ShipUpgradeType.Damage:
+                baseDamage.AddFloatModifier(module.statUpgradeValueForLevel);
+                break;
+
+            case ShipUpgradeType.Speed:
+                baseMoveSpeed.AddFloatModifier(module.statUpgradeValueForLevel);
+                baseRotationSpeed.AddFloatModifier(module.statUpgradeValueForLevel);
+                break;
+
+        }
+    }
+
+    /// <summary>
+    /// upgradeType에 맞는 모듈을 가져오는 함수
+    /// </summary>
+    public ShipUpgradeModules GetCurrentModule(ShipUpgradeType upgradeType)
+    {
+        for (int i = 0; i < shipUpgradeModuleList.Count; i++)
+        {
+            if (shipUpgradeModuleList[i].upgradeType == upgradeType)
+                return shipUpgradeModuleList[i];
+        }
+
+        Debug.LogError("해당되는 강화 모듈이 없습니다.");
+        return null;
     }
 }
 
@@ -84,26 +125,26 @@ public class ShipUpgradeModules
     public float statUpgradeValueForLevel = 0;
     public int upgradeCostForLevel = 100;
 
-    public void UpgradeThisModule(ShipObjectData data)
+    public void UpgradeThisModule(ShipObjectData currentData)
     {
         currentUpgrade++;
 
-        switch (upgradeType)
-        {
-            case ShipUpgradeType.Health:
-                data.baseMaxHp.AddFloatModifier(statUpgradeValueForLevel);
-                break;
+        // switch (upgradeType)
+        // {
+        //     case ShipUpgradeType.Health:
+        //         currentData.baseMaxHp.AddFloatModifier(statUpgradeValueForLevel);
+        //         break;
 
-            case ShipUpgradeType.Damage:
-                data.baseDamage.AddFloatModifier(statUpgradeValueForLevel);
-                break;
+        //     case ShipUpgradeType.Damage:
+        //         currentData.baseDamage.AddFloatModifier(statUpgradeValueForLevel);
+        //         break;
 
-            case ShipUpgradeType.Speed:
-                data.baseMoveSpeed.AddFloatModifier(statUpgradeValueForLevel);
-                data.baseRotationSpeed.AddFloatModifier(statUpgradeValueForLevel);
-                break;
+        //     case ShipUpgradeType.Speed:
+        //         currentData.baseMoveSpeed.AddFloatModifier(statUpgradeValueForLevel);
+        //         currentData.baseRotationSpeed.AddFloatModifier(statUpgradeValueForLevel);
+        //         break;
 
-        }
+        // }
     }
 
     public int GetUpgradeCost()

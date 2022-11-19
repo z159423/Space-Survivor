@@ -20,14 +20,20 @@ public class ShipUpgradeSlot : MonoBehaviour
 
     public void OnClickShipModuleUpgrade()
     {
-        ShipObjectData data = UserDataManager.instance.GetShipData_currentVersion(shipObject.shipCode);
+        //로컬 데이터
+        ShipObjectData data = UserDataManager.instance.GetShipData(shipObject.shipObjectData.shipCode);
+        //최신 버전의 데이터
+        ShipObjectData data_lastestVersion = UserDataManager.instance.GetShipData_currentVersion(shipObject.shipObjectData.shipCode);
 
         for (int i = 0; i < data.shipUpgradeModuleList.Count; i++)
         {
             if (data.shipUpgradeModuleList[i].upgradeType == upgradeType)
             {
+                //로컬에 있는 함선 업그레이드
+                data.UpgradeShipData(upgradeType, data_lastestVersion);
+
                 data.shipUpgradeModuleList[i].UpgradeThisModule(data);
-            
+
                 UserDataManager.instance.ChangeShipData(data);
 
                 UserDataManager.instance.AddCrystalValue(-data.shipUpgradeModuleList[i].GetUpgradeCost());

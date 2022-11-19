@@ -11,7 +11,7 @@ public class ShipList : ScriptableObject
     {
         for (int i = 0; i < shipList.Count; i++)
         {
-            if (shipList[i].shipCode == code)
+            if (shipList[i].shipObjectData.shipCode == code)
                 return shipList[i];
         }
 

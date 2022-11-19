@@ -6,7 +6,6 @@ using System;
 [System.Serializable]
 public class UserData
 {
-
     public int crystal = 0;
 
     public string testString = "";

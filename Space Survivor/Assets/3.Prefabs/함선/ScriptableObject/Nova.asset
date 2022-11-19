@@ -16,7 +16,7 @@ MonoBehaviour:
     shipType: 0
     shipCode: Nova
     shipBody: {fileID: 5518835431198223638, guid: a55735f6308bd5a4bb98c0a8246a8bd1, type: 3}
-    shipImage: {fileID: 21300000, guid: 3fb298ca8520dbd45b67875f3448e48f, type: 3}
+    shipImage: {fileID: -6047866749583793374, guid: b0047f570e043ac4aaf82d673879f6be, type: 3}
     baseMaxHp:
       baseValue: 1000
       minValue: 0
@@ -52,6 +52,7 @@ MonoBehaviour:
     shipCost: 0
     basicWeapon:
     - {fileID: 11400000, guid: 61d256b2bec31f64e870d297f687a041, type: 2}
+    basicPassive: []
     shipUpgradeModuleList:
     - upgradeType: 0
       currentUpgrade: 0
@@ -68,59 +69,3 @@ MonoBehaviour:
       maxUpgrade: 10
       statUpgradeValueForLevel: 0.25
       upgradeCostForLevel: 100
-  shipType: 0
-  shipCode: Nova
-  shipBody: {fileID: 5518835431198223638, guid: a55735f6308bd5a4bb98c0a8246a8bd1, type: 3}
-  shipImage: {fileID: -6047866749583793374, guid: b0047f570e043ac4aaf82d673879f6be, type: 3}
-  baseMaxHp:
-    baseValue: 1000
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  baseMoveSpeed:
-    baseValue: 6
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  baseRotationSpeed:
-    baseValue: 6
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  baseDamage:
-    baseValue: 5
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  shipCost: 0
-  basicWeapon:
-  - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
-  basicPassive: []
-  shipUpgradeModuleList:
-  - upgradeType: 0
-    currentUpgrade: 0
-    maxUpgrade: 10
-    statUpgradeValueForLevel: 100
-    upgradeCostForLevel: 100
-  - upgradeType: 1
-    currentUpgrade: 0
-    maxUpgrade: 10
-    statUpgradeValueForLevel: 1
-    upgradeCostForLevel: 100
-  - upgradeType: 2
-    currentUpgrade: 0
-    maxUpgrade: 10
-    statUpgradeValueForLevel: 0.25
-    upgradeCostForLevel: 100
