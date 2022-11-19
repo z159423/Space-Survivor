@@ -21,7 +21,7 @@ public class ShipUpgradeSelectSlot : MonoBehaviour
     {
         this.shipObject = shipObject;
 
-        shipImage.sprite = shipObject.shipImage;
+        shipImage.sprite = shipObject.shipObjectData.shipImage;
 
         shipUpgradeUI = ui;
     }

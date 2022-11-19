@@ -9,7 +9,7 @@ public class UserDataManager : MonoBehaviour
     private const string userDataName = "UserData";
 
     [SerializeField] private ShipObject startShip;
-    [SerializeField] private ShipList shipList;
+    [field: SerializeField] public ShipList shipList { get; private set;}
 
     public static UserDataManager instance;
 
@@ -182,6 +182,20 @@ public class UserDataManager : MonoBehaviour
         {
             if (currentUserData.playerHaveShip[i].shipCode.Equals(code))
                 return currentUserData.playerHaveShip[i];
+        }
+
+        return shipList.GetShipObject(code).shipObjectData;
+    }
+
+    /// <summary>
+    /// 최신버전의 함선 데이터 가져오기
+    /// </summary>
+    public ShipObjectData GetShipData_currentVersion(string code)
+    {
+        for (int i = 0; i < shipList.shipList.Count; i++)
+        {
+            if (shipList.shipList[i].shipCode.Equals(code))
+                return shipList.shipList[i].shipObjectData;
         }
 
         return shipList.GetShipObject(code).shipObjectData;

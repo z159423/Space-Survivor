@@ -23,7 +23,12 @@ MonoBehaviour:
       MinValue: 0
       maxValue: 0
       MaxValue: 1000
-      FloatModifiers: []
+      FloatModifiers:
+      - 100
+      - 100
+      - 100
+      - 100
+      - 100
       PercentModifiers: []
     baseMoveSpeed:
       baseValue: 7
@@ -55,17 +60,17 @@ MonoBehaviour:
     shipUpgradeModuleList:
     - upgradeType: 0
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 100
       upgradeCostForLevel: 100
     - upgradeType: 1
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 2
       upgradeCostForLevel: 100
     - upgradeType: 2
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 0.25
       upgradeCostForLevel: 100
   shipType: 0
@@ -118,7 +123,7 @@ MonoBehaviour:
   - upgradeType: 1
     currentUpgrade: 0
     maxUpgrade: 10
-    statUpgradeValueForLevel: 2
+    statUpgradeValueForLevel: 4
     upgradeCostForLevel: 100
   - upgradeType: 2
     currentUpgrade: 0

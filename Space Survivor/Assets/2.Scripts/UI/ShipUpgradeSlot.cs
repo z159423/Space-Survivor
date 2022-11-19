@@ -20,7 +20,7 @@ public class ShipUpgradeSlot : MonoBehaviour
 
     public void OnClickShipModuleUpgrade()
     {
-        ShipObjectData data = UserDataManager.instance.GetShipData(shipObject.shipCode);
+        ShipObjectData data = UserDataManager.instance.GetShipData_currentVersion(shipObject.shipCode);
 
         for (int i = 0; i < data.shipUpgradeModuleList.Count; i++)
         {

@@ -132,6 +132,8 @@ public class DroneAi : ProjectileLogic
 
             yield return new WaitForSeconds(fireLate);
             bulletReady = true;
+
+            AudioManager.instance.PlaySFX("laser1");
         }
     }
 

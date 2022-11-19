@@ -58,17 +58,17 @@ public class ResourceGenerator : MonoBehaviour
                         break;
                 }
 
-                StartCoroutine(force());
+                //StartCoroutine(force());
 
-                IEnumerator force()
-                {
+                //IEnumerator force()
+                //{
                     for (int z = 0; z < dropAmount; z++)
                     {
                         var success = resourcePool[i].DeQueue(position);
 
                         if (success != null)
                         {
-                            yield return null;
+                            //yield return null;
                             Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
 
                             var resource = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
@@ -79,7 +79,7 @@ public class ResourceGenerator : MonoBehaviour
                             generatedResource.Add(resource);
                         }
                     }
-                }
+                //}
 
                 break;
             }

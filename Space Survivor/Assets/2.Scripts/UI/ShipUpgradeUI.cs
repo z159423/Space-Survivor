@@ -68,7 +68,7 @@ public class ShipUpgradeUI : MonoBehaviour
     {
         currentShipObject = shipObject;
 
-        ShipObjectData data = UserDataManager.instance.GetShipData(shipObject.shipCode);
+        ShipObjectData data = UserDataManager.instance.GetShipData_currentVersion(shipObject.shipCode);
 
         shipImage.sprite = UserDataManager.instance.GetShipImage(data.shipCode); //data.shipImage;
 
@@ -121,20 +121,22 @@ public class ShipUpgradeUI : MonoBehaviour
 
     public void SetUpgradeModuleSlot(ShipObjectData data, ShipObject shipObject)
     {
+        var currentShipData = UserDataManager.instance.GetShipData_currentVersion(data.shipCode);
+
         for (int i = 0; i < data.shipUpgradeModuleList.Count; i++)
         {
             switch (data.shipUpgradeModuleList[i].upgradeType)
             {
                 case ShipUpgradeType.Health:
-                    hpStat.text = data.baseMaxHp.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
+                    hpStat.text = data.baseMaxHp.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * currentShipData.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
                     break;
 
                 case ShipUpgradeType.Damage:
-                    damageStat.text = data.baseDamage.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
+                    damageStat.text = data.baseDamage.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * currentShipData.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
                     break;
 
                 case ShipUpgradeType.Speed:
-                    speedStat.text = data.baseMoveSpeed.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * data.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
+                    speedStat.text = data.baseMoveSpeed.GetBaseValue().ToString() + "(+" + (data.shipUpgradeModuleList[i].currentUpgrade * currentShipData.shipUpgradeModuleList[i].statUpgradeValueForLevel).ToString() + ")";
                     break;
             }
 
@@ -152,11 +154,15 @@ public class ShipUpgradeUI : MonoBehaviour
             {
                 shipUpgradeSlot[i].shipObject = currentShip;
 
+                //최신버전의 업그레이드 정보 가져오기
+                var currentVersionShipData = UserDataManager.instance.GetShipData_currentVersion(currentShip.shipCode);
+                var currentVersionUpgradeModule = currentVersionShipData.GetModule(modules.upgradeType);
+
                 int upgradeCost = (modules.currentUpgrade + 1) * modules.upgradeCostForLevel;
                 shipUpgradeSlot[i].upgradeCostText.text = upgradeCost.ToString();
 
                 if (UserDataManager.instance.currentUserData.crystal >= upgradeCost && UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipCode)
-                && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < /*modules.maxUpgrade*/ 10)
+                && UserDataManager.instance.currentUserData.crystal >= upgradeCost && modules.currentUpgrade < currentVersionUpgradeModule.maxUpgrade)
                 {
                     shipUpgradeSlot[i].upgradeButton.SetActive(true);
                 }
@@ -165,7 +171,7 @@ public class ShipUpgradeUI : MonoBehaviour
                     shipUpgradeSlot[i].upgradeButton.SetActive(false);
                 }
 
-                if (modules.currentUpgrade < /*modules.maxUpgrade*/ 10)
+                if (modules.currentUpgrade < currentVersionUpgradeModule.maxUpgrade)
                 {
                     shipUpgradeSlot[i].costPanel.SetActive(true);
                     shipUpgradeSlot[i].maxPanel.SetActive(false);

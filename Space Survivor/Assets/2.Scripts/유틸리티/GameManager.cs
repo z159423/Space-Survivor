@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
     {
         //player.GetComponent<PlayerStat>().MakeThisShip(currentShip);
 
-        playerWeapon.playerShipData = UserDataManager.instance.GetShipData(currentShip.shipCode);
+        playerWeapon.playerShipData = UserDataManager.instance.GetShipData_currentVersion(currentShip.shipCode);
 
         if (playerWeapon.playerShipData == null)
             playerWeapon.playerShipData = shipList.GetShipObject(currentShip.shipCode).shipObjectData;

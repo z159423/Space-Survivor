@@ -7,28 +7,28 @@ public class ShipObject : ScriptableObject
 {
     public ShipObjectData shipObjectData = new ShipObjectData();
 
-    [Space]
-    public ShipType shipType;
-    public string shipCode;
-    public GameObject shipBody;
-    public Sprite shipImage;
+    // [Space]
+    // public ShipType shipType;
+    // public string shipCode;
+    // public GameObject shipBody;
+    // public Sprite shipImage;
 
-    [Space]
-    // 1000, 5, 3.5  700, 7, 4.5   1200 5.5 2.5
-    public Stat baseMaxHp = new Stat();
-    public Stat baseMoveSpeed = new Stat();
-    public Stat baseRotationSpeed = new Stat();
-    public Stat baseDamage = new Stat();
+    // [Space]
+    // // 1000, 5, 3.5  700, 7, 4.5   1200 5.5 2.5
+    // public Stat baseMaxHp = new Stat();
+    // public Stat baseMoveSpeed = new Stat();
+    // public Stat baseRotationSpeed = new Stat();
+    // public Stat baseDamage = new Stat();
 
-    [Space]
+    // [Space]
 
-    public int shipCost;
+    // public int shipCost;
 
-    [Space]
+    // [Space]
 
-    public List<WeaponObject> basicWeapon = new List<WeaponObject>();
-    public List<PassiveObject> basicPassive = new List<PassiveObject>();
-    public List<ShipUpgradeModules> shipUpgradeModuleList = new List<ShipUpgradeModules>();
+    // public List<WeaponObject> basicWeapon = new List<WeaponObject>();
+    // public List<PassiveObject> basicPassive = new List<PassiveObject>();
+    // public List<ShipUpgradeModules> shipUpgradeModuleList = new List<ShipUpgradeModules>();
 
 
 }
@@ -58,6 +58,18 @@ public class ShipObjectData
 
     public List<WeaponObject> basicWeapon = new List<WeaponObject>();
     public List<ShipUpgradeModules> shipUpgradeModuleList = new List<ShipUpgradeModules>();
+
+    public ShipUpgradeModules GetModule(ShipUpgradeType type)
+    {
+        for (int i = 0; i < shipUpgradeModuleList.Count; i++)
+        {
+            if (shipUpgradeModuleList[i].upgradeType == type)
+                return shipUpgradeModuleList[i];
+        }
+
+        return null;
+
+    }
 }
 
 [System.Serializable]

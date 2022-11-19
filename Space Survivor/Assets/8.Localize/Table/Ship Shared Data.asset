@@ -51,6 +51,10 @@ MonoBehaviour:
     m_Key: Ghost
     m_Metadata:
       m_Items: []
+  - m_Id: 31123119168323584
+    m_Key: Agamemnon
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

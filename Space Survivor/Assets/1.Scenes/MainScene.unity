@@ -13716,6 +13716,61 @@ MonoBehaviour:
     source: {fileID: 0}
     useOneAudioSource: 1
     useableAudioSource: {fileID: 0}
+  - name: laser1
+    clip: {fileID: 8300000, guid: f353e308599b1f74782373ae92c51189, type: 3}
+    volume: 0.45
+    pitch: 1
+    time: 0.1
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+    useOneAudioSource: 1
+    useableAudioSource: {fileID: 0}
+  - name: upgrade4
+    clip: {fileID: 8300000, guid: f353e308599b1f74782373ae92c51189, type: 3}
+    volume: 0.4
+    pitch: 1
+    time: 0.1
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+    useOneAudioSource: 1
+    useableAudioSource: {fileID: 0}
+  - name: coin1
+    clip: {fileID: 8300000, guid: 4c5179a97b8ada84683bc04b01eaf425, type: 3}
+    volume: 0.3
+    pitch: 1
+    time: 0
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+    useOneAudioSource: 1
+    useableAudioSource: {fileID: 0}
+  - name: steam1
+    clip: {fileID: 8300000, guid: 6867208e8c40e8b46a36675627cd846b, type: 3}
+    volume: 0.18
+    pitch: 1
+    time: 0.03
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+    useOneAudioSource: 1
+    useableAudioSource: {fileID: 0}
+  - name: flak1
+    clip: {fileID: 8300000, guid: f56450ed32f79c344b0491c973c1262a, type: 3}
+    volume: 0.3
+    pitch: 1
+    time: 0.6
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+    useOneAudioSource: 1
+    useableAudioSource: {fileID: 0}
   SFXPrefab: {fileID: 924167434}
   audioPool:
     objectPrefabs: {fileID: 357228789322597588, guid: 4c9b53a7ae0392d4181ba68801d83ae6, type: 3}
@@ -19661,7 +19716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startShip: {fileID: 11400000, guid: 5831d0117628ce647afb69e0e5be6d54, type: 2}
-  shipList: {fileID: 11400000, guid: 8da70659d36e72942b403afa0d5f7875, type: 2}
+  <shipList>k__BackingField: {fileID: 11400000, guid: 8da70659d36e72942b403afa0d5f7875, type: 2}
   currentUserData:
     crystal: 0
     testString: 
@@ -44624,8 +44679,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284045657
-  m_fontColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+    rgba: 4286940671
+  m_fontColor: {r: 1, g: 0.5226415, b: 0.5226415, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -46343,7 +46398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1440320673
 Transform:
   m_ObjectHideFlags: 0

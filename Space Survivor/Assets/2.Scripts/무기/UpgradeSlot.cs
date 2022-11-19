@@ -150,7 +150,7 @@ public class UpgradeSlot : MonoBehaviour
                         string str = stringOperation.Result;
 
                         if (i != 0)
-                            moduleDetail.text = moduleDetail.text + ",";
+                            str= str + ",";
 
                         moduleDetail.text = moduleDetail.text + str + "\n";
 

@@ -1224,6 +1224,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralB359950E83ED3452933D03DE078DA2727FCD0008
 IL2CPP_EXTERN_C String_t* _stringLiteralB3F14BF976EFD974E34846B742502C802FABAE9D;
 IL2CPP_EXTERN_C String_t* _stringLiteralB450CC09CB14D538F2D99E8BE2FF7BEF24D64DC7;
 IL2CPP_EXTERN_C String_t* _stringLiteralB954912D5B613A9BBB9E57567C01A78DAF496997;
+IL2CPP_EXTERN_C String_t* _stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB;
 IL2CPP_EXTERN_C String_t* _stringLiteralCAF8804297181FF007CA835529DD4477CFD94A70;
 IL2CPP_EXTERN_C String_t* _stringLiteralCC1848C99EA2803FD285DBA59EDEE0A1A17D2747;
 IL2CPP_EXTERN_C String_t* _stringLiteralCC7764F04F3E5A953EE6DE28E86D96981F465F6F;
@@ -18888,6 +18889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetLocalizedWeaponTextAsynceU3Ed__9_M
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral442BBF69B70D5C2B2E803D739E422D6179EB4826);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral66CD4FDFD44486E99AC345749D82F633655A7D8C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB2A5474EBEE848862BF4A05B38198F2FBF4FC27A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDF2B09DE9D9611B4691BAB8B9366B31460110EDC);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE8AC0DA0D8E609AFE8EEF3F44EA09CFDD7D7F296);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&upgradeModuleType_tC6B4996E354907939349CF5D55A5CE128B52F810_il2cpp_TypeInfo_var);
@@ -18929,7 +18931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetLocalizedWeaponTextAsynceU3Ed__9_M
 			}
 			case 3:
 			{
-				goto IL_0332;
+				goto IL_035a;
 			}
 		}
 	}
@@ -19143,14 +19145,14 @@ IL_017b:
 		// }
 		AsyncOperationHandle_1_t7889BE8F112C1D00DCCE5D1262E8202CD6520FB4* L_50 = (&__this->___U3CstringOperationU3E5__4_5);
 		il2cpp_codegen_initobj(L_50, sizeof(AsyncOperationHandle_1_t7889BE8F112C1D00DCCE5D1262E8202CD6520FB4));
-		goto IL_0386;
+		goto IL_03b1;
 	}
 
 IL_018c:
 	{
 		// for (int i = 0; i < weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules.Count; i++)
 		__this->___U3CiU3E5__5_6 = 0;
-		goto IL_0359;
+		goto IL_0384;
 	}
 
 IL_0198:
@@ -19301,7 +19303,7 @@ IL_02d6:
 		L_110 = AsyncOperationHandle_1_get_IsDone_m0376CDC810A9A8C8E77C7ACBA7E271ACBC35DFF2(L_109, AsyncOperationHandle_1_get_IsDone_m0376CDC810A9A8C8E77C7ACBA7E271ACBC35DFF2_RuntimeMethod_var);
 		if (!L_110)
 		{
-			goto IL_0322;
+			goto IL_034a;
 		}
 	}
 	{
@@ -19310,7 +19312,7 @@ IL_02d6:
 		L_112 = AsyncOperationHandle_1_get_Status_m414BEC4216D3673556050CCE8E95A86B8919CB9E(L_111, AsyncOperationHandle_1_get_Status_m414BEC4216D3673556050CCE8E95A86B8919CB9E_RuntimeMethod_var);
 		if ((!(((uint32_t)L_112) == ((uint32_t)1))))
 		{
-			goto IL_0322;
+			goto IL_034a;
 		}
 	}
 	{
@@ -19319,26 +19321,52 @@ IL_02d6:
 		String_t* L_114;
 		L_114 = AsyncOperationHandle_1_get_Result_m0BF70599CAD1AA6AD34DA21ADAE2EE90F3F54669(L_113, AsyncOperationHandle_1_get_Result_m0BF70599CAD1AA6AD34DA21ADAE2EE90F3F54669_RuntimeMethod_var);
 		V_12 = L_114;
-		// moduleDetail.text = moduleDetail.text + str + "\n";
-		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_115 = V_1;
-		NullCheck(L_115);
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_116 = L_115->___moduleDetail_5;
-		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_117 = V_1;
-		NullCheck(L_117);
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_118 = L_117->___moduleDetail_5;
-		NullCheck(L_118);
-		String_t* L_119;
-		L_119 = VirtualFuncInvoker0< String_t* >::Invoke(65 /* System.String TMPro.TMP_Text::get_text() */, L_118);
-		String_t* L_120 = V_12;
-		String_t* L_121;
-		L_121 = String_Concat_m9B13B47FCB3DF61144D9647DDA05F527377251B0(L_119, L_120, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD, NULL);
+		// if (i != 0)
+		int32_t L_115 = __this->___U3CiU3E5__5_6;
+		if (!L_115)
+		{
+			goto IL_0326;
+		}
+	}
+	{
+		// moduleDetail.text = moduleDetail.text + ",";
+		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_116 = V_1;
 		NullCheck(L_116);
-		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_116, L_121);
-		// break;
-		goto IL_033b;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_117 = L_116->___moduleDetail_5;
+		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_118 = V_1;
+		NullCheck(L_118);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_119 = L_118->___moduleDetail_5;
+		NullCheck(L_119);
+		String_t* L_120;
+		L_120 = VirtualFuncInvoker0< String_t* >::Invoke(65 /* System.String TMPro.TMP_Text::get_text() */, L_119);
+		String_t* L_121;
+		L_121 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_120, _stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB, NULL);
+		NullCheck(L_117);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_117, L_121);
 	}
 
-IL_0322:
+IL_0326:
+	{
+		// moduleDetail.text = moduleDetail.text + str + "\n";
+		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_122 = V_1;
+		NullCheck(L_122);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_123 = L_122->___moduleDetail_5;
+		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_124 = V_1;
+		NullCheck(L_124);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_125 = L_124->___moduleDetail_5;
+		NullCheck(L_125);
+		String_t* L_126;
+		L_126 = VirtualFuncInvoker0< String_t* >::Invoke(65 /* System.String TMPro.TMP_Text::get_text() */, L_125);
+		String_t* L_127 = V_12;
+		String_t* L_128;
+		L_128 = String_Concat_m9B13B47FCB3DF61144D9647DDA05F527377251B0(L_126, L_127, _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD, NULL);
+		NullCheck(L_123);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_123, L_128);
+		// break;
+		goto IL_0366;
+	}
+
+IL_034a:
 	{
 		// yield return null;
 		__this->___U3CU3E2__current_1 = NULL;
@@ -19347,51 +19375,51 @@ IL_0322:
 		return (bool)1;
 	}
 
-IL_0332:
+IL_035a:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 		// while (true)
 		goto IL_02d6;
 	}
 
-IL_033b:
+IL_0366:
 	{
 		// }
-		AsyncOperationHandle_1_t7889BE8F112C1D00DCCE5D1262E8202CD6520FB4* L_122 = (&__this->___U3CstringOperationU3E5__4_5);
-		il2cpp_codegen_initobj(L_122, sizeof(AsyncOperationHandle_1_t7889BE8F112C1D00DCCE5D1262E8202CD6520FB4));
+		AsyncOperationHandle_1_t7889BE8F112C1D00DCCE5D1262E8202CD6520FB4* L_129 = (&__this->___U3CstringOperationU3E5__4_5);
+		il2cpp_codegen_initobj(L_129, sizeof(AsyncOperationHandle_1_t7889BE8F112C1D00DCCE5D1262E8202CD6520FB4));
 		// for (int i = 0; i < weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules.Count; i++)
-		int32_t L_123 = __this->___U3CiU3E5__5_6;
-		V_13 = L_123;
-		int32_t L_124 = V_13;
-		__this->___U3CiU3E5__5_6 = ((int32_t)il2cpp_codegen_add(L_124, 1));
+		int32_t L_130 = __this->___U3CiU3E5__5_6;
+		V_13 = L_130;
+		int32_t L_131 = V_13;
+		__this->___U3CiU3E5__5_6 = ((int32_t)il2cpp_codegen_add(L_131, 1));
 	}
 
-IL_0359:
+IL_0384:
 	{
 		// for (int i = 0; i < weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules.Count; i++)
-		int32_t L_125 = __this->___U3CiU3E5__5_6;
-		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_126 = V_1;
-		NullCheck(L_126);
-		RuntimeObject* L_127 = L_126->___weaponObject_10;
-		NullCheck(L_127);
-		List_1_tCDF22C4DF661E459B34D265CD6D1B382E981B99F* L_128;
-		L_128 = InterfaceFuncInvoker0< List_1_tCDF22C4DF661E459B34D265CD6D1B382E981B99F* >::Invoke(5 /* System.Collections.Generic.List`1<UpgradeModuleList> IEquipment::GetUpgradeModuleLists() */, IEquipment_t4EF8A0F7D732CCAAFB8328CE8771697BE5F330FA_il2cpp_TypeInfo_var, L_127);
-		int32_t L_129 = __this->___U3CweaponLevelU3E5__3_4;
-		NullCheck(L_128);
-		UpgradeModuleList_tE49E7EA7FAC44C9DD7866D17D86FEC27A695F6B0* L_130;
-		L_130 = List_1_get_Item_mEEE91F2513CAA559FD025648BDE6788AA513EE26(L_128, ((int32_t)il2cpp_codegen_subtract(L_129, 1)), List_1_get_Item_mEEE91F2513CAA559FD025648BDE6788AA513EE26_RuntimeMethod_var);
-		NullCheck(L_130);
-		List_1_t9D9A75A60621F214CCAA4167E56FDAFB3E0C4138* L_131 = L_130->___upgradeModules_0;
-		NullCheck(L_131);
-		int32_t L_132;
-		L_132 = List_1_get_Count_m138B3F47BC977DE897A7237D97E85FB13109FCC8_inline(L_131, List_1_get_Count_m138B3F47BC977DE897A7237D97E85FB13109FCC8_RuntimeMethod_var);
-		if ((((int32_t)L_125) < ((int32_t)L_132)))
+		int32_t L_132 = __this->___U3CiU3E5__5_6;
+		UpgradeSlot_tB0966D7EDC8478EEC2E4E8B2CAC1430779336A9D* L_133 = V_1;
+		NullCheck(L_133);
+		RuntimeObject* L_134 = L_133->___weaponObject_10;
+		NullCheck(L_134);
+		List_1_tCDF22C4DF661E459B34D265CD6D1B382E981B99F* L_135;
+		L_135 = InterfaceFuncInvoker0< List_1_tCDF22C4DF661E459B34D265CD6D1B382E981B99F* >::Invoke(5 /* System.Collections.Generic.List`1<UpgradeModuleList> IEquipment::GetUpgradeModuleLists() */, IEquipment_t4EF8A0F7D732CCAAFB8328CE8771697BE5F330FA_il2cpp_TypeInfo_var, L_134);
+		int32_t L_136 = __this->___U3CweaponLevelU3E5__3_4;
+		NullCheck(L_135);
+		UpgradeModuleList_tE49E7EA7FAC44C9DD7866D17D86FEC27A695F6B0* L_137;
+		L_137 = List_1_get_Item_mEEE91F2513CAA559FD025648BDE6788AA513EE26(L_135, ((int32_t)il2cpp_codegen_subtract(L_136, 1)), List_1_get_Item_mEEE91F2513CAA559FD025648BDE6788AA513EE26_RuntimeMethod_var);
+		NullCheck(L_137);
+		List_1_t9D9A75A60621F214CCAA4167E56FDAFB3E0C4138* L_138 = L_137->___upgradeModules_0;
+		NullCheck(L_138);
+		int32_t L_139;
+		L_139 = List_1_get_Count_m138B3F47BC977DE897A7237D97E85FB13109FCC8_inline(L_138, List_1_get_Count_m138B3F47BC977DE897A7237D97E85FB13109FCC8_RuntimeMethod_var);
+		if ((((int32_t)L_132) < ((int32_t)L_139)))
 		{
 			goto IL_0198;
 		}
 	}
 
-IL_0386:
+IL_03b1:
 	{
 		// }
 		return (bool)0;
@@ -31786,7 +31814,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CinemachinShake_t9E6A197F6722341C
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IAPManager_get_initialized_m75932F6194CEB93B8F7B207C36E72E270AE49CBA_inline (IAPManager_tC7EB68C32A6F518C821BCD508AEF62759F0CC84D* __this, const RuntimeMethod* method) 
 {
 	{
-		// [field: SerializeField] public bool initialized {get; private set;} = false;
+		// [field: SerializeField] public bool initialized { get; private set; } = false;
 		bool L_0 = __this->___U3CinitializedU3Ek__BackingField_15;
 		return L_0;
 	}

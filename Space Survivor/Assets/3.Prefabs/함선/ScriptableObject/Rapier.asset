@@ -55,17 +55,17 @@ MonoBehaviour:
     shipUpgradeModuleList:
     - upgradeType: 0
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 100
       upgradeCostForLevel: 100
     - upgradeType: 1
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 2
       upgradeCostForLevel: 100
     - upgradeType: 2
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 0.25
       upgradeCostForLevel: 100
   shipType: 1
@@ -107,6 +107,7 @@ MonoBehaviour:
   shipCost: 200
   basicWeapon:
   - {fileID: 11400000, guid: 64fe913f9de41da4e9fc6af5fedddccc, type: 2}
+  basicPassive: []
   shipUpgradeModuleList:
   - upgradeType: 0
     currentUpgrade: 0
@@ -116,7 +117,7 @@ MonoBehaviour:
   - upgradeType: 1
     currentUpgrade: 0
     maxUpgrade: 10
-    statUpgradeValueForLevel: 2
+    statUpgradeValueForLevel: 3
     upgradeCostForLevel: 100
   - upgradeType: 2
     currentUpgrade: 0

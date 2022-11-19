@@ -305,12 +305,14 @@ public class PlayerStat : MonoBehaviour
     {
         for (int i = 0; i < ship.basicWeapon.Count; i++)
         {
-            playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
+            // playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
+            playerWeapon.UpgradeWeapon(ship.basicWeapon[i]);
         }
 
         for (int i = 0; i < ship.basicPassive.Count; i++)
         {
-            playerWeapon.AddNewWeapon(ship.basicPassive[i]);
+            //playerWeapon.AddNewWeapon(ship.basicPassive[i]);
+            playerWeapon.UpgradeWeapon(ship.basicPassive[i]);
         }
     }
 
