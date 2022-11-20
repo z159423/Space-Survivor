@@ -13553,7 +13553,7 @@ MonoBehaviour:
     useableAudioSource: {fileID: 0}
   - name: click1
     clip: {fileID: 8300000, guid: 8b02e6d249da9184691660ba6dc2aa68, type: 3}
-    volume: 0.1
+    volume: 0.07
     pitch: 1
     time: 0.08
     loop: 0
@@ -13665,7 +13665,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 5693db7babd97a54f85b9b2017e1dcde, type: 3}
     volume: 0.18
     pitch: 1
-    time: 0.1
+    time: 0.11
     loop: 0
     bgm: 0
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
@@ -18544,7 +18544,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.74404764, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -43473,7 +43473,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.74404764, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -64615,7 +64615,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 1
+  editmode: 0
   revivedThisGame: 0
   crystalDouble: 1
   crystalDoubleButton: {fileID: 1577849806}

@@ -19,14 +19,17 @@ public class Projectile : MonoBehaviour
     private void startFind()
     {
         rigid = GetComponent<Rigidbody2D>();
-
-
     }
 
     private void OnEnable()
     {
         if (trail != null)
+        {
+            trail.Clear();
             trail.enabled = true;
+            trail.emitting = true;
+        }
+
     }
 
     public void Fire(Transform target, float fireForce)
@@ -73,7 +76,6 @@ public class Projectile : MonoBehaviour
             //ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
             EnQueueThisItem();
             VFXGenerator.instance.GenerateVFX(deleteParticleType, transform.position);
-
         }
     }
 
@@ -84,8 +86,9 @@ public class Projectile : MonoBehaviour
 
         if (trail != null)
         {
-            trail.enabled = false;
             trail.Clear();
+            trail.enabled = false;
+            trail.emitting = false;
         }
     }
 }

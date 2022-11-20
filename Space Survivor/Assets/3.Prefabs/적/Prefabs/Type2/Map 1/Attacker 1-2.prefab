@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  maxHp: 400
+  maxHp: 250
   damage:
     baseValue: 20
     minValue: 0
@@ -160,7 +160,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 2
   m_AngularDrag: 0
   m_GravityScale: 0
