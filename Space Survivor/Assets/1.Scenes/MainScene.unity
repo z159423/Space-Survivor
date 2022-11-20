@@ -26674,6 +26674,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   invinsible: 0
+  notEnableExp: 0
   enteredEnemyList: []
 --- !u!4 &923141303
 Transform:

@@ -71,6 +71,7 @@ public class PlayerStat : MonoBehaviour
     [Space]
 
     [SerializeField] public bool invinsible = false;
+    [SerializeField] public bool notEnableExp = false;
 
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
 
@@ -161,7 +162,7 @@ public class PlayerStat : MonoBehaviour
 
     public void GetExp(int exp)
     {
-        if (whileLevelUp || playerDie)
+        if (whileLevelUp || playerDie || notEnableExp)
             return;
 
         //print(getMineralBouse.GetFinalStatValue());
