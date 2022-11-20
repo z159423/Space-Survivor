@@ -51,79 +51,23 @@ MonoBehaviour:
       PercentModifiers: []
     shipCost: 2500
     basicWeapon:
-    - {fileID: 11400000, guid: 539acc73c53b2274eb2338d67cdbbf38, type: 2}
+    - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
+    - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
+    - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
+    basicPassive: []
     shipUpgradeModuleList:
     - upgradeType: 0
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 150
       upgradeCostForLevel: 100
     - upgradeType: 1
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 5
       upgradeCostForLevel: 100
     - upgradeType: 2
       currentUpgrade: 0
-      maxUpgrade: 5
+      maxUpgrade: 10
       statUpgradeValueForLevel: 0.25
       upgradeCostForLevel: 100
-  shipType: 3
-  shipCode: Agamemnon
-  shipBody: {fileID: 5518835431198223638, guid: 72dba145c31fc5246a2987e3d0b60bbc, type: 3}
-  shipImage: {fileID: -4700715630567420093, guid: b0047f570e043ac4aaf82d673879f6be, type: 3}
-  baseMaxHp:
-    baseValue: 2000
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  baseMoveSpeed:
-    baseValue: 5
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  baseRotationSpeed:
-    baseValue: 4
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  baseDamage:
-    baseValue: 12
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  shipCost: 2500
-  basicWeapon:
-  - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
-  - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
-  - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
-  - {fileID: 11400000, guid: 61d256b2bec31f64e870d297f687a041, type: 2}
-  basicPassive: []
-  shipUpgradeModuleList:
-  - upgradeType: 0
-    currentUpgrade: 0
-    maxUpgrade: 10
-    statUpgradeValueForLevel: 150
-    upgradeCostForLevel: 100
-  - upgradeType: 1
-    currentUpgrade: 0
-    maxUpgrade: 10
-    statUpgradeValueForLevel: 3
-    upgradeCostForLevel: 100
-  - upgradeType: 2
-    currentUpgrade: 0
-    maxUpgrade: 10
-    statUpgradeValueForLevel: 0.25
-    upgradeCostForLevel: 100

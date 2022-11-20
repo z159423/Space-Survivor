@@ -284,7 +284,7 @@ public class PlayerStat : MonoBehaviour
 
     public void MakeThisShip(ShipObject ship, Quaternion bodyrotation)
     {
-        currentShipBody = Instantiate(ship.shipBody, transform.position, bodyrotation, transform);
+        currentShipBody = Instantiate(ship.shipObjectData.shipBody, transform.position, bodyrotation, transform);
 
         playerMovement.SetPlayerBody(currentShipBody.transform);
 
@@ -301,18 +301,18 @@ public class PlayerStat : MonoBehaviour
         GetShipStat(ship);
     }
 
-    public void AddBasicEquipment(ShipObject ship)
+    public void AddBasicEquipment(ShipObjectData shipData)
     {
-        for (int i = 0; i < ship.basicWeapon.Count; i++)
+        for (int i = 0; i < shipData.basicWeapon.Count; i++)
         {
             // playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
-            playerWeapon.UpgradeWeapon(ship.basicWeapon[i]);
+            playerWeapon.UpgradeWeapon(shipData.basicWeapon[i]);
         }
 
-        for (int i = 0; i < ship.basicPassive.Count; i++)
+        for (int i = 0; i < shipData.basicPassive.Count; i++)
         {
             //playerWeapon.AddNewWeapon(ship.basicPassive[i]);
-            playerWeapon.UpgradeWeapon(ship.basicPassive[i]);
+            playerWeapon.UpgradeWeapon(shipData.basicPassive[i]);
         }
     }
 
@@ -339,9 +339,9 @@ public class PlayerStat : MonoBehaviour
 
     public void GetShipStat(ShipObject shipObject)              //������� �Լ� ������ �÷��̾��� �Լ� ���ȿ� �ٿ��ֱ�
     {
-        maxHp = shipObject.baseMaxHp.GetFinalStatValueAsInt();
-        moveSpeed.SetBaseValue(shipObject.baseMoveSpeed.GetFinalStatValue());
-        rotationSpeed.SetBaseValue(shipObject.baseRotationSpeed.GetFinalStatValue());
+        maxHp = shipObject.shipObjectData.baseMaxHp.GetFinalStatValueAsInt();
+        moveSpeed.SetBaseValue(shipObject.shipObjectData.baseMoveSpeed.GetFinalStatValue());
+        rotationSpeed.SetBaseValue(shipObject.shipObjectData.baseRotationSpeed.GetFinalStatValue());
     }
 
     public float GetMoveSpeed()

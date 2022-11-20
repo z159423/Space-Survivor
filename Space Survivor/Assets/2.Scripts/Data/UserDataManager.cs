@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using TMPro;
+using System;
 
 public class UserDataManager : MonoBehaviour
 {
     private const string userDataName = "UserData";
 
     [SerializeField] private ShipObject startShip;
-    [field: SerializeField] public ShipList shipList { get; private set;}
+    [field: SerializeField] public ShipList shipList { get; private set; }
 
     public static UserDataManager instance;
 
@@ -73,7 +74,9 @@ public class UserDataManager : MonoBehaviour
             print("UserData�� ��� ���ο� ������ �����մϴ�. " + filePath);
             UserData userData = new UserData();
 
-            userData.playerHaveShip.Add(startShip.shipObjectData);
+            var newShipData = Instantiate(startShip);
+
+            userData.playerHaveShip.Add(newShipData.shipObjectData);
 
             SaveUserData(userData);
 
@@ -184,6 +187,7 @@ public class UserDataManager : MonoBehaviour
                 return currentUserData.playerHaveShip[i];
         }
 
+        Debug.Log("해당 코드의 함선이 로컬데이터에 없습니다.");
         return shipList.GetShipObject(code).shipObjectData;
     }
 
@@ -194,10 +198,11 @@ public class UserDataManager : MonoBehaviour
     {
         for (int i = 0; i < shipList.shipList.Count; i++)
         {
-            if (shipList.shipList[i].shipCode.Equals(code))
+            if (shipList.shipList[i].shipObjectData.shipCode.Equals(code))
                 return shipList.shipList[i].shipObjectData;
         }
 
+        Debug.Log("해당 코드의 함선이 최신버전에 없습니다.");
         return shipList.GetShipObject(code).shipObjectData;
     }
 
@@ -216,9 +221,9 @@ public class UserDataManager : MonoBehaviour
     {
         for (int i = 0; i < shipList.shipList.Count; i++)
         {
-            if (shipList.shipList[i].shipCode == shipCode)
+            if (shipList.shipList[i].shipObjectData.shipCode == shipCode)
             {
-                return shipList.shipList[i].shipImage;
+                return shipList.shipList[i].shipObjectData.shipImage;
             }
         }
 
@@ -264,4 +269,6 @@ public class UserDataManager : MonoBehaviour
 
         SaveCurrentDate();
     }
+
 }
+
