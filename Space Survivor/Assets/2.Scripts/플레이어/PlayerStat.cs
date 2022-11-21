@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
+using Firebase.Analytics;
 
 
 public class PlayerStat : MonoBehaviour
@@ -140,6 +141,13 @@ public class PlayerStat : MonoBehaviour
         Utility.Explode(transform.position, 0, 20, 10, VFXType.AtomicExplosion, cameraShakeInstance);
 
         AudioManager.instance.GenerateAudioAndPlaySFX("explosion1", transform.position);
+
+        if (GameManager.instance.revivedThisGame)
+        {
+            FirebaseAnalytics.LogEvent("PlayerDeathTime_Revived", "IntParam", GameManager.instance.getCurrentTime());
+        }
+        else
+            FirebaseAnalytics.LogEvent("PlayerDeathTime", "IntParam", GameManager.instance.getCurrentTime());
     }
 
     public void GetCurrentCrystal()

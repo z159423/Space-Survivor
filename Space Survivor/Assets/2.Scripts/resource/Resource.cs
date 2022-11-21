@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ public class Resource : MonoBehaviour
     private float currentPullForce = -1f;
     private Vector2 dirToPlayer;
     private Transform player;
+
+    private Coroutine pullCoruotine = null;
 
     private bool isTriggered = false;
 
@@ -71,6 +74,16 @@ public class Resource : MonoBehaviour
         isTriggered = true;
 
         this.player = player;
+
+        IEnumerator pullStart()
+        {
+            WaitForSeconds sec = new WaitForSeconds(Random.Range(0.08f, 0.12f));
+            while(true)
+            {
+                
+                yield return sec;
+            }
+        }
     }
 
     private void playerGetResource(Transform player)
