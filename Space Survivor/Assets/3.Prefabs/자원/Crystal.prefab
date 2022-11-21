@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8808982301935757557}
   - component: {fileID: 63325820357452186}
   - component: {fileID: 534320061789789083}
-  - component: {fileID: 6984086923619206011}
   - component: {fileID: 5143510282866113078}
   m_Layer: 6
   m_Name: Crystal
@@ -52,7 +51,8 @@ MonoBehaviour:
   crystalValue: 1
   startPullForce: -5
   pullForceIncrease: 20
-  rigid: {fileID: 6984086923619206011}
+  rigid: {fileID: 0}
+  coll: {fileID: 5143510282866113078}
 --- !u!212 &534320061789789083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dce6505a36071bc41a3cfafe4b9e0149, type: 2}
+  - {fileID: 2100000, guid: 45bce821a4ccd3d4a888e53dbfc31b6b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,27 +105,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6984086923619206011
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5607207885873677397}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 3
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &5143510282866113078
 CircleCollider2D:
   m_ObjectHideFlags: 0

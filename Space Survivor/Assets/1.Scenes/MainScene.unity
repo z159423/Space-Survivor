@@ -13761,10 +13761,10 @@ MonoBehaviour:
     useOneAudioSource: 1
     useableAudioSource: {fileID: 0}
   - name: flak1
-    clip: {fileID: 8300000, guid: f56450ed32f79c344b0491c973c1262a, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 5f78bce894fbc974190509c980716597, type: 3}
+    volume: 0.5
     pitch: 1
-    time: 0.6
+    time: 0
     loop: 0
     bgm: 0
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}

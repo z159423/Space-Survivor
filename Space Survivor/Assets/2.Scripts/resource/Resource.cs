@@ -18,6 +18,8 @@ public class Resource : MonoBehaviour
     [SerializeField] private float pullForceIncrease = 1f;
     [Space]
     [SerializeField] private Rigidbody2D rigid;
+    [SerializeField] private Collider2D coll;
+    
 
     private float currentPullForce = -1f;
     private Vector2 dirToPlayer;
@@ -29,7 +31,7 @@ public class Resource : MonoBehaviour
 
     private void Update()
     {
-        if(isTriggered && player != null )
+        if (isTriggered && player != null)
         {
             currentPullForce += Time.deltaTime * pullForceIncrease;
 
@@ -43,14 +45,17 @@ public class Resource : MonoBehaviour
                 playerGetResource(player);
         }
 
-        if(GameManager.instance.gameclear)
+        if (GameManager.instance.gameclear)
         {
             StartPull(GameManager.instance.playerTrans);
         }
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         currentPullForce = startPullForce;
+
+        coll.enabled = true;
     }
 
     private void OnDisable()
@@ -59,11 +64,14 @@ public class Resource : MonoBehaviour
         currentPullForce = startPullForce;
         dirToPlayer = Vector2.zero;
         isTriggered = false;
+
+        //if (pullCoruotine != null)
+            //StopCoroutine(pullCoruotine);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.transform.CompareTag("Player") && !isTriggered)
+        if (collision.transform.CompareTag("Player") && !isTriggered)
         {
             StartPull(collision.transform);
         }
@@ -75,12 +83,23 @@ public class Resource : MonoBehaviour
 
         this.player = player;
 
+        //pullCoruotine = StartCoroutine(pullStart());
+
+        coll.enabled = false;
+
         IEnumerator pullStart()
         {
             WaitForSeconds sec = new WaitForSeconds(Random.Range(0.08f, 0.12f));
-            while(true)
+            while (true)
             {
-                
+                currentPullForce += Time.deltaTime * pullForceIncrease;
+
+                dirToPlayer = Utility.GetDirection(transform.position, player.position);
+
+                //rigid.velocity += dirToPlayer * Time.deltaTime * currentPullForce;
+
+                transform.Translate(dirToPlayer * Time.deltaTime * currentPullForce);
+
                 yield return sec;
             }
         }
