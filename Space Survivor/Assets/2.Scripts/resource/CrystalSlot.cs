@@ -16,6 +16,7 @@ public class CrystalSlot : MonoBehaviour
     public void SelectThis()
     {
         LevelUpManager.instance.playerStat.GetCrystal(crystalValue);
+        LevelUpManager.instance.playerStat.AfterUpgrade();
         LevelUpManager.instance.EndUpgrade();
     }
 }

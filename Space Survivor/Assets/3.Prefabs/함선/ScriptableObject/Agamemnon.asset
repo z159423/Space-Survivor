@@ -18,7 +18,7 @@ MonoBehaviour:
     shipBody: {fileID: 5518835431198223638, guid: 72dba145c31fc5246a2987e3d0b60bbc, type: 3}
     shipImage: {fileID: -4700715630567420093, guid: b0047f570e043ac4aaf82d673879f6be, type: 3}
     baseMaxHp:
-      baseValue: 2000
+      baseValue: 2500
       minValue: 0
       MinValue: 0
       maxValue: 0

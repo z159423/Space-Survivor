@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  maxHp: 250
+  maxHp: 300
   damage:
     baseValue: 20
     minValue: 0
