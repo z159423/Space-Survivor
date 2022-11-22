@@ -49,11 +49,11 @@ public class UpgradeSlot : MonoBehaviour
         //sequence.Append(expectNode.GetComponent<Image>().DOFade(0.0f, 1.5f)).SetUpdate(true);
         //sequence.Play();
 
-        //»õ·Î¿î ¹«±â¶ó¸é "»õ·Î¿î ¹«±â!" °¡ Ç¥½ÃµÇ°í ¼ÒÁöÁßÀÎ ¹«±â¸é "ÇöÀç·¹º§ / ÃÖ´ë·¡º§" ÀÌ Ãâ·ÂµÇµµ·Ï
+        //ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ "ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½!" ï¿½ï¿½ Ç¥ï¿½ÃµÇ°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ "ï¿½ï¿½ï¿½ç·¹ï¿½ï¿½ / ï¿½Ö´ë·¡ï¿½ï¿½" ï¿½ï¿½ ï¿½ï¿½ÂµÇµï¿½ï¿½ï¿½
         /*
         if(LevelUpManager.instance.RequestPlayerWeapon(weaponObject.type) == null)
         {
-            moduleLevel.text = "»õ·Î¿î ¹«±â!";
+            moduleLevel.text = "ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½!";
         }
         else
         {
@@ -77,7 +77,7 @@ public class UpgradeSlot : MonoBehaviour
 
 
 
-        //¹«±â ÀÌ¹ÌÁö·Î º¯°æ
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         weaponImage.sprite = weaponObject.GetEquipmentIamge();
 
 
@@ -104,7 +104,7 @@ public class UpgradeSlot : MonoBehaviour
 
         int weaponLevel = LevelUpManager.instance.RequestWeaponLevel(weaponObject.GetEquipmentType());
 
-        //ÇöÀç ¼ÒÁöÁßÀÎ ¹«±â ·¡¹ëÀÌ 0ÀÏ½Ã ¾ÆÀÌÅÛÀÇ ¼³¸íÀÌ Ãâ·ÂµÇµµ·Ï
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÂµÇµï¿½ï¿½ï¿½
         if (weaponLevel == 0)
         {
             var keyName = weaponObject.GetEquipmentType().ToString() + "_D";
@@ -126,7 +126,7 @@ public class UpgradeSlot : MonoBehaviour
                 yield return null;
             }
         }
-        else  //¾ÆÀÌÅÛÀÇ ·¹º§ÀÌ 1 ÀÌ»óÀÌ¸é ´ÙÀ½ ¾÷±×·¹ÀÌµå ³ëµåµéÀÌ Ãâ·ÂµÇµµ·Ï
+        else  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1 ï¿½Ì»ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½×·ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÂµÇµï¿½ï¿½ï¿½
         {
             for (int i = 0; i < weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules.Count; i++)
             {
@@ -149,8 +149,8 @@ public class UpgradeSlot : MonoBehaviour
                     {
                         string str = stringOperation.Result;
 
-                        if (i != 0)
-                            str= str + ",";
+                        if (i < weaponObject.GetUpgradeModuleLists()[weaponLevel - 1].upgradeModules.Count - 1)
+                            str = str + ",";
 
                         moduleDetail.text = moduleDetail.text + str + "\n";
 
