@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Key: Upgrade
     m_Metadata:
       m_Items: []
+  - m_Id: 63044189715906560
+    m_Key: FreeCrystal
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

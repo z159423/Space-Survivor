@@ -31,7 +31,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     private RewardedAd reviveRewardedAd;
     [SerializeField] private Button reviveButton;
     private RewardedAd crystalDoubleRewardAd;
-    [SerializeField] private Button crystalDoubleButton;
+    [SerializeField] private Button[] crystalDoubleButtons;
+    [field: SerializeField] public bool useCrystalDoubleThisStage {get; set;} = false;
 
     [SerializeField] private GameObject touchProjectPanel;
     [SerializeField] private PlayerStat playerStat;
@@ -473,6 +474,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
             FirebaseAnalytics.LogEvent("RvAdsComplete_DoubleCrystal");
+
+
         }
     }
 
@@ -583,6 +586,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         reviveButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
         GameManager.instance.revivedThisGame = true;
+        GameManager.instance.gameStart = true;
     }
 
     //함선 체험
@@ -601,12 +605,13 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //크리스탈 두배
     IEnumerator crystalDouble()
     {
-
         yield return null;
-        //crystalDoubleButton.onClick.Invoke();
-        GameManager.instance.crystalDouble = true;
-        crystalDoubleButton.gameObject.SetActive(false);
+
+        HideDoubleCrystalBtn();
+
         playerStat.GetCrystalDouble();
+
+        useCrystalDoubleThisStage = true;
     }
 
     //무료 크리스탈
@@ -651,6 +656,24 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         return shipTrialWaitTime - Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
     }
 
+    private void HideDoubleCrystalBtn()
+    {
+        foreach (Button btn in crystalDoubleButtons)
+        {
+            btn.gameObject.SetActive(false);
+        }
+    }
+
+    public void ShowDoubleCrystalBtn()
+    {
+        if (useCrystalDoubleThisStage)
+            return;
+
+        foreach (Button btn in crystalDoubleButtons)
+        {
+            btn.gameObject.SetActive(true);
+        }
+    }
 }
 
 

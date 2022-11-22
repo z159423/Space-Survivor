@@ -78,6 +78,10 @@ MonoBehaviour:
     m_Localized: UPGRADE
     m_Metadata:
       m_Items: []
+  - m_Id: 63044189715906560
+    m_Localized: FREE CRYSTAL
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -58,6 +58,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private TextMeshProUGUI crystalText;
     [SerializeField] private Transform weaponSlotParent;
     [SerializeField] private Transform passiveSlotParent;
+    [SerializeField] private CircleCollider2D resourcePullCollider;
 
     [Space]
     [SerializeField] GameObject dieVFX;
@@ -169,7 +170,7 @@ public class PlayerStat : MonoBehaviour
 
     public void GetExp(int exp)
     {
-        if (whileLevelUp || playerDie)
+        if (whileLevelUp || playerDie || !GameManager.instance.gameStart)
             return;
 
         //print(getMineralBouse.GetFinalStatValue());
@@ -206,6 +207,9 @@ public class PlayerStat : MonoBehaviour
 
     private void LevelUp()
     {
+        if (!GameManager.instance.gameStart)
+            return;
+
         whileLevelUp = true;
         playerLevel++;
 
@@ -280,6 +284,8 @@ public class PlayerStat : MonoBehaviour
             StopCoroutine(shieldReloadCoroutine);
         if (shieldImage != null)
             shieldImage.SetActive(false);
+
+        resourcePullCollider.radius = 40f;
     }
 
     public void PlayGame()

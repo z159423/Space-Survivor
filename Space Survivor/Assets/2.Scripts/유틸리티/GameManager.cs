@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent PlayGameEvent;
 
     public bool gameStart = false;
-    [field: SerializeField] public bool gameclear {get; private set;} = false;
+    [field: SerializeField] public bool gameclear { get; private set; } = false;
     public bool inMainMenu = true;
     public bool editmode = false;
 
@@ -62,9 +62,6 @@ public class GameManager : MonoBehaviour
     private Coroutine timerCoroutine;
     public bool revivedThisGame = false;
     private float revivedTimer = 1f;
-
-    public bool crystalDouble = false;
-    [SerializeField] private GameObject crystalDoubleButton; 
 
     public static GameManager instance;
 
@@ -76,14 +73,14 @@ public class GameManager : MonoBehaviour
         //console.SetActive(true);
         //inGameDebug.SetActive(true);
 #endif
-    
-    if(editmode)
-    {
-        for(int i = 0 ; i < editmodeUI.Length; i++)
+
+        if (editmode)
         {
-            editmodeUI[i].SetActive(true);
+            for (int i = 0; i < editmodeUI.Length; i++)
+            {
+                editmodeUI[i].SetActive(true);
+            }
         }
-    }
     }
 
     private void Start()
@@ -127,8 +124,6 @@ public class GameManager : MonoBehaviour
 
         EnemyGenerator.instance.bossFighting = false;
         revivedThisGame = false;
-        crystalDouble = false;
-        crystalDoubleButton.SetActive(true);
 
         playerStat.invinsible = false;
 
@@ -151,6 +146,9 @@ public class GameManager : MonoBehaviour
         EnemyGenerator.instance.deleteBossWall();
 
         InterstitialAdCaller.instance.CallIrAds();
+
+        RewardedInterstitialAdCaller.instance.useCrystalDoubleThisStage = false;
+        RewardedInterstitialAdCaller.instance.ShowDoubleCrystalBtn();
     }
 
     public void GoMainMenu()
@@ -184,7 +182,9 @@ public class GameManager : MonoBehaviour
 
         AudioManager.instance.FindBGM("menu2");
 
-        
+        RewardedInterstitialAdCaller.instance.useCrystalDoubleThisStage = false;
+        RewardedInterstitialAdCaller.instance.ShowDoubleCrystalBtn();
+
     }
 
     public void Resurrection()
@@ -250,6 +250,9 @@ public class GameManager : MonoBehaviour
         UserDataManager.instance.StageClearSaveData(stageSelect.currentStageNumber);
 
         gameclear = true;
+
+        RewardedInterstitialAdCaller.instance.useCrystalDoubleThisStage = false;
+        RewardedInterstitialAdCaller.instance.ShowDoubleCrystalBtn();
     }
 
     public void AddKillCount()

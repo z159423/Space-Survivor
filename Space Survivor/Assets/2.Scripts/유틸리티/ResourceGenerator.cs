@@ -62,23 +62,36 @@ public class ResourceGenerator : MonoBehaviour
 
                 //IEnumerator force()
                 //{
-                    for (int z = 0; z < dropAmount; z++)
+                for (int z = 0; z < dropAmount; z++)
+                {
+                    var resource = resourcePool[i].DeQueue(position);
+
+                    Vector3 randomPosition = new Vector3(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f), 0);
+
+                    resource.transform.position = resource.transform.position + randomPosition;
+
+                    generatedResource.Add(resource);
+
+                    //자원에 움직임 주는 경우
+                    if (dropTable.maxDropForce > 0)
                     {
-                        var success = resourcePool[i].DeQueue(position);
+                        var rigid = resource.AddComponent<Rigidbody2D>();
 
-                        if (success != null)
+                        rigid.drag = 3;
+
+                        if (dropTable.maxDropForce > 0)
+                            rigid.AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(0, dropTable.maxDropForce));
+
+                        StartCoroutine(deleteRigid());
+
+                        IEnumerator deleteRigid()
                         {
-                            //yield return null;
-                            Vector2 randomPosition = new Vector2(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
+                            yield return new WaitForSeconds(5f);
 
-                            var resource = Instantiate(success, position + randomPosition, Quaternion.identity, resourcePool[i].parent);
-
-                            if (dropTable.maxDropForce > 0)
-                                resource.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(0, dropTable.maxDropForce));
-
-                            generatedResource.Add(resource);
+                            Destroy(rigid);
                         }
                     }
+                }
                 //}
 
                 break;
@@ -116,17 +129,18 @@ public class ResourcePool
     {
         if (resourceStack.Count > 0)
         {
-            var enemy = resourceStack.Pop();
+            var resource = resourceStack.Pop();
 
-            enemy.transform.position = position;
-            enemy.SetActive(true);
-            enemy.GetComponent<Resource>().ResetResource();
+            resource.transform.position = position;
+            resource.SetActive(true);
+            resource.GetComponent<Resource>().ResetResource();
 
-            return null;
+            return resource;
         }
         else
         {
-            return Object;
+            var resource = GameObject.Instantiate(Object, position, Quaternion.identity, parent);
+            return resource;
         }
     }
 }

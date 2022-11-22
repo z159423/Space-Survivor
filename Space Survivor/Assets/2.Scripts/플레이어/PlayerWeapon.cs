@@ -29,7 +29,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Update()
     {
-        if (playerStat.GetPlayerDie() || !allowFire)
+        if (playerStat.GetPlayerDie() || !allowFire || !GameManager.instance.gameStart)
             return;
 
         for (int i = 0; i < weaponPool.Count; i++)
