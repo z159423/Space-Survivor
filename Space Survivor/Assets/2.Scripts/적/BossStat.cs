@@ -20,6 +20,10 @@ public class BossStat : EnemyStat
 
     public bool finalBoss = false;
 
+    private void OnEnable() {
+        HP_Bar.localScale = new Vector3(1,1,1);
+    }
+
     private void FixedUpdate()
     {
         base.FixedUpdate();

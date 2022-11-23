@@ -10,6 +10,11 @@ public class GPGSLogin : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text1;
     [SerializeField] private TextMeshProUGUI text2;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,8 @@ public class GPGSLogin : MonoBehaviour
                 //GoogleCloud.instance.LoadUserDataWithCloud((suc, str) => SceneManager.LoadScene("MainScene"));
 
                 print("GPGS 로그인 성공.");
+
+                SceneManager.LoadScene("MainScene");
             }
             else
             {
@@ -41,6 +48,8 @@ public class GPGSLogin : MonoBehaviour
                 //UserDataManager.instance.LoadCurrentUserDataFromLocal();
 
                 //text2.text = "GPGS 로그인 실패 + ";
+
+                SceneManager.LoadScene("MainScene");
 
                 //SceneManager.LoadScene("MainScene");
             }

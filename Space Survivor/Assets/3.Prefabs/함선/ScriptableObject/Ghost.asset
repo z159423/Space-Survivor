@@ -42,7 +42,7 @@ MonoBehaviour:
       FloatModifiers: []
       PercentModifiers: []
     baseDamage:
-      baseValue: 7
+      baseValue: 12
       minValue: 0
       MinValue: 0
       maxValue: 0

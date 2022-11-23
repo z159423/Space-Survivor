@@ -27,33 +27,33 @@ public class GoogleCloud : MonoBehaviour
 
 	public void SaveUserDataWithCloud(UserData userData, System.Action<bool, string> callback = null)
 	{
-		string serializedData = JsonConvert.SerializeObject(userData); // µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ±â Àü¿¡ Á÷·ÄÈ­ÇÕ´Ï´Ù.
+		string serializedData = JsonConvert.SerializeObject(userData); // ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
 
 		Time.timeScale = 0f;
 
 		GPGSManager.Instance.SaveWithCloud("USERDATA", serializedData, (success) =>
-		{ // µ¥ÀÌÅÍ¸¦ Å¬¶ó¿ìµå¿¡ ÀúÀåÇÕ´Ï´Ù.
+		{ // ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ Å¬ï¿½ï¿½ï¿½å¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 			if (success)
 			{
-				// µ¥ÀÌÅÍ ÀúÀå ¼º°ø½Ã
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-				print("GPGS¿¡ À¯Àú Á¤º¸ ÀúÀå ¼º°ø");
+				print("GPGSï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
 				if (callback != null)
-					callback.Invoke(true, "°ÔÀÓÀÌ ÀÏ½ÃÁßÁöµÇ¾î À¯ÀúÁ¤º¸ ÀúÀåÇÔ");
+					callback.Invoke(true, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
 				Time.timeScale = 1f;
 			}
 			else
 			{
-				// µ¥ÀÌÅÍ ÀúÀå ½ÇÆÐ½Ã
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ð½ï¿½
 
-				print("GPGS¿¡ À¯Àú Á¤º¸ ÀúÀå ½ÇÆÐ ·ÎÄÃ¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÕ´Ï´Ù.");
+				print("GPGSï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 
 				UserDataManager.instance.SaveCurrentUserDataToLocal();
 
 				if (callback != null)
-					callback.Invoke(true, "°ÔÀÓÀÌ ÀÏ½ÃÁßÁöµÇ¾î À¯ÀúÁ¤º¸ ÀúÀåÇÔ");
+					callback.Invoke(true, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
 				Time.timeScale = 1f;
 			}
@@ -66,13 +66,13 @@ public class GoogleCloud : MonoBehaviour
 		UserData userData = new UserData();
 		Time.timeScale = 0f;
 
-		GPGSManager.Instance.LoadWithCloud("USERDATA", (success, serializedData) => { // µ¥ÀÌÅÍ¸¦ Å¬¶ó¿ìµå¿¡¼­ ºÒ·¯¿É´Ï´Ù.
+		GPGSManager.Instance.LoadWithCloud("USERDATA", (success, serializedData) => { // ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ Å¬ï¿½ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½É´Ï´ï¿½.
 			if (success)
 			{
-				// µ¥ÀÌÅÍ ·Îµå ¼º°ø½Ã
-				print("À¯Àú Á¤º¸ ºÒ·¯¿À±â ¼º°ø");
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 				
-				userData = JsonConvert.DeserializeObject<UserData>(serializedData); // ºÒ·¯¿Â µ¥ÀÌÅÍ¸¦ ¿ªÁ÷·ÄÈ­ÇÕ´Ï´Ù.
+				userData = JsonConvert.DeserializeObject<UserData>(serializedData); // ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
 
 				print(userData.testString + " " + userData.crystal);
 
@@ -85,11 +85,11 @@ public class GoogleCloud : MonoBehaviour
 			}
 			else
 			{
-				print("À¯Àú Á¤º¸ ºÒ·¯¿À±â ½ÇÆÐ ´ë½Å ·ÎÄÃ µ¥ÀÌÅÍ¸¦ ºÒ·¯¿É´Ï´Ù.");
+				print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ò·ï¿½ï¿½É´Ï´ï¿½.");
 				//userData = UserDataManager.instance.LoadUserData();
 
 				UserDataManager.instance.LoadCurrentUserDataFromLocal();
-				// µ¥ÀÌÅÍ ·Îµå ½ÇÆÐ½Ã
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ ï¿½ï¿½ï¿½Ð½ï¿½
 
 				Time.timeScale = 1f;
 			}
@@ -100,14 +100,14 @@ public class GoogleCloud : MonoBehaviour
 
 	public void DelectWithCloud(string dataKey)
 	{
-		GPGSManager.Instance.DelectWithCloud(dataKey, (success) => { // µ¥ÀÌÅÍ¸¦ Å¬¶ó¿ìµå¿¡¼­ »èÁ¦ÇÕ´Ï´Ù..
+		GPGSManager.Instance.DelectWithCloud(dataKey, (success) => { // ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ Å¬ï¿½ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½..
 			if (success)
 			{
-				// µ¥ÀÌÅÍ »èÁ¦ ¼º°ø½Ã
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			}
 			else
 			{
-				// µ¥ÀÌÅÍ »èÁ¦ ½ÇÆÐ½Ã
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ð½ï¿½
 			}
 		});
 	}
