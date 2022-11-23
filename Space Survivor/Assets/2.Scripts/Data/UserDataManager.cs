@@ -28,14 +28,13 @@ public class UserDataManager : MonoBehaviour
     {
         instance = this;
 
-        currentUserData = LoadUserData();
-
+        //currentUserData = LoadUserData();
         //DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
-        StartCoroutine(RewardAdsTimeChecking());
+        //StartCoroutine(RewardAdsTimeChecking());
     }
 
     private void Update()
@@ -66,7 +65,6 @@ public class UserDataManager : MonoBehaviour
             UserData userData = JsonUtility.FromJson<UserData>(JsonData);
 
             return userData;
-
         }
         //�ҷ��� ������ ������
         else
@@ -150,7 +148,9 @@ public class UserDataManager : MonoBehaviour
         currentUserData.crystal += value;
 
         CrystalDisplay.instance.ChangeCrystalText(currentUserData.crystal);
-        SaveUserData(currentUserData);
+
+        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        //SaveUserData(currentUserData);
     }
 
     public UserData LoadCurrentUserDataFromLocal()

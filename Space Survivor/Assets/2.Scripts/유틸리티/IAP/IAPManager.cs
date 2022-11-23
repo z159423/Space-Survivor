@@ -134,7 +134,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
-        UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+        //UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
         FirebaseAnalytics.LogEvent("IAP_RemoveAdsPurchaseSuccess");
 
@@ -336,7 +338,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 
-            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+            //UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
             print("광고제거를 구매한 적이 있는 유저");
             purchased = true;
@@ -350,7 +354,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 
-            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+            //UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
             print("스타터팩을 구매한 적이 있는 유저");
             purchased = true;
@@ -364,7 +370,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 
-            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+            //UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
             print("메가팩을 구매한 적이 있는 유저");
             purchased = true;
@@ -378,7 +386,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
         {
             UserDataManager.instance.currentUserData.RemoveAds = true;
 
-            UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+            //UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
             print("울트라팩을 구매한 적이 있는 유저");
             purchased = true;

@@ -37,12 +37,18 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     [SerializeField] private GameObject touchProjectPanel;
     [SerializeField] private PlayerStat playerStat;
 
-
     [Space]
 
     public int crystalValue = 25;
     [SerializeField] private int freeCrystalWaitTime = 1800;
     [SerializeField] private int shipTrialWaitTime = 1800;
+
+    [Space]
+    [SerializeField] private GameObject freeCrystalButtonImage;
+    [SerializeField] private TextMeshProUGUI freeCrystalButtonTimeText;
+
+    [SerializeField] private GameObject trialShipButtonImage;
+    [SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
 
     private void Awake()
     {
@@ -67,6 +73,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
         reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
         crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
+
+        StartCoroutine(RewardAdsTimeChecking());
     }
 
     public void CreateAndLoadRewardedAd()
@@ -593,7 +601,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     IEnumerator startTrial()
     {
         UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
-        UserDataManager.instance.SaveCurrentDate();
+        //UserDataManager.instance.SaveCurrentDate();
+        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
         touchProjectPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
@@ -620,7 +629,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         yield return null;
 
         UserDataManager.instance.currentUserData.usingFreeCrystalTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-        UserDataManager.instance.SaveCurrentDate();
+        //UserDataManager.instance.SaveCurrentDate();
+        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
         UserDataManager.instance.AddCrystalValue(crystalValue);
     }
@@ -672,6 +682,38 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         foreach (Button btn in crystalDoubleButtons)
         {
             btn.gameObject.SetActive(true);
+        }
+    }
+
+    IEnumerator RewardAdsTimeChecking()
+    {
+        while (true)
+        {
+            if (RewardedInterstitialAdCaller.instance.IsFreeCrystalReady())
+            {
+                freeCrystalButtonImage.SetActive(true);
+                freeCrystalButtonTimeText.gameObject.SetActive(false);
+            }
+            else
+            {
+                freeCrystalButtonImage.SetActive(false);
+                freeCrystalButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetFreeCrystalLeftTime());
+                freeCrystalButtonTimeText.gameObject.SetActive(true);
+            }
+
+            if (RewardedInterstitialAdCaller.instance.IsShipTrialReady())
+            {
+                trialShipButtonImage.SetActive(true);
+                trialShipButtonTimeText.gameObject.SetActive(false);
+            }
+            else
+            {
+                trialShipButtonImage.SetActive(false);
+                trialShipButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetTrialShipLeftTime());
+                trialShipButtonTimeText.gameObject.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(1f);
         }
     }
 }

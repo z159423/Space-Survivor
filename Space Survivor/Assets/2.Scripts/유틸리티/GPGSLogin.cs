@@ -33,11 +33,11 @@ public class GPGSLogin : MonoBehaviour
 
                 //text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
 
-                //GoogleCloud.instance.LoadUserDataWithCloud((suc, str) => SceneManager.LoadScene("MainScene"));
+                GoogleCloud.instance.LoadUserDataWithCloud((suc, str) => SceneManager.LoadScene("MainScene"));
 
                 print("GPGS 로그인 성공.");
 
-                SceneManager.LoadScene("MainScene");
+                //SceneManager.LoadScene("MainScene");
             }
             else
             {
@@ -49,9 +49,9 @@ public class GPGSLogin : MonoBehaviour
 
                 //text2.text = "GPGS 로그인 실패 + ";
 
-                SceneManager.LoadScene("MainScene");
+                UserDataManager.instance.LoadCurrentUserDataFromLocal();
 
-                //SceneManager.LoadScene("MainScene");
+                SceneManager.LoadScene("MainScene");
             }
         });
     }
@@ -62,12 +62,12 @@ public class GPGSLogin : MonoBehaviour
         { // 로그인 여부를 확인합니다.
           // Google Play Game Service 로그인 상태
 
-            text1.text = "GPGS 로그인 성공 ";
+            //text1.text = "GPGS 로그인 성공 ";
         }
         else
         {
 
-            text1.text = "GPGS 로그인 실패 ";
+            //text1.text = "GPGS 로그인 실패 ";
             // Google Play Game Service 비로그인 상태
         }
     }
