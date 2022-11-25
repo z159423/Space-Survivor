@@ -298,7 +298,7 @@ public class PlayerStat : MonoBehaviour
 
     public void MakeThisShip(ShipObject ship, Quaternion bodyrotation)
     {
-        currentShipBody = Instantiate(ship.shipObjectData.shipBody, transform.position, bodyrotation, transform);
+        currentShipBody = Instantiate(GameManager.instance.shipList.GetShipBody(ship.shipObjectData.shipCode), transform.position, bodyrotation, transform);
 
         playerMovement.SetPlayerBody(currentShipBody.transform);
 

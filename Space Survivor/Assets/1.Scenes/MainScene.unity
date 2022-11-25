@@ -61440,7 +61440,7 @@ MonoBehaviour:
   - {fileID: 2133330735}
   stageSelect: {fileID: 607170121}
   currentShip: {fileID: 0}
-  shipList: {fileID: 11400000, guid: 8da70659d36e72942b403afa0d5f7875, type: 2}
+  <shipList>k__BackingField: {fileID: 11400000, guid: 8da70659d36e72942b403afa0d5f7875, type: 2}
   tiralBtn: {fileID: 1885043684}
   buyShipBtn: {fileID: 348676148}
   shipCostText: {fileID: 1485360728}
@@ -61464,7 +61464,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 0
+  editmode: 1
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:

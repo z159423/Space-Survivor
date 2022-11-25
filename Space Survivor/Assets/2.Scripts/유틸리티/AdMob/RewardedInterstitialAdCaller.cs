@@ -570,7 +570,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public void WatchRewardAds_CrystalDouble()
     {
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-        if (this.crystalDoubleRewardAd.IsLoaded())
+        if (this.crystalDoubleRewardAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             this.crystalDoubleRewardAd.Show();
         }

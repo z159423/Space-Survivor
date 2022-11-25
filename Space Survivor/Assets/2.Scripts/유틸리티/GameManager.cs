@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     [Space]
 
     [SerializeField] public ShipObject currentShip;
-    [SerializeField] private ShipList shipList;
+    [field: SerializeField] public ShipList shipList {get; private set;}
     [SerializeField] private GameObject tiralBtn;
     [SerializeField] private GameObject buyShipBtn;
     [SerializeField] private TextMeshProUGUI shipCostText;

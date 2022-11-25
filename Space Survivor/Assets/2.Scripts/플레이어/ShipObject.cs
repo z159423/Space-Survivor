@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Newtonsoft.Json;
 
 [CreateAssetMenu(fileName = "new Ship", menuName = "Scriptable Object/Ship Data", order = int.MaxValue)]
 public class ShipObject : ScriptableObject
@@ -39,8 +40,10 @@ public class ShipObjectData
 {
     public ShipType shipType;
     public string shipCode;
+    [JsonIgnore]
     [SerializeField]
     public GameObject shipBody;
+    [JsonIgnore]
     [SerializeField]
     public Sprite shipImage;
 
@@ -57,7 +60,9 @@ public class ShipObjectData
 
     [Space]
 
+    [JsonIgnore]
     public List<WeaponObject> basicWeapon = new List<WeaponObject>();
+    [JsonIgnore]
     public List<PassiveObject> basicPassive = new List<PassiveObject>();
     public List<ShipUpgradeModules> shipUpgradeModuleList = new List<ShipUpgradeModules>();
 

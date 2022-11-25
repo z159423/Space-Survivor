@@ -10,6 +10,7 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using GooglePlayGames.BasicApi.SavedGame;
 using GooglePlayGames.BasicApi.Events;
+using System;
 
 public class GoogleCloud : MonoBehaviour
 {
@@ -23,6 +24,22 @@ public class GoogleCloud : MonoBehaviour
 
     delegate void callback();
 
+    private bool isSaving = false;
+    private Queue<saveData> saveDataQueue = new Queue<saveData>();
+
+    public class saveData
+    {
+        public UserData userData = null;
+
+        public System.Action<bool, string> callback = null;
+
+        public saveData(UserData userData, System.Action<bool, string> callback = null)
+        {
+            this.userData = userData;
+            this.callback = callback;
+        }
+    }
+
     private void Awake()
     {
         instance = this;
@@ -30,7 +47,21 @@ public class GoogleCloud : MonoBehaviour
 
     public void SaveUserDataWithCloud(UserData userData, System.Action<bool, string> callback = null)
     {
+        if (isSaving)
+        {
+            saveData savedata = new saveData(userData, callback);
+            saveDataQueue.Enqueue(savedata);
+            print(saveDataQueue.Count);
+            return;
+        }
+
+        print("saving Start");
+
+        isSaving = true;
+
         string serializedData = JsonConvert.SerializeObject(userData); // �����͸� �����ϱ� ���� ����ȭ�մϴ�.
+
+        print(userData.crystal);
 
         //Time.timeScale = 0f;
 
@@ -43,6 +74,10 @@ public class GoogleCloud : MonoBehaviour
                 // ������ ���� ������
 
                 print("GPGS Cloud에 저장을 성공하였습니다.");
+
+                print(DateTime.Now.ToString());
+
+                print(userData.crystal);
 
                 if (callback != null)
                     callback.Invoke(true, "������ �Ͻ������Ǿ� �������� ������");
@@ -65,6 +100,16 @@ public class GoogleCloud : MonoBehaviour
                 FirebaseAnalytics.LogEvent("GPGS_SaveDataFromCloud_Failed");
             }
 
+            print("saving End");
+            isSaving = false;
+
+            if (saveDataQueue.Count > 0)
+            {
+                print(saveDataQueue.Count);
+                var data = saveDataQueue.Dequeue();
+                SaveUserDataWithCloud(data.userData, data.callback);
+            }
+
         });
     }
 
@@ -82,7 +127,16 @@ public class GoogleCloud : MonoBehaviour
                 print(serializedData);
 
                 userData = JsonConvert.DeserializeObject<UserData>(serializedData); // �ҷ��� �����͸� ������ȭ�մϴ�.
-                print(userData);
+                print(userData.playerHaveShip);
+
+                foreach (ShipObjectData data in userData.playerHaveShip)
+                {
+                    foreach (ShipUpgradeModules module in data.shipUpgradeModuleList)
+                    {
+                        print(module.upgradeType);
+                        print(module.currentUpgrade);
+                    }
+                }
 
                 //print(userData.testString + " " + userData.crystal);
 
@@ -131,6 +185,10 @@ public class GoogleCloud : MonoBehaviour
         //return PlayGamesPlatform.Instance.GetUserId();
     }
 
+    private void OnApplicationQuit()
+    {
+        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+    }
 
 
     //================================================================================================================
