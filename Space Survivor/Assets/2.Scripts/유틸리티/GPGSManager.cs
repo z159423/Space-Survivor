@@ -87,7 +87,7 @@ public class GPGSManager
         savedGameClient.OpenWithAutomaticConflictResolution(
             filename,
             DataSource.ReadCacheOrNetwork,
-            ConflictResolutionStrategy.UseLastKnownGood,
+            ConflictResolutionStrategy.UseLongestPlaytime,
             (status, game) =>
             {
                 if (status == SavedGameRequestStatus.Success)
@@ -143,6 +143,8 @@ public class GPGSManager
             }
         );
     }
+
+    
     public void DelectWithCloud(string filename, Action<bool> callback = null)
     { // 클라우드 서비스에 저장된 데이터를 삭제합니다.
         ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;

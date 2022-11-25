@@ -68,7 +68,7 @@ public class ShipUpgradeUI : MonoBehaviour
     {
         currentShipObject = shipObject;
 
-        ShipObjectData data = UserDataManager.instance.GetShipData_currentVersion(shipObject.shipObjectData.shipCode);
+        ShipObjectData data = UserDataManager.instance.GetShipData(shipObject.shipObjectData.shipCode);
 
         shipImage.sprite = UserDataManager.instance.GetShipImage(data.shipCode); //data.shipImage;
 

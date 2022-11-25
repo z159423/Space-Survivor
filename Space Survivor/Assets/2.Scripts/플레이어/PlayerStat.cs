@@ -312,7 +312,8 @@ public class PlayerStat : MonoBehaviour
         //    playerWeapon.AddNewWeapon(ship.basicPassive[i]);
         //}
 
-        GetShipStat(ship);
+        //
+        GetShipStat(UserDataManager.instance.currentUserData.GetShipDataFromPlayerHaveShip(ship.shipObjectData.shipCode));
     }
 
     public void AddBasicEquipment(ShipObjectData shipData)
@@ -351,11 +352,11 @@ public class PlayerStat : MonoBehaviour
         return currentShipBody.transform;
     }
 
-    public void GetShipStat(ShipObject shipObject)              //������� �Լ� ������ �÷��̾��� �Լ� ���ȿ� �ٿ��ֱ�
+    public void GetShipStat(ShipObjectData shipObjectData)              //������� �Լ� ������ �÷��̾��� �Լ� ���ȿ� �ٿ��ֱ�
     {
-        maxHp = shipObject.shipObjectData.baseMaxHp.GetFinalStatValueAsInt();
-        moveSpeed.SetBaseValue(shipObject.shipObjectData.baseMoveSpeed.GetFinalStatValue());
-        rotationSpeed.SetBaseValue(shipObject.shipObjectData.baseRotationSpeed.GetFinalStatValue());
+        maxHp = shipObjectData.baseMaxHp.GetFinalStatValueAsInt();
+        moveSpeed.SetBaseValue(shipObjectData.baseMoveSpeed.GetFinalStatValue());
+        rotationSpeed.SetBaseValue(shipObjectData.baseRotationSpeed.GetFinalStatValue());
     }
 
     public float GetMoveSpeed()

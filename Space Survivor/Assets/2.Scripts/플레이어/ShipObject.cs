@@ -49,9 +49,13 @@ public class ShipObjectData
 
     [Space]
     // 1000, 5, 3.5  700, 7, 4.5   1200 5.5 2.5
+    [SerializeField]
     public Stat baseMaxHp = new Stat();
+    [SerializeField]
     public Stat baseMoveSpeed = new Stat();
+    [SerializeField]
     public Stat baseRotationSpeed = new Stat();
+    [SerializeField]
     public Stat baseDamage = new Stat();
 
     [Space]

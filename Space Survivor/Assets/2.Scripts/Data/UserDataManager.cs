@@ -9,20 +9,12 @@ public class UserDataManager : MonoBehaviour
 {
     private const string userDataName = "UserData";
 
-    [SerializeField] private ShipObject startShip;
+    [field: SerializeField] public ShipObject startShip { get; private set; }
     [field: SerializeField] public ShipList shipList { get; private set; }
 
     public static UserDataManager instance;
 
     public UserData currentUserData = new UserData();
-
-    [Space]
-    [SerializeField] private GameObject freeCrystalButtonImage;
-    [SerializeField] private TextMeshProUGUI freeCrystalButtonTimeText;
-
-    [SerializeField] private GameObject trialShipButtonImage;
-    [SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
-
 
     private void Awake()
     {
@@ -60,7 +52,7 @@ public class UserDataManager : MonoBehaviour
         //�ҷ����� ����
         if (File.Exists(filePath))
         {
-            print("UserData �ҷ����� ���� " + filePath);
+            print("로컬 세이브가 존재하여 불러옵니다. " + filePath);
             string JsonData = File.ReadAllText(filePath);
             UserData userData = JsonUtility.FromJson<UserData>(JsonData);
 
@@ -69,7 +61,7 @@ public class UserDataManager : MonoBehaviour
         //�ҷ��� ������ ������
         else
         {
-            print("UserData�� ��� ���ο� ������ �����մϴ�. " + filePath);
+            print("로컬 세이브가 존재하지 않아 새로 생성합니다. " + filePath);
             UserData userData = new UserData();
 
             var newShipData = Instantiate(startShip);
@@ -80,6 +72,21 @@ public class UserDataManager : MonoBehaviour
 
             return userData;
         }
+    }
+
+    /// <summary>
+    /// 로컬세이브가 존재하는지 확인
+    /// </summary>
+    public bool CheckLocalSaveExist()
+    {
+        string filePath = Application.persistentDataPath + userDataName;
+
+        if(File.Exists(filePath))
+        {
+            return true;
+        }
+        else
+            return false;
     }
 
     //���� ������ ���̺�
@@ -228,38 +235,6 @@ public class UserDataManager : MonoBehaviour
         }
 
         return null;
-    }
-
-    IEnumerator RewardAdsTimeChecking()
-    {
-        while (true)
-        {
-            if (RewardedInterstitialAdCaller.instance.IsFreeCrystalReady())
-            {
-                freeCrystalButtonImage.SetActive(true);
-                freeCrystalButtonTimeText.gameObject.SetActive(false);
-            }
-            else
-            {
-                freeCrystalButtonImage.SetActive(false);
-                freeCrystalButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetFreeCrystalLeftTime());
-                freeCrystalButtonTimeText.gameObject.SetActive(true);
-            }
-
-            if (RewardedInterstitialAdCaller.instance.IsShipTrialReady())
-            {
-                trialShipButtonImage.SetActive(true);
-                trialShipButtonTimeText.gameObject.SetActive(false);
-            }
-            else
-            {
-                trialShipButtonImage.SetActive(false);
-                trialShipButtonTimeText.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetTrialShipLeftTime());
-                trialShipButtonTimeText.gameObject.SetActive(true);
-            }
-
-            yield return new WaitForSeconds(1f);
-        }
     }
 
     public void StageClearSaveData(int stageNum)

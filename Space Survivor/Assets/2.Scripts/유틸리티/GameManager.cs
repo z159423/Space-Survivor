@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public Transform playerTrans;
     [SerializeField] private GameObject[] editmodeUI;
     [SerializeField] private StageSelect stageSelect;
+    [field: SerializeField] public GameObject savingIcon {get; private set;}
 
     [Space]
 
@@ -136,6 +137,11 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.FindBGM("inGame2");
 
         playerStat.AddBasicEquipment(UserDataManager.instance.GetShipData_currentVersion(currentShip.shipObjectData.shipCode));
+
+        print("현재 함선 데미지 업그레이드 : " + currentShip.shipObjectData.shipUpgradeModuleList[1].currentUpgrade);
+        print("현재 함선 데미지 : " + currentShip.shipObjectData.baseDamage.GetFinalStatValueAsInt());
+        print("현재 함선 데미지 업그레이드 : " + currentShip.shipObjectData.shipUpgradeModuleList[0].currentUpgrade);
+        print("현재 함선 체력 : " + currentShip.shipObjectData.baseMaxHp.GetFinalStatValueAsInt());
     }
 
     public void ReplayGame()

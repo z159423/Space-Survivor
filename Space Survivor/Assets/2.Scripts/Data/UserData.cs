@@ -18,4 +18,26 @@ public class UserData
     public string usingFreeCrystalTime = "2000-01-01 01:01:01";
 
     public List<int> clearedStageNumber = new List<int>();
+
+    /// <summary>
+    /// 코드로 소지한 함선 가져오기
+    /// </summary>
+    public ShipObjectData GetShipDataFromPlayerHaveShip(string code)
+    {
+        foreach (ShipObjectData data in playerHaveShip)
+        {
+            if (data.shipCode.Equals(code))
+                return data;
+        }
+
+        Debug.LogWarning(code + " 이 코드에 해당하는 소지중인 함선이 없습니다.");
+
+        foreach (ShipObject ship in GameManager.instance.shipList.shipList)
+        {
+            if (ship.shipObjectData.shipCode.Equals(code))
+                return ship.shipObjectData;
+        }
+
+        return playerHaveShip[0];
+    }
 }

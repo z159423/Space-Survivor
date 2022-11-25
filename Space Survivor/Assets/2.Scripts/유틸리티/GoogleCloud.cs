@@ -11,14 +11,12 @@ using GooglePlayGames.BasicApi;
 using GooglePlayGames.BasicApi.SavedGame;
 using GooglePlayGames.BasicApi.Events;
 using System;
+using System.IO;
+using UnityEngine.UI;
 
 public class GoogleCloud : MonoBehaviour
 {
     public static GoogleCloud instance;
-
-    [SerializeField] private TextMeshProUGUI testText;
-    [SerializeField] private InputField inputField;
-    [SerializeField] private Button saveButton;
 
     public delegate void Action<in T>(T obj);
 
@@ -26,6 +24,9 @@ public class GoogleCloud : MonoBehaviour
 
     private bool isSaving = false;
     private Queue<saveData> saveDataQueue = new Queue<saveData>();
+
+    [SerializeField] private Slider sceneLoadingSlider;
+
 
     public class saveData
     {
@@ -50,6 +51,7 @@ public class GoogleCloud : MonoBehaviour
         if (isSaving)
         {
             saveData savedata = new saveData(userData, callback);
+            saveDataQueue.Clear();
             saveDataQueue.Enqueue(savedata);
             print(saveDataQueue.Count);
             return;
@@ -58,9 +60,9 @@ public class GoogleCloud : MonoBehaviour
         print("saving Start");
 
         isSaving = true;
+        GameManager.instance.savingIcon.SetActive(true);
 
-        string serializedData = JsonConvert.SerializeObject(userData); // �����͸� �����ϱ� ���� ����ȭ�մϴ�.
-
+        string serializedData = JsonUtility.ToJson(userData); // JsonConvert.SerializeObject(userData); // �����͸� �����ϱ� ���� ����ȭ�մϴ�.
         print(userData.crystal);
 
         //Time.timeScale = 0f;
@@ -102,6 +104,7 @@ public class GoogleCloud : MonoBehaviour
 
             print("saving End");
             isSaving = false;
+            GameManager.instance.savingIcon.SetActive(false);
 
             if (saveDataQueue.Count > 0)
             {
@@ -124,30 +127,77 @@ public class GoogleCloud : MonoBehaviour
             {
                 // ������ �ε� ������
                 print("GPGS Cloud에서 유저 데이터를 불러왔습니다.");
-                print(serializedData);
+                print("GPGS 세이브 : " + serializedData);
 
-                userData = JsonConvert.DeserializeObject<UserData>(serializedData); // �ҷ��� �����͸� ������ȭ�մϴ�.
-                print(userData.playerHaveShip);
-
-                foreach (ShipObjectData data in userData.playerHaveShip)
+                if (UserDataManager.instance.CheckLocalSaveExist())
                 {
-                    foreach (ShipUpgradeModules module in data.shipUpgradeModuleList)
-                    {
-                        print(module.upgradeType);
-                        print(module.currentUpgrade);
-                    }
+                    string filePath = Application.persistentDataPath + "UserData";
+                    string JsonData = File.ReadAllText(filePath);
+                    print("로컬세이브 : " + JsonData);
                 }
 
-                //print(userData.testString + " " + userData.crystal);
+
+                if (serializedData.Equals(""))
+                {
+                    print("GPGS Cloud에 세이브가 존재하지 않아 새로 생성합니다.");
+
+                    //만약 로컬 세이브가 있다면 로컬세이브를 적용
+                    if (UserDataManager.instance.CheckLocalSaveExist())
+                    {
+                        print("로컬데이터가 존재하여 불러옵니다.");
+
+                        var data = UserDataManager.instance.LoadUserData();
+
+                        SaveUserDataWithCloud(data);
+                    }
+                    else
+                    {
+                        print("로컬데이터가 존재하지 않아 새로 세이브를 생성합니다.");
+                        var newShipData = Instantiate(UserDataManager.instance.startShip);
+
+                        userData.playerHaveShip.Add(newShipData.shipObjectData);
+
+                        SaveUserDataWithCloud(userData);
+                    }
+                }
+                else
+                {
+                    print("GPGS Cloud에서 성공적으로 세이브를 불러왔습니다.");
+
+                    userData = JsonUtility.FromJson<UserData>(serializedData);  //JsonConvert.DeserializeObject<UserData>(serializedData);
+                    print(userData.playerHaveShip);
+
+                    foreach (ShipObjectData data in userData.playerHaveShip)
+                    {
+                        foreach (ShipUpgradeModules module in data.shipUpgradeModuleList)
+                        {
+                            print(data.shipCode + " / " + module.upgradeType + " / " + module.currentUpgrade);
+                        }
+                    }
+
+                    FirebaseAnalytics.LogEvent("GPGS_LoadDataFromCloud_Success");
+                }
 
                 UserDataManager.instance.currentUserData = userData;
 
-                if (callback != null)
-                    callback.Invoke(true, "MainScene");
+                //if (callback != null)
+                //    callback.Invoke(true, "MainScene");
 
-                FirebaseAnalytics.LogEvent("GPGS_LoadDataFromCloud_Success");
+                StartCoroutine(LoadAsynchronosly());
 
-                //Time.timeScale = 1f;
+                IEnumerator LoadAsynchronosly()
+                {
+                    AsyncOperation operation = SceneManager.LoadSceneAsync("MainScene");
+
+                    while (!operation.isDone)
+                    {
+                        float progress = Mathf.Clamp01(operation.progress / .9f);
+
+                        sceneLoadingSlider.value = progress;
+
+                        yield return null;
+                    }
+                }
             }
             else
             {
@@ -165,16 +215,18 @@ public class GoogleCloud : MonoBehaviour
         return userData;
     }
 
-    public void DelectWithCloud(string dataKey)
+    public void DelectWithCloud()
     {
-        GPGSManager.Instance.DelectWithCloud(dataKey, (success) =>
+        GPGSManager.Instance.DelectWithCloud("USERDATA", (success) =>
         { // �����͸� Ŭ���忡�� �����մϴ�..
             if (success)
             {
+                Debug.Log("구글 클라우드 세이브를 삭제하였습니다.");
                 // ������ ���� ������
             }
             else
             {
+                Debug.LogWarning("구글 클라우드 세이브를 삭제에 실패하였습니다.");
                 // ������ ���� ���н�
             }
         });
