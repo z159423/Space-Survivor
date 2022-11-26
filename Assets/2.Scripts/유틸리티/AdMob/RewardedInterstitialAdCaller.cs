@@ -81,7 +81,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     private void Update()
     {
-
         if (rewardList.Count > 0)
         {
             StartCoroutine(rewardList[0]);
