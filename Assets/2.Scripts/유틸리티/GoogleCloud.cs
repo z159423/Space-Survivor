@@ -107,7 +107,8 @@ public class GoogleCloud : MonoBehaviour
 
             print("saving End");
             isSaving = false;
-            GameManager.instance.savingIcon.SetActive(false);
+            if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+                GameManager.instance.savingIcon.SetActive(false);
 
             if (saveDataQueue.Count > 0)
             {

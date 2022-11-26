@@ -32,7 +32,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     [SerializeField] private Button reviveButton;
     private RewardedAd crystalDoubleRewardAd;
     [SerializeField] private Button[] crystalDoubleButtons;
-    [field: SerializeField] public bool useCrystalDoubleThisStage {get; set;} = false;
+    [field: SerializeField] public bool useCrystalDoubleThisStage { get; set; } = false;
 
     [SerializeField] private GameObject touchProjectPanel;
     [SerializeField] private PlayerStat playerStat;
@@ -49,6 +49,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     [SerializeField] private GameObject trialShipButtonImage;
     [SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
+
+    private List<IEnumerator> rewardList = new List<IEnumerator>();
 
     private void Awake()
     {
@@ -75,6 +77,16 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
 
         StartCoroutine(RewardAdsTimeChecking());
+    }
+
+    private void Update()
+    {
+
+        if (rewardList.Count > 0)
+        {
+            StartCoroutine(rewardList[0]);
+            rewardList.Clear();
+        }
     }
 
     public void CreateAndLoadRewardedAd()
@@ -227,11 +239,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 "보상형 광고를 시청하였습니다. 보상을 지급해야 합니다: "
                             + amount.ToString() + " " + type);
 
-            StartCoroutine(getFreeCrystal());
-
-            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
-
-            FirebaseAnalytics.LogEvent("RvAdsComplete_FreeCrystal");
+            //StartCoroutine(getFreeCrystal());
+            rewardList.Add(getFreeCrystal());
         }
     }
 
@@ -312,11 +321,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             MonoBehaviour.print("함선 체험광고를 시청하였습니다. 함선 체험을 시작합니다.");
 
-            StartCoroutine(startTrial());
+            //StartCoroutine(startTrial());
+            rewardList.Add(startTrial());
 
-            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
-
-            FirebaseAnalytics.LogEvent("RvAdsComplete_TrialShip");
+            
 
         }
     }
@@ -395,11 +403,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             MonoBehaviour.print("부활 리워드 광고를 시청완료했습니다. 부활합니다.");
 
-            StartCoroutine(revive());
+            //StartCoroutine(revive());
+            rewardList.Add(revive());
 
-            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
-
-            FirebaseAnalytics.LogEvent("RvAdsComplete_Revive");
+            
         }
     }
 
@@ -477,13 +484,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             MonoBehaviour.print("크리스탈 두배 리워드 광고를 시청완료했습니다.");
 
-            StartCoroutine(crystalDouble());
+            //StartCoroutine(crystalDouble());
+            rewardList.Add(crystalDouble());
 
-            InterstitialAdCaller.instance.RestartIrAdsCoolTime();
-
-            FirebaseAnalytics.LogEvent("RvAdsComplete_DoubleCrystal");
-
-
+            
         }
     }
 
@@ -511,8 +515,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else
+            else if (!this.crystallAddRewardedAd.IsLoaded())
                 print("광고가 없습니다");
+            else
+                print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             StartCoroutine(getFreeCrystal());
         }
@@ -539,8 +545,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else
+            else if (!this.shipTrialRewardedAd.IsLoaded())
                 print("광고가 없습니다");
+            else
+                print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             StartCoroutine(startTrial());
         }
@@ -559,8 +567,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else
+            else if (!this.reviveRewardedAd.IsLoaded())
                 print("광고가 없습니다");
+            else
+                print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             StartCoroutine(revive());
         }
@@ -578,8 +588,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else
+            else if (!this.crystalDoubleRewardAd.IsLoaded())
                 print("광고가 없습니다");
+            else
+                print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             StartCoroutine(crystalDouble());
         }
@@ -595,6 +607,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         touchProjectPanel.SetActive(false);
         GameManager.instance.revivedThisGame = true;
         GameManager.instance.gameStart = true;
+
+        InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent("RvAdsComplete_Revive");
     }
 
     //함선 체험
@@ -609,6 +625,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         shipTrialButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
+
+        InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent("RvAdsComplete_TrialShip");
     }
 
     //크리스탈 두배
@@ -621,6 +641,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         playerStat.GetCrystalDouble();
 
         useCrystalDoubleThisStage = true;
+
+        InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent("RvAdsComplete_DoubleCrystal");
     }
 
     //무료 크리스탈
@@ -633,6 +657,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
         UserDataManager.instance.AddCrystalValue(crystalValue);
+
+        InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+        FirebaseAnalytics.LogEvent("RvAdsComplete_FreeCrystal");
     }
 
     public bool IsFreeCrystalReady()
