@@ -44,6 +44,8 @@ public class GoogleCloud : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
     }
 
     public void SaveUserDataWithCloud(UserData userData, System.Action<bool, string> callback = null)
@@ -60,7 +62,8 @@ public class GoogleCloud : MonoBehaviour
         print("saving Start");
 
         isSaving = true;
-        GameManager.instance.savingIcon.SetActive(true);
+        if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+            GameManager.instance.savingIcon.SetActive(true);
 
         string serializedData = JsonUtility.ToJson(userData); // JsonConvert.SerializeObject(userData); // �����͸� �����ϱ� ���� ����ȭ�մϴ�.
         print(userData.crystal);
@@ -104,7 +107,8 @@ public class GoogleCloud : MonoBehaviour
 
             print("saving End");
             isSaving = false;
-            GameManager.instance.savingIcon.SetActive(false);
+            if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+                GameManager.instance.savingIcon.SetActive(false);
 
             if (saveDataQueue.Count > 0)
             {

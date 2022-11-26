@@ -329,6 +329,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
     /// </summary>
     public bool HadPurchased()
     {
+        return false;
+        
         var product = m_StoreController.products.WithID(removeAdsId);
         bool purchased = false;
 
