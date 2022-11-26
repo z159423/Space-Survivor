@@ -394,7 +394,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
             purchased = true;
         }
 
-        return purchased;
+        //return purchased;
+
+        return false;
 
     }
 
