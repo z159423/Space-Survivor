@@ -12,7 +12,6 @@ using GooglePlayGames.BasicApi.SavedGame;
 using GooglePlayGames.BasicApi.Events;
 using System;
 using System.IO;
-using UnityEngine.UI;
 
 public class GoogleCloud : MonoBehaviour
 {
@@ -129,9 +128,7 @@ public class GoogleCloud : MonoBehaviour
         { // �����͸� Ŭ���忡�� �ҷ��ɴϴ�.
             if (success)
             {
-                // ������ �ε� ������
-                print("GPGS Cloud에서 유저 데이터를 불러왔습니다.");
-                print("GPGS 세이브 : " + serializedData);
+                print("GPGS Cloud에서 불러온 유저 데이터 : " + serializedData);
 
                 if (UserDataManager.instance.CheckLocalSaveExist())
                 {
@@ -139,7 +136,6 @@ public class GoogleCloud : MonoBehaviour
                     string JsonData = File.ReadAllText(filePath);
                     print("로컬세이브 : " + JsonData);
                 }
-
 
                 if (serializedData.Equals(""))
                 {

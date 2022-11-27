@@ -7,6 +7,7 @@ using Unity.Services.Core.Environments;
 using TMPro;
 using Firebase.Analytics;
 using System;
+using UnityEngine.UI;
 
 public class IAPManager : MonoBehaviour, IStoreListener
 {
@@ -27,7 +28,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
     [Space]
 
-    public GameObject removeAdsButton;
+    public GameObject[] removeAdsButtons;
 
     [field: SerializeField] public bool initialized { get; private set; } = false;
 
@@ -64,6 +65,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
                 {
 
                 }
+
+                UpdateUI2();
             }
         }
 
@@ -312,7 +315,11 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
             if (product.hasReceipt || UserDataManager.instance.currentUserData.RemoveAds)
             {
-                removeAdsButton.SetActive(false);
+                foreach(GameObject btn in removeAdsButtons)
+                {
+                    btn.SetActive(false);
+                }
+
                 print("광고 제거를 구매하였기 때문에 버튼 비활성화");
                 BottomBanner.instance.DestoryBanner();
             }
@@ -329,8 +336,6 @@ public class IAPManager : MonoBehaviour, IStoreListener
     /// </summary>
     public bool HadPurchased()
     {
-        return false;
-        
         var product = m_StoreController.products.WithID(removeAdsId);
         bool purchased = false;
 
@@ -397,7 +402,6 @@ public class IAPManager : MonoBehaviour, IStoreListener
         }
 
         return purchased;
-
     }
 
 
