@@ -21296,7 +21296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userID: {fileID: 1351279940}
-  loginBtn: {fileID: 1353042111}
+  loginBtn: {fileID: 1353042113}
   log: {fileID: 1824856002}
 --- !u!1001 &817899512
 PrefabInstance:
@@ -61222,7 +61222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1958418025
 RectTransform:
   m_ObjectHideFlags: 0
@@ -62212,7 +62212,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 1
+  editmode: 0
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:

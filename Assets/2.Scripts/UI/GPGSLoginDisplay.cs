@@ -6,11 +6,12 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using GooglePlayGames.BasicApi.SavedGame;
 using GooglePlayGames.BasicApi.Events;
+using UnityEngine.UI;
 
 public class GPGSLoginDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI userID;
-    [SerializeField] private GameObject loginBtn;
+    [SerializeField] private Button loginBtn;
 
     [SerializeField] private TextMeshProUGUI log;
 
@@ -21,8 +22,6 @@ public class GPGSLoginDisplay : MonoBehaviour
 
     public void OnClickLoginBtn()
     {
-        loginBtn.SetActive(false);
-
         GPGSManager.Instance.Login(false, (success, ilocalUser) =>
                 { // 로그인을 시도합니다.
                     if (success)
@@ -54,11 +53,11 @@ public class GPGSLoginDisplay : MonoBehaviour
             userID.text = "ID : " + PlayGamesPlatform.Instance.GetUserId();
             log.text = "Google Login Success!";
 
-            loginBtn.SetActive(false);
+            loginBtn.gameObject.SetActive(false);
         }
         else
         {
-            loginBtn.SetActive(true);
+            loginBtn.gameObject.SetActive(true);
 
             log.text = "Google Login Failed";
         }

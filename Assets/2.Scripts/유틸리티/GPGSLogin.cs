@@ -8,13 +8,22 @@ using UnityEngine.SceneManagement;
 public class GPGSLogin : MonoBehaviour
 {
 
+    public static GPGSLogin instance;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+
+        instance = this;
     }
 
     // Start is called before the first frame update
     void Start()
+    {
+        Login((suc, str) => SceneManager.LoadScene("MainScene"));
+    }
+
+    public void Login(System.Action<bool, string> callback = null)
     {
         // GPGSManager.Instance.Login(bool autoLogin, Action<bool, ILocalUser> callback = null) 
         // autoLogin : false = 사용자 직접 로그인, true = 자동 로그인
@@ -31,7 +40,7 @@ public class GPGSLogin : MonoBehaviour
 
                 //text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
 
-                GoogleCloud.instance.LoadUserDataWithCloud((suc, str) => SceneManager.LoadScene("MainScene"));
+                GoogleCloud.instance.LoadUserDataWithCloud(callback);
 
                 print("GPGS 로그인 성공.");
 
