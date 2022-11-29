@@ -7454,7 +7454,6 @@ GameObject:
   m_Component:
   - component: {fileID: 248988334}
   - component: {fileID: 248988337}
-  - component: {fileID: 248988336}
   m_Layer: 5
   m_Name: FPS
   m_TagString: Untagged
@@ -7485,21 +7484,6 @@ RectTransform:
   m_AnchoredPosition: {x: -385.94995, y: 25}
   m_SizeDelta: {x: 771.9009, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &248988336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248988333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e83c7109110ef74192dae36f599440e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMeshProUGUI: {fileID: 118606510}
-  frequency: 0.5
-  averageFpsText: {fileID: 2133330736}
 --- !u!222 &248988337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12313,6 +12297,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: menu2
     clip: {fileID: 8300000, guid: f5b5049becc2d5a4ab928ae4821528d4, type: 3}
@@ -12324,6 +12310,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: menu3
     clip: {fileID: 8300000, guid: f8f1a98f70e4e5d4c9ebe8949dd3a039, type: 3}
@@ -12335,6 +12323,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: inGame1
     clip: {fileID: 8300000, guid: 652d87e4aff941e4489a676ada9e4de0, type: 3}
@@ -12346,6 +12336,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: inGame2
     clip: {fileID: 8300000, guid: 0c3e52d7a9e6ff042bd6119b07077c44, type: 3}
@@ -12357,6 +12349,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   bgmPrefab: {fileID: 249666381}
   oneAudioSource: 0
@@ -12371,6 +12365,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 0}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: levelup1
     clip: {fileID: 8300000, guid: 84bd57214449e774ba21ef91086677cc, type: 3}
@@ -12382,6 +12378,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: upgrade1
     clip: {fileID: 8300000, guid: 49f6a2557495b6640ac2e9496bd1ba2b, type: 3}
@@ -12393,6 +12391,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: click1
     clip: {fileID: 8300000, guid: 8b02e6d249da9184691660ba6dc2aa68, type: 3}
@@ -12404,6 +12404,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: upgrade2
     clip: {fileID: 8300000, guid: 31a7443a396407844beacc39df584acc, type: 3}
@@ -12415,6 +12417,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: click2
     clip: {fileID: 8300000, guid: 39dc198fd37f9d24a8224450a8005ff4, type: 3}
@@ -12426,6 +12430,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: upgrade3
     clip: {fileID: 8300000, guid: cf56af4a5e2eda847ae199e3060a56bd, type: 3}
@@ -12437,6 +12443,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: machinegun1
     clip: {fileID: 8300000, guid: fde1987b6306ffe44b44b9170a74f967, type: 3}
@@ -12448,6 +12456,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: cannon1
     clip: {fileID: 8300000, guid: 484761639e813354c9dc4e7953945a9c, type: 3}
@@ -12459,6 +12469,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: cannon2
     clip: {fileID: 8300000, guid: 2f7f2f3e7e24e324c99aff30a3e5e263, type: 3}
@@ -12470,6 +12482,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: explosion1
     clip: {fileID: 8300000, guid: 5f7fbeeb9f96ded4fb98bbbb43ef3d0b, type: 3}
@@ -12481,6 +12495,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: explosion2
     clip: {fileID: 8300000, guid: a216a2b6cb7d228468290e49b222e73a, type: 3}
@@ -12492,6 +12508,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: explosion3
     clip: {fileID: 8300000, guid: a58dc0b5647770d4ba10d7bf460f29f4, type: 3}
@@ -12503,6 +12521,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: exp1
     clip: {fileID: 8300000, guid: 5693db7babd97a54f85b9b2017e1dcde, type: 3}
@@ -12513,7 +12533,9 @@ MonoBehaviour:
     bgm: 0
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
-    useOneAudioSource: 1
+    useOneAudioSource: 0
+    limitPlayCount: 1
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: siren
     clip: {fileID: 8300000, guid: 4697e3be71c0c68409105177519f7937, type: 3}
@@ -12525,6 +12547,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: shield1
     clip: {fileID: 8300000, guid: 18a17200c0815c341aaa43afee369abf, type: 3}
@@ -12536,6 +12560,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: missile1
     clip: {fileID: 8300000, guid: 5ac15be01a7c37245a084adfc655fe50, type: 3}
@@ -12547,6 +12573,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 0
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: kill1
     clip: {fileID: 8300000, guid: 95df3ff9b288dd843b5385d4ec1960c1, type: 3}
@@ -12557,7 +12585,9 @@ MonoBehaviour:
     bgm: 0
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
-    useOneAudioSource: 1
+    useOneAudioSource: 0
+    limitPlayCount: 1
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: laser1
     clip: {fileID: 8300000, guid: f353e308599b1f74782373ae92c51189, type: 3}
@@ -12569,6 +12599,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 1
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: upgrade4
     clip: {fileID: 8300000, guid: f353e308599b1f74782373ae92c51189, type: 3}
@@ -12580,6 +12612,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 1
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: coin1
     clip: {fileID: 8300000, guid: 4c5179a97b8ada84683bc04b01eaf425, type: 3}
@@ -12591,6 +12625,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 1
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: steam1
     clip: {fileID: 8300000, guid: 6867208e8c40e8b46a36675627cd846b, type: 3}
@@ -12602,6 +12638,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 1
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   - name: flak1
     clip: {fileID: 8300000, guid: 5f78bce894fbc974190509c980716597, type: 3}
@@ -12613,6 +12651,8 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
     useOneAudioSource: 1
+    limitPlayCount: 0
+    playList: []
     useableAudioSource: {fileID: 0}
   SFXPrefab: {fileID: 924167434}
   audioPool:
@@ -18346,6 +18386,7 @@ MonoBehaviour:
     playerHaveShip: []
     usingShipTrialTime: 
     usingFreeCrystalTime: 
+    version: 
     clearedStageNumber: 
 --- !u!4 &666147752
 Transform:
@@ -36677,8 +36718,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -161.99998, y: -540}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: -160, y: -524.6}
+  m_SizeDelta: {x: 356.7232, y: 78.5726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164323518
 MonoBehaviour:
@@ -36700,7 +36741,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ShipName
+  m_text: aaaaaaaaaaaa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d69e098062a7694ead09844e556234d, type: 2}
   m_sharedMaterial: {fileID: -7357127223567517424, guid: 7d69e098062a7694ead09844e556234d, type: 2}
@@ -36727,10 +36768,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
+  m_fontSize: 54.2
   m_fontSizeBase: 70
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -50041,6 +50082,7 @@ GameObject:
   - component: {fileID: 1625381615}
   - component: {fileID: 1625381614}
   - component: {fileID: 1625381613}
+  - component: {fileID: 1625381617}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -50139,6 +50181,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1625381617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625381612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e83c7109110ef74192dae36f599440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshProUGUI: {fileID: 118606510}
+  frequency: 0.5
+  averageFpsText: {fileID: 2133330736}
 --- !u!1 &1627147009
 GameObject:
   m_ObjectHideFlags: 0
@@ -63601,100 +63658,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2939071545965428176, guid: 4d0a0097a0e424b4e814c3403466c59f, type: 3}
   m_PrefabInstance: {fileID: 2039026481}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2044659925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2044659928}
-  - component: {fileID: 2044659927}
-  - component: {fileID: 2044659926}
-  m_Layer: 0
-  m_Name: Reporter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2044659926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044659925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6767a180de870304caa2013b2772dd62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2044659927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044659925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600c02144c4813244abd262cbcbe8825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  show: 0
-  UserData: 
-  fps: 0
-  fpsText: 
-  images:
-    clearImage: {fileID: 2800000, guid: 112c6fcf56e349449ab2e6ad76b67816, type: 3}
-    collapseImage: {fileID: 2800000, guid: 4623f326a884a2546ab39078bf7822c3, type: 3}
-    clearOnNewSceneImage: {fileID: 2800000, guid: 3a6bc61a8319b1949ab9f1f2db1302b4, type: 3}
-    showTimeImage: {fileID: 2800000, guid: 782e03669fa4a614e89ef56252134250, type: 3}
-    showSceneImage: {fileID: 2800000, guid: ff4dfb29f203a174ab8e4c498afe908a, type: 3}
-    userImage: {fileID: 2800000, guid: 2bcdc012e7356f1449ce7d3a31dc458c, type: 3}
-    showMemoryImage: {fileID: 2800000, guid: f447d62f2dacf9843be7cbf168a3a9d0, type: 3}
-    softwareImage: {fileID: 2800000, guid: 6c91fc88ee6c791468318d85febfb48d, type: 3}
-    dateImage: {fileID: 2800000, guid: a7561cd0a9f62a84e99bff1abce2a222, type: 3}
-    showFpsImage: {fileID: 2800000, guid: 90b2f48155dc0e74f8e428561ac79da5, type: 3}
-    infoImage: {fileID: 2800000, guid: 2954bef266e6d794aba08ceacc887a0f, type: 3}
-    saveLogsImage: {fileID: 2800000, guid: 4a4821d80a1fc774fb76eac6213544e7, type: 3}
-    searchImage: {fileID: 2800000, guid: bfef37b5a26d2264798616d960451329, type: 3}
-    copyImage: {fileID: 2800000, guid: 7f36d71624c630046b855909c497be17, type: 3}
-    closeImage: {fileID: 2800000, guid: b65e9be99974bc94eab5d6698811d0b8, type: 3}
-    buildFromImage: {fileID: 2800000, guid: 8702be598dd9f504ca33be2afee2ca33, type: 3}
-    systemInfoImage: {fileID: 2800000, guid: e9011b1dc9256ad4d9c19a31c595f95f, type: 3}
-    graphicsInfoImage: {fileID: 2800000, guid: 999d31716332cc04eb4abc9c9270b0ca, type: 3}
-    backImage: {fileID: 2800000, guid: a0632a18e7c665641b94fea66506ab50, type: 3}
-    logImage: {fileID: 2800000, guid: e876b803a4dd5c5488078071d15aa9c0, type: 3}
-    warningImage: {fileID: 2800000, guid: 1066be8e7b994b94c8a182b8dbe30705, type: 3}
-    errorImage: {fileID: 2800000, guid: 7640ebf8b3a92124d821d3b4b8b3fd7e, type: 3}
-    barImage: {fileID: 2800000, guid: 8128d4f4c0193e34586f9631ef7d4787, type: 3}
-    button_activeImage: {fileID: 2800000, guid: 2580a2e903691e44282e56ed6e0ff37a, type: 3}
-    even_logImage: {fileID: 2800000, guid: d27aad55b568c6544b0b95a95da44bc7, type: 3}
-    odd_logImage: {fileID: 2800000, guid: 8ffbb44a2c3adae45913474e4fd487f5, type: 3}
-    selectedImage: {fileID: 2800000, guid: 17117a429b08e7e43b0b6c8421de69fe, type: 3}
-    reporterScrollerSkin: {fileID: 11400000, guid: 1cc68832d00d3284a9324a4dc05be753, type: 2}
-  size: {x: 32, y: 32}
-  maxSize: 20
-  numOfCircleToShow: 1
-  Initialized: 0
---- !u!4 &2044659928
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044659925}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2057696157
 PrefabInstance:
   m_ObjectHideFlags: 0

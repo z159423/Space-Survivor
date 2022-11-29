@@ -64,6 +64,8 @@ public class GoogleCloud : MonoBehaviour
         if (GameManager.instance != null && GameManager.instance.savingIcon != null)
             GameManager.instance.savingIcon.SetActive(true);
 
+        userData.version = Application.version;
+
         string serializedData = JsonUtility.ToJson(userData); // JsonConvert.SerializeObject(userData); // �����͸� �����ϱ� ���� ����ȭ�մϴ�.
         print(userData.crystal);
 

@@ -169,9 +169,9 @@ public class AudioManager : MonoBehaviour
         GameObject audio = null;
         AudioSource audioSource = null;
 
-        if(s.useOneAudioSource)
+        if (s.useOneAudioSource)
         {
-            if(s.useableAudioSource == null)
+            if (s.useableAudioSource == null)
             {
                 audio = audioPool.DequeueObject(position);
                 audioSource = audio.GetComponent<AudioSource>();
@@ -183,12 +183,28 @@ public class AudioManager : MonoBehaviour
                 audioSource = s.useableAudioSource;
             }
         }
+        else if (s.limitPlayCount)
+        {
+            if (s.playList.Count < 10)
+            {
+                audio = audioPool.DequeueObject(position);
+                audioSource = audio.GetComponent<AudioSource>();
+
+                s.playList.Add(audio);
+            }
+            else
+            {
+                audio = s.playList[0];
+                s.playList[0].transform.position = position;
+                audioSource = s.playList[0].GetComponent<AudioSource>();
+            }
+        }
         else
         {
             audio = audioPool.DequeueObject(position);
             audioSource = audio.GetComponent<AudioSource>();
         }
-        
+
         //audio.AddComponent<AudioSource>();
 
         audioSource.clip = s.clip;
@@ -201,12 +217,16 @@ public class AudioManager : MonoBehaviour
 
         audioSource.Play();
 
-        if(!s.useOneAudioSource)
+        if (!s.useOneAudioSource)
             StartCoroutine(enqueue());
 
         IEnumerator enqueue()
         {
             yield return new WaitForSeconds(s.clip.length + 1);
+
+            if (s.limitPlayCount && s.playList.Contains(audio))
+                s.playList.Remove(audio);
+
             audioPool.EnqueueObject(audio);
         }
 
@@ -323,6 +343,8 @@ public class Sound
 
     [Space]
     public bool useOneAudioSource = false;
+    public bool limitPlayCount = false;
+    public List<GameObject> playList = new List<GameObject>();
     [HideInInspector]
     public AudioSource useableAudioSource;
 

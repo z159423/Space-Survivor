@@ -241,6 +241,7 @@ MonoBehaviour:
     dropCrystalMinAmount: 0
     dropCrystalmaxAmount: 0
   dieVFXType: 9
+  <dieSound>k__BackingField: explosion1
   moveStrate: 0
   textGenerateOffset:
     minVectorOffset: {x: -1, y: -1}

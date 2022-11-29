@@ -34,6 +34,7 @@ public class EnemyStat : MonoBehaviour
     [Space]
     [SerializeField] private VFXType dieVFXType;
     //[SerializeField] private GameObject DieVFX;
+    [field: SerializeField] public string dieSound {get; private set;} = "kill1";
 
     public bool moveStrate = false;
     private Vector2 movedir;
@@ -108,7 +109,7 @@ public class EnemyStat : MonoBehaviour
 
         spriteRenderer.material = originalMat;
 
-        AudioManager.instance.GenerateAudioAndPlaySFX("kill1", transform.position);
+        AudioManager.instance.GenerateAudioAndPlaySFX(dieSound, transform.position);
     }
 
     protected void ResourceDrop(DropTable dropTable)

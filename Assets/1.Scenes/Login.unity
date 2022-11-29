@@ -552,6 +552,7 @@ MonoBehaviour:
     playerHaveShip: []
     usingShipTrialTime: 
     usingFreeCrystalTime: 
+    version: 
     clearedStageNumber: 
 --- !u!114 &473405378
 MonoBehaviour:

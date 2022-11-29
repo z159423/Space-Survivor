@@ -45,9 +45,12 @@ public class BossStat : EnemyStat
         else
         {
             EnemyGenerator.instance.bossFighting = false;
+            CinemachinShake.instance.ShakeCamera(5, 1f);
         }
 
         EnemyGenerator.instance.deleteBossWall();
+
+        
 
     }
 
