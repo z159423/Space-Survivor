@@ -59,14 +59,13 @@ public class IAPManager : MonoBehaviour, IStoreListener
                 {
                     initialized = true;
                     HadPurchased();
+                    UpdateUI2();
                     break;
                 }
                 else
                 {
 
                 }
-
-                UpdateUI2();
             }
         }
 
@@ -307,7 +306,6 @@ public class IAPManager : MonoBehaviour, IStoreListener
         try
         {
             var product = m_StoreController.products.WithID(removeAdsId);
-
             print(UserDataManager.instance);
             print(UserDataManager.instance.currentUserData);
             print(UserDataManager.instance.currentUserData.RemoveAds);
@@ -315,7 +313,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
             if (product.hasReceipt || UserDataManager.instance.currentUserData.RemoveAds)
             {
-                foreach(GameObject btn in removeAdsButtons)
+                foreach (GameObject btn in removeAdsButtons)
                 {
                     btn.SetActive(false);
                 }
@@ -336,6 +334,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
     /// </summary>
     public bool HadPurchased()
     {
+        return false;
+
         var product = m_StoreController.products.WithID(removeAdsId);
         bool purchased = false;
 
