@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Firebase.Analytics;
 
 public class GPGSLogin : MonoBehaviour
 {
@@ -45,8 +44,6 @@ public class GPGSLogin : MonoBehaviour
 
                 print("GPGS 로그인 성공.");
 
-                FirebaseAnalytics.LogEvent("GPGS_Login_Success");
-
                 //SceneManager.LoadScene("MainScene");
             }
             else
@@ -62,8 +59,6 @@ public class GPGSLogin : MonoBehaviour
                 UserDataManager.instance.LoadCurrentUserDataFromLocal();
 
                 SceneManager.LoadScene("MainScene");
-
-                FirebaseAnalytics.LogEvent("GPGS_Login_Failed");
             }
         });
     }

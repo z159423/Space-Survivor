@@ -37,8 +37,6 @@ MonoBehaviour:
     - PsdPlugin
     - PPv2URPConverters
     - IngameDebugConsole.Editor
-    - PlayServicesResolver.Utils.Editor
-    - PlayServicesResolver.Installer.Editor
     - GoogleMobileAds.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
