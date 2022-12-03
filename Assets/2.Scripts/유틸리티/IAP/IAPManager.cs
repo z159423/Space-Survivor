@@ -311,7 +311,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
             print(UserDataManager.instance.currentUserData.RemoveAds);
             print(product.hasReceipt);
 
-            if (product.hasReceipt || UserDataManager.instance.currentUserData.RemoveAds)
+            if (UserDataManager.instance.currentUserData.RemoveAds)
             {
                 foreach (GameObject btn in removeAdsButtons)
                 {

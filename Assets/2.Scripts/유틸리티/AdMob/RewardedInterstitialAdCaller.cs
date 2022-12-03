@@ -323,7 +323,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             //StartCoroutine(startTrial());
             rewardList.Add(startTrial());
 
-            
+
 
         }
     }
@@ -405,7 +405,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             //StartCoroutine(revive());
             rewardList.Add(revive());
 
-            
+
         }
     }
 
@@ -486,7 +486,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             //StartCoroutine(crystalDouble());
             rewardList.Add(crystalDouble());
 
-            
+
         }
     }
 
@@ -685,12 +685,38 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public double GetFreeCrystalLeftTime()
     {
-        return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        try
+        {
+            return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        }
+        catch (FormatException e)
+        {
+            FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+
+            UserDataManager.instance.currentUserData.usingFreeCrystalTime = "2000-01-01 01:01:01";
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+
+            return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        }
     }
 
     public double GetTrialShipLeftTime()
     {
-        return shipTrialWaitTime - Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        try
+        {
+            return shipTrialWaitTime - Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        }
+        catch (FormatException e)
+        {
+            FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+
+            UserDataManager.instance.currentUserData.usingShipTrialTime = "2000-01-01 01:01:01";
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+
+            return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        }
     }
 
     private void HideDoubleCrystalBtn()
