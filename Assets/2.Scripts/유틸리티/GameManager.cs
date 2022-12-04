@@ -38,12 +38,12 @@ public class GameManager : MonoBehaviour
     public Transform playerTrans;
     [SerializeField] private GameObject[] editmodeUI;
     [SerializeField] private StageSelect stageSelect;
-    [field: SerializeField] public GameObject savingIcon {get; private set;}
+    [field: SerializeField] public GameObject savingIcon { get; private set; }
 
     [Space]
 
     [SerializeField] public ShipObject currentShip;
-    [field: SerializeField] public ShipList shipList {get; private set;}
+    [field: SerializeField] public ShipList shipList { get; private set; }
     [SerializeField] private GameObject tiralBtn;
     [SerializeField] private GameObject buyShipBtn;
     [SerializeField] private TextMeshProUGUI shipCostText;
@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviour
         SelectShip(currentShipNumber);
 
         AudioManager.instance.FindBGM("menu2");
+
+        UserDataManager.onChangeCrystalValue += InitShipBuyButton;
     }
 
     public void ResetTime()
@@ -361,12 +363,17 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        //플레이어가 소지중인 함선이 아닐경우 함선 구매버튼 활성화
-        if (!UserDataManager.instance.CheckPlayerHaveShip(shipObject.shipObjectData.shipCode) && shipObject.shipObjectData.shipCost > 0)
+        InitShipBuyButton();
+    }
+
+    //플레이어가 소지중인 함선이 아닐경우 함선 구매버튼 활성화
+    private void InitShipBuyButton()
+    {
+        if (!UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipObjectData.shipCode) && currentShip.shipObjectData.shipCost > 0)
         {
             shipBuyBtn.SetActive(true);
             shipTrialBtn.SetActive(true);
-            shipCostText.text = shipObject.shipObjectData.shipCost.ToString();
+            shipCostText.text = currentShip.shipObjectData.shipCost.ToString();
 
             // if (currentShip.shipCost > UserDataManager.instance.currentUserData.crystal)
             // {

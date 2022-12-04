@@ -662,26 +662,26 @@ MonoBehaviour:
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
       count: 0
-    - name: Attacker 1
+    - name: Scout 2
       StartWaveTime: 420
       StopWaveTime: 421
       waveType: 2
       summonCycleTime: 2
-      enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+      enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
       count: 0
-    - name: Attacker 1
+    - name: Attacker 2
       StartWaveTime: 480
       StopWaveTime: 481
       waveType: 2
       summonCycleTime: 2
-      enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+      enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
       count: 0
-    - name: Attacker 1
+    - name: Attacker 2
       StartWaveTime: 510
       StopWaveTime: 511
       waveType: 2
       summonCycleTime: 2
-      enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
+      enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
       count: 0
     - name: Hyper Scout 1
       StartWaveTime: 700

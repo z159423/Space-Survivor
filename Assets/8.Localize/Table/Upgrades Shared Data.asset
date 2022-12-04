@@ -79,6 +79,10 @@ MonoBehaviour:
     m_Key: IncreaseHitCount
     m_Metadata:
       m_Items: []
+  - m_Id: 62000122647232512
+    m_Key: IncreaseDroneNumber
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

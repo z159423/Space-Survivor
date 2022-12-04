@@ -84,31 +84,38 @@ public class GPGSManager
     { // 클라우드 서비스를 이용하여 저장합니다.
         ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
 
-        savedGameClient.OpenWithAutomaticConflictResolution(
-            filename,
-            DataSource.ReadCacheOrNetwork,
-            ConflictResolutionStrategy.UseLongestPlaytime,
-            (status, game) =>
-            {
-                if (status == SavedGameRequestStatus.Success)
-                {
-                    var updatedMetadata = new SavedGameMetadataUpdate.Builder().Build();
-                    savedGameClient.CommitUpdate(
-                        game,
-                        updatedMetadata,
-                        System.Text.Encoding.UTF8.GetBytes(serializedFile),
-                        (ustatus, ugame) =>
+        if (savedGameClient == null)
+            callback?.Invoke(false);
+        else
+        {
+            savedGameClient.OpenWithAutomaticConflictResolution(
+                        filename,
+                        DataSource.ReadCacheOrNetwork,
+                        ConflictResolutionStrategy.UseLongestPlaytime,
+                        (status, game) =>
                         {
-                            callback?.Invoke(ustatus == SavedGameRequestStatus.Success);
+                            if (status == SavedGameRequestStatus.Success)
+                            {
+                                var updatedMetadata = new SavedGameMetadataUpdate.Builder().Build();
+                                savedGameClient.CommitUpdate(
+                                    game,
+                                    updatedMetadata,
+                                    System.Text.Encoding.UTF8.GetBytes(serializedFile),
+                                    (ustatus, ugame) =>
+                                    {
+                                        callback?.Invoke(ustatus == SavedGameRequestStatus.Success);
+                                    }
+                                );
+                            }
+                            else
+                            {
+                                callback?.Invoke(false);
+                            }
                         }
                     );
-                }
-                else
-                {
-                    callback?.Invoke(false);
-                }
-            }
-        );
+        }
+
+
     }
     public void LoadWithCloud(string filename, Action<bool, string> callback = null)
     { // 클라우드 서비스를 이용하여 로드합니다.
@@ -144,27 +151,33 @@ public class GPGSManager
         );
     }
 
-    
+
     public void DelectWithCloud(string filename, Action<bool> callback = null)
     { // 클라우드 서비스에 저장된 데이터를 삭제합니다.
         ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
 
-        savedGameClient.OpenWithAutomaticConflictResolution(
-            filename,
-            DataSource.ReadCacheOrNetwork,
-            ConflictResolutionStrategy.UseLongestPlaytime,
-            (status, game) =>
-            {
-                if (status == SavedGameRequestStatus.Success)
-                {
-                    savedGameClient.Delete(game);
-                    callback?.Invoke(true);
-                }
-                else
-                {
-                    callback?.Invoke(false);
-                }
-            }
-        );
+        if (savedGameClient == null)
+            callback?.Invoke(false);
+        else
+        {
+            savedGameClient.OpenWithAutomaticConflictResolution(
+                        filename,
+                        DataSource.ReadCacheOrNetwork,
+                        ConflictResolutionStrategy.UseLongestPlaytime,
+                        (status, game) =>
+                        {
+                            if (status == SavedGameRequestStatus.Success)
+                            {
+                                savedGameClient.Delete(game);
+                                callback?.Invoke(true);
+                            }
+                            else
+                            {
+                                callback?.Invoke(false);
+                            }
+                        }
+                    );
+        }
+
     }
 }

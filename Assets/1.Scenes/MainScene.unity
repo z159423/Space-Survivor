@@ -12533,8 +12533,8 @@ MonoBehaviour:
     bgm: 0
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
-    useOneAudioSource: 0
-    limitPlayCount: 1
+    useOneAudioSource: 1
+    limitPlayCount: 0
     playList: []
     useableAudioSource: {fileID: 0}
   - name: siren
@@ -12585,8 +12585,8 @@ MonoBehaviour:
     bgm: 0
     audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
     source: {fileID: 0}
-    useOneAudioSource: 0
-    limitPlayCount: 1
+    useOneAudioSource: 1
+    limitPlayCount: 0
     playList: []
     useableAudioSource: {fileID: 0}
   - name: laser1
@@ -17331,7 +17331,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.46205357, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -41341,7 +41341,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.46205357, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -46776,7 +46776,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1485360729
@@ -62442,7 +62442,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 1
+  editmode: 0
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:

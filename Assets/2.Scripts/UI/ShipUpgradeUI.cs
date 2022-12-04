@@ -57,6 +57,8 @@ public class ShipUpgradeUI : MonoBehaviour
         shipSelectPageNum = shipList.shipList.Count / 3;
 
         GenerateShipSelectNode();
+
+        UserDataManager.onChangeCrystalValue += InitShipBuyButton;
     }
 
     private void Update()
@@ -78,17 +80,9 @@ public class ShipUpgradeUI : MonoBehaviour
 
         SetUpgradeModuleSlot(data, shipObject);
 
-        if (UserDataManager.instance.CheckPlayerHaveShip(data.shipCode))
-        {
-            shipUnlockButton.SetActive(false);
-        }
-        else
-        {
-            shipUnlockButton.SetActive(true);
-        }
+        shopCostText.text = data.shipCost.ToString();
 
-        shopCostText.text =  data.shipCost.ToString();
-
+        InitShipBuyButton();
 
         if (UserDataManager.instance.currentUserData.crystal >= currentShipObject.shipObjectData.shipCost)
             shipUnlockButton.GetComponent<Button>().interactable = true;
@@ -119,6 +113,19 @@ public class ShipUpgradeUI : MonoBehaviour
         }
     }
 
+    //함선 구매버튼 활성화 여부
+    private void InitShipBuyButton()
+    {
+        if (UserDataManager.instance.CheckPlayerHaveShip(currentShipObject.shipObjectData.shipCode))
+        {
+            shipUnlockButton.SetActive(false);
+        }
+        else
+        {
+            shipUnlockButton.SetActive(true);
+        }
+    }
+
     public void SetUpgradeModuleSlot(ShipObjectData data, ShipObject shipObject)
     {
         var currentShipData = UserDataManager.instance.GetShipData_currentVersion(data.shipCode);
@@ -140,7 +147,7 @@ public class ShipUpgradeUI : MonoBehaviour
                     break;
             }
 
-            
+
             SetUpgradeSlots(UserDataManager.instance.GetShipData(data.shipCode).GetCurrentModule(data.shipUpgradeModuleList[i].upgradeType), shipObject);
 
         }

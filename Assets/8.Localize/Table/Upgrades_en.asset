@@ -93,6 +93,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1427024619712020493
+  - m_Id: 62000122647232512
+    m_Localized: Increase number of Drones
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

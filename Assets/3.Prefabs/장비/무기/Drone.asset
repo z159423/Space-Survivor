@@ -85,21 +85,21 @@ MonoBehaviour:
   currentUpgradeModules: []
   UpgradeModulesForLevel:
   - upgradeModules:
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: f06701434d5f0b8469b0ae4e95830524, type: 2}
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: f06701434d5f0b8469b0ae4e95830524, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: f06701434d5f0b8469b0ae4e95830524, type: 2}
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: f06701434d5f0b8469b0ae4e95830524, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: f06701434d5f0b8469b0ae4e95830524, type: 2}
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: f06701434d5f0b8469b0ae4e95830524, type: 2}
   maxWeaponLevel: 6

@@ -16,6 +16,9 @@ public class UserDataManager : MonoBehaviour
 
     public UserData currentUserData = new UserData();
 
+    public delegate void OnChangeCrystalValue();
+    public static OnChangeCrystalValue onChangeCrystalValue;
+
     private void Awake()
     {
         instance = this;
@@ -81,7 +84,7 @@ public class UserDataManager : MonoBehaviour
     {
         string filePath = Application.persistentDataPath + userDataName;
 
-        if(File.Exists(filePath))
+        if (File.Exists(filePath))
         {
             return true;
         }
@@ -116,11 +119,11 @@ public class UserDataManager : MonoBehaviour
         // check if file exists
         if (!File.Exists(filePath))
         {
-            print("���� �����Ͱ� �������� �ʽ��ϴ�.");
+            print("로컬데이터가 존재하지 않아 삭제를 실패하였습니다.");
         }
         else
         {
-            print("���� �����͸� �����Ͽ����ϴ�.");
+            print("로컬데이터를 삭제하였습니다.");
 
             File.Delete(filePath);
 
@@ -157,6 +160,8 @@ public class UserDataManager : MonoBehaviour
         CrystalDisplay.instance.ChangeCrystalText(currentUserData.crystal);
 
         GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+
+        onChangeCrystalValue.Invoke();
         //SaveUserData(currentUserData);
     }
 
@@ -244,6 +249,5 @@ public class UserDataManager : MonoBehaviour
 
         SaveCurrentDate();
     }
-
 }
 

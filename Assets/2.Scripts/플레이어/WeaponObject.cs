@@ -112,7 +112,7 @@ public class WeaponObject : ScriptableObject, IEquipment
                 yield return new WaitForSecondsRealtime(firingInterval.GetFinalStatValue());
 
             if (fireSFX != "")
-                AudioManager.instance.GenerateAudioAndPlaySFX(fireSFX,firepos.position);
+                AudioManager.instance.GenerateAudioAndPlaySFX(fireSFX, firepos.position);
 
         }
 
@@ -160,6 +160,10 @@ public class WeaponObject : ScriptableObject, IEquipment
                     break;
 
                 case upgradeModuleType.IncreasedProjectiles:
+                    projectileAmount += Mathf.RoundToInt(modules.upgradeModules[i].value1);
+                    break;
+
+                case upgradeModuleType.IncreaseDroneNumber:
                     projectileAmount += Mathf.RoundToInt(modules.upgradeModules[i].value1);
                     break;
 

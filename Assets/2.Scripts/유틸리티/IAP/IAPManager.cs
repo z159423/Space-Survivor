@@ -136,11 +136,11 @@ public class IAPManager : MonoBehaviour, IStoreListener
     {
         UserDataManager.instance.currentUserData.RemoveAds = true;
 
-        //UserDataManager.instance.SaveUserData(UserDataManager.instance.currentUserData);
-
         GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
         FirebaseAnalytics.LogEvent("IAP_RemoveAdsPurchaseSuccess");
+
+        CheckRemoveAdsHasPurchase();
 
         UpdateUI2();
     }
