@@ -185,8 +185,8 @@ public class GoogleCloud : MonoBehaviour
                 //if (callback != null)
                 //    callback.Invoke(true, "MainScene");
 
+                //메인씬 로딩바 구현
                 StartCoroutine(LoadAsynchronosly());
-
                 IEnumerator LoadAsynchronosly()
                 {
                     AsyncOperation operation = SceneManager.LoadSceneAsync("MainScene");

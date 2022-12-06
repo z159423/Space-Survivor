@@ -50,7 +50,7 @@ public class GPGSLoginDisplay : MonoBehaviour
     {
         if (PlayGamesPlatform.Instance.IsAuthenticated() == true)
         {
-            userID.text = "ID : " + PlayGamesPlatform.Instance.GetUserId();
+            userID.text = "ID : " + PlayGamesPlatform.Instance.GetUserDisplayName();
             log.text = "Google Login Success!";
 
             loginBtn.gameObject.SetActive(false);

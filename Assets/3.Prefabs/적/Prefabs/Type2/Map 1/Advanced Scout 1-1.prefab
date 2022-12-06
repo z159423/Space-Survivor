@@ -133,16 +133,17 @@ MonoBehaviour:
     PercentModifiers: []
   dropTable:
     expType: 0
-    crystalType: 2
+    crystalType: 1
     crystalDropPercent: 100
     ItemDropPercent: 10
     minDropForce: 0
-    maxDropForce: 0
-    dropExpMinAmount: 1
-    dropExpmaxAmount: 1
-    dropCrystalMinAmount: 1
-    dropCrystalmaxAmount: 1
+    maxDropForce: 150
+    dropExpMinAmount: 10
+    dropExpmaxAmount: 20
+    dropCrystalMinAmount: 4
+    dropCrystalmaxAmount: 7
   dieVFXType: 1
+  <dieSound>k__BackingField: kill1
   moveStrate: 0
   textGenerateOffset:
     minVectorOffset: {x: -0.15, y: -0.15}
