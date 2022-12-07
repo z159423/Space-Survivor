@@ -25081,8 +25081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ac3b020ce0a8a4ea0fb157f87528c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxExp: 50
-  maxExpIncreaseValue: 60
+  maxExp: 30
+  maxExpIncreaseValue: 50
   getMineralBouse:
     baseValue: 1
     minValue: 0

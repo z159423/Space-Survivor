@@ -664,23 +664,43 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public bool IsFreeCrystalReady()
     {
-        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        try
+        {
+            double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
 
-        //print(timeDiff + " " + freeCrystalWaitTime);
-        if (timeDiff < freeCrystalWaitTime)
-            return false;
-        else
+            //print(timeDiff + " " + freeCrystalWaitTime);
+            if (timeDiff < freeCrystalWaitTime)
+                return false;
+            else
+                return true;
+
+        }
+        catch (FormatException e)
+        {
+            Debug.LogError("Date Time Parse Error : / " +  UserDataManager.instance.currentUserData.usingFreeCrystalTime + " / " + e);
+
             return true;
+        }
     }
 
     public bool IsShipTrialReady()
     {
-        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        try
+        {
+            double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
 
-        if (timeDiff < shipTrialWaitTime)
-            return false;
-        else
+            if (timeDiff < shipTrialWaitTime)
+                return false;
+            else
+                return true;
+
+        }
+        catch (FormatException e)
+        {
+            Debug.LogError("Date Time Parse Error : " +  UserDataManager.instance.currentUserData.usingShipTrialTime + " / " + e);
+
             return true;
+        }
     }
 
     public double GetFreeCrystalLeftTime()
@@ -692,6 +712,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         catch (FormatException e)
         {
             FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+
+            Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingFreeCrystalTime + " / " + e);
 
             UserDataManager.instance.currentUserData.usingFreeCrystalTime = "2000-01-01 01:01:01";
 
@@ -710,6 +732,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         catch (FormatException e)
         {
             FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+
+            Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingShipTrialTime + " / " + e);
 
             UserDataManager.instance.currentUserData.usingShipTrialTime = "2000-01-01 01:01:01";
 
