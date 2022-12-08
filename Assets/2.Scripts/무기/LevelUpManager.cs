@@ -29,8 +29,8 @@ public class LevelUpManager : MonoBehaviour
 
     [Space]
 
-    [SerializeField] private int maxWeaponCount = 6;
-    [SerializeField] private int maxPassiveCount = 4;
+    [SerializeField] public static readonly int maxWeaponCount = 6;
+    [SerializeField] public static readonly int maxPassiveCount = 4;
 
     [Space]
 
@@ -43,6 +43,11 @@ public class LevelUpManager : MonoBehaviour
     private List<IEquipment> currentObtainableList = new List<IEquipment>();
     private List<GameObject> currentUpgradePanel = new List<GameObject>();
     private List<GameObject> crystalPanel = new List<GameObject>();
+
+    private List<IEquipment> currentUpgradeModule = new List<IEquipment>();
+    public static int getAllUpgradeCount { get; set; } = 0;
+    [SerializeField] private int max_getAllUpgradeCount = 3;
+    [SerializeField] private GameObject getAllBtn;
 
 
     public static LevelUpManager instance;
@@ -58,7 +63,7 @@ public class LevelUpManager : MonoBehaviour
 
         UpgradeUI.SetActive(true);
 
-        UpgradeSlotParent.DOScale(new Vector3(1,1,1),0.2f).SetEase(Ease.Linear).OnComplete(()=> upgradeSlotCover.SetActive(false)).SetUpdate(true);
+        UpgradeSlotParent.DOScale(new Vector3(1, 1, 1), 0.2f).SetEase(Ease.Linear).OnComplete(() => upgradeSlotCover.SetActive(false)).SetUpdate(true);
 
         Time.timeScale = 0;
     }
@@ -84,7 +89,7 @@ public class LevelUpManager : MonoBehaviour
 
         Time.timeScale = 1;
 
-        UpgradeSlotParent.localScale = new Vector3(0,0,0);
+        UpgradeSlotParent.localScale = new Vector3(0, 0, 0);
         upgradeSlotCover.SetActive(true);
 
         playerStat.whileLevelUp = false;
@@ -92,6 +97,13 @@ public class LevelUpManager : MonoBehaviour
 
     private void MakeWeaponsList()
     {
+        // 모든 업그레이드 획득 RV 버튼 활성화 여부
+        getAllUpgradeCount--;
+        if (getAllUpgradeCount <= 0)
+            getAllBtn.SetActive(true);
+        else
+            getAllBtn.SetActive(false);
+
         //ȹ�� ������ ����� �߰�
         currentObtainableList.AddRange(obtainableWeapons);
         //ȹ�� ������ �нú�� �߰�
@@ -120,7 +132,6 @@ public class LevelUpManager : MonoBehaviour
                     currentObtainableList.Remove(currentObtainableList[i]);
                     i--;
                 }
-
             }
         }
 
@@ -139,6 +150,8 @@ public class LevelUpManager : MonoBehaviour
 
             }
         }
+
+        currentUpgradeModule.Clear();
 
         //���ο� ���׷��̵� ���� ����
         for (int i = 0; i < 3; i++)
@@ -168,6 +181,8 @@ public class LevelUpManager : MonoBehaviour
             StartCoroutine(panel.GetComponent<UpgradeSlot>().GetLocalizedWeaponTextAsynce());
             currentObtainableList.Remove(randomWeaponObject);
             currentUpgradePanel.Add(panel);
+
+            currentUpgradeModule.Add(randomWeaponObject);
         }
 
     }
@@ -219,7 +234,7 @@ public class LevelUpManager : MonoBehaviour
 
         //print(passiveEquipment);
 
-        if(passiveEquipment != null)
+        if (passiveEquipment != null)
             passiveEquipment.GetEquipmentSlot(slot.GetComponent<EquipmentSlot>());
     }
 
@@ -265,4 +280,21 @@ public class LevelUpManager : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// 생성된 모든 업그레이드 모듈 획득하기 RV에 사용
+    /// </summary>
+    public void GetAllCurrentUpgrade()
+    {
+        getAllUpgradeCount = max_getAllUpgradeCount;
+
+        for (int i = 0; i < currentUpgradeModule.Count; i++)
+        {
+            playerWeapon.UpgradeWeapon(currentUpgradeModule[i]);
+        }
+
+        playerStat.AfterUpgrade();
+        EndUpgrade();
+    }
+
 }

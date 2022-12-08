@@ -89,6 +89,9 @@ public class PlayerWeapon : MonoBehaviour
         switch (equipment.GetAnyEqupment())
         {
             case AnyEqupment.Weapon:
+                if (LevelUpManager.maxWeaponCount <= weaponPool.Count)
+                    break;
+
                 var newWeapon = Instantiate(equipment.GetWeaponObject());
                 weaponPool.Add(newWeapon);
                 FindFirePos(newWeapon);
@@ -99,6 +102,9 @@ public class PlayerWeapon : MonoBehaviour
                 break;
 
             case AnyEqupment.Passive:
+                if (LevelUpManager.maxPassiveCount <= passivePool.Count)
+                    break;
+
                 var newPassive = Instantiate(equipment.GetPassive());
                 passivePool.Add(newPassive);
                 newPassive.GenerateWhileParticle(transform);
@@ -239,8 +245,6 @@ public class PlayerWeapon : MonoBehaviour
                 AddNewWeapon(weaponObject);
                 break;
         }
-
-
     }
 
     public WeaponObject GetCurrentWeapon(EquipmentType type)

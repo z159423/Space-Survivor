@@ -144,6 +144,8 @@ public class GameManager : MonoBehaviour
         print("현재 함선 데미지 : " + currentShip.shipObjectData.baseDamage.GetFinalStatValueAsInt());
         print("현재 함선 데미지 업그레이드 : " + currentShip.shipObjectData.shipUpgradeModuleList[0].currentUpgrade);
         print("현재 함선 체력 : " + currentShip.shipObjectData.baseMaxHp.GetFinalStatValueAsInt());
+
+        LevelUpManager.getAllUpgradeCount = 0;
     }
 
     public void ReplayGame()
@@ -193,6 +195,7 @@ public class GameManager : MonoBehaviour
         RewardedInterstitialAdCaller.instance.useCrystalDoubleThisStage = false;
         RewardedInterstitialAdCaller.instance.ShowDoubleCrystalBtn();
 
+        LevelUpManager.getAllUpgradeCount = 0;
     }
 
     public void Resurrection()

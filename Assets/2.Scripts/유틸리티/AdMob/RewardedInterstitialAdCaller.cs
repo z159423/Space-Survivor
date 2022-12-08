@@ -31,6 +31,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     private RewardedAd reviveRewardedAd;
     [SerializeField] private Button reviveButton;
     private RewardedAd crystalDoubleRewardAd;
+
+    private RewardedAd getAllUpgardeAd;
     [SerializeField] private Button[] crystalDoubleButtons;
     [field: SerializeField] public bool useCrystalDoubleThisStage { get; set; } = false;
 
@@ -75,6 +77,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
         reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
         crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
+        getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
 
         StartCoroutine(RewardAdsTimeChecking());
     }
@@ -485,7 +488,85 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             //StartCoroutine(crystalDouble());
             rewardList.Add(crystalDouble());
+        }
+    }
 
+    public RewardedAd CreateAndLoadRewardedAd_GetAllUpgarde(string adUnitId)
+    {
+        RewardedAd rewardedAd = new RewardedAd(adUnitId);
+
+        //보상형 광고가 완료되었을때
+        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        //보상형 광고 로드 실패함
+        rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
+        //보상형 광고 표시중
+        rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        //보상형 광고 표시가 실패하였습니다.
+        rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
+        //사용자가 보상형 광고를 취소하였을때
+        rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the rewarded ad with the request.
+        rewardedAd.LoadAd(request);
+        return rewardedAd;
+
+        //보상형 광고 로드가 완료되었을때
+        void HandleRewardedAdLoaded(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("모든 업그레이드 획득 보상형 광고 로드 완료");
+        }
+
+        //보상형 광고 로드 실패함
+        void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+        {
+            MonoBehaviour.print(
+                "모든 업그레이드 획득 보상형 광고 로드를 실패하였습니다: "
+                                 + args.LoadAdError);
+        }
+
+        //보상형 광고 표시중
+        void HandleRewardedAdOpening(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("모든 업그레이드 획득 보상형 광고 표시중");
+        }
+
+        //보상형 광고 표시가 실패하였습니다.
+        void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
+        {
+            MonoBehaviour.print(
+                "모든 업그레이드 획득 보상형 광고 표시를 실패하였습니다: "
+                                 + args.AdError.GetMessage());
+        }
+
+        //보상형 광고창이 닫혔을때
+        void HandleRewardedAdClosed(object sender, EventArgs args)
+        {
+#if UNITY_ANDROID
+            adUnitId = androidAdUnitId;
+#elif UNITY_IPHONE
+             adUnitId = iosAdUnitId;
+#else
+             adUnitId = "unexpected_platform";
+#endif
+
+            getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
+            MonoBehaviour.print("모든 업그레이드 획득 보상형 광고창이 닫혔습니다.");
+        }
+
+        //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        void HandleUserEarnedReward(object sender, Reward args)
+        {
+            string type = args.Type;
+            double amount = args.Amount;
+
+            MonoBehaviour.print("모든 업그레이드 획득 보상형 광고를 시청완료했습니다.");
+
+            //rewardList.Add(crystalDouble());
+            rewardList.Add(getAllUpgrade());
 
         }
     }
@@ -596,6 +677,27 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
     }
 
+    //모든 업그레이드 확득 RV
+    public void WatchRewardAds_GetAllUpgrade()
+    {
+        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
+        if (this.getAllUpgardeAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        {
+            this.getAllUpgardeAd.Show();
+        }
+        else
+        {
+            if (UserDataManager.instance.currentUserData.RemoveAds)
+                print("광고 제거를 구매해 광고 호출을 안함");
+            else if (!this.getAllUpgardeAd.IsLoaded())
+                print("광고가 없습니다");
+            else
+                print("알수없는 이유로 광고 호출에 실패하였습니다.");
+
+            StartCoroutine(getAllUpgrade());
+        }
+    }
+
     //부활
     IEnumerator revive()
     {
@@ -662,6 +764,16 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         FirebaseAnalytics.LogEvent("RvAdsComplete_FreeCrystal");
     }
 
+    //모든 업그레이드 획득
+    IEnumerator getAllUpgrade()
+    {
+        yield return null;
+
+        LevelUpManager.instance.GetAllCurrentUpgrade();
+
+        FirebaseAnalytics.LogEvent("RvAdsComplete_GetAllUpgarde");
+    }
+
     public bool IsFreeCrystalReady()
     {
         try
@@ -678,6 +790,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         catch (FormatException e)
         {
             Debug.LogError("Date Time Parse Error : / " +  UserDataManager.instance.currentUserData.usingFreeCrystalTime + " / " + e);
+
+            UserDataManager.instance.currentUserData.usingFreeCrystalTime = "2000-01-01 01:01:01";
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
             return true;
         }
@@ -698,6 +814,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         catch (FormatException e)
         {
             Debug.LogError("Date Time Parse Error : " +  UserDataManager.instance.currentUserData.usingShipTrialTime + " / " + e);
+
+            UserDataManager.instance.currentUserData.usingShipTrialTime = "2000-01-01 01:01:01";
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
             return true;
         }

@@ -103,7 +103,7 @@ MonoBehaviour:
   type: 5
   maxHp: 600
   damage:
-    baseValue: 20
+    baseValue: 13
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
     dropCrystalMinAmount: 1
     dropCrystalmaxAmount: 1
   dieVFXType: 8
+  <dieSound>k__BackingField: kill1
   moveStrate: 0
   textGenerateOffset:
     minVectorOffset: {x: -0.15, y: -0.15}
