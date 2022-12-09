@@ -589,6 +589,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             if (UserDataManager.instance.currentUserData.usingFreeCrystalTime != null)
                 print(timeDiff);
 
+            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_FreeCrystal");
+
             this.crystallAddRewardedAd.Show();
         }
         else
@@ -599,6 +601,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
+
+            FirebaseAnalytics.LogEvent("RvAdsCallFailed_FreeCrystal");
 
             StartCoroutine(getFreeCrystal());
         }
@@ -619,6 +623,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         if (this.shipTrialRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
+            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_trialShip");
             this.shipTrialRewardedAd.Show();
         }
         else
@@ -629,6 +634,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
+
+            FirebaseAnalytics.LogEvent("RvAdsCallFailed_trialShip");
 
             StartCoroutine(startTrial());
         }
@@ -641,6 +648,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         if (this.reviveRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
+            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_revive");
             this.reviveRewardedAd.Show();
         }
         else
@@ -652,6 +660,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
+            FirebaseAnalytics.LogEvent("RvAdsCallFailed_revive");
+
             StartCoroutine(revive());
         }
     }
@@ -662,6 +672,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
         if (this.crystalDoubleRewardAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
+            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_crystalDouble");
             this.crystalDoubleRewardAd.Show();
         }
         else
@@ -673,6 +684,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
+            FirebaseAnalytics.LogEvent("RvAdsCallFailed_crystalDouble");
+
             StartCoroutine(crystalDouble());
         }
     }
@@ -683,6 +696,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
         if (this.getAllUpgardeAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
+            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_GetAllUpgrade");
             this.getAllUpgardeAd.Show();
         }
         else
@@ -693,6 +707,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
+
+            FirebaseAnalytics.LogEvent("RvAdsCallFailed_GetAllUpgrade");
 
             StartCoroutine(getAllUpgrade());
         }
@@ -789,7 +805,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
         catch (FormatException e)
         {
-            Debug.LogError("Date Time Parse Error : / " +  UserDataManager.instance.currentUserData.usingFreeCrystalTime + " / " + e);
+            Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingFreeCrystalTime + " / " + e);
 
             UserDataManager.instance.currentUserData.usingFreeCrystalTime = "2000-01-01 01:01:01";
 
@@ -813,7 +829,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
         catch (FormatException e)
         {
-            Debug.LogError("Date Time Parse Error : " +  UserDataManager.instance.currentUserData.usingShipTrialTime + " / " + e);
+            Debug.LogError("Date Time Parse Error : " + UserDataManager.instance.currentUserData.usingShipTrialTime + " / " + e);
 
             UserDataManager.instance.currentUserData.usingShipTrialTime = "2000-01-01 01:01:01";
 
