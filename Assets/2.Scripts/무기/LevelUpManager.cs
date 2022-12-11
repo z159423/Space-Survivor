@@ -293,6 +293,11 @@ public class LevelUpManager : MonoBehaviour
             playerWeapon.UpgradeWeapon(currentUpgradeModule[i]);
         }
 
+        for(int i = 0; i < crystalPanel.Count; i++)
+        {
+            LevelUpManager.instance.playerStat.GetCrystal(crystalPanel[i].GetComponent<CrystalSlot>().crystalValue);
+        }
+
         playerStat.AfterUpgrade();
         EndUpgrade();
     }

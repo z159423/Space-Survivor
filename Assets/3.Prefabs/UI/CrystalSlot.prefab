@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ec494138992264ca07e44469254df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalValue: 25
+  crystalValue: 10
   crystalString: 
 --- !u!1 &8406098325983204024
 GameObject:
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD06C\uB9AC\uC2A4\uD0C8 25\uAC1C\uB97C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
+  m_text: "\uD06C\uB9AC\uC2A4\uD0C8 10\uAC1C\uB97C \uD68D\uB4DD\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d69e098062a7694ead09844e556234d, type: 2}
   m_sharedMaterial: {fileID: -7357127223567517424, guid: 7d69e098062a7694ead09844e556234d, type: 2}
