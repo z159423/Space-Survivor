@@ -65,7 +65,7 @@ MonoBehaviour:
     MaxValue: 1000
     FloatModifiers: []
     PercentModifiers: []
-  knockBackForce: 3
+  knockBackForce: 2
   deleteOnTime: 1
   deleteTime: 5
   deleteVFXType: 4

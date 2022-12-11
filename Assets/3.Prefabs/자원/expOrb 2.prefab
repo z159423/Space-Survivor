@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  expValue: 30
+  expValue: 20
   crystalValue: 0
   startPullForce: -5
   pullForceIncrease: 20
