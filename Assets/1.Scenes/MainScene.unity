@@ -17331,7 +17331,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.46205357, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -41341,7 +41341,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.46205357, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -62803,7 +62803,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 0
+  editmode: 1
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:
@@ -62856,6 +62856,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a5ed5bd980839ce4e89c5359b3c3f16b, type: 2}
   - {fileID: 11400000, guid: 1fa75a0e36b537b4fbb420c76ea914f2, type: 2}
   - {fileID: 11400000, guid: 6194fe70e85f5e54a99e5c31f301ba19, type: 2}
+  - {fileID: 11400000, guid: ec2d847a2ce7b6140832a33adf68543e, type: 2}
   obtainablePassives:
   - {fileID: 11400000, guid: 6bb5b0d47685ebd43b58ede2f0807dce, type: 2}
   - {fileID: 11400000, guid: 41474693e53b40e4d82d20355f52e7ab, type: 2}
