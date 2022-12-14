@@ -31,7 +31,7 @@ MonoBehaviour:
     MaxValue: 1000
     FloatModifiers: []
     PercentModifiers: []
-  currentSizeVector: {x: 0.6, y: 0.6, z: 0.6}
+  currentSizeVector: {x: 0.9, y: 0.9, z: 0.9}
   currentSize:
     baseValue: 1
     minValue: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
     PercentModifiers: []
   ready: 1
   coolTime:
-    baseValue: 10
+    baseValue: 6
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -86,17 +86,23 @@ MonoBehaviour:
   UpgradeModulesForLevel:
   - upgradeModules:
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
+    - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
     - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   maxWeaponLevel: 6

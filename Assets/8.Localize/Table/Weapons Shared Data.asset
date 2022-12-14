@@ -159,6 +159,14 @@ MonoBehaviour:
     m_Key: Drone_D
     m_Metadata:
       m_Items: []
+  - m_Id: 65834843076509696
+    m_Key: SpiralVortex
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65835085192708096
+    m_Key: SpiralVortex_D
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

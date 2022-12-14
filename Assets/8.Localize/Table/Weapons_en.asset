@@ -164,6 +164,14 @@ MonoBehaviour:
     m_Localized: Spawns a drone that intercepts nearby enemies.
     m_Metadata:
       m_Items: []
+  - m_Id: 65834843076509696
+    m_Localized: Spiral Vortex
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65835085192708096
+    m_Localized: Create a vortex and attack the enemies that came inside.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -208,12 +208,20 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
                 OffProjectile();
             }
 
-            //적에게 들어가는 실제 데미지
-            int currentDamage = Mathf.RoundToInt((damage.GetFinalStatValueAsInt() + playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()) * playerWeapon.additionalDamage.GetFinalStatValue());
-
-            collision.GetComponent<EnemyStat>().TakeDamage(currentDamage);
-            collision.GetComponent<EnemyStat>().Knockback(collision.bounds.center, knockBackForce);
+            TakeDamage(collision);
         }
+    }
+
+    protected void TakeDamage(Collider2D collision)
+    {
+        if (!collision.gameObject.activeSelf)
+            return;
+
+        //적에게 들어가는 실제 데미지
+        int currentDamage = Mathf.RoundToInt((damage.GetFinalStatValueAsInt() + playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()) * playerWeapon.additionalDamage.GetFinalStatValue());
+
+        collision.GetComponent<EnemyStat>().TakeDamage(currentDamage);
+        collision.GetComponent<EnemyStat>().Knockback(collision.bounds.center, knockBackForce);
     }
 
     //발사체와 발사체에 부착되어 있는 vfx해제

@@ -9758,6 +9758,8 @@ GameObject:
   - component: {fileID: 8913919476996008702}
   - component: {fileID: 8913919476996008697}
   - component: {fileID: 8913919476996008700}
+  - component: {fileID: 5600604869232412240}
+  - component: {fileID: 8789079644873737746}
   m_Layer: 0
   m_Name: Spiral Vortex
   m_TagString: Untagged
@@ -9795,7 +9797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 22
   damage:
-    baseValue: 0
+    baseValue: 5
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -9812,7 +9814,7 @@ MonoBehaviour:
     PercentModifiers: []
   knockBackForce: 0
   deleteOnTime: 1
-  deleteTime: 7
+  deleteTime: 5
   deleteVFXType: 0
   Spread: 0
   spreadOffset: {x: 0, y: 0, z: 0}
@@ -9823,6 +9825,7 @@ MonoBehaviour:
   vfxs: []
   trails: []
   trail: {fileID: 0}
+  spawnRadius: 3
 --- !u!60 &8913919476996008697
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9830,7 +9833,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8913919476996008696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -9865,7 +9868,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8913919476996008696}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -9877,6 +9880,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &5600604869232412240
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8913919476996008696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9308569b9330b1041b2039cda4a329aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &8789079644873737746
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8913919476996008696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.82
 --- !u!1 &8913919477376744456
 GameObject:
   m_ObjectHideFlags: 0
@@ -9886,7 +9925,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8913919477376744457}
-  - component: {fileID: 8913919477376744462}
   m_Layer: 0
   m_Name: Vortex Particle
   m_TagString: Untagged
@@ -9912,26 +9950,6 @@ Transform:
   m_Father: {fileID: 8913919476996008703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8913919477376744462
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8913919477376744456}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e7d0340908fc53f40a1198f3207e1cc5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8913919477409772319
 GameObject:
   m_ObjectHideFlags: 0
