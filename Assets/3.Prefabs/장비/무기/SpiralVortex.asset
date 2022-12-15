@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeProjectile: []
   projectilePrefab: {fileID: 8913919476996008696, guid: 95ffe36fc31f885489e501e0972d4326, type: 3}
-  weaponImage: {fileID: 21300000, guid: 25b2e64593b25a8499e130cdf25f262a, type: 3}
+  weaponImage: {fileID: 21300000, guid: 84208518373deb24fbf5a933a450d0aa, type: 3}
   parent: {fileID: 0}
   anyEqupment: 0
   type: 22
@@ -88,21 +88,19 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 17d859710cfb1cb44b071f9de8fce233, type: 2}
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 17d859710cfb1cb44b071f9de8fce233, type: 2}
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 574986d1d06e0744bacfacdfd27c5fd1, type: 2}
     - {fileID: 11400000, guid: 9c2e9ede90b178843883930e48d775ad, type: 2}
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   - upgradeModules:
-    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
-    - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
+    - {fileID: 11400000, guid: 17d859710cfb1cb44b071f9de8fce233, type: 2}
   - upgradeModules:
     - {fileID: 11400000, guid: 7e068cb28a0064a4797dcdfbbf7abae5, type: 2}
-    - {fileID: 11400000, guid: a766c912b6d550f48888e861741709db, type: 2}
+    - {fileID: 11400000, guid: 17d859710cfb1cb44b071f9de8fce233, type: 2}
     - {fileID: 11400000, guid: 06039234555bccc44aaf560971c8d0c0, type: 2}
   maxWeaponLevel: 6

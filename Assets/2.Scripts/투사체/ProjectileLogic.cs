@@ -23,12 +23,12 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
     [Space]
 
     //[SerializeField] private float fireForce = 1000f;
-    [SerializeField] private Stat damage = new Stat();
+    [SerializeField] protected Stat damage = new Stat();
 
     [SerializeField] private Stat hitLimit = new Stat();
     private int hitCount = 0;
 
-    [SerializeField] private int knockBackForce = 0;
+    [SerializeField] protected int knockBackForce = 0;
 
     [Space]
 
@@ -212,7 +212,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         }
     }
 
-    protected void TakeDamage(Collider2D collision)
+    protected virtual void TakeDamage(Collider2D collision)
     {
         if (!collision.gameObject.activeSelf)
             return;

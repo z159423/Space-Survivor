@@ -25,6 +25,8 @@ public class PlayerWeapon : MonoBehaviour
     [Space]
 
     public bool allowFire = false;
+    
+    public static List<int> usingSpiralVortexPosition = new List<int>();
 
 
     private void Update()
