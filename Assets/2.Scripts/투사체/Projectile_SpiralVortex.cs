@@ -71,7 +71,7 @@ public class Projectile_SpiralVortex : ProjectileLogic
             return;
 
         //적에게 들어가는 실제 데미지
-        int currentDamage = Mathf.RoundToInt((damage.GetFinalStatValueAsInt() + (playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()) * playerWeapon.additionalDamage.GetFinalStatValue()) / 3);
+        int currentDamage = Mathf.RoundToInt((damage.GetFinalStatValueAsInt() + (playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()) * playerWeapon.additionalDamage.GetFinalStatValue()) / 2);
 
         collision.GetComponent<EnemyStat>().TakeDamage(currentDamage);
         collision.GetComponent<EnemyStat>().Knockback(collision.bounds.center, knockBackForce);

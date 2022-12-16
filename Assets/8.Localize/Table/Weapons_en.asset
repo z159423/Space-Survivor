@@ -169,7 +169,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65835085192708096
-    m_Localized: Create a vortex and attack the enemies that came inside.
+    m_Localized: Summon a vortex and attack the enemies that came inside.
     m_Metadata:
       m_Items: []
   references:
