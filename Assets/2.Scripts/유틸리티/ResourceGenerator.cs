@@ -77,9 +77,10 @@ public class ResourceGenerator : MonoBehaviour
                     {
                         var rigid = resource.AddComponent<Rigidbody2D>();
 
-                        rigid.drag = 3;
+                        if (rigid != null)
+                            rigid.drag = 3;
 
-                        if (dropTable.maxDropForce > 0)
+                        if (dropTable.maxDropForce > 0 && rigid != null)
                             rigid.AddForce(new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized * Random.Range(0, dropTable.maxDropForce));
 
                         StartCoroutine(deleteRigid());
@@ -88,7 +89,8 @@ public class ResourceGenerator : MonoBehaviour
                         {
                             yield return new WaitForSeconds(5f);
 
-                            Destroy(rigid);
+                            if (rigid != null)
+                                Destroy(rigid);
                         }
                     }
                 }

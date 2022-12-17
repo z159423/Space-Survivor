@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 2098298358969253620}
   - component: {fileID: 601496630676670501}
   - component: {fileID: 1798243952103105757}
+  - component: {fileID: -301832441474951302}
   m_Layer: 7
   m_Name: StartLight2
   m_TagString: Enemy
@@ -214,22 +215,6 @@ MonoBehaviour:
   hitMat: {fileID: 2100000, guid: b64a36710183e4641adda412008764a3, type: 2}
   spriteRenderer: {fileID: 1783410621894429207}
   rigid: {fileID: 601496630676670501}
-  moveSpeed:
-    baseValue: 1.5
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  rotationSpeed:
-    baseValue: 0
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
   dropTable:
     expType: 4
     crystalType: 3
@@ -242,12 +227,12 @@ MonoBehaviour:
     dropCrystalMinAmount: 0
     dropCrystalmaxAmount: 0
   dieVFXType: 9
+  enemyAi: {fileID: -301832441474951302}
   <dieSound>k__BackingField: explosion1
-  moveStrate: 0
   textGenerateOffset:
     minVectorOffset: {x: -1, y: -1}
     maxVectorOffset: {x: 1, y: 1}
-  target: {fileID: 0}
+  <target>k__BackingField: {fileID: 0}
   damageTextGeneartePosition: {fileID: 8133298847855234750}
   bossDropTable:
     expType: 2
@@ -333,6 +318,38 @@ PolygonCollider2D:
       - {x: 2.7363727, y: -1.2245365}
       - {x: 8.06714, y: 1.9611142}
       - {x: 7.9687214, y: 3.4484992}
+--- !u!114 &-301832441474951302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601496630676670503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b3bdcbd19f4714aab7beec66b548c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStat: {fileID: 2098298358969253620}
+  rigid: {fileID: 601496630676670501}
+  <moveStrate>k__BackingField: 0
+  <moveSpeed>k__BackingField:
+    baseValue: 1.5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <rotationSpeed>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <target>k__BackingField: {fileID: 0}
 --- !u!1 &836848110639666991
 GameObject:
   m_ObjectHideFlags: 0

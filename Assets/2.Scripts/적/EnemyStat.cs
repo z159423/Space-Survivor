@@ -22,49 +22,19 @@ public class EnemyStat : MonoBehaviour
 
     [Space]
     [SerializeField] private Rigidbody2D rigid;
-    //[SerializeField] private float moveSpeed = 1f;
-    [SerializeField] private Stat moveSpeed = new Stat();
-
-    //[SerializeField] private float rotationSpeed = 0.05f;
-    [SerializeField] private Stat rotationSpeed = new Stat();
-    [Space]
     [SerializeField] private DropTable dropTable;
-    //[SerializeField] private GameObject expObject;
-    //[SerializeField] private resourceType resourceType;
-    [Space]
     [SerializeField] private VFXType dieVFXType;
-    //[SerializeField] private GameObject DieVFX;
-    [field: SerializeField] public string dieSound {get; private set;} = "kill1";
+    [SerializeField] private EnemyAI enemyAi;
+    [field: SerializeField] public string dieSound { get; private set; } = "kill1";
 
-    public bool moveStrate = false;
-    private Vector2 movedir;
-    private float angle;
     public TextGenerateOffset textGenerateOffset;
 
-    [SerializeField] private Transform target;
+    [field: SerializeField] public Transform target { get; private set; }
 
     private void Start()
     {
         currentHp = maxHp;
         originalMat = spriteRenderer.material;
-    }
-
-    // Update is called once per frame
-    protected void FixedUpdate()
-    {
-        if(target == null)
-        return;
-        
-        if (!moveStrate)
-            movedir = (target.position - transform.position).normalized;
-
-        rigid.velocity += movedir * Time.deltaTime * moveSpeed.GetFinalStatValue();
-
-        angle = Mathf.Atan2((movedir.y + transform.position.y) - transform.position.y,
-            (movedir.x + transform.position.x) - transform.position.x) * Mathf.Rad2Deg;
-
-        if (rotationSpeed.GetFinalStatValue() > 0)
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), rotationSpeed.GetFinalStatValue() * Time.deltaTime);
     }
 
     public virtual void TakeDamage(int damage, bool damageText = true)
@@ -132,22 +102,9 @@ public class EnemyStat : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionStay2D(Collision2D collision)
-    {
-        if(collision.transform.CompareTag("Player"))
-        {
-            collision.transform.GetComponent<PlayerStat>().TakeDamage(damage);
-        }
-    }*/
-
     public new EnemyType GetType()
     {
         return type;
-    }
-
-    public void SetTarget(Transform target)
-    {
-        this.target = target;
     }
 
     public void ResetStat()
@@ -160,8 +117,8 @@ public class EnemyStat : MonoBehaviour
         EnemyGenerator.instance.EnQueueEnemy(this);
         gameObject.SetActive(false);
 
-        moveStrate = false;
-        moveSpeed.ClearPercentModifier();
+        enemyAi.moveStrate = false;
+        enemyAi.moveSpeed.ClearPercentModifier();
     }
 
     public void Knockback(Vector2 hitPoint, int force)
@@ -183,11 +140,11 @@ public class EnemyStat : MonoBehaviour
         return damage.GetFinalStatValueAsInt();
     }
 
-    public void SetMoveStrate()
+    [ContextMenu("CustomMenu/InitValue")]
+    private void InitValue()
     {
-        moveStrate = true;
-        movedir = (target.position - transform.position).normalized;
-        moveSpeed.AddPercentModifier(1);
+        if (TryGetComponent<EnemyAI>(out EnemyAI ai))
+            enemyAi = ai;
     }
 }
 

@@ -26,10 +26,17 @@ public class Projectile : MonoBehaviour
         if (trail != null)
         {
             trail.Clear();
-            trail.enabled = true;
-            trail.emitting = true;
-        }
 
+            StartCoroutine(delay());
+
+            IEnumerator delay()
+            {
+                yield return null;
+
+                trail.enabled = true;
+                trail.emitting = true;
+            }
+        }
     }
 
     public void Fire(Transform target, float fireForce)

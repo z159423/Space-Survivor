@@ -17,7 +17,6 @@ public class Resource : MonoBehaviour
     [SerializeField] private float startPullForce = -3f;
     [SerializeField] private float pullForceIncrease = 1f;
     [Space]
-    [SerializeField] private Rigidbody2D rigid;
     [SerializeField] private Collider2D coll;
     
 
