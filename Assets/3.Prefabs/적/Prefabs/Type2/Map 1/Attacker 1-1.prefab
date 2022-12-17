@@ -116,22 +116,6 @@ MonoBehaviour:
   hitMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   spriteRenderer: {fileID: 1622413193737350445}
   rigid: {fileID: 601496630676670501}
-  moveSpeed:
-    baseValue: 2.2
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
-  rotationSpeed:
-    baseValue: 1
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
   dropTable:
     expType: 1
     crystalType: 3
@@ -144,9 +128,8 @@ MonoBehaviour:
     dropCrystalMinAmount: 1
     dropCrystalmaxAmount: 1
   dieVFXType: 1
+  enemyAi: {fileID: 0}
   <dieSound>k__BackingField: kill1
-  moveStrate: 0
-  angle: 0
   textGenerateOffset:
     minVectorOffset: {x: -0.15, y: -0.15}
     maxVectorOffset: {x: 0.15, y: 0.15}
@@ -202,8 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStat: {fileID: 601496630676670500}
   rigid: {fileID: 601496630676670501}
-  moveStrate: 0
-  moveSpeed:
+  <moveStrate>k__BackingField: 0
+  <moveSpeed>k__BackingField:
     baseValue: 2.2
     minValue: 0
     MinValue: 0
@@ -211,7 +194,7 @@ MonoBehaviour:
     MaxValue: 1000
     FloatModifiers: []
     PercentModifiers: []
-  rotationSpeed:
+  <rotationSpeed>k__BackingField:
     baseValue: 1
     minValue: 0
     MinValue: 0
