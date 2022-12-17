@@ -128,7 +128,7 @@ MonoBehaviour:
     dropCrystalMinAmount: 1
     dropCrystalmaxAmount: 1
   dieVFXType: 1
-  enemyAi: {fileID: 0}
+  enemyAi: {fileID: 8150189773273304656}
   <dieSound>k__BackingField: kill1
   textGenerateOffset:
     minVectorOffset: {x: -0.15, y: -0.15}
