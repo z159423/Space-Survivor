@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 601496630676670500}
   - component: {fileID: 601496630676670501}
   - component: {fileID: 3348257821194670371}
+  - component: {fileID: 2119822401874609157}
   m_Layer: 7
   m_Name: Map 2_1
   m_TagString: Enemy
@@ -90,11 +91,13 @@ MonoBehaviour:
     dropCrystalMinAmount: 1
     dropCrystalmaxAmount: 1
   dieVFXType: 1
+  <dieSound>k__BackingField: kill1
   moveStrate: 0
+  angle: 0
   textGenerateOffset:
     minVectorOffset: {x: -0.15, y: -0.15}
     maxVectorOffset: {x: 0.15, y: 0.15}
-  target: {fileID: 0}
+  <target>k__BackingField: {fileID: 0}
 --- !u!50 &601496630676670501
 Rigidbody2D:
   serializedVersion: 4
@@ -132,6 +135,38 @@ CircleCollider2D:
   m_Offset: {x: 0.015198439, y: -0.57540905}
   serializedVersion: 2
   m_Radius: 2.5054257
+--- !u!114 &2119822401874609157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601496630676670503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b3bdcbd19f4714aab7beec66b548c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStat: {fileID: 601496630676670500}
+  rigid: {fileID: 601496630676670501}
+  moveStrate: 0
+  moveSpeed:
+    baseValue: 2.5
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  rotationSpeed:
+    baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <target>k__BackingField: {fileID: 0}
 --- !u!1 &8147472549894821318
 GameObject:
   m_ObjectHideFlags: 0

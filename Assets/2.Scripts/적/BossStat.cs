@@ -26,7 +26,6 @@ public class BossStat : EnemyStat
 
     private void FixedUpdate()
     {
-        base.FixedUpdate();
         HP_parent.transform.position = transform.position + Hp_offset;
         HP_parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
     }

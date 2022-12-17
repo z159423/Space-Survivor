@@ -212,7 +212,7 @@ public class EnemyGenerator : MonoBehaviour
         {
             var spawnEnemy = Instantiate(success, GenerateSpawnPositon_Circle(player.transform), Quaternion.identity, parent);
 
-            spawnEnemy.GetComponent<EnemyStat>().SetTarget(player);
+            spawnEnemy.GetComponent<EnemyAI>().SetTarget(player);
 
             SpawnedEnemy.Add(spawnEnemy);
         }
@@ -237,8 +237,8 @@ public class EnemyGenerator : MonoBehaviour
                 {
                     var spawnEnemy = Instantiate(success, point, Quaternion.identity, parent);
 
-                    spawnEnemy.GetComponent<EnemyStat>().SetTarget(player);
-                    spawnEnemy.GetComponent<EnemyStat>().SetMoveStrate();
+                    spawnEnemy.GetComponent<EnemyAI>().SetTarget(player);
+                    spawnEnemy.GetComponent<EnemyAI>().SetMoveStrate();
 
 
                     SpawnedEnemy.Add(spawnEnemy);
