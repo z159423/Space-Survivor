@@ -62834,7 +62834,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 1
+  editmode: 0
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:
