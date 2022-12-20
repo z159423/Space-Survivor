@@ -111,7 +111,8 @@ public class PlayerStat : MonoBehaviour
             return;
         }
 
-        Vibration.Vibrate((long)15);
+        //Vibration.Vibrate((long)15);
+        MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.LightImpact);
 
         currentHp -= damage;
 
