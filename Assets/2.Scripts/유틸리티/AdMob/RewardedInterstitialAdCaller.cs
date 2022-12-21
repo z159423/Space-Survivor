@@ -193,6 +193,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         void HandleRewardedAdLoaded(object sender, EventArgs args)
         {
             MonoBehaviour.print("크리스탈 획득 보상형 광고 로드 완료");
+            FirebaseAnalytics.LogEvent("RvAdsLoadSuccess_FreeCrystal");
         }
 
         //보상형 광고 로드 실패함
@@ -201,6 +202,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print(
                 "보상형 광고 로드를 실패하였습니다: "
                                  + args.LoadAdError);
+
+            FirebaseAnalytics.LogEvent("RvAdsLoadFailed_FreeCrystal", "errorCode", "" + args.LoadAdError);
         }
 
         //보상형 광고 표시중
@@ -273,6 +276,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         void HandleRewardedAdLoaded(object sender, EventArgs args)
         {
             MonoBehaviour.print("함선 무료체험 보상형 광고 로드 완료");
+            FirebaseAnalytics.LogEvent("RvAdsLoadSuccess_TrialShip");
         }
 
         //보상형 광고 로드 실패함
@@ -281,6 +285,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print(
                 "보상형 광고 로드를 실패하였습니다: "
                                  + args.LoadAdError);
+
+            FirebaseAnalytics.LogEvent("RvAdsLoadFailed_TrialShip", "errorCode", "" + args.LoadAdError);
         }
 
         //보상형 광고 표시중
@@ -325,9 +331,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             //StartCoroutine(startTrial());
             rewardList.Add(startTrial());
-
-
-
         }
     }
 
@@ -358,6 +361,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         void HandleRewardedAdLoaded(object sender, EventArgs args)
         {
             MonoBehaviour.print("부활 보상형 광고 로드 완료");
+            FirebaseAnalytics.LogEvent("RvAdsLoadSuccess_Revive");
         }
 
         //보상형 광고 로드 실패함
@@ -366,6 +370,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print(
                 "보상형 광고 로드를 실패하였습니다: "
                                  + args.LoadAdError);
+
+            FirebaseAnalytics.LogEvent("RvAdsLoadFailed_Revive", "errorCode", "" + args.LoadAdError);
         }
 
         //보상형 광고 표시중
@@ -439,6 +445,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         void HandleRewardedAdLoaded(object sender, EventArgs args)
         {
             MonoBehaviour.print("크리스탈 두배 보상형 광고 로드 완료");
+            FirebaseAnalytics.LogEvent("RvAdsLoadSuccess_DoubleCrystal");
         }
 
         //보상형 광고 로드 실패함
@@ -447,6 +454,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print(
                 "크리스탈 두배 광고 로드를 실패하였습니다: "
                                  + args.LoadAdError);
+
+            FirebaseAnalytics.LogEvent("RvAdsLoadFailed_DoubleCrystal", "errorCode", "" + args.LoadAdError);
         }
 
         //보상형 광고 표시중
@@ -518,6 +527,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         void HandleRewardedAdLoaded(object sender, EventArgs args)
         {
             MonoBehaviour.print("모든 업그레이드 획득 보상형 광고 로드 완료");
+            FirebaseAnalytics.LogEvent("RvAdsLoadSuccess_GetAllUpgrade");
         }
 
         //보상형 광고 로드 실패함
@@ -526,6 +536,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print(
                 "모든 업그레이드 획득 보상형 광고 로드를 실패하였습니다: "
                                  + args.LoadAdError);
+
+            FirebaseAnalytics.LogEvent("RvAdsLoadFailed_GetAllUpgrade", "errorCode", "" + args.LoadAdError);
         }
 
         //보상형 광고 표시중
@@ -565,7 +577,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             MonoBehaviour.print("모든 업그레이드 획득 보상형 광고를 시청완료했습니다.");
 
-            //rewardList.Add(crystalDouble());
             rewardList.Add(getAllUpgrade());
 
         }
@@ -604,7 +615,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_FreeCrystal");
 
-            StartCoroutine(getFreeCrystal());
+            crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
+
+            //StartCoroutine(getFreeCrystal());
         }
     }
 
@@ -637,7 +650,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_trialShip");
 
-            StartCoroutine(startTrial());
+            shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
+
+            //StartCoroutine(startTrial());
         }
     }
 
@@ -662,7 +677,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_revive");
 
-            StartCoroutine(revive());
+            reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
+
+            //StartCoroutine(revive());
         }
     }
 
@@ -686,7 +703,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_crystalDouble");
 
-            StartCoroutine(crystalDouble());
+            crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
+
+            //StartCoroutine(crystalDouble());
         }
     }
 
@@ -710,7 +729,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_GetAllUpgrade");
 
-            StartCoroutine(getAllUpgrade());
+            getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
+
+            //StartCoroutine(getAllUpgrade());
         }
     }
 
