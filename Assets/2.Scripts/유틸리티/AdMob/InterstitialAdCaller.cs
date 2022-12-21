@@ -101,12 +101,16 @@ public class InterstitialAdCaller : MonoBehaviour
         void HandleOnAdLoaded(object sender, EventArgs args)
         {
             MonoBehaviour.print("전면 광고 로드됨");
+
+            FirebaseAnalytics.LogEvent("IrAdsLoadSuccess");
         }
 
         void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
         {
             MonoBehaviour.print("전면 광고 로드 실패: "
                                 + args.LoadAdError);
+
+            FirebaseAnalytics.LogEvent("IrAdsLoadFailed", "errorCode", "" + args.LoadAdError);
         }
 
         void HandleOnAdOpening(object sender, EventArgs args)
@@ -147,6 +151,8 @@ public class InterstitialAdCaller : MonoBehaviour
             {
                 print("광고가 로드되지 않았습니다");
                 FirebaseAnalytics.LogEvent("IrAdsNotReadyEvent");
+
+                RequestInterstitial();
             }
 
         }

@@ -149,7 +149,14 @@ public class PlayerStat : MonoBehaviour
             FirebaseAnalytics.LogEvent("PlayerDeathTime_Revived", "IntParam", GameManager.instance.getCurrentTime());
         }
         else
+        {
             FirebaseAnalytics.LogEvent("PlayerDeathTime", "IntParam", GameManager.instance.getCurrentTime());
+
+            Firebase.Analytics.FirebaseAnalytics.LogEvent(
+  Firebase.Analytics.FirebaseAnalytics.EventSelectContent, new Firebase.Analytics.Parameter(
+    FirebaseAnalytics.ParameterItemId, GameManager.instance.getCurrentTime()));
+        }
+
     }
 
     public void GetCurrentCrystal()
