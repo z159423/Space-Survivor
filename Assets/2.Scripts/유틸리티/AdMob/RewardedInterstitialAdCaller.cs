@@ -22,7 +22,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     string adUnitId;
 
-    private RewardedAd rewardedAd;
+    private static RewardedAd rewardedAd;
 
     private RewardedAd crystallAddRewardedAd;
     [SerializeField] private TextMeshProUGUI crystalValueText;
@@ -52,7 +52,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     [SerializeField] private GameObject trialShipButtonImage;
     [SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
 
-    private List<IEnumerator> rewardList = new List<IEnumerator>();
+    private static List<IEnumerator> rewardList = new List<IEnumerator>();
 
     private void Awake()
     {
@@ -88,81 +88,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             StartCoroutine(rewardList[0]);
             rewardList.Clear();
-        }
-    }
-
-    public void CreateAndLoadRewardedAd()
-    {
-#if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/5224354917";
-#elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/1712485313";
-#else
-            string adUnitId = "unexpected_platform";
-#endif
-
-        this.rewardedAd = new RewardedAd(adUnitId);
-
-        this.rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
-        // Called when an ad request failed to load.
-        this.rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
-        // Called when an ad is shown.
-        this.rewardedAd.OnAdOpening += HandleRewardedAdOpening;
-        // Called when an ad request failed to show.
-        this.rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
-        // Called when the user should be rewarded for interacting with the ad.
-        this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-        // Called when the ad is closed.
-        this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;
-
-        // Create an empty ad request.
-        AdRequest request = new AdRequest.Builder().Build();
-        // Load the rewarded ad with the request.
-        this.rewardedAd.LoadAd(request);
-
-        //보상형 광고가 완료되었을때
-        void HandleRewardedAdLoaded(object sender, EventArgs args)
-        {
-            MonoBehaviour.print("보상형 광고를 시청함");
-        }
-
-        //보상형 광고 로드 실패함
-        void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
-        {
-            MonoBehaviour.print(
-                "보상형 광고 로드를 실패하였습니다: "
-                                 + args.LoadAdError);
-        }
-
-        //보상형 광고 표시중
-        void HandleRewardedAdOpening(object sender, EventArgs args)
-        {
-            MonoBehaviour.print("보상형 광고 표시중");
-        }
-
-        //보상형 광고 표시가 실패하였습니다.
-        void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
-        {
-            MonoBehaviour.print(
-                "광고 표시를 실패하였습니다: "
-                                 + args.AdError.GetMessage());
-        }
-
-        //사용자가 보상형 광고를 취소하였을때
-        void HandleRewardedAdClosed(object sender, EventArgs args)
-        {
-            this.CreateAndLoadRewardedAd();
-            MonoBehaviour.print("사용자가 보상형 광고 시청을 취소하였습니다.");
-        }
-
-        //보상형 광고를 시청하고 보상을 받아야 할때 실행
-        void HandleUserEarnedReward(object sender, Reward args)
-        {
-            string type = args.Type;
-            double amount = args.Amount;
-            MonoBehaviour.print(
-                "보상형 광고를 시청하였습니다. 보상을 지급해야 합니다: "
-                            + amount.ToString() + " " + type);
         }
     }
 
@@ -948,6 +873,112 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1f);
+        }
+    }
+
+    public static void CreateAndLoadRewardedAd()
+    {
+#if UNITY_ANDROID
+        string adUnitId = "ca-app-pub-3940256099942544/5224354917";
+#elif UNITY_IPHONE
+            string adUnitId = "ca-app-pub-3940256099942544/1712485313";
+#else
+            string adUnitId = "unexpected_platform";
+#endif
+
+        rewardedAd = new RewardedAd(adUnitId);
+
+        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        // Called when an ad request failed to load.
+        rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
+        // Called when an ad is shown.
+        rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        // Called when an ad request failed to show.
+        rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
+        // Called when the user should be rewarded for interacting with the ad.
+        //rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        // Called when the ad is closed.
+        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the rewarded ad with the request.
+        rewardedAd.LoadAd(request);
+
+        //보상형 광고가 완료되었을때
+        void HandleRewardedAdLoaded(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("보상형 광고를 로드함");
+
+            FirebaseAnalytics.LogEvent("RvAdsLoadSuccess");
+        }
+
+        //보상형 광고 로드 실패함
+        void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+        {
+            MonoBehaviour.print(
+                "보상형 광고 로드를 실패하였습니다: "
+                                 + args.LoadAdError);
+
+            FirebaseAnalytics.LogEvent("RvAdsLoadFailed", "errorCode", "" + args.LoadAdError);
+        }
+
+        //보상형 광고 표시중
+        void HandleRewardedAdOpening(object sender, EventArgs args)
+        {
+            MonoBehaviour.print("보상형 광고 표시중");
+        }
+
+        //보상형 광고 표시가 실패하였습니다.
+        void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
+        {
+            MonoBehaviour.print(
+                "광고 표시를 실패하였습니다: "
+                                 + args.AdError.GetMessage());
+        }
+
+        //사용자가 보상형 광고를 취소하였을때
+        void HandleRewardedAdClosed(object sender, EventArgs args)
+        {
+            CreateAndLoadRewardedAd();
+            MonoBehaviour.print("사용자가 보상형 광고 시청을 취소하였습니다.");
+        }
+
+        //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        void HandleUserEarnedReward(object sender, Reward args)
+        {
+
+        }
+    }
+
+    public static void ShowRv(IEnumerator reward)
+    {
+        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
+        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        {
+            FirebaseAnalytics.LogEvent("RvAdsCallSuccess");
+
+            //rewardedAd.OnUserEarnedReward -= HandleUserEarnedReward;
+            rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+
+            void HandleUserEarnedReward(object sender, Reward args)
+            {
+                rewardList.Add(reward);
+            }
+
+        }
+        else
+        {
+            if (UserDataManager.instance.currentUserData.RemoveAds)
+                print("광고 제거를 구매해 광고 호출을 안함");
+            else if (!rewardedAd.IsLoaded())
+                print("광고가 없습니다");
+            else
+                print("알수없는 이유로 광고 호출에 실패하였습니다.");
+
+            FirebaseAnalytics.LogEvent("RvAdsCallFailed");
+
+            CreateAndLoadRewardedAd();
         }
     }
 }
