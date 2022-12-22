@@ -14,7 +14,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public static RewardedInterstitialAdCaller instance;
 
     //Test ID ca-app-pub-3940256099942544/5224354917
-    public string androidAdUnitId = "ca-app-pub-5179254807136480/1031690389";
+    public static string androidAdUnitId = "ca-app-pub-5179254807136480/1031690389";
     //Test ID ca-app-pub-3940256099942544/1712485313
     public string iosAdUnitId;
 
@@ -64,6 +64,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         crystalValueText.text = crystalValue.ToString();
 
         //CreateAndLoadRewardedAd();
+        CreateAndLoadRewardedAd();
 
 #if UNITY_ANDROID
         adUnitId = androidAdUnitId;
@@ -73,11 +74,11 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
              adUnitId = "unexpected_platform";
 #endif
 
-        crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
-        shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
-        reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
-        crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
-        getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
+        //crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
+        //shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
+        //reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
+        //crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
+        //getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
 
         StartCoroutine(RewardAdsTimeChecking());
     }
@@ -520,27 +521,30 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.crystallAddRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             if (UserDataManager.instance.currentUserData.usingFreeCrystalTime != null)
                 print(timeDiff);
 
             FirebaseAnalytics.LogEvent("RvAdsCallSuccess_FreeCrystal");
 
-            this.crystallAddRewardedAd.Show();
+            ShowRv(getFreeCrystal());
         }
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
+            {
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else if (!this.crystallAddRewardedAd.IsLoaded())
+                rewardList.Add(getFreeCrystal());
+            }
+            else if (!rewardedAd.IsLoaded())
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_FreeCrystal");
 
-            crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
+            //crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
 
             //StartCoroutine(getFreeCrystal());
         }
@@ -559,23 +563,32 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.shipTrialRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             FirebaseAnalytics.LogEvent("RvAdsCallSuccess_trialShip");
-            this.shipTrialRewardedAd.Show();
+            //this.shipTrialRewardedAd.Show();
+
+            print("111");
+
+            ShowRv(startTrial());
         }
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
+            {
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else if (!this.shipTrialRewardedAd.IsLoaded())
+                rewardList.Add(startTrial());
+            }
+            else if (!rewardedAd.IsLoaded())
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_trialShip");
 
-            shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
+            print("222");
+
+            //shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
 
             //StartCoroutine(startTrial());
         }
@@ -586,23 +599,30 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     {
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
 
-        if (this.reviveRewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             FirebaseAnalytics.LogEvent("RvAdsCallSuccess_revive");
-            this.reviveRewardedAd.Show();
+            //this.reviveRewardedAd.Show();
+
+            ShowRv(revive());
         }
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
+            {
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else if (!this.reviveRewardedAd.IsLoaded())
+                rewardList.Add(revive());
+            }
+            else if (!rewardedAd.IsLoaded())
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_revive");
 
-            reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
+
+
+            //reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
 
             //StartCoroutine(revive());
         }
@@ -612,23 +632,31 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public void WatchRewardAds_CrystalDouble()
     {
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-        if (this.crystalDoubleRewardAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             FirebaseAnalytics.LogEvent("RvAdsCallSuccess_crystalDouble");
-            this.crystalDoubleRewardAd.Show();
+
+            //this.crystalDoubleRewardAd.Show();
+
+            ShowRv(crystalDouble());
         }
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
+            {
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else if (!this.crystalDoubleRewardAd.IsLoaded())
+                rewardList.Add(crystalDouble());
+            }
+            else if (!rewardedAd.IsLoaded())
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_crystalDouble");
 
-            crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
+
+
+            //crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
 
             //StartCoroutine(crystalDouble());
         }
@@ -638,29 +666,36 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public void WatchRewardAds_GetAllUpgrade()
     {
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-        if (this.getAllUpgardeAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             FirebaseAnalytics.LogEvent("RvAdsCallSuccess_GetAllUpgrade");
-            this.getAllUpgardeAd.Show();
+            //this.getAllUpgardeAd.Show();
+
+            ShowRv(getAllUpgrade());
         }
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds)
+            {
+                rewardList.Add(getAllUpgrade());
                 print("광고 제거를 구매해 광고 호출을 안함");
-            else if (!this.getAllUpgardeAd.IsLoaded())
+            }
+            else if (!rewardedAd.IsLoaded())
                 print("광고가 없습니다");
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_GetAllUpgrade");
 
-            getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
+
+
+            //getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
 
             //StartCoroutine(getAllUpgrade());
         }
     }
 
-    //부활
+    //부활 보상획득
     IEnumerator revive()
     {
         touchProjectPanel.SetActive(true);
@@ -676,7 +711,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         FirebaseAnalytics.LogEvent("RvAdsComplete_Revive");
     }
 
-    //함선 체험
+    //함선 체험 보상획득
     IEnumerator startTrial()
     {
         UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
@@ -694,7 +729,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         FirebaseAnalytics.LogEvent("RvAdsComplete_TrialShip");
     }
 
-    //크리스탈 두배
+    //크리스탈 두배 보상획득
     IEnumerator crystalDouble()
     {
         yield return null;
@@ -710,7 +745,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         FirebaseAnalytics.LogEvent("RvAdsComplete_DoubleCrystal");
     }
 
-    //무료 크리스탈
+    //무료 크리스탈 보상획득
     IEnumerator getFreeCrystal()
     {
         yield return null;
@@ -726,7 +761,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         FirebaseAnalytics.LogEvent("RvAdsComplete_FreeCrystal");
     }
 
-    //모든 업그레이드 획득
+    //모든 업그레이드 획득 보상획득
     IEnumerator getAllUpgrade()
     {
         yield return null;
@@ -878,12 +913,15 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public static void CreateAndLoadRewardedAd()
     {
+
+        string adUnitId;
+
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/5224354917";
+        adUnitId = androidAdUnitId;
 #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/1712485313";
+             adUnitId = iosAdUnitId;
 #else
-            string adUnitId = "unexpected_platform";
+             adUnitId = "unexpected_platform";
 #endif
 
         rewardedAd = new RewardedAd(adUnitId);
@@ -963,8 +1001,13 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             void HandleUserEarnedReward(object sender, Reward args)
             {
+                print("11");
                 rewardList.Add(reward);
+
+                CreateAndLoadRewardedAd();
             }
+
+            rewardedAd.Show();
 
         }
         else

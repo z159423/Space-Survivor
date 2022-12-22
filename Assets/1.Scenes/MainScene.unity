@@ -37750,7 +37750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f984e359e690df4fa85b0e9cb977e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  androidAdUnitId: ca-app-pub-5179254807136480/1031690389
   iosAdUnitId: ca-app-pub-3940256099942544/1712485313
   crystalValueText: {fileID: 1745737301}
   shipTrialButton: {fileID: 1929072308}
@@ -62834,7 +62833,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 1
+  editmode: 0
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:
