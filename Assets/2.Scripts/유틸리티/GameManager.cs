@@ -146,6 +146,8 @@ public class GameManager : MonoBehaviour
         print("현재 함선 체력 : " + currentShip.shipObjectData.baseMaxHp.GetFinalStatValueAsInt());
 
         LevelUpManager.getAllUpgradeCount = 0;
+
+        playerStat.ReloadShipStat();
     }
 
     public void ReplayGame()

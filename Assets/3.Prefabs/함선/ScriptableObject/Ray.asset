@@ -26,7 +26,7 @@ MonoBehaviour:
       FloatModifiers: []
       PercentModifiers: []
     baseMoveSpeed:
-      baseValue: 5.5
+      baseValue: 5
       minValue: 0
       MinValue: 0
       maxValue: 0

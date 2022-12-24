@@ -70,6 +70,8 @@ public class PlayerStat : MonoBehaviour
     public UnityEvent playerDieEvent;
     public UnityEvent playerLevelUpEvent;
 
+    private ShipObject selectedShipObject = null;
+
     [Space]
 
     [SerializeField] public bool invinsible = false;
@@ -310,6 +312,8 @@ public class PlayerStat : MonoBehaviour
 
         playerMovement.SetPlayerBody(currentShipBody.transform);
 
+        selectedShipObject = ship;
+
         //for (int i = 0; i < ship.basicWeapon.Count; i++)
         //{
         //    playerWeapon.AddNewWeapon(ship.basicWeapon[i]);
@@ -365,6 +369,15 @@ public class PlayerStat : MonoBehaviour
         maxHp = shipObjectData.baseMaxHp.GetFinalStatValueAsInt();
         moveSpeed.SetBaseValue(shipObjectData.baseMoveSpeed.GetFinalStatValue());
         rotationSpeed.SetBaseValue(shipObjectData.baseRotationSpeed.GetFinalStatValue());
+    }
+
+    /// <summary>
+    /// 현재 선택되어 있는 함선의 스탯을 다시 가져오기 게임 시작전에 스탯을 다시한번 가져오는 용도
+    /// </summary>
+    public void ReloadShipStat()
+    {
+        if (selectedShipObject != null)
+            GetShipStat(UserDataManager.instance.currentUserData.GetShipDataFromPlayerHaveShip(selectedShipObject.shipObjectData.shipCode));
     }
 
     public float GetMoveSpeed()
