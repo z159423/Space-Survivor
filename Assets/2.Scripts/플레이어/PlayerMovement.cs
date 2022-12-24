@@ -45,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
             Vector2 dirToVirtualTarget = Utility.GetDirection(transform.position, virtualTarget.position);
 
-            rigid.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed();
+            //rigid.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed();
             // rigidbody.velocity = playerBody.transform.up * Time.deltaTime * playerStat.GetMoveSpeed() * 10f;
-
+            //rigid.velocity = Vector2.Lerp(rigid.velocity, new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * playerStat.GetMoveSpeed() * 0.7f, Time.deltaTime * 3);
 
             if (Mathf.Abs(virtualDir.normalized.x) > 0 || Mathf.Abs(virtualDir.normalized.y) > 0)
             {
@@ -60,10 +60,11 @@ public class PlayerMovement : MonoBehaviour
             if (playerBody != null)
                 playerBody.transform.rotation = Quaternion.Lerp(playerBody.transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), playerStat.GetRotationSpeed() * Time.deltaTime * 0.3f);
         }
-        else if(fixedTouchField.Pressed)
+        else if (fixedTouchField.Pressed)
         {
-            rigid.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed() * fixedTouchField.distBetweenJoystickBodyToHandle;
+            //rigid.velocity += new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * Time.deltaTime * playerStat.GetMoveSpeed() * fixedTouchField.distBetweenJoystickBodyToHandle;
             // rigidbody.velocity = playerBody.transform.up * Time.deltaTime * playerStat.GetMoveSpeed() * 10f;
+            //rigid.velocity = Vector2.Lerp(rigid.velocity, new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * playerStat.GetMoveSpeed() * 0.7f, Time.deltaTime * 3);
 
             // print(fixedTouchField.distBetweenJoystickBodyToHandle);
 
@@ -78,10 +79,22 @@ public class PlayerMovement : MonoBehaviour
             if (playerBody != null)
                 playerBody.transform.rotation = Quaternion.Lerp(playerBody.transform.rotation, Quaternion.AngleAxis(angle - 90, Vector3.forward), playerStat.GetRotationSpeed() * Time.deltaTime);
         }
+    }
 
+    private void FixedUpdate()
+    {
+        if (playerStat.GetPlayerDie())
+            return;
 
+        if (GameManager.instance.inMainMenu)
+        {
+            rigid.velocity = Vector2.Lerp(rigid.velocity, new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * playerStat.GetMoveSpeed() * 0.6f, Time.deltaTime * 3);
 
-
+        }
+        else if (fixedTouchField.Pressed)
+        {
+            rigid.velocity = Vector2.Lerp(rigid.velocity, new Vector2(playerBody.transform.up.x, playerBody.transform.up.y) * playerStat.GetMoveSpeed() * 0.6f * fixedTouchField.distBetweenJoystickBodyToHandle, Time.deltaTime * 3);
+        }
     }
 
     public bool getIsMoving()

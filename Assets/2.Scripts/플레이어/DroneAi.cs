@@ -54,8 +54,6 @@ public class DroneAi : ProjectileLogic
 
         if (target == null)
             FindTarget();
-
-
     }
 
     private void FixedUpdate()

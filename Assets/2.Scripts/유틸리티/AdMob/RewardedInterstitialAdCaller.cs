@@ -727,6 +727,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
         FirebaseAnalytics.LogEvent("RvAdsComplete_TrialShip");
+
+        FirebaseAnalytics.LogEvent("TrialShip", "shipName", GameManager.instance.currentShip.shipObjectData.shipCode);
     }
 
     //크리스탈 두배 보상획득
