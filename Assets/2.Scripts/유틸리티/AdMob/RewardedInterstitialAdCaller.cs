@@ -654,8 +654,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             FirebaseAnalytics.LogEvent("RvAdsCallFailed_crystalDouble");
 
-
-
             //crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
 
             //StartCoroutine(crystalDouble());

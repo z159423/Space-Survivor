@@ -168,8 +168,8 @@ public class PlayerStat : MonoBehaviour
 
     public void GetCrystalDouble()
     {
-        UserDataManager.instance.AddCrystalValue(lastGameCurrentCrystal);
-        GameManager.instance.ChangeGetCrystalText(lastGameCurrentCrystal);
+        UserDataManager.instance.AddCrystalValue(lastGameCurrentCrystal * 2);
+        GameManager.instance.ChangeGetCrystalText(lastGameCurrentCrystal * 2);
 
         //if (playerDie)
         //    CrystalMotion.instance.StartCrystalMotion(0, lastGameCurrentCrystal);
