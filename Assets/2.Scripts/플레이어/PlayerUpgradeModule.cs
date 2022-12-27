@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class PlayerUpgradeModule : MonoBehaviour
 {
-    [field: SerializeField] public static List<UpgradeModuleObject> equipedModules = new List<UpgradeModuleObject>();
+    [field: SerializeField] public List<UpgradeModuleObject> equipedModules = new List<UpgradeModuleObject>();
 
-    [SerializeField] private static PlayerStat playerStat;
-    [SerializeField] private static PlayerWeapon playerWeapon;
+    [SerializeField] private PlayerStat playerStat;
+    [SerializeField] private PlayerWeapon playerWeapon;
 
-
-    public static void AddUpgradeModulesToPlayerStat()
+    public void AddUpgradeModulesToPlayerStat()
     {
         for (int i = 0; i < equipedModules.Count; i++)
         {
@@ -18,7 +17,7 @@ public class PlayerUpgradeModule : MonoBehaviour
         }
     }
 
-    public static void UnapplyModuleStat()
+    public void UnapplyModuleStat()
     {
         playerWeapon.moduleDamage.ClearAllModifier();
     }

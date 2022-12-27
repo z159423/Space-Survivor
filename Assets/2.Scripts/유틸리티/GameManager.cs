@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI killCountText;
     [SerializeField] private PlayerStat playerStat;
     [SerializeField] private PlayerWeapon playerWeapon;
+    [SerializeField] private PlayerUpgradeModule playerUpgradeModule;
     [SerializeField] private TextMeshProUGUI shipNameText;
     [SerializeField] private GameObject shipBuyBtn;
     [SerializeField] private GameObject shipTrialBtn;
@@ -150,7 +151,7 @@ public class GameManager : MonoBehaviour
         LevelUpManager.getAllUpgradeCount = 0;
 
         playerStat.ReloadShipStat();
-        PlayerUpgradeModule.AddUpgradeModulesToPlayerStat();
+        playerUpgradeModule.AddUpgradeModulesToPlayerStat();
     }
 
     public void ReplayGame()

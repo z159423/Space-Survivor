@@ -298,7 +298,7 @@ public class PlayerStat : MonoBehaviour
 
         resourcePullCollider.radius = 40f;
 
-        PlayerUpgradeModule.UnapplyModuleStat();
+        playerUpgradeModule.UnapplyModuleStat();
     }
 
     public void PlayGame()

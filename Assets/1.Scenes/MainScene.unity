@@ -30360,9 +30360,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd42e0a93ac1db4d9345b23320e1797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipedModules: []
+  equipedModules:
+  - {fileID: 11400000, guid: d388f6e3fd6100a49ac0dc5763992469, type: 2}
   playerStat: {fileID: 923141302}
-  playerWeapon: {fileID: 0}
+  playerWeapon: {fileID: 923141305}
 --- !u!1 &924167434
 GameObject:
   m_ObjectHideFlags: 0
@@ -62814,6 +62815,7 @@ MonoBehaviour:
   killCountText: {fileID: 1752718347}
   playerStat: {fileID: 923141302}
   playerWeapon: {fileID: 923141305}
+  playerUpgradeModule: {fileID: 923141311}
   shipNameText: {fileID: 287393686}
   shipBuyBtn: {fileID: 348676148}
   shipTrialBtn: {fileID: 1885043684}
@@ -62860,7 +62862,7 @@ MonoBehaviour:
   gameStart: 0
   <gameclear>k__BackingField: 0
   inMainMenu: 1
-  editmode: 0
+  editmode: 1
   revivedThisGame: 0
 --- !u!4 &1993698527
 Transform:
