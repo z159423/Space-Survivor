@@ -31,9 +31,7 @@ public class ShockWave : MonoBehaviour
             EZCameraShake.CameraShakeInstance cameraShakeInstance = new EZCameraShake.CameraShakeInstance(4f, 4f, .2f, 1f);
 
             float currentDamage = (projectileLogic.GetDamage().GetFinalStatValue()
-             + projectileLogic.playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()
-             + projectileLogic.GetDamage().GetFinalStatValueAsInt())
-              * projectileLogic.playerWeapon.additionalDamage.GetFinalStatValue();
+             + projectileLogic.playerWeapon.GetPlayerStatDamage());
 
             Utility.Explode(transform.position, currentDamage, damageRadius.GetFinalStatValue(), knockbackForce, VFXType.none, cameraShakeInstance);
             AudioManager.instance.GenerateAudioAndPlaySFX("explosion2", transform.position);
