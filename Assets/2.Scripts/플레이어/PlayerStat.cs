@@ -54,6 +54,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private Color fadeOutExpColor;
 
     [SerializeField] private PlayerWeapon playerWeapon;
+    [SerializeField] private PlayerUpgradeModule playerUpgradeModule;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private TextMeshProUGUI crystalText;
     [SerializeField] private Transform weaponSlotParent;
@@ -296,6 +297,8 @@ public class PlayerStat : MonoBehaviour
             shieldImage.SetActive(false);
 
         resourcePullCollider.radius = 40f;
+
+        PlayerUpgradeModule.UnapplyModuleStat();
     }
 
     public void PlayGame()

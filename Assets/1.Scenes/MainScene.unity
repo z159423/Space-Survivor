@@ -17331,7 +17331,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.46205357, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -25069,6 +25069,7 @@ GameObject:
   - component: {fileID: 923141302}
   - component: {fileID: 923141301}
   - component: {fileID: 923141305}
+  - component: {fileID: 923141311}
   - component: {fileID: 923141304}
   - component: {fileID: 923141307}
   - component: {fileID: 923141306}
@@ -25170,6 +25171,7 @@ MonoBehaviour:
   originExpColor: {r: 0.29803923, g: 0.8980392, b: 0.972549, a: 0.50980395}
   fadeOutExpColor: {r: 0, g: 0.45315933, b: 0.509434, a: 0.50980395}
   playerWeapon: {fileID: 923141305}
+  playerUpgradeModule: {fileID: 923141311}
   playerMovement: {fileID: 923141301}
   crystalText: {fileID: 1081668442}
   weaponSlotParent: {fileID: 1837187251}
@@ -25292,6 +25294,14 @@ MonoBehaviour:
   passivePool: []
   additionalDamage:
     baseValue: 1
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <moduleDamage>k__BackingField:
+    baseValue: 0
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -30338,6 +30348,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 40
+--- !u!114 &923141311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923141300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd42e0a93ac1db4d9345b23320e1797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipedModules: []
+  playerStat: {fileID: 923141302}
+  playerWeapon: {fileID: 0}
 --- !u!1 &924167434
 GameObject:
   m_ObjectHideFlags: 0
@@ -41371,7 +41396,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46354166, y: 1}
+    m_SensorSize: {x: 0.46205357, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -62815,6 +62840,8 @@ MonoBehaviour:
   shipCostText: {fileID: 1485360728}
   shipUpgradeSlot: {fileID: 197600818}
   currentShipNumber: 0
+  previusBtn: {fileID: 1829594179}
+  nextBtn: {fileID: 13966994}
   PlayGameEvent:
     m_PersistentCalls:
       m_Calls:

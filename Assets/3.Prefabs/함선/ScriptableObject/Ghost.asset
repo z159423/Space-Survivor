@@ -34,7 +34,7 @@ MonoBehaviour:
       FloatModifiers: []
       PercentModifiers: []
     baseRotationSpeed:
-      baseValue: 4.5
+      baseValue: 6
       minValue: 0
       MinValue: 0
       maxValue: 0

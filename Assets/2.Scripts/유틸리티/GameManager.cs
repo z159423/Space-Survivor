@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject buyShipBtn;
     [SerializeField] private TextMeshProUGUI shipCostText;
     [SerializeField] private GameObject shipUpgradeSlot;
-
     [SerializeField] private int currentShipNumber;
+    [SerializeField] private Button previusBtn, nextBtn;
 
     public UnityEvent PlayGameEvent;
 
@@ -91,6 +91,8 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.FindBGM("menu2");
 
         UserDataManager.onChangeCrystalValue += InitShipBuyButton;
+
+        ShipChangeBtn();
     }
 
     public void ResetTime()
@@ -148,6 +150,7 @@ public class GameManager : MonoBehaviour
         LevelUpManager.getAllUpgradeCount = 0;
 
         playerStat.ReloadShipStat();
+        PlayerUpgradeModule.AddUpgradeModulesToPlayerStat();
     }
 
     public void ReplayGame()
@@ -413,6 +416,8 @@ public class GameManager : MonoBehaviour
         currentShipNumber++;
 
         SelectShip(currentShipNumber);
+
+        ShipChangeBtn();
     }
 
     public void PreviusShip()
@@ -423,6 +428,21 @@ public class GameManager : MonoBehaviour
         currentShipNumber--;
 
         SelectShip(currentShipNumber);
+
+        ShipChangeBtn();
+    }
+
+    private void ShipChangeBtn()
+    {
+        if (currentShipNumber + 1 < 0 || currentShipNumber + 1 >= shipList.shipList.Count)
+            nextBtn.interactable = false;
+        else
+            nextBtn.interactable = true;
+
+        if (currentShipNumber + -1 < 0 || currentShipNumber + -1 > shipList.shipList.Count)
+            previusBtn.interactable = false;
+        else
+            previusBtn.interactable = true;
     }
 
     public int getCurrentTime()

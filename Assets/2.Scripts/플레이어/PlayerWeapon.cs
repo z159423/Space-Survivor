@@ -10,6 +10,8 @@ public class PlayerWeapon : MonoBehaviour
     //[SerializeField] private Transform firePos;
     //[SerializeField] private Transform fireDir;
     public Stat additionalDamage = new Stat();
+    [field: SerializeField] public Stat moduleDamage { get; private set; } = new Stat();
+
     public Stat additionalCoolTime = new Stat();
 
     [Space]
@@ -25,7 +27,7 @@ public class PlayerWeapon : MonoBehaviour
     [Space]
 
     public bool allowFire = false;
-    
+
     public static List<int> usingSpiralVortexPosition = new List<int>();
 
 
@@ -354,6 +356,11 @@ public class PlayerWeapon : MonoBehaviour
     public void ClearPassiveSlotList()
     {
         passiveSlotList.Clear();
+    }
+
+    public float GetPlayerStatDamage()
+    {
+        return (moduleDamage.GetFinalStatValue() + playerShipData.baseDamage.GetFinalStatValueAsInt()) * additionalDamage.GetFinalStatValue();
     }
 }
 

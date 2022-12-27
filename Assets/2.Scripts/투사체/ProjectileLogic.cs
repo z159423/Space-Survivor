@@ -218,7 +218,7 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
             return;
 
         //적에게 들어가는 실제 데미지
-        int currentDamage = Mathf.RoundToInt((damage.GetFinalStatValueAsInt() + playerWeapon.playerShipData.baseDamage.GetFinalStatValueAsInt()) * playerWeapon.additionalDamage.GetFinalStatValue());
+        int currentDamage = Mathf.RoundToInt((damage.GetFinalStatValueAsInt() + playerWeapon.GetPlayerStatDamage()));
 
         collision.GetComponent<EnemyStat>().TakeDamage(currentDamage);
         collision.GetComponent<EnemyStat>().Knockback(collision.bounds.center, knockBackForce);
@@ -328,4 +328,6 @@ public class ProjectileLogic : MonoBehaviour, IProjectileLogic
         weaponObject.currentSize.AddPercentModifier(value);
         //transform.localScale += new Vector3(value, value, value);
     }
+
+    
 }
