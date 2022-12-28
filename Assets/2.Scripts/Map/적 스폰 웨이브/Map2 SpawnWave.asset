@@ -13,364 +13,364 @@ MonoBehaviour:
   m_Name: Map2 SpawnWave
   m_EditorClassIdentifier: 
   enemySpawnWaves:
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 1
     StopWaveTime: 60
     waveType: 0
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 90
     StopWaveTime: 180
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 60
     StopWaveTime: 120
     waveType: 0
     summonCycleTime: 0.3
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 90
     StopWaveTime: 91
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 120
     StopWaveTime: 122
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 130
     StopWaveTime: 240
     waveType: 0
     summonCycleTime: 0.2
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 125
     StopWaveTime: 300
     waveType: 0
     summonCycleTime: 0.25
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 180
     StopWaveTime: 181
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 240
     StopWaveTime: 295
     waveType: 0
     summonCycleTime: 1.2
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 305
     StopWaveTime: 420
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 270
     StopWaveTime: 271
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 330
     StopWaveTime: 331
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 302
     StopWaveTime: 305
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 420
     StopWaveTime: 540
     waveType: 0
     summonCycleTime: 0.7
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 420
     StopWaveTime: 421
     waveType: 0
     summonCycleTime: 1.5
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 360
     StopWaveTime: 545
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 420
     StopWaveTime: 540
     waveType: 0
     summonCycleTime: 0.3
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 425
     StopWaveTime: 540
     waveType: 0
     summonCycleTime: 0.4
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 420
     StopWaveTime: 423
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 540
     StopWaveTime: 543
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 545
     StopWaveTime: 600
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: b3b933592086e914f8611cdeb5dc82de, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 600
     StopWaveTime: 720
     waveType: 0
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: 85a2793bbac53064fb8a7165dbf2ce0d, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 600
     StopWaveTime: 660
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 660
     StopWaveTime: 720
     waveType: 0
     summonCycleTime: 0.5
     enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 720
     StopWaveTime: 725
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 725
     StopWaveTime: 780
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 780
     StopWaveTime: 900
     waveType: 0
     summonCycleTime: 0.4
     enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 840
     StopWaveTime: 845
     waveType: 0
     summonCycleTime: 0.02
     enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 845
     StopWaveTime: 900
     waveType: 0
     summonCycleTime: 0.8
     enemyObject: {fileID: 11400000, guid: 0a7065eb4d7fb554682ee0f74d7f5784, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 300
     StopWaveTime: 301
     waveType: 1
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 600
     StopWaveTime: 601
     waveType: 1
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: d2c40246896637c4cbc5d61cbf6441b2, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 900
     StopWaveTime: 901
     waveType: 1
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: ac3711b73675a4646bfeafd8d02288d2, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 45
     StopWaveTime: 46
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 90
     StopWaveTime: 91
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 135
     StopWaveTime: 136
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 180
     StopWaveTime: 181
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 215
     StopWaveTime: 216
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 250
     StopWaveTime: 251
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 315
     StopWaveTime: 316
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 360
     StopWaveTime: 361
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: e966db788bd96b549b482a6f552c922c, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 420
     StopWaveTime: 421
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 480
     StopWaveTime: 481
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 660
     StopWaveTime: 661
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 700
     StopWaveTime: 701
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 735
     StopWaveTime: 736
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 770
     StopWaveTime: 770
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: b8e728444a94fac458f229bbed47909a, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 815
     StopWaveTime: 816
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 840
     StopWaveTime: 841
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 875
     StopWaveTime: 776
     waveType: 2
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 93a1b2e6f1aee4848acccfc61b0f5f13, type: 2}
     count: 0
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 150
     StopWaveTime: 151
     waveType: 3
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: 95efdf506d16aaf46b5d360992b87cbc, type: 2}
     count: 300
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 450
     StopWaveTime: 451
     waveType: 3
     summonCycleTime: 2
     enemyObject: {fileID: 11400000, guid: db98e7c027f82c74dbe0eadcea9649ed, type: 2}
     count: 300
-  - name: 
+  - <name>k__BackingField: 
     StartWaveTime: 750
     StopWaveTime: 751
     waveType: 3
@@ -380,168 +380,168 @@ MonoBehaviour:
   enemySpawnWaves2:
   - name: "\uC77C\uBC18 \uC6E8\uC774\uBE0C"
     enemySpawnWaves:
-    - name: Scout 1
+    - <name>k__BackingField: Map 2-1 - summonedPeriodically
       StartWaveTime: 1
       StopWaveTime: 60
       waveType: 0
       summonCycleTime: 0.5
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - summonedPeriodically
       StartWaveTime: 90
       StopWaveTime: 180
       waveType: 0
       summonCycleTime: 0.8
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Scout 1
+    - <name>k__BackingField: Map 2-1 - summonedPeriodically
       StartWaveTime: 60
       StopWaveTime: 120
       waveType: 0
       summonCycleTime: 0.3
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 0
-    - name: Advanced Scout 1
+    - <name>k__BackingField: Map 2-8 - summonedPeriodically
       StartWaveTime: 90
       StopWaveTime: 91
       waveType: 0
       summonCycleTime: 1.5
       enemyObject: {fileID: 11400000, guid: 67e6cd3d7b59b654393e6aefb4484478, type: 2}
       count: 0
-    - name: Scout 1
+    - <name>k__BackingField: Map 2-1 - summonedPeriodically
       StartWaveTime: 130
       StopWaveTime: 240
       waveType: 0
       summonCycleTime: 0.2
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - summonedPeriodically
       StartWaveTime: 125
       StopWaveTime: 300
       waveType: 0
       summonCycleTime: 0.25
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Advanced Scout 1
+    - <name>k__BackingField: Map 2-8 - summonedPeriodically
       StartWaveTime: 180
       StopWaveTime: 181
       waveType: 0
       summonCycleTime: 1.5
       enemyObject: {fileID: 11400000, guid: 67e6cd3d7b59b654393e6aefb4484478, type: 2}
       count: 0
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-3 - summonedPeriodically
       StartWaveTime: 240
       StopWaveTime: 295
       waveType: 0
       summonCycleTime: 1.2
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-3 - summonedPeriodically
       StartWaveTime: 305
       StopWaveTime: 420
       waveType: 0
       summonCycleTime: 0.8
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: Advanced Scout 1
+    - <name>k__BackingField: Map 2-8 - summonedPeriodically
       StartWaveTime: 270
       StopWaveTime: 271
       waveType: 0
       summonCycleTime: 1.5
       enemyObject: {fileID: 11400000, guid: 67e6cd3d7b59b654393e6aefb4484478, type: 2}
       count: 0
-    - name: Advanced Scout 1
+    - <name>k__BackingField: Map 2-8 - summonedPeriodically
       StartWaveTime: 330
       StopWaveTime: 331
       waveType: 0
       summonCycleTime: 1.5
       enemyObject: {fileID: 11400000, guid: 67e6cd3d7b59b654393e6aefb4484478, type: 2}
       count: 0
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-3 - summonedPeriodically
       StartWaveTime: 420
       StopWaveTime: 540
       waveType: 0
       summonCycleTime: 0.7
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: Advanced Scout 1
+    - <name>k__BackingField: Map 2-8 - summonedPeriodically
       StartWaveTime: 420
       StopWaveTime: 421
       waveType: 0
       summonCycleTime: 1.5
       enemyObject: {fileID: 11400000, guid: 67e6cd3d7b59b654393e6aefb4484478, type: 2}
       count: 0
-    - name: Attacker 2
+    - <name>k__BackingField: Map 2-4 - summonedPeriodically
       StartWaveTime: 360
       StopWaveTime: 545
       waveType: 0
       summonCycleTime: 0.8
       enemyObject: {fileID: 11400000, guid: ae10baa982bf309449a7ce1ba310b129, type: 2}
       count: 0
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-3 - summonedPeriodically
       StartWaveTime: 420
       StopWaveTime: 540
       waveType: 0
       summonCycleTime: 0.3
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: Attacker 2
+    - <name>k__BackingField: Map 2-4 - summonedPeriodically
       StartWaveTime: 425
       StopWaveTime: 540
       waveType: 0
       summonCycleTime: 0.4
       enemyObject: {fileID: 11400000, guid: ae10baa982bf309449a7ce1ba310b129, type: 2}
       count: 0
-    - name: Advanced Scout 1
+    - <name>k__BackingField: Map 2-8 - summonedPeriodically
       StartWaveTime: 545
       StopWaveTime: 600
       waveType: 0
       summonCycleTime: 0.8
       enemyObject: {fileID: 11400000, guid: 67e6cd3d7b59b654393e6aefb4484478, type: 2}
       count: 0
-    - name: Attacker 2
+    - <name>k__BackingField: Map 2-4 - summonedPeriodically
       StartWaveTime: 600
       StopWaveTime: 720
       waveType: 0
       summonCycleTime: 0.5
       enemyObject: {fileID: 11400000, guid: ae10baa982bf309449a7ce1ba310b129, type: 2}
       count: 0
-    - name: HyperScout 1
+    - <name>k__BackingField: Map 2-5 - summonedPeriodically
       StartWaveTime: 600
       StopWaveTime: 660
       waveType: 0
       summonCycleTime: 0.8
       enemyObject: {fileID: 11400000, guid: ce9a5a1d6ef126548ae8e1d9174933a5, type: 2}
       count: 0
-    - name: HyperScout 1
+    - <name>k__BackingField: Map 2-5 - summonedPeriodically
       StartWaveTime: 660
       StopWaveTime: 720
       waveType: 0
       summonCycleTime: 0.5
       enemyObject: {fileID: 11400000, guid: ce9a5a1d6ef126548ae8e1d9174933a5, type: 2}
       count: 0
-    - name: Hyper Attacker 1
+    - <name>k__BackingField: Map 2-6 - summonedPeriodically
       StartWaveTime: 725
       StopWaveTime: 780
       waveType: 0
       summonCycleTime: 0.8
       enemyObject: {fileID: 11400000, guid: ddd5d429317b1e14cb1c5bcae176423e, type: 2}
       count: 0
-    - name: Hyper Attacker 1
+    - <name>k__BackingField: Map 2-6 - summonedPeriodically
       StartWaveTime: 780
       StopWaveTime: 900
       waveType: 0
       summonCycleTime: 0.4
       enemyObject: {fileID: 11400000, guid: ddd5d429317b1e14cb1c5bcae176423e, type: 2}
       count: 0
-    - name: Hyper Attacker 1
+    - <name>k__BackingField: Map 2-6 - summonedPeriodically
       StartWaveTime: 840
       StopWaveTime: 842
       waveType: 0
       summonCycleTime: 0.02
       enemyObject: {fileID: 11400000, guid: ddd5d429317b1e14cb1c5bcae176423e, type: 2}
       count: 0
-    - name: Hyper Advanced Scout 1
+    - <name>k__BackingField: Map 2-7 - summonedPeriodically
       StartWaveTime: 845
       StopWaveTime: 900
       waveType: 0
@@ -550,198 +550,219 @@ MonoBehaviour:
       count: 0
   - name: "\uD2B9\uC218 \uC6E8\uC774\uBE0C"
     enemySpawnWaves:
-    - name: Scout 1
+    - <name>k__BackingField: Map 2-1 - summonedPeriodically
       StartWaveTime: 90
       StopWaveTime: 91
       waveType: 0
       summonCycleTime: 0.03
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - summonedPeriodically
       StartWaveTime: 302
       StopWaveTime: 305
       waveType: 0
       summonCycleTime: 0.02
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-3 - summonedPeriodically
       StartWaveTime: 390
       StopWaveTime: 392
       waveType: 0
       summonCycleTime: 0.02
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: Attacker 2
+    - <name>k__BackingField: Map 2-3 - summonedPeriodically
       StartWaveTime: 540
       StopWaveTime: 542
       waveType: 0
       summonCycleTime: 0.02
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: HyperScout 1
+    - <name>k__BackingField: Map 2-5 - summonedPeriodically
       StartWaveTime: 720
       StopWaveTime: 722
       waveType: 0
       summonCycleTime: 0.02
       enemyObject: {fileID: 11400000, guid: ce9a5a1d6ef126548ae8e1d9174933a5, type: 2}
       count: 0
-    - name: Scout 1
+    - <name>k__BackingField: Map 2-1 - blobBurstSummon
       StartWaveTime: 45
       StopWaveTime: 46
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 0
-    - name: Scout 1
+    - <name>k__BackingField: Map 2-1 - blobBurstSummon
       StartWaveTime: 90
       StopWaveTime: 91
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - blobBurstSummon
       StartWaveTime: 135
       StopWaveTime: 136
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - blobBurstSummon
       StartWaveTime: 180
       StopWaveTime: 181
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - blobBurstSummon
       StartWaveTime: 215
       StopWaveTime: 216
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - blobBurstSummon
       StartWaveTime: 250
       StopWaveTime: 251
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-3 - blobBurstSummon
       StartWaveTime: 315
       StopWaveTime: 316
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-3 - blobBurstSummon
       StartWaveTime: 360
       StopWaveTime: 361
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: a36fe5ecd6d61484ba677ace9ea9a198, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - blobBurstSummon
       StartWaveTime: 420
       StopWaveTime: 421
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - blobBurstSummon
       StartWaveTime: 480
       StopWaveTime: 481
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-2 - blobBurstSummon
       StartWaveTime: 660
       StopWaveTime: 661
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 0
-    - name: Hyper Scout 1
+    - <name>k__BackingField: Map 2-5 - blobBurstSummon
       StartWaveTime: 700
       StopWaveTime: 701
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: ce9a5a1d6ef126548ae8e1d9174933a5, type: 2}
       count: 0
-    - name: Hyper Scout 1
+    - <name>k__BackingField: Map 2-5 - blobBurstSummon
       StartWaveTime: 735
       StopWaveTime: 736
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: ce9a5a1d6ef126548ae8e1d9174933a5, type: 2}
       count: 0
-    - name: Hyper Scout 1
+    - <name>k__BackingField: Map 2-5 - blobBurstSummon
       StartWaveTime: 770
       StopWaveTime: 770
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: ce9a5a1d6ef126548ae8e1d9174933a5, type: 2}
       count: 0
-    - name: Hyper Attacker 1
+    - <name>k__BackingField: Map 2-6 - blobBurstSummon
       StartWaveTime: 815
       StopWaveTime: 816
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: ddd5d429317b1e14cb1c5bcae176423e, type: 2}
       count: 0
-    - name: Hyper Attacker 1
+    - <name>k__BackingField: Map 2-6 - blobBurstSummon
       StartWaveTime: 840
       StopWaveTime: 841
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: ddd5d429317b1e14cb1c5bcae176423e, type: 2}
       count: 0
-    - name: Hyper Attacker 1
+    - <name>k__BackingField: Map 2-6 - blobBurstSummon
       StartWaveTime: 875
       StopWaveTime: 876
       waveType: 2
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: ddd5d429317b1e14cb1c5bcae176423e, type: 2}
       count: 0
-    - name: Scout 1
+    - <name>k__BackingField: Map 2-1 - hyperBurstSummon
       StartWaveTime: 150
       StopWaveTime: 151
       waveType: 3
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 300
-    - name: Attacker 1
+    - <name>k__BackingField: Map 2-1 - hyperBurstSummon
       StartWaveTime: 450
       StopWaveTime: 451
       waveType: 3
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 6ecba4bdc072a35478f7d6bef02be860, type: 2}
       count: 300
-    - name: Scout 2
+    - <name>k__BackingField: Map 2-2 - hyperBurstSummon
       StartWaveTime: 750
       StopWaveTime: 751
       waveType: 3
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 200
+    - <name>k__BackingField: Gold Goblin1 summonedPeriodically
+      StartWaveTime: 200
+      StopWaveTime: 201
+      waveType: 0
+      summonCycleTime: 2
+      enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
+      count: 1
+    - <name>k__BackingField: Gold Goblin1 summonedPeriodically
+      StartWaveTime: 500
+      StopWaveTime: 501
+      waveType: 0
+      summonCycleTime: 2
+      enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
+      count: 1
+    - <name>k__BackingField: Gold Goblin1 summonedPeriodically
+      StartWaveTime: 800
+      StopWaveTime: 801
+      waveType: 0
+      summonCycleTime: 2
+      enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
+      count: 1
   - name: "\uBCF4\uC2A4"
     enemySpawnWaves:
-    - name: Gohos 1
+    - <name>k__BackingField: Gohos 1 - summonBoss
       StartWaveTime: 300
       StopWaveTime: 301
       waveType: 1
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 7607d8d4699f8ee4588bacae192f0f51, type: 2}
       count: 0
-    - name: Gohos 2
+    - <name>k__BackingField: Gohos 2 - summonBoss
       StartWaveTime: 600
       StopWaveTime: 601
       waveType: 1
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: d2c40246896637c4cbc5d61cbf6441b2, type: 2}
       count: 0
-    - name: Gohos 3
+    - <name>k__BackingField: Gohos 3 - summonBoss
       StartWaveTime: 900
       StopWaveTime: 901
       waveType: 1

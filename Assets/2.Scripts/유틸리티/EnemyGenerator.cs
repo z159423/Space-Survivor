@@ -214,6 +214,11 @@ public class EnemyGenerator : MonoBehaviour
 
             spawnEnemy.GetComponent<EnemyAI>().SetTarget(player);
 
+            if (spawnEnemy.GetComponent<EnemyAI>().moveStrate)
+            {
+                spawnEnemy.GetComponent<EnemyAI>().SetMoveStrate();
+            }
+
             SpawnedEnemy.Add(spawnEnemy);
         }
 
@@ -342,6 +347,18 @@ public class EnemyGenerator : MonoBehaviour
     public void deleteBossWall()
     {
         Destroy(barrior ?? null);
+    }
+
+    [ContextMenu("스폰웨이브오브젝트/스크립터블오브젝트이름자동재설정")]
+    public void AutoSetSpawnObjectNames()
+    {
+        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves2.Count; i++)
+        {
+            for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
+            {
+                currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].name = currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].enemyObject.name + " - " + currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].waveType;
+            }
+        }
     }
 
     // public void StartEnemySpawn()

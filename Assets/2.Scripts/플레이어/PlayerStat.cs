@@ -297,8 +297,6 @@ public class PlayerStat : MonoBehaviour
             shieldImage.SetActive(false);
 
         resourcePullCollider.radius = 40f;
-
-        playerUpgradeModule.UnapplyModuleStat();
     }
 
     public void PlayGame()

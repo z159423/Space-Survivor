@@ -151,7 +151,10 @@ public class GameManager : MonoBehaviour
         LevelUpManager.getAllUpgradeCount = 0;
 
         playerStat.ReloadShipStat();
+
+        playerUpgradeModule.UnapplyModuleStat();
         playerUpgradeModule.AddUpgradeModulesToPlayerStat();
+        
     }
 
     public void ReplayGame()

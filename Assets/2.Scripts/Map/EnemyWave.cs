@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class EnemyWave
 {
-    [SerializeField] private string name;
+    [field: SerializeField] public string name {get; set;}
     
     [Range(0, 1800)]
     public int StartWaveTime;

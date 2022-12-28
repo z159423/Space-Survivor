@@ -36,5 +36,5 @@ public class EnemyObject : ScriptableObject
 
 public enum EnemyType { Attacker1, Scout1, Attacker2, Scout2, AdvancedScout1, HyperScout1, HyperAttacker1, HyperAdvancedScout1
                         , StarLight1 ,StarLight2, StarLight3, Gohos1, Gohos2, Gohos3
-                        , map2_1, map2_2, map2_3, map2_4, map2_5, map2_6, map2_7, map2_8 
+                        , map2_1, map2_2, map2_3, map2_4, map2_5, map2_6, map2_7, map2_8, goldGoblin1, goldGoblin2
  }
