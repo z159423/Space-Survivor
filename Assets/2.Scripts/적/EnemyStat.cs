@@ -80,6 +80,17 @@ public class EnemyStat : MonoBehaviour
         spriteRenderer.material = originalMat;
 
         AudioManager.instance.GenerateAudioAndPlaySFX(dieSound, transform.position);
+
+        switch(type)
+        {
+            case EnemyType.goldGoblin1:
+             Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin1KilledEvent");
+            break;
+
+            case EnemyType.goldGoblin2:
+             Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin2KilledEvent");
+            break;
+        }
     }
 
     protected void ResourceDrop(DropTable dropTable)

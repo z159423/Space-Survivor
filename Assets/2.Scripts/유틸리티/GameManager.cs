@@ -154,7 +154,8 @@ public class GameManager : MonoBehaviour
 
         playerUpgradeModule.UnapplyModuleStat();
         playerUpgradeModule.AddUpgradeModulesToPlayerStat();
-        
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("StageStart", "StageName", EnemyGenerator.instance.currentEnemySpawnWaveObject.name);
     }
 
     public void ReplayGame()
