@@ -21,6 +21,10 @@ public class UserData
 
     public List<int> clearedStageNumber = new List<int>();
 
+    public List<UpgradeModuleObject> equipedModules = new List<UpgradeModuleObject>();
+
+    public List<UpgradeModuleObject> moduleInventory = new List<UpgradeModuleObject>();
+
     /// <summary>
     /// 코드로 소지한 함선 가져오기
     /// </summary>

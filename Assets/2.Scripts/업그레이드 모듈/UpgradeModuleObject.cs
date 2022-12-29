@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[SerializeField]
-public class UpgradeModuleObject : ScriptableObject, IUpgradeModule
+[System.Serializable]
+public class UpgradeModuleObject : IUpgradeModule
 {
     [field: SerializeField] public UpgradeModuleType type {get; private set;}
     [field: SerializeField] public UpgradeModuleTier tier {get; private set;}
@@ -18,6 +18,7 @@ public class UpgradeModuleObject : ScriptableObject, IUpgradeModule
 
     }
 
+    
     public virtual void UnapplyUpgradeModule()
     {
         

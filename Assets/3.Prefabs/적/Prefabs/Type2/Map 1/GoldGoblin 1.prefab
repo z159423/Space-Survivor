@@ -126,7 +126,7 @@ MonoBehaviour:
     dropExpMinAmount: 0
     dropExpmaxAmount: 0
     dropCrystalMinAmount: 10
-    dropCrystalmaxAmount: 20
+    dropCrystalmaxAmount: 15
   dieVFXType: 1
   enemyAi: {fileID: -1580774171957741374}
   <dieSound>k__BackingField: kill1

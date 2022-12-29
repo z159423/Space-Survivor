@@ -726,8 +726,15 @@ MonoBehaviour:
       enemyObject: {fileID: 11400000, guid: 23dfbf5873f99f34fafffc02a62ec67a, type: 2}
       count: 200
     - <name>k__BackingField: Gold Goblin1 summonedPeriodically
-      StartWaveTime: 200
-      StopWaveTime: 201
+      StartWaveTime: 180
+      StopWaveTime: 181
+      waveType: 0
+      summonCycleTime: 2
+      enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
+      count: 1
+    - <name>k__BackingField: Gold Goblin1 summonedPeriodically
+      StartWaveTime: 350
+      StopWaveTime: 351
       waveType: 0
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
@@ -735,6 +742,20 @@ MonoBehaviour:
     - <name>k__BackingField: Gold Goblin1 summonedPeriodically
       StartWaveTime: 500
       StopWaveTime: 501
+      waveType: 0
+      summonCycleTime: 2
+      enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
+      count: 1
+    - <name>k__BackingField: Gold Goblin1 summonedPeriodically
+      StartWaveTime: 650
+      StopWaveTime: 651
+      waveType: 0
+      summonCycleTime: 2
+      enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
+      count: 1
+    - <name>k__BackingField: Gold Goblin1 summonedPeriodically
+      StartWaveTime: 750
+      StopWaveTime: 751
       waveType: 0
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: d13071f31c9471b46b023b103e36be54, type: 2}
