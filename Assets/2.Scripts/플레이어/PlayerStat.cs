@@ -149,7 +149,7 @@ public class PlayerStat : MonoBehaviour
 
         if (GameManager.instance.revivedThisGame)
         {
-            FirebaseAnalytics.LogEvent("PlayerDeathTime_Revived", "IntParam", GameManager.instance.getCurrentTime());
+            FirebaseAnalytics.LogEvent("PlayerDeathTime_Revived", "PlayerDeathTime_Revived_Sec", GameManager.instance.getCurrentTime());
         }
         else
         {

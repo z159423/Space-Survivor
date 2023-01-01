@@ -129,7 +129,7 @@ MonoBehaviour:
     dropCrystalmaxAmount: 40
   dieVFXType: 1
   enemyAi: {fileID: -1580774171957741374}
-  <dieSound>k__BackingField: kill1
+  <dieSound>k__BackingField: glodGoblinDie
   textGenerateOffset:
     minVectorOffset: {x: -0.15, y: -0.15}
     maxVectorOffset: {x: 0.15, y: 0.15}
