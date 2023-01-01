@@ -14,7 +14,7 @@ public class ModuleItem : MonoBehaviour
 
     public void OnClickThisModule()
     {
-
+        UpgradeModuleManager.instance.ActiveUpgradeModuleDetail(module);
     }
 
     public void SetModuleInfo(UpgradeModuleObject module)
