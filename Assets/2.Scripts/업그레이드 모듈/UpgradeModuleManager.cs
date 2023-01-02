@@ -70,6 +70,29 @@ public class UpgradeModuleManager : MonoBehaviour
         }
         
 
-        upgradeModuleDetailUI.SetActive(!upgradeModuleDetailUI.activeSelf);
+        upgradeModuleDetailUI.SetActive(true);
+    }
+
+    public void UnactiveUpgradeModuleDetail()
+    {
+        upgradeModuleDetailUI.SetActive(false);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void GenerateInventoryAndEquipList()
+    {
+        // 인벤토리 업글 모듈 생성
+        for(int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
+        {
+            
+        }
+
+        // 장착중인 업글 모듈 생성
+        for(int i = 0; i < UserDataManager.instance.currentUserData.equipedModules.Count; i++)
+        {
+
+        }
     }
 }
