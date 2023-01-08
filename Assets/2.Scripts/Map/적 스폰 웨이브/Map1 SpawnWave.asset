@@ -788,13 +788,6 @@ MonoBehaviour:
       summonCycleTime: 2
       enemyObject: {fileID: 11400000, guid: 9739c8981a643ba47b36e59480262e10, type: 2}
       count: 1
-    - <name>k__BackingField: Gold Goblin1 summonedPeriodically
-      StartWaveTime: 10
-      StopWaveTime: 11
-      waveType: 0
-      summonCycleTime: 2
-      enemyObject: {fileID: 11400000, guid: 9739c8981a643ba47b36e59480262e10, type: 2}
-      count: 1
   - name: "\uBCF4\uC2A4"
     enemySpawnWaves:
     - <name>k__BackingField: StarLight1 summonBoss

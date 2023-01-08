@@ -555,7 +555,10 @@ MonoBehaviour:
     usingFreeCrystalTime: 
     version: 
     clearedStageNumber: 
-    equipedModules: []
+    equipedModules_Attack: []
+    equipedModules_Defence: []
+    equipedModules_Movement: []
+    equipedModules_Special: []
     moduleInventory: []
 --- !u!114 &473405378
 MonoBehaviour:

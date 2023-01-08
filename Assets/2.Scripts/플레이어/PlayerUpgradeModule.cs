@@ -16,51 +16,35 @@ public class PlayerUpgradeModule : MonoBehaviour
     [SerializeField] private GameObject moduleItemPrefab;
     [SerializeField] private Transform moduleInventoryParent;
 
+    /// <sumamry>
+    /// 현재 장착중인 모듈을 게임 시작할때 스탯에 적용함
+    /// </summary>
     public void AddUpgradeModulesToPlayerStat()
     {
-        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules.Count; i++)
+        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Attack.Length; i++)
         {
-            UserDataManager.instance.currentUserData.equipedModules[i].ApplyUpgradeModule(playerWeapon);
+            UserDataManager.instance.currentUserData.equipedModules_Attack[i].ApplyUpgradeModule(playerWeapon);
+        }
+
+        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Defence.Length; i++)
+        {
+            UserDataManager.instance.currentUserData.equipedModules_Defence[i].ApplyUpgradeModule(playerWeapon);
+        }
+
+        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Movement.Length; i++)
+        {
+            UserDataManager.instance.currentUserData.equipedModules_Movement[i].ApplyUpgradeModule(playerWeapon);
+        }
+
+        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Special.Length; i++)
+        {
+            UserDataManager.instance.currentUserData.equipedModules_Special[i].ApplyUpgradeModule(playerWeapon);
         }
     }
 
     public void UnapplyModuleStat()
     {
         playerWeapon.moduleDamage.ClearAllModifier();
-    }
-
-    /// <summary>
-    /// 새로운 모듈 획득
-    /// </summary>
-    public void GetNewModule(UpgradeModuleObject newModule)
-    {
-        UserDataManager.instance.currentUserData.moduleInventory.Add(newModule);
-
-        var newModuleItem = Instantiate(moduleItemPrefab, moduleInventoryParent);
-        newModuleItem.GetComponent<ModuleItem>().SetModuleInfo(newModule);
-
-        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
-
-        RefreshInventory();
-    }
-
-    /// <summary>
-    /// 모듈 장착
-    /// </summary>
-    public void EquipModule(GameObject moduleItem)
-    {
-        var module = moduleItem.GetComponent<UpgradeModuleObject>();
-
-        RefreshInventory();
-    }
-
-    /// <summary>
-    /// 모듈 장착 해제
-    /// </summary>
-    public void UnEquipModule()
-    {
-
-        RefreshInventory();
     }
 
     /// <summary>

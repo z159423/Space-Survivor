@@ -155,4 +155,33 @@ public class Utility : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// 랜덤값 가져오기 float 배열에 각각 다른 값들을 넣어서 확률 계산을 하여 값을 리턴한다
+    /// </summary>
+    public static int GetRandomProb(float[] probs)
+    {
+
+        float total = 0;
+
+        foreach (float elem in probs)
+        {
+            total += elem;
+        }
+
+        float randomPoint = UnityEngine.Random.value * total;
+
+        for (int i = 0; i < probs.Length; i++)
+        {
+            if (randomPoint < probs[i])
+            {
+                return i;
+            }
+            else
+            {
+                randomPoint -= probs[i];
+            }
+        }
+        return probs.Length - 1;
+    }
 }

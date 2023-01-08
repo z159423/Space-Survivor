@@ -21,7 +21,10 @@ public class UserData
 
     public List<int> clearedStageNumber = new List<int>();
 
-    public List<UpgradeModuleObject> equipedModules = new List<UpgradeModuleObject>();
+    public UpgradeModuleObject[] equipedModules_Attack = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+    public UpgradeModuleObject[] equipedModules_Defence = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+    public UpgradeModuleObject[] equipedModules_Movement = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+    public UpgradeModuleObject[] equipedModules_Special = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
 
     public List<UpgradeModuleObject> moduleInventory = new List<UpgradeModuleObject>();
 
