@@ -50,6 +50,9 @@ public class UpgradeModuleManager : MonoBehaviour
 
     [Space]
 
+    [SerializeField] private GameObject sellPanel;
+    [SerializeField] private TextMeshProUGUI costText;
+    [SerializeField] private Button sellYesBtn;
     public static readonly float[] UpgradeModuleTierDropPercent = { 10000, 800, 20, 5, 1 };
 
     //public List<UpgradeModuleObject> TestequipedModules = new List<UpgradeModuleObject>();
@@ -156,6 +159,9 @@ public class UpgradeModuleManager : MonoBehaviour
             unequipBtn.GetComponent<Button>().onClick.AddListener(() => UnEquipModule(item));
             unequipBtn.SetActive(true);
         }
+
+        sellBtn.GetComponent<Button>().onClick.RemoveAllListeners();
+        sellBtn.GetComponent<Button>().onClick.AddListener(() => OnClickModuleSellBtn(item));
 
         ActiveModuleDetailPanel();
     }
@@ -450,5 +456,95 @@ public class UpgradeModuleManager : MonoBehaviour
     public void OnChangeUpgardeModuleSystem()
     {
         GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+    }
+
+    public void ActiveModuleSellPanel()
+    {
+        sellPanel.SetActive(!sellPanel.activeSelf);
+    }
+
+    public void OnClickModuleSellBtn(ModuleItem item)
+    {
+        costText.text = item.module.GetSellCost().ToString();
+
+        sellYesBtn.onClick.RemoveAllListeners();
+        sellYesBtn.onClick.AddListener(() => SellModule(item));
+
+        ActiveModuleSellPanel();
+    }
+
+    public void SellModule(ModuleItem item)
+    {
+        UserDataManager.instance.AddCrystalValue(item.module.GetSellCost());
+
+        if (item.inventory)
+        {
+            for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
+            {
+                if (item.module.key == UserDataManager.instance.currentUserData.moduleInventory[i].key)
+                {
+                    UserDataManager.instance.currentUserData.moduleInventory.RemoveAt(i);
+                    break;
+                }
+            }
+        }
+        else if (item.equip)
+        {
+            switch (item.module.type)
+            {
+                case UpgradeModuleType.AttackType:
+                    for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Attack.Length; i++)
+                    {
+                        if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Attack[i].key)
+                        {
+                            UserDataManager.instance.currentUserData.equipedModules_Attack[i] = null;
+                            break;
+                        }
+                    }
+
+                    break;
+
+                case UpgradeModuleType.DefenceType:
+                    for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Defence.Length; i++)
+                    {
+                        if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Defence[i].key)
+                        {
+                            UserDataManager.instance.currentUserData.equipedModules_Defence[i] = null;
+                            break;
+                        }
+                    }
+                    break;
+
+                case UpgradeModuleType.MovementType:
+                    for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Movement.Length; i++)
+                    {
+                        if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Movement[i].key)
+                        {
+                            UserDataManager.instance.currentUserData.equipedModules_Movement[i] = null;
+                            break;
+                        }
+                    }
+                    break;
+
+                case UpgradeModuleType.SpecialType:
+                    for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Special.Length; i++)
+                    {
+                        if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Special[i].key)
+                        {
+                            UserDataManager.instance.currentUserData.equipedModules_Special[i] = null;
+                            break;
+                        }
+                    }
+                    break;
+
+                default:
+                    UnityEngine.Debug.LogError("판매할 수 없는 모듈 타입입니다.");
+                    break;
+            }
+        }
+
+        Destroy(item.gameObject);
+
+        ActiveModuleSellPanel();
     }
 }

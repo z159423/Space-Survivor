@@ -11,7 +11,7 @@ public class UpgradeModuleObject : IUpgradeModule
     [field: SerializeField] public UpgradeModuleTier tier { get; private set; }
     [field: SerializeField] public string key { get; private set; }
 
-    public static readonly int[] sellCosts = { 8, 20, 50, 80, 200 };
+    public static readonly int[] sellCosts = {0, 8, 20, 50, 80, 200 };
 
     /// <summary>
     /// 플레이어에 현재 장착중인 모듈 효과 적용
@@ -51,6 +51,11 @@ public class UpgradeModuleObject : IUpgradeModule
     public UpgradeModuleObject GetUpgradeModuleObject()
     {
         return this;
+    }
+
+    public int GetSellCost()
+    {
+        return sellCosts[(int)tier];
     }
 }
 

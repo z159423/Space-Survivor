@@ -24,6 +24,8 @@ public interface IUpgradeModule
 
     public void SetModuleInfo(UpgradeModuleType type, UpgradeModules modules, UpgradeModuleTier tier, string key);
 
+    public int GetSellCost();
+
     public UpgradeModuleObject GetUpgradeModuleObject();
 
     [SerializeField] public UpgradeModuleType type { get; }
