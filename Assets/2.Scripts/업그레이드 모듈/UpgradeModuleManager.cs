@@ -546,5 +546,6 @@ public class UpgradeModuleManager : MonoBehaviour
         Destroy(item.gameObject);
 
         ActiveModuleSellPanel();
+        ActiveModuleDetailPanel();
     }
 }

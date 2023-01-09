@@ -127,6 +127,7 @@ MonoBehaviour:
     dropExpmaxAmount: 0
     dropCrystalMinAmount: 10
     dropCrystalmaxAmount: 15
+    ModuleDropPercent: 150
   dieVFXType: 1
   enemyAi: {fileID: -1580774171957741374}
   <dieSound>k__BackingField: glodGoblinDie

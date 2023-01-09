@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ModuleDrops : MonoBehaviour
+{
+    public UpgradeModuleObject module = new UpgradeModuleObject();
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Player") && collision.GetComponent<PlayerBodyBeacon>() != null)
+        {
+            UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage.Add(module);
+            UpgradeModuleDropManager.instance.moduleDropsPool.EnqueueObject(gameObject);
+        }
+    }
+
+    public void SetModuleStat(UpgradeModuleObject module)
+    {
+        this.module = module;
+    }
+}
