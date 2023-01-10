@@ -66,6 +66,7 @@ public class UserDataManager : MonoBehaviour
         {
             print("로컬 세이브가 존재하지 않아 새로 생성합니다. " + filePath);
             UserData userData = new UserData();
+            userData.Init();
 
             var newShipData = Instantiate(startShip);
 

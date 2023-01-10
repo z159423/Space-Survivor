@@ -124,6 +124,7 @@ public class GoogleCloud : MonoBehaviour
     public UserData LoadUserDataWithCloud(System.Action<bool, string> callback = null)
     {
         UserData userData = new UserData();
+        userData.Init();
         //Time.timeScale = 0f;
 
         GPGSManager.Instance.LoadWithCloud("USERDATA", (success, serializedData) =>

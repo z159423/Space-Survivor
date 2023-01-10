@@ -6,6 +6,14 @@ public class UpgradeModuleEquipment : MonoBehaviour
 {
     [field: SerializeField] public ModuleEquipData data { get; private set; }
 
+    [Space]
+
+    [SerializeField] private GameObject swapBlock;
+    [SerializeField] private GameObject[] swapArrows;
+    [SerializeField] private GameObject[] swapBtns;
+
+
+
     //[field: SerializeField] public Transform[] equipSlots = new Transform[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
 
     public void SlotsInit()
@@ -74,5 +82,35 @@ public class UpgradeModuleEquipment : MonoBehaviour
         }
         else
             return false;
+    }
+
+    public void SwapModeOn()
+    {
+        swapBlock.SetActive(true);
+
+        for (int i = 0; i < swapArrows.Length; i++)
+        {
+            swapArrows[i].SetActive(true);
+        }
+
+        for (int i = 0; i < swapBtns.Length; i++)
+        {
+            swapBtns[i].SetActive(true);
+        }
+    }
+
+    public void SwapModeOff()
+    {
+        swapBlock.SetActive(false);
+
+        for (int i = 0; i < swapArrows.Length; i++)
+        {
+            swapArrows[i].SetActive(false);
+        }
+
+        for (int i = 0; i < swapBtns.Length; i++)
+        {
+            swapBtns[i].SetActive(false);
+        }
     }
 }

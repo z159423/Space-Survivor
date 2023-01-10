@@ -555,10 +555,63 @@ MonoBehaviour:
     usingFreeCrystalTime: 
     version: 
     clearedStageNumber: 
-    equipedModules_Attack: []
-    equipedModules_Defence: []
-    equipedModules_Movement: []
-    equipedModules_Special: []
+    equipModuleSaveDatas:
+    - <type>k__BackingField: 1
+      equipedModules:
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+    - <type>k__BackingField: 2
+      equipedModules:
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+    - <type>k__BackingField: 3
+      equipedModules:
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+    - <type>k__BackingField: 4
+      equipedModules:
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
+      - <type>k__BackingField: 0
+        <module>k__BackingField: 0
+        <tier>k__BackingField: 0
+        <key>k__BackingField: 
     moduleInventory: []
 --- !u!114 &473405378
 MonoBehaviour:

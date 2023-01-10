@@ -21,24 +21,12 @@ public class PlayerUpgradeModule : MonoBehaviour
     /// </summary>
     public void AddUpgradeModulesToPlayerStat()
     {
-        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Attack.Length; i++)
+        foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
         {
-            UserDataManager.instance.currentUserData.equipedModules_Attack[i].ApplyUpgradeModule(playerWeapon);
-        }
-
-        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Defence.Length; i++)
-        {
-            UserDataManager.instance.currentUserData.equipedModules_Defence[i].ApplyUpgradeModule(playerWeapon);
-        }
-
-        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Movement.Length; i++)
-        {
-            UserDataManager.instance.currentUserData.equipedModules_Movement[i].ApplyUpgradeModule(playerWeapon);
-        }
-
-        for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Special.Length; i++)
-        {
-            UserDataManager.instance.currentUserData.equipedModules_Special[i].ApplyUpgradeModule(playerWeapon);
+            foreach (UpgradeModuleObject module in data.equipedModules)
+            {
+                module.ApplyUpgradeModule(playerWeapon);
+            }
         }
     }
 

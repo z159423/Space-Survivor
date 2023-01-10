@@ -21,12 +21,51 @@ public class UserData
 
     public List<int> clearedStageNumber = new List<int>();
 
-    public UpgradeModuleObject[] equipedModules_Attack = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
-    public UpgradeModuleObject[] equipedModules_Defence = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
-    public UpgradeModuleObject[] equipedModules_Movement = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
-    public UpgradeModuleObject[] equipedModules_Special = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+    [SerializeField] public EquipModuleSaveData[] equipModuleSaveDatas = { new EquipModuleSaveData(UpgradeModuleType.AttackType), new EquipModuleSaveData(UpgradeModuleType.DefenceType), new EquipModuleSaveData(UpgradeModuleType.MovementType), new EquipModuleSaveData(UpgradeModuleType.SpecialType) };
+
+    // public UserData()
+    // {
+    //     for (int i = 0; i < equipModuleSaveDatas.Length; i++)
+    //     {
+    //         equipModuleSaveDatas[i].type = (UpgradeModuleType)(i + 1);
+    //     }
+    // }
+
+    [System.Serializable]
+    public class EquipModuleSaveData
+    {
+        [field: SerializeField] public UpgradeModuleType type { get; set; }
+        public UpgradeModuleObject[] equipedModules = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+
+        public bool CheckingCurrentEquipModuleData(UpgradeModuleType type)
+        {
+            return this.type == type ? true : false;
+        }
+
+        public EquipModuleSaveData(UpgradeModuleType type)
+        {
+            this.type = type;
+        }
+    }
+
+
+
+    //public UpgradeModuleObject[] equipedModules_Attack = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+    //public UpgradeModuleObject[] equipedModules_Defence = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+    //public UpgradeModuleObject[] equipedModules_Movement = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
+    //public UpgradeModuleObject[] equipedModules_Special = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
 
     public List<UpgradeModuleObject> moduleInventory = new List<UpgradeModuleObject>();
+
+    public void Init()
+    {
+        // equipModuleSaveDatas = new EquipModuleSaveData[4];
+
+        // for(int i = 0; i < equipModuleSaveDatas.Length; i++)
+        // {
+        //     equipModuleSaveDatas[i].type = (UpgradeModuleType)(i + 1);
+        // }
+    }
 
     /// <summary>
     /// 코드로 소지한 함선 가져오기

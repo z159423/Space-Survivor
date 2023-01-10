@@ -38,7 +38,7 @@ public interface IUpgradeModule
 
 }
 
-public enum UpgradeModuleType {None, AttackType, DefenceType, MovementType, SpecialType }
+public enum UpgradeModuleType {None = 0, AttackType = 1, DefenceType = 2, MovementType = 3, SpecialType = 4 }
 
 public enum UpgradeModules {None, DamageUp, ArmorUp, MovespeedUp }
 
