@@ -103,64 +103,21 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public void GenerateEquipModulePrefabs()
     {
-        foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
+        for (int e = 0; e < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; e++)
         {
-            foreach (UpgradeModuleObject obj in data.equipedModules)
+            for (int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules.Length; i++)
             {
-                if (obj != null)
+                if (UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type != UpgradeModuleType.None
+                 && UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].key != "")
                 {
-
-                    if (obj.type != UpgradeModuleType.None && obj.key != "")
+                    for (int j = 0; j < playerModuleEquips.Length; j++)
                     {
-                        for (int j = 0; j < playerModuleEquips.Length; j++)
-                        {
-                            if (playerModuleEquips[j].data.slotType == obj.type)
-                                playerModuleEquips[j].EquipModuleAsNumber(modulePrefab, obj.GetUpgradeModuleObject(), j);
-                        }
+                        if (playerModuleEquips[j].data.slotType == UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type)
+                            playerModuleEquips[j].EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].GetUpgradeModuleObject(), i);
                     }
                 }
             }
         }
-
-        // for (int e = 0; e < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; e++)
-        // {
-        //     for (int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules.Length; i++)
-        //     {
-        //         if (UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type != UpgradeModuleType.None
-        //          && UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].key != "")
-        //         {
-        //             for (int j = 0; j < playerModuleEquips.Length; j++)
-        //             {
-        //                 if (playerModuleEquips[j].data.slotType == UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type)
-        //                     playerModuleEquips[j].EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].GetUpgradeModuleObject(), j);
-        //             }
-        //         }
-        //     }
-        // }
-
-        // for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Attack.Length; i++)
-        // {
-        //     if (UserDataManager.instance.currentUserData.equipedModules_Attack[i].type != UpgradeModuleType.None && UserDataManager.instance.currentUserData.equipedModules_Attack[i].key != "")
-        //         playerModuleEquip_Attack.EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipedModules_Attack[i].GetUpgradeModuleObject(), i);
-        // }
-
-        // for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Defence.Length; i++)
-        // {
-        //     if (UserDataManager.instance.currentUserData.equipedModules_Defence[i].type != UpgradeModuleType.None && UserDataManager.instance.currentUserData.equipedModules_Defence[i].key != "")
-        //         playerModuleEquip_Defence.EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipedModules_Defence[i].GetUpgradeModuleObject(), i);
-        // }
-
-        // for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Movement.Length; i++)
-        // {
-        //     if (UserDataManager.instance.currentUserData.equipedModules_Movement[i].type != UpgradeModuleType.None && UserDataManager.instance.currentUserData.equipedModules_Movement[i].key != "")
-        //         playerModuleEquip_Movement.EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipedModules_Movement[i].GetUpgradeModuleObject(), i);
-        // }
-
-        // for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Special.Length; i++)
-        // {
-        //     if (UserDataManager.instance.currentUserData.equipedModules_Special[i].type != UpgradeModuleType.None && UserDataManager.instance.currentUserData.equipedModules_Special[i].key != "")
-        //         playerModuleEquip_Special.EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipedModules_Special[i].GetUpgradeModuleObject(), i);
-        // }
     }
 
     /// <summary>
@@ -244,73 +201,6 @@ public class UpgradeModuleManager : MonoBehaviour
             }
         }
 
-        // switch (module.module.type)
-        // {
-        //     case UpgradeModuleType.AttackType:
-        //         success = playerModuleEquip_Attack.EquipModule(modulePrefab, module.module.GetUpgradeModuleObject());
-        //         if (success)
-        //         {
-        //             for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Attack.Length; i++)
-        //             {
-        //                 if (UserDataManager.instance.currentUserData.equipedModules_Attack[i].type == UpgradeModuleType.None)
-        //                 {
-        //                     UserDataManager.instance.currentUserData.equipedModules_Attack[i] = module.module.GetUpgradeModuleObject();
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         else
-        //         {
-
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.DefenceType:
-        //         success = playerModuleEquip_Defence.EquipModule(modulePrefab, module.module.GetUpgradeModuleObject());
-        //         if (success)
-        //         {
-        //             for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Defence.Length; i++)
-        //             {
-        //                 if (UserDataManager.instance.currentUserData.equipedModules_Defence[i].type == UpgradeModuleType.None)
-        //                 {
-        //                     UserDataManager.instance.currentUserData.equipedModules_Defence[i] = module.module.GetUpgradeModuleObject();
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.MovementType:
-        //         success = playerModuleEquip_Movement.EquipModule(modulePrefab, module.module.GetUpgradeModuleObject());
-        //         if (success)
-        //         {
-        //             for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Movement.Length; i++)
-        //             {
-        //                 if (UserDataManager.instance.currentUserData.equipedModules_Movement[i].type == UpgradeModuleType.None)
-        //                 {
-        //                     UserDataManager.instance.currentUserData.equipedModules_Movement[i] = module.module.GetUpgradeModuleObject();
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.SpecialType:
-        //         success = playerModuleEquip_Special.EquipModule(modulePrefab, module.module.GetUpgradeModuleObject());
-        //         if (success)
-        //         {
-        //             for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Special.Length; i++)
-        //             {
-        //                 if (UserDataManager.instance.currentUserData.equipedModules_Special[i].type == UpgradeModuleType.None)
-        //                 {
-        //                     UserDataManager.instance.currentUserData.equipedModules_Special[i] = module.module.GetUpgradeModuleObject();
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         break;
-        // }
-
         if (success)
         {
             for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
@@ -323,6 +213,10 @@ public class UpgradeModuleManager : MonoBehaviour
                     break;
                 }
             }
+        }
+        else
+        {
+            SwapModeOn(module.module.GetUpgradeModuleObject());
         }
 
         ActiveModuleDetailPanel();
@@ -350,122 +244,6 @@ public class UpgradeModuleManager : MonoBehaviour
                 break;
             }
         }
-
-        // for(int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; i++)
-        // {
-        //     if(UserDataManager.instance.currentUserData.equipModuleSaveDatas[i].CheckingCurrentEquipModuleData(module.module.type))
-        //     {
-        //         for(int j = 0; j < UserDataManager.instance.currentUserData.equipModuleSaveDatas[i].equipedModules.Length; j++)
-        //         {
-        //             if(UserDataManager.instance.currentUserData.equipModuleSaveDatas[i].equipedModules[j].key == module.module.key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.equipModuleSaveDatas[i].equipedModules[j] = null;
-        //                 break;
-        //             }
-        //         }
-        //         break;
-        //     }
-        // }
-
-        // switch (module.module.type)
-        // {
-        //     case UpgradeModuleType.AttackType:
-
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Attack.Length; i++)
-        //         {
-        //             if (UserDataManager.instance.currentUserData.equipedModules_Attack[i].key == module.module.key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.equipedModules_Attack[i] = null;
-
-        //                 break;
-        //             }
-        //         }
-
-        //         for (int i = 0; i < playerModuleEquip_Attack.data.equipItems.Length; i++)
-        //         {
-        //             if (playerModuleEquip_Attack.data.equipItems[i] != null)
-        //             {
-        //                 if (playerModuleEquip_Attack.data.equipItems[i].module.key == module.module.key)
-        //                 {
-        //                     playerModuleEquip_Attack.data.equipItems[i] = null;
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.DefenceType:
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Defence.Length; i++)
-        //         {
-        //             if (UserDataManager.instance.currentUserData.equipedModules_Defence[i].key == module.module.key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.equipedModules_Defence[i] = null;
-
-        //                 break;
-        //             }
-        //         }
-
-        //         for (int i = 0; i < playerModuleEquip_Defence.data.equipItems.Length; i++)
-        //         {
-        //             if (playerModuleEquip_Defence.data.equipItems[i] != null)
-        //             {
-        //                 if (playerModuleEquip_Defence.data.equipItems[i].module.key == module.module.key)
-        //                 {
-        //                     playerModuleEquip_Defence.data.equipItems[i] = null;
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.MovementType:
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Movement.Length; i++)
-        //         {
-        //             if (UserDataManager.instance.currentUserData.equipedModules_Movement[i].key == module.module.key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.equipedModules_Movement[i] = null;
-
-        //                 break;
-        //             }
-        //         }
-
-        //         for (int i = 0; i < playerModuleEquip_Movement.data.equipItems.Length; i++)
-        //         {
-        //             if (playerModuleEquip_Movement.data.equipItems[i] != null)
-        //             {
-        //                 if (playerModuleEquip_Movement.data.equipItems[i].module.key == module.module.key)
-        //                 {
-        //                     playerModuleEquip_Movement.data.equipItems[i] = null;
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.SpecialType:
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Special.Length; i++)
-        //         {
-        //             if (UserDataManager.instance.currentUserData.equipedModules_Special[i].key == module.module.key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.equipedModules_Special[i] = null;
-
-        //                 break;
-        //             }
-        //         }
-
-        //         for (int i = 0; i < playerModuleEquip_Special.data.equipItems.Length; i++)
-        //         {
-        //             if (playerModuleEquip_Special.data.equipItems[i] != null)
-        //             {
-        //                 if (playerModuleEquip_Special.data.equipItems[i].module.key == module.module.key)
-        //                 {
-        //                     playerModuleEquip_Special.data.equipItems[i] = null;
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //         break;
-        // }
 
         Destroy(module.gameObject);
 
@@ -668,12 +446,13 @@ public class UpgradeModuleManager : MonoBehaviour
     public void SwapModule(UpgradeModuleType type, int num, UpgradeModuleObject swapModule)
     {
         UpgradeModuleObject tempModule = null;
-        swapingModule = swapModule;
 
         foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
         {
             if (data.CheckingCurrentEquipModuleData(type))
             {
+                tempModule = data.equipedModules[num];
+
                 data.equipedModules[num] = swapingModule;
 
                 for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
@@ -688,111 +467,21 @@ public class UpgradeModuleManager : MonoBehaviour
             }
         }
 
-        // switch (type)
-        // {
-        //     case UpgradeModuleType.AttackType:
-        //         tempModule = UserDataManager.instance.currentUserData.equipedModules_Attack[num];
-
-        //         UserDataManager.instance.currentUserData.equipedModules_Attack[num] = swapingModule;
-
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
-        //         {
-        //             if (swapingModule.key == UserDataManager.instance.currentUserData.moduleInventory[i].key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.moduleInventory[i] = tempModule;
-        //                 break;
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.DefenceType:
-        //         tempModule = UserDataManager.instance.currentUserData.equipedModules_Defence[num];
-
-        //         UserDataManager.instance.currentUserData.equipedModules_Defence[num] = swapingModule;
-
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
-        //         {
-        //             if (swapingModule.key == UserDataManager.instance.currentUserData.moduleInventory[i].key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.moduleInventory[i] = tempModule;
-        //                 break;
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.MovementType:
-        //         tempModule = UserDataManager.instance.currentUserData.equipedModules_Movement[num];
-
-        //         UserDataManager.instance.currentUserData.equipedModules_Movement[num] = swapingModule;
-
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
-        //         {
-        //             if (swapingModule.key == UserDataManager.instance.currentUserData.moduleInventory[i].key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.moduleInventory[i] = tempModule;
-        //                 break;
-        //             }
-        //         }
-        //         break;
-
-        //     case UpgradeModuleType.SpecialType:
-        //         tempModule = UserDataManager.instance.currentUserData.equipedModules_Special[num];
-
-        //         UserDataManager.instance.currentUserData.equipedModules_Special[num] = swapingModule;
-
-        //         for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
-        //         {
-        //             if (swapingModule.key == UserDataManager.instance.currentUserData.moduleInventory[i].key)
-        //             {
-        //                 UserDataManager.instance.currentUserData.moduleInventory[i] = tempModule;
-        //                 break;
-        //             }
-        //         }
-        //         break;
-
-        //     default:
-        //         UnityEngine.Debug.LogError("교체할 타입이 없습니다.");
-
-        //         break;
-        // }
-
         SwapModeOff();
     }
 
-    public void SwapModeOn(UpgradeModuleType type)
+    public void SwapModeOn(UpgradeModuleObject moduleObject)
     {
         foreach (UpgradeModuleEquipment equipment in playerModuleEquips)
         {
-            if (equipment.data.slotType == type)
+            if (equipment.data.slotType == moduleObject.type)
             {
+                swapingModule = moduleObject;
                 equipment.SwapModeOn();
                 break;
             }
         }
 
-        // switch (type)
-        // {
-        //     case UpgradeModuleType.AttackType:
-        //         playerModuleEquip_Attack.SwapModeOn();
-        //         break;
-
-        //     case UpgradeModuleType.DefenceType:
-        //         playerModuleEquip_Attack.SwapModeOn();
-        //         break;
-
-        //     case UpgradeModuleType.MovementType:
-        //         playerModuleEquip_Attack.SwapModeOn();
-        //         break;
-
-        //     case UpgradeModuleType.SpecialType:
-        //         playerModuleEquip_Attack.SwapModeOn();
-        //         break;
-
-        //     default:
-        //         UnityEngine.Debug.LogError("교체할 타입이 없습니다.");
-
-        //         break;
-        // }
     }
 
     public void SwapModeOff()
@@ -803,11 +492,5 @@ public class UpgradeModuleManager : MonoBehaviour
         {
             equipment.SwapModeOff();
         }
-
-        // playerModuleEquip_Attack.SwapModeOff();
-        // playerModuleEquip_Defence.SwapModeOff();
-        // playerModuleEquip_Movement.SwapModeOff();
-        // playerModuleEquip_Special.SwapModeOff();
-
     }
 }

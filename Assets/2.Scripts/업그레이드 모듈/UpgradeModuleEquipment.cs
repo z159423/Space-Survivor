@@ -95,6 +95,7 @@ public class UpgradeModuleEquipment : MonoBehaviour
 
         for (int i = 0; i < swapBtns.Length; i++)
         {
+            swapBtns[i].transform.SetAsLastSibling();
             swapBtns[i].SetActive(true);
         }
     }
