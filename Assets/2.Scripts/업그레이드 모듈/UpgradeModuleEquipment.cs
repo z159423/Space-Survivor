@@ -114,4 +114,17 @@ public class UpgradeModuleEquipment : MonoBehaviour
             swapBtns[i].SetActive(false);
         }
     }
+
+    public void ClearItems()
+    {
+        for (int i = 0; i < data.equipItems.Length; i++)
+        {
+            if (data.equipItems[i] != null)
+            {
+                Destroy(data.equipItems[i].gameObject);
+
+                data.equipItems[i] = null;
+            }
+        }
+    }
 }

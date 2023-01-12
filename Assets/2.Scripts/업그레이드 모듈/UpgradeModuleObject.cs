@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Diagnostics;
+using System;
 
 [System.Serializable]
 public class UpgradeModuleObject : IUpgradeModule
@@ -13,18 +14,31 @@ public class UpgradeModuleObject : IUpgradeModule
 
     public static readonly int[] sellCosts = {0, 8, 20, 50, 80, 200 };
 
+    public UpgradeModuleObject()
+    {
+
+    }
+
+    public UpgradeModuleObject(UpgradeModuleType type, UpgradeModules module, UpgradeModuleTier tier)
+    {
+        this.type = type;
+        this.module = module;
+        this.tier = tier;
+        key = Guid.NewGuid().ToString();
+    }
+
     /// <summary>
     /// 플레이어에 현재 장착중인 모듈 효과 적용
     /// </summary>
     public virtual void ApplyUpgradeModule(PlayerWeapon playerWeapon)
     {
-        Debug.LogError("기본 모듈 효과 적용 함수 발동");
+        UnityEngine.Debug.LogError("기본 모듈 효과 적용 함수 발동");
     }
 
 
     public virtual void UnapplyUpgradeModule()
     {
-        Debug.LogError("기본 모듈 장착해제 함수 발동");
+        UnityEngine.Debug.LogError("기본 모듈 장착해제 함수 발동");
     }
 
     /// <summary>
@@ -32,7 +46,7 @@ public class UpgradeModuleObject : IUpgradeModule
     /// </summary>
     public virtual void TierUpThisModule()
     {
-        Debug.LogError("기본 모듈 티어업 함수 발동");
+        UnityEngine.Debug.LogError("기본 모듈 티어업 함수 발동");
     }
 
     public virtual float GetModuleStat(int tier)

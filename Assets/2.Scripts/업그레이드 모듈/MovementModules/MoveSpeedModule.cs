@@ -2,29 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveSpeedModule : UpgradeModuleObject
+[CreateAssetMenu(fileName = "new Module", menuName = "Scriptable Object/Upgrade Module/MoveSpeed", order = int.MaxValue)]
+public class MoveSpeedModule : UpgradeModuleScripableObject
 {
     public static readonly float[] moveSpeedValue = { 0.15f, 0.25f, 0.3f, 0.4f, 0.5f };
 
-    public override void ApplyUpgradeModule(PlayerWeapon playerWeapon)
+    public override void ApplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
     {
-        //playerWeapon.moduleDamage.AddFloatModifier(shipPlateValue[(int)tier]);
+        //playerWeapon.moduleDamage.AddFloatModifier(damageUpValues[(int)tier]);
 
-        MonoBehaviour.print("방어력 업 스탯 적용됨");
+        MonoBehaviour.print("이동속도 증가 모듈 스탯 적용");
     }
 
-    public override float GetModuleStat(int tier)
+    public override void UnapplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
     {
-        return moveSpeedValue[tier];
-    }
-
-    public override void UnapplyUpgradeModule()
-    {
-
-    }
-
-    public override void TierUpThisModule()
-    {
-
+        MonoBehaviour.print("이동속도 증가 스탯 적용해제");
     }
 }

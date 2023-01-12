@@ -59110,7 +59110,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 247
 --- !u!114 &1625381614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72619,6 +72619,12 @@ MonoBehaviour:
   moduleDropsPool:
     objectPrefabs: {fileID: 6307443225230749809, guid: 0d8ed17171b33ab488a1933d5571b90a, type: 3}
     objectParent: {fileID: 1949260479}
+  moduleDatas:
+  - {fileID: 11400000, guid: aa418cb0c6183b44e86b6e03494afe6a, type: 2}
+  - {fileID: 11400000, guid: 4202bcd2c8cb47d4ea038f731579b800, type: 2}
+  - {fileID: 11400000, guid: 5a4847b41425602478e2046f1376988c, type: 2}
+  - {fileID: 11400000, guid: a55ab26e5a4b4f14ea45c33c58a2aeab, type: 2}
+  - {fileID: 11400000, guid: e00e5e4196df03a46b8be40481acde5d, type: 2}
 --- !u!1 &1957857845
 GameObject:
   m_ObjectHideFlags: 0

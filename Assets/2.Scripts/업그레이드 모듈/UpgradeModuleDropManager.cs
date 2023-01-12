@@ -10,6 +10,8 @@ public class UpgradeModuleDropManager : MonoBehaviour
 
     public static UpgradeModuleDropManager instance;
 
+    public UpgradeModuleScripableObject[] moduleDatas;
+
     private void Awake()
     {
         instance = this;
@@ -21,7 +23,7 @@ public class UpgradeModuleDropManager : MonoBehaviour
     public void GenerateRandomModuleDrops(Vector3 position)
     {
         var drops = moduleDropsPool.DequeueObject(position);
-        drops.GetComponent<ModuleDrops>().SetModuleStat(UpgradeModuleManager.instance.GenerateRandomModule().GetUpgradeModuleObject());
+        drops.GetComponent<ModuleDrops>().SetModuleStat(UpgradeModuleManager.instance.GenerateRandomModule());
     }
 
     /// <summary>

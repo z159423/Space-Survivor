@@ -25,7 +25,14 @@ public class PlayerUpgradeModule : MonoBehaviour
         {
             foreach (UpgradeModuleObject module in data.equipedModules)
             {
-                module.ApplyUpgradeModule(playerWeapon);
+                foreach (UpgradeModuleScripableObject obj in UpgradeModuleDropManager.instance.moduleDatas)
+                {
+                    if (module.module == obj.module)
+                    {
+                        obj.ApplyUpgradeModule(playerWeapon, (int)module.tier);
+                        break;
+                    }
+                }
             }
         }
     }

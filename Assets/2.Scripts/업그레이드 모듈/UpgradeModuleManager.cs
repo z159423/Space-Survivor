@@ -80,7 +80,7 @@ public class UpgradeModuleManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-            GetNewModule(GenerateRandomModule().GetUpgradeModuleObject());
+            GetNewModule(GenerateRandomModule());
     }
 
     /// <summary>
@@ -237,7 +237,7 @@ public class UpgradeModuleManager : MonoBehaviour
                 {
                     if (data.equipedModules[j].key == module.module.key)
                     {
-                        data.equipedModules[j] = null;
+                        data.equipedModules[j] = new UpgradeModuleObject();
                         break;
                     }
                 }
@@ -253,63 +253,28 @@ public class UpgradeModuleManager : MonoBehaviour
     /// <summary>
     /// 랜덤 모듈 생성
     /// </summary>
-    public IUpgradeModule GenerateRandomModule()
+    public UpgradeModuleObject GenerateRandomModule()
     {
-        IUpgradeModule module = null;
+
         UpgradeModules modules = (UpgradeModules)UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(UpgradeModules)).Length);
-
-        switch (modules)
-        {
-            case UpgradeModules.DamageUp:
-                module = new DamageUpModule();
-                break;
-
-            case UpgradeModules.ArmorUp:
-                module = new ShipPlateUpgrade();
-                break;
-
-            case UpgradeModules.MovespeedUp:
-                module = new MoveSpeedModule();
-                break;
-
-            default:
-
-                UnityEngine.Debug.LogError("생성 할 수 있는 모듈 스크립트가 없습니다.");
-
-                break;
-
-        }
 
         UpgradeModuleTier tier = (UpgradeModuleTier)(Utility.GetRandomProb(UpgradeModuleTierDropPercent)) + 1;
 
-        switch (modules)
+        UpgradeModuleObject moduleObject = null;
+
+        foreach (UpgradeModuleScripableObject upgradeModule in UpgradeModuleDropManager.instance.moduleDatas)
         {
-            case UpgradeModules.DamageUp:
-
-                module.SetModuleInfo(UpgradeModuleType.AttackType, modules, tier, Guid.NewGuid().ToString());
-
+            if (upgradeModule.module == modules)
+            {
+                moduleObject = new UpgradeModuleObject(upgradeModule.type, upgradeModule.module, tier);
                 break;
-
-            case UpgradeModules.ArmorUp:
-
-                module.SetModuleInfo(UpgradeModuleType.DefenceType, modules, tier, Guid.NewGuid().ToString());
-
-                break;
-
-            case UpgradeModules.MovespeedUp:
-
-                module.SetModuleInfo(UpgradeModuleType.MovementType, modules, tier, Guid.NewGuid().ToString());
-
-                break;
-
-            default:
-
-                UnityEngine.Debug.LogError("적용 가능한 모듈 정보가 없습니다.");
-
-                break;
+            }
         }
 
-        return module;
+        if (moduleObject == null)
+            UnityEngine.Debug.LogError("해당하는 모듈의 정보를 찾지 못했습니다.");
+
+        return moduleObject;
     }
 
     /// <summary>
@@ -466,6 +431,21 @@ public class UpgradeModuleManager : MonoBehaviour
                 break;
             }
         }
+
+        foreach (UpgradeModuleEquipment equipment in playerModuleEquips)
+        {
+            equipment.ClearItems();
+        }
+
+        var items = playerModuleInventoryParent.GetComponentsInChildren<ModuleItem>();
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            Destroy(items[i].gameObject);
+        }
+
+        GenerateInventoryModulePrefabs();
+        GenerateEquipModulePrefabs();
 
         SwapModeOff();
     }

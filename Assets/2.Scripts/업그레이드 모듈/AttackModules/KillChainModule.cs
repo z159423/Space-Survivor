@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillChainModule : MonoBehaviour
+[CreateAssetMenu(fileName = "new Module", menuName = "Scriptable Object/Upgrade Module/KillChain", order = int.MaxValue)]
+public class KillChainModule : UpgradeModuleScripableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void ApplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
     {
-        
+        //playerWeapon.moduleDamage.AddFloatModifier(damageUpValues[(int)tier]);
+
+        MonoBehaviour.print("데미지업 모듈 스탯 적용");
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void UnapplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
     {
-        
+        MonoBehaviour.print("데미지업 모듈 스탯 적용해제");
     }
 }

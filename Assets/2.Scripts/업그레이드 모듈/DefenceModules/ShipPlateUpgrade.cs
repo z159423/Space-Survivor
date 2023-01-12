@@ -2,29 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipPlateUpgrade : UpgradeModuleObject
+[CreateAssetMenu(fileName = "new Module", menuName = "Scriptable Object/Upgrade Module/ArmorUp", order = int.MaxValue)]
+public class ShipPlateUpgrade : UpgradeModuleScripableObject
 {
     public static readonly float[] shipPlateValue = { 1, 2, 4, 8, 16 };
 
-    public override void ApplyUpgradeModule(PlayerWeapon playerWeapon)
+    public override void ApplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
     {
-        //playerWeapon.moduleDamage.AddFloatModifier(shipPlateValue[(int)tier]);
+        //playerWeapon.moduleDamage.AddFloatModifier(damageUpValues[(int)tier]);
 
-        MonoBehaviour.print("방어력 업 스탯 적용됨");
+        MonoBehaviour.print("방어력 증가 스탯 적용");
     }
 
-    public override float GetModuleStat(int tier)
+    public override void UnapplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
     {
-        return shipPlateValue[tier];
-    }
-
-    public override void UnapplyUpgradeModule()
-    {
-
-    }
-
-    public override void TierUpThisModule()
-    {
-
+        MonoBehaviour.print("방어력 증가 스탯 적용해제");
     }
 }

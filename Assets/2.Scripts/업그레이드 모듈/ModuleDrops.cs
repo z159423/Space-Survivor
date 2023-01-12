@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ModuleDrops : MonoBehaviour
 {
-    public UpgradeModuleObject module = new UpgradeModuleObject();
+    public UpgradeModuleObject module = UpgradeModuleManager.instance.GenerateRandomModule();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

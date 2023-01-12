@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class ModuleItem : MonoBehaviour
 {
@@ -24,9 +25,17 @@ public class ModuleItem : MonoBehaviour
     public void InitModule(IUpgradeModule module, bool inventory = false, bool equip = false)
     {
         this.module = module;
-        //moduleImage
+
+        UpdateImage();
 
         this.equip = equip;
         this.inventory = inventory;
+    }
+
+    public void UpdateImage()
+    {
+        var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+        var find = scriptableObjects.Find(f => f.ID == (int)module.module);
+        moduleImage.sprite = find?.moduleIcon;
     }
 }
