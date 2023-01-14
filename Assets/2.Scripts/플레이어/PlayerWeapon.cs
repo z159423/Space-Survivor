@@ -7,16 +7,15 @@ public class PlayerWeapon : MonoBehaviour
     public List<WeaponObject> weaponPool = new List<WeaponObject>();
     public List<PassiveObject> passivePool = new List<PassiveObject>();
 
-    //[SerializeField] private Transform firePos;
-    //[SerializeField] private Transform fireDir;
     public Stat additionalDamage = new Stat();
-    [field: SerializeField] public Stat moduleDamage { get; private set; } = new Stat();
 
     public Stat additionalCoolTime = new Stat();
 
     [Space]
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] public PlayerStat playerStat;
+    [SerializeField] public PlayerUpgradeModule playerModule;
+
     public ShipObjectData playerShipData;
 
     [Space]
@@ -360,7 +359,15 @@ public class PlayerWeapon : MonoBehaviour
 
     public float GetPlayerStatDamage()
     {
-        return (moduleDamage.GetFinalStatValue() + playerShipData.baseDamage.GetFinalStatValueAsInt()) * additionalDamage.GetFinalStatValue();
+        return (playerModule.module_Damage.GetFinalStatValue() + playerShipData.baseDamage.GetFinalStatValueAsInt()) * additionalDamage.GetFinalStatValue();
+    }
+
+    /// <summary>
+    /// 모듈 스탯들 모두 초기화
+    /// </summary>
+    public void ClearModuleStat()
+    {
+
     }
 }
 

@@ -383,12 +383,12 @@ public class PlayerStat : MonoBehaviour
 
     public float GetMoveSpeed()
     {
-        return moveSpeed.GetFinalStatValue();
+        return moveSpeed.GetFinalStatValue() + playerUpgradeModule.module_MoveSpeed.GetFinalStatValue();
     }
 
     public float GetRotationSpeed()
     {
-        return rotationSpeed.GetFinalStatValue();
+        return rotationSpeed.GetFinalStatValue() + playerUpgradeModule.module_RotationSpeed.GetFinalStatValue();
     }
 
     public void ChangeInvinsible()

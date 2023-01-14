@@ -20490,7 +20490,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -30296,14 +30296,6 @@ MonoBehaviour:
     MaxValue: 1000
     FloatModifiers: []
     PercentModifiers: []
-  <moduleDamage>k__BackingField:
-    baseValue: 0
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
-    MaxValue: 1000
-    FloatModifiers: []
-    PercentModifiers: []
   additionalCoolTime:
     baseValue: 1
     minValue: 0
@@ -30314,6 +30306,7 @@ MonoBehaviour:
     PercentModifiers: []
   playerMovement: {fileID: 923141301}
   playerStat: {fileID: 923141302}
+  playerModule: {fileID: 923141311}
   playerShipData:
     shipType: 0
     shipCode: 
@@ -35360,6 +35353,62 @@ MonoBehaviour:
   playerWeapon: {fileID: 923141305}
   moduleItemPrefab: {fileID: 0}
   moduleInventoryParent: {fileID: 0}
+  <module_Damage>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_Firerate>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_MoveSpeed>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_RotationSpeed>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_MaxHp>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_Armor>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_HpRepair>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
 --- !u!1 &924167434
 GameObject:
   m_ObjectHideFlags: 0
@@ -48374,7 +48423,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.46205357, y: 1}
+    m_SensorSize: {x: 0.46354166, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

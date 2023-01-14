@@ -6,15 +6,17 @@ using UnityEngine;
 public class RotationSpeedModule : UpgradeModuleScripableObject
 {
 
-    public override void ApplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
-    {
-        //playerWeapon.moduleDamage.AddFloatModifier(damageUpValues[(int)tier]);
+    public static readonly float[] rotationValue = { 0.15f, 0.3f, 0.45f, 0.6f, 0.75f };
 
-        MonoBehaviour.print("회전속도 증가 스탯 적용");
+    public override void ApplyUpgradeModule(PlayerUpgradeModule player, int tier)
+    {
+        player.module_RotationSpeed.AddFloatModifier(rotationValue[(int)tier]);
+
+        MonoBehaviour.print("회전속도증가 모듈 스탯 적용");
     }
 
-    public override void UnapplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
+    public override void UnapplyUpgradeModule(PlayerUpgradeModule player, int tier)
     {
-        MonoBehaviour.print("회전속도 증가 스탯 적용해제");
+        MonoBehaviour.print("회전속도증가 스탯 적용해제");
     }
 }

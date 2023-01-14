@@ -5,15 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Module", menuName = "Scriptable Object/Upgrade Module/KillChain", order = int.MaxValue)]
 public class KillChainModule : UpgradeModuleScripableObject
 {
-    public override void ApplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
+    public override void ApplyUpgradeModule(PlayerUpgradeModule player, int tier)
     {
-        //playerWeapon.moduleDamage.AddFloatModifier(damageUpValues[(int)tier]);
-
-        MonoBehaviour.print("데미지업 모듈 스탯 적용");
+        MonoBehaviour.print("킬체인 모듈 적용");
     }
 
-    public override void UnapplyUpgradeModule(PlayerWeapon playerWeapon, int tier)
+    public override void UnapplyUpgradeModule(PlayerUpgradeModule player, int tier)
     {
-        MonoBehaviour.print("데미지업 모듈 스탯 적용해제");
+        MonoBehaviour.print("킬체인 모듈 적용해제");
     }
 }

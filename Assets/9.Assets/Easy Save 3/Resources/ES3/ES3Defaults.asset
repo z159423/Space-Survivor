@@ -38,9 +38,9 @@ MonoBehaviour:
     - PsdPlugin
     - PPv2URPConverters
     - IngameDebugConsole.Editor
+    - Sirenix.OdinInspector.Modules.UnityLocalization.Editor
     - GoogleMobileAds.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
-    - Sirenix.OdinInspector.Modules.UnityLocalization.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

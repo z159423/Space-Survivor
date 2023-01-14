@@ -16,6 +16,16 @@ public class PlayerUpgradeModule : MonoBehaviour
     [SerializeField] private GameObject moduleItemPrefab;
     [SerializeField] private Transform moduleInventoryParent;
 
+    [field: Space]
+
+    [field: SerializeField] public Stat module_Damage { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_Firerate { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_MoveSpeed { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_RotationSpeed { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_MaxHp { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_Armor { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_HpRepair { get; private set; } = new Stat();
+
     /// <sumamry>
     /// 현재 장착중인 모듈을 게임 시작할때 스탯에 적용함
     /// </summary>
@@ -29,7 +39,7 @@ public class PlayerUpgradeModule : MonoBehaviour
                 {
                     if (module.module == obj.module)
                     {
-                        obj.ApplyUpgradeModule(playerWeapon, (int)module.tier);
+                        obj.ApplyUpgradeModule(this, (int)module.tier - 1);
                         break;
                     }
                 }
@@ -37,9 +47,17 @@ public class PlayerUpgradeModule : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 모듈 스텟 초기화
+    /// </summary>
     public void UnapplyModuleStat()
     {
-        playerWeapon.moduleDamage.ClearAllModifier();
+        module_Damage.ClearAllModifier();
+        module_Firerate.ClearAllModifier();
+        module_MoveSpeed.ClearAllModifier();
+        module_RotationSpeed.ClearAllModifier();
+        module_Armor.ClearAllModifier();
+        module_HpRepair.ClearAllModifier();
     }
 
     /// <summary>
