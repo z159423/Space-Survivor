@@ -12,6 +12,7 @@ public class ModuleItem : MonoBehaviour
 
     [SerializeField] private Image moduleImage;
     [SerializeField] private Image coverImage;
+    [field: SerializeField] public Image moduleUpgradeCoverImage { get; private set; }
 
     [field: SerializeField] public bool equip = false;
     [field: SerializeField] public bool inventory = false;
@@ -37,5 +38,17 @@ public class ModuleItem : MonoBehaviour
         var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
         var find = scriptableObjects.Find(f => f.ID == (int)module.module);
         moduleImage.sprite = find?.moduleIcon;
+    }
+
+    public void UpgradeModuleSelect()
+    {
+        if (UpgradeModuleManager.instance.SelectModuleUpgradeSlot(this))
+        {
+            moduleUpgradeCoverImage.color = Color.yellow;
+        }
+        else
+        {
+            moduleUpgradeCoverImage.color = Color.white;
+        }
     }
 }

@@ -12,7 +12,7 @@ public class UpgradeModuleObject : IUpgradeModule
     [field: SerializeField] public UpgradeModuleTier tier { get; private set; }
     [field: SerializeField] public string key { get; private set; }
 
-    public static readonly int[] sellCosts = {0, 8, 20, 50, 80, 200 };
+    public static readonly int[] sellCosts = { 0, 8, 20, 50, 80, 200 };
 
     public UpgradeModuleObject()
     {
@@ -46,7 +46,9 @@ public class UpgradeModuleObject : IUpgradeModule
     /// </summary>
     public virtual void TierUpThisModule()
     {
-        UnityEngine.Debug.LogError("기본 모듈 티어업 함수 발동");
+        //UnityEngine.Debug.LogError("기본 모듈 티어업 함수 발동");
+
+        tier = (UpgradeModuleTier)((int)tier + 1);
     }
 
     public virtual float GetModuleStat(int tier)

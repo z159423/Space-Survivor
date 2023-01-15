@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System;
 using System.Linq;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
 
 public class UpgradeModuleManager : MonoBehaviour
 {
@@ -40,7 +41,6 @@ public class UpgradeModuleManager : MonoBehaviour
     [SerializeField] private GameObject equipBtn;
     [SerializeField] private GameObject unequipBtn;
 
-
     [Space]
 
     [SerializeField] private Transform playerModuleInventoryParent;
@@ -48,6 +48,20 @@ public class UpgradeModuleManager : MonoBehaviour
 
 
     [SerializeField] private GameObject modulePrefab;
+
+    [Space]
+
+    [TitleGroup("Upgrade")][SerializeField] GameObject moduleUpgradePanel;
+    [TitleGroup("Upgrade")][SerializeField] Transform moduleUpgradeInventoryParent;
+    [TitleGroup("Upgrade")][SerializeField] Button moduleUpgradeBtn;
+    [Space]
+    [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade1;
+    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade1Image;
+    [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade2;
+    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade2Image;
+    [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade3;
+    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade3Image;
+    //[TitleGroup("Upgrade")][SerializeField] GameObject moduleUpgradePanel;
 
     [Space]
 
@@ -62,6 +76,8 @@ public class UpgradeModuleManager : MonoBehaviour
     [Space]
 
     [SerializeField] private UpgradeModuleObject swapingModule;
+    [SerializeField] private UpgradeModuleObject selectedModule;
+
 
 
     public static UpgradeModuleManager instance;
@@ -160,6 +176,8 @@ public class UpgradeModuleManager : MonoBehaviour
         sellBtn.GetComponent<Button>().onClick.AddListener(() => OnClickModuleSellBtn(item));
 
         ActiveModuleDetailPanel();
+
+        selectedModule = item.module.GetUpgradeModuleObject();
     }
 
     /// <summary>
@@ -472,5 +490,150 @@ public class UpgradeModuleManager : MonoBehaviour
         {
             equipment.SwapModeOff();
         }
+    }
+
+
+    public void OnClickModuleUpgradeBtn()
+    {
+        ClearModuleUpgradeInventory();
+
+        moduleUpgrade1 = selectedModule;
+
+        var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+        var find = scriptableObjects.Find(f => f.ID == (int)selectedModule.module);
+        moduleUpgrade1Image.sprite = find?.moduleIcon;
+
+        ActiveModuleUpgradePanel();
+        GenerateModuleUpgradeInventory();
+    }
+
+    public void ActiveModuleUpgradePanel()
+    {
+        moduleUpgradePanel.gameObject.SetActive(!moduleUpgradePanel.activeSelf);
+    }
+
+    public void GenerateModuleUpgradeInventory()
+    {
+        foreach (UpgradeModuleObject module in UserDataManager.instance.currentUserData.moduleInventory)
+        {
+            if (moduleUpgrade1.key != module.key)
+            {
+                var slot = Instantiate(modulePrefab, moduleUpgradeInventoryParent).GetComponent<ModuleItem>();
+                slot.InitModule(module);
+                slot.moduleUpgradeCoverImage.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void ClearModuleUpgradeInventory()
+    {
+        var inventory = moduleUpgradeInventoryParent.GetComponentsInChildren<ModuleItem>();
+
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            Destroy(inventory[i].gameObject);
+        }
+
+        moduleUpgrade1 = null;
+        moduleUpgrade1Image.sprite = null;
+
+        moduleUpgrade2 = null;
+        moduleUpgrade2Image.sprite = null;
+
+        moduleUpgrade3 = null;
+        moduleUpgrade3Image.sprite = null;
+
+    }
+
+    public void ModuleUpgrade()
+    {
+        if (moduleUpgrade1.module != moduleUpgrade2.module ||
+         moduleUpgrade2.module != moduleUpgrade3.module ||
+         moduleUpgrade1.module != moduleUpgrade3.module)
+        {
+            UnityEngine.Debug.LogError("모듈들의 종류가 다릅니다.");
+            ActiveModuleUpgradePanel();
+            return;
+        }
+
+        if (moduleUpgrade1.type != moduleUpgrade2.type ||
+        moduleUpgrade2.type != moduleUpgrade3.type ||
+        moduleUpgrade1.type != moduleUpgrade3.type)
+        {
+            UnityEngine.Debug.LogError("모듈들의 타입이 다릅니다.");
+            ActiveModuleUpgradePanel();
+            return;
+        }
+
+        moduleUpgrade1.TierUpThisModule();
+        DeleteModule(moduleUpgrade2);
+        DeleteModule(moduleUpgrade3);
+        ActiveModuleUpgradePanel();
+    }
+
+    ///<summary>
+    /// 인벤토리 또는 장비중인 모듈 삭제
+    ///</summary>
+    public void DeleteModule(UpgradeModuleObject module)
+    {
+        //장비창 검색
+        foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
+        {
+            for (int i = 0; i < data.equipedModules.Length; i++)
+            {
+                if (data.equipedModules[i].key == module.key)
+                {
+                    data.equipedModules[i] = null;
+
+                    return;
+                }
+            }
+        }
+
+        //인벤토리 검색
+        for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
+        {
+            if (UserDataManager.instance.currentUserData.moduleInventory[i].key == module.key)
+            {
+                UserDataManager.instance.currentUserData.moduleInventory.RemoveAt(i);
+                return;
+            }
+        }
+    }
+
+    public bool SelectModuleUpgradeSlot(ModuleItem item)
+    {
+        if (moduleUpgrade2 == null)
+        {
+            moduleUpgrade2 = item.module.GetUpgradeModuleObject();
+
+            var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+            var find = scriptableObjects.Find(f => f.ID == (int)item.module.GetUpgradeModuleObject().module);
+            moduleUpgrade2Image.sprite = find?.moduleIcon;
+
+            fillSelectedSlot();
+            return true;
+        }
+
+        if (moduleUpgrade3 == null)
+        {
+            moduleUpgrade3 = item.module.GetUpgradeModuleObject();
+
+            var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+            var find = scriptableObjects.Find(f => f.ID == (int)item.module.GetUpgradeModuleObject().module);
+            moduleUpgrade3Image.sprite = find?.moduleIcon;
+
+            fillSelectedSlot();
+            return true;
+        }
+
+        void fillSelectedSlot()
+        {
+            if (moduleUpgrade2 != null && moduleUpgrade3 != null)
+                moduleUpgradeBtn.interactable = true;
+            else
+                moduleUpgradeBtn.interactable = false;
+        }
+        return false;
     }
 }
