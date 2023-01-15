@@ -12,7 +12,7 @@ public class UpgradeModuleObject : IUpgradeModule
     [field: SerializeField] public UpgradeModuleTier tier { get; private set; }
     [field: SerializeField] public string key { get; private set; }
 
-    public static readonly int[] sellCosts = { 0, 8, 20, 50, 80, 200 };
+    public static readonly int[] sellCosts = { 0, 8, 50, 200, 400, 1000 };
 
     public UpgradeModuleObject()
     {

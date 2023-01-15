@@ -136,6 +136,21 @@ public class UpgradeModuleManager : MonoBehaviour
         }
     }
 
+    public void ClearModuleDisplay()
+    {
+        foreach (UpgradeModuleEquipment equipment in playerModuleEquips)
+        {
+            equipment.ClearItems();
+        }
+
+        var items = playerModuleInventoryParent.GetComponentsInChildren<ModuleItem>();
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            Destroy(items[i].gameObject);
+        }
+    }
+
     /// <summary>
     /// 모듈 메뉴
     /// </summary>
@@ -149,9 +164,8 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public void OpenModuleUpgradeDetail(ModuleItem item)
     {
-        //이름 티어 현지화
-        detail_Name.text = item.module.module.ToString();
-        detail_Tier.text = item.module.tier.ToString();
+
+        UpdateModuleUpgradeDetail(item.module.GetUpgradeModuleObject());
 
         //해당 모듈 스탯 현지화
 
@@ -178,6 +192,13 @@ public class UpgradeModuleManager : MonoBehaviour
         ActiveModuleDetailPanel();
 
         selectedModule = item.module.GetUpgradeModuleObject();
+    }
+
+    public void UpdateModuleUpgradeDetail(UpgradeModuleObject module)
+    {
+        //이름 티어 현지화
+        detail_Name.text = module.module.ToString();
+        detail_Tier.text = module.tier.ToString();
     }
 
     /// <summary>
@@ -516,7 +537,7 @@ public class UpgradeModuleManager : MonoBehaviour
     {
         foreach (UpgradeModuleObject module in UserDataManager.instance.currentUserData.moduleInventory)
         {
-            if (moduleUpgrade1.key != module.key)
+            if (moduleUpgrade1.key != module.key && moduleUpgrade1.type == module.type && moduleUpgrade1.tier == module.tier)
             {
                 var slot = Instantiate(modulePrefab, moduleUpgradeInventoryParent).GetComponent<ModuleItem>();
                 slot.InitModule(module);
@@ -547,14 +568,14 @@ public class UpgradeModuleManager : MonoBehaviour
 
     public void ModuleUpgrade()
     {
-        if (moduleUpgrade1.module != moduleUpgrade2.module ||
-         moduleUpgrade2.module != moduleUpgrade3.module ||
-         moduleUpgrade1.module != moduleUpgrade3.module)
-        {
-            UnityEngine.Debug.LogError("모듈들의 종류가 다릅니다.");
-            ActiveModuleUpgradePanel();
-            return;
-        }
+        // if (moduleUpgrade1.module != moduleUpgrade2.module ||
+        //  moduleUpgrade2.module != moduleUpgrade3.module ||
+        //  moduleUpgrade1.module != moduleUpgrade3.module)
+        // {
+        //     UnityEngine.Debug.LogError("모듈들의 종류가 다릅니다.");
+        //     ActiveModuleUpgradePanel();
+        //     return;
+        // }
 
         if (moduleUpgrade1.type != moduleUpgrade2.type ||
         moduleUpgrade2.type != moduleUpgrade3.type ||
@@ -568,6 +589,14 @@ public class UpgradeModuleManager : MonoBehaviour
         moduleUpgrade1.TierUpThisModule();
         DeleteModule(moduleUpgrade2);
         DeleteModule(moduleUpgrade3);
+
+        ClearModuleDisplay();
+
+        GenerateInventoryModulePrefabs();
+        GenerateEquipModulePrefabs();
+
+        UpdateModuleUpgradeDetail(selectedModule);
+
         ActiveModuleUpgradePanel();
     }
 
