@@ -33,6 +33,8 @@ public class UpgradeModuleManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI detail_Stat_Rare;
     [SerializeField] private TextMeshProUGUI detail_Stat_Unique;
     [SerializeField] private TextMeshProUGUI detail_Stat_Legendary;
+    [SerializeField] private Image detail_SlotCover;
+    [SerializeField] private Image detail_ModuleImage;
 
     [Space]
 
@@ -57,10 +59,13 @@ public class UpgradeModuleManager : MonoBehaviour
     [Space]
     [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade1;
     [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade1Image;
+    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade1Cover;
     [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade2;
     [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade2Image;
+    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade2Cover;
     [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade3;
     [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade3Image;
+    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade3Cover;
     //[TitleGroup("Upgrade")][SerializeField] GameObject moduleUpgradePanel;
 
     [Space]
@@ -188,6 +193,9 @@ public class UpgradeModuleManager : MonoBehaviour
 
         sellBtn.GetComponent<Button>().onClick.RemoveAllListeners();
         sellBtn.GetComponent<Button>().onClick.AddListener(() => OnClickModuleSellBtn(item));
+
+        detail_SlotCover.sprite = GetUpgradeModuleCover(item.module.tier);
+        detail_ModuleImage.sprite = GetUpgradeModuleImage((int)item.module.module);
 
         ActiveModuleDetailPanel();
 
@@ -636,9 +644,13 @@ public class UpgradeModuleManager : MonoBehaviour
         {
             moduleUpgrade2 = item.module.GetUpgradeModuleObject();
 
-            var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
-            var find = scriptableObjects.Find(f => f.ID == (int)item.module.GetUpgradeModuleObject().module);
-            moduleUpgrade2Image.sprite = find?.moduleIcon;
+            // var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+            // var find = scriptableObjects.Find(f => f.ID == (int)item.module.GetUpgradeModuleObject().module);
+            // moduleUpgrade2Image.sprite = find?.moduleIcon;
+
+            moduleUpgrade2Cover.sprite = GetUpgradeModuleCover(item.module.tier);
+            moduleUpgrade2Image.sprite = GetUpgradeModuleImage((int)item.module.module);
+
 
             fillSelectedSlot();
             return true;
@@ -648,9 +660,12 @@ public class UpgradeModuleManager : MonoBehaviour
         {
             moduleUpgrade3 = item.module.GetUpgradeModuleObject();
 
-            var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
-            var find = scriptableObjects.Find(f => f.ID == (int)item.module.GetUpgradeModuleObject().module);
-            moduleUpgrade3Image.sprite = find?.moduleIcon;
+            // var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+            // var find = scriptableObjects.Find(f => f.ID == (int)item.module.GetUpgradeModuleObject().module);
+            // moduleUpgrade3Image.sprite = find?.moduleIcon;
+
+            moduleUpgrade3Cover.sprite = GetUpgradeModuleCover(item.module.tier);
+            moduleUpgrade3Image.sprite = GetUpgradeModuleImage((int)item.module.module);
 
             fillSelectedSlot();
             return true;
@@ -664,5 +679,38 @@ public class UpgradeModuleManager : MonoBehaviour
                 moduleUpgradeBtn.interactable = false;
         }
         return false;
+    }
+
+    public Sprite GetUpgradeModuleCover(UpgradeModuleTier tier)
+    {
+        switch (tier)
+        {
+            case UpgradeModuleTier.Normal:
+                return Resources.Load<Sprite>("UI/slot1");
+
+            case UpgradeModuleTier.Magic:
+
+                return Resources.Load<Sprite>("UI/slot2");
+            case UpgradeModuleTier.Rare:
+
+                return Resources.Load<Sprite>("UI/slot3");
+            case UpgradeModuleTier.Unique:
+
+                return Resources.Load<Sprite>("UI/slot4");
+            case UpgradeModuleTier.Legendary:
+
+                return Resources.Load<Sprite>("UI/slot5");
+
+            default:
+                UnityEngine.Debug.LogError("해당되는 티어 커버 이미지가 없습니다.");
+                return null;
+        }
+    }
+
+    public Sprite GetUpgradeModuleImage(int ID)
+    {
+        var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+        var find = scriptableObjects.Find(f => f.ID == ID);
+        return find?.moduleIcon;
     }
 }

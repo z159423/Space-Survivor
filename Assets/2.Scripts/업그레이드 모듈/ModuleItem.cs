@@ -35,9 +35,8 @@ public class ModuleItem : MonoBehaviour
 
     public void UpdateImage()
     {
-        var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
-        var find = scriptableObjects.Find(f => f.ID == (int)module.module);
-        moduleImage.sprite = find?.moduleIcon;
+        moduleImage.sprite = UpgradeModuleManager.instance.GetUpgradeModuleImage((int)module.GetUpgradeModuleObject().module);
+        coverImage.sprite = UpgradeModuleManager.instance.GetUpgradeModuleCover(module.GetUpgradeModuleObject().tier);
     }
 
     public void UpgradeModuleSelect()
