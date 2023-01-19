@@ -10,12 +10,19 @@ public class ModuleItem : MonoBehaviour
 
     [Space]
 
+    [SerializeField] private Image slotIamge;
     [SerializeField] private Image moduleImage;
     [SerializeField] private Image coverImage;
     [field: SerializeField] public Image moduleUpgradeCoverImage { get; private set; }
 
     [field: SerializeField] public bool equip = false;
     [field: SerializeField] public bool inventory = false;
+
+    [Space]
+
+    [SerializeField] private Color defaultColor;
+    [SerializeField] private Color selectedColor;
+    
 
 
     public void OnClickThisModule()
@@ -43,11 +50,16 @@ public class ModuleItem : MonoBehaviour
     {
         if (UpgradeModuleManager.instance.SelectModuleUpgradeSlot(this))
         {
-            moduleUpgradeCoverImage.color = Color.yellow;
+            slotIamge.color = selectedColor;
         }
         else
         {
-            moduleUpgradeCoverImage.color = Color.white;
+            UnselectSlot();
         }
+    }
+
+    public void UnselectSlot()
+    {
+        slotIamge.color = defaultColor;
     }
 }

@@ -610,6 +610,8 @@ public class UpgradeModuleManager : MonoBehaviour
         var find = scriptableObjects.Find(f => f.ID == (int)selectedModule.module);
         moduleUpgrade1Image.sprite = find?.moduleIcon;
 
+        moduleUpgrade1Cover.sprite = GetUpgradeModuleCover(selectedModule.tier);
+
         ActiveModuleUpgradePanel();
         GenerateModuleUpgradeInventory();
     }
@@ -641,14 +643,19 @@ public class UpgradeModuleManager : MonoBehaviour
             Destroy(inventory[i].gameObject);
         }
 
+        var transparentImage = Resources.Load<Sprite>("UI/transparent");
+
         moduleUpgrade1 = null;
-        moduleUpgrade1Image.sprite = null;
+        moduleUpgrade1Image.sprite = transparentImage;
+
 
         moduleUpgrade2 = null;
-        moduleUpgrade2Image.sprite = null;
+        moduleUpgrade2Image.sprite = transparentImage;
+        moduleUpgrade2Cover.enabled = false;
 
         moduleUpgrade3 = null;
-        moduleUpgrade3Image.sprite = null;
+        moduleUpgrade3Image.sprite = transparentImage;
+        moduleUpgrade3Cover.enabled = false;
 
     }
 
@@ -718,6 +725,43 @@ public class UpgradeModuleManager : MonoBehaviour
 
     public bool SelectModuleUpgradeSlot(ModuleItem item)
     {
+
+        if (moduleUpgrade2 != null)
+        {
+            if (moduleUpgrade2.key == item.module.key)
+            {
+                item.UnselectSlot();
+
+                var transparentImage = Resources.Load<Sprite>("UI/transparent");
+
+                moduleUpgrade2 = null;
+                moduleUpgrade2Image.sprite = transparentImage;
+                moduleUpgrade2Cover.enabled = false;
+
+                fillSelectedSlot();
+
+                return false;
+            }
+        }
+
+        if (moduleUpgrade3 != null)
+        {
+            if (moduleUpgrade3.key == item.module.key)
+            {
+                item.UnselectSlot();
+
+                var transparentImage = Resources.Load<Sprite>("UI/transparent");
+
+                moduleUpgrade3 = null;
+                moduleUpgrade3Image.sprite = transparentImage;
+                moduleUpgrade3Cover.enabled = false;
+
+                fillSelectedSlot();
+
+                return false;
+            }
+        }
+
         if (moduleUpgrade2 == null)
         {
             moduleUpgrade2 = item.module.GetUpgradeModuleObject();
@@ -729,6 +773,7 @@ public class UpgradeModuleManager : MonoBehaviour
             moduleUpgrade2Cover.sprite = GetUpgradeModuleCover(item.module.tier);
             moduleUpgrade2Image.sprite = GetUpgradeModuleImage((int)item.module.module);
 
+            moduleUpgrade2Cover.enabled = true;
 
             fillSelectedSlot();
             return true;
@@ -745,6 +790,8 @@ public class UpgradeModuleManager : MonoBehaviour
             moduleUpgrade3Cover.sprite = GetUpgradeModuleCover(item.module.tier);
             moduleUpgrade3Image.sprite = GetUpgradeModuleImage((int)item.module.module);
 
+            moduleUpgrade3Cover.enabled = true;
+
             fillSelectedSlot();
             return true;
         }
@@ -752,9 +799,15 @@ public class UpgradeModuleManager : MonoBehaviour
         void fillSelectedSlot()
         {
             if (moduleUpgrade2 != null && moduleUpgrade3 != null)
+            {
                 moduleUpgradeBtn.interactable = true;
+                moduleUpgradeBtn.GetComponentInChildren<TextMeshProUGUI>().color = new Color(1f, 1f, 1f, 1f);
+            }
             else
+            {
                 moduleUpgradeBtn.interactable = false;
+                moduleUpgradeBtn.GetComponentInChildren<TextMeshProUGUI>().color = new Color(1f, 1f, 1f, 65f / 255f);
+            }
         }
         return false;
     }
