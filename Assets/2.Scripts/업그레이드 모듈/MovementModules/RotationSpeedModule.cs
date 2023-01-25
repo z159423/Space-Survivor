@@ -51,4 +51,10 @@ public class RotationSpeedModule : UpgradeModuleScripableObject
             }
         }
     }
+
+    public override string[] GetModuleStats(int tier)
+    {
+        string[] value = { rotationValue[tier].ToString() };
+        return value;
+    }
 }

@@ -50,4 +50,10 @@ public class ShipPlateUpgrade : UpgradeModuleScripableObject
             }
         }
     }
+
+    public override string[] GetModuleStats(int tier)
+    {
+        string[] value = { armorValue[tier].ToString() };
+        return value;
+    }
 }

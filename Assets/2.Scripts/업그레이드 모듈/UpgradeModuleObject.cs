@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
 using System;
+using System.Linq;
 
 [System.Serializable]
 public class UpgradeModuleObject : IUpgradeModule
@@ -72,6 +73,14 @@ public class UpgradeModuleObject : IUpgradeModule
     public int GetSellCost()
     {
         return sellCosts[(int)tier];
+    }
+
+    public UpgradeModuleScripableObject GetScriptableObejct()
+    {
+        var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
+        var find = scriptableObjects.Find(f => f.ID == (int)module);
+
+        return find;
     }
 }
 

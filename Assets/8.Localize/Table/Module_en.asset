@@ -17,7 +17,131 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 6ce4a1843b713104582ba743233dca2d, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 2094392662507520
+    m_Localized: DMG +[ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094516209926144
+    m_Localized: DEF +[ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094517849899008
+    m_Localized: Move Speed +[ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094518562930688
+    m_Localized: Fire Rate +[ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094524820832256
+    m_Localized: Max Hp +[ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49554341888
+    m_Localized: Increase Damage [ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53555707904
+    m_Localized: Increase Armor [ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63710117888
+    m_Localized: Increase Move Speed [ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67464019968
+    m_Localized: Increase Firerate [ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72719482880
+    m_Localized: Increase Max Hp [ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152444480667648
+    m_Localized: Sell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152483324116992
+    m_Localized: Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152539649425408
+    m_Localized: Equip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152577528184832
+    m_Localized: UnEquip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152664987811840
+    m_Localized: Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157236795949056
+    m_Localized: Modules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157300243185664
+    m_Localized: Attack Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157433517195264
+    m_Localized: Defence Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157552937418752
+    m_Localized: Movement Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157594561691648
+    m_Localized: Sepcial Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2161920621363200
+    m_Localized: Module Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162621678305280
+    m_Localized: Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162667320721408
+    m_Localized: Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162668608372736
+    m_Localized: Rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162733355843584
+    m_Localized: Unique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162765106724864
+    m_Localized: Legandart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164065332576256
+    m_Localized: Damage Up Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164090330628096
+    m_Localized: Armor Up Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164104079556608
+    m_Localized: Move Speed Up Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164117908176896
+    m_Localized: Firerate Up Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164131787128832
+    m_Localized: Max Hp Up Module
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

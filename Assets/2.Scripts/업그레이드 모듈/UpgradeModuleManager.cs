@@ -88,6 +88,10 @@ public class UpgradeModuleManager : MonoBehaviour
     [SerializeField] private UpgradeModuleObject swapingModule;
     [SerializeField] private UpgradeModuleObject selectedModule;
 
+    [field: Space]
+
+    [field: SerializeField] public Color[] tierColor { get; private set; }
+
 
 
     public static UpgradeModuleManager instance;
@@ -283,8 +287,8 @@ public class UpgradeModuleManager : MonoBehaviour
     public void UpdateModuleUpgradeDetail(UpgradeModuleObject module)
     {
         //이름 티어 현지화
-        detail_Name.text = module.module.ToString();
-        detail_Tier.text = module.tier.ToString();
+        Utility.SetLocalizeTextAsync(detail_Name, "Module", (int)module.module + "_Name");
+        Utility.SetLocalizeTextAsync(detail_Tier, "Module", module.tier.ToString());
     }
 
     /// <summary>
@@ -354,21 +358,23 @@ public class UpgradeModuleManager : MonoBehaviour
     {
         GetNewModule(module.module.GetUpgradeModuleObject());
 
-        foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
-        {
-            if (data.CheckingCurrentEquipModuleData(module.module.type))
-            {
-                for (int j = 0; j < data.equipedModules.Length; j++)
-                {
-                    if (data.equipedModules[j].key == module.module.key)
-                    {
-                        data.equipedModules[j] = new UpgradeModuleObject();
-                        break;
-                    }
-                }
-                break;
-            }
-        }
+        // foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
+        // {
+        //     if (data.CheckingCurrentEquipModuleData(module.module.type))
+        //     {
+        //         for (int j = 0; j < data.equipedModules.Length; j++)
+        //         {
+        //             if (data.equipedModules[j].key == module.module.key)
+        //             {
+        //                 data.equipedModules[j] = new UpgradeModuleObject();
+        //                 break;
+        //             }
+        //         }
+        //         break;
+        //     }
+        // }
+
+        DeleteModule(module.module.GetUpgradeModuleObject());
 
         Destroy(module.gameObject);
 
@@ -465,7 +471,7 @@ public class UpgradeModuleManager : MonoBehaviour
                     {
                         if (data.equipedModules[i].key == item.module.key)
                         {
-                            data.equipedModules[i] = null;
+                            data.equipedModules[i] = new UpgradeModuleObject();
                             break;
                         }
                     }
@@ -691,6 +697,7 @@ public class UpgradeModuleManager : MonoBehaviour
         UpdateModuleUpgradeDetail(selectedModule);
 
         ActiveModuleUpgradePanel();
+        ActiveModuleDetailPanel();
     }
 
     ///<summary>
@@ -705,8 +712,9 @@ public class UpgradeModuleManager : MonoBehaviour
             {
                 if (data.equipedModules[i].key == module.key)
                 {
-                    data.equipedModules[i] = null;
+                    data.equipedModules[i] = new UpgradeModuleObject();
 
+                    ResetModuleStatText(module);
                     return;
                 }
             }
@@ -719,6 +727,24 @@ public class UpgradeModuleManager : MonoBehaviour
             {
                 UserDataManager.instance.currentUserData.moduleInventory.RemoveAt(i);
                 return;
+            }
+        }
+    }
+
+    public void ResetModuleStatText(UpgradeModuleObject module)
+    {
+        for (int i = 0; i < playerModuleEquips.Length; i++)
+        {
+            if (playerModuleEquips[i].data.slotType == module.type)
+            {
+                for (int j = 0; j < playerModuleEquips[i].data.equipItems.Length; j++)
+                {
+                    if (playerModuleEquips[i].data.equipItems[j].module.GetUpgradeModuleObject().key == module.key)
+                    {
+                        playerModuleEquips[i].moduleEquipStats[j].ClearStat();
+                        return;
+                    }
+                }
             }
         }
     }

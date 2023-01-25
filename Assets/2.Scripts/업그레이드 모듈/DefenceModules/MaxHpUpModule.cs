@@ -50,4 +50,9 @@ public class MaxHpUpModule : UpgradeModuleScripableObject
             }
         }
     }
+    public override string[] GetModuleStats(int tier)
+    {
+        string[] value = { maxHpValue[tier].ToString() };
+        return value;
+    }
 }

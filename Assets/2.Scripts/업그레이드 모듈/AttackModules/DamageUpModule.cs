@@ -50,4 +50,10 @@ public class DamageUpModule : UpgradeModuleScripableObject
             }
         }
     }
+
+    public override string[] GetModuleStats(int tier)
+    {
+        string[] value = { damageUpValues[tier].ToString() };
+        return value;
+    }
 }

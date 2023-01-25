@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using TMPro;
+using UnityEngine.Localization;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 
 public class Utility : MonoBehaviour
@@ -183,5 +186,40 @@ public class Utility : MonoBehaviour
             }
         }
         return probs.Length - 1;
+    }
+
+    public static void SetLocalizeTextAsync(TextMeshProUGUI text, string table, string key, string[] smartValues = null)
+    {
+        CoroutineHelper.StartCoroutine(SetText(text));
+
+        IEnumerator SetText(TextMeshProUGUI text)
+        {
+            var localizedString = new LocalizedString(table, key);
+
+            var stringOperation = localizedString.GetLocalizedStringAsync();
+
+            while (true)
+            {
+                if (stringOperation.IsDone && stringOperation.Status == AsyncOperationStatus.Succeeded)
+                {
+                    string str = stringOperation.Result;
+
+                    if (smartValues != null)
+                    {
+                        for (int i = 0; i < smartValues.Length; i++)
+                        {
+                            if (smartValues[i] != "")
+                                str = str.Replace("[ST_VALUE" + (i + 1) + "]", smartValues[i]);
+                        }
+                    }
+
+                    text.text = str;
+
+                    break;
+                }
+                yield return null;
+            }
+
+        }
     }
 }

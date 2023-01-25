@@ -23,20 +23,124 @@ MonoBehaviour:
     m_Key: 1
     m_Metadata:
       m_Items: []
+  - m_Id: 2164065332576256
+    m_Key: 1_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094392662507520
+    m_Key: 1_Stat
+    m_Metadata:
+      m_Items: []
   - m_Id: 53555707904
     m_Key: 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164090330628096
+    m_Key: 2_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094516209926144
+    m_Key: 2_Stat
     m_Metadata:
       m_Items: []
   - m_Id: 63710117888
     m_Key: 3
     m_Metadata:
       m_Items: []
+  - m_Id: 2164104079556608
+    m_Key: 3_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094517849899008
+    m_Key: 3_Stat
+    m_Metadata:
+      m_Items: []
   - m_Id: 67464019968
     m_Key: 4
     m_Metadata:
       m_Items: []
+  - m_Id: 2164117908176896
+    m_Key: 4_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094518562930688
+    m_Key: 4_Stat
+    m_Metadata:
+      m_Items: []
   - m_Id: 72719482880
     m_Key: 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2164131787128832
+    m_Key: 5_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094524820832256
+    m_Key: 5_Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157300243185664
+    m_Key: Attack Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157433517195264
+    m_Key: Defence Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152539649425408
+    m_Key: Equip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162765106724864
+    m_Key: Legandary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162667320721408
+    m_Key: Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2161920621363200
+    m_Key: Module Upgrade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157236795949056
+    m_Key: Modules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157552937418752
+    m_Key: Movement Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162621678305280
+    m_Key: Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162668608372736
+    m_Key: Rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152444480667648
+    m_Key: Sell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2157594561691648
+    m_Key: Special Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152664987811840
+    m_Key: Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152577528184832
+    m_Key: UnEquip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162733355843584
+    m_Key: Unique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2152483324116992
+    m_Key: Upgrade
     m_Metadata:
       m_Items: []
   m_Metadata:

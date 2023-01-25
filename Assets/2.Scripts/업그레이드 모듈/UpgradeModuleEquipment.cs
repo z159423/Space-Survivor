@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class UpgradeModuleEquipment : MonoBehaviour
 {
@@ -12,7 +14,59 @@ public class UpgradeModuleEquipment : MonoBehaviour
     [SerializeField] private GameObject[] swapArrows;
     [SerializeField] private GameObject[] swapBtns;
 
+    [Space]
 
+    [SerializeField] public ModuleEquipStat[] moduleEquipStats;
+
+
+    [System.Serializable]
+    public class ModuleEquipStat
+    {
+        [SerializeField] private TextMeshProUGUI statText;
+        [SerializeField] private Image statImage;
+
+
+
+        public void InitModuleStat(UpgradeModuleObject module)
+        {
+            switch (module.tier)
+            {
+                case UpgradeModuleTier.Normal:
+                    statText.color = UpgradeModuleManager.instance.tierColor[1];
+                    break;
+
+                case UpgradeModuleTier.Magic:
+                    statText.color = UpgradeModuleManager.instance.tierColor[2];
+                    break;
+
+                case UpgradeModuleTier.Rare:
+                    statText.color = UpgradeModuleManager.instance.tierColor[3];
+                    break;
+
+                case UpgradeModuleTier.Unique:
+                    statText.color = UpgradeModuleManager.instance.tierColor[4];
+                    break;
+
+                case UpgradeModuleTier.Legendary:
+                    statText.color = UpgradeModuleManager.instance.tierColor[5];
+                    break;
+
+                default:
+                    statText.color = UpgradeModuleManager.instance.tierColor[0];
+                    break;
+            }
+
+            statImage.color = Color.white;
+
+            Utility.SetLocalizeTextAsync(statText, "Module", ((int)module.module).ToString() + "_Stat", module.GetScriptableObejct().GetModuleStats((int)module.tier));
+        }
+
+        public void ClearStat()
+        {
+            statImage.color = UpgradeModuleManager.instance.tierColor[0];
+            statText.text = "";
+        }
+    }
 
     //[field: SerializeField] public Transform[] equipSlots = new Transform[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
 
@@ -49,6 +103,8 @@ public class UpgradeModuleEquipment : MonoBehaviour
 
                 module.InitModule(moduleObject, equip: true);
 
+                moduleEquipStats[i].InitModuleStat(moduleObject);
+
                 return true;
             }
         }
@@ -77,6 +133,8 @@ public class UpgradeModuleEquipment : MonoBehaviour
             data.equipItems[num] = module;
 
             module.InitModule(moduleObject, equip: true);
+
+            moduleEquipStats[num].InitModuleStat(moduleObject);
 
             return true;
         }
@@ -124,6 +182,8 @@ public class UpgradeModuleEquipment : MonoBehaviour
                 Destroy(data.equipItems[i].gameObject);
 
                 data.equipItems[i] = null;
+
+                moduleEquipStats[i].ClearStat();
             }
         }
     }

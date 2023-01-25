@@ -50,4 +50,10 @@ public class FirerateModule : UpgradeModuleScripableObject
             }
         }
     }
+
+    public override string[] GetModuleStats(int tier)
+    {
+        string[] value = { firerateValue[tier].ToString() };
+        return value;
+    }
 }

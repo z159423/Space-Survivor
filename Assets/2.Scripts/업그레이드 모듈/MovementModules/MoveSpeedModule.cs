@@ -50,4 +50,10 @@ public class MoveSpeedModule : UpgradeModuleScripableObject
             }
         }
     }
+
+    public override string[] GetModuleStats(int tier)
+    {
+        string[] value = { moveSpeedValue[tier].ToString() };
+        return value;
+    }
 }

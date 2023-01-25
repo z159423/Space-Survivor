@@ -23,4 +23,6 @@ public abstract class UpgradeModuleScripableObject : ScriptableObject
     public abstract void UnapplyUpgradeModule(PlayerUpgradeModule playerWeapon, int tier);
 
     public abstract void GetLocalizedModuleStatText(TextMeshProUGUI text, int tier);
+
+    public abstract string[] GetModuleStats(int tier);
 }
