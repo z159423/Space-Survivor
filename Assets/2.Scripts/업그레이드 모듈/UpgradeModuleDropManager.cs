@@ -12,9 +12,16 @@ public class UpgradeModuleDropManager : MonoBehaviour
 
     public UpgradeModuleScripableObject[] moduleDatas;
 
+    private List<GameObject> generatedModuleDrops = new List<GameObject>();
+
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        InGameObjectManager.Instance.AddClearableObejctListener(generatedModuleDrops, moduleDropsPool);
     }
 
     /// <summary>
