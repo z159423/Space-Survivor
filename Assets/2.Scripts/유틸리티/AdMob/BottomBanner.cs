@@ -50,8 +50,6 @@ public class BottomBanner : MonoBehaviour
                 }
             }
         }
-
-
     }
 
     private void RequestBanner()
