@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using Sirenix.OdinInspector;
+using UnityEngine.UI;
 
 public class GameEndPanel : MonoBehaviour
 {
@@ -21,8 +22,28 @@ public class GameEndPanel : MonoBehaviour
     [SerializeField] private RectTransform trans2;
     [SerializeField] private RectTransform trans3;
 
+    [SerializeField] private GameObject crystalBonusRVBtn;
+
+    [SerializeField] private Transform moduleAcquiredListParent;
+
+    public List<UpgradeModuleObject> Dummy_getUpgradeModuleOnThisStage = new List<UpgradeModuleObject>();
+
+    private void Start()
+    {
+        RewardedInterstitialAdCaller.instance.crystalBonusRVBtn = crystalBonusRVBtn;
+
+        crystalBonusRVBtn.GetComponentInChildren<Button>().onClick.AddListener(() => RewardedInterstitialAdCaller.instance.WatchRewardAds_CrystalDouble());
+    }
+
     public void StartEndMenuAnimation()
     {
+        // foreach (UpgradeModuleObject module in UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage)
+        // {
+        //     UpgradeModuleManager.instance.GetNewModule(module);
+        // }
+
+        UpgradeModuleDropManager.instance.OptainModules();
+
         title();
     }
 
@@ -59,11 +80,22 @@ public class GameEndPanel : MonoBehaviour
     void ModuleAcquired()
     {
         moduleAcquired.pivot = new Vector2(0.5f, 0.5f);
-        moduleAcquired.DOAnchorPos(trans3.anchoredPosition, 1f).OnComplete(() => { modulesGenerate(); });
+        moduleAcquired.DOAnchorPos(trans3.anchoredPosition, 1f).OnComplete(() => { StartCoroutine(modulesGenerate()); });
 
-        void modulesGenerate()
+        IEnumerator modulesGenerate()
         {
+            var modulePrefab = Utility.GetResource<GameObject>("UI/AcquiredModuleNode") as GameObject;
 
+            foreach (UpgradeModuleObject modules in UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage)
+            {
+                var node = Instantiate(modulePrefab, moduleAcquiredListParent);
+
+                node.GetComponentInChildren<ModuleItem>().InitModule(modules.GetUpgradeModuleObject());
+
+                node.transform.GetChild(0).DOScale(new Vector3(1, 1, 1), 0.7f);
+
+                yield return new WaitForSeconds(0.7f);
+            }
         }
     }
 }

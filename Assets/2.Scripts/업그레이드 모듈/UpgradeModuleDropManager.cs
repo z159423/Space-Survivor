@@ -43,6 +43,6 @@ public class UpgradeModuleDropManager : MonoBehaviour
             UserDataManager.instance.currentUserData.moduleInventory.Add(getUpgradeModuleOnThisStage[i]);
         }
 
-        getUpgradeModuleOnThisStage.Clear();
+        //getUpgradeModuleOnThisStage.Clear();
     }
 }

@@ -103,6 +103,30 @@ MonoBehaviour:
     m_Key: ModuleAcquired
     m_Metadata:
       m_Items: []
+  - m_Id: 88042671459483648
+    m_Key: SellModule?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88042990042038272
+    m_Key: Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88043092043317248
+    m_Key: Sell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88043141850677248
+    m_Key: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88045301271314432
+    m_Key: Modules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88046911129075712
+    m_Key: Unlock
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

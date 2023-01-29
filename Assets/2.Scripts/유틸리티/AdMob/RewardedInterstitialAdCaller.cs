@@ -55,6 +55,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     private static List<IEnumerator> rewardList = new List<IEnumerator>();
 
+    public GameObject crystalBonusRVBtn = null;
+
     private void Awake()
     {
         instance = this;
@@ -744,6 +746,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         useCrystalDoubleThisStage = true;
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
+
+        crystalBonusRVBtn?.SetActive(false);
 
         FirebaseAnalytics.LogEvent("RvAdsComplete_DoubleCrystal");
     }

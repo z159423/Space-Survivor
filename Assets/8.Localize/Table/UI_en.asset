@@ -106,6 +106,30 @@ MonoBehaviour:
     m_Localized: Modues Acquired
     m_Metadata:
       m_Items: []
+  - m_Id: 88042671459483648
+    m_Localized: Are you sure you want to sell this module?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88042990042038272
+    m_Localized: Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88043141850677248
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88043092043317248
+    m_Localized: Sell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88045301271314432
+    m_Localized: Modules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88046911129075712
+    m_Localized: Unlock
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

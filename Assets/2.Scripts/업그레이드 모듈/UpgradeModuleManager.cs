@@ -170,6 +170,14 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public void ActiveUpgradeModulePanel()
     {
+        if (!upgradeModulePanel.activeSelf)
+        {
+            ClearModuleDisplay();
+
+            GenerateInventoryModulePrefabs();
+            GenerateEquipModulePrefabs();
+        }
+
         upgradeModulePanel.SetActive(!upgradeModulePanel.activeSelf);
     }
 

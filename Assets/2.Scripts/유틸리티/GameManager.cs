@@ -183,6 +183,8 @@ public class GameManager : MonoBehaviour
         Destroy(endGameMenu);
 
         DOTween.Kill(reviveAnimationSequence);
+
+        UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage.Clear();
     }
 
     public void GoMainMenu()
@@ -224,6 +226,8 @@ public class GameManager : MonoBehaviour
         Destroy(endGameMenu);
 
         DOTween.Kill(reviveAnimationSequence);
+
+        UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage.Clear();
     }
 
     public void Resurrection()
@@ -259,7 +263,7 @@ public class GameManager : MonoBehaviour
 
             reviveAnimationSequence = DOTween.Sequence();
 
-            reviveAnimationSequence.Join(DOTween.To(() => fill.fillAmount, (var) => fill.fillAmount = var, 0, 5).SetEase(Ease.Linear)
+            reviveAnimationSequence.Join(DOTween.To(() => fill.fillAmount, (var) => fill.fillAmount = var, 0, 3.5f).SetEase(Ease.Linear)
             .OnComplete(() =>
             {
                 reviveButton.SetActive(false);
