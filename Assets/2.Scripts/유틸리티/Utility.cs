@@ -222,4 +222,68 @@ public class Utility : MonoBehaviour
 
         }
     }
+
+    public static T GetResource<T>(string path) where T : UnityEngine.Object
+    {
+        var res = Resources.Load<T>(path);
+
+        return res;
+    }
+
+    public static void TextAnimation(TextMeshProUGUI text, int targetValue)
+    {
+        CoroutineHelper.StartCoroutine(CountText(targetValue));
+
+        IEnumerator CountText(int newValue)
+        {
+            float CountFPS = 30;
+            float Duration = 1f;
+            string NumberFormat = "N0";
+            int _value = 0;
+
+            WaitForSeconds Wait = new WaitForSeconds(1f / CountFPS);
+            int previousValue = _value;
+            int stepAmount;
+
+            if (newValue - previousValue < 0)
+            {
+                stepAmount = Mathf.FloorToInt((newValue - previousValue) / (CountFPS * Duration)); // newValue = -20, previousValue = 0. CountFPS = 30, and Duration = 1; (-20- 0) / (30*1) // -0.66667 (ceiltoint)-> 0
+            }
+            else
+            {
+                stepAmount = Mathf.CeilToInt((newValue - previousValue) / (CountFPS * Duration)); // newValue = 20, previousValue = 0. CountFPS = 30, and Duration = 1; (20- 0) / (30*1) // 0.66667 (floortoint)-> 0
+            }
+
+            if (previousValue < newValue)
+            {
+                while (previousValue < newValue)
+                {
+                    previousValue += stepAmount;
+                    if (previousValue > newValue)
+                    {
+                        previousValue = newValue;
+                    }
+
+                    text.SetText(previousValue.ToString(NumberFormat));
+
+                    yield return Wait;
+                }
+            }
+            else
+            {
+                while (previousValue > newValue)
+                {
+                    previousValue += stepAmount; // (-20 - 0) / (30 * 1) = -0.66667 -> -1              0 + -1 = -1
+                    if (previousValue < newValue)
+                    {
+                        previousValue = newValue;
+                    }
+
+                    text.SetText(previousValue.ToString(NumberFormat));
+
+                    yield return Wait;
+                }
+            }
+        }
+    }
 }

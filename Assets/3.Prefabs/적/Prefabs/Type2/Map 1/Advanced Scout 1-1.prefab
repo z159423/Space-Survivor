@@ -127,6 +127,8 @@ MonoBehaviour:
     dropExpmaxAmount: 20
     dropCrystalMinAmount: 4
     dropCrystalmaxAmount: 7
+    ModuleDropPercent: 3
+    moduleDropTable: {fileID: 11400000, guid: 7851d5949fcdb0d46bd5c1c101d1933a, type: 2}
   dieVFXType: 1
   enemyAi: {fileID: -2445843327308621723}
   <dieSound>k__BackingField: kill1

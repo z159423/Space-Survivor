@@ -112,7 +112,7 @@ public class EnemyStat : MonoBehaviour
             ItemGenerator.instance.GenerateRandomItem(transform.position);
         }
 
-        if (Utility.PercentageCalculator(dropTable.ModuleDropPercent, 1000))
+        if (Utility.PercentageCalculator(dropTable.moduleDropTable.dropPercent, UpgradeModuleDropTable.dropMaxPercent))
         {
             UpgradeModuleDropManager.instance.GenerateRandomModuleDrops(transform.position);
         }
@@ -197,4 +197,6 @@ public class DropTable
 
     [Range(0, 1000)]
     public int ModuleDropPercent = 3;
+
+    public UpgradeModuleDropTable moduleDropTable;
 }

@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using Firebase.Analytics;
+using DG.Tweening;
 
 public class RewardedInterstitialAdCaller : MonoBehaviour
 {
@@ -339,8 +340,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             //StartCoroutine(revive());
             rewardList.Add(revive());
-
-
         }
     }
 
@@ -611,6 +610,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             if (UserDataManager.instance.currentUserData.RemoveAds)
             {
                 print("광고 제거를 구매해 광고 호출을 안함");
+
                 rewardList.Add(revive());
             }
             else if (!rewardedAd.IsLoaded())
@@ -696,6 +696,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //부활 보상획득
     IEnumerator revive()
     {
+        if (GameManager.instance.reviveAnimationSequence != null)
+            GameManager.instance.reviveAnimationSequence.Kill();
+
         touchProjectPanel.SetActive(true);
         yield return new WaitForSeconds(0.3f);
 

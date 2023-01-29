@@ -386,7 +386,6 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public UpgradeModuleObject GenerateRandomModule()
     {
-
         UpgradeModules modules = (UpgradeModules)UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(UpgradeModules)).Length);
 
         UpgradeModuleTier tier = (UpgradeModuleTier)(Utility.GetRandomProb(UpgradeModuleTierDropPercent)) + 1;

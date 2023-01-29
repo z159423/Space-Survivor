@@ -9,37 +9,45 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using DG.Tweening;
 using Firebase.Analytics;
+using Sirenix.OdinInspector;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject inGameMenu;
-    [SerializeField] private GameObject MainMenu;
-    [SerializeField] private GameObject DieMenu;
-    [SerializeField] private GameObject reviveButton;
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject hpBar;
-    [SerializeField] private TextMeshProUGUI timer;
-    [SerializeField] private TextMeshProUGUI killCount;
-    [SerializeField] private TextMeshProUGUI getCrystalCountText;
-    [SerializeField] private TextMeshProUGUI killCountText;
-    [SerializeField] private PlayerStat playerStat;
-    [SerializeField] private PlayerWeapon playerWeapon;
-    [SerializeField] private PlayerUpgradeModule playerUpgradeModule;
-    [SerializeField] private TextMeshProUGUI shipNameText;
-    [SerializeField] private GameObject shipBuyBtn;
-    [SerializeField] private GameObject shipTrialBtn;
-    [SerializeField] private Color buyBtnDisableColor;
-    [SerializeField] private Color buyBtnEnableColor;
-    [SerializeField] private CinemachineVirtualCamera cmvc;
-    [SerializeField] private TextMeshProUGUI clearStage_getCrystalCountText;
-    [SerializeField] private TextMeshProUGUI clearStage_killCountText;
-    [SerializeField] private GameObject clearStageMenu;
-    [SerializeField] private GameObject console;
-    [SerializeField] private GameObject inGameDebug;
-    public Transform playerTrans;
-    [SerializeField] private GameObject[] editmodeUI;
-    [SerializeField] private StageSelect stageSelect;
-    [field: SerializeField] public GameObject savingIcon { get; private set; }
+
+    [TitleGroup("참조")][SerializeField] private GameObject inGameMenu;
+    [TitleGroup("참조")][SerializeField] private GameObject MainMenu;
+    [TitleGroup("참조")][SerializeField] private GameObject DieMenu;
+    [TitleGroup("참조")][SerializeField] private GameObject reviveButton;
+    [TitleGroup("참조")][SerializeField] private GameObject player;
+    [TitleGroup("참조")][SerializeField] private GameObject hpBar;
+    [TitleGroup("참조")][SerializeField] private TextMeshProUGUI timer;
+    [TitleGroup("참조")][SerializeField] private TextMeshProUGUI killCount;
+    //[TitleGroup("참조")][SerializeField] private TextMeshProUGUI getCrystalCountText;
+    //[TitleGroup("참조")][SerializeField] private TextMeshProUGUI killCountText;
+    [TitleGroup("참조")][SerializeField] public PlayerStat playerStat;
+    [TitleGroup("참조")][SerializeField] private PlayerWeapon playerWeapon;
+    [TitleGroup("참조")][SerializeField] private PlayerUpgradeModule playerUpgradeModule;
+    [TitleGroup("참조")][SerializeField] private TextMeshProUGUI shipNameText;
+    [TitleGroup("참조")][SerializeField] private GameObject shipBuyBtn;
+    [TitleGroup("참조")][SerializeField] private GameObject shipTrialBtn;
+    [TitleGroup("참조")][SerializeField] private Color buyBtnDisableColor;
+    [TitleGroup("참조")][SerializeField] private Color buyBtnEnableColor;
+    [TitleGroup("참조")][SerializeField] private CinemachineVirtualCamera cmvc;
+    [TitleGroup("참조")][SerializeField] private TextMeshProUGUI clearStage_getCrystalCountText;
+    [TitleGroup("참조")][SerializeField] private TextMeshProUGUI clearStage_killCountText;
+    [TitleGroup("참조")][SerializeField] private GameObject clearStageMenu;
+    [TitleGroup("참조")][SerializeField] private GameObject console;
+    [TitleGroup("참조")][SerializeField] private GameObject inGameDebug;
+    [TitleGroup("참조")][SerializeField] private Transform gameEndMenuParent;
+    [TitleGroup("참조")] public Transform playerTrans;
+    [TitleGroup("참조")][SerializeField] private GameObject[] editmodeUI;
+    [TitleGroup("참조")][SerializeField] private StageSelect stageSelect;
+    [TitleGroup("참조")][field: SerializeField] public GameObject savingIcon { get; private set; }
+
+    [TitleGroup("End Menu")][SerializeField] private GameObject retryBtn;
+    [TitleGroup("End Menu")][SerializeField] private GameObject mainMenuBtn;
+
+    public Sequence reviveAnimationSequence { get; private set; }
 
     [Space]
 
@@ -60,10 +68,12 @@ public class GameManager : MonoBehaviour
     public bool editmode = false;
 
     private int currentTime;
-    private float currentKillCount;
+    public float currentKillCount { get; private set; }
     private Coroutine timerCoroutine;
     public bool revivedThisGame = false;
     private float revivedTimer = 1f;
+
+    private GameObject endGameMenu;
 
     public static GameManager instance;
 
@@ -169,6 +179,10 @@ public class GameManager : MonoBehaviour
 
         RewardedInterstitialAdCaller.instance.useCrystalDoubleThisStage = false;
         RewardedInterstitialAdCaller.instance.ShowDoubleCrystalBtn();
+
+        Destroy(endGameMenu);
+
+        DOTween.Kill(reviveAnimationSequence);
     }
 
     public void GoMainMenu()
@@ -206,6 +220,10 @@ public class GameManager : MonoBehaviour
         RewardedInterstitialAdCaller.instance.ShowDoubleCrystalBtn();
 
         LevelUpManager.getAllUpgradeCount = 0;
+
+        Destroy(endGameMenu);
+
+        DOTween.Kill(reviveAnimationSequence);
     }
 
     public void Resurrection()
@@ -217,12 +235,15 @@ public class GameManager : MonoBehaviour
     {
         //EnemyGenerator.instance.StopEnemySpawn();
 
-        getCrystalCountText.text = playerStat.currentCrystal.ToString();
-        killCountText.text = currentKillCount.ToString();
+        //getCrystalCountText.text = playerStat.currentCrystal.ToString();
+        //killCountText.text = currentKillCount.ToString();
 
         DieMenu.SetActive(true);
 
         //CrystalMotion.instance.StartCrystalMotion(0,playerStat.currentCrystal);
+
+        retryBtn.SetActive(false);
+        mainMenuBtn.SetActive(false);
 
         if (!revivedThisGame)
         {
@@ -231,18 +252,44 @@ public class GameManager : MonoBehaviour
 
             var fill = reviveButton.GetComponent<Image>();
 
-            DOTween.To(() => fill.fillAmount, (var) => fill.fillAmount = var, 0, 5).SetEase(Ease.Linear)
+            fill.fillAmount = 1f;
+
+            if (reviveAnimationSequence != null)
+                reviveAnimationSequence.Kill();
+
+            reviveAnimationSequence = DOTween.Sequence();
+
+            reviveAnimationSequence.Join(DOTween.To(() => fill.fillAmount, (var) => fill.fillAmount = var, 0, 5).SetEase(Ease.Linear)
             .OnComplete(() =>
             {
                 reviveButton.SetActive(false);
                 fill.fillAmount = 1f;
 
-            });
+                ShowGameEndMenu();
+            }));
+        }
+        else
+        {
+            reviveButton.SetActive(false);
+            ShowGameEndMenu();
         }
 
         gameStart = false;
 
         FirebaseAnalytics.LogEvent("playerDieEvent");
+
+        void ShowGameEndMenu()
+        {
+            endGameMenu = Instantiate(Utility.GetResource<GameObject>("UI/AnimatedEndMenu"));
+            endGameMenu.transform.SetParent(gameEndMenuParent);
+            endGameMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+            endGameMenu.transform.localScale = new Vector3(1, 1, 1);
+
+            endGameMenu.GetComponent<GameEndPanel>().StartEndMenuAnimation();
+
+            retryBtn.SetActive(true);
+            mainMenuBtn.SetActive(true);
+        }
     }
 
     public void ClearStage()
@@ -475,6 +522,6 @@ public class GameManager : MonoBehaviour
 
     public void ChangeGetCrystalText(int crystal)
     {
-        getCrystalCountText.text = (int.Parse(getCrystalCountText.text) + crystal).ToString();
+        //getCrystalCountText.text = (int.Parse(getCrystalCountText.text) + crystal).ToString();
     }
 }

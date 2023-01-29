@@ -94,6 +94,18 @@ MonoBehaviour:
     m_Localized: Get All
     m_Metadata:
       m_Items: []
+  - m_Id: 87866465358520320
+    m_Localized: REPLAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87866499529515008
+    m_Localized: MAinMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87866772666785792
+    m_Localized: Modues Acquired
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

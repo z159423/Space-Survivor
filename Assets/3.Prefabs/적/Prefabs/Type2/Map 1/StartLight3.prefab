@@ -195,6 +195,7 @@ MonoBehaviour:
     dropCrystalMinAmount: 0
     dropCrystalmaxAmount: 0
     ModuleDropPercent: 3
+    moduleDropTable: {fileID: 0}
   dieVFXType: 9
   enemyAi: {fileID: -4449900345107182099}
   <dieSound>k__BackingField: explosion1
@@ -215,6 +216,7 @@ MonoBehaviour:
     dropCrystalMinAmount: 45
     dropCrystalmaxAmount: 60
     ModuleDropPercent: 1000
+    moduleDropTable: {fileID: 11400000, guid: 9adca59d2022b684392c4ae96d5ba02a, type: 2}
   HP_parent: {fileID: 3371734825996580433}
   HP_Bar: {fileID: 1121296295680603479}
   Hp_offset: {x: 0, y: -0.87, z: 0}
