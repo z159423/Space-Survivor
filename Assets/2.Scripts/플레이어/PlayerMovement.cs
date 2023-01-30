@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private FixedTouchField fixedTouchField;
-    [SerializeField] private FixedJoystick joystick;
-    [SerializeField] private PlayerStat playerStat;
-    [SerializeField] private Transform playerBody;
-    [Space]
-    [SerializeField] private Transform virtualTarget;
-    private Vector2 virtualDir = Vector2.zero;
+    [FoldoutGroup("참조")][SerializeField] private FixedTouchField fixedTouchField;
+    [FoldoutGroup("참조")][SerializeField] private FixedJoystick joystick;
+    [FoldoutGroup("참조")][SerializeField] private PlayerStat playerStat;
+    [FoldoutGroup("참조")][SerializeField] private Transform playerBody;
+    [FoldoutGroup("참조")][SerializeField] private Transform virtualTarget;
+    [FoldoutGroup("참조")][SerializeField] private Rigidbody2D rigid;
 
+
+    private Vector2 virtualDir = Vector2.zero;
     private Vector2 moveDir;
     private float angle;
     private bool isMoving = false;
 
-    [SerializeField] private Rigidbody2D rigid;
 
     private void Start()
     {

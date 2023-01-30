@@ -35,7 +35,7 @@ public class GameEndPanel : MonoBehaviour
         crystalBonusRVBtn.GetComponentInChildren<Button>().onClick.AddListener(() => RewardedInterstitialAdCaller.instance.WatchRewardAds_CrystalDouble());
     }
 
-    public void StartEndMenuAnimation()
+    public void StartEndMenuAnimation(bool die)
     {
         // foreach (UpgradeModuleObject module in UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage)
         // {
@@ -44,11 +44,18 @@ public class GameEndPanel : MonoBehaviour
 
         UpgradeModuleDropManager.instance.OptainModules();
 
-        title();
+        title(die);
     }
 
-    void title()
+    void title(bool die)
     {
+        if (die)
+        {
+            gameOverText.text = "Game Over";
+        }
+        else
+            gameOverText.text = "Stage Clear";
+
         gameOverText.DOFade(1f, 1f).OnComplete(() =>
         {
             CrystalCountShow();

@@ -39,7 +39,7 @@ public class InGameObjectManager : SingletonStatic<InGameObjectManager>
     //     }
     // }
 
-    public void AddClearableObejctListener(List<GameObject> list, ObjectPool pool)
+    public void AddClearableObejctListener(ref List<GameObject> list, ref ObjectPool pool)
     {
         if (!this.clearableObjectDic.ContainsKey(pool))
             this.clearableObjectDic.Add(pool, list);
@@ -49,6 +49,7 @@ public class InGameObjectManager : SingletonStatic<InGameObjectManager>
     {
         foreach (var action in clearableObjectDic)
         {
+            print(action.Value.Count);
             for (int i = 0; i < action.Value.Count; i++)
             {
                 action.Key.EnqueueObject(action.Value[i]);

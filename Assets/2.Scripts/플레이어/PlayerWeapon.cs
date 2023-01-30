@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class PlayerWeapon : MonoBehaviour
 {
+    [FoldoutGroup("참조")][SerializeField] private PlayerMovement playerMovement;
+    [FoldoutGroup("참조")][SerializeField] public PlayerStat playerStat;
+    [FoldoutGroup("참조")][SerializeField] public PlayerUpgradeModule playerModule;
+
     public List<WeaponObject> weaponPool = new List<WeaponObject>();
     public List<PassiveObject> passivePool = new List<PassiveObject>();
 
     public Stat additionalDamage = new Stat();
-
     public Stat additionalCoolTime = new Stat();
-
-    [Space]
-    [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] public PlayerStat playerStat;
-    [SerializeField] public PlayerUpgradeModule playerModule;
-
     public ShipObjectData playerShipData;
 
     [Space]

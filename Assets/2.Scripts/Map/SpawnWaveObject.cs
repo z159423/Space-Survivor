@@ -6,9 +6,9 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu(fileName = "EnemySpawnWaveObject", menuName = "Scriptable Object/New Enemy SpawnWave Object", order = int.MaxValue)]
 public class SpawnWaveObject : ScriptableObject
 {
-    
+
     [Space]
-    [TableList]
+    //[TableList]
     public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
 
     [SerializeField]
@@ -21,6 +21,16 @@ public class EnemyWaveBundle
 {
 
     [SerializeField] private string name;
-    [TableList]
+    //[TableList]
+    [CustomContextMenu("custom/InitSpawnTimeIntToVector2", "InitSpawnTimeIntToVector2")]
     [SerializeField] public List<EnemyWave> enemySpawnWaves = new List<EnemyWave>();
+
+
+    public void InitSpawnTimeIntToVector2()
+    {
+        foreach (EnemyWave wave in enemySpawnWaves)
+        {
+            wave.WaveTime = new Vector2(wave.StartWaveTime, wave.StopWaveTime);
+        }
+    }
 }

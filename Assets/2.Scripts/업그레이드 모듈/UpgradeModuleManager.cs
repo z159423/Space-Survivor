@@ -10,7 +10,7 @@ using Sirenix.OdinInspector;
 
 public class UpgradeModuleManager : MonoBehaviour
 {
-    [SerializeField] private GameObject upgradeModulePanel;
+    [FoldoutGroup("참조")][SerializeField] private GameObject upgradeModulePanel;
 
     [Space]
 
@@ -22,71 +22,71 @@ public class UpgradeModuleManager : MonoBehaviour
 
     [Space]
 
-    [SerializeField] private GameObject detailPanel;
+    [FoldoutGroup("참조")][SerializeField] private GameObject detailPanel;
 
     [Space]
 
-    [TitleGroup("detail")][SerializeField] private TextMeshProUGUI detail_Name;
-    [TitleGroup("detail")][SerializeField] private TextMeshProUGUI detail_Tier;
-    [TitleGroup("detail")][SerializeField] private TextMeshProUGUI detail_Stat_Normal;
-    [TitleGroup("detail")][SerializeField] private TextMeshProUGUI detail_Stat_Magic;
-    [TitleGroup("detail")][SerializeField] private TextMeshProUGUI detail_Stat_Rare;
-    [TitleGroup("detail")][SerializeField] private TextMeshProUGUI detail_Stat_Unique;
-    [TitleGroup("detail")][SerializeField] private TextMeshProUGUI detail_Stat_Legendary;
-    [TitleGroup("detail")][SerializeField] private Image detail_SlotCover;
-    [TitleGroup("detail")][SerializeField] private Image detail_ModuleImage;
-    [TitleGroup("detail")][SerializeField] private Color detail_NormalColor;
-    [TitleGroup("detail")][SerializeField] private Color detail_MagicColor;
-    [TitleGroup("detail")][SerializeField] private Color detail_RareColor;
-    [TitleGroup("detail")][SerializeField] private Color detail_UniqueColor;
-    [TitleGroup("detail")][SerializeField] private Color detail_LegendaryColor;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI detail_Name;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI detail_Tier;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI detail_Stat_Normal;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI detail_Stat_Magic;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI detail_Stat_Rare;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI detail_Stat_Unique;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI detail_Stat_Legendary;
+    [FoldoutGroup("참조")][SerializeField] private Image detail_SlotCover;
+    [FoldoutGroup("참조")][SerializeField] private Image detail_ModuleImage;
+    [FoldoutGroup("detail")][SerializeField] private Color detail_NormalColor;
+    [FoldoutGroup("detail")][SerializeField] private Color detail_MagicColor;
+    [FoldoutGroup("detail")][SerializeField] private Color detail_RareColor;
+    [FoldoutGroup("detail")][SerializeField] private Color detail_UniqueColor;
+    [FoldoutGroup("detail")][SerializeField] private Color detail_LegendaryColor;
 
     [Space]
 
-    [SerializeField] private GameObject sellBtn;
-    [SerializeField] private GameObject upgradeBtn;
-    [SerializeField] private GameObject equipBtn;
-    [SerializeField] private GameObject unequipBtn;
+    [FoldoutGroup("참조")][SerializeField] private GameObject sellBtn;
+    [FoldoutGroup("참조")][SerializeField] private GameObject upgradeBtn;
+    [FoldoutGroup("참조")][SerializeField] private GameObject equipBtn;
+    [FoldoutGroup("참조")][SerializeField] private GameObject unequipBtn;
 
     [Space]
 
-    [SerializeField] private Transform playerModuleInventoryParent;
-    [SerializeField] private Transform playerModuleEquipParent;
+    [FoldoutGroup("참조")][SerializeField] private Transform playerModuleInventoryParent;
+    [FoldoutGroup("참조")][SerializeField] private Transform playerModuleEquipParent;
 
 
-    [SerializeField] private GameObject modulePrefab;
+    [FoldoutGroup("참조")][SerializeField] private GameObject modulePrefab;
 
     [Space]
 
-    [TitleGroup("Upgrade")][SerializeField] GameObject moduleUpgradePanel;
-    [TitleGroup("Upgrade")][SerializeField] Transform moduleUpgradeInventoryParent;
-    [TitleGroup("Upgrade")][SerializeField] Button moduleUpgradeBtn;
+    [FoldoutGroup("참조")][SerializeField] GameObject moduleUpgradePanel;
+    [FoldoutGroup("참조")][SerializeField] Transform moduleUpgradeInventoryParent;
+    [FoldoutGroup("참조")][SerializeField] Button moduleUpgradeBtn;
     [Space]
-    [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade1;
-    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade1Image;
-    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade1Cover;
-    [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade2;
-    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade2Image;
-    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade2Cover;
-    [TitleGroup("Upgrade")][SerializeField] UpgradeModuleObject moduleUpgrade3;
-    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade3Image;
-    [TitleGroup("Upgrade")][SerializeField] Image moduleUpgrade3Cover;
+    [BoxGroup("모듈 업그레이드 관련")][SerializeField] UpgradeModuleObject moduleUpgrade1;
+    [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade1Image;
+    [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade1Cover;
+    [BoxGroup("모듈 업그레이드 관련")][SerializeField] UpgradeModuleObject moduleUpgrade2;
+    [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade2Image;
+    [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade2Cover;
+    [BoxGroup("모듈 업그레이드 관련")][SerializeField] UpgradeModuleObject moduleUpgrade3;
+    [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade3Image;
+    [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade3Cover;
     //[TitleGroup("Upgrade")][SerializeField] GameObject moduleUpgradePanel;
 
     [Space]
 
-    [SerializeField] private GameObject sellPanel;
-    [SerializeField] private TextMeshProUGUI costText;
-    [SerializeField] private Button sellYesBtn;
-    public static readonly float[] UpgradeModuleTierDropPercent = { 10000, 800, 20, 5, 1 };
+    [FoldoutGroup("참조")][SerializeField] private GameObject sellPanel;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI costText;
+    [FoldoutGroup("참조")][SerializeField] private Button sellYesBtn;
+    [ShowInInspector] public static readonly float[] UpgradeModuleTierDropPercent = { 10000, 800, 20, 5, 1 };
 
     //public List<UpgradeModuleObject> TestequipedModules = new List<UpgradeModuleObject>();
     //public List<UpgradeModuleObject> TestmoduleInventory = new List<UpgradeModuleObject>();
 
     [Space]
 
-    [SerializeField] private UpgradeModuleObject swapingModule;
-    [SerializeField] private UpgradeModuleObject selectedModule;
+    [FoldoutGroup("참조")][SerializeField] private UpgradeModuleObject swapingModule;
+    [FoldoutGroup("참조")][SerializeField] private UpgradeModuleObject selectedModule;
 
     [field: Space]
 

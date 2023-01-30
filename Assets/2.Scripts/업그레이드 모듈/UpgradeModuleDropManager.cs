@@ -21,7 +21,7 @@ public class UpgradeModuleDropManager : MonoBehaviour
 
     private void Start()
     {
-        InGameObjectManager.Instance.AddClearableObejctListener(generatedModuleDrops, moduleDropsPool);
+        InGameObjectManager.Instance.AddClearableObejctListener(ref generatedModuleDrops, ref moduleDropsPool);
     }
 
     /// <summary>
@@ -31,6 +31,7 @@ public class UpgradeModuleDropManager : MonoBehaviour
     {
         var drops = moduleDropsPool.DequeueObject(position);
         drops.GetComponent<ModuleDrops>().SetModuleStat(UpgradeModuleManager.instance.GenerateRandomModule());
+        generatedModuleDrops.Add(drops);
     }
 
     /// <summary>
@@ -44,5 +45,9 @@ public class UpgradeModuleDropManager : MonoBehaviour
         }
 
         //getUpgradeModuleOnThisStage.Clear();
+    }
+
+    public void ClearGeneartedModuleOnThisStage()
+    {
     }
 }

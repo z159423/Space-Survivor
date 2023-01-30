@@ -1,26 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 [System.Serializable]
 public class EnemyWave
 {
-    [field: SerializeField] public string name {get; set;}
-    
-    [Range(0, 1800)]
-    public int StartWaveTime;
-    [Range(0, 1800)]
-    public int StopWaveTime;
+    [field: SerializeField] public string name { get; set; }
+
+    [Range(0, 900)]
+    [HideInInspector] public int StartWaveTime;
+    [Range(0, 900)]
+    [HideInInspector] public int StopWaveTime;
+
+    [MinMaxSlider(0, 900, true)] public Vector2 WaveTime;
 
     [Space]
     [SerializeField]
-    public waveType waveType;
+    [EnumToggleButtons] public waveType waveType;
     [Space]
     public float summonCycleTime = 1f;
 
     public EnemyObject enemyObject;
 
-    public int count;
+    [ShowIf("waveType", waveType.hyperBurstSummon)] public int count;
 
     public Coroutine waveCoroutine;
 

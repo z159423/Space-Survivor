@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 public class LevelUpManager : MonoBehaviour
 {
-    [SerializeField] private GameObject UpgradeUI;
-    [SerializeField] private Transform UpgradeSlotParent;
-    [SerializeField] private GameObject upgradeSlotCover;
+    [FoldoutGroup("참조")][SerializeField] private GameObject UpgradeUI;
+    [FoldoutGroup("참조")][SerializeField] private Transform UpgradeSlotParent;
+    [FoldoutGroup("참조")][SerializeField] private GameObject upgradeSlotCover;
 
     [Space]
 
-    [SerializeField] private Transform weaponSlotParent;
-    [SerializeField] private Transform passiveSlotParent;
+    [FoldoutGroup("참조")][SerializeField] private Transform weaponSlotParent;
+    [FoldoutGroup("참조")][SerializeField] private Transform passiveSlotParent;
 
-    [SerializeField] private GameObject equipmentSlot;
+    [FoldoutGroup("참조")][SerializeField] private GameObject equipmentSlot;
 
     [Space]
 
-    [SerializeField] private PlayerWeapon playerWeapon;
-    public PlayerStat playerStat;
+    [FoldoutGroup("참조")][SerializeField] private PlayerWeapon playerWeapon;
+    [FoldoutGroup("참조")] public PlayerStat playerStat;
 
-    [SerializeField] private GameObject weaponUpgradePanelPrefab;
-    [SerializeField] private GameObject passiveUpgradePanelPrefab;
-    [SerializeField] private GameObject crystalPanelPrefab;
+    [FoldoutGroup("참조")][SerializeField] private GameObject weaponUpgradePanelPrefab;
+    [FoldoutGroup("참조")][SerializeField] private GameObject passiveUpgradePanelPrefab;
+    [FoldoutGroup("참조")][SerializeField] private GameObject crystalPanelPrefab;
 
 
     [Space]
@@ -293,7 +294,7 @@ public class LevelUpManager : MonoBehaviour
             playerWeapon.UpgradeWeapon(currentUpgradeModule[i]);
         }
 
-        for(int i = 0; i < crystalPanel.Count; i++)
+        for (int i = 0; i < crystalPanel.Count; i++)
         {
             LevelUpManager.instance.playerStat.GetCrystal(crystalPanel[i].GetComponent<CrystalSlot>().crystalValue);
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class PlayerUpgradeModule : MonoBehaviour
 {
@@ -8,13 +9,13 @@ public class PlayerUpgradeModule : MonoBehaviour
 
     //[field: SerializeField] public List<UpgradeModuleObject> moduleInventory = new List<UpgradeModuleObject>();
 
-    [SerializeField] private PlayerStat playerStat;
-    [SerializeField] private PlayerWeapon playerWeapon;
+    [FoldoutGroup("참조")][SerializeField] private PlayerStat playerStat;
+    [FoldoutGroup("참조")][SerializeField] private PlayerWeapon playerWeapon;
 
     [Space]
 
-    [SerializeField] private GameObject moduleItemPrefab;
-    [SerializeField] private Transform moduleInventoryParent;
+    [FoldoutGroup("참조")][SerializeField] private GameObject moduleItemPrefab;
+    [FoldoutGroup("참조")][SerializeField] private Transform moduleInventoryParent;
 
     [field: Space]
 

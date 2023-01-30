@@ -7,75 +7,74 @@ using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
 using Firebase.Analytics;
-
+using Sirenix.OdinInspector;
 
 public class PlayerStat : MonoBehaviour
 {
-    private int maxHp = 1000;
-    private int currentHp = 1000;
-    [SerializeField] private int maxExp = 50;
-    [SerializeField] private int maxExpIncreaseValue = 70;
-    private int currentExp = 0;
-    public Stat getMineralBouse = new Stat();
-    private int playerLevel = 1;
-    public int currentCrystal = 0;
-    private int lastGameCurrentCrystal = 0;
+    [BoxGroup("플레이어 스텟")] private int maxHp = 1000;
+    [BoxGroup("플레이어 스텟")] private int currentHp = 1000;
+    [BoxGroup("플레이어 스텟")][SerializeField] private int maxExp = 50;
+    [BoxGroup("플레이어 스텟")][SerializeField] private int maxExpIncreaseValue = 70;
+    [BoxGroup("플레이어 스텟")] private int currentExp = 0;
+    [BoxGroup("플레이어 스텟")] public Stat getMineralBouse = new Stat();
+    [BoxGroup("플레이어 스텟")] private int playerLevel = 1;
+    [BoxGroup("플레이어 스텟")] public int currentCrystal = 0;
+    [BoxGroup("플레이어 스텟")] private int lastGameCurrentCrystal = 0;
+    [BoxGroup("플레이어 스텟")][SerializeField] public Stat moveSpeed;
+    [BoxGroup("플레이어 스텟")][SerializeField] public Stat rotationSpeed;
 
     [Space]
 
-    public int currentShieldStack = 0;
-    public int maxShieldStack = 0;
-    public bool shieldInvinsible = false;
-    public Stat shieldInvinsibleTime = new Stat();
-    public Stat shieldReloadTime = new Stat();
-    public GameObject shieldImage;
-    public Color oneShieldStackColor;
-    public Color twoShieldStackColor;
-    public Color thereShieldStackColor;
-    private Coroutine shieldReloadCoroutine;
+    [FoldoutGroup("쉴드 관련")] public int currentShieldStack = 0;
+    [FoldoutGroup("쉴드 관련")] public int maxShieldStack = 0;
+    [FoldoutGroup("쉴드 관련")] public bool shieldInvinsible = false;
+    [FoldoutGroup("쉴드 관련")] public Stat shieldInvinsibleTime = new Stat();
+    [FoldoutGroup("쉴드 관련")] public Stat shieldReloadTime = new Stat();
+    [FoldoutGroup("쉴드 관련")] public GameObject shieldImage;
+    [FoldoutGroup("쉴드 관련")] public Color oneShieldStackColor;
+    [FoldoutGroup("쉴드 관련")] public Color twoShieldStackColor;
+    [FoldoutGroup("쉴드 관련")] public Color thereShieldStackColor;
+    [FoldoutGroup("쉴드 관련")] private Coroutine shieldReloadCoroutine;
 
+    [Space]
+
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI playerLevelText;
 
     [Space]
 
-    [SerializeField] private TextMeshProUGUI playerLevelText;
+    [Space]
+    [FoldoutGroup("참조")][SerializeField] private ParticleSystem HitEffect;
 
     [Space]
-    [SerializeField] public Stat moveSpeed;
-    [SerializeField] public Stat rotationSpeed;
+    [FoldoutGroup("참조")][SerializeField] private HpBar hpBar;
+    [FoldoutGroup("참조")][SerializeField] private Slider expSlider;
+    [FoldoutGroup("참조")][SerializeField] private Image expFill;
+    [FoldoutGroup("참조")][SerializeField] private Color originExpColor;
+    [FoldoutGroup("참조")][SerializeField] private Color fadeOutExpColor;
+
+    [FoldoutGroup("참조")][SerializeField] private PlayerWeapon playerWeapon;
+    [FoldoutGroup("참조")][SerializeField] private PlayerUpgradeModule playerUpgradeModule;
+    [FoldoutGroup("참조")][SerializeField] private PlayerMovement playerMovement;
+    [FoldoutGroup("참조")][SerializeField] private TextMeshProUGUI crystalText;
+    [FoldoutGroup("참조")][SerializeField] private Transform weaponSlotParent;
+    [FoldoutGroup("참조")][SerializeField] private Transform passiveSlotParent;
+    [FoldoutGroup("참조")][SerializeField] private CircleCollider2D resourcePullCollider;
 
     [Space]
-    [SerializeField] private ParticleSystem HitEffect;
+    [FoldoutGroup("참조")][SerializeField] GameObject dieVFX;
 
-    [Space]
-    [SerializeField] private HpBar hpBar;
-    [SerializeField] private Slider expSlider;
-    [SerializeField] private Image expFill;
-    [SerializeField] private Color originExpColor;
-    [SerializeField] private Color fadeOutExpColor;
-
-    [SerializeField] private PlayerWeapon playerWeapon;
-    [SerializeField] private PlayerUpgradeModule playerUpgradeModule;
-    [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private TextMeshProUGUI crystalText;
-    [SerializeField] private Transform weaponSlotParent;
-    [SerializeField] private Transform passiveSlotParent;
-    [SerializeField] private CircleCollider2D resourcePullCollider;
-
-    [Space]
-    [SerializeField] GameObject dieVFX;
-
-    public bool playerDie = false;
-    public bool whileLevelUp { get; set; } = false;
-    private GameObject currentShipBody;
-    public UnityEvent startGameEvent;
-    public UnityEvent playerDieEvent;
-    public UnityEvent playerLevelUpEvent;
+    [BoxGroup("플레이어 스텟")] public bool playerDie = false;
+    [field: BoxGroup("플레이어 스텟")][field: SerializeField] public bool whileLevelUp { get; set; } = false;
+    [FoldoutGroup("참조")] private GameObject currentShipBody;
+    [BoxGroup("이벤트")] public UnityEvent startGameEvent;
+    [BoxGroup("이벤트")] public UnityEvent playerDieEvent;
+    [BoxGroup("이벤트")] public UnityEvent playerLevelUpEvent;
 
     private ShipObject selectedShipObject = null;
 
     [Space]
 
-    [SerializeField] public bool invinsible = false;
+    [BoxGroup("플레이어 스텟")][SerializeField] public bool invinsible = false;
 
     [SerializeField] private List<EnemyStat> enteredEnemyList = new List<EnemyStat>();
 

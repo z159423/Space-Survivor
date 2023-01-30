@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    public Vector2 SpawnArea;
-    public float spawnCircleRadius = 14.5f;
-    public float spawnAreaMulti = 0.02f;
+    [ShowInInspector] public static readonly int TOTAL_STAGE_TIME = 900;
 
-    public float spawnTime = 0.5f;
+    [BoxGroup("스폰 관련 변수")] public Vector2 SpawnArea;
+    [BoxGroup("스폰 관련 변수")] public float spawnCircleRadius = 14.5f;
+    [BoxGroup("스폰 관련 변수")] public float spawnAreaMulti = 0.02f;
 
-    public Transform parent;
+    [BoxGroup("스폰 관련 변수")] public float spawnTime = 0.5f;
+
+    [FoldoutGroup("참조")] public Transform parent;
 
     [Space]
 
@@ -31,22 +34,20 @@ public class EnemyGenerator : MonoBehaviour
     public List<GameObject> SpawnedEnemy = new List<GameObject>();
 
     [Space]
-    [SerializeField] private Transform player;
-    [SerializeField] private RectTransform canvas;
+    [FoldoutGroup("참조")][SerializeField] private Transform player;
+    [FoldoutGroup("참조")][SerializeField] private RectTransform canvas;
+
+    [FoldoutGroup("참조")][SerializeField] private Animator warningPanelAnimator;
+    [FoldoutGroup("참조")][SerializeField] private GameObject warningPanel;
+
+    [FoldoutGroup("참조")][SerializeField] private GameObject bossBarrior;
+    [FoldoutGroup("참조")][SerializeField] private Transform enemyGeneratorDummy;
+    private GameObject barrior;
 
     public bool spawningEnemy = false;
     public bool bossFighting = false;
 
     private Coroutine enemySpawnCoroutine;
-
-    [SerializeField] private Animator warningPanelAnimator;
-    [SerializeField] private GameObject warningPanel;
-
-    [SerializeField] private GameObject bossBarrior;
-    private GameObject barrior;
-
-    [SerializeField] private Transform enemyGeneratorDummy;
-
 
     public static EnemyGenerator instance;
 
@@ -87,12 +88,12 @@ public class EnemyGenerator : MonoBehaviour
         {
             for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
             {
-                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].StartWaveTime == GameManager.instance.getCurrentTime())
+                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].WaveTime.x == GameManager.instance.getCurrentTime())
                 {
                     StartWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
                 }
 
-                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].StopWaveTime == GameManager.instance.getCurrentTime())
+                if (currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].WaveTime.y == GameManager.instance.getCurrentTime())
                 {
                     StopWave(currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j]);
                 }
@@ -357,6 +358,20 @@ public class EnemyGenerator : MonoBehaviour
             for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
             {
                 currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].name = currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].enemyObject.name + " - " + currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].waveType;
+            }
+        }
+    }
+
+    [ContextMenu("custom/InitSpawnTimeIntToVector2")]
+    public void InitSpawnTimeIntToVector2()
+    {
+        for (int i = 0; i < currentEnemySpawnWaveObject.enemySpawnWaves2.Count; i++)
+        {
+            for (int j = 0; j < currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves.Count; j++)
+            {
+                currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].WaveTime = new Vector2(
+                    currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].WaveTime.x,
+                currentEnemySpawnWaveObject.enemySpawnWaves2[i].enemySpawnWaves[j].WaveTime.y);
             }
         }
     }
