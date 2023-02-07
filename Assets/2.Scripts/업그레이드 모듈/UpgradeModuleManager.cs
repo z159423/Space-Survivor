@@ -62,6 +62,7 @@ public class UpgradeModuleManager : MonoBehaviour
     [FoldoutGroup("참조")][SerializeField] Transform moduleUpgradeInventoryParent;
     [FoldoutGroup("참조")][SerializeField] Button moduleUpgradeBtn;
     [Space]
+    [Header("모듈 합성메뉴에 올려져있는 모듈 정보")]
     [BoxGroup("모듈 업그레이드 관련")][SerializeField] UpgradeModuleObject moduleUpgrade1;
     [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade1Image;
     [FoldoutGroup("참조")][SerializeField] Image moduleUpgrade1Cover;

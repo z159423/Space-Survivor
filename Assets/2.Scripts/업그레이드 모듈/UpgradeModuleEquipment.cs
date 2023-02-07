@@ -58,7 +58,7 @@ public class UpgradeModuleEquipment : MonoBehaviour
 
             statImage.color = Color.white;
 
-            Utility.SetLocalizeTextAsync(statText, "Module", ((int)module.module).ToString() + "_Stat", module.GetScriptableObejct().GetModuleStats((int)module.tier));
+            Utility.SetLocalizeTextAsync(statText, "Module", ((int)module.module).ToString() + "_Stat", module.GetScriptableObejct().GetModuleStats((int)module.tier - 1));
         }
 
         public void ClearStat()
