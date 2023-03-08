@@ -101,7 +101,7 @@ public class UpgradeModuleEquipment : MonoBehaviour
 
                 data.equipItems[i] = module;
 
-                module.InitModule(moduleObject, equip: true);
+                module.InitModule(moduleObject, ModuleItem.SlotType.equip);
 
                 moduleEquipStats[i].InitModuleStat(moduleObject);
 
@@ -115,7 +115,7 @@ public class UpgradeModuleEquipment : MonoBehaviour
         return false;
     }
 
-    public bool EquipModuleAsNumber(GameObject prefab, UpgradeModuleObject moduleObject, int num)
+    public bool EquipModuleAsNumber(GameObject prefab, UpgradeModuleObject moduleObject, int num, bool tweening = true)
     {
         if (moduleObject.type != data.slotType)
             return false;
@@ -132,7 +132,7 @@ public class UpgradeModuleEquipment : MonoBehaviour
 
             data.equipItems[num] = module;
 
-            module.InitModule(moduleObject, equip: true);
+            module.InitModule(moduleObject, ModuleItem.SlotType.equip, tweening: tweening);
 
             moduleEquipStats[num].InitModuleStat(moduleObject);
 

@@ -117,7 +117,7 @@ public class UpgradeModuleManager : MonoBehaviour
     /// <summary>
     /// 게임 시작시 인벤토리 모듈 프리팹 생성
     /// </summary>
-    public void GenerateInventoryModulePrefabs()
+    public void GenerateInventoryModulePrefabs(bool tweening = true)
     {
         print(UserDataManager.instance.currentUserData.moduleInventory.Count);
 
@@ -125,14 +125,14 @@ public class UpgradeModuleManager : MonoBehaviour
         {
             var module = Instantiate(modulePrefab, Vector3.zero, Quaternion.identity, playerModuleInventoryParent).GetComponent<ModuleItem>();
 
-            module.InitModule(UserDataManager.instance.currentUserData.moduleInventory[i].GetUpgradeModuleObject(), inventory: true);
+            module.InitModule(UserDataManager.instance.currentUserData.moduleInventory[i].GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, tweening: tweening);
         }
     }
 
     /// <summary>
     /// 게임 시작시 장착중인 모듈 프리팹 생성
     /// </summary>
-    public void GenerateEquipModulePrefabs()
+    public void GenerateEquipModulePrefabs(bool tweening = true)
     {
         for (int e = 0; e < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; e++)
         {
@@ -144,7 +144,7 @@ public class UpgradeModuleManager : MonoBehaviour
                     for (int j = 0; j < playerModuleEquips.Length; j++)
                     {
                         if (playerModuleEquips[j].data.slotType == UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type)
-                            playerModuleEquips[j].EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].GetUpgradeModuleObject(), i);
+                            playerModuleEquips[j].EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].GetUpgradeModuleObject(), i, tweening: tweening);
                     }
                 }
             }
@@ -175,8 +175,8 @@ public class UpgradeModuleManager : MonoBehaviour
         {
             ClearModuleDisplay();
 
-            GenerateInventoryModulePrefabs();
-            GenerateEquipModulePrefabs();
+            GenerateInventoryModulePrefabs(false);
+            GenerateEquipModulePrefabs(false);
         }
 
         upgradeModulePanel.SetActive(!upgradeModulePanel.activeSelf);
@@ -194,19 +194,28 @@ public class UpgradeModuleManager : MonoBehaviour
 
 
         //버튼 활성화 여부 인벤에 있으면 장착 버튼 활성화 장비중이면 장착해제 버튼 활성화
-        if (item.inventory)
+        switch (item.slotType)
         {
-            equipBtn.SetActive(true);
-            equipBtn.GetComponent<Button>().onClick.RemoveAllListeners();
-            equipBtn.GetComponent<Button>().onClick.AddListener(() => EquipModule(item));
-            unequipBtn.SetActive(false);
-        }
-        else if (item.equip)
-        {
-            equipBtn.SetActive(false);
-            unequipBtn.GetComponent<Button>().onClick.RemoveAllListeners();
-            unequipBtn.GetComponent<Button>().onClick.AddListener(() => UnEquipModule(item));
-            unequipBtn.SetActive(true);
+            case ModuleItem.SlotType.inventory:
+                equipBtn.SetActive(true);
+                equipBtn.GetComponent<Button>().onClick.RemoveAllListeners();
+                equipBtn.GetComponent<Button>().onClick.AddListener(() => EquipModule(item));
+                unequipBtn.SetActive(false);
+                break;
+
+            case ModuleItem.SlotType.equip:
+                equipBtn.SetActive(false);
+                unequipBtn.GetComponent<Button>().onClick.RemoveAllListeners();
+                unequipBtn.GetComponent<Button>().onClick.AddListener(() => UnEquipModule(item));
+                unequipBtn.SetActive(true);
+                break;
+
+            default:
+                equipBtn.SetActive(true);
+                equipBtn.GetComponent<Button>().onClick.RemoveAllListeners();
+                equipBtn.GetComponent<Button>().onClick.AddListener(() => EquipModule(item));
+                unequipBtn.SetActive(false);
+                break;
         }
 
         sellBtn.GetComponent<Button>().onClick.RemoveAllListeners();
@@ -424,7 +433,7 @@ public class UpgradeModuleManager : MonoBehaviour
         UserDataManager.instance.currentUserData.moduleInventory.Add(newModule);
 
         var newModuleItem = Instantiate(modulePrefab, playerModuleInventoryParent);
-        newModuleItem.GetComponent<ModuleItem>().InitModule(newModule, inventory: true);
+        newModuleItem.GetComponent<ModuleItem>().InitModule(newModule, ModuleItem.SlotType.inventory);
 
         print("새로운 모듈 획득 : " + newModule.module + " | " + newModule.tier + " | " + newModule.type + " | " + newModule.key);
 
@@ -458,87 +467,36 @@ public class UpgradeModuleManager : MonoBehaviour
     {
         UserDataManager.instance.AddCrystalValue(item.module.GetSellCost());
 
-        if (item.inventory)
+        switch (item.slotType)
         {
-            for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
-            {
-                if (item.module.key == UserDataManager.instance.currentUserData.moduleInventory[i].key)
+            case ModuleItem.SlotType.inventory:
+                for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
                 {
-                    UserDataManager.instance.currentUserData.moduleInventory.RemoveAt(i);
-                    break;
-                }
-            }
-        }
-        else if (item.equip)
-        {
-            foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
-            {
-                if (data.CheckingCurrentEquipModuleData(item.module.type))
-                {
-                    for (int i = 0; i < data.equipedModules.Length; i++)
+                    if (item.module.key == UserDataManager.instance.currentUserData.moduleInventory[i].key)
                     {
-                        if (data.equipedModules[i].key == item.module.key)
-                        {
-                            data.equipedModules[i] = new UpgradeModuleObject();
-                            break;
-                        }
+                        UserDataManager.instance.currentUserData.moduleInventory.RemoveAt(i);
+                        break;
                     }
-
-                    break;
                 }
-            }
+                break;
 
-            // switch (item.module.type)
-            // {
-            //     case UpgradeModuleType.AttackType:
-            //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Attack.Length; i++)
-            //         {
-            //             if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Attack[i].key)
-            //             {
-            //                 UserDataManager.instance.currentUserData.equipedModules_Attack[i] = null;
-            //                 break;
-            //             }
-            //         }
-
-            //         break;
-
-            //     case UpgradeModuleType.DefenceType:
-            //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Defence.Length; i++)
-            //         {
-            //             if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Defence[i].key)
-            //             {
-            //                 UserDataManager.instance.currentUserData.equipedModules_Defence[i] = null;
-            //                 break;
-            //             }
-            //         }
-            //         break;
-
-            //     case UpgradeModuleType.MovementType:
-            //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Movement.Length; i++)
-            //         {
-            //             if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Movement[i].key)
-            //             {
-            //                 UserDataManager.instance.currentUserData.equipedModules_Movement[i] = null;
-            //                 break;
-            //             }
-            //         }
-            //         break;
-
-            //     case UpgradeModuleType.SpecialType:
-            //         for (int i = 0; i < UserDataManager.instance.currentUserData.equipedModules_Special.Length; i++)
-            //         {
-            //             if (item.module.key == UserDataManager.instance.currentUserData.equipedModules_Special[i].key)
-            //             {
-            //                 UserDataManager.instance.currentUserData.equipedModules_Special[i] = null;
-            //                 break;
-            //             }
-            //         }
-            //         break;
-
-            //     default:
-            //         UnityEngine.Debug.LogError("판매할 수 없는 모듈 타입입니다.");
-            //         break;
-            // }
+            case ModuleItem.SlotType.equip:
+                foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
+                {
+                    if (data.CheckingCurrentEquipModuleData(item.module.type))
+                    {
+                        for (int i = 0; i < data.equipedModules.Length; i++)
+                        {
+                            if (data.equipedModules[i].key == item.module.key)
+                            {
+                                data.equipedModules[i] = new UpgradeModuleObject();
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+                break;
         }
 
         Destroy(item.gameObject);
@@ -642,7 +600,7 @@ public class UpgradeModuleManager : MonoBehaviour
             if (moduleUpgrade1.key != module.key && moduleUpgrade1.type == module.type && moduleUpgrade1.tier == module.tier)
             {
                 var slot = Instantiate(modulePrefab, moduleUpgradeInventoryParent).GetComponent<ModuleItem>();
-                slot.InitModule(module);
+                slot.InitModule(module, ModuleItem.SlotType.inventory, tweening: false);
                 slot.moduleUpgradeCoverImage.gameObject.SetActive(true);
             }
         }
