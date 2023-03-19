@@ -97,12 +97,19 @@ public class GameEndPanel : MonoBehaviour
             {
                 var node = Instantiate(modulePrefab, moduleAcquiredListParent);
 
-                node.GetComponentInChildren<ModuleItem>().InitModule(modules.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory);
+                node.GetComponentInChildren<ModuleItem>().InitModule(modules.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, onclick: OpenModuleDetail);
 
                 node.transform.GetChild(0).DOScale(new Vector3(1, 1, 1), 0.7f);
 
                 yield return new WaitForSeconds(0.7f);
             }
         }
+    }
+
+    void OpenModuleDetail(ModuleItem item)
+    {
+        var detail = Resources.Load<GameObject>("UI/ModuleDetail");
+        var obj = Instantiate(detail, GameManager.instance.MainUIParent);
+        obj.GetComponent<ModuleDetailUI>().Init(item);
     }
 }

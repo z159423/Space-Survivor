@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [FoldoutGroup("참조")][SerializeField] private GameObject inGameMenu;
     [FoldoutGroup("참조")][SerializeField] private GameObject MainMenu;
     [FoldoutGroup("참조")][SerializeField] private GameObject DieMenu;
+    [FoldoutGroup("참조")][SerializeField] public Transform MainUIParent;
     [FoldoutGroup("참조")][SerializeField] private GameObject reviveButton;
     [FoldoutGroup("참조")][SerializeField] private GameObject player;
     [FoldoutGroup("참조")][SerializeField] private GameObject hpBar;

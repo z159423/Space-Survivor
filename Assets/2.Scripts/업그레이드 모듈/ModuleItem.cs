@@ -38,13 +38,16 @@ public class ModuleItem : MonoBehaviour
         UpgradeModuleManager.instance.OpenModuleUpgradeDetail(this);
     }
 
-    public void InitModule(IUpgradeModule module, SlotType slotType, bool tweening = true)
+    public void InitModule(IUpgradeModule module, SlotType slotType, bool tweening = true, System.Action<ModuleItem> onclick = null)
     {
         this.module = module;
         this.slotType = slotType;
 
         UpdateImage(tweening);
         UnselectSlot();
+
+        if (onclick != null)
+            GetComponent<Button>().onClick.AddListener(() => onclick.Invoke(this));
     }
 
     public void UpdateImage(bool tweening = true)
