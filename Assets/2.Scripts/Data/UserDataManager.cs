@@ -16,6 +16,8 @@ public class UserDataManager : MonoBehaviour
 
     public UserData currentUserData = new UserData();
 
+    public List<TextMeshProUGUI> crystalTextList = new List<TextMeshProUGUI>();
+
     public delegate void OnChangeCrystalValue();
     public static OnChangeCrystalValue onChangeCrystalValue;
 
@@ -157,6 +159,11 @@ public class UserDataManager : MonoBehaviour
         print(value);
 
         currentUserData.crystal += value;
+
+        foreach (var text in crystalTextList)
+        {
+            text.text = currentUserData.crystal.ToString();
+        }
 
         CrystalDisplay.instance.ChangeCrystalText(currentUserData.crystal);
 

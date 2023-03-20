@@ -836,4 +836,10 @@ public class UpgradeModuleManager : MonoBehaviour
         var find = scriptableObjects.Find(f => f.ID == ID);
         return find?.moduleIcon;
     }
+
+    public void OpenModulePurchaseUI()
+    {
+        var UI = Resources.Load<GameObject>("UI/ModulePurchaseMenu");
+        Instantiate(UI, GameManager.instance.MainUIParent);
+    }
 }
