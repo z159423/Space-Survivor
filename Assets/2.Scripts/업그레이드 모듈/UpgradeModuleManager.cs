@@ -114,6 +114,14 @@ public class UpgradeModuleManager : MonoBehaviour
             GetNewModule(GenerateRandomModule());
     }
 
+    public void UpdateUI()
+    {
+        ClearModuleDisplay();
+
+        GenerateInventoryModulePrefabs(false);
+        GenerateEquipModulePrefabs(false);
+    }
+
     /// <summary>
     /// 게임 시작시 인벤토리 모듈 프리팹 생성
     /// </summary>
@@ -402,11 +410,19 @@ public class UpgradeModuleManager : MonoBehaviour
     /// <summary>
     /// 랜덤 모듈 생성
     /// </summary>
-    public UpgradeModuleObject GenerateRandomModule()
+    public UpgradeModuleObject GenerateRandomModule(int tierNum = -1, int typeNum = -1)
     {
-        UpgradeModules modules = (UpgradeModules)UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(UpgradeModules)).Length);
+        UpgradeModules modules;
+        if (typeNum == -1)
+            modules = (UpgradeModules)UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(UpgradeModules)).Length);
+        else
+            modules = (UpgradeModules)typeNum;
 
-        UpgradeModuleTier tier = (UpgradeModuleTier)(Utility.GetRandomProb(UpgradeModuleTierDropPercent)) + 1;
+        UpgradeModuleTier tier;
+        if (tierNum == -1)
+            tier = (UpgradeModuleTier)(Utility.GetRandomProb(UpgradeModuleTierDropPercent)) + 1;
+        else
+            tier = (UpgradeModuleTier)tierNum;
 
         UpgradeModuleObject moduleObject = null;
 
