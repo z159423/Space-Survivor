@@ -667,6 +667,18 @@ public class UpgradeModuleManager : MonoBehaviour
             return;
         }
 
+        //모듈 합성 UI 생성하고 에니메이션 시작
+        var upgradeUIPrefab = Resources.Load<GameObject>("UI/ModuleUpgradeUI");
+
+        var upgradeUI = Instantiate(upgradeUIPrefab, GameManager.instance.MainUIParent);
+
+        List<UpgradeModuleObject> moduleList = new List<UpgradeModuleObject>();
+        moduleList.Add(moduleUpgrade1);
+        moduleList.Add(moduleUpgrade2);
+        moduleList.Add(moduleUpgrade3);
+
+        upgradeUI.GetComponentInChildren<ModuleUpgradeUI>().StartUpgrade(moduleList);
+
         moduleUpgrade1.TierUpThisModule();
         DeleteModule(moduleUpgrade2);
         DeleteModule(moduleUpgrade3);

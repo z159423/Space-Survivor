@@ -11,7 +11,7 @@ public class ModuleUnboxingUI : MonoBehaviour
     [SerializeField] RectTransform moduleLayoutRect;
     [SerializeField] RectTransform trans1;
 
-    [SerializeField] Button confirmBtn;
+    [SerializeField] ConfirmBtn confirmBtn;
 
     // List<GameObject> moduleObjects = new List<GameObject>();
 
@@ -41,7 +41,7 @@ public class ModuleUnboxingUI : MonoBehaviour
             {
                 GameObject module = Instantiate(modulePrefab, moduleLayoutParent);
 
-                module.GetComponentInChildren<ModuleItem>().InitModule(obj.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, onclick: OpenModuleDetail);
+                module.GetComponentInChildren<ModuleItem>().InitModule(obj.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, onclick: ModuleItem.OpenModuleDetail);
 
                 module.transform.GetChild(0).DOScale(new Vector3(1, 1, 1), 0.7f);
 
@@ -49,17 +49,9 @@ public class ModuleUnboxingUI : MonoBehaviour
             }
 
             UpgradeModuleManager.instance.UpdateUI();
-            confirmBtn.GetComponent<CanvasGroup>().DOFade(1f, 1f).OnComplete(() => confirmBtn.enabled = true);
+            confirmBtn.Show();
         }
     }
-
-    void OpenModuleDetail(ModuleItem item)
-    {
-        var detail = Resources.Load<GameObject>("UI/ModuleDetail");
-        var obj = Instantiate(detail, GameManager.instance.MainUIParent);
-        obj.GetComponent<ModuleDetailUI>().Init(item);
-    }
-
 
     public void Confirm()
     {

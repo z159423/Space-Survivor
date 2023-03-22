@@ -96,4 +96,11 @@ public class ModuleItem : MonoBehaviour
                 break;
         }
     }
+
+    public static void OpenModuleDetail(ModuleItem item)
+    {
+        var detail = Resources.Load<GameObject>("UI/ModuleDetail");
+        var obj = Instantiate(detail, GameManager.instance.MainUIParent);
+        obj.GetComponent<ModuleDetailUI>().Init(item);
+    }
 }
