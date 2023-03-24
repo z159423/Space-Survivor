@@ -127,6 +127,14 @@ MonoBehaviour:
     m_Key: Unlock
     m_Metadata:
       m_Items: []
+  - m_Id: 106873287148593152
+    m_Key: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107227100481085440
+    m_Key: AcquireNewModule
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

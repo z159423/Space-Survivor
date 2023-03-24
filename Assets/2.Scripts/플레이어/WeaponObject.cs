@@ -112,7 +112,7 @@ public class WeaponObject : ScriptableObject, IEquipment
                 yield return new WaitForSecondsRealtime(firingInterval.GetFinalStatValue());
 
             if (fireSFX != "")
-                AudioManager.instance.GenerateAudioAndPlaySFX(fireSFX, firepos.position);
+                AudioManager.instance.GenerateAudioAndPlaySFX(fireSFX, firepos.position, Random.Range(0.8f, 1.2f));
 
         }
 

@@ -353,7 +353,7 @@ MonoBehaviour:
   coverImage: {fileID: 6549564607189259287}
   <moduleUpgradeCoverImage>k__BackingField: {fileID: 3850279810291307250}
   slotType: 0
-  defaultColor_equip: {r: 0.3882353, g: 0.36862746, b: 0.4627451, a: 1}
+  defaultColor_equip: {r: 0.3882353, g: 0.36862746, b: 0.4627451, a: 0}
   defaultColor_inventory: {r: 0.54680085, g: 0.5293254, b: 0.6132076, a: 1}
   selectedColor: {r: 0.8193292, g: 0.8301887, b: 0.58348167, a: 1}
 --- !u!114 &5746123548853520778

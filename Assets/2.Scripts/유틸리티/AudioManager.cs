@@ -112,7 +112,7 @@ public class AudioManager : MonoBehaviour
         PlayBGM(s);
     }
 
-    public void PlaySFX(string name)
+    public void PlaySFX(string name, float pitch = 1f)
     {
 
         Sound s = Array.Find(SFX, sound => sound.name == name);
@@ -120,7 +120,7 @@ public class AudioManager : MonoBehaviour
         SFXaudioSource.clip = s.clip;
 
         SFXaudioSource.volume = s.volume;
-        SFXaudioSource.pitch = s.pitch;
+        SFXaudioSource.pitch = pitch;
         SFXaudioSource.loop = s.loop;
         SFXaudioSource.outputAudioMixerGroup = s.audioMixerGroup;
         SFXaudioSource.time = s.time;
@@ -156,7 +156,7 @@ public class AudioManager : MonoBehaviour
         audio.Play();
     }
 
-    public AudioSource GenerateAudioAndPlaySFX(string name, Vector3 position)
+    public AudioSource GenerateAudioAndPlaySFX(string name, Vector3 position, float pitch = 1f)
     {
         Sound s = Array.Find(SFX, sound => sound.name == name);
 
@@ -210,7 +210,7 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = s.clip;
 
         audioSource.volume = s.volume;
-        audioSource.pitch = s.pitch;
+        audioSource.pitch = pitch;
         audioSource.loop = s.loop;
         audioSource.outputAudioMixerGroup = s.audioMixerGroup;
         audioSource.time = s.time;
