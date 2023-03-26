@@ -32,6 +32,10 @@ public class ModuleItem : MonoBehaviour
 
     private Sequence sequence;
 
+    private void Start()
+    {
+        GetComponent<Button>().onClick.AddListener(() => AudioManager.instance.PlaySFX("click2"));
+    }
 
     public void OnClickThisModule()
     {

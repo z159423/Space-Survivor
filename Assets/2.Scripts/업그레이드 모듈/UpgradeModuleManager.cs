@@ -557,8 +557,8 @@ public class UpgradeModuleManager : MonoBehaviour
             Destroy(items[i].gameObject);
         }
 
-        GenerateInventoryModulePrefabs();
-        GenerateEquipModulePrefabs();
+        GenerateInventoryModulePrefabs(false);
+        GenerateEquipModulePrefabs(false);
 
         SwapModeOff();
     }

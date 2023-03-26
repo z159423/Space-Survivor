@@ -32,12 +32,22 @@ public class ModulePurchaseUI : MonoBehaviour
 
     public void CloseUI()
     {
+        AudioManager.instance.PlaySFX("click2");
         Destroy(gameObject);
     }
 
     public void CallFreeModuleRVAds()
     {
+        IEnumerator reward_()
+        {
+            yield return null;
 
+            UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule());
+        }
+
+        RewardedInterstitialAdCaller.ShowRv(reward_());
+        // RewardedInterstitialAdCaller.instance.CallRV(() => { UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule()); });
+        AudioManager.instance.PlaySFX("click2");
     }
 
     public void PurchaseOneModule()
@@ -53,6 +63,8 @@ public class ModulePurchaseUI : MonoBehaviour
 
         newModules.Add(newModule);
         UserDataManager.instance.currentUserData.moduleInventory.Add(newModule);
+
+        AudioManager.instance.PlaySFX("click2");
 
         OpenModuleBoxUnboxingUI(newModules);
     }
@@ -72,6 +84,8 @@ public class ModulePurchaseUI : MonoBehaviour
             UserDataManager.instance.currentUserData.moduleInventory.Add(newModule);
             newModules.Add(newModule);
         }
+
+        AudioManager.instance.PlaySFX("click2");
 
         OpenModuleBoxUnboxingUI(newModules);
     }
