@@ -86,7 +86,7 @@ public class ModulePurchaseUI : MonoBehaviour
             UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule());
         }
 
-        RewardedInterstitialAdCaller.ShowRv(reward_());
+        RewardedInterstitialAdCaller.CallRV(reward_());
         // RewardedInterstitialAdCaller.instance.CallRV(() => { UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule()); });
         AudioManager.instance.PlaySFX("click2");
     }

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [FoldoutGroup("참조")][SerializeField] private GameObject inGameMenu;
     [FoldoutGroup("참조")][SerializeField] private GameObject MainMenu;
     [FoldoutGroup("참조")][SerializeField] private GameObject DieMenu;
+    [FoldoutGroup("참조")][SerializeField] private Image dieBackground;
     [FoldoutGroup("참조")][SerializeField] public Transform MainUIParent;
     [FoldoutGroup("참조")][SerializeField] private GameObject reviveButton;
     [FoldoutGroup("참조")][SerializeField] private GameObject player;
@@ -244,6 +245,10 @@ public class GameManager : MonoBehaviour
 
         //getCrystalCountText.text = playerStat.currentCrystal.ToString();
         //killCountText.text = currentKillCount.ToString();
+
+        dieBackground.color = new Color32(0, 0, 0, 0);
+
+        dieBackground.DOColor(new Color32(0, 0, 0, 200), 1.5f);
 
         DieMenu.SetActive(true);
 

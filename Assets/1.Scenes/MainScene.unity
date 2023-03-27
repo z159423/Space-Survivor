@@ -2524,7 +2524,7 @@ RectTransform:
   - {fileID: 386103082}
   - {fileID: 496285427}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -7553,7 +7553,7 @@ RectTransform:
   - {fileID: 1502301488}
   - {fileID: 1453287051}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8097,6 +8097,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &211638071
@@ -10273,7 +10285,7 @@ RectTransform:
   - {fileID: 914177790}
   - {fileID: 2037661752}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -10744,6 +10756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283034958}
+  - component: {fileID: 283034960}
   m_Layer: 5
   m_Name: GameEndMenu
   m_TagString: Untagged
@@ -10774,6 +10787,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &283034960
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283034957}
+  m_CullTransparentMesh: 1
 --- !u!1 &287002763
 GameObject:
   m_ObjectHideFlags: 0
@@ -11928,7 +11949,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1278124779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &332553449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13724,6 +13757,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &390071484
@@ -16999,7 +17044,7 @@ RectTransform:
   - {fileID: 823602351}
   - {fileID: 2042339184}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -21221,7 +21266,7 @@ RectTransform:
   m_Children:
   - {fileID: 1771391489}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -23678,6 +23723,7 @@ MonoBehaviour:
     playerHaveShip: []
     usingShipTrialTime: 
     usingFreeCrystalTime: 
+    usingFreeModuleTime: 2000-01-01 01:01:01
     version: 
     clearedStageNumber: 
     equipModuleSaveDatas: []
@@ -24505,7 +24551,7 @@ RectTransform:
   m_Children:
   - {fileID: 2112506517}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -30984,7 +31030,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1191666596}
         m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: WatchRewardAds_Crytal
+        m_MethodName: CallRV_FreeCrystal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31369,6 +31415,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900682418}
+  - component: {fileID: 900682420}
+  - component: {fileID: 900682419}
   m_Layer: 5
   m_Name: DieMenu
   m_TagString: Untagged
@@ -31398,6 +31446,44 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &900682419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900682417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &900682420
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900682417}
+  m_CullTransparentMesh: 1
 --- !u!1 &902643107
 GameObject:
   m_ObjectHideFlags: 0
@@ -32064,7 +32150,7 @@ RectTransform:
   - {fileID: 546486587}
   - {fileID: 2043300932}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -32294,7 +32380,7 @@ RectTransform:
   - {fileID: 504208129}
   - {fileID: 55838353}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -40561,7 +40647,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:3c3b68b6e5ac0b8419a9da0f55f3ad36
     m_TableEntryReference:
-      m_KeyId: 5560793772748800
+      m_KeyId: 69195824821387264
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -45170,7 +45256,7 @@ RectTransform:
   - {fileID: 855492114}
   - {fileID: 1451862063}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -48804,6 +48890,7 @@ MonoBehaviour:
   crystalValue: 100
   freeCrystalWaitTime: 1800
   shipTrialWaitTime: 1800
+  freeModuleWaitTime: 1800
   freeCrystalButtonImage: {fileID: 1814950713}
   freeCrystalButtonTimeText: {fileID: 1788092323}
   trialShipButtonImage: {fileID: 1002249655}
@@ -51291,7 +51378,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1199098571}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1255758214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62379,7 +62478,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1093739107}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: upgrade2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1529622489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67367,7 +67478,7 @@ RectTransform:
   - {fileID: 1116958679}
   - {fileID: 1505507276}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -69034,7 +69145,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1191666596}
         m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: WatchRewardAds_GetAllUpgrade
+        m_MethodName: CallRV_GetAllUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -71737,7 +71848,7 @@ RectTransform:
   m_Children:
   - {fileID: 126512202}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -72427,7 +72538,7 @@ RectTransform:
   - {fileID: 1046820199}
   - {fileID: 1733706372}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -72580,7 +72691,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1191666596}
         m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: WatchRewardAds_CrystalDouble
+        m_MethodName: CallRV_CrystalDouble
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -73442,7 +73553,7 @@ GameObject:
   - component: {fileID: 1810399678}
   - component: {fileID: 1810399677}
   m_Layer: 5
-  m_Name: ResurrectionButton
+  m_Name: ReviveBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73516,7 +73627,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1191666596}
         m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: WatchRewardAds_Revive
+        m_MethodName: CallRV_Revive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76984,7 +77095,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1191666596}
         m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: WatchRewardAds_TrialShip
+        m_MethodName: CallRV_TrialShip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -79953,7 +80064,7 @@ RectTransform:
   m_Children:
   - {fileID: 1505305683}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 15
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -81551,6 +81662,7 @@ MonoBehaviour:
   inGameMenu: {fileID: 892070941}
   MainMenu: {fileID: 686373052}
   DieMenu: {fileID: 900682417}
+  dieBackground: {fileID: 900682419}
   MainUIParent: {fileID: 1625381616}
   reviveButton: {fileID: 1810399675}
   player: {fileID: 923141300}
@@ -84114,7 +84226,7 @@ RectTransform:
   m_Children:
   - {fileID: 817613852}
   m_Father: {fileID: 2134726392}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -84478,7 +84590,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2084521636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455768191}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: upgrade1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2084521636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86718,7 +86842,7 @@ GameObject:
   - component: {fileID: 2134726394}
   - component: {fileID: 2134726393}
   m_Layer: 5
-  m_Name: UpgradeModules
+  m_Name: UpgradeModulesUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86738,6 +86862,7 @@ RectTransform:
   m_Children:
   - {fileID: 424906168}
   - {fileID: 1451115790}
+  - {fileID: 1944714140}
   - {fileID: 56458584}
   - {fileID: 275574996}
   - {fileID: 1681079264}
@@ -86751,7 +86876,6 @@ RectTransform:
   - {fileID: 1786047484}
   - {fileID: 470080004}
   - {fileID: 913945770}
-  - {fileID: 1944714140}
   m_Father: {fileID: 686373053}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

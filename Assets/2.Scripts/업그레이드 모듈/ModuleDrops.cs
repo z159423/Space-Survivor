@@ -18,6 +18,8 @@ public class ModuleDrops : MonoBehaviour
             UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage.Add(module);
             UpgradeModuleDropManager.instance.moduleDropsPool.EnqueueObject(gameObject);
             AlterManager.Instance.GenerateNewModuleAlter(module);
+
+            AudioManager.instance.PlaySFX("upgrade3");
         }
     }
 

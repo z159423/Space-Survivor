@@ -32,7 +32,7 @@ public class GameEndPanel : MonoBehaviour
     {
         RewardedInterstitialAdCaller.instance.crystalBonusRVBtn = crystalBonusRVBtn;
 
-        crystalBonusRVBtn.GetComponentInChildren<Button>().onClick.AddListener(() => RewardedInterstitialAdCaller.instance.WatchRewardAds_CrystalDouble());
+        crystalBonusRVBtn.GetComponentInChildren<Button>().onClick.AddListener(() => RewardedInterstitialAdCaller.instance.CallRV_CrystalDouble());
     }
 
     public void StartEndMenuAnimation(bool die)
