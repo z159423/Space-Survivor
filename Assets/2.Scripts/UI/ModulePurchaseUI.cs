@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 
 public class ModulePurchaseUI : MonoBehaviour
@@ -16,6 +17,41 @@ public class ModulePurchaseUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI oneModuleCostText;
     [SerializeField] TextMeshProUGUI tenModuleCostText;
 
+    [SerializeField] Button freeModuleButton;
+    [SerializeField] Image freeModuleButtonImage;
+
+    [SerializeField] Text freeModuleLeftTime;
+
+    Coroutine timeCheck = null;
+
+    private void Start()
+    {
+        timeCheck = StartCoroutine(FreeModuleTimeChecking());
+
+        IEnumerator FreeModuleTimeChecking()
+        {
+            while (true)
+            {
+                if (RewardedInterstitialAdCaller.instance.IsFreeModuleReady())
+                {
+                    freeModuleButton.enabled = true;
+                    freeModuleButtonImage.gameObject.SetActive(true);
+                    freeModuleLeftTime.gameObject.SetActive(false);
+                }
+                else
+                {
+                    freeModuleButton.enabled = false;
+                    freeModuleButtonImage.gameObject.SetActive(false);
+                    freeModuleLeftTime.text = Utility.GetFormatedStringFromSecond((int)RewardedInterstitialAdCaller.instance.GetFreeModuleLeftTime());
+                    freeModuleLeftTime.gameObject.SetActive(true);
+                }
+
+                yield return new WaitForSeconds(1f);
+            }
+
+        }
+    }
+
     private void OnEnable()
     {
         UserDataManager.instance.crystalTextList.Add(crystalText);
@@ -28,6 +64,9 @@ public class ModulePurchaseUI : MonoBehaviour
     private void OnDestroy()
     {
         UserDataManager.instance.crystalTextList.Remove(crystalText);
+
+        if (timeCheck != null)
+            StopCoroutine(timeCheck);
     }
 
     public void CloseUI()
@@ -41,6 +80,8 @@ public class ModulePurchaseUI : MonoBehaviour
         IEnumerator reward_()
         {
             yield return null;
+
+            UserDataManager.instance.currentUserData.usingFreeModuleTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
 
             UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule());
         }

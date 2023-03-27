@@ -16,6 +16,7 @@ public class UserData
 
     public string usingShipTrialTime = "2000-01-01 01:01:01";
     public string usingFreeCrystalTime = "2000-01-01 01:01:01";
+    public string usingFreeModuleTime = "2000-01-01 01:01:01";
 
     public string version;
 

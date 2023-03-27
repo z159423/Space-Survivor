@@ -45,6 +45,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public int crystalValue = 25;
     [SerializeField] private int freeCrystalWaitTime = 1800;
     [SerializeField] private int shipTrialWaitTime = 1800;
+    [SerializeField] private int freeModuleWaitTime = 1800;
+
 
     [Space]
     [SerializeField] private GameObject freeCrystalButtonImage;
@@ -808,7 +810,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     //함선 체험 보상획득
     IEnumerator startTrial()
     {
-        UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"); ;
+        UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         //UserDataManager.instance.SaveCurrentDate();
         GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
@@ -918,6 +920,31 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
     }
 
+    public bool IsFreeModuleReady()
+    {
+        try
+        {
+            double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeModuleTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+
+            //print(timeDiff + " " + freeCrystalWaitTime);
+            if (timeDiff < freeCrystalWaitTime)
+                return false;
+            else
+                return true;
+
+        }
+        catch (FormatException e)
+        {
+            Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingFreeModuleTime + " / " + e);
+
+            UserDataManager.instance.currentUserData.usingFreeModuleTime = "2000-01-01 01:01:01";
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+
+            return true;
+        }
+    }
+
     public double GetFreeCrystalLeftTime()
     {
         try
@@ -955,6 +982,27 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
 
             return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        }
+    }
+
+
+    public double GetFreeModuleLeftTime()
+    {
+        try
+        {
+            return freeModuleWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeModuleTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
+        }
+        catch (FormatException e)
+        {
+            FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+
+            Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingFreeModuleTime + " / " + e);
+
+            UserDataManager.instance.currentUserData.usingFreeModuleTime = "2000-01-01 01:01:01";
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+
+            return freeModuleWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeModuleTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
         }
     }
 
@@ -1106,7 +1154,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             }
 
             rewardedAd.Show();
-
         }
         else
         {
