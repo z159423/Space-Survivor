@@ -143,6 +143,30 @@ MonoBehaviour:
     m_Key: Upgrade
     m_Metadata:
       m_Items: []
+  - m_Id: 24998841886990336
+    m_Key: 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24998845024329728
+    m_Key: 6_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24998924825157632
+    m_Key: 6_Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24999737446391808
+    m_Key: 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24999753854509056
+    m_Key: 7_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24999754382991360
+    m_Key: 7_Stat
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

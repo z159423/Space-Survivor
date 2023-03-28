@@ -15,8 +15,8 @@ public class AlterManager : SingletonStatic<AlterManager>
 
         alter.GetComponentInChildren<ModuleItem>().InitModule(newModule, ModuleItem.SlotType.equip);
 
-        alter.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
-        alter.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
+        alter.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 1f);
+        alter.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 1f);
 
         var seq = DOTween.Sequence().SetUpdate(true);
         seq.Join(alter.GetComponent<RectTransform>().DOAnchorPosX(0, 1f).SetEase(Ease.OutCubic).OnStart(() => { }));

@@ -38,8 +38,8 @@ public interface IUpgradeModule
 
 }
 
-public enum UpgradeModuleType {None = 0, AttackType = 1, DefenceType = 2, MovementType = 3, SpecialType = 4 }
+public enum UpgradeModuleType { None = 0, AttackType = 1, DefenceType = 2, MovementType = 3, SpecialType = 4 }
 
-public enum UpgradeModules {None = 0, DamageUp = 1, ArmorUp = 2, MovespeedUp = 3, FirerateUp = 4, MaxHpUp = 5 }
+public enum UpgradeModules { None = 0, DamageUp = 1, ArmorUp = 2, MovespeedUp = 3, FirerateUp = 4, MaxHpUp = 5, StartMineral, MagnetRangeUp = 7 }
 
-public enum UpgradeModuleTier {None = 0, Normal = 1, Magic = 2, Rare = 3, Unique = 4, Legendary = 5 }
+public enum UpgradeModuleTier { None = 0, Normal = 1, Magic = 2, Rare = 3, Unique = 4, Legendary = 5 }

@@ -16436,6 +16436,19 @@ MonoBehaviour:
     limitPlayCount: 0
     playList: []
     useableAudioSource: {fileID: 0}
+  - name: ModuleUnboxing
+    clip: {fileID: 8300000, guid: 9b9946254e4d0744e915efa3c6fd8efc, type: 3}
+    volume: 0.508
+    pitch: 1
+    time: 0.1
+    loop: 0
+    bgm: 0
+    audioMixerGroup: {fileID: 24300002, guid: b37dfce959703924da227539ce93bd54, type: 2}
+    source: {fileID: 0}
+    useOneAudioSource: 1
+    limitPlayCount: 0
+    playList: []
+    useableAudioSource: {fileID: 0}
   SFXPrefab: {fileID: 924167434}
   audioPool:
     objectPrefabs: {fileID: 357228789322597588, guid: 4c9b53a7ae0392d4181ba68801d83ae6, type: 3}
@@ -38000,6 +38013,22 @@ MonoBehaviour:
     FloatModifiers: []
     PercentModifiers: []
   <module_HpRepair>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_MagnetRange>k__BackingField:
+    baseValue: 0
+    minValue: 0
+    MinValue: 0
+    maxValue: 0
+    MaxValue: 1000
+    FloatModifiers: []
+    PercentModifiers: []
+  <module_StartMineral>k__BackingField:
     baseValue: 0
     minValue: 0
     MinValue: 0
@@ -80316,6 +80345,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a4847b41425602478e2046f1376988c, type: 2}
   - {fileID: 11400000, guid: a55ab26e5a4b4f14ea45c33c58a2aeab, type: 2}
   - {fileID: 11400000, guid: e00e5e4196df03a46b8be40481acde5d, type: 2}
+  - {fileID: 11400000, guid: 8dd4f15f1f3846b40adab8e27c12f3be, type: 2}
+  - {fileID: 11400000, guid: 42f30f4daf1d3b04199e713938e52972, type: 2}
 --- !u!1 &1957857845
 GameObject:
   m_ObjectHideFlags: 0

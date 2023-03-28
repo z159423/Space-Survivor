@@ -83,7 +83,12 @@ public class ModulePurchaseUI : MonoBehaviour
 
             UserDataManager.instance.currentUserData.usingFreeModuleTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
 
-            UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule());
+            var newModule = UpgradeModuleManager.instance.GenerateRandomModule();
+
+            UpgradeModuleManager.instance.GetNewModule(newModule);
+            List<UpgradeModuleObject> newModules = new List<UpgradeModuleObject>();
+            newModules.Add(newModule);
+            OpenModuleBoxUnboxingUI(newModules, TextAnchor.MiddleCenter);
         }
 
         RewardedInterstitialAdCaller.CallRV(reward_());
@@ -107,7 +112,7 @@ public class ModulePurchaseUI : MonoBehaviour
 
         AudioManager.instance.PlaySFX("click2");
 
-        OpenModuleBoxUnboxingUI(newModules);
+        OpenModuleBoxUnboxingUI(newModules, TextAnchor.MiddleCenter);
     }
 
     public void PurchaseTenModule()
@@ -128,15 +133,15 @@ public class ModulePurchaseUI : MonoBehaviour
 
         AudioManager.instance.PlaySFX("click2");
 
-        OpenModuleBoxUnboxingUI(newModules);
+        OpenModuleBoxUnboxingUI(newModules, TextAnchor.UpperLeft);
     }
 
-    public void OpenModuleBoxUnboxingUI(List<UpgradeModuleObject> modules)
+    public void OpenModuleBoxUnboxingUI(List<UpgradeModuleObject> modules, TextAnchor anchor)
     {
         var ui = Resources.Load<GameObject>("UI/GainModues");
         var obj = Instantiate(ui, GameManager.instance.MainUIParent);
 
-        obj.GetComponent<ModuleUnboxingUI>().Init(modules);
+        obj.GetComponent<ModuleUnboxingUI>().Init(modules, anchor);
     }
 
 }

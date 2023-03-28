@@ -232,6 +232,8 @@ public class UpgradeModuleManager : MonoBehaviour
         detail_SlotCover.sprite = GetUpgradeModuleCover(item.module.tier);
         detail_ModuleImage.sprite = GetUpgradeModuleImage((int)item.module.module);
 
+        ModuleItem.SetModuleImageColor(detail_ModuleImage, item.module.type);
+
         var scriptableObjects = Resources.LoadAll<UpgradeModuleScripableObject>("UpgradeModules").ToList();
         var find = scriptableObjects.Find(f => f.ID == (int)item.module.module);
 
@@ -600,6 +602,8 @@ public class UpgradeModuleManager : MonoBehaviour
 
         moduleUpgrade1Cover.sprite = GetUpgradeModuleCover(selectedModule.tier);
 
+        ModuleItem.SetModuleImageColor(moduleUpgrade1Image, selectedModule.type);
+
         ActiveModuleUpgradePanel();
         GenerateModuleUpgradeInventory();
     }
@@ -795,6 +799,8 @@ public class UpgradeModuleManager : MonoBehaviour
 
             moduleUpgrade2Cover.enabled = true;
 
+            ModuleItem.SetModuleImageColor(moduleUpgrade2Image, item.module.type);
+
             fillSelectedSlot();
             return true;
         }
@@ -811,6 +817,8 @@ public class UpgradeModuleManager : MonoBehaviour
             moduleUpgrade3Image.sprite = GetUpgradeModuleImage((int)item.module.module);
 
             moduleUpgrade3Cover.enabled = true;
+
+            ModuleItem.SetModuleImageColor(moduleUpgrade3Image, item.module.type);
 
             fillSelectedSlot();
             return true;

@@ -32,6 +32,8 @@ public class ModuleItem : MonoBehaviour
 
     private Sequence sequence;
 
+    public static readonly Color32 Color_specialModule = new Color32(224, 168, 71, 255);
+
     private void Start()
     {
         GetComponent<Button>().onClick.AddListener(() => AudioManager.instance.PlaySFX("click2"));
@@ -52,6 +54,8 @@ public class ModuleItem : MonoBehaviour
 
         if (onclick != null)
             GetComponent<Button>().onClick.AddListener(() => onclick.Invoke(this));
+
+        SetModuleImageColor(moduleImage, module.type);
     }
 
     public void UpdateImage(bool tweening = true)
@@ -106,5 +110,20 @@ public class ModuleItem : MonoBehaviour
         var detail = Resources.Load<GameObject>("UI/ModuleDetail");
         var obj = Instantiate(detail, GameManager.instance.MainUIParent);
         obj.GetComponent<ModuleDetailUI>().Init(item);
+    }
+
+    public static void SetModuleImageColor(Image image, UpgradeModuleType type)
+    {
+        switch (type)
+        {
+            case UpgradeModuleType.SpecialType:
+                image.color = Color_specialModule;
+                break;
+
+            default:
+                image.color = Color.white;
+                break;
+
+        }
     }
 }

@@ -15,7 +15,7 @@ public class ModuleUnboxingUI : MonoBehaviour
 
     // List<GameObject> moduleObjects = new List<GameObject>();
 
-    public void Init(List<UpgradeModuleObject> modules)
+    public void Init(List<UpgradeModuleObject> modules, TextAnchor anchor)
     {
         if (modules.Count == 1)
             GetComponentInChildren<GridLayoutGroup>().cellSize = new Vector2(170, 170);
@@ -27,6 +27,9 @@ public class ModuleUnboxingUI : MonoBehaviour
             moduleLayoutRect.pivot = new Vector2(0.5f, 0.5f);
             moduleLayoutRect.DOAnchorPos(trans1.anchoredPosition, 1f).OnComplete(() => StartUnboxingModules(modules));
         });
+
+        moduleLayoutParent.GetComponent<GridLayoutGroup>().childAlignment = anchor;
+
     }
 
     void StartUnboxingModules(List<UpgradeModuleObject> modules)
@@ -44,6 +47,8 @@ public class ModuleUnboxingUI : MonoBehaviour
                 module.GetComponentInChildren<ModuleItem>().InitModule(obj.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, onclick: ModuleItem.OpenModuleDetail);
 
                 module.transform.GetChild(0).DOScale(new Vector3(1, 1, 1), 0.7f);
+
+                AudioManager.instance.GenerateAudioAndPlaySFX("ModuleUnboxing", Vector3.zero, Random.Range(0.8f, 1.2f));
 
                 yield return new WaitForSeconds(0.7f);
             }

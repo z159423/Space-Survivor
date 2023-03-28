@@ -304,6 +304,8 @@ public class PlayerStat : MonoBehaviour
         playerDie = false;
 
         hpBar.SetState(currentHp, maxHp);
+
+        resourcePullCollider.radius = 40f + playerUpgradeModule.module_MagnetRange.GetFinalStatValue();
     }
 
     public void MakeThisShip(ShipObject ship, Quaternion bodyrotation)

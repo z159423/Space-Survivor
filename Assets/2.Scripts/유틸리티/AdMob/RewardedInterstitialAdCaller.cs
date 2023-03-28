@@ -92,12 +92,14 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public void CallRV_FreeCrystal()
     {
-        CallRV(getFreeCrystal());
+        if (IsFreeCrystalReady())
+            CallRV(getFreeCrystal());
     }
 
     public void CallRV_TrialShip()
     {
-        CallRV(startTrial());
+        if (IsShipTrialReady())
+            CallRV(startTrial());
     }
 
     public void CallRV_Revive()
@@ -112,7 +114,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public void CallRV_GetAllUpgrade()
     {
-        CallRV(getAllUpgrade());
+        if (IsFreeModuleReady())
+            CallRV(getAllUpgrade());
     }
 
     //크리스탈 획득 리워드 광고 호출

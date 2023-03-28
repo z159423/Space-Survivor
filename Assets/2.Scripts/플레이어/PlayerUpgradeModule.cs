@@ -26,6 +26,9 @@ public class PlayerUpgradeModule : MonoBehaviour
     [field: SerializeField] public Stat module_MaxHp { get; private set; } = new Stat();
     [field: SerializeField] public Stat module_Armor { get; private set; } = new Stat();
     [field: SerializeField] public Stat module_HpRepair { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_MagnetRange { get; private set; } = new Stat();
+    [field: SerializeField] public Stat module_StartMineral { get; private set; } = new Stat();
+
 
     /// <sumamry>
     /// 현재 장착중인 모듈을 게임 시작할때 스탯에 적용함
@@ -59,6 +62,8 @@ public class PlayerUpgradeModule : MonoBehaviour
         module_RotationSpeed.ClearAllModifier();
         module_Armor.ClearAllModifier();
         module_HpRepair.ClearAllModifier();
+        module_MagnetRange.ClearAllModifier();
+        module_StartMineral.ClearAllModifier();
     }
 
     /// <summary>
@@ -75,6 +80,21 @@ public class PlayerUpgradeModule : MonoBehaviour
     public void SellModule()
     {
         RefreshInventory();
+    }
+
+    public void StartMineral()
+    {
+        var tempTable = new DropTable();
+
+        tempTable.crystalType = resourceType.Mineral1;
+
+        tempTable.dropExpMinAmount = 1;
+        tempTable.dropCrystalmaxAmount = 1;
+
+        for (int i = 0; i < module_StartMineral.GetFinalStatValue(); i++)
+        {
+            ResourceGenerator.instance.DeQueueResource(resourceType.Mineral1, new Vector2(transform.position.x, transform.position.y) + Random.insideUnitCircle * 5, tempTable);
+        }
     }
 }
 

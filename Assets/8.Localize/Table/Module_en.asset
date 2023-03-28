@@ -142,6 +142,30 @@ MonoBehaviour:
     m_Localized: Max Hp Up Module
     m_Metadata:
       m_Items: []
+  - m_Id: 24998845024329728
+    m_Localized: Wealthy Start Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24998841886990336
+    m_Localized: Mineral Bonus on Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24998924825157632
+    m_Localized: Mineral Bonus on Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24999737446391808
+    m_Localized: Increase Magnet Range [ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24999753854509056
+    m_Localized: Magnet Range Up Module
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24999754382991360
+    m_Localized: Magnet Range +[ST_VALUE1]
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

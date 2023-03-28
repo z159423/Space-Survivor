@@ -123,7 +123,6 @@ public class GameManager : MonoBehaviour
         if (playerWeapon.playerShipData == null)
             playerWeapon.playerShipData = shipList.GetShipObject(currentShip.shipObjectData.shipCode).shipObjectData;
 
-        PlayGameEvent.Invoke();
 
         inGameMenu.SetActive(true);
         MainMenu.SetActive(false);
@@ -168,6 +167,9 @@ public class GameManager : MonoBehaviour
         playerUpgradeModule.AddUpgradeModulesToPlayerStat();
 
         Firebase.Analytics.FirebaseAnalytics.LogEvent("StageStart", "StageName", EnemyGenerator.instance.currentEnemySpawnWaveObject.name);
+
+        playerUpgradeModule.StartMineral();
+        PlayGameEvent.Invoke();
     }
 
     public void ReplayGame()
