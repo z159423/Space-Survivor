@@ -105,6 +105,9 @@ public class UpgradeModuleEquipment : MonoBehaviour
 
                 moduleEquipStats[i].InitModuleStat(moduleObject);
 
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_EquipModule");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_EquipModule_tier : " + module.module.tier);
+
                 return true;
             }
         }

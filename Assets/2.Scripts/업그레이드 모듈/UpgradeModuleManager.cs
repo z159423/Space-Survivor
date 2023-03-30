@@ -386,6 +386,9 @@ public class UpgradeModuleManager : MonoBehaviour
     {
         GetNewModule(module.module.GetUpgradeModuleObject());
 
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule_tier : " + module.module.tier);
+
         // foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
         // {
         //     if (data.CheckingCurrentEquipModuleData(module.module.type))
@@ -517,6 +520,8 @@ public class UpgradeModuleManager : MonoBehaviour
                 break;
         }
 
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_SellModule");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_SellModule_tier : " + item.module.tier);
         Destroy(item.gameObject);
 
         ActiveModuleSellPanel();
@@ -696,6 +701,8 @@ public class UpgradeModuleManager : MonoBehaviour
 
         ActiveModuleUpgradePanel();
         ActiveModuleDetailPanel();
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade_tier : " + moduleUpgrade1.tier);
     }
 
     ///<summary>

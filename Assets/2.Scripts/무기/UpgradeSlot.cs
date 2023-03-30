@@ -172,5 +172,18 @@ public class UpgradeSlot : MonoBehaviour
         LevelUpManager.instance.SelectUpgrade(weaponObject);
 
         AudioManager.instance.PlaySFX("upgrade1");
+
+        switch (weaponObject.GetAnyEqupment())
+        {
+            case AnyEqupment.Weapon:
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("SelectWeaponUpgrade", "id", weaponObject.GetWeaponObject().id);
+                break;
+
+            case AnyEqupment.Passive:
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("SelectWeaponUpgrade", "id", weaponObject.GetPassive().id);
+                break;
+        }
+
+
     }
 }

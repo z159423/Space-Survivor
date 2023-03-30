@@ -20,6 +20,8 @@ public interface IEquipment
 [CreateAssetMenu(fileName = "new Weapon", menuName = "Scriptable Object/Equipment/New Weapon", order = int.MaxValue)]
 public class WeaponObject : ScriptableObject, IEquipment
 {
+    public int id;
+
     public Stack<GameObject> bulletStack = new Stack<GameObject>();
 
     public List<GameObject> activeProjectile = new List<GameObject>();

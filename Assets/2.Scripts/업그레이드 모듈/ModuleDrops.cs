@@ -20,6 +20,9 @@ public class ModuleDrops : MonoBehaviour
             AlterManager.Instance.GenerateNewModuleAlter(module);
 
             AudioManager.instance.PlaySFX("upgrade3");
+
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ObtaionModule");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ObtaionModule_tier : " + module.tier);
         }
     }
 

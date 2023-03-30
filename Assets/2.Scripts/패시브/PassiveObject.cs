@@ -22,7 +22,7 @@ public interface IPassiveEquipment
 [CreateAssetMenu(fileName = "new Passive", menuName = "Scriptable Object/Equipment/New Passive", order = int.MaxValue)]
 public class PassiveObject : ScriptableObject, IEquipment
 {
-
+    public int id;
     public IPassiveEquipment passiveStat;
 
     public Sprite equipmentImage;
@@ -42,10 +42,10 @@ public class PassiveObject : ScriptableObject, IEquipment
 
     public List<UpgradeModule> currentUpgradeModules = new List<UpgradeModule>();
     public List<UpgradeModuleList> UpgradeModulesForLevel = new List<UpgradeModuleList>();
-    
+
     public void UpgradeEquipment(UpgradeModuleList modules)
     {
-        for(int i = 0; i < modules.upgradeModules.Count; i++)
+        for (int i = 0; i < modules.upgradeModules.Count; i++)
         {
             passiveStat.UpgradePassive(modules.upgradeModules[i]);
         }
@@ -53,7 +53,7 @@ public class PassiveObject : ScriptableObject, IEquipment
         currentWeaponLevel++;
     }
 
-    
+
     // public void GetPassiveEffect(PlayerStat playerStat)
     // {
 

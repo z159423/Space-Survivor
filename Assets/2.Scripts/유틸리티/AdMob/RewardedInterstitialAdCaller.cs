@@ -114,194 +114,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public void CallRV_GetAllUpgrade()
     {
-        if (IsFreeModuleReady())
-            CallRV(getAllUpgrade());
-    }
-
-    //크리스탈 획득 리워드 광고 호출
-    public void WatchRewardAds_Crytal()
-    {
-        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
-
-        if (timeDiff < freeCrystalWaitTime)
-        {
-            //print("무료 크리스탈 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
-            return;
-        }
-
-        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-
-        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
-        {
-            if (UserDataManager.instance.currentUserData.usingFreeCrystalTime != null)
-                print(timeDiff);
-
-            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_FreeCrystal");
-
-            CallRV(getFreeCrystal());
-        }
-        else
-        {
-            if (UserDataManager.instance.currentUserData.RemoveAds)
-            {
-                print("광고 제거를 구매해 광고 호출을 안함");
-                rewardList.Add(getFreeCrystal());
-            }
-            else if (!rewardedAd.IsLoaded())
-                print("광고가 없습니다");
-            else
-                print("알수없는 이유로 광고 호출에 실패하였습니다.");
-
-            FirebaseAnalytics.LogEvent("RvAdsCallFailed_FreeCrystal");
-
-            //crystallAddRewardedAd = CreateAndLoadRewardedAd_Crystal(adUnitId);
-
-            //StartCoroutine(getFreeCrystal());
-        }
-    }
-
-    //함선 무료 체험 리워드 광고 호출
-    public void WatchRewardAds_TrialShip()
-    {
-        double timeDiff = Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
-
-        if (timeDiff < shipTrialWaitTime)
-        {
-            //print("함선 체험 리워드 광고 재사용 시간이 지나지 않았습니다. " + timeDiff + " 남은시간 : " + (freeCrystalWaitTime - timeDiff));
-            return;
-        }
-
-        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-
-        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
-        {
-            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_trialShip");
-            //this.shipTrialRewardedAd.Show();
-
-            print("111");
-
-            CallRV(startTrial());
-        }
-        else
-        {
-            if (UserDataManager.instance.currentUserData.RemoveAds)
-            {
-                print("광고 제거를 구매해 광고 호출을 안함");
-                rewardList.Add(startTrial());
-            }
-            else if (!rewardedAd.IsLoaded())
-                print("광고가 없습니다");
-            else
-                print("알수없는 이유로 광고 호출에 실패하였습니다.");
-
-            FirebaseAnalytics.LogEvent("RvAdsCallFailed_trialShip");
-
-            print("222");
-
-            //shipTrialRewardedAd = CreateAndLoadRewardedAd_TrailShip(adUnitId);
-
-            //StartCoroutine(startTrial());
-        }
-    }
-
-    //부활 리워드 광고 호출
-    public void WatchRewardAds_Revive()
-    {
-        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-
-        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
-        {
-            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_revive");
-            //this.reviveRewardedAd.Show();
-
-            CallRV(revive());
-        }
-        else
-        {
-            if (UserDataManager.instance.currentUserData.RemoveAds)
-            {
-                print("광고 제거를 구매해 광고 호출을 안함");
-
-                rewardList.Add(revive());
-            }
-            else if (!rewardedAd.IsLoaded())
-                print("광고가 없습니다");
-            else
-                print("알수없는 이유로 광고 호출에 실패하였습니다.");
-
-            FirebaseAnalytics.LogEvent("RvAdsCallFailed_revive");
-
-
-
-            //reviveRewardedAd = CreateAndLoadRewardedAd_Revive(adUnitId);
-
-            //StartCoroutine(revive());
-        }
-    }
-
-    //크리스탈 2배 리워드 광고 호출
-    public void WatchRewardAds_CrystalDouble()
-    {
-        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
-        {
-            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_crystalDouble");
-
-            //this.crystalDoubleRewardAd.Show();
-
-            CallRV(crystalDouble());
-        }
-        else
-        {
-            if (UserDataManager.instance.currentUserData.RemoveAds)
-            {
-                print("광고 제거를 구매해 광고 호출을 안함");
-                rewardList.Add(crystalDouble());
-            }
-            else if (!rewardedAd.IsLoaded())
-                print("광고가 없습니다");
-            else
-                print("알수없는 이유로 광고 호출에 실패하였습니다.");
-
-            FirebaseAnalytics.LogEvent("RvAdsCallFailed_crystalDouble");
-
-            //crystalDoubleRewardAd = CreateAndLoadRewardedAd_CrystalDouble(adUnitId);
-
-            //StartCoroutine(crystalDouble());
-        }
-    }
-
-    //모든 업그레이드 확득 RV
-    public void WatchRewardAds_GetAllUpgrade()
-    {
-        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
-        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
-        {
-            FirebaseAnalytics.LogEvent("RvAdsCallSuccess_GetAllUpgrade");
-            //this.getAllUpgardeAd.Show();
-
-            CallRV(getAllUpgrade());
-        }
-        else
-        {
-            if (UserDataManager.instance.currentUserData.RemoveAds)
-            {
-                rewardList.Add(getAllUpgrade());
-                print("광고 제거를 구매해 광고 호출을 안함");
-            }
-            else if (!rewardedAd.IsLoaded())
-                print("광고가 없습니다");
-            else
-                print("알수없는 이유로 광고 호출에 실패하였습니다.");
-
-            FirebaseAnalytics.LogEvent("RvAdsCallFailed_GetAllUpgrade");
-
-
-
-            //getAllUpgardeAd = CreateAndLoadRewardedAd_GetAllUpgarde(adUnitId);
-
-            //StartCoroutine(getAllUpgrade());
-        }
+        CallRV(getAllUpgrade());
     }
 
     //부활 보상획득
@@ -381,10 +194,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     IEnumerator getAllUpgrade()
     {
         yield return null;
-
         LevelUpManager.instance.GetAllCurrentUpgrade();
 
         FirebaseAnalytics.LogEvent("RvAdsComplete_GetAllUpgarde");
+
     }
 
     public bool IsFreeCrystalReady()
@@ -653,6 +466,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public static void CallRV(IEnumerator reward)
     {
         FirebaseAnalytics.LogEvent("RvAdsCallEvent");
+
         if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             FirebaseAnalytics.LogEvent("RvAdsCallSuccess");

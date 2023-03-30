@@ -261,6 +261,10 @@ public class GameManager : MonoBehaviour
 
         if (!revivedThisGame)
         {
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_EnemyKillCount", "Count", currentKillCount);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_GetCrystalCount", "Count", playerStat.currentCrystal);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_CurrentLevel", "Count", playerStat.GetCurrentPlayerLevel());
+
             revivedTimer = 1f;
             reviveButton.SetActive(true);
 
