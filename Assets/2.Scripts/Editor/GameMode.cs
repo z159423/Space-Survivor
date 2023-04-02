@@ -11,7 +11,7 @@ public class GameMode : EditorWindow
     {
         QScene.OpenScene("Assets/1.Scenes/MainScene.unity");
         GameObject.Find("GameManager").GetComponent<GameManager>().editmode = true;
-        GameObject.Find("IngameDebugConsole").SetActive(true);
+        GameObject.Find("IngameDebugConsole").transform.GetChild(0).gameObject.SetActive(true);
         GameObject.Find("UI").transform.Find("InGameMenu").transform.Find("Console").gameObject.SetActive(true);
     }
 
