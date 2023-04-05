@@ -99,6 +99,8 @@ public class GameEndPanel : MonoBehaviour
 
                 node.GetComponentInChildren<ModuleItem>().InitModule(modules.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, onclick: OpenModuleDetail);
 
+                // VFXGenerator.instance.GenerateVFX(VFXType.UpgradeModuleUnboxing, node.transform.position + new Vector3(0, 0, -150), node.transform);
+
                 node.transform.GetChild(0).DOScale(new Vector3(1, 1, 1), 0.7f);
 
                 yield return new WaitForSeconds(0.7f);

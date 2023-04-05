@@ -185,6 +185,8 @@ public class UpgradeModuleManager : MonoBehaviour
 
             GenerateInventoryModulePrefabs(false);
             GenerateEquipModulePrefabs(false);
+
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_UpgradeModuleUI");
         }
 
         upgradeModulePanel.SetActive(!upgradeModulePanel.activeSelf);
@@ -884,5 +886,7 @@ public class UpgradeModuleManager : MonoBehaviour
     {
         var UI = Resources.Load<GameObject>("UI/ModulePurchaseMenu");
         Instantiate(UI, GameManager.instance.MainUIParent);
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModulePurchaseUI");
     }
 }

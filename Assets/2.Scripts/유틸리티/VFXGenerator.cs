@@ -41,7 +41,7 @@ public class VFXGenerator : MonoBehaviour
                 {
                     var vfx = Instantiate(success.Object, position, Quaternion.identity, transform);
 
-                    vfx.transform.localScale = new Vector3(GetParticleSize(type), GetParticleSize(type), GetParticleSize(type)); 
+                    vfx.transform.localScale = new Vector3(GetParticleSize(type), GetParticleSize(type), GetParticleSize(type));
 
                     generatedResource.Add(vfx);
 
@@ -158,16 +158,16 @@ public class VFXPool
 
         foreach (GameObject particle in vfxStack)
         {
-            foreach(ParticleSystem particle1 in particle.GetComponentsInChildren<ParticleSystem>())
+            foreach (ParticleSystem particle1 in particle.GetComponentsInChildren<ParticleSystem>())
             {
                 particle1.transform.localScale = new Vector3(particleSize, particleSize, particleSize);
             }
         }
 
-        for(int i = 0; i < activeParticle.Count; i++)
+        for (int i = 0; i < activeParticle.Count; i++)
         {
 
-            foreach(ParticleSystem particle1 in activeParticle[i].GetComponentsInChildren<ParticleSystem>())
+            foreach (ParticleSystem particle1 in activeParticle[i].GetComponentsInChildren<ParticleSystem>())
             {
                 particle1.transform.localScale = new Vector3(particleSize, particleSize, particleSize);
             }
@@ -181,5 +181,8 @@ public class VFXPool
     }
 }
 
-public enum VFXType { none, enemyDie1, playerDie1, missileExplode, projectileBlowupSmall, Explode1, Heal1, AtomicExplosion, enemyDie2, enemyDie3
-,enemyDie4 }
+public enum VFXType
+{
+    none, enemyDie1, playerDie1, missileExplode, projectileBlowupSmall, Explode1, Heal1, AtomicExplosion, enemyDie2, enemyDie3
+, enemyDie4, UpgradeModuleUnboxing
+}

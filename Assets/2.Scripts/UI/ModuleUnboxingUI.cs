@@ -46,6 +46,8 @@ public class ModuleUnboxingUI : MonoBehaviour
 
                 module.GetComponentInChildren<ModuleItem>().InitModule(obj.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, onclick: ModuleItem.OpenModuleDetail);
 
+                // VFXGenerator.instance.GenerateVFX(VFXType.UpgradeModuleUnboxing, module.transform.position + new Vector3(0, 0, -150));
+
                 module.transform.GetChild(0).DOScale(new Vector3(1, 1, 1), 0.7f);
 
                 AudioManager.instance.GenerateAudioAndPlaySFX("ModuleUnboxing", Vector3.zero, Random.Range(0.8f, 1.2f));
