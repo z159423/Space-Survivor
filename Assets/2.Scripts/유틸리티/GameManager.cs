@@ -95,6 +95,13 @@ public class GameManager : MonoBehaviour
                 editmodeUI[i].SetActive(true);
             }
         }
+
+        if (!ES3.KeyExists("TryStage"))
+        {
+            ES3.Save("TryStage", 0);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("TryStage", "StageNum", ES3.Load<int>("TryStage"));
+        }
+
     }
 
     private void Start()
@@ -170,6 +177,10 @@ public class GameManager : MonoBehaviour
 
         playerUpgradeModule.StartMineral();
         PlayGameEvent.Invoke();
+
+        ES3.Save("TryStage", ES3.Load<int>("TryStage") + 1);
+        print(ES3.Load<int>("TryStage"));
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("TryStage", "StageNum", ES3.Load<int>("TryStage"));
     }
 
     public void ReplayGame()
