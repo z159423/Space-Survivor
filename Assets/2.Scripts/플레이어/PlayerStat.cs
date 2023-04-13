@@ -89,7 +89,8 @@ public class PlayerStat : MonoBehaviour
     {
         if (collision.transform.CompareTag("Enemy"))
         {
-            TakeDamage(collision.transform.GetComponent<EnemyStat>().GetDamage());
+            var enemy = collision.transform.GetComponent<EnemyStat>();
+            TakeDamage(enemy.GetDamage(), enemy.GetEnemyType().ToString());
         }
     }
 
@@ -101,7 +102,7 @@ public class PlayerStat : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, string name = "none")
     {
         if (invinsible || playerDie || shieldInvinsible)
             return;
@@ -123,14 +124,19 @@ public class PlayerStat : MonoBehaviour
         HitEffect.Play();
 
         if (currentHp <= 0)
-            Die();
+        {
+            Die(name);
+
+        }
     }
 
-    private void Die()
+    private void Die(string name = "none")
     {
         playerDie = true;
 
         playerDieEvent.Invoke();
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("PlayerDie", "enemyName", name);
 
         //gameObject.SetActive(false);
 

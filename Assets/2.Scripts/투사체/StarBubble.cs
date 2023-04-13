@@ -84,7 +84,7 @@ public class StarBubble : MonoBehaviour
         {
             ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
             VFXGenerator.instance.GenerateVFX(deleteParticleType, transform.position);
-            other.gameObject.GetComponentInParent<PlayerStat>().TakeDamage(damage);
+            other.gameObject.GetComponentInParent<PlayerStat>().TakeDamage(damage, type.ToString());
         }
     }
 }

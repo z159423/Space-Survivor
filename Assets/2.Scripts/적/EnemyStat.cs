@@ -7,6 +7,7 @@ using UnityEngine.VFX;
 public class EnemyStat : MonoBehaviour
 {
     [SerializeField] private EnemyType type;
+    public EnemyType GetEnemyType() => type;
 
     [SerializeField] protected int maxHp = 10;
     protected int currentHp = 10;
@@ -81,15 +82,15 @@ public class EnemyStat : MonoBehaviour
 
         AudioManager.instance.GenerateAudioAndPlaySFX(dieSound, transform.position);
 
-        switch(type)
+        switch (type)
         {
             case EnemyType.goldGoblin1:
-             Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin1KilledEvent");
-            break;
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin1KilledEvent");
+                break;
 
             case EnemyType.goldGoblin2:
-             Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin2KilledEvent");
-            break;
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin2KilledEvent");
+                break;
         }
     }
 
