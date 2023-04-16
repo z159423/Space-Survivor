@@ -102,7 +102,7 @@ public class InterstitialAdCaller : MonoBehaviour
         {
             MonoBehaviour.print("전면 광고 로드됨");
 
-            FirebaseAnalytics.LogEvent("IrAdsLoadSuccess");
+            FirebaseAnalytics.LogEvent("ADS_IrAdsLoadSuccess");
         }
 
         void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
@@ -110,14 +110,14 @@ public class InterstitialAdCaller : MonoBehaviour
             MonoBehaviour.print("전면 광고 로드 실패: "
                                 + args.LoadAdError);
 
-            FirebaseAnalytics.LogEvent("IrAdsLoadFailed", "errorCode", "" + args.LoadAdError);
+            FirebaseAnalytics.LogEvent("ADS_IrAdsLoadFailed", "errorCode", "" + args.LoadAdError);
         }
 
         void HandleOnAdOpening(object sender, EventArgs args)
         {
             MonoBehaviour.print("전면 광고 실행중");
 
-            FirebaseAnalytics.LogEvent("IrAdsWatchingEvent");
+            FirebaseAnalytics.LogEvent("ADS_IrAdsWatchingEvent");
         }
 
         void HandleOnAdClosed(object sender, EventArgs args)
@@ -127,30 +127,31 @@ public class InterstitialAdCaller : MonoBehaviour
             RequestInterstitial();
             RestartIrAdsCoolTime();
 
-            FirebaseAnalytics.LogEvent("IrAdsClosedEvent");
+            FirebaseAnalytics.LogEvent("ADS_IrAdsClosedEvent");
         }
     }
 
     public void CallIrAds()
     {
-        FirebaseAnalytics.LogEvent("IrAdsCallEvent");
+        FirebaseAnalytics.LogEvent("ADS_IrAdsCallEvent");
 
         if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             this.interstitial.Show();
+            FirebaseAnalytics.LogEvent("ADS_IrAdsCallSuccess");
         }
         else
         {
             if (UserDataManager.instance.currentUserData.RemoveAds || IAPManager.instance.HadPurchased())
             {
                 print("광고제거를 구매하여 전면광고가 없습니다");
-                FirebaseAnalytics.LogEvent("IrAdsNoBecausePurchasedNoAdsEvent");
+                FirebaseAnalytics.LogEvent("ADS_IrAdsNoBecausePurchasedNoAdsEvent");
             }
 
             else if (!IrAdsReady)
             {
                 print("광고가 로드되지 않았습니다");
-                FirebaseAnalytics.LogEvent("IrAdsNotReadyEvent");
+                FirebaseAnalytics.LogEvent("ADS_IrAdsNotReadyEvent");
 
                 RequestInterstitial();
             }

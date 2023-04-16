@@ -93,28 +93,28 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public void CallRV_FreeCrystal()
     {
         if (IsFreeCrystalReady())
-            CallRV(getFreeCrystal());
+            CallRV(getFreeCrystal(), "FreeCrystal");
     }
 
     public void CallRV_TrialShip()
     {
         if (IsShipTrialReady())
-            CallRV(startTrial());
+            CallRV(startTrial(), "TrialShip");
     }
 
     public void CallRV_Revive()
     {
-        CallRV(revive());
+        CallRV(revive(), "Revive");
     }
 
     public void CallRV_CrystalDouble()
     {
-        CallRV(crystalDouble());
+        CallRV(crystalDouble(), "CrystalDouble");
     }
 
     public void CallRV_GetAllUpgrade()
     {
-        CallRV(getAllUpgrade());
+        CallRV(getAllUpgrade(), "GetAllUpgrade");
     }
 
     //부활 보상획득
@@ -133,7 +133,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-        FirebaseAnalytics.LogEvent("RvAdsComplete_Revive");
+        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_Revive");
     }
 
     //함선 체험 보상획득
@@ -151,7 +151,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-        FirebaseAnalytics.LogEvent("RvAdsComplete_TrialShip");
+        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_TrialShip");
 
         FirebaseAnalytics.LogEvent("TrialShip", "shipName", GameManager.instance.currentShip.shipObjectData.shipCode);
     }
@@ -171,7 +171,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         crystalBonusRVBtn?.SetActive(false);
 
-        FirebaseAnalytics.LogEvent("RvAdsComplete_DoubleCrystal");
+        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_DoubleCrystal");
     }
 
     //무료 크리스탈 보상획득
@@ -187,7 +187,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-        FirebaseAnalytics.LogEvent("RvAdsComplete_FreeCrystal");
+        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_FreeCrystal");
     }
 
     //모든 업그레이드 획득 보상획득
@@ -196,7 +196,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         yield return null;
         LevelUpManager.instance.GetAllCurrentUpgrade();
 
-        FirebaseAnalytics.LogEvent("RvAdsComplete_GetAllUpgarde");
+        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_GetAllUpgarde");
 
     }
 
@@ -422,7 +422,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         {
             MonoBehaviour.print("보상형 광고를 로드함");
 
-            FirebaseAnalytics.LogEvent("RvAdsLoadSuccess");
+            FirebaseAnalytics.LogEvent("ADS_RvAdsLoadSuccess");
         }
 
         //보상형 광고 로드 실패함
@@ -432,7 +432,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 "보상형 광고 로드를 실패하였습니다: "
                                  + args.LoadAdError);
 
-            FirebaseAnalytics.LogEvent("RvAdsLoadFailed", "errorCode", "" + args.LoadAdError);
+            FirebaseAnalytics.LogEvent("ADS_RvAdsLoadFailed", "errorCode", "" + args.LoadAdError);
         }
 
         //보상형 광고 표시중
@@ -463,13 +463,19 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
     }
 
-    public static void CallRV(IEnumerator reward)
+    public static void CallRV(IEnumerator reward, string rvAdsType)
     {
-        FirebaseAnalytics.LogEvent("RvAdsCallEvent");
+        FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent");
+        FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent", "RvAdsType", rvAdsType);
+        FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
+
 
         if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
-            FirebaseAnalytics.LogEvent("RvAdsCallSuccess");
+            FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess");
+            FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent", "RvAdsType", rvAdsType);
+            FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
+
 
             //rewardedAd.OnUserEarnedReward -= HandleUserEarnedReward;
             rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
@@ -496,7 +502,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             else
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
 
-            FirebaseAnalytics.LogEvent("RvAdsCallFailed");
+            FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed");
+            FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed", "RvAdsType", rvAdsType);
+            FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed" + "_" + rvAdsType);
 
             CreateAndLoadRewardedAd();
         }

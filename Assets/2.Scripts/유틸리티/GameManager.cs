@@ -347,7 +347,7 @@ public class GameManager : MonoBehaviour
     void ShowGameEndMenu(bool Die)
     {
         endGameMenu = Instantiate(Utility.GetResource<GameObject>("UI/AnimatedEndMenu"));
-        endGameMenu.transform.SetParent(gameEndMenuParent);
+        endGameMenu.transform.SetParent(GameManager.instance.MainUIParent);
         endGameMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
         endGameMenu.transform.localScale = new Vector3(1, 1, 1);
 

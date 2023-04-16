@@ -90,10 +90,10 @@ public class ModulePurchaseUI : MonoBehaviour
             newModules.Add(newModule);
             OpenModuleBoxUnboxingUI(newModules, TextAnchor.MiddleCenter);
 
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("RvAdsComplete_GetAllUpgarde");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_FreeModule");
         }
 
-        RewardedInterstitialAdCaller.CallRV(reward_());
+        RewardedInterstitialAdCaller.CallRV(reward_(), "FreeModule");
         // RewardedInterstitialAdCaller.instance.CallRV(() => { UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule()); });
         AudioManager.instance.PlaySFX("click2");
     }

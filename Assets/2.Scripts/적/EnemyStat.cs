@@ -113,9 +113,12 @@ public class EnemyStat : MonoBehaviour
             ItemGenerator.instance.GenerateRandomItem(transform.position);
         }
 
-        if (Utility.PercentageCalculator(dropTable.moduleDropTable.dropPercent, UpgradeModuleDropTable.dropMaxPercent))
+        if (dropTable.moduleDropTable != null)
         {
-            UpgradeModuleDropManager.instance.GenerateRandomModuleDrops(transform.position);
+            if (Utility.PercentageCalculator(dropTable.moduleDropTable.dropPercent, UpgradeModuleDropTable.dropMaxPercent))
+            {
+                UpgradeModuleDropManager.instance.GenerateRandomModuleDrops(transform.position);
+            }
         }
     }
 
