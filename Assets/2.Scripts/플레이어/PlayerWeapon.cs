@@ -49,7 +49,9 @@ public class PlayerWeapon : MonoBehaviour
     {
         pool.ready = false;
 
-        yield return new WaitForSeconds(pool.coolTime.GetFinalStatValue() * additionalCoolTime.GetFinalStatValue());
+        print(pool.GetWeaponObject().GetWeaponObject().GetEquipmentType().ToString() + " /  " + pool.coolTime.GetFinalStatValue() + " / " + additionalCoolTime.GetFinalStatValue() + " / " + playerModule.module_Firerate.GetFinalStatValue() + " / " + (pool.coolTime.GetFinalStatValue() * additionalCoolTime.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
+
+        yield return new WaitForSeconds((pool.coolTime.GetFinalStatValue() * additionalCoolTime.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
         pool.ready = true;
     }
 

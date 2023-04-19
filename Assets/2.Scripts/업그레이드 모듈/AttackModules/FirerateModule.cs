@@ -8,11 +8,11 @@ using TMPro;
 [CreateAssetMenu(fileName = "new Module", menuName = "Scriptable Object/Upgrade Module/Firerate", order = int.MaxValue)]
 public class FirerateModule : UpgradeModuleScripableObject
 {
-    public static readonly float[] firerateValue = { 0.15f, 0.25f, 0.3f, 0.4f, 0.5f };
+    public static readonly float[] firerateValue = { 0.05f, 0.08f, 0.11f, 0.14f, 0.17f };
 
     public override void ApplyUpgradeModule(PlayerUpgradeModule player, int tier)
     {
-        player.module_Firerate.AddFloatModifier(firerateValue[(int)tier]);
+        player.module_Firerate.AddFloatModifier(-firerateValue[(int)tier]);
 
         MonoBehaviour.print("발사속도 증가 스탯 적용");
     }

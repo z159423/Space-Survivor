@@ -8,7 +8,7 @@ using TMPro;
 [CreateAssetMenu(fileName = "new Module", menuName = "Scriptable Object/Upgrade Module/ArmorUp", order = int.MaxValue)]
 public class ShipPlateUpgrade : UpgradeModuleScripableObject
 {
-    public static readonly float[] armorValue = { 2, 4, 6, 8, 10 };
+    public static readonly float[] armorValue = { 2, 4, 8, 12, 16 };
 
     public override void ApplyUpgradeModule(PlayerUpgradeModule player, int tier)
     {

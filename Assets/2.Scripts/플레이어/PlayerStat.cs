@@ -72,6 +72,8 @@ public class PlayerStat : MonoBehaviour
 
     private ShipObject selectedShipObject = null;
 
+    private ShipObjectData currentShipData;
+
     [Space]
 
     [BoxGroup("플레이어 스텟")][SerializeField] public bool invinsible = false;
@@ -116,6 +118,8 @@ public class PlayerStat : MonoBehaviour
 
         //Vibration.Vibrate((long)15);
         MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.LightImpact);
+
+        damage = (int)((damage * 16f) / (16f + playerUpgradeModule.module_Armor.GetFinalStatValue()));
 
         currentHp -= damage;
 
@@ -261,6 +265,7 @@ public class PlayerStat : MonoBehaviour
     {
         transform.position = Vector2.zero;
 
+        SetHp();
         currentHp = maxHp;
         playerDie = false;
 
@@ -306,6 +311,7 @@ public class PlayerStat : MonoBehaviour
 
     public void PlayGame()
     {
+        SetHp();
         currentHp = maxHp;
         playerDie = false;
 
@@ -374,9 +380,16 @@ public class PlayerStat : MonoBehaviour
 
     public void GetShipStat(ShipObjectData shipObjectData)              //������� �Լ� ������ �÷��̾��� �Լ� ���ȿ� �ٿ��ֱ�
     {
-        maxHp = shipObjectData.baseMaxHp.GetFinalStatValueAsInt();
+        currentShipData = shipObjectData;
+        SetHp();
+        // maxHp = shipObjectData.baseMaxHp.GetFinalStatValueAsInt() + playerUpgradeModule.module_MaxHp.GetFinalStatValueAsInt();
         moveSpeed.SetBaseValue(shipObjectData.baseMoveSpeed.GetFinalStatValue());
         rotationSpeed.SetBaseValue(shipObjectData.baseRotationSpeed.GetFinalStatValue());
+    }
+
+    public void SetHp()
+    {
+        maxHp = currentShipData.baseMaxHp.GetFinalStatValueAsInt() + playerUpgradeModule.module_MaxHp.GetFinalStatValueAsInt();
     }
 
     /// <summary>
