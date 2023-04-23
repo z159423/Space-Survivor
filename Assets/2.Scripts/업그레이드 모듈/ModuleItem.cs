@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using DG.Tweening;
+using TMPro;
 
 public class ModuleItem : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class ModuleItem : MonoBehaviour
     [SerializeField] private Color defaultColor_inventory;
 
     [SerializeField] private Color selectedColor;
+    [SerializeField] private TextMeshProUGUI newText;
+
 
     private Sequence sequence;
 
@@ -56,6 +59,22 @@ public class ModuleItem : MonoBehaviour
             GetComponent<Button>().onClick.AddListener(() => onclick.Invoke(this));
 
         SetModuleImageColor(moduleImage, module.type);
+
+        print(1111);
+        if (newText != null)
+        {
+            if (module.GetUpgradeModuleObject().isNew)
+            {
+                newText.gameObject.SetActive(true);
+                module.GetUpgradeModuleObject().isNew = false;
+
+            }
+            else
+            {
+                newText.gameObject.SetActive(false);
+            }
+        }
+
     }
 
     public void UpdateImage(bool tweening = true)

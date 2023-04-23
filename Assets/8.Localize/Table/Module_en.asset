@@ -63,7 +63,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2152483324116992
-    m_Localized: Upgrade
+    m_Localized: Merge
     m_Metadata:
       m_Items: []
   - m_Id: 2152539649425408
@@ -123,27 +123,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2164065332576256
-    m_Localized: Damage Up Module
+    m_Localized: Damage Up
     m_Metadata:
       m_Items: []
   - m_Id: 2164090330628096
-    m_Localized: Armor Up Module
+    m_Localized: Armor Up
     m_Metadata:
       m_Items: []
   - m_Id: 2164104079556608
-    m_Localized: Move Speed Up Module
+    m_Localized: Move Speed Up
     m_Metadata:
       m_Items: []
   - m_Id: 2164117908176896
-    m_Localized: Firerate Up Module
+    m_Localized: Firerate Up
     m_Metadata:
       m_Items: []
   - m_Id: 2164131787128832
-    m_Localized: Max Hp Up Module
+    m_Localized: Max Hp Up
     m_Metadata:
       m_Items: []
   - m_Id: 24998845024329728
-    m_Localized: Wealthy Start Module
+    m_Localized: Wealthy Start
     m_Metadata:
       m_Items: []
   - m_Id: 24998841886990336
@@ -159,11 +159,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24999753854509056
-    m_Localized: Magnet Range Up Module
+    m_Localized: Magnet Range Up
     m_Metadata:
       m_Items: []
   - m_Id: 24999754382991360
     m_Localized: Magnet Range +[ST_VALUE1]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34436122653777920
+    m_Localized: Merge All
     m_Metadata:
       m_Items: []
   references:

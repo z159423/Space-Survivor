@@ -12,6 +12,8 @@ public class UpgradeModuleObject : IUpgradeModule
     [field: SerializeField] public UpgradeModules module { get; private set; }
     [field: SerializeField] public UpgradeModuleTier tier { get; private set; }
     [field: SerializeField] public string key { get; private set; }
+    [field: SerializeField] public bool isNew { get; set; } = true;
+
 
     public static readonly int[] sellCosts = { 0, 8, 50, 200, 400, 1000 };
 

@@ -704,7 +704,8 @@ public class UpgradeModuleManager : MonoBehaviour
         ActiveModuleUpgradePanel();
         ActiveModuleDetailPanel();
 
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade_tier : " + moduleUpgrade1.tier);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade_tier", "ModuleTier", moduleUpgrade1.tier.ToString());
     }
 
     ///<summary>
@@ -888,5 +889,139 @@ public class UpgradeModuleManager : MonoBehaviour
         Instantiate(UI, GameManager.instance.MainUIParent);
 
         Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModulePurchaseUI");
+    }
+
+    public void MergeAll()
+    {
+        List<UpgradeModuleObject> completeMergeModuleList = new List<UpgradeModuleObject>();
+
+        UpgradeModuleObject module1 = null, module2 = null, module3 = null;
+        for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
+        {
+            var nextModule = UserDataManager.instance.currentUserData.moduleInventory[i];
+
+            if (nextModule.tier == UpgradeModuleTier.Legendary)
+                continue;
+
+            var result = UserDataManager.instance.currentUserData.moduleInventory
+            .Where(f => f != nextModule && f.type == nextModule.type && f.tier == nextModule.tier).ToList();
+
+
+            if (result.Count >= 2)
+            {
+                var merged = GenerateRandomModule((int)nextModule.tier + 1, (int)nextModule.module);
+
+                completeMergeModuleList.Add(merged);
+
+                print(nextModule.type);
+
+                DeleteModule(nextModule);
+                DeleteModule(result[0]);
+                DeleteModule(result[1]);
+
+                GetNewModule(merged);
+
+                merged.GetUpgradeModuleObject().isNew = true;
+
+                i = 0;
+
+                print(merged.type);
+            }
+
+            // var nextModule = UserDataManager.instance.currentUserData.moduleInventory[i];
+
+            // if (!completeMergeModuleList.Contains(nextModule))
+            // {
+            //     // module1 = nextModule;
+            //     // if (MergeNext() != null)
+            //     //     i = 0;
+
+            //     if (module1 == null)
+            //     {
+            //         module1 = nextModule;
+
+
+            //     }
+            //     else if (module2 == null)
+            //     {
+            //         if (module1.type == nextModule.type && module1.tier == nextModule.tier && module1 != nextModule)
+            //         {
+            //             module2 = nextModule;
+            //         }
+            //     }
+            //     else if (module3 == null)
+            //     {
+            //         if (module1.type == nextModule.type && module1.tier == nextModule.tier && module1 != nextModule && module2 != nextModule)
+            //         {
+            //             module3 = nextModule;
+
+            //             var result = GenerateRandomModule((int)module1.tier, (int)module1.type);
+
+            //             completeMergeModuleList.Add(result);
+
+            //             DeleteModule(module1);
+            //             DeleteModule(module2);
+            //             DeleteModule(module3);
+
+            //             GetNewModule(result);
+
+            //             module1 = null;
+            //             module2 = null;
+            //             module3 = null;
+
+            //             i = 0;
+            //         }
+            //     }
+            // }
+        }
+
+        if (completeMergeModuleList.Count > 0)
+        {
+
+        }
+
+        UpgradeModuleObject MergeNext()
+        {
+            for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
+            {
+                var nextModule = UserDataManager.instance.currentUserData.moduleInventory[i];
+
+                if (!completeMergeModuleList.Contains(nextModule))
+                {
+                    if (module2 == null)
+                    {
+                        if (module1.type == nextModule.type && module1.tier == nextModule.tier && module1 != nextModule)
+                        {
+                            module2 = nextModule;
+                        }
+                    }
+                    else if (module3 == null)
+                    {
+                        if (module1.type == nextModule.type && module1.tier == nextModule.tier && module1 != nextModule && module2 != nextModule)
+                        {
+                            module3 = nextModule;
+
+                            var result = GenerateRandomModule((int)module1.tier, (int)module1.type);
+
+                            completeMergeModuleList.Add(result);
+
+                            DeleteModule(module1);
+                            DeleteModule(module2);
+                            DeleteModule(module3);
+
+                            GetNewModule(result);
+
+                            module1 = null;
+                            module2 = null;
+                            module3 = null;
+                            return result;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        UpdateUI();
     }
 }

@@ -167,6 +167,10 @@ MonoBehaviour:
     m_Key: 7_Stat
     m_Metadata:
       m_Items: []
+  - m_Id: 34436122653777920
+    m_Key: MergeAll
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
