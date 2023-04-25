@@ -171,6 +171,10 @@ MonoBehaviour:
     m_Key: MergeAll
     m_Metadata:
       m_Items: []
+  - m_Id: 34737515092533248
+    m_Key: All
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

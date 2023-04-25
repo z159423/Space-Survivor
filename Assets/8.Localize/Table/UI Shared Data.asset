@@ -135,6 +135,34 @@ MonoBehaviour:
     m_Key: AcquireNewModule
     m_Metadata:
       m_Items: []
+  - m_Id: 119177372350570496
+    m_Key: Survey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119177400079114240
+    m_Key: Survey_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119177416566923264
+    m_Key: Survey_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184084595924992
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184088307884032
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184301378527232
+    m_Key: DeleteSave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184333913743360
+    m_Key: DeleteSave_Desc
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

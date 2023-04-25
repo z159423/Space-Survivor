@@ -8,8 +8,10 @@ using System.Linq;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
+
 public class UpgradeModuleManager : MonoBehaviour
 {
+
     [FoldoutGroup("참조")][SerializeField] private GameObject upgradeModulePanel;
 
     [Space]
@@ -88,12 +90,14 @@ public class UpgradeModuleManager : MonoBehaviour
 
     [FoldoutGroup("참조")][SerializeField] private UpgradeModuleObject swapingModule;
     [FoldoutGroup("참조")][SerializeField] private UpgradeModuleObject selectedModule;
+    [FoldoutGroup("참조")][SerializeField] private ModuleSortButton[] sortBtns;
+
 
     [field: Space]
 
     [field: SerializeField] public Color[] tierColor { get; private set; }
 
-
+    public UpgradeModuleType currentSortType = UpgradeModuleType.None;
 
     public static UpgradeModuleManager instance;
 
@@ -114,27 +118,66 @@ public class UpgradeModuleManager : MonoBehaviour
             GetNewModule(GenerateRandomModule());
     }
 
-    public void UpdateUI()
+    public void UpdateUI(UpgradeModuleType sortType = UpgradeModuleType.None)
     {
         ClearModuleDisplay();
 
-        GenerateInventoryModulePrefabs(false);
+        GenerateInventoryModulePrefabs(false, sortType);
         GenerateEquipModulePrefabs(false);
     }
 
     /// <summary>
     /// 게임 시작시 인벤토리 모듈 프리팹 생성
     /// </summary>
-    public void GenerateInventoryModulePrefabs(bool tweening = true)
+    public void GenerateInventoryModulePrefabs(bool tweening = true, UpgradeModuleType sortType = UpgradeModuleType.None)
     {
-        print(UserDataManager.instance.currentUserData.moduleInventory.Count);
+        // print(UserDataManager.instance.currentUserData.moduleInventory.Count);
 
-        for (int i = 0; i < UserDataManager.instance.currentUserData.moduleInventory.Count; i++)
+        currentSortType = sortType;
+
+        var sortedModuleList = UserDataManager.instance.currentUserData.moduleInventory.OrderByDescending(n => n.tier).ToList();
+
+        if (sortType == UpgradeModuleType.None)
+        {
+            for (int i = 0; i < sortedModuleList.Count; i++)
+            {
+                GenerateModuleSlot(i);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < sortedModuleList.Count; i++)
+            {
+                if (sortedModuleList[i].GetUpgradeModuleObject().type == sortType)
+                {
+                    GenerateModuleSlot(i);
+                }
+            }
+
+            for (int i = 0; i < sortedModuleList.Count; i++)
+            {
+                if (sortedModuleList[i].GetUpgradeModuleObject().type != sortType)
+                {
+                    GenerateModuleSlot(i, _lock: true);
+                }
+            }
+        }
+
+        void GenerateModuleSlot(int i, bool _lock = false)
         {
             var module = Instantiate(modulePrefab, Vector3.zero, Quaternion.identity, playerModuleInventoryParent).GetComponent<ModuleItem>();
 
-            module.InitModule(UserDataManager.instance.currentUserData.moduleInventory[i].GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, tweening: tweening);
+            module.InitModule(sortedModuleList[i].GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, tweening: tweening, Lock: _lock);
         }
+
+        foreach (var slot in sortBtns)
+        {
+            if (currentSortType == slot.type)
+                slot.OnSelect();
+            else
+                slot.OnUnselect();
+        }
+
     }
 
     /// <summary>
@@ -179,14 +222,36 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public void ActiveUpgradeModulePanel()
     {
+
+
         if (!upgradeModulePanel.activeSelf)
         {
             ClearModuleDisplay();
 
-            GenerateInventoryModulePrefabs(false);
+            GenerateInventoryModulePrefabs(false, currentSortType);
             GenerateEquipModulePrefabs(false);
 
             Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_UpgradeModuleUI");
+        }
+        else
+        {
+            currentSortType = UpgradeModuleType.None;
+
+            foreach (var module in UserDataManager.instance.currentUserData.moduleInventory)
+            {
+                module.GetUpgradeModuleObject().isNew = false;
+            }
+
+            foreach (var equip in playerModuleEquips)
+            {
+                for (int i = 0; i < equip.data.equipItems.Count(); i++)
+                {
+                    if (equip.data.equipItems[i] != null)
+                        equip.data.equipItems[i].module.GetUpgradeModuleObject().isNew = false;
+                }
+            }
+
+            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
         }
 
         upgradeModulePanel.SetActive(!upgradeModulePanel.activeSelf);
@@ -386,7 +451,7 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public void UnEquipModule(ModuleItem module)
     {
-        GetNewModule(module.module.GetUpgradeModuleObject());
+        GetNewModule(module.module.GetUpgradeModuleObject(), false);
 
         Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule");
         Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule_tier : " + module.module.tier);
@@ -407,11 +472,16 @@ public class UpgradeModuleManager : MonoBehaviour
         //     }
         // }
 
+        DestroyImmediate(module.gameObject);
+
+        // print(module.gameObject);
+
         DeleteModule(module.module.GetUpgradeModuleObject());
 
-        Destroy(module.gameObject);
 
         ActiveModuleDetailPanel();
+
+        UpdateUI(currentSortType);
     }
 
     /// <summary>
@@ -451,16 +521,21 @@ public class UpgradeModuleManager : MonoBehaviour
     /// <summary>
     /// 새로운 모듈 획득
     /// </summary>
-    public void GetNewModule(UpgradeModuleObject newModule)
+    public void GetNewModule(UpgradeModuleObject newModule, bool _update = true)
     {
         UserDataManager.instance.currentUserData.moduleInventory.Add(newModule);
 
         var newModuleItem = Instantiate(modulePrefab, playerModuleInventoryParent);
+
         newModuleItem.GetComponent<ModuleItem>().InitModule(newModule, ModuleItem.SlotType.inventory);
+
 
         print("새로운 모듈 획득 : " + newModule.module + " | " + newModule.tier + " | " + newModule.type + " | " + newModule.key);
 
         GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+
+        if (_update)
+            UpdateUI(currentSortType);
     }
 
     /// <summary>
@@ -566,7 +641,7 @@ public class UpgradeModuleManager : MonoBehaviour
             Destroy(items[i].gameObject);
         }
 
-        GenerateInventoryModulePrefabs(false);
+        GenerateInventoryModulePrefabs(false, currentSortType);
         GenerateEquipModulePrefabs(false);
 
         SwapModeOff();
@@ -696,7 +771,7 @@ public class UpgradeModuleManager : MonoBehaviour
 
         ClearModuleDisplay();
 
-        GenerateInventoryModulePrefabs();
+        GenerateInventoryModulePrefabs(sortType: currentSortType);
         GenerateEquipModulePrefabs();
 
         UpdateModuleUpgradeDetail(selectedModule);
@@ -893,6 +968,8 @@ public class UpgradeModuleManager : MonoBehaviour
 
     public void MergeAll()
     {
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_OnClickMergeAllBtn");
+
         List<UpgradeModuleObject> completeMergeModuleList = new List<UpgradeModuleObject>();
 
         UpgradeModuleObject module1 = null, module2 = null, module3 = null;
@@ -926,6 +1003,8 @@ public class UpgradeModuleManager : MonoBehaviour
                 i = 0;
 
                 print(merged.type);
+
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_MergeAll");
             }
 
             // var nextModule = UserDataManager.instance.currentUserData.moduleInventory[i];

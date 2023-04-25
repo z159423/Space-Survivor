@@ -47,6 +47,14 @@ public class GoogleCloud : MonoBehaviour
         UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            DelectWithCloud(null);
+        }
+    }
+
     public void SaveUserDataWithCloud(UserData userData, System.Action<bool, string> callback = null)
     {
         if (isSaving)
@@ -67,7 +75,7 @@ public class GoogleCloud : MonoBehaviour
         userData.version = Application.version;
 
         string serializedData = JsonUtility.ToJson(userData); // JsonConvert.SerializeObject(userData); // �����͸� �����ϱ� ���� ����ȭ�մϴ�.
-        print(userData.crystal);
+        // print(userData.crystal);
 
         //Time.timeScale = 0f;
 
@@ -218,7 +226,7 @@ public class GoogleCloud : MonoBehaviour
         return userData;
     }
 
-    public void DelectWithCloud()
+    public void DelectWithCloud(Action onComplete)
     {
         GPGSManager.Instance.DelectWithCloud("USERDATA", (success) =>
         { // �����͸� Ŭ���忡�� �����մϴ�..
@@ -226,11 +234,15 @@ public class GoogleCloud : MonoBehaviour
             {
                 Debug.Log("구글 클라우드 세이브를 삭제하였습니다.");
                 // ������ ���� ������
+
+                onComplete.Invoke();
             }
             else
             {
                 Debug.LogWarning("구글 클라우드 세이브를 삭제에 실패하였습니다.");
                 // ������ ���� ���н�
+
+                onComplete.Invoke();
             }
         });
     }

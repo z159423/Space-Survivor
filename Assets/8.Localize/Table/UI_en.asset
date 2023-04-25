@@ -138,6 +138,35 @@ MonoBehaviour:
     m_Localized: Acquire New Module
     m_Metadata:
       m_Items: []
+  - m_Id: 119177372350570496
+    m_Localized: Survey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119177416566923264
+    m_Localized: Take part in out survey to help develop this game and receive 200
+      crystal and 5 upgrade module!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119177400079114240
+    m_Localized: Thank you for Playing my game!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184084595924992
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184088307884032
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184301378527232
+    m_Localized: Delete Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119184333913743360
+    m_Localized: Are you sure you want to delete the Save?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

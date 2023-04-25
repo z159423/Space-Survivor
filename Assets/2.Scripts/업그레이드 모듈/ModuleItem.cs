@@ -32,6 +32,9 @@ public class ModuleItem : MonoBehaviour
     [SerializeField] private Color selectedColor;
     [SerializeField] private TextMeshProUGUI newText;
 
+    [SerializeField] private CanvasGroup canvasGroup;
+
+
 
     private Sequence sequence;
 
@@ -47,7 +50,7 @@ public class ModuleItem : MonoBehaviour
         UpgradeModuleManager.instance.OpenModuleUpgradeDetail(this);
     }
 
-    public void InitModule(IUpgradeModule module, SlotType slotType, bool tweening = true, System.Action<ModuleItem> onclick = null)
+    public void InitModule(IUpgradeModule module, SlotType slotType, bool tweening = true, System.Action<ModuleItem> onclick = null, bool Lock = false)
     {
         this.module = module;
         this.slotType = slotType;
@@ -60,20 +63,34 @@ public class ModuleItem : MonoBehaviour
 
         SetModuleImageColor(moduleImage, module.type);
 
-        print(1111);
+        // print(1111);
         if (newText != null)
         {
             if (module.GetUpgradeModuleObject().isNew)
             {
                 newText.gameObject.SetActive(true);
-                module.GetUpgradeModuleObject().isNew = false;
-
+                // module.GetUpgradeModuleObject().isNew = false;
             }
             else
             {
                 newText.gameObject.SetActive(false);
             }
         }
+
+        if (canvasGroup != null)
+        {
+            if (Lock)
+            {
+                canvasGroup.DOFade(0.48f, 0.5f).OnStart(() => canvasGroup.alpha = 1f);
+                GetComponent<Image>().enabled = false;
+            }
+            else
+            {
+                canvasGroup.alpha = 1f;
+                GetComponent<Image>().enabled = true;
+            }
+        }
+
 
     }
 

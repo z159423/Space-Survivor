@@ -12,6 +12,8 @@ public class UserData
 
     public bool RemoveAds = false;
 
+    public bool Survey = false;
+
     public List<ShipObjectData> playerHaveShip = new List<ShipObjectData>();
 
     public string usingShipTrialTime = "2000-01-01 01:01:01";

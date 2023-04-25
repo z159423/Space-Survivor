@@ -142,7 +142,7 @@ public class ModulePurchaseUI : MonoBehaviour
         Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_BuyTenModule");
     }
 
-    public void OpenModuleBoxUnboxingUI(List<UpgradeModuleObject> modules, TextAnchor anchor)
+    public static void OpenModuleBoxUnboxingUI(List<UpgradeModuleObject> modules, TextAnchor anchor)
     {
         var ui = Resources.Load<GameObject>("UI/GainModues");
         var obj = Instantiate(ui, GameManager.instance.MainUIParent);
