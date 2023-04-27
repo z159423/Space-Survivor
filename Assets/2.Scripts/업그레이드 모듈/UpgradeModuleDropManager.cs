@@ -39,6 +39,8 @@ public class UpgradeModuleDropManager : MonoBehaviour
     /// </summary>
     public void OptainModules()
     {
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("ObtainModuleOnStage", "ModuleCount", getUpgradeModuleOnThisStage.Count);
+
         for (int i = 0; i < getUpgradeModuleOnThisStage.Count; i++)
         {
             UserDataManager.instance.currentUserData.moduleInventory.Add(getUpgradeModuleOnThisStage[i]);

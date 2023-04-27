@@ -272,9 +272,9 @@ public class GameManager : MonoBehaviour
 
         if (!revivedThisGame)
         {
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_EnemyKillCount", "Count", currentKillCount);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_GetCrystalCount", "Count", playerStat.currentCrystal);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_CurrentLevel", "Count", playerStat.GetCurrentPlayerLevel());
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_EnemyKillCount", "EnemyKillCount", currentKillCount);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_GetCrystalCount", "GetCrystalCount", playerStat.currentCrystal);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Die_CurrentLevel", "CurrentLevel", playerStat.GetCurrentPlayerLevel());
 
             revivedTimer = 1f;
             reviveButton.SetActive(true);
@@ -547,6 +547,8 @@ public class GameManager : MonoBehaviour
         SelectShip(currentShipNumber);
 
         UserDataManager.instance.AddCrystalValue(-currentShip.shipObjectData.shipCost);
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("BuyShip", "ShipCode", currentShip.shipObjectData.shipCode);
     }
 
     public void ShipUpgradeUIOnOff()
