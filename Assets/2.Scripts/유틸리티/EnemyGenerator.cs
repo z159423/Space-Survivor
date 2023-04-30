@@ -130,6 +130,7 @@ public class EnemyGenerator : MonoBehaviour
             case waveType.summonBoss:
                 barrior = Instantiate(bossBarrior, player.position, Quaternion.identity);
                 wave.waveCoroutine = StartCoroutine(wave.SummonBoss(warningPanel, warningPanelAnimator));
+                GameManager.instance.StageProgressBarCompleteTrigger(wave.guid);
                 break;
 
             case waveType.blobBurstSummon:
@@ -138,6 +139,7 @@ public class EnemyGenerator : MonoBehaviour
 
             case waveType.hyperBurstSummon:
                 wave.waveCoroutine = StartCoroutine(wave.hyperBurstSummon(warningPanel, warningPanelAnimator));
+                GameManager.instance.StageProgressBarCompleteTrigger(wave.guid);
                 break;
         }
     }

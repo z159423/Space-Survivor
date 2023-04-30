@@ -118,7 +118,7 @@ MonoBehaviour:
   type: 13
   maxHp: 32000
   damage:
-    baseValue: 20
+    baseValue: 50
     minValue: 0
     MinValue: 0
     maxValue: 0

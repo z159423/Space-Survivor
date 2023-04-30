@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+using Sirenix.OdinInspector;
 
 
 public class EnemyStat : MonoBehaviour
@@ -165,6 +166,12 @@ public class EnemyStat : MonoBehaviour
     {
         if (TryGetComponent<EnemyAI>(out EnemyAI ai))
             enemyAi = ai;
+    }
+
+    [Button]
+    public void DieInvoke()
+    {
+        Die();
     }
 }
 

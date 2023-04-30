@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50c6fc3319c1544d84a4f7c9e472289, type: 3}
   m_Name: Normal 1
   m_EditorClassIdentifier: 
-  dropPercent: 25
+  dropPercent: 15

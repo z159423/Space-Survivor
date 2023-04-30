@@ -6,7 +6,9 @@ using Sirenix.OdinInspector;
 [System.Serializable]
 public class EnemyWave
 {
+    [field: SerializeField][field: ReadOnly] public string guid { get; set; }
     [field: SerializeField] public string name { get; set; }
+    [field: PreviewField(50, ObjectFieldAlignment.Right)][field: SerializeField] public Object icon { get; set; }
 
     [Range(0, 900)]
     [HideInInspector] public int StartWaveTime;
@@ -110,4 +112,6 @@ public class EnemyWave
     }
 
     //public WaveObject waveObject;
+
+
 }

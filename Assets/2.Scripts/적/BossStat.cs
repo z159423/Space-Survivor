@@ -48,7 +48,6 @@ public class BossStat : EnemyStat
         }
 
         EnemyGenerator.instance.deleteBossWall();
-
     }
 
     public override void TakeDamage(int damage, bool damageText)

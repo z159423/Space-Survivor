@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour
     [FoldoutGroup("참조")][SerializeField] private GameObject shipUpgradeSlot;
     [SerializeField] private int currentShipNumber;
     [FoldoutGroup("참조")][SerializeField] private Button previusBtn, nextBtn;
+    [FoldoutGroup("참조")][SerializeField] private Slider stageProgressBar;
+    [FoldoutGroup("참조")][SerializeField] private GameObject stageProgressMark;
+
 
     public UnityEvent PlayGameEvent;
 
@@ -181,6 +184,10 @@ public class GameManager : MonoBehaviour
         ES3.Save("TryStage", ES3.Load<int>("TryStage") + 1);
         print(ES3.Load<int>("TryStage"));
         Firebase.Analytics.FirebaseAnalytics.LogEvent("TryStage", "StageNum", ES3.Load<int>("TryStage"));
+
+        stageProgressBar.value = 0;
+
+        GenerateStageProgressBar(EnemyGenerator.instance.currentEnemySpawnWaveObject);
     }
 
     public void ReplayGame()
@@ -346,6 +353,8 @@ public class GameManager : MonoBehaviour
 
     void ShowGameEndMenu(bool Die)
     {
+        print(1234);
+
         endGameMenu = Instantiate(Utility.GetResource<GameObject>("UI/AnimatedEndMenu"));
         endGameMenu.transform.SetParent(GameManager.instance.MainUIParent);
         endGameMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
@@ -407,6 +416,8 @@ public class GameManager : MonoBehaviour
 
                 EnemyGenerator.instance.CheckWave();
             }
+
+            stageProgressBar.value = ((float)currentTime / 900f);
         }
     }
 
@@ -559,5 +570,89 @@ public class GameManager : MonoBehaviour
     public void ChangeGetCrystalText(int crystal)
     {
         //getCrystalCountText.text = (int.Parse(getCrystalCountText.text) + crystal).ToString();
+    }
+
+    private Dictionary<string, ProgressMark> markPoint = new Dictionary<string, ProgressMark>();
+
+    private Dictionary<string, Image> genenartedMarked = new Dictionary<string, Image>();
+
+    struct ProgressMark
+    {
+        public int time;
+        public waveType waveType;
+    }
+
+    private void GenerateStageProgressBar(SpawnWaveObject currentSpawnWave)
+    {
+        float endTime = 900f;
+
+        markPoint.Clear();
+
+        foreach (var waves in currentSpawnWave.enemySpawnWaves2)
+        {
+            foreach (var wave in waves.enemySpawnWaves)
+            {
+
+                if (wave.waveType == waveType.summonBoss || wave.waveType == waveType.hyperBurstSummon)
+                {
+                    markPoint.Add(wave.guid, new ProgressMark() { time = wave.StartWaveTime, waveType = wave.waveType });
+                }
+
+                if (wave.waveType == waveType.summonBoss)
+                {
+                    if (wave.enemyObject.Object.GetComponentInChildren<BossStat>().finalBoss)
+                    {
+                        endTime = wave.StopWaveTime;
+                    }
+                }
+            }
+        }
+
+        foreach (var mark in genenartedMarked)
+        {
+            Destroy(mark.Value);
+        }
+
+        genenartedMarked.Clear();
+
+        foreach (var point in markPoint)
+        {
+            var mark = Instantiate(stageProgressMark, new Vector3(550f * ((float)point.Value.time / endTime), 0, 0), Quaternion.identity, stageProgressBar.transform.Find("Marks").transform).GetComponent<Image>();
+            mark.GetComponent<RectTransform>().anchoredPosition = new Vector3(550f * ((float)point.Value.time / endTime), 0, 0);
+            switch (point.Value.waveType)
+            {
+                case waveType.hyperBurstSummon:
+                    mark.GetComponent<RectTransform>().sizeDelta = new Vector3(25f, 25f, 1);
+                    mark.sprite = Resources.Load<Sprite>("UI/HyperBurst");
+                    break;
+
+                case waveType.summonBoss:
+                    mark.GetComponent<RectTransform>().sizeDelta = new Vector3(35f, 35f, 1);
+
+                    mark.sprite = Resources.Load<Sprite>("UI/Boss");
+                    break;
+
+
+                default:
+                    mark.GetComponent<RectTransform>().sizeDelta = new Vector3(25f, 25f, 1);
+
+                    mark.sprite = Resources.Load<Sprite>("UI/HyperBurst");
+                    break;
+            }
+
+            genenartedMarked.Add(point.Key, mark);
+        }
+    }
+
+    public void StageProgressBarCompleteTrigger(string guid)
+    {
+        foreach (var mark in genenartedMarked)
+        {
+            if (mark.Key == guid)
+            {
+                mark.Value.color = new Color32(176, 176, 176, 210);
+                break;
+            }
+        }
     }
 }
