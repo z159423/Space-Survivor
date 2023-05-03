@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
         if (!ES3.KeyExists("TryStage"))
         {
             ES3.Save("TryStage", 0);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("TryStage", "StageNum", ES3.Load<int>("TryStage"));
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("TryStage", "StageNum", ES3.Load<int>("TryStage").ToString());
         }
 
     }
@@ -182,8 +182,8 @@ public class GameManager : MonoBehaviour
         PlayGameEvent.Invoke();
 
         ES3.Save("TryStage", ES3.Load<int>("TryStage") + 1);
-        print(ES3.Load<int>("TryStage"));
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("TryStage", "StageNum", ES3.Load<int>("TryStage"));
+        // print(ES3.Load<int>("TryStage"));
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("TryStage", "StageNum", ES3.Load<int>("TryStage").ToString());
 
         stageProgressBar.value = 0;
 

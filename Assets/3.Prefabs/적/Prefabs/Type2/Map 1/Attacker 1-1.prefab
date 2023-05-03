@@ -51,7 +51,7 @@ MonoBehaviour:
   type: 0
   maxHp: 50
   damage:
-    baseValue: 6
+    baseValue: 3
     minValue: 0
     MinValue: 0
     maxValue: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   rigid: {fileID: 601496630676670501}
   <moveStrate>k__BackingField: 0
   <moveSpeed>k__BackingField:
-    baseValue: 2.2
+    baseValue: 1.8
     minValue: 0
     MinValue: 0
     maxValue: 0
