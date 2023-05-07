@@ -39,10 +39,14 @@ public class ModuleUnboxingUI : MonoBehaviour
         IEnumerator Animated()
         {
             var modulePrefab = Utility.GetResource<GameObject>("UI/AcquiredModuleNode");
+            float unboxingSpeed = 1.4f / (float)modules.Count;
+
+            unboxingSpeed = Mathf.Clamp(unboxingSpeed, 0.35f, Mathf.Infinity);
 
             foreach (var obj in modules)
             {
                 GameObject module = Instantiate(modulePrefab, moduleLayoutParent);
+
 
                 module.GetComponentInChildren<ModuleItem>().InitModule(obj.GetUpgradeModuleObject(), ModuleItem.SlotType.inventory, onclick: ModuleItem.OpenModuleDetail);
 
@@ -52,7 +56,7 @@ public class ModuleUnboxingUI : MonoBehaviour
 
                 AudioManager.instance.GenerateAudioAndPlaySFX("ModuleUnboxing", Vector3.zero, Random.Range(0.8f, 1.2f));
 
-                yield return new WaitForSeconds(0.7f);
+                yield return new WaitForSeconds(unboxingSpeed);
             }
 
             UpgradeModuleManager.instance.UpdateUI();

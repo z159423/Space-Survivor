@@ -404,7 +404,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         // Called when an ad request failed to load.
         rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
         // Called when an ad is shown.
-        rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        // rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+
         // Called when an ad request failed to show.
         rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
         // Called when the user should be rewarded for interacting with the ad.
@@ -441,6 +442,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         void HandleRewardedAdOpening(object sender, EventArgs args)
         {
             MonoBehaviour.print("보상형 광고 표시중");
+
+            FirebaseAnalytics.LogEvent("ADS_RvAdsOpening");
         }
 
         //보상형 광고 표시가 실패하였습니다.
@@ -467,19 +470,22 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public static void CallRV(IEnumerator reward, string rvAdsType)
     {
-        FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent");
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent");
         FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent", "RvAdsType", rvAdsType);
-        FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
 
 
         if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
-            FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess");
-            FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent", "RvAdsType", rvAdsType);
-            FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
+            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess");
+            FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess", "RvAdsType", rvAdsType);
+            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess" + "_" + rvAdsType);
 
             rewardedAd.OnUserEarnedReward -= HandleUserEarnedReward;
             rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+
+            rewardedAd.OnAdOpening -= HandleRewardedAdOpening;
+            rewardedAd.OnAdOpening += HandleRewardedAdOpening;
 
             void HandleUserEarnedReward(object sender, Reward args)
             {
@@ -487,6 +493,13 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 rewardList.Add(reward);
 
                 CreateAndLoadRewardedAd();
+            }
+
+            void HandleRewardedAdOpening(object sender, EventArgs args)
+            {
+                MonoBehaviour.print("보상형 광고 표시중");
+
+                FirebaseAnalytics.LogEvent("ADS_RvAdsOpening", "RvAdsOpenType", rvAdsType);
             }
 
             rewardedAd.Show();
@@ -502,6 +515,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             else if (!rewardedAd.IsLoaded())
             {
                 FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_NotLoadedAd", "RvAdsType3", rvAdsType);
+                CreateAndLoadRewardedAd();
 
                 print("광고가 없습니다");
             }
@@ -512,11 +526,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 print("알수없는 이유로 광고 호출에 실패하였습니다.");
             }
 
-            FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed");
+            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed");
             FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed", "RvAdsType", rvAdsType);
-            FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed" + "_" + rvAdsType);
+            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed" + "_" + rvAdsType);
 
-            CreateAndLoadRewardedAd();
         }
     }
 }

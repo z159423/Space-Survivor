@@ -93,6 +93,11 @@ public class GameEndPanel : MonoBehaviour
         {
             var modulePrefab = Utility.GetResource<GameObject>("UI/AcquiredModuleNode") as GameObject;
 
+            float unboxingSpeed = (1.4f / (float)UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage.Count);
+
+            unboxingSpeed = Mathf.Clamp(unboxingSpeed, 0.35f, Mathf.Infinity);
+
+
             foreach (UpgradeModuleObject modules in UpgradeModuleDropManager.instance.getUpgradeModuleOnThisStage)
             {
                 var node = Instantiate(modulePrefab, moduleAcquiredListParent);
@@ -103,7 +108,7 @@ public class GameEndPanel : MonoBehaviour
 
                 node.transform.GetChild(0).DOScale(new Vector3(1, 1, 1), 0.7f);
 
-                yield return new WaitForSeconds(0.7f);
+                yield return new WaitForSeconds(unboxingSpeed);
             }
         }
     }
