@@ -44,7 +44,8 @@ public class ProjectileGenerator : MonoBehaviour
             {
                 var projectile = projectilePool[i].DeQueue(position);
 
-                generatedProjectile.Add(projectile);
+                if (!generatedProjectile.Contains(projectile))
+                    generatedProjectile.Add(projectile);
 
                 return projectile;
             }
@@ -84,8 +85,8 @@ public class ProjectileGenerator : MonoBehaviour
                 var item = projectileStack.Pop();
 
                 item.transform.position = position;
-                item.SetActive(true);
                 item.transform.SetParent(parent);
+                item.SetActive(true);
 
                 return item;
             }

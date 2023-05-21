@@ -26,6 +26,8 @@ public class Projectile : MonoBehaviour
         if (trail != null)
         {
             trail.Clear();
+            trail.enabled = true;
+            trail.emitting = true;
 
             StartCoroutine(delay());
 
@@ -53,6 +55,7 @@ public class Projectile : MonoBehaviour
 
         rigid.AddForce(transform.up * fireForce);
 
+        
         deleteCoroutine = StartCoroutine(delete());
     }
 
@@ -83,12 +86,22 @@ public class Projectile : MonoBehaviour
             //ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
             EnQueueThisItem();
             VFXGenerator.instance.GenerateVFX(deleteParticleType, transform.position);
+
+            if (trail != null)
+            {
+                trail.Clear();
+                trail.enabled = false;
+                trail.emitting = false;
+            }
         }
     }
 
     public void EnQueueThisItem()
     {
         ProjectileGenerator.instance.EnQueueProjectile(type, gameObject);
+
+        if (deleteCoroutine != null)
+            StopCoroutine(deleteCoroutine);
         gameObject.SetActive(false);
 
         if (trail != null)
