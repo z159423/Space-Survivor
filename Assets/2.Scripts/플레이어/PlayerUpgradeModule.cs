@@ -35,19 +35,26 @@ public class PlayerUpgradeModule : MonoBehaviour
     /// </summary>
     public void AddUpgradeModulesToPlayerStat()
     {
-        foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
+        try
         {
-            foreach (UpgradeModuleObject module in data.equipedModules)
+            foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
             {
-                foreach (UpgradeModuleScripableObject obj in UpgradeModuleDropManager.instance.moduleDatas)
+                foreach (UpgradeModuleObject module in data.equipedModules)
                 {
-                    if (module.module == obj.module)
+                    foreach (UpgradeModuleScripableObject obj in UpgradeModuleDropManager.instance.moduleDatas)
                     {
-                        obj.ApplyUpgradeModule(this, (int)module.tier - 1);
-                        break;
+                        if (module.module == obj.module)
+                        {
+                            obj.ApplyUpgradeModule(this, (int)module.tier - 1);
+                            break;
+                        }
                     }
                 }
             }
+        }
+        catch (System.Exception e)
+        {
+            UnityEngine.Debug.LogError(e);
         }
     }
 

@@ -185,20 +185,32 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public void GenerateEquipModulePrefabs(bool tweening = true)
     {
-        for (int e = 0; e < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; e++)
+        try
         {
-            for (int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules.Length; i++)
+            print(UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length);
+            for (int e = 0; e < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; e++)
             {
-                if (UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type != UpgradeModuleType.None
-                 && UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].key != "")
+                for (int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules.Length; i++)
                 {
-                    for (int j = 0; j < playerModuleEquips.Length; j++)
+                    if (UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i] != null)
                     {
-                        if (playerModuleEquips[j].data.slotType == UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type)
-                            playerModuleEquips[j].EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].GetUpgradeModuleObject(), i, tweening: tweening);
+                        if (UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type != UpgradeModuleType.None
+                         && UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].key != "")
+                        {
+                            for (int j = 0; j < playerModuleEquips.Length; j++)
+                            {
+                                if (playerModuleEquips[j].data.slotType == UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].type)
+                                    playerModuleEquips[j].EquipModuleAsNumber(modulePrefab, UserDataManager.instance.currentUserData.equipModuleSaveDatas[e].equipedModules[i].GetUpgradeModuleObject(), i, tweening: tweening);
+                            }
+                        }
                     }
                 }
             }
+
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.LogError(e);
         }
     }
 

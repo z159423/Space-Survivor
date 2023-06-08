@@ -116,6 +116,8 @@ public class GameManager : MonoBehaviour
         UserDataManager.onChangeCrystalValue += InitShipBuyButton;
 
         ShipChangeBtn();
+
+        
     }
 
     public void ResetTime()
