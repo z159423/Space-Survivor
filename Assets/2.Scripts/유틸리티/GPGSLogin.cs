@@ -44,7 +44,7 @@ public class GPGSLogin : MonoBehaviour
 
                     FirebaseAnalytics.LogEvent("GPGS_Login_Success");
 
-                    GoogleCloud.instance.LoadUserDataWithCloud(callback);
+                    // GoogleCloud.instance.LoadUserDataWithCloud(callback);
 
                     print("GPGS 로그인 성공.");
 

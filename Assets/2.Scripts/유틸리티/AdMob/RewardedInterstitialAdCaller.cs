@@ -1,8 +1,8 @@
 using UnityEngine.Events;
 using UnityEngine;
 using System.Collections;
-using GoogleMobileAds.Api;
-using GoogleMobileAds.Common;
+// using GoogleMobileAds.Api;
+// using GoogleMobileAds.Common;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
@@ -23,17 +23,17 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     string adUnitId;
 
-    private static RewardedAd rewardedAd;
+    // private static RewardedAd rewardedAd;
 
-    private RewardedAd crystallAddRewardedAd;
-    [SerializeField] private TextMeshProUGUI crystalValueText;
-    private RewardedAd shipTrialRewardedAd;
-    [SerializeField] private Button shipTrialButton;
-    private RewardedAd reviveRewardedAd;
-    [SerializeField] private Button reviveButton;
-    private RewardedAd crystalDoubleRewardAd;
+    // private RewardedAd crystallAddRewardedAd;
+    // [SerializeField] private TextMeshProUGUI crystalValueText;
+    // private RewardedAd shipTrialRewardedAd;
+    // [SerializeField] private Button shipTrialButton;
+    // private RewardedAd reviveRewardedAd;
+    // [SerializeField] private Button reviveButton;
+    // private RewardedAd crystalDoubleRewardAd;
 
-    private RewardedAd getAllUpgardeAd;
+    // private RewardedAd getAllUpgardeAd;
     [SerializeField] private Button[] crystalDoubleButtons;
     [field: SerializeField] public bool useCrystalDoubleThisStage { get; set; } = false;
 
@@ -66,7 +66,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     public void Start()
     {
-        crystalValueText.text = crystalValue.ToString();
+        // crystalValueText.text = crystalValue.ToString();
 
         CreateAndLoadRewardedAd();
 
@@ -126,7 +126,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         touchProjectPanel.SetActive(true);
         yield return new WaitForSeconds(0.3f);
 
-        reviveButton.onClick.Invoke();
+        // reviveButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
         GameManager.instance.revivedThisGame = true;
         GameManager.instance.gameStart = true;
@@ -146,7 +146,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         touchProjectPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
 
-        shipTrialButton.onClick.Invoke();
+        // shipTrialButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
@@ -398,74 +398,74 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
              adUnitId = "unexpected_platform";
 #endif
 
-        rewardedAd = new RewardedAd(adUnitId);
+        // rewardedAd = new RewardedAd(adUnitId);
 
-        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
-        // Called when an ad request failed to load.
-        rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
-        // Called when an ad is shown.
-        // rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        // rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        // // Called when an ad request failed to load.
+        // rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
+        // // Called when an ad is shown.
+        // // rewardedAd.OnAdOpening += HandleRewardedAdOpening;
 
-        // Called when an ad request failed to show.
-        rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
-        // Called when the user should be rewarded for interacting with the ad.
-        //rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-        // Called when the ad is closed.
-        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+        // // Called when an ad request failed to show.
+        // rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
+        // // Called when the user should be rewarded for interacting with the ad.
+        // //rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        // // Called when the ad is closed.
+        // rewardedAd.OnAdClosed += HandleRewardedAdClosed;
 
-        // Create an empty ad request.
-        AdRequest request = new AdRequest.Builder().Build();
-        // Load the rewarded ad with the request.
-        rewardedAd.LoadAd(request);
+        // // Create an empty ad request.
+        // AdRequest request = new AdRequest.Builder().Build();
+        // // Load the rewarded ad with the request.
+        // rewardedAd.LoadAd(request);
 
-        //보상형 광고가 완료되었을때
-        void HandleRewardedAdLoaded(object sender, EventArgs args)
-        {
-            MonoBehaviour.print("보상형 광고를 로드함");
+        // //보상형 광고가 완료되었을때
+        // void HandleRewardedAdLoaded(object sender, EventArgs args)
+        // {
+        //     MonoBehaviour.print("보상형 광고를 로드함");
 
-            FirebaseAnalytics.LogEvent("ADS_RvAdsLoadSuccess");
-        }
+        //     FirebaseAnalytics.LogEvent("ADS_RvAdsLoadSuccess");
+        // }
 
-        //보상형 광고 로드 실패함
-        void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
-        {
-            MonoBehaviour.print(
-                "보상형 광고 로드를 실패하였습니다: "
-                                 + args.LoadAdError);
+        // //보상형 광고 로드 실패함
+        // void HandleRewardedAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+        // {
+        //     MonoBehaviour.print(
+        //         "보상형 광고 로드를 실패하였습니다: "
+        //                          + args.LoadAdError);
 
-            FirebaseAnalytics.LogEvent("ADS_RvAdsLoadFailed", "errorCode", "" + args.LoadAdError);
+        //     FirebaseAnalytics.LogEvent("ADS_RvAdsLoadFailed", "errorCode", "" + args.LoadAdError);
 
-            CreateAndLoadRewardedAd();
-        }
+        //     CreateAndLoadRewardedAd();
+        // }
 
-        //보상형 광고 표시중
-        void HandleRewardedAdOpening(object sender, EventArgs args)
-        {
-            MonoBehaviour.print("보상형 광고 표시중");
+        // //보상형 광고 표시중
+        // void HandleRewardedAdOpening(object sender, EventArgs args)
+        // {
+        //     MonoBehaviour.print("보상형 광고 표시중");
 
-            FirebaseAnalytics.LogEvent("ADS_RvAdsOpening");
-        }
+        //     FirebaseAnalytics.LogEvent("ADS_RvAdsOpening");
+        // }
 
-        //보상형 광고 표시가 실패하였습니다.
-        void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
-        {
-            MonoBehaviour.print(
-                "광고 표시를 실패하였습니다: "
-                                 + args.AdError.GetMessage());
-        }
+        // //보상형 광고 표시가 실패하였습니다.
+        // void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
+        // {
+        //     MonoBehaviour.print(
+        //         "광고 표시를 실패하였습니다: "
+        //                          + args.AdError.GetMessage());
+        // }
 
-        //사용자가 보상형 광고를 취소하였을때
-        void HandleRewardedAdClosed(object sender, EventArgs args)
-        {
-            CreateAndLoadRewardedAd();
-            MonoBehaviour.print("사용자가 보상형 광고 시청을 취소하였습니다.");
-        }
+        // //사용자가 보상형 광고를 취소하였을때
+        // void HandleRewardedAdClosed(object sender, EventArgs args)
+        // {
+        //     CreateAndLoadRewardedAd();
+        //     MonoBehaviour.print("사용자가 보상형 광고 시청을 취소하였습니다.");
+        // }
 
-        //보상형 광고를 시청하고 보상을 받아야 할때 실행
-        void HandleUserEarnedReward(object sender, Reward args)
-        {
+        // //보상형 광고를 시청하고 보상을 받아야 할때 실행
+        // void HandleUserEarnedReward(object sender, Reward args)
+        // {
 
-        }
+        // }
     }
 
     public static void CallRV(IEnumerator reward, string rvAdsType)
@@ -475,62 +475,62 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
 
 
-        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
-        {
-            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess");
-            FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess", "RvAdsType", rvAdsType);
-            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess" + "_" + rvAdsType);
+    //     if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+    //     {
+    //         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess");
+    //         FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess", "RvAdsType", rvAdsType);
+    //         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess" + "_" + rvAdsType);
 
-            rewardedAd.OnUserEarnedReward -= HandleUserEarnedReward;
-            rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+    //         rewardedAd.OnUserEarnedReward -= HandleUserEarnedReward;
+    //         rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
 
-            rewardedAd.OnAdOpening -= HandleRewardedAdOpening;
-            rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+    //         rewardedAd.OnAdOpening -= HandleRewardedAdOpening;
+    //         rewardedAd.OnAdOpening += HandleRewardedAdOpening;
 
-            void HandleUserEarnedReward(object sender, Reward args)
-            {
-                print("11");
-                rewardList.Add(reward);
+    //         void HandleUserEarnedReward(object sender, Reward args)
+    //         {
+    //             print("11");
+    //             rewardList.Add(reward);
 
-                CreateAndLoadRewardedAd();
-            }
+    //             CreateAndLoadRewardedAd();
+    //         }
 
-            void HandleRewardedAdOpening(object sender, EventArgs args)
-            {
-                MonoBehaviour.print("보상형 광고 표시중");
+    //         void HandleRewardedAdOpening(object sender, EventArgs args)
+    //         {
+    //             MonoBehaviour.print("보상형 광고 표시중");
 
-                FirebaseAnalytics.LogEvent("ADS_RvAdsOpening", "RvAdsOpenType", rvAdsType);
-            }
+    //             FirebaseAnalytics.LogEvent("ADS_RvAdsOpening", "RvAdsOpenType", rvAdsType);
+    //         }
 
-            rewardedAd.Show();
-        }
-        else
-        {
-            if (UserDataManager.instance.currentUserData.RemoveAds)
-            {
-                FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_hadNoads", "RvAdsType2", rvAdsType);
-                print("광고 제거를 구매해 광고 호출을 안함");
-                rewardList.Add(reward);
-            }
-            else if (!rewardedAd.IsLoaded())
-            {
-                FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_NotLoadedAd", "RvAdsType3", rvAdsType);
-                CreateAndLoadRewardedAd();
+    //         rewardedAd.Show();
+    //     }
+    //     else
+    //     {
+    //         if (UserDataManager.instance.currentUserData.RemoveAds)
+    //         {
+    //             FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_hadNoads", "RvAdsType2", rvAdsType);
+    //             print("광고 제거를 구매해 광고 호출을 안함");
+    //             rewardList.Add(reward);
+    //         }
+    //         else if (!rewardedAd.IsLoaded())
+    //         {
+    //             FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_NotLoadedAd", "RvAdsType3", rvAdsType);
+    //             CreateAndLoadRewardedAd();
 
-                print("광고가 없습니다");
-            }
-            else
-            {
-                FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_UnknownError", "RvAdsType4", rvAdsType);
+    //             print("광고가 없습니다");
+    //         }
+    //         else
+    //         {
+    //             FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_UnknownError", "RvAdsType4", rvAdsType);
 
-                print("알수없는 이유로 광고 호출에 실패하였습니다.");
-            }
+    //             print("알수없는 이유로 광고 호출에 실패하였습니다.");
+    //         }
 
-            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed");
-            FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed", "RvAdsType", rvAdsType);
-            // FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed" + "_" + rvAdsType);
+    //         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed");
+    //         FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed", "RvAdsType", rvAdsType);
+    //         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed" + "_" + rvAdsType);
 
-        }
+    //     }
     }
 }
 

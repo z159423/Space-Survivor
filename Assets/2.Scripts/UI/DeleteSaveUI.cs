@@ -11,7 +11,7 @@ public class DeleteSaveUI : MonoBehaviour
 
         UserDataManager.instance.DeleteUserData();
         ES3.DeleteFile();
-        GoogleCloud.instance.DelectWithCloud(() => Application.Quit());
+        // GoogleCloud.instance.DelectWithCloud(() => Application.Quit());
 
         Destroy(gameObject);
 
