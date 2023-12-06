@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GoogleMobileAdsMediationTestSuite.Api;
 
 public class MediationTest : MonoBehaviour
 {
@@ -17,6 +16,6 @@ public class MediationTest : MonoBehaviour
 
     public void show()
     {
-        MediationTestSuite.Show();
+        // MediationTestSuite.Show();
     }
 }

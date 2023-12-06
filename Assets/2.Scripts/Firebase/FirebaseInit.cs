@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Firebase;
-using Firebase.Analytics;
+using Firebase.Crashlytics;
+
+// using Firebase.Analytics;
 using Firebase.Extensions;
 
 public class FirebaseInit : MonoBehaviour
@@ -14,13 +16,23 @@ public class FirebaseInit : MonoBehaviour
     {
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
-            if(task.Result == DependencyStatus.Available)
+            if (task.Result == DependencyStatus.Available)
             {
                 _app = FirebaseApp.DefaultInstance;
 
-                FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLogin);
+                // FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLogin);
+
+                Crashlytics.IsCrashlyticsCollectionEnabled = true;
 
                 print("Firebase dependencies 연동 선공 + " + task.Result);
+
+                StartCoroutine(wait());
+
+                IEnumerator wait()
+                {
+                    yield return new WaitForSeconds(2f);
+                    throw new System.Exception("test exception please ignore");
+                }
             }
             else
             {
@@ -28,6 +40,6 @@ public class FirebaseInit : MonoBehaviour
             }
         });
 
-        
+
     }
 }

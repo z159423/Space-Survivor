@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using GooglePlayGames;
-using GooglePlayGames.BasicApi;
-using GooglePlayGames.BasicApi.SavedGame;
-using GooglePlayGames.BasicApi.Events;
+// using GooglePlayGames;
+// using GooglePlayGames.BasicApi;
+// using GooglePlayGames.BasicApi.SavedGame;
+// using GooglePlayGames.BasicApi.Events;
 using UnityEngine.UI;
 
 public class GPGSLoginDisplay : MonoBehaviour
@@ -48,18 +48,18 @@ public class GPGSLoginDisplay : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (PlayGamesPlatform.Instance.IsAuthenticated() == true)
-        {
-            userID.text = "ID : " + PlayGamesPlatform.Instance.GetUserDisplayName();
-            log.text = "Google Login Success!";
+        // if (PlayGamesPlatform.Instance.IsAuthenticated() == true)
+        // {
+        //     userID.text = "ID : " + PlayGamesPlatform.Instance.GetUserDisplayName();
+        //     log.text = "Google Login Success!";
 
-            loginBtn.gameObject.SetActive(false);
-        }
-        else
-        {
-            loginBtn.gameObject.SetActive(true);
+        //     loginBtn.gameObject.SetActive(false);
+        // }
+        // else
+        // {
+        //     loginBtn.gameObject.SetActive(true);
 
-            log.text = "Google Login Failed";
-        }
+        //     log.text = "Google Login Failed";
+        // }
     }
 }
