@@ -448,6 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -550,9 +551,11 @@ MonoBehaviour:
     crystal: 0
     testString: 
     RemoveAds: 0
+    Survey: 0
     playerHaveShip: []
-    usingShipTrialTime: 
-    usingFreeCrystalTime: 
+    usingShipTrialTime: 2000-01-01 01:01:01
+    usingFreeCrystalTime: 2000-01-01 01:01:01
+    usingFreeModuleTime: 2000-01-01 01:01:01
     version: 
     clearedStageNumber: 
     equipModuleSaveDatas:
@@ -562,57 +565,70 @@ MonoBehaviour:
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
     - <type>k__BackingField: 2
       equipedModules:
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
     - <type>k__BackingField: 3
       equipedModules:
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
     - <type>k__BackingField: 4
       equipedModules:
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
       - <type>k__BackingField: 0
         <module>k__BackingField: 0
         <tier>k__BackingField: 0
         <key>k__BackingField: 
+        <isNew>k__BackingField: 1
     moduleInventory: []
+  crystalTextList: []
 --- !u!114 &473405378
 MonoBehaviour:
   m_ObjectHideFlags: 0

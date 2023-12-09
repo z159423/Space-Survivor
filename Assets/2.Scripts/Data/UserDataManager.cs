@@ -5,7 +5,7 @@ using System.IO;
 using TMPro;
 using System;
 using Firebase;
-// using Firebase.Database;
+using Firebase.Database;
 using Google.MiniJSON;
 using System.Threading.Tasks;
 
@@ -25,7 +25,7 @@ public class UserDataManager : MonoBehaviour
     public delegate void OnChangeCrystalValue();
     public static OnChangeCrystalValue onChangeCrystalValue;
 
-    // DatabaseReference reference;
+    DatabaseReference reference;
 
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class UserDataManager : MonoBehaviour
     {
         //StartCoroutine(RewardAdsTimeChecking());
 
-        // reference = FirebaseDatabase.DefaultInstance.RootReference;
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
     private void Update()
@@ -56,7 +56,7 @@ public class UserDataManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.P))
         {
-            SaveToFirebase();
+            SaveToFirebase(currentUserData);
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
@@ -274,7 +274,7 @@ public class UserDataManager : MonoBehaviour
         SaveCurrentDate();
     }
 
-    public void SaveToFirebase()
+    public void SaveToFirebase(UserData userData)
     {
 
         string os;
@@ -287,7 +287,7 @@ public class UserDataManager : MonoBehaviour
         os = "IOS";
 #endif
 
-        // reference.Child(os).SetRawJsonValueAsync(JsonUtility.ToJson(currentUserData));
+        reference.Child(os).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
     }
 
     public void LoadFromFirebase()
@@ -302,20 +302,20 @@ public class UserDataManager : MonoBehaviour
         os = "IOS";
 #endif
 
-        // reference.Child("test").GetValueAsync().ContinueWith(task =>
-        // {
-        //     if (task.IsFaulted)
-        //     {
-        //         Debug.LogError("Load firebase Save Failed");
-        //     }
-        //     else if (task.IsCompleted)
-        //     {
-        //         DataSnapshot snapshot = task.Result;
+        reference.Child("test").GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.LogError("Load firebase Save Failed");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
 
-        //         Debug.Log(snapshot);
-        //     }
+                Debug.Log(snapshot);
+            }
 
-        // });
+        });
     }
 }
 

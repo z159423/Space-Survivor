@@ -74,10 +74,7 @@ public class GoogleCloud : MonoBehaviour
 
         userData.version = Application.version;
 
-        string serializedData = JsonUtility.ToJson(userData); // JsonConvert.SerializeObject(userData); // �����͸� �����ϱ� ���� ����ȭ�մϴ�.
-        // print(userData.crystal);
-
-        //Time.timeScale = 0f;
+        // UserDataManager.instance.SaveToFirebase(userData);
 
         UserDataManager.instance.SaveCurrentUserDataToLocal();
 

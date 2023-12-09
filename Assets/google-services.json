@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "997553477781",
+    "firebase_url": "https://space-survivor-80069176-default-rtdb.firebaseio.com",
     "project_id": "space-survivor-80069176",
     "storage_bucket": "space-survivor-80069176.appspot.com"
   },
@@ -32,7 +33,8 @@
             }
           ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-5179254807136480~4040997109"
     }
   ],
   "configuration_version": "1"
