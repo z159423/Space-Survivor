@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// using GoogleMobileAds.Api;
+using GoogleMobileAds.Api;
 
 public class BottomBanner : MonoBehaviour
 {
-    // private BannerView bannerView;
+    private BannerView bannerView;
 
     //Test ID ca-app-pub-3940256099942544/6300978111
     [SerializeField] private string Aos_bannerAdUnitId = "ca-app-pub-5179254807136480/2536343741";
@@ -23,7 +23,7 @@ public class BottomBanner : MonoBehaviour
     public void Start()
     {
         // Initialize the Google Mobile Ads SDK.
-        // MobileAds.Initialize(initStatus => { });
+        MobileAds.Initialize(initStatus => { });
 
         StartCoroutine(requestBanner());
 
@@ -63,28 +63,28 @@ public class BottomBanner : MonoBehaviour
 #endif
 
         // Clean up banner ad before creating a new one.
-        // if (this.bannerView != null)
-        // {
-        //     this.bannerView.Destroy();
-        // }
+        if (this.bannerView != null)
+        {
+            this.bannerView.Destroy();
+        }
 
-        // AdSize adaptiveSize =
-        //         AdSize.GetCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(AdSize.FullWidth);
+        AdSize adaptiveSize =
+                AdSize.GetCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(AdSize.FullWidth);
 
-        // this.bannerView = new BannerView(adUnitId, adaptiveSize, AdPosition.Bottom);
+        this.bannerView = new BannerView(adUnitId, adaptiveSize, AdPosition.Bottom);
 
-        // // Create an empty ad request.
-        // AdRequest request = new AdRequest.Builder().Build();
+        // Create an empty ad request.
+        AdRequest request = new AdRequest.Builder().Build();
 
-        // // Load the banner with the request.
-        // this.bannerView.LoadAd(request);
+        // Load the banner with the request.
+        this.bannerView.LoadAd(request);
     }
 
     public void DestoryBanner()
     {
-        // if (this.bannerView != null)
-        // {
-        //     this.bannerView.Destroy();
-        // }
+        if (this.bannerView != null)
+        {
+            this.bannerView.Destroy();
+        }
     }
 }

@@ -10985,7 +10985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &283034958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32746,7 +32746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &900682418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50581,6 +50581,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iosAdUnitId: ca-app-pub-3940256099942544/1712485313
+  crystalValueText: {fileID: 1745737301}
+  shipTrialButton: {fileID: 1885043686}
+  reviveButton: {fileID: 1810399677}
   crystalDoubleButtons:
   - {fileID: 1786888890}
   <useCrystalDoubleThisStage>k__BackingField: 0
