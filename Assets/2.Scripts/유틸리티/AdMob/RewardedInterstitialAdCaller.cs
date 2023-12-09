@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using TMPro;
-using Firebase.Analytics;
+// using Firebase.Analytics;
 using DG.Tweening;
 
 public class RewardedInterstitialAdCaller : MonoBehaviour
@@ -133,7 +133,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_Revive");
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_Revive");
     }
 
     //함선 체험 보상획득
@@ -151,9 +151,9 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_TrialShip");
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_TrialShip");
 
-        FirebaseAnalytics.LogEvent("TrialShip", "shipName", GameManager.instance.currentShip.shipObjectData.shipCode);
+        // FirebaseAnalytics.LogEvent("TrialShip", "shipName", GameManager.instance.currentShip.shipObjectData.shipCode);
     }
 
     //크리스탈 두배 보상획득
@@ -171,7 +171,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         crystalBonusRVBtn?.SetActive(false);
 
-        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_DoubleCrystal");
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_DoubleCrystal");
     }
 
     //무료 크리스탈 보상획득
@@ -187,7 +187,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
-        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_FreeCrystal");
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_FreeCrystal");
     }
 
     //모든 업그레이드 획득 보상획득
@@ -196,7 +196,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         yield return null;
         LevelUpManager.instance.GetAllCurrentUpgrade();
 
-        FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_GetAllUpgarde");
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_GetAllUpgarde");
 
     }
 
@@ -282,7 +282,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
         catch (FormatException e)
         {
-            FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+            // FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
 
             Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingFreeCrystalTime + " / " + e);
 
@@ -302,7 +302,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
         catch (FormatException e)
         {
-            FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+            // FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
 
             Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingShipTrialTime + " / " + e);
 
@@ -322,7 +322,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
         catch (FormatException e)
         {
-            FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
+            // FirebaseAnalytics.LogEvent("FormatExceptionErrorEvent");
 
             Debug.LogError("Date Time Parse Error : / " + UserDataManager.instance.currentUserData.usingFreeModuleTime + " / " + e);
 
@@ -471,7 +471,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     public static void CallRV(IEnumerator reward, string rvAdsType)
     {
         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent");
-        FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent", "RvAdsType", rvAdsType);
+        // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent", "RvAdsType", rvAdsType);
         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
 
 

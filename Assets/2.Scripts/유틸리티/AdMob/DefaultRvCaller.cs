@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using TMPro;
-using Firebase.Analytics;
+// using Firebase.Analytics;
 
 public class DefaultRvCaller : MonoBehaviour
 {

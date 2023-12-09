@@ -12,7 +12,7 @@ public class Survey : MonoBehaviour
 
     public void OnClickSurveyButton()
     {
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("OnClickSurveyButton");
+        // Firebase.Analytics.FirebaseAnalytics.LogEvent("OnClickSurveyButton");
 
         var ui = Resources.Load<GameObject>("UI/SurveyUI");
         var obj = Instantiate(ui, GameManager.instance.MainUIParent);
@@ -61,6 +61,6 @@ public class Survey : MonoBehaviour
 
         ModulePurchaseUI.OpenModuleBoxUnboxingUI(newModules, TextAnchor.UpperLeft);
 
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("StartSurvey");
+        // Firebase.Analytics.FirebaseAnalytics.LogEvent("StartSurvey");
     }
 }

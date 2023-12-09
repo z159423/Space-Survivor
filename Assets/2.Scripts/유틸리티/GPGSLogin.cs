@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Firebase.Analytics;
+// using Firebase.Analytics;
 
 public class GPGSLogin : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class GPGSLogin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Login((suc, str) => SceneManager.LoadScene("MainScene"));
+        // Login((suc, str) => SceneManager.LoadScene("MainScene"));
     }
 
     public static void Login(System.Action<bool, string> callback = null)
@@ -42,7 +42,7 @@ public class GPGSLogin : MonoBehaviour
 
                     //text2.text = "GPGS 로그인 성공 + \n" + ilocalUser.userName + "\n" + ilocalUser.id + "\n" + ilocalUser.state + "\n" + ilocalUser.underage;
 
-                    FirebaseAnalytics.LogEvent("GPGS_Login_Success");
+                    // FirebaseAnalytics.LogEvent("GPGS_Login_Success");
 
                     // GoogleCloud.instance.LoadUserDataWithCloud(callback);
 
@@ -54,7 +54,7 @@ public class GPGSLogin : MonoBehaviour
                 {
                     // 로그인 실패
 
-                    FirebaseAnalytics.LogEvent("GPGS_Login_Failed");
+                    // FirebaseAnalytics.LogEvent("GPGS_Login_Failed");
 
                     print("GPGS 로그인 실패하여 로컬 데이터를 불러옵니다.");
 
@@ -64,7 +64,7 @@ public class GPGSLogin : MonoBehaviour
 
                     UserDataManager.instance.LoadCurrentUserDataFromLocal();
 
-                    SceneManager.LoadScene("MainScene");
+                    // SceneManager.LoadScene("MainScene");
                 }
             }); ;
 

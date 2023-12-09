@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
-using Firebase.Analytics;
+// using Firebase.Analytics;
 using Sirenix.OdinInspector;
 
 public class PlayerStat : MonoBehaviour
@@ -140,7 +140,7 @@ public class PlayerStat : MonoBehaviour
 
         playerDieEvent.Invoke();
 
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("PlayerDie", "enemyName", name);
+        // Firebase.Analytics.FirebaseAnalytics.LogEvent("PlayerDie", "enemyName", name);
 
         //gameObject.SetActive(false);
 
@@ -158,15 +158,15 @@ public class PlayerStat : MonoBehaviour
 
         if (GameManager.instance.revivedThisGame)
         {
-            FirebaseAnalytics.LogEvent("PlayerDeathTime_Revived", "PlayerDeathTime_Revived_Sec", GameManager.instance.getCurrentTime());
+            // FirebaseAnalytics.LogEvent("PlayerDeathTime_Revived", "PlayerDeathTime_Revived_Sec", GameManager.instance.getCurrentTime());
         }
         else
         {
-            FirebaseAnalytics.LogEvent("PlayerDeathTime", "IntParam", GameManager.instance.getCurrentTime());
+//             FirebaseAnalytics.LogEvent("PlayerDeathTime", "IntParam", GameManager.instance.getCurrentTime());
 
-            Firebase.Analytics.FirebaseAnalytics.LogEvent(
-  Firebase.Analytics.FirebaseAnalytics.EventSelectContent, new Firebase.Analytics.Parameter(
-    FirebaseAnalytics.ParameterItemId, GameManager.instance.getCurrentTime()));
+//             Firebase.Analytics.FirebaseAnalytics.LogEvent(
+//   Firebase.Analytics.FirebaseAnalytics.EventSelectContent, new Firebase.Analytics.Parameter(
+//     FirebaseAnalytics.ParameterItemId, GameManager.instance.getCurrentTime()));
         }
 
     }

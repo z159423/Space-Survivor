@@ -7,7 +7,7 @@ public class DeleteSaveUI : MonoBehaviour
 {
     public void DeleteSave()
     {
-        Firebase.Analytics.FirebaseAnalytics.LogEvent("DeleteSave");
+        // Firebase.Analytics.FirebaseAnalytics.LogEvent("DeleteSave");
 
         UserDataManager.instance.DeleteUserData();
         ES3.DeleteFile();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // using GoogleMobileAds.Api;
 using System;
-using Firebase.Analytics;
+// using Firebase.Analytics;
 
 public class InterstitialAdCaller : MonoBehaviour
 {
@@ -133,7 +133,7 @@ public class InterstitialAdCaller : MonoBehaviour
 
     public void CallIrAds()
     {
-        FirebaseAnalytics.LogEvent("ADS_IrAdsCallEvent");
+        // FirebaseAnalytics.LogEvent("ADS_IrAdsCallEvent");
 
         // if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         // {

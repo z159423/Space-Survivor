@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Firebase.Analytics;
+// using Firebase.Analytics;
 // using GooglePlayGames;
 // using GooglePlayGames.BasicApi;
 // using GooglePlayGames.BasicApi.SavedGame;
