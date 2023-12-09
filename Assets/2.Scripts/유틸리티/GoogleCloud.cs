@@ -69,12 +69,11 @@ public class GoogleCloud : MonoBehaviour
         print("saving Start");
 
         isSaving = true;
-        if (GameManager.instance != null && GameManager.instance.savingIcon != null)
-            GameManager.instance.savingIcon.SetActive(true);
+        
 
         userData.version = Application.version;
 
-        // UserDataManager.instance.SaveToFirebase(userData);
+        UserDataManager.instance.SaveToFirebase(userData);
 
         UserDataManager.instance.SaveCurrentUserDataToLocal();
 

@@ -276,6 +276,9 @@ public class UserDataManager : MonoBehaviour
 
     public void SaveToFirebase(UserData userData)
     {
+        if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+            GameManager.instance.savingIcon.SetActive(true);
+
 
         string os;
 
@@ -287,7 +290,14 @@ public class UserDataManager : MonoBehaviour
         os = "IOS";
 #endif
 
-        reference.Child(os).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
+        var task = reference.Child(os).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
+
+        this.TaskWaitUntil(() =>
+        {
+            if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+                GameManager.instance.savingIcon.SetActive(false);
+
+        }, () => task.IsCompleted);
     }
 
     public void LoadFromFirebase()

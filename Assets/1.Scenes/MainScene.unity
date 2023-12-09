@@ -50581,9 +50581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iosAdUnitId: ca-app-pub-3940256099942544/1712485313
-  crystalValueText: {fileID: 1745737301}
-  shipTrialButton: {fileID: 1929072308}
-  reviveButton: {fileID: 413925744}
   crystalDoubleButtons:
   - {fileID: 1786888890}
   <useCrystalDoubleThisStage>k__BackingField: 0
