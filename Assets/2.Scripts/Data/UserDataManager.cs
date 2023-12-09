@@ -4,6 +4,10 @@ using UnityEngine;
 using System.IO;
 using TMPro;
 using System;
+using Firebase;
+// using Firebase.Database;
+using Google.MiniJSON;
+using System.Threading.Tasks;
 
 public class UserDataManager : MonoBehaviour
 {
@@ -21,6 +25,8 @@ public class UserDataManager : MonoBehaviour
     public delegate void OnChangeCrystalValue();
     public static OnChangeCrystalValue onChangeCrystalValue;
 
+    // DatabaseReference reference;
+
     private void Awake()
     {
         instance = this;
@@ -32,6 +38,8 @@ public class UserDataManager : MonoBehaviour
     private void Start()
     {
         //StartCoroutine(RewardAdsTimeChecking());
+
+        // reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
     private void Update()
@@ -45,6 +53,14 @@ public class UserDataManager : MonoBehaviour
             currentUserData = LoadUserData();
 
             AddCrystalValue(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.P))
+        {
+            SaveToFirebase();
+        }
+        else if (Input.GetKeyDown(KeyCode.O))
+        {
+            LoadFromFirebase();
         }
 
     }
@@ -256,6 +272,50 @@ public class UserDataManager : MonoBehaviour
             currentUserData.clearedStageNumber.Add(stageNum);
 
         SaveCurrentDate();
+    }
+
+    public void SaveToFirebase()
+    {
+
+        string os;
+
+#if UNITY_ANDROID
+        os = "AOS";
+#endif
+
+#if UNITY_IOS
+        os = "IOS";
+#endif
+
+        // reference.Child(os).SetRawJsonValueAsync(JsonUtility.ToJson(currentUserData));
+    }
+
+    public void LoadFromFirebase()
+    {
+        string os;
+
+#if UNITY_ANDROID
+        os = "AOS";
+#endif
+
+#if UNITY_IOS
+        os = "IOS";
+#endif
+
+        // reference.Child("test").GetValueAsync().ContinueWith(task =>
+        // {
+        //     if (task.IsFaulted)
+        //     {
+        //         Debug.LogError("Load firebase Save Failed");
+        //     }
+        //     else if (task.IsCompleted)
+        //     {
+        //         DataSnapshot snapshot = task.Result;
+
+        //         Debug.Log(snapshot);
+        //     }
+
+        // });
     }
 }
 

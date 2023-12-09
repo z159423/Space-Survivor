@@ -45,139 +45,139 @@ public class GPGSManager
 
     // public void FetchEvent(string gpgsID, Action<bool, IEvent> callback = null)
     // { // 해당 이벤트를 표시합니다.
-    //     PlayGamesPlatform.Instance.Events.FetchEvent(
-    //         DataSource.ReadCacheOrNetwork,
-    //         gpgsID,
-    //         (status, ievent) =>
-    //         {
-    //             if (status == ResponseStatus.Success)
-    //             {
-    //                 callback?.Invoke(true, ievent);
-    //             }
-    //             else
-    //             {
-    //                 callback?.Invoke(false, null);
-    //             }
-    //         }
-    //     );
+    //     // PlayGamesPlatform.Instance.Events.FetchEvent(
+    //     //     DataSource.ReadCacheOrNetwork,
+    //     //     gpgsID,
+    //     //     (status, ievent) =>
+    //     //     {
+    //     //         if (status == ResponseStatus.Success)
+    //     //         {
+    //     //             callback?.Invoke(true, ievent);
+    //     //         }
+    //     //         else
+    //     //         {
+    //     //             callback?.Invoke(false, null);
+    //     //         }
+    //     //     }
+    //     // );
     // }
     // public void FetchAllEvents(Action<bool, List<IEvent>> callback = null)
     // { // 이벤트 목록을 표시합니다.
-    //     PlayGamesPlatform.Instance.Events.FetchAllEvents(
-    //         DataSource.ReadCacheOrNetwork,
-    //         (status, ievents) =>
-    //         {
-    //             if (status == ResponseStatus.Success)
-    //             {
-    //                 callback?.Invoke(true, ievents);
-    //             }
-    //             else
-    //             {
-    //                 callback?.Invoke(false, null);
-    //             }
-    //         }
-    //     );
+    //     // PlayGamesPlatform.Instance.Events.FetchAllEvents(
+    //     //     DataSource.ReadCacheOrNetwork,
+    //     //     (status, ievents) =>
+    //     //     {
+    //     //         if (status == ResponseStatus.Success)
+    //     //         {
+    //     //             callback?.Invoke(true, ievents);
+    //     //         }
+    //     //         else
+    //     //         {
+    //     //             callback?.Invoke(false, null);
+    //     //         }
+    //     //     }
+    //     // );
     // }
     // public void IncrementEvent(string gpgsID, uint amount) => PlayGamesPlatform.Instance.Events.IncrementEvent(gpgsID, amount); // 해당 이벤트를 업데이트합니다.
 
-    // public void SaveWithCloud(string filename, string serializedFile, Action<bool> callback = null)
-    // { // 클라우드 서비스를 이용하여 저장합니다.
-    //     ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
+    public void SaveWithCloud(string filename, string serializedFile, Action<bool> callback = null)
+    { // 클라우드 서비스를 이용하여 저장합니다.
+        // ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
 
-    //     if (savedGameClient == null)
-    //         callback?.Invoke(false);
-    //     else
-    //     {
-    //         savedGameClient.OpenWithAutomaticConflictResolution(
-    //                     filename,
-    //                     DataSource.ReadCacheOrNetwork,
-    //                     ConflictResolutionStrategy.UseLongestPlaytime,
-    //                     (status, game) =>
-    //                     {
-    //                         if (status == SavedGameRequestStatus.Success)
-    //                         {
-    //                             var updatedMetadata = new SavedGameMetadataUpdate.Builder().Build();
-    //                             savedGameClient.CommitUpdate(
-    //                                 game,
-    //                                 updatedMetadata,
-    //                                 System.Text.Encoding.UTF8.GetBytes(serializedFile),
-    //                                 (ustatus, ugame) =>
-    //                                 {
-    //                                     callback?.Invoke(ustatus == SavedGameRequestStatus.Success);
-    //                                 }
-    //                             );
-    //                         }
-    //                         else
-    //                         {
-    //                             callback?.Invoke(false);
-    //                         }
-    //                     }
-    //                 );
-    //     }
-
-
-    // }
-    // public void LoadWithCloud(string filename, Action<bool, string> callback = null)
-    // { // 클라우드 서비스를 이용하여 로드합니다.
-    //     ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
-
-    //     savedGameClient.OpenWithAutomaticConflictResolution(
-    //         filename,
-    //         DataSource.ReadCacheOrNetwork,
-    //         ConflictResolutionStrategy.UseLastKnownGood,
-    //         (status, game) =>
-    //         {
-    //             if (status == SavedGameRequestStatus.Success)
-    //             {
-    //                 savedGameClient.ReadBinaryData(game, (lstatus, lserializedFile) =>
-    //                 {
-    //                     if (lstatus == SavedGameRequestStatus.Success)
-    //                     {
-    //                         string data_loaded = System.Text.Encoding.UTF8.GetString(lserializedFile);
-    //                         callback?.Invoke(true, data_loaded);
-    //                     }
-    //                     else
-    //                     {
-    //                         callback?.Invoke(false, null);
-    //                     }
-    //                 }
-    //             );
-    //             }
-    //             else
-    //             {
-    //                 callback?.Invoke(false, null);
-    //             }
-    //         }
-    //     );
-    // }
+        // if (savedGameClient == null)
+        //     callback?.Invoke(false);
+        // else
+        // {
+        //     savedGameClient.OpenWithAutomaticConflictResolution(
+        //                 filename,
+        //                 DataSource.ReadCacheOrNetwork,
+        //                 ConflictResolutionStrategy.UseLongestPlaytime,
+        //                 (status, game) =>
+        //                 {
+        //                     if (status == SavedGameRequestStatus.Success)
+        //                     {
+        //                         var updatedMetadata = new SavedGameMetadataUpdate.Builder().Build();
+        //                         savedGameClient.CommitUpdate(
+        //                             game,
+        //                             updatedMetadata,
+        //                             System.Text.Encoding.UTF8.GetBytes(serializedFile),
+        //                             (ustatus, ugame) =>
+        //                             {
+        //                                 callback?.Invoke(ustatus == SavedGameRequestStatus.Success);
+        //                             }
+        //                         );
+        //                     }
+        //                     else
+        //                     {
+        //                         callback?.Invoke(false);
+        //                     }
+        //                 }
+        //             );
+        // }
 
 
-    // public void DelectWithCloud(string filename, Action<bool> callback = null)
-    // { // 클라우드 서비스에 저장된 데이터를 삭제합니다.
-    //     ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
+    }
+    public void LoadWithCloud(string filename, Action<bool, string> callback = null)
+    { // 클라우드 서비스를 이용하여 로드합니다.
+        // ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
 
-    //     if (savedGameClient == null)
-    //         callback?.Invoke(false);
-    //     else
-    //     {
-    //         savedGameClient.OpenWithAutomaticConflictResolution(
-    //                     filename,
-    //                     DataSource.ReadCacheOrNetwork,
-    //                     ConflictResolutionStrategy.UseLongestPlaytime,
-    //                     (status, game) =>
-    //                     {
-    //                         if (status == SavedGameRequestStatus.Success)
-    //                         {
-    //                             savedGameClient.Delete(game);
-    //                             callback?.Invoke(true);
-    //                         }
-    //                         else
-    //                         {
-    //                             callback?.Invoke(false);
-    //                         }
-    //                     }
-    //                 );
-    //     }
+        // savedGameClient.OpenWithAutomaticConflictResolution(
+        //     filename,
+        //     DataSource.ReadCacheOrNetwork,
+        //     ConflictResolutionStrategy.UseLastKnownGood,
+        //     (status, game) =>
+        //     {
+        //         if (status == SavedGameRequestStatus.Success)
+        //         {
+        //             savedGameClient.ReadBinaryData(game, (lstatus, lserializedFile) =>
+        //             {
+        //                 if (lstatus == SavedGameRequestStatus.Success)
+        //                 {
+        //                     string data_loaded = System.Text.Encoding.UTF8.GetString(lserializedFile);
+        //                     callback?.Invoke(true, data_loaded);
+        //                 }
+        //                 else
+        //                 {
+        //                     callback?.Invoke(false, null);
+        //                 }
+        //             }
+        //         );
+        //         }
+        //         else
+        //         {
+        //             callback?.Invoke(false, null);
+        //         }
+        //     }
+        // );
+    }
 
-    // }
+
+    public void DelectWithCloud(string filename, Action<bool> callback = null)
+    { // 클라우드 서비스에 저장된 데이터를 삭제합니다.
+        // ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
+
+        // if (savedGameClient == null)
+        //     callback?.Invoke(false);
+        // else
+        // {
+        //     savedGameClient.OpenWithAutomaticConflictResolution(
+        //                 filename,
+        //                 DataSource.ReadCacheOrNetwork,
+        //                 ConflictResolutionStrategy.UseLongestPlaytime,
+        //                 (status, game) =>
+        //                 {
+        //                     if (status == SavedGameRequestStatus.Success)
+        //                     {
+        //                         savedGameClient.Delete(game);
+        //                         callback?.Invoke(true);
+        //                     }
+        //                     else
+        //                     {
+        //                         callback?.Invoke(false);
+        //                     }
+        //                 }
+        //             );
+        // }
+
+    }
 }

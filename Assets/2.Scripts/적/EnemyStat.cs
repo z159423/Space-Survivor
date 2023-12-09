@@ -86,11 +86,11 @@ public class EnemyStat : MonoBehaviour
         switch (type)
         {
             case EnemyType.goldGoblin1:
-                // Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin1KilledEvent");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin1KilledEvent");
                 break;
 
             case EnemyType.goldGoblin2:
-                // Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin2KilledEvent");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("GoldGoblin2KilledEvent");
                 break;
         }
     }

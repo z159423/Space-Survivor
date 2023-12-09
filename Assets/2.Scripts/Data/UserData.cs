@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 [System.Serializable]
 public class UserData
 {
@@ -59,6 +60,8 @@ public class UserData
     //public UpgradeModuleObject[] equipedModules_Special = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
 
     public List<UpgradeModuleObject> moduleInventory = new List<UpgradeModuleObject>();
+
+    
 
     public void Init()
     {

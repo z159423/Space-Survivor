@@ -243,7 +243,7 @@ public class UpgradeModuleManager : MonoBehaviour
             GenerateInventoryModulePrefabs(false, currentSortType);
             GenerateEquipModulePrefabs(false);
 
-            // Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_UpgradeModuleUI");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_UpgradeModuleUI");
         }
         else
         {
@@ -465,8 +465,8 @@ public class UpgradeModuleManager : MonoBehaviour
     {
         GetNewModule(module.module.GetUpgradeModuleObject(), false);
 
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule");
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule_tier : " + module.module.tier);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_UnEquipModule_tier : " + module.module.tier);
 
         // foreach (UserData.EquipModuleSaveData data in UserDataManager.instance.currentUserData.equipModuleSaveDatas)
         // {
@@ -609,8 +609,8 @@ public class UpgradeModuleManager : MonoBehaviour
                 break;
         }
 
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_SellModule");
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_SellModule_tier : " + item.module.tier);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_SellModule");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_SellModule_tier : " + item.module.tier);
         Destroy(item.gameObject);
 
         ActiveModuleSellPanel();
@@ -791,8 +791,8 @@ public class UpgradeModuleManager : MonoBehaviour
         ActiveModuleUpgradePanel();
         ActiveModuleDetailPanel();
 
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade");
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade_tier", "ModuleTier", moduleUpgrade1.tier.ToString());
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_ModuleUpgrade_tier", "ModuleTier", moduleUpgrade1.tier.ToString());
     }
 
     ///<summary>
@@ -975,12 +975,12 @@ public class UpgradeModuleManager : MonoBehaviour
         var UI = Resources.Load<GameObject>("UI/ModulePurchaseMenu");
         Instantiate(UI, GameManager.instance.MainUIParent);
 
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModulePurchaseUI");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModulePurchaseUI");
     }
 
     public void MergeAll()
     {
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_OnClickMergeAllBtn");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_OnClickMergeAllBtn");
 
         List<UpgradeModuleObject> completeMergeModuleList = new List<UpgradeModuleObject>();
 
@@ -1016,7 +1016,7 @@ public class UpgradeModuleManager : MonoBehaviour
 
                 print(merged.type);
 
-                // Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_MergeAll");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("Module_MergeAll");
             }
 
             // var nextModule = UserDataManager.instance.currentUserData.moduleInventory[i];

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-// using Firebase.Analytics;
+using Firebase.Analytics;
 
 public class FPSDisplay : MonoBehaviour
 {
@@ -73,7 +73,7 @@ public class FPSDisplay : MonoBehaviour
 
     public void SaveFPS()
     {
-        // FirebaseAnalytics.LogEvent("StageMinFPSEvent", "minFPS",  minFPS.ToString());
+        FirebaseAnalytics.LogEvent("StageMinFPSEvent", "minFPS",  minFPS.ToString());
 
         ResetMinFPS();
     }

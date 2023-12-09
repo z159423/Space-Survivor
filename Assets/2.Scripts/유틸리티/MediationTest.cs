@@ -13,9 +13,4 @@ public class MediationTest : MonoBehaviour
 
         }
     }
-
-    public void show()
-    {
-        // MediationTestSuite.Show();
-    }
 }

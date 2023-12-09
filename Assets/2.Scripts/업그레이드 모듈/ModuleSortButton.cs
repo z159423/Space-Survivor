@@ -24,8 +24,8 @@ public class ModuleSortButton : MonoBehaviour
         UpgradeModuleManager.instance.UpdateUI(type);
         // UpgradeModuleManager.instance.GenerateInventoryModulePrefabs(sortType: type);
 
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModuleSortButton");
-        // Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModuleSortButton_Type", "ModuleType", type.ToString());
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModuleSortButton");
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("UI_ModuleSortButton_Type", "ModuleType", type.ToString());
     }
 
     public void OnSelect()
