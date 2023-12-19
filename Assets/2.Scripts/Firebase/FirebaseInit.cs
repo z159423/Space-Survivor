@@ -6,18 +6,32 @@ using Firebase.Crashlytics;
 using UnityEngine.SceneManagement;
 // using Firebase.Analytics;
 using Firebase.Extensions;
+using Firebase.Auth;
+using Firebase.Database;
 
 public class FirebaseInit : MonoBehaviour
 {
     // Start is called before the first frame update
 
     FirebaseApp _app;
+    FirebaseAuth firebaseAuto;
+    FirebaseDatabase firebaseDatabase;
+
+    public string userID;
+
 
     bool ready = false;
 
+    public static FirebaseInit instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
-        this.TaskWaitUntil(() => SceneManager.LoadScene("MainScene"), () => ready);
+        this.TaskWaitUntil(() => SceneManager.LoadScene("MainScene"), () => ready == true);
 
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
@@ -27,27 +41,99 @@ public class FirebaseInit : MonoBehaviour
 
                 // FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLogin);
 
+                firebaseAuto = FirebaseAuth.DefaultInstance;
+
                 Crashlytics.IsCrashlyticsCollectionEnabled = true;
+
+                firebaseDatabase = FirebaseDatabase.DefaultInstance;
+                firebaseDatabase.SetPersistenceEnabled(false);
 
                 print("Firebase dependencies 연동 선공 + " + task.Result);
 
-                ready = true;
 
             }
             else
             {
                 Debug.LogError("Firebase dependencies failed + " + task.Result);
 
-                ready = true;
             }
         });
     }
 
-
-    IEnumerator wait()
+    public void Login_Anonymouse()
     {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("MainScene");
-        throw new System.Exception("test exception please ignore");
+        firebaseAuto.SignInAnonymouslyAsync().ContinueWith(task =>
+        {
+            if (task.IsCanceled)
+            {
+                Debug.LogError("SignInAnonymouslyAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("SignInAnonymouslyAsync encountered an error: " + task.Exception);
+                return;
+            }
+
+            Firebase.Auth.FirebaseUser result = task.Result;
+
+            userID = result.UserId;
+
+            OnSuccessLogin();
+        });
     }
+
+    void OnSuccessLogin()
+    {
+        LoadFromFirebase(() => ready = true);
+    }
+
+    public void LoadFromFirebase(System.Action onLoadComplete = null)
+    {
+        string os;
+
+#if UNITY_ANDROID
+        os = "AOS";
+#endif
+
+#if UNITY_IOS
+        os = "IOS";
+#endif
+
+        print(userID);
+
+        firebaseDatabase.GetReference("User").Child(userID).GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.LogError("Load firebase Save Failed");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+
+                for (int i = 0; i < snapshot.ChildrenCount; i++)
+                    Debug.Log(snapshot.Child(i.ToString()).Child("username").Value);
+
+                if (task.Result.Exists)
+                {
+                    UserDataManager.instance.currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
+
+                    Debug.LogError(1);
+
+                    onLoadComplete?.Invoke();
+                }
+                else
+                {
+                    Debug.LogError(2);
+
+
+                    onLoadComplete?.Invoke();
+
+                }
+
+            }
+        });
+    }
+
 }

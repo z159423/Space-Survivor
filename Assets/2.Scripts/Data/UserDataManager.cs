@@ -8,6 +8,7 @@ using Firebase;
 using Firebase.Database;
 using Google.MiniJSON;
 using System.Threading.Tasks;
+using Firebase.Extensions;
 
 public class UserDataManager : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class UserDataManager : MonoBehaviour
     public delegate void OnChangeCrystalValue();
     public static OnChangeCrystalValue onChangeCrystalValue;
 
-    DatabaseReference reference;
+    FirebaseDatabase reference;
 
     private void Awake()
     {
@@ -39,7 +40,7 @@ public class UserDataManager : MonoBehaviour
     {
         //StartCoroutine(RewardAdsTimeChecking());
 
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        reference = FirebaseDatabase.DefaultInstance;
     }
 
     private void Update()
@@ -290,7 +291,7 @@ public class UserDataManager : MonoBehaviour
         os = "IOS";
 #endif
 
-        var task = reference.Child(os).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
+        var task = reference.GetReference("User").Child(FirebaseInit.instance.userID).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
 
         this.TaskWaitUntil(() =>
         {
@@ -300,7 +301,7 @@ public class UserDataManager : MonoBehaviour
         }, () => task.IsCompleted);
     }
 
-    public void LoadFromFirebase()
+    public void LoadFromFirebase(System.Action onLoadComplete = null)
     {
         string os;
 
@@ -312,7 +313,10 @@ public class UserDataManager : MonoBehaviour
         os = "IOS";
 #endif
 
-        reference.Child("test").GetValueAsync().ContinueWith(task =>
+        print("12315");
+
+
+        reference.GetReference("User").Child(FirebaseInit.instance.userID).GetValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsFaulted)
             {
@@ -320,11 +324,24 @@ public class UserDataManager : MonoBehaviour
             }
             else if (task.IsCompleted)
             {
-                DataSnapshot snapshot = task.Result;
+                if (task.Result.Exists)
+                {
+                    DataSnapshot snapshot = task.Result;
 
-                Debug.Log(snapshot);
+                    currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
+
+                    for (int i = 0; i < snapshot.ChildrenCount; i++)
+                        Debug.Log(snapshot.Value);
+
+                    onLoadComplete?.Invoke();
+                }
+                else
+                {
+                    onLoadComplete?.Invoke();
+
+                }
+
             }
-
         });
     }
 }

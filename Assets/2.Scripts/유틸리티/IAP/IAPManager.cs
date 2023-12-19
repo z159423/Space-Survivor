@@ -402,6 +402,21 @@ public class IAPManager : MonoBehaviour, IStoreListener
         return purchased;
     }
 
-
+    //구매 복원
+    public void PurchaseRestore(IStoreController controller, IExtensionProvider extensions)
+    {
+        extensions.GetExtension<IAppleExtensions>().RestoreTransactions(result =>
+        {
+            if (result)
+            {
+                // This does not mean anything was restored,
+                // merely that the restoration process succeeded.
+            }
+            else
+            {
+                // Restoration failed.
+            }
+        });
+    }
 
 }
