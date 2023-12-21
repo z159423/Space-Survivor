@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 using Firebase.Extensions;
 using Firebase.Auth;
 using Firebase.Database;
+using UnityEditor.ShaderGraph.Serialization;
+using Newtonsoft.Json;
 
 public class FirebaseInit : MonoBehaviour
 {
@@ -112,14 +114,26 @@ public class FirebaseInit : MonoBehaviour
             {
                 DataSnapshot snapshot = task.Result;
 
-                for (int i = 0; i < snapshot.ChildrenCount; i++)
-                    Debug.Log(snapshot.Child(i.ToString()).Child("username").Value);
+                // for (int i = 0; i < snapshot.ChildrenCount; i++)
+                // Debug.Log(snapshot.Child(i.ToString()).Child("username").Value);
+
+                // print(snapshot.Value.ToString());
+                print(task.Result.Exists);
+
+                foreach (var data in snapshot.Children)
+                {
+                    print(data.Value.ToString());
+                }
 
                 if (task.Result.Exists)
                 {
-                    UserDataManager.instance.currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
-
                     Debug.LogError(1);
+                    var userData = JsonConvert.DeserializeObject<UserData>(JsonUtility.ToJson(snapshot.Value.ToString()));
+                    // UserDataManager.instance.currentUserData = userData;
+                    print(JsonUtility.ToJson(userData));
+                    // UserDataManager.instance.currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
+
+                    UserDataManager.instance.LoadDataSnap(snapshot);
 
                     onLoadComplete?.Invoke();
                 }

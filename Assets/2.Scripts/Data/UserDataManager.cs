@@ -344,5 +344,23 @@ public class UserDataManager : MonoBehaviour
             }
         });
     }
+
+    public void LoadDataSnap(DataSnapshot dataSnapshot)
+    {
+        currentUserData.RemoveAds = bool.Parse(dataSnapshot.Child("RemoveAds").Value.ToString());
+        currentUserData.Survey = bool.Parse(dataSnapshot.Child("Survey").Value.ToString());
+        currentUserData.crystal = int.Parse(dataSnapshot.Child("crystal").Value.ToString());
+        currentUserData.userId = dataSnapshot.Child("userId").Value.ToString();
+
+        currentUserData.usingFreeCrystalTime = dataSnapshot.Child("usingFreeCrystalTime").Value.ToString();
+        currentUserData.usingFreeModuleTime = dataSnapshot.Child("usingFreeModuleTime").Value.ToString();
+        currentUserData.usingShipTrialTime = dataSnapshot.Child("usingShipTrialTime").Value.ToString();
+
+        currentUserData.version = dataSnapshot.Child("version").Value.ToString();
+
+        // currentUserData.equipModuleSaveDatas = dataSnapshot.Child("equipModuleSaveDatas").Value;
+
+
+    }
 }
 
