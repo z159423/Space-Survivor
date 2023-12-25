@@ -6,15 +6,10 @@ using System;
 [System.Serializable]
 public class UserData
 {
-    public string userId;
-
     public int crystal = 0;
 
     public bool RemoveAds = false;
     public bool Survey = false;
-
-    [SerializeField]
-    public List<ShipObjectData> playerHaveShip = new List<ShipObjectData>();
 
     public string usingShipTrialTime = "2000-01-01 01:01:01";
     public string usingFreeCrystalTime = "2000-01-01 01:01:01";
@@ -22,9 +17,8 @@ public class UserData
 
     public string version;
 
-    [SerializeField]
-    public List<int> clearedStageNumber = new List<int>();
-
+    [SerializeField] public List<int> clearedStageNumber = new List<int>();
+    [SerializeField] public List<ShipObjectData> playerHaveShip = new List<ShipObjectData>();
     [SerializeField] public EquipModuleSaveData[] equipModuleSaveDatas = { new EquipModuleSaveData(UpgradeModuleType.AttackType), new EquipModuleSaveData(UpgradeModuleType.DefenceType), new EquipModuleSaveData(UpgradeModuleType.MovementType), new EquipModuleSaveData(UpgradeModuleType.SpecialType) };
 
     // public UserData()

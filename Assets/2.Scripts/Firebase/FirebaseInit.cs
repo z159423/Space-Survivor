@@ -10,6 +10,7 @@ using Firebase.Auth;
 using Firebase.Database;
 using UnityEditor.ShaderGraph.Serialization;
 using Newtonsoft.Json;
+using Sirenix.OdinInspector;
 
 public class FirebaseInit : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class FirebaseInit : MonoBehaviour
     FirebaseAuth firebaseAuto;
     FirebaseDatabase firebaseDatabase;
 
-    public string userID;
+    [ReadOnly] public string userID;
 
 
     bool ready = false;
@@ -123,6 +124,12 @@ public class FirebaseInit : MonoBehaviour
                 foreach (var data in snapshot.Children)
                 {
                     print(data.Value.ToString());
+
+                    IDictionary _data = (IDictionary)data.Value;
+
+                    Debug.LogError(_data["clearedStageNumber"]);
+                    print(_data["RemoveAds"]);
+                    print(_data["crystal"]);
                 }
 
                 if (task.Result.Exists)
@@ -135,14 +142,14 @@ public class FirebaseInit : MonoBehaviour
 
                     UserDataManager.instance.LoadDataSnap(snapshot);
 
-                    onLoadComplete?.Invoke();
+                    // onLoadComplete?.Invoke();
                 }
                 else
                 {
                     Debug.LogError(2);
 
 
-                    onLoadComplete?.Invoke();
+                    // onLoadComplete?.Invoke();
 
                 }
 

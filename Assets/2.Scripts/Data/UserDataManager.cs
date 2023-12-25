@@ -9,6 +9,7 @@ using Firebase.Database;
 using Google.MiniJSON;
 using System.Threading.Tasks;
 using Firebase.Extensions;
+using Newtonsoft.Json;
 
 public class UserDataManager : MonoBehaviour
 {
@@ -350,13 +351,37 @@ public class UserDataManager : MonoBehaviour
         currentUserData.RemoveAds = bool.Parse(dataSnapshot.Child("RemoveAds").Value.ToString());
         currentUserData.Survey = bool.Parse(dataSnapshot.Child("Survey").Value.ToString());
         currentUserData.crystal = int.Parse(dataSnapshot.Child("crystal").Value.ToString());
-        currentUserData.userId = dataSnapshot.Child("userId").Value.ToString();
+        // currentUserData.userId = dataSnapshot.Child("userId").Value.ToString();
 
         currentUserData.usingFreeCrystalTime = dataSnapshot.Child("usingFreeCrystalTime").Value.ToString();
         currentUserData.usingFreeModuleTime = dataSnapshot.Child("usingFreeModuleTime").Value.ToString();
         currentUserData.usingShipTrialTime = dataSnapshot.Child("usingShipTrialTime").Value.ToString();
 
         currentUserData.version = dataSnapshot.Child("version").Value.ToString();
+
+        var clearedStageNumber = dataSnapshot.Child("clearedStageNumber").Value as List<int>;
+
+        foreach(DataSnapshot data in dataSnapshot.Children)
+        {
+            IDictionary _data = (IDictionary)data.Value;
+            print(_data["clearedStageNumber"]);
+            print(_data["RemoveAds"]);
+            print(_data["crystal"]);
+
+        }
+
+        var userData = JsonConvert.DeserializeObject<List<int>>(JsonUtility.ToJson(dataSnapshot.Child("clearedStageNumber").Value.ToString()));
+        // UserDataManager.instance.currentUserData = userData;
+        print(JsonUtility.ToJson(userData));
+        List<int> ints = new List<int>();
+
+        // dataSnapshot.Child("clearedStageNumber").Value
+
+        foreach (var value in dataSnapshot.Child("clearedStageNumber").Value as List<int>)
+            print(value);
+
+        // currentUserData.clearedStageNumber = dataSnapshot.Child("clearedStageNumber").Value as List<int>;
+
 
         // currentUserData.equipModuleSaveDatas = dataSnapshot.Child("equipModuleSaveDatas").Value;
 
