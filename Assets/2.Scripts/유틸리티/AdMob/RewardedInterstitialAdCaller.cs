@@ -141,7 +141,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
     {
         UserDataManager.instance.currentUserData.usingShipTrialTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         //UserDataManager.instance.SaveCurrentDate();
-        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        UserDataManager.instance.Save();
 
         touchProjectPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
@@ -181,7 +182,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
         UserDataManager.instance.currentUserData.usingFreeCrystalTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         //UserDataManager.instance.SaveCurrentDate();
-        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        UserDataManager.instance.Save();
 
         UserDataManager.instance.AddCrystalValue(crystalValue);
 
@@ -219,7 +221,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             UserDataManager.instance.currentUserData.usingFreeCrystalTime = "2000-01-01 01:01:01";
 
-            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            UserDataManager.instance.Save();
 
             return true;
         }
@@ -243,7 +246,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             UserDataManager.instance.currentUserData.usingShipTrialTime = "2000-01-01 01:01:01";
 
-            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            UserDataManager.instance.Save();
 
             return true;
         }
@@ -268,7 +272,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             UserDataManager.instance.currentUserData.usingFreeModuleTime = "2000-01-01 01:01:01";
 
-            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            UserDataManager.instance.Save();
 
             return true;
         }
@@ -288,7 +293,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             UserDataManager.instance.currentUserData.usingFreeCrystalTime = "2000-01-01 01:01:01";
 
-            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            UserDataManager.instance.Save();
 
             return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeCrystalTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
         }
@@ -308,7 +314,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             UserDataManager.instance.currentUserData.usingShipTrialTime = "2000-01-01 01:01:01";
 
-            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            UserDataManager.instance.Save();
 
             return freeCrystalWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingShipTrialTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
         }
@@ -328,7 +335,8 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
             UserDataManager.instance.currentUserData.usingFreeModuleTime = "2000-01-01 01:01:01";
 
-            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            UserDataManager.instance.Save();
 
             return freeModuleWaitTime - (int)Utility.GetTimeDiff(DateTime.ParseExact(UserDataManager.instance.currentUserData.usingFreeModuleTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture)).TotalSeconds;
         }

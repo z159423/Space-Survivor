@@ -263,7 +263,8 @@ public class UpgradeModuleManager : MonoBehaviour
                 }
             }
 
-            GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+            UserDataManager.instance.Save();
+            // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
         }
 
         upgradeModulePanel.SetActive(!upgradeModulePanel.activeSelf);
@@ -541,10 +542,10 @@ public class UpgradeModuleManager : MonoBehaviour
 
         newModuleItem.GetComponent<ModuleItem>().InitModule(newModule, ModuleItem.SlotType.inventory);
 
-
         print("새로운 모듈 획득 : " + newModule.module + " | " + newModule.tier + " | " + newModule.type + " | " + newModule.key);
 
-        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        UserDataManager.instance.Save();
 
         if (_update)
             UpdateUI(currentSortType);
@@ -555,7 +556,8 @@ public class UpgradeModuleManager : MonoBehaviour
     /// </summary>
     public void OnChangeUpgardeModuleSystem()
     {
-        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        UserDataManager.instance.Save();
     }
 
     public void ActiveModuleSellPanel()

@@ -10,7 +10,6 @@ using Firebase.Auth;
 using Firebase.Database;
 using UnityEditor.ShaderGraph.Serialization;
 using Newtonsoft.Json;
-using Sirenix.OdinInspector;
 
 public class FirebaseInit : MonoBehaviour
 {
@@ -18,9 +17,9 @@ public class FirebaseInit : MonoBehaviour
 
     FirebaseApp _app;
     FirebaseAuth firebaseAuto;
-    FirebaseDatabase firebaseDatabase;
+    public FirebaseDatabase firebaseDatabase;
 
-    [ReadOnly] public string userID;
+    public string userID;
 
 
     bool ready = false;
@@ -109,7 +108,11 @@ public class FirebaseInit : MonoBehaviour
         {
             if (task.IsFaulted)
             {
-                Debug.LogError("Load firebase Save Failed");
+                // Debug.LogError("Load firebase Save Failed");
+                Debug.Log("<color=blue>[Firebase]</color> 해당 User의 userID가 없어 로컬데이터를 불러옵니다.");
+
+                UserDataManager.instance.LoadCurrentUserDataFromLocal();
+                onLoadComplete?.Invoke();
             }
             else if (task.IsCompleted)
             {
@@ -119,37 +122,34 @@ public class FirebaseInit : MonoBehaviour
                 // Debug.Log(snapshot.Child(i.ToString()).Child("username").Value);
 
                 // print(snapshot.Value.ToString());
+
+                Debug.Log("<color=blue>[Firebase]</color> 해당 User의 데이터를 불러왔습니다.");
                 print(task.Result.Exists);
+
 
                 foreach (var data in snapshot.Children)
                 {
                     print(data.Value.ToString());
-
-                    IDictionary _data = (IDictionary)data.Value;
-
-                    Debug.LogError(_data["clearedStageNumber"]);
-                    print(_data["RemoveAds"]);
-                    print(_data["crystal"]);
                 }
 
                 if (task.Result.Exists)
                 {
-                    Debug.LogError(1);
-                    var userData = JsonConvert.DeserializeObject<UserData>(JsonUtility.ToJson(snapshot.Value.ToString()));
-                    // UserDataManager.instance.currentUserData = userData;
-                    print(JsonUtility.ToJson(userData));
+                    print(snapshot.Value.ToString());
+                    // var userData = JsonConvert.DeserializeObject<UserData>(JsonUtility.ToJson(snapshot.Value.ToString()));
+                    UserDataManager.instance.currentUserData = JsonConvert.DeserializeObject<UserData>(snapshot.Value.ToString());
+                    // print(JsonUtility.ToJson(userData));
                     // UserDataManager.instance.currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
 
-                    UserDataManager.instance.LoadDataSnap(snapshot);
+                    // UserDataManager.instance.LoadDataSnap(snapshot);
 
-                    // onLoadComplete?.Invoke();
+                    onLoadComplete?.Invoke();
                 }
                 else
                 {
                     Debug.LogError(2);
 
 
-                    // onLoadComplete?.Invoke();
+                    onLoadComplete?.Invoke();
 
                 }
 

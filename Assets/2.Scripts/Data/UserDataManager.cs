@@ -9,7 +9,15 @@ using Firebase.Database;
 using Google.MiniJSON;
 using System.Threading.Tasks;
 using Firebase.Extensions;
-using Newtonsoft.Json;
+
+
+
+public enum SaveType
+{
+    LocalOnly,
+    LocalAndFirebase,
+    FirebaseOnly
+}
 
 public class UserDataManager : MonoBehaviour
 {
@@ -28,6 +36,8 @@ public class UserDataManager : MonoBehaviour
     public static OnChangeCrystalValue onChangeCrystalValue;
 
     FirebaseDatabase reference;
+
+    public SaveType currentSaveType;
 
     private void Awake()
     {
@@ -185,7 +195,8 @@ public class UserDataManager : MonoBehaviour
 
         CrystalDisplay.instance.ChangeCrystalText(currentUserData.crystal);
 
-        GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        // GoogleCloud.instance.SaveUserDataWithCloud(UserDataManager.instance.currentUserData);
+        Save();
 
         onChangeCrystalValue.Invoke();
         //SaveUserData(currentUserData);
@@ -276,6 +287,30 @@ public class UserDataManager : MonoBehaviour
         SaveCurrentDate();
     }
 
+    public void Save()
+    {
+        switch (currentSaveType)
+        {
+            case SaveType.LocalOnly:
+                SaveCurrentDate();
+                break;
+
+            case SaveType.LocalAndFirebase:
+                SaveCurrentDate();
+                SaveToFirebase(currentUserData);
+                break;
+
+            case SaveType.FirebaseOnly:
+                SaveToFirebase(currentUserData);
+                break;
+        }
+    }
+
+    public void Load(SaveType saveType)
+    {
+
+    }
+
     public void SaveToFirebase(UserData userData)
     {
         if (GameManager.instance != null && GameManager.instance.savingIcon != null)
@@ -292,14 +327,32 @@ public class UserDataManager : MonoBehaviour
         os = "IOS";
 #endif
 
-        var task = reference.GetReference("User").Child(FirebaseInit.instance.userID).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
+        // var task = reference.GetReference("User").Child(FirebaseInit.instance.userID).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
 
-        this.TaskWaitUntil(() =>
-        {
-            if (GameManager.instance != null && GameManager.instance.savingIcon != null)
-                GameManager.instance.savingIcon.SetActive(false);
+        // this.TaskWaitUntil(() =>
+        // {
+        //     if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+        //         GameManager.instance.savingIcon.SetActive(false);
 
-        }, () => task.IsCompleted);
+        // }, () => task.IsCompleted);
+
+        FirebaseInit.instance.firebaseDatabase.GetReference("User").Child(FirebaseInit.instance.userID).SetValueAsync(JsonUtility.ToJson(userData))
+          .ContinueWith(task =>
+          {
+              if (task.IsCompleted)
+              {
+                  if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+                      GameManager.instance.savingIcon.SetActive(false);
+
+                  Debug.Log("<color=blue>[Firebase]</color> 서버에 저장을 성공했습니다.");
+              }
+              else
+              {
+
+                  Debug.Log("<color=blue>[Firebase]</color> 서버에 저장을 실패했습니다.");
+
+              }
+          });
     }
 
     public void LoadFromFirebase(System.Action onLoadComplete = null)
@@ -351,7 +404,7 @@ public class UserDataManager : MonoBehaviour
         currentUserData.RemoveAds = bool.Parse(dataSnapshot.Child("RemoveAds").Value.ToString());
         currentUserData.Survey = bool.Parse(dataSnapshot.Child("Survey").Value.ToString());
         currentUserData.crystal = int.Parse(dataSnapshot.Child("crystal").Value.ToString());
-        // currentUserData.userId = dataSnapshot.Child("userId").Value.ToString();
+        currentUserData.userId = dataSnapshot.Child("userId").Value.ToString();
 
         currentUserData.usingFreeCrystalTime = dataSnapshot.Child("usingFreeCrystalTime").Value.ToString();
         currentUserData.usingFreeModuleTime = dataSnapshot.Child("usingFreeModuleTime").Value.ToString();
@@ -359,28 +412,6 @@ public class UserDataManager : MonoBehaviour
 
         currentUserData.version = dataSnapshot.Child("version").Value.ToString();
 
-        var clearedStageNumber = dataSnapshot.Child("clearedStageNumber").Value as List<int>;
-
-        foreach(DataSnapshot data in dataSnapshot.Children)
-        {
-            IDictionary _data = (IDictionary)data.Value;
-            print(_data["clearedStageNumber"]);
-            print(_data["RemoveAds"]);
-            print(_data["crystal"]);
-
-        }
-
-        var userData = JsonConvert.DeserializeObject<List<int>>(JsonUtility.ToJson(dataSnapshot.Child("clearedStageNumber").Value.ToString()));
-        // UserDataManager.instance.currentUserData = userData;
-        print(JsonUtility.ToJson(userData));
-        List<int> ints = new List<int>();
-
-        // dataSnapshot.Child("clearedStageNumber").Value
-
-        foreach (var value in dataSnapshot.Child("clearedStageNumber").Value as List<int>)
-            print(value);
-
-        // currentUserData.clearedStageNumber = dataSnapshot.Child("clearedStageNumber").Value as List<int>;
 
 
         // currentUserData.equipModuleSaveDatas = dataSnapshot.Child("equipModuleSaveDatas").Value;
