@@ -630,7 +630,6 @@ MonoBehaviour:
   currentUserData:
     userId: 
     crystal: 0
-    testString: 
     RemoveAds: 0
     Survey: 0
     playerHaveShip: []
@@ -710,6 +709,7 @@ MonoBehaviour:
         <isNew>k__BackingField: 1
     moduleInventory: []
   crystalTextList: []
+  currentSaveType: 1
 --- !u!114 &473405378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94586080f2e43f345b6146941b591279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userID: 
 --- !u!1 &507942899
 GameObject:
   m_ObjectHideFlags: 0

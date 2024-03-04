@@ -316,6 +316,13 @@ public class UserDataManager : MonoBehaviour
         if (GameManager.instance != null && GameManager.instance.savingIcon != null)
             GameManager.instance.savingIcon.SetActive(true);
 
+        bool complete = false;
+
+        this.TaskWaitUntil(() =>
+        {
+            if (GameManager.instance != null && GameManager.instance.savingIcon != null)
+                GameManager.instance.savingIcon.SetActive(false);
+        }, () => complete);
 
         string os;
 
@@ -326,7 +333,6 @@ public class UserDataManager : MonoBehaviour
 #if UNITY_IOS
         os = "IOS";
 #endif
-
         // var task = reference.GetReference("User").Child(FirebaseInit.instance.userID).SetRawJsonValueAsync(JsonUtility.ToJson(userData));
 
         // this.TaskWaitUntil(() =>
@@ -336,21 +342,20 @@ public class UserDataManager : MonoBehaviour
 
         // }, () => task.IsCompleted);
 
+        // GameManager.instance.savingIcon.SetActive(false);
+
         FirebaseInit.instance.firebaseDatabase.GetReference("User").Child(FirebaseInit.instance.userID).SetValueAsync(JsonUtility.ToJson(userData))
           .ContinueWith(task =>
           {
               if (task.IsCompleted)
               {
-                  if (GameManager.instance != null && GameManager.instance.savingIcon != null)
-                      GameManager.instance.savingIcon.SetActive(false);
-
+                  complete = true;
                   Debug.Log("<color=blue>[Firebase]</color> 서버에 저장을 성공했습니다.");
               }
               else
               {
-
+                  complete = true;
                   Debug.Log("<color=blue>[Firebase]</color> 서버에 저장을 실패했습니다.");
-
               }
           });
     }

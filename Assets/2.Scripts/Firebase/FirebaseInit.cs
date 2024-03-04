@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 using Firebase.Extensions;
 using Firebase.Auth;
 using Firebase.Database;
-using UnityEditor.ShaderGraph.Serialization;
 using Newtonsoft.Json;
 
 public class FirebaseInit : MonoBehaviour
@@ -80,6 +79,8 @@ public class FirebaseInit : MonoBehaviour
             Firebase.Auth.FirebaseUser result = task.Result;
 
             userID = result.UserId;
+
+            print("<color=green>[Firebase Login]</color> Authentication User ID : " + userID);
 
             OnSuccessLogin();
         });
