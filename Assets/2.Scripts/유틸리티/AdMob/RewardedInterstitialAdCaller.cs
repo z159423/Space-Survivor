@@ -406,25 +406,25 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
              adUnitId = "unexpected_platform";
 #endif
 
-        rewardedAd = new RewardedAd(adUnitId);
+        var adRequest = new AdRequest();
 
-        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
-        // Called when an ad request failed to load.
-        rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
-        // Called when an ad is shown.
-        // rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+        // send the request to load the ad.
+        RewardedAd.Load(adUnitId, adRequest,
+            (RewardedAd ad, LoadAdError error) =>
+            {
+                // if error is not null, the load request failed.
+                if (error != null || ad == null)
+                {
+                    Debug.LogError("Rewarded ad failed to load an ad " +
+                                   "with error : " + error);
+                    return;
+                }
 
-        // Called when an ad request failed to show.
-        rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
-        // Called when the user should be rewarded for interacting with the ad.
-        //rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-        // Called when the ad is closed.
-        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+                Debug.Log("Rewarded ad loaded with response : "
+                          + ad.GetResponseInfo());
 
-        // Create an empty ad request.
-        AdRequest request = new AdRequest.Builder().Build();
-        // Load the rewarded ad with the request.
-        rewardedAd.LoadAd(request);
+                rewardedAd = ad;
+            });
 
         //보상형 광고가 완료되었을때
         void HandleRewardedAdLoaded(object sender, EventArgs args)
@@ -476,29 +476,28 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         }
     }
 
-    public static void CallRV(IEnumerator reward, string rvAdsType)
+    public static void CallRV(IEnumerator _reward, string rvAdsType)
     {
         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent");
         FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent", "RvAdsType", rvAdsType);
         // FirebaseAnalytics.LogEvent("ADS_RvAdsCallEvent" + "_" + rvAdsType);
 
-
-        if (rewardedAd.IsLoaded() && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        if (!UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess");
             FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess", "RvAdsType", rvAdsType);
             // FirebaseAnalytics.LogEvent("ADS_RvAdsCallSuccess" + "_" + rvAdsType);
 
-            rewardedAd.OnUserEarnedReward -= HandleUserEarnedReward;
-            rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+            // rewardedAd.OnUserEarnedReward -= HandleUserEarnedReward;
+            // rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
 
-            rewardedAd.OnAdOpening -= HandleRewardedAdOpening;
-            rewardedAd.OnAdOpening += HandleRewardedAdOpening;
+            // rewardedAd.OnAdOpening -= HandleRewardedAdOpening;
+            // rewardedAd.OnAdOpening += HandleRewardedAdOpening;
 
-            void HandleUserEarnedReward(object sender, Reward args)
+            void HandleUserEarnedReward()
             {
                 print("11");
-                rewardList.Add(reward);
+                rewardList.Add(_reward);
 
                 CreateAndLoadRewardedAd();
             }
@@ -510,7 +509,13 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
                 FirebaseAnalytics.LogEvent("ADS_RvAdsOpening", "RvAdsOpenType", rvAdsType);
             }
 
-            rewardedAd.Show();
+            rewardedAd.Show((Reward reward) =>
+            {
+                print("11");
+                rewardList.Add(_reward);
+
+                CreateAndLoadRewardedAd();
+            });
         }
         else
         {
@@ -521,7 +526,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
             //     rewardList.Add(reward);
             // }
             // else 
-            if (!rewardedAd.IsLoaded())
+            if (!rewardedAd.CanShowAd())
             {
                 FirebaseAnalytics.LogEvent("ADS_RvAdsCallFailed_NotLoadedAd", "RvAdsType3", rvAdsType);
                 CreateAndLoadRewardedAd();

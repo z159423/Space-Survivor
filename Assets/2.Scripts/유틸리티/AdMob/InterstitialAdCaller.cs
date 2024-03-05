@@ -78,64 +78,123 @@ public class InterstitialAdCaller : MonoBehaviour
         string adUnitId = "unexpected_platform";
 #endif
 
+        var adRequest = new AdRequest();
+
+        // send the request to load the ad.
+        InterstitialAd.Load(adUnitId, adRequest,
+            (InterstitialAd ad, LoadAdError error) =>
+            {
+                // if error is not null, the load request failed.
+                if (error != null || ad == null)
+                {
+                    Debug.LogError("interstitial ad failed to load an ad " +
+                                   "with error : " + error);
+                    return;
+                }
+
+                Debug.Log("Interstitial ad loaded with response : "
+                          + ad.GetResponseInfo());
+
+                interstitial = ad;
+            });
+
+        RegisterEventHandlers(interstitial);
+
         // Initialize an InterstitialAd. 
         // 전면광고 초기화
-        this.interstitial = new InterstitialAd(adUnitId);
+        // this.interstitial = new InterstitialAd(adUnitId);
 
-        // Create an empty ad request.  
-        // 전면광고 요청
-        AdRequest request = new AdRequest.Builder().Build();
-        // Load the interstitial with the request.
-        // 전면광고 로드      
-        this.interstitial.LoadAd(request);
+        // // Create an empty ad request.  
+        // // 전면광고 요청
+        // AdRequest request = new AdRequest.Builder().Build();
+        // // Load the interstitial with the request.
+        // // 전면광고 로드      
+        // this.interstitial.LoadAd(request);
 
-        // Called when an ad request has successfully loaded.
-        this.interstitial.OnAdLoaded += HandleOnAdLoaded;
-        // Called when an ad request failed to load.
-        this.interstitial.OnAdFailedToLoad += HandleOnAdFailedToLoad;
-        // Called when an ad is shown.
-        this.interstitial.OnAdOpening += HandleOnAdOpening;
-        // Called when the ad is closed.
-        this.interstitial.OnAdClosed += HandleOnAdClosed;
+        // // Called when an ad request has successfully loaded.
+        // this.interstitial.OnAdLoaded += HandleOnAdLoaded;
+        // // Called when an ad request failed to load.
+        // this.interstitial.OnAdFailedToLoad += HandleOnAdFailedToLoad;
+        // // Called when an ad is shown.
+        // this.interstitial.OnAdOpening += HandleOnAdOpening;
+        // // Called when the ad is closed.
+        // this.interstitial.OnAdClosed += HandleOnAdClosed;
 
-        void HandleOnAdLoaded(object sender, EventArgs args)
+        // void HandleOnAdLoaded(object sender, EventArgs args)
+        // {
+        //     MonoBehaviour.print("전면 광고 로드됨");
+
+        //     FirebaseAnalytics.LogEvent("ADS_IrAdsLoadSuccess");
+        // }
+
+        // void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+        // {
+        //     MonoBehaviour.print("전면 광고 로드 실패: "
+        //                         + args.LoadAdError);
+
+        //     FirebaseAnalytics.LogEvent("ADS_IrAdsLoadFailed", "errorCode", "" + args.LoadAdError);
+        // }
+
+        // void HandleOnAdOpening(object sender, EventArgs args)
+        // {
+        //     MonoBehaviour.print("전면 광고 실행중");
+
+        //     FirebaseAnalytics.LogEvent("ADS_IrAdsWatchingEvent");
+        // }
+
+        // void HandleOnAdClosed(object sender, EventArgs args)
+        // {
+        //     MonoBehaviour.print("전면광고 꺼짐");
+
+        //     RequestInterstitial();
+        //     RestartIrAdsCoolTime();
+
+        //     FirebaseAnalytics.LogEvent("ADS_IrAdsClosedEvent");
+        // }
+    }
+
+    private void RegisterEventHandlers(InterstitialAd interstitialAd)
+    {
+        // Raised when the ad is estimated to have earned money.
+        interstitialAd.OnAdPaid += (AdValue adValue) =>
         {
-            MonoBehaviour.print("전면 광고 로드됨");
-
-            FirebaseAnalytics.LogEvent("ADS_IrAdsLoadSuccess");
-        }
-
-        void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
+            Debug.Log(String.Format("Interstitial ad paid {0} {1}.",
+                adValue.Value,
+                adValue.CurrencyCode));
+        };
+        // Raised when an impression is recorded for an ad.
+        interstitialAd.OnAdImpressionRecorded += () =>
         {
-            MonoBehaviour.print("전면 광고 로드 실패: "
-                                + args.LoadAdError);
-
-            FirebaseAnalytics.LogEvent("ADS_IrAdsLoadFailed", "errorCode", "" + args.LoadAdError);
-        }
-
-        void HandleOnAdOpening(object sender, EventArgs args)
+            Debug.Log("Interstitial ad recorded an impression.");
+        };
+        // Raised when a click is recorded for an ad.
+        interstitialAd.OnAdClicked += () =>
         {
-            MonoBehaviour.print("전면 광고 실행중");
-
-            FirebaseAnalytics.LogEvent("ADS_IrAdsWatchingEvent");
-        }
-
-        void HandleOnAdClosed(object sender, EventArgs args)
+            Debug.Log("Interstitial ad was clicked.");
+        };
+        // Raised when an ad opened full screen content.
+        interstitialAd.OnAdFullScreenContentOpened += () =>
         {
-            MonoBehaviour.print("전면광고 꺼짐");
-
-            RequestInterstitial();
-            RestartIrAdsCoolTime();
-
-            FirebaseAnalytics.LogEvent("ADS_IrAdsClosedEvent");
-        }
+            Debug.Log("Interstitial ad full screen content opened.");
+        };
+        // Raised when the ad closed full screen content.
+        interstitialAd.OnAdFullScreenContentClosed += () =>
+        {
+            Debug.Log("Interstitial ad full screen content closed.");
+        };
+        // Raised when the ad failed to open full screen content.
+        interstitialAd.OnAdFullScreenContentFailed += (AdError error) =>
+        {
+            Debug.LogError("Interstitial ad failed to open full screen content " +
+                           "with error : " + error);
+        };
     }
 
     public void CallIrAds()
     {
         FirebaseAnalytics.LogEvent("ADS_IrAdsCallEvent");
 
-        if (this.interstitial.IsLoaded() && IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
+        if (IrAdsReady && !UserDataManager.instance.currentUserData.RemoveAds && !IAPManager.instance.HadPurchased())
         {
             this.interstitial.Show();
             FirebaseAnalytics.LogEvent("ADS_IrAdsCallSuccess");

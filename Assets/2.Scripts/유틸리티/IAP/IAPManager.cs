@@ -424,4 +424,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
         });
     }
 
+    public void OnInitializeFailed(InitializationFailureReason error, string message)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -51,7 +51,7 @@ public class FirebaseInit : MonoBehaviour
 
                 print("Firebase dependencies 연동 선공 + " + task.Result);
 
-
+                
             }
             else
             {
