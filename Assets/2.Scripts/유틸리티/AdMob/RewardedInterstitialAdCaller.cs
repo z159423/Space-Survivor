@@ -130,6 +130,10 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         touchProjectPanel.SetActive(false);
         GameManager.instance.revivedThisGame = true;
         GameManager.instance.gameStart = true;
+        GameManager.instance.Resurrection();
+        GameManager.instance.StartTimer();
+        EnemyGenerator.instance.StartSpawnEnemy();
+        playerStat.Resurrection();
 
         InterstitialAdCaller.instance.RestartIrAdsCoolTime();
 
