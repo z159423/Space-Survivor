@@ -116,11 +116,6 @@ public class GameManager : MonoBehaviour
         UserDataManager.onChangeCrystalValue += InitShipBuyButton;
 
         ShipChangeBtn();
-
-        this.TaskDelay(3f, () =>
-        {
-            throw new System.Exception("test exception please ignore");
-        });
     }
 
     public void ResetTime()

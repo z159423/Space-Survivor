@@ -1175,6 +1175,9 @@ MonoBehaviour:
   productId: ultrapack
   buttonType: 0
   consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
@@ -10814,6 +10817,9 @@ MonoBehaviour:
   productId: removeads
   buttonType: 0
   consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
@@ -11063,7 +11069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &283034958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16260,6 +16266,9 @@ MonoBehaviour:
   productId: removeads
   buttonType: 0
   consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
@@ -21789,6 +21798,9 @@ MonoBehaviour:
   productId: starterpack
   buttonType: 0
   consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
@@ -24745,8 +24757,8 @@ MonoBehaviour:
   <startShip>k__BackingField: {fileID: 0}
   <shipList>k__BackingField: {fileID: 11400000, guid: 8da70659d36e72942b403afa0d5f7875, type: 2}
   currentUserData:
+    userId: 
     crystal: 0
-    testString: 
     RemoveAds: 0
     Survey: 0
     playerHaveShip: []
@@ -24758,6 +24770,7 @@ MonoBehaviour:
     equipModuleSaveDatas: []
     moduleInventory: []
   crystalTextList: []
+  currentSaveType: 0
 --- !u!4 &666147752
 Transform:
   m_ObjectHideFlags: 0
@@ -32905,7 +32918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &900682418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52636,6 +52649,9 @@ MonoBehaviour:
   productId: removeads
   buttonType: 0
   consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
@@ -66173,6 +66189,9 @@ MonoBehaviour:
   productId: megapack
   buttonType: 0
   consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
   onPurchaseComplete:
     m_PersistentCalls:
       m_Calls:
@@ -83419,44 +83438,44 @@ MonoBehaviour:
   moduleUpgradeInventoryParent: {fileID: 709836155}
   moduleUpgradeBtn: {fileID: 1037772160}
   moduleUpgrade1:
-    <type>k__BackingField: 0
-    <module>k__BackingField: 0
-    <tier>k__BackingField: 0
-    <key>k__BackingField: 
-    <isNew>k__BackingField: 1
+    type: 0
+    module: 0
+    tier: 0
+    key: 
+    isNew: 1
   moduleUpgrade1Image: {fileID: 781981401}
   moduleUpgrade1Cover: {fileID: 1600223237}
   moduleUpgrade2:
-    <type>k__BackingField: 0
-    <module>k__BackingField: 0
-    <tier>k__BackingField: 0
-    <key>k__BackingField: 
-    <isNew>k__BackingField: 1
+    type: 0
+    module: 0
+    tier: 0
+    key: 
+    isNew: 1
   moduleUpgrade2Image: {fileID: 463114645}
   moduleUpgrade2Cover: {fileID: 274244323}
   moduleUpgrade3:
-    <type>k__BackingField: 0
-    <module>k__BackingField: 0
-    <tier>k__BackingField: 0
-    <key>k__BackingField: 
-    <isNew>k__BackingField: 1
+    type: 0
+    module: 0
+    tier: 0
+    key: 
+    isNew: 1
   moduleUpgrade3Image: {fileID: 450196757}
   moduleUpgrade3Cover: {fileID: 1728730334}
   sellPanel: {fileID: 1096333605}
   costText: {fileID: 1390205770}
   sellYesBtn: {fileID: 2084521635}
   swapingModule:
-    <type>k__BackingField: 0
-    <module>k__BackingField: 0
-    <tier>k__BackingField: 0
-    <key>k__BackingField: 
-    <isNew>k__BackingField: 1
+    type: 0
+    module: 0
+    tier: 0
+    key: 
+    isNew: 1
   selectedModule:
-    <type>k__BackingField: 0
-    <module>k__BackingField: 0
-    <tier>k__BackingField: 0
-    <key>k__BackingField: 
-    <isNew>k__BackingField: 1
+    type: 0
+    module: 0
+    tier: 0
+    key: 
+    isNew: 1
   sortBtns:
   - {fileID: 1555614524}
   - {fileID: 1099928861}

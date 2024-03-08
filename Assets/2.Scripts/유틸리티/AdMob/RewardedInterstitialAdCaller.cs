@@ -126,7 +126,7 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         touchProjectPanel.SetActive(true);
         yield return new WaitForSeconds(0.3f);
 
-        reviveButton.onClick.Invoke();
+        // reviveButton.onClick.Invoke();
         touchProjectPanel.SetActive(false);
         GameManager.instance.revivedThisGame = true;
         GameManager.instance.gameStart = true;

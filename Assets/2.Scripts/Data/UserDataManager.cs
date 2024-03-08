@@ -344,6 +344,8 @@ public class UserDataManager : MonoBehaviour
 
         // GameManager.instance.savingIcon.SetActive(false);
 
+        print(JsonUtility.ToJson(userData));
+
         FirebaseInit.instance.firebaseDatabase.GetReference("User").Child(FirebaseInit.instance.userID).SetValueAsync(JsonUtility.ToJson(userData))
           .ContinueWith(task =>
           {
@@ -386,6 +388,8 @@ public class UserDataManager : MonoBehaviour
                 if (task.Result.Exists)
                 {
                     DataSnapshot snapshot = task.Result;
+
+                    print(snapshot.Value.ToString());
 
                     currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
 

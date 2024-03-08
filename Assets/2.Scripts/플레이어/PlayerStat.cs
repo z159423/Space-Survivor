@@ -134,6 +134,8 @@ public class PlayerStat : MonoBehaviour
         }
     }
 
+
+[Button("Force Die")]
     private void Die(string name = "none")
     {
         playerDie = true;

@@ -138,6 +138,12 @@ public class FirebaseInit : MonoBehaviour
                     print(snapshot.Value.ToString());
                     // var userData = JsonConvert.DeserializeObject<UserData>(JsonUtility.ToJson(snapshot.Value.ToString()));
                     UserDataManager.instance.currentUserData = JsonConvert.DeserializeObject<UserData>(snapshot.Value.ToString());
+
+                    for(int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; i++)
+                    {
+                        UserDataManager.instance.currentUserData.equipModuleSaveDatas[i].type = (UpgradeModuleType)i + 1;
+                    }
+                    
                     // print(JsonUtility.ToJson(userData));
                     // UserDataManager.instance.currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
 
@@ -147,13 +153,8 @@ public class FirebaseInit : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError(2);
-
-
                     onLoadComplete?.Invoke();
-
                 }
-
             }
         });
     }

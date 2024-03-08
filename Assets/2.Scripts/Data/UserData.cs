@@ -24,8 +24,9 @@ public class UserData
 
     [SerializeField]
     public List<int> clearedStageNumber = new List<int>();
-
     [SerializeField] public EquipModuleSaveData[] equipModuleSaveDatas = { new EquipModuleSaveData(UpgradeModuleType.AttackType), new EquipModuleSaveData(UpgradeModuleType.DefenceType), new EquipModuleSaveData(UpgradeModuleType.MovementType), new EquipModuleSaveData(UpgradeModuleType.SpecialType) };
+    public List<UpgradeModuleObject> moduleInventory = new List<UpgradeModuleObject>();
+
 
     // public UserData()
     // {
@@ -59,7 +60,7 @@ public class UserData
     //public UpgradeModuleObject[] equipedModules_Movement = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
     //public UpgradeModuleObject[] equipedModules_Special = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
 
-    public List<UpgradeModuleObject> moduleInventory = new List<UpgradeModuleObject>();
+
 
     public void Init()
     {

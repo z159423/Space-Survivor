@@ -453,6 +453,7 @@ public class UpgradeModuleManager : MonoBehaviour
         }
         else
         {
+            print("Swap Mode On");
             SwapModeOn(module.module.GetUpgradeModuleObject());
         }
 

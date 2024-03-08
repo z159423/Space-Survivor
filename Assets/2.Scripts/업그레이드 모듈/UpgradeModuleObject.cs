@@ -8,14 +8,23 @@ using System.Linq;
 [System.Serializable]
 public class UpgradeModuleObject : IUpgradeModule
 {
-    [field: SerializeField] public UpgradeModuleType type { get; private set; }
-    [field: SerializeField] public UpgradeModules module { get; private set; }
-    [field: SerializeField] public UpgradeModuleTier tier { get; private set; }
-    [field: SerializeField] public string key { get; private set; }
-    [field: SerializeField] public bool isNew { get; set; } = true;
+    [SerializeField] public UpgradeModuleType type;
+    UpgradeModuleType IUpgradeModule.type => type;
+
+    [SerializeField] public UpgradeModules module;
+    UpgradeModules IUpgradeModule.module => module;
+
+    [SerializeField] public UpgradeModuleTier tier;
+    UpgradeModuleTier IUpgradeModule.tier => tier;
+
+    [SerializeField] public string key;
+    string IUpgradeModule.key => key;
+
+    [SerializeField] public bool isNew = true;
 
 
     public static readonly int[] sellCosts = { 0, 8, 50, 200, 400, 1000 };
+
 
     public UpgradeModuleObject()
     {
