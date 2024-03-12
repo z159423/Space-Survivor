@@ -9,6 +9,8 @@ using Firebase.Extensions;
 using Firebase.Auth;
 using Firebase.Database;
 using Newtonsoft.Json;
+using Google;
+using System.Threading.Tasks;
 
 public class FirebaseInit : MonoBehaviour
 {
@@ -19,6 +21,10 @@ public class FirebaseInit : MonoBehaviour
     public FirebaseDatabase firebaseDatabase;
 
     public string userID;
+
+    string googleIdToken = "YOUR_GOOGLE_ID_TOKEN";
+    string googleAccessToken = "YOUR_GOOGLE_ACCESS_TOKEN";
+
 
 
     bool ready = false;
@@ -51,7 +57,7 @@ public class FirebaseInit : MonoBehaviour
 
                 print("Firebase dependencies 연동 선공 + " + task.Result);
 
-                
+
             }
             else
             {
@@ -80,10 +86,109 @@ public class FirebaseInit : MonoBehaviour
 
             userID = result.UserId;
 
-            print("<color=green>[Firebase Login]</color> Authentication User ID : " + userID);
+            print("<color=green>[Firebase Login]</color> Anonymouse Authentication User ID : " + userID);
 
             OnSuccessLogin();
         });
+    }
+
+    public void Login_Google()
+    {
+        // if (GoogleSignIn.Configuration == null)
+        // {
+        //     // 설정
+        //     GoogleSignIn.Configuration = new GoogleSignInConfiguration
+        //     {
+        //         RequestIdToken = true,
+        //         RequestEmail = true,
+        //         // Copy this value from the google-service.json file.
+        //         // oauth_client with type == 3
+        //         WebClientId = "997553477781-5n1nk4nri21t9q3i4ob0sk2slvjq1rl7.apps.googleusercontent.com"
+        //     };
+        // }
+
+        if (GoogleSignIn.Configuration == null)
+        {
+            GoogleSignIn.Configuration = new GoogleSignInConfiguration
+            {
+                WebClientId = "997553477781-5n1nk4nri21t9q3i4ob0sk2slvjq1rl7.apps.googleusercontent.com",
+                RequestEmail = true,
+                RequestIdToken = true,
+                UseGameSignIn = false
+            };
+        }
+
+        GoogleSignIn.DefaultInstance.SignIn().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCanceled)
+            {
+                Debug.LogWarning("[DB] GoogleSignIn was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("[DB] GoogleSignIn encountered an error: " + task.Exception);
+                return;
+            }
+            if (task.IsCompleted)
+            {
+                OnSuccessLogin();
+
+                Google.GoogleSignInUser user = task.Result;
+                userID = user.UserId;
+
+                print("<color=green>[Firebase Login]</color> Google Authentication User ID : " + userID);
+
+            }
+        });
+
+        // Task<GoogleSignInUser> signIn = GoogleSignIn.DefaultInstance.SignIn();
+
+        // TaskCompletionSource<FirebaseUser> signInCompleted = new TaskCompletionSource<FirebaseUser>();
+
+        // signIn.ContinueWithOnMainThread(task =>
+        // {
+        //     if (task.IsCanceled)
+        //     {
+        //         Debug.Log("Google Login task.IsCanceled");
+        //     }
+        //     else if (task.IsFaulted)
+        //     {
+        //         Debug.Log("Google Login task.IsFaulted");
+        //     }
+        //     else
+        //     {
+        //         Credential credential = Firebase.Auth.GoogleAuthProvider.GetCredential(((Task<GoogleSignInUser>)task).Result.IdToken, null);
+        //         firebaseAuto.SignInWithCredentialAsync(credential).ContinueWith(authTask =>
+        //         {
+        //             if (authTask.IsCanceled)
+        //             {
+        //                 signInCompleted.SetCanceled();
+        //                 Debug.Log("Google Login authTask.IsCanceled");
+        //                 return;
+        //             }
+        //             if (authTask.IsFaulted)
+        //             {
+        //                 signInCompleted.SetException(authTask.Exception);
+        //                 Debug.Log("Google Login authTask.IsFaulted");
+        //                 return;
+        //             }
+
+        //             Google.GoogleSignInUser user = task.Result;
+        //             userID = user.UserId;
+
+        //             print("<color=green>[Firebase Login]</color> Google Authentication User ID : " + userID);
+
+        //             Debug.LogFormat("Google User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
+        //             return;
+        //         });
+        //     }
+        // });
+    }
+
+    public void Login_Apple()
+    {
+
     }
 
     void OnSuccessLogin()
@@ -139,11 +244,11 @@ public class FirebaseInit : MonoBehaviour
                     // var userData = JsonConvert.DeserializeObject<UserData>(JsonUtility.ToJson(snapshot.Value.ToString()));
                     UserDataManager.instance.currentUserData = JsonConvert.DeserializeObject<UserData>(snapshot.Value.ToString());
 
-                    for(int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; i++)
-                    {
-                        UserDataManager.instance.currentUserData.equipModuleSaveDatas[i].type = (UpgradeModuleType)i + 1;
-                    }
-                    
+                    // for(int i = 0; i < UserDataManager.instance.currentUserData.equipModuleSaveDatas.Length; i++)
+                    // {
+                    //     UserDataManager.instance.currentUserData.equipModuleSaveDatas[i].type = (UpgradeModuleType)i + 1;
+                    // }
+
                     // print(JsonUtility.ToJson(userData));
                     // UserDataManager.instance.currentUserData = JsonUtility.FromJson<UserData>(snapshot.Value.ToString());
 

@@ -27,16 +27,16 @@ public class Projectile_SpiralVortex : ProjectileLogic
             {
                 currentSpawnPosition = Random.Range(0, spiralVortexSpawnPosition.Length);
 
-                print(PlayerWeapon.usingSpiralVortexPosition.Count);
+                print(PlayerWeapon.activeSpiralVortexPositions.Count);
 
-                if (!PlayerWeapon.usingSpiralVortexPosition.Contains(spiralVortexSpawnPosition[currentSpawnPosition]))
+                if (!PlayerWeapon.activeSpiralVortexPositions.Contains(spiralVortexSpawnPosition[currentSpawnPosition]))
                 {
-                    foreach (int num in PlayerWeapon.usingSpiralVortexPosition)
+                    foreach (int num in PlayerWeapon.activeSpiralVortexPositions)
                     {
                         print(num);
                     }
 
-                    PlayerWeapon.usingSpiralVortexPosition.Add(spiralVortexSpawnPosition[currentSpawnPosition]);
+                    PlayerWeapon.activeSpiralVortexPositions.Add(spiralVortexSpawnPosition[currentSpawnPosition]);
                     //usingPosition.Add(currentSpawnPosition);
                     SetPosition(spiralVortexSpawnPosition[currentSpawnPosition]);
                     break;
@@ -104,6 +104,6 @@ public class Projectile_SpiralVortex : ProjectileLogic
     {
         enemyOnCollider.Clear();
         StopCoroutine(damageTick);
-        PlayerWeapon.usingSpiralVortexPosition.Remove(currentSpawnPosition);
+        PlayerWeapon.activeSpiralVortexPositions.Remove(currentSpawnPosition);
     }
 }

@@ -110,7 +110,7 @@ public class LevelUpManager : MonoBehaviour
         //ȹ�� ������ �нú�� �߰�
         currentObtainableList.AddRange(obtainablePassives);
 
-        var maxWeapons = playerWeapon.GetMaxLevelEquipmentList();
+        var maxWeapons = playerWeapon.GetMaxLevelEquipments();
 
         //�̹� ������ ���� ����Ʈ���� ����
         for (int i = 0; i < maxWeapons.Count; i++)

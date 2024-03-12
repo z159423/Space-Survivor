@@ -36,11 +36,11 @@ public class FirebaseLogin : MonoBehaviour
             FirebaseInit.instance.Login_Anonymouse();
 
         if (type == LoginType.GOOGLE)
-            FirebaseInit.instance.Login_Anonymouse();
+            FirebaseInit.instance.Login_Google();
 
 
         if (type == LoginType.APPLE)
-            FirebaseInit.instance.Login_Anonymouse();
+            FirebaseInit.instance.Login_Apple();
 
 
         guestBtn.interactable = false;

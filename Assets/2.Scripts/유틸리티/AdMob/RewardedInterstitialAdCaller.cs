@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using TMPro;
 using Firebase.Analytics;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 
 public class RewardedInterstitialAdCaller : MonoBehaviour
 {
@@ -25,39 +26,33 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
 
     private static RewardedAd rewardedAd;
 
-    private RewardedAd crystallAddRewardedAd;
-    [SerializeField] private TextMeshProUGUI crystalValueText;
-    private RewardedAd shipTrialRewardedAd;
-    [SerializeField] private Button shipTrialButton;
-    private RewardedAd reviveRewardedAd;
-    [SerializeField] private Button reviveButton;
-    private RewardedAd crystalDoubleRewardAd;
+    [FoldoutGroup("Reward")][SerializeField] private TextMeshProUGUI crystalValueText;
+    [FoldoutGroup("Reward")][SerializeField] private Button shipTrialButton;
+    [FoldoutGroup("Reward")][SerializeField] private Button reviveButton;
+    [FoldoutGroup("Reward")][SerializeField] private Button[] crystalDoubleButtons;
+    [FoldoutGroup("Reward")][field: SerializeField] public bool useCrystalDoubleThisStage { get; set; } = false;
 
-    private RewardedAd getAllUpgardeAd;
-    [SerializeField] private Button[] crystalDoubleButtons;
-    [field: SerializeField] public bool useCrystalDoubleThisStage { get; set; } = false;
-
-    [SerializeField] private GameObject touchProjectPanel;
-    [SerializeField] private PlayerStat playerStat;
+    [FoldoutGroup("Reward")][SerializeField] private GameObject touchProjectPanel;
+    [FoldoutGroup("Reward")][SerializeField] private PlayerStat playerStat;
 
     [Space]
 
-    public int crystalValue = 25;
-    [SerializeField] private int freeCrystalWaitTime = 1800;
-    [SerializeField] private int shipTrialWaitTime = 1800;
-    [SerializeField] private int freeModuleWaitTime = 1800;
+    [FoldoutGroup("Reward")] public int crystalValue = 25;
+    [FoldoutGroup("Reward")][SerializeField] private int freeCrystalWaitTime = 1800;
+    [FoldoutGroup("Reward")][SerializeField] private int shipTrialWaitTime = 1800;
+    [FoldoutGroup("Reward")][SerializeField] private int freeModuleWaitTime = 1800;
 
 
     [Space]
-    [SerializeField] private GameObject freeCrystalButtonImage;
-    [SerializeField] private TextMeshProUGUI freeCrystalButtonTimeText;
+    [FoldoutGroup("Reward")][SerializeField] private GameObject freeCrystalButtonImage;
+    [FoldoutGroup("Reward")][SerializeField] private TextMeshProUGUI freeCrystalButtonTimeText;
 
-    [SerializeField] private GameObject trialShipButtonImage;
-    [SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
+    [FoldoutGroup("Reward")][SerializeField] private GameObject trialShipButtonImage;
+    [FoldoutGroup("Reward")][SerializeField] private TextMeshProUGUI trialShipButtonTimeText;
 
-    private static List<IEnumerator> rewardList = new List<IEnumerator>();
+    [FoldoutGroup("Reward")] private static List<IEnumerator> rewardList = new List<IEnumerator>();
 
-    public GameObject crystalBonusRVBtn = null;
+    [FoldoutGroup("Reward")] public GameObject crystalBonusRVBtn = null;
 
     private void Awake()
     {
@@ -203,7 +198,6 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
         LevelUpManager.instance.GetAllCurrentUpgrade();
 
         FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_GetAllUpgarde");
-
     }
 
     public bool IsFreeCrystalReady()
@@ -410,25 +404,25 @@ public class RewardedInterstitialAdCaller : MonoBehaviour
              adUnitId = "unexpected_platform";
 #endif
 
-        var adRequest = new AdRequest();
+        // var adRequest = new AdRequest();
 
-        // send the request to load the ad.
-        RewardedAd.Load(adUnitId, adRequest,
-            (RewardedAd ad, LoadAdError error) =>
-            {
-                // if error is not null, the load request failed.
-                if (error != null || ad == null)
-                {
-                    Debug.LogError("Rewarded ad failed to load an ad " +
-                                   "with error : " + error);
-                    return;
-                }
+        // // send the request to load the ad.
+        // RewardedAd.Load(adUnitId, adRequest,
+        //     (RewardedAd ad, LoadAdError error) =>
+        //     {
+        //         // if error is not null, the load request failed.
+        //         if (error != null || ad == null)
+        //         {
+        //             Debug.LogError("Rewarded ad failed to load an ad " +
+        //                            "with error : " + error);
+        //             return;
+        //         }
 
-                Debug.Log("Rewarded ad loaded with response : "
-                          + ad.GetResponseInfo());
+        //         Debug.Log("Rewarded ad loaded with response : "
+        //                   + ad.GetResponseInfo());
 
-                rewardedAd = ad;
-            });
+        //         rewardedAd = ad;
+        //     });
 
         //보상형 광고가 완료되었을때
         void HandleRewardedAdLoaded(object sender, EventArgs args)

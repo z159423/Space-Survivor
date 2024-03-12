@@ -17,7 +17,7 @@ public class ReloadingDeviceStat : ScriptableObject, IPassiveEquipment
         switch (upgradeModule.upgradeModuleType)
         {
             case upgradeModuleType.IncreaseDamagePercent:
-                playerWeapon.additionalCoolTime.AddPercentModifier(upgradeModule.value1);
+                playerWeapon.additionalCoolTimeStat.AddPercentModifier(upgradeModule.value1);
                 break;
         }
     }
@@ -28,7 +28,7 @@ public class ReloadingDeviceStat : ScriptableObject, IPassiveEquipment
 
         playerWeapon = playerStat.GetComponent<PlayerWeapon>();
 
-        playerWeapon.additionalCoolTime.AddPercentModifier(decreaseCoolTimeValue);
+        playerWeapon.additionalCoolTimeStat.AddPercentModifier(decreaseCoolTimeValue);
 
         SetCoolTimeSlot();
     }

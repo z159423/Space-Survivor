@@ -39,7 +39,7 @@ public class UserData
     [System.Serializable]
     public class EquipModuleSaveData
     {
-        [field: SerializeField] public UpgradeModuleType type { get; set; }
+        [SerializeField] public UpgradeModuleType type;
         public UpgradeModuleObject[] equipedModules = new UpgradeModuleObject[ModuleEquipData.UPGRADE_MODULE_EQUIP_MAX_COUNT];
 
         public bool CheckingCurrentEquipModuleData(UpgradeModuleType type)
@@ -66,10 +66,11 @@ public class UserData
     {
         // equipModuleSaveDatas = new EquipModuleSaveData[4];
 
-        // for(int i = 0; i < equipModuleSaveDatas.Length; i++)
-        // {
-        //     equipModuleSaveDatas[i].type = (UpgradeModuleType)(i + 1);
-        // }
+        for (int i = 0; i < equipModuleSaveDatas.Length; i++)
+        {
+            if (equipModuleSaveDatas[i].type == UpgradeModuleType.None)
+                equipModuleSaveDatas[i].type = (UpgradeModuleType)(i + 1);
+        }
     }
 
     /// <summary>

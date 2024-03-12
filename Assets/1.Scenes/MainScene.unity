@@ -32450,6 +32450,7 @@ GameObject:
   - component: {fileID: 893398985}
   - component: {fileID: 893398984}
   - component: {fileID: 893398983}
+  - component: {fileID: 893398986}
   m_Layer: 5
   m_Name: WatchAdsButton
   m_TagString: Untagged
@@ -32523,9 +32524,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191666596}
-        m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: CallRV_FreeCrystal
+      - m_Target: {fileID: 893398986}
+        m_TargetAssemblyTypeName: RewardBtn, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32573,6 +32574,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893398981}
   m_CullTransparentMesh: 1
+--- !u!114 &893398986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893398981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2576879939fd5d1459debaaa44a0c769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &893403141
 GameObject:
   m_ObjectHideFlags: 0
@@ -50704,8 +50718,9 @@ GameObject:
   - component: {fileID: 1191666596}
   - component: {fileID: 1191666597}
   - component: {fileID: 1191666598}
+  - component: {fileID: 1191666599}
   m_Layer: 0
-  m_Name: AdMob
+  m_Name: AdManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50718,7 +50733,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191666593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5786b92ebd488e54ea233408b7dc7ead, type: 3}
   m_Name: 
@@ -50747,7 +50762,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191666593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f984e359e690df4fa85b0e9cb977e9e, type: 3}
   m_Name: 
@@ -50777,7 +50792,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191666593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1944e07afb613144878aac2c60adf08, type: 3}
   m_Name: 
@@ -50798,6 +50813,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2821ac24ad0dfbb4b8c2a1ee3a0c46fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1191666599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191666593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce03ecf2ac1fcac48b92cf5d8880bd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystalValue: 100
+  freeCrystalWaitTime: 1800
+  shipTrialWaitTime: 1800
+  freeModuleWaitTime: 1800
+  crystalValueText: {fileID: 1745737301}
+  shipTrialButton: {fileID: 1885043686}
+  reviveButton: {fileID: 1810399677}
+  crystalDoubleButtons:
+  - {fileID: 1786888890}
+  touchProjectPanel: {fileID: 1994649743}
+  playerStat: {fileID: 923141302}
+  freeCrystalButtonImage: {fileID: 1814950713}
+  freeCrystalButtonTimeText: {fileID: 1788092323}
+  trialShipButtonImage: {fileID: 1002249655}
+  trialShipButtonTimeText: {fileID: 1895274002}
+  crystalBonusRVBtn: {fileID: 0}
+  IrAdsCallTime: 45
+  IrAdsReady: 0
 --- !u!1 &1194923043
 GameObject:
   m_ObjectHideFlags: 0
@@ -71812,6 +71857,7 @@ GameObject:
   - component: {fileID: 1725421479}
   - component: {fileID: 1725421478}
   - component: {fileID: 1725421477}
+  - component: {fileID: 1725421480}
   m_Layer: 5
   m_Name: GetAllUpgrade
   m_TagString: Untagged
@@ -71886,9 +71932,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191666596}
-        m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: CallRV_GetAllUpgrade
+      - m_Target: {fileID: 1725421480}
+        m_TargetAssemblyTypeName: RewardBtn, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -71936,6 +71982,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725421475}
   m_CullTransparentMesh: 1
+--- !u!114 &1725421480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725421475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2576879939fd5d1459debaaa44a0c769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
 --- !u!1 &1727868782
 GameObject:
   m_ObjectHideFlags: 0
@@ -75339,6 +75398,7 @@ GameObject:
   - component: {fileID: 1786888891}
   - component: {fileID: 1786888890}
   - component: {fileID: 1786888889}
+  - component: {fileID: 1786888893}
   m_Layer: 5
   m_Name: CrystalDoubleBtn
   m_TagString: Untagged
@@ -75432,9 +75492,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191666596}
-        m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: CallRV_CrystalDouble
+      - m_Target: {fileID: 1786888893}
+        m_TargetAssemblyTypeName: RewardBtn, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -75482,6 +75542,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786888887}
   m_CullTransparentMesh: 1
+--- !u!114 &1786888893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786888887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2576879939fd5d1459debaaa44a0c769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
 --- !u!1 &1788092321
 GameObject:
   m_ObjectHideFlags: 0
@@ -76295,6 +76368,7 @@ GameObject:
   - component: {fileID: 1810399679}
   - component: {fileID: 1810399678}
   - component: {fileID: 1810399677}
+  - component: {fileID: 1810399680}
   m_Layer: 5
   m_Name: ReviveBtn
   m_TagString: Untagged
@@ -76368,9 +76442,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191666596}
-        m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: CallRV_Revive
+      - m_Target: {fileID: 1810399680}
+        m_TargetAssemblyTypeName: RewardBtn, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76418,6 +76492,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810399675}
   m_CullTransparentMesh: 1
+--- !u!114 &1810399680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810399675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2576879939fd5d1459debaaa44a0c769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
 --- !u!1001 &1812288949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79762,6 +79849,7 @@ GameObject:
   - component: {fileID: 1885043688}
   - component: {fileID: 1885043687}
   - component: {fileID: 1885043686}
+  - component: {fileID: 1885043689}
   m_Layer: 5
   m_Name: TrialShip
   m_TagString: Untagged
@@ -79836,9 +79924,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191666596}
-        m_TargetAssemblyTypeName: RewardedInterstitialAdCaller, Assembly-CSharp
-        m_MethodName: CallRV_TrialShip
+      - m_Target: {fileID: 1885043689}
+        m_TargetAssemblyTypeName: RewardBtn, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -79886,6 +79974,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885043684}
   m_CullTransparentMesh: 1
+--- !u!114 &1885043689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885043684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2576879939fd5d1459debaaa44a0c769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
 --- !u!1001 &1887757604
 PrefabInstance:
   m_ObjectHideFlags: 0

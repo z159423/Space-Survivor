@@ -28,17 +28,17 @@ public class UMP : MonoBehaviour
 
         // If the error is null, the consent information state was updated.
         // You are now ready to check if a form is available.
-        ConsentForm.LoadAndShowConsentFormIfRequired((FormError formError) =>
-        {
-            if (formError != null)
-            {
-                // Consent gathering failed.
-                UnityEngine.Debug.LogError(consentError);
-                return;
-            }
+        // ConsentForm.LoadAndShowConsentFormIfRequired((FormError formError) =>
+        // {
+        //     if (formError != null)
+        //     {
+        //         // Consent gathering failed.
+        //         UnityEngine.Debug.LogError(consentError);
+        //         return;
+        //     }
 
-            // Consent has been gathered.
-        });
+        //     // Consent has been gathered.
+        // });
     }
 
 }

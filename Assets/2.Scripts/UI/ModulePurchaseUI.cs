@@ -77,24 +77,18 @@ public class ModulePurchaseUI : MonoBehaviour
 
     public void CallFreeModuleRVAds()
     {
-        IEnumerator reward_()
+        AdManager.instance.ShowReward(() =>
         {
-            yield return null;
-
             UserDataManager.instance.currentUserData.usingFreeModuleTime = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-
             var newModule = UpgradeModuleManager.instance.GenerateRandomModule();
-
             UpgradeModuleManager.instance.GetNewModule(newModule);
             List<UpgradeModuleObject> newModules = new List<UpgradeModuleObject>();
             newModules.Add(newModule);
             OpenModuleBoxUnboxingUI(newModules, TextAnchor.MiddleCenter);
 
             // Firebase.Analytics.FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_FreeModule");
-        }
+        }, RewardType.FreeModule.ToString());
 
-        RewardedInterstitialAdCaller.CallRV(reward_(), "FreeModule");
-        // RewardedInterstitialAdCaller.instance.CallRV(() => { UpgradeModuleManager.instance.GetNewModule(UpgradeModuleManager.instance.GenerateRandomModule()); });
         AudioManager.instance.PlaySFX("click2");
     }
 

@@ -640,74 +640,74 @@ MonoBehaviour:
     version: 
     clearedStageNumber: 
     equipModuleSaveDatas:
-    - <type>k__BackingField: 1
+    - type: 1
       equipedModules:
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-    - <type>k__BackingField: 2
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+    - type: 2
       equipedModules:
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-    - <type>k__BackingField: 3
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+    - type: 3
       equipedModules:
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-    - <type>k__BackingField: 4
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+    - type: 4
       equipedModules:
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
-      - <type>k__BackingField: 0
-        <module>k__BackingField: 0
-        <tier>k__BackingField: 0
-        <key>k__BackingField: 
-        <isNew>k__BackingField: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
+      - type: 0
+        module: 0
+        tier: 0
+        key: 
+        isNew: 1
     moduleInventory: []
   crystalTextList: []
   currentSaveType: 1
@@ -1085,7 +1085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &714847184
 RectTransform:
   m_ObjectHideFlags: 0

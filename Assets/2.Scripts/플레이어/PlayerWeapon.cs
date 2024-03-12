@@ -12,8 +12,8 @@ public class PlayerWeapon : MonoBehaviour
     public List<WeaponObject> weaponPool = new List<WeaponObject>();
     public List<PassiveObject> passivePool = new List<PassiveObject>();
 
-    public Stat additionalDamage = new Stat();
-    public Stat additionalCoolTime = new Stat();
+    public Stat additionalDamageStat = new Stat();
+    public Stat additionalCoolTimeStat = new Stat();
     public ShipObjectData playerShipData;
 
     [Space]
@@ -25,7 +25,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public bool allowFire = false;
 
-    public static List<int> usingSpiralVortexPosition = new List<int>();
+    public static List<int> activeSpiralVortexPositions = new List<int>();
 
 
     private void Update()
@@ -38,20 +38,20 @@ public class PlayerWeapon : MonoBehaviour
             if (weaponPool[i].ready)
             {
                 weaponSlotList[i].weaponCoolTimeImage.StartCoolTime(weaponPool[i].coolTime.GetFinalStatValue());
-                StartCoroutine(ProjectileReload(weaponPool[i]));
+                StartCoroutine(ReloadProjectile(weaponPool[i]));
 
                 StartCoroutine(weaponPool[i].Fire(weaponPool[i].GetFirePos(), this));
             }
         }
     }
 
-    public IEnumerator ProjectileReload(WeaponObject pool)
+    public IEnumerator ReloadProjectile(WeaponObject pool)
     {
         pool.ready = false;
 
-        print(pool.GetWeaponObject().GetWeaponObject().GetEquipmentType().ToString() + " /  " + pool.coolTime.GetFinalStatValue() + " / " + additionalCoolTime.GetFinalStatValue() + " / " + playerModule.module_Firerate.GetFinalStatValue() + " / " + (pool.coolTime.GetFinalStatValue() * additionalCoolTime.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
+        print(pool.GetWeaponObject().GetWeaponObject().GetEquipmentType().ToString() + " /  " + pool.coolTime.GetFinalStatValue() + " / " + additionalCoolTimeStat.GetFinalStatValue() + " / " + playerModule.module_Firerate.GetFinalStatValue() + " / " + (pool.coolTime.GetFinalStatValue() * additionalCoolTimeStat.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
 
-        yield return new WaitForSeconds((pool.coolTime.GetFinalStatValue() * additionalCoolTime.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
+        yield return new WaitForSeconds((pool.coolTime.GetFinalStatValue() * additionalCoolTimeStat.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
         pool.ready = true;
     }
 
@@ -197,7 +197,7 @@ public class PlayerWeapon : MonoBehaviour
         return weaponObjects;
     }
 
-    public List<IEquipment> GetMaxLevelEquipmentList()
+    public List<IEquipment> GetMaxLevelEquipments()
     {
         List<IEquipment> EquipmentObejcts = new List<IEquipment>();
 
@@ -359,7 +359,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public float GetPlayerStatDamage()
     {
-        return (playerModule.module_Damage.GetFinalStatValue() + playerShipData.baseDamage.GetFinalStatValueAsInt()) * additionalDamage.GetFinalStatValue();
+        return (playerModule.module_Damage.GetFinalStatValue() + playerShipData.baseDamage.GetFinalStatValueAsInt()) * additionalDamageStat.GetFinalStatValue();
     }
 
     /// <summary>

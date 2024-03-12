@@ -254,6 +254,13 @@ public class GameManager : MonoBehaviour
         InGameObjectManager.Instance.ClearInGameObjects();
     }
 
+    public void StartTrialShip()
+    {
+        PlayGame();
+        StartTimer();
+        EnemyGenerator.instance.StartSpawnEnemy();
+    }
+
     public void Resurrection()
     {
         DieMenu.SetActive(false);

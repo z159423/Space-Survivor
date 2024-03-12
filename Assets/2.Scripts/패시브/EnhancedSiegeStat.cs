@@ -17,7 +17,7 @@ public class EnhancedSiegeStat : ScriptableObject, IPassiveEquipment
         switch (upgradeModule.upgradeModuleType)
         {
             case upgradeModuleType.IncreaseDamagePercent:
-                playerWeapon.additionalDamage.AddPercentModifier(upgradeModule.value1);
+                playerWeapon.additionalDamageStat.AddPercentModifier(upgradeModule.value1);
                 break;
         }
     }
@@ -28,7 +28,7 @@ public class EnhancedSiegeStat : ScriptableObject, IPassiveEquipment
 
         playerWeapon = playerStat.GetComponent<PlayerWeapon>();
 
-        playerWeapon.additionalDamage.AddPercentModifier(getIncreaseDamage);
+        playerWeapon.additionalDamageStat.AddPercentModifier(getIncreaseDamage);
 
         SetCoolTimeSlot();
     }

@@ -78,27 +78,27 @@ public class InterstitialAdCaller : MonoBehaviour
         string adUnitId = "unexpected_platform";
 #endif
 
-        var adRequest = new AdRequest();
+        // var adRequest = new AdRequest();
 
-        // send the request to load the ad.
-        InterstitialAd.Load(adUnitId, adRequest,
-            (InterstitialAd ad, LoadAdError error) =>
-            {
-                // if error is not null, the load request failed.
-                if (error != null || ad == null)
-                {
-                    Debug.LogError("interstitial ad failed to load an ad " +
-                                   "with error : " + error);
-                    return;
-                }
+        // // send the request to load the ad.
+        // InterstitialAd.Load(adUnitId, adRequest,
+        //     (InterstitialAd ad, LoadAdError error) =>
+        //     {
+        //         // if error is not null, the load request failed.
+        //         if (error != null || ad == null)
+        //         {
+        //             Debug.LogError("interstitial ad failed to load an ad " +
+        //                            "with error : " + error);
+        //             return;
+        //         }
 
-                Debug.Log("Interstitial ad loaded with response : "
-                          + ad.GetResponseInfo());
+        //         Debug.Log("Interstitial ad loaded with response : "
+        //                   + ad.GetResponseInfo());
 
-                interstitial = ad;
-            });
+        //         interstitial = ad;
+        //     });
 
-        RegisterEventHandlers(interstitial);
+        // RegisterEventHandlers(interstitial);
 
         // Initialize an InterstitialAd. 
         // 전면광고 초기화

@@ -300,7 +300,7 @@ public class PlayerStat : MonoBehaviour
         playerWeapon.ResetPlayerWeapon();
         ClearWeaponSlots();
 
-        playerWeapon.additionalDamage.ClearPercentModifier();
+        playerWeapon.additionalDamageStat.ClearPercentModifier();
         shieldInvinsibleTime.ClearPercentModifier();
         shieldReloadTime.ClearPercentModifier();
         if (shieldReloadCoroutine != null)
