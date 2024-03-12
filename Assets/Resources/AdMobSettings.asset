@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 8b8927b7dbaaac341b4489974bd25824, type: 3}
   m_Name: AdMobSettings
-  m_EditorClassIdentifier: Assembly-CSharp::AdMobSettings
+  m_EditorClassIdentifier: 
   adMobAndroidId: ca-app-pub-5179254807136480~4040997109
   adMobIosId: 
   androidRv: ca-app-pub-5179254807136480/1031690389

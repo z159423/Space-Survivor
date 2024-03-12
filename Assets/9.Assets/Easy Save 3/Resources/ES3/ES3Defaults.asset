@@ -29,17 +29,23 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
+    - Google.Play.Review
     - Assembly-CSharp
     - DOTween.Modules
     - Cinemachine
+    - Google.Play.Common
+    - Google.Play.Instant
     - IngameDebugConsole.Runtime
+    - Google.Play.Core
     - Purchasing.Common
     - Sirenix.OdinInspector.Modules.UnityLocalization
+    - Google.Android.AppBundle.Editor
+    - Google.Play.Instant.Editor
     - PsdPlugin
     - PPv2URPConverters
-    - GoogleMobileAds.Editor
     - IngameDebugConsole.Editor
     - Sirenix.OdinInspector.Modules.UnityLocalization.Editor
+    - GoogleMobileAds.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
