@@ -11,6 +11,7 @@ using Firebase.Database;
 using Newtonsoft.Json;
 using Google;
 using System.Threading.Tasks;
+using System;
 
 public class FirebaseInit : MonoBehaviour
 {
@@ -94,18 +95,6 @@ public class FirebaseInit : MonoBehaviour
 
     public void Login_Google()
     {
-        // if (GoogleSignIn.Configuration == null)
-        // {
-        //     // 설정
-        //     GoogleSignIn.Configuration = new GoogleSignInConfiguration
-        //     {
-        //         RequestIdToken = true,
-        //         RequestEmail = true,
-        //         // Copy this value from the google-service.json file.
-        //         // oauth_client with type == 3
-        //         WebClientId = "997553477781-5n1nk4nri21t9q3i4ob0sk2slvjq1rl7.apps.googleusercontent.com"
-        //     };
-        // }
 
         if (GoogleSignIn.Configuration == null)
         {
@@ -132,64 +121,119 @@ public class FirebaseInit : MonoBehaviour
             }
             if (task.IsCompleted)
             {
-                OnSuccessLogin();
-
-                Google.GoogleSignInUser user = task.Result;
-                userID = user.UserId;
-
-                print("<color=green>[Firebase Login]</color> Google Authentication User ID : " + userID);
+                firebaseAuto.SignInWithCredentialAsync(GoogleAuthProvider.GetCredential(task.Result.IdToken, null)).ContinueWithOnMainThread(task =>
+                {
+                    Login(task, LoginType.GOOGLE);
+                });
 
             }
         });
+    }
 
-        // Task<GoogleSignInUser> signIn = GoogleSignIn.DefaultInstance.SignIn();
 
-        // TaskCompletionSource<FirebaseUser> signInCompleted = new TaskCompletionSource<FirebaseUser>();
 
-        // signIn.ContinueWithOnMainThread(task =>
-        // {
-        //     if (task.IsCanceled)
-        //     {
-        //         Debug.Log("Google Login task.IsCanceled");
-        //     }
-        //     else if (task.IsFaulted)
-        //     {
-        //         Debug.Log("Google Login task.IsFaulted");
-        //     }
-        //     else
-        //     {
-        //         Credential credential = Firebase.Auth.GoogleAuthProvider.GetCredential(((Task<GoogleSignInUser>)task).Result.IdToken, null);
-        //         firebaseAuto.SignInWithCredentialAsync(credential).ContinueWith(authTask =>
-        //         {
-        //             if (authTask.IsCanceled)
-        //             {
-        //                 signInCompleted.SetCanceled();
-        //                 Debug.Log("Google Login authTask.IsCanceled");
-        //                 return;
-        //             }
-        //             if (authTask.IsFaulted)
-        //             {
-        //                 signInCompleted.SetException(authTask.Exception);
-        //                 Debug.Log("Google Login authTask.IsFaulted");
-        //                 return;
-        //             }
+    void AppleSign(Action<Credential> credential)
+    {
+        var rawNonce = GenerateRandomString(32);
+        var nonce = GenerateSHA256NonceFromRawNonce(rawNonce);
 
-        //             Google.GoogleSignInUser user = task.Result;
-        //             userID = user.UserId;
+        var loginArgs = new AppleAuthLoginArgs(LoginOptions.IncludeEmail, nonce);
 
-        //             print("<color=green>[Firebase Login]</color> Google Authentication User ID : " + userID);
-
-        //             Debug.LogFormat("Google User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
-        //             return;
-        //         });
-        //     }
-        // });
+        appleAuthManager.LoginWithAppleId(loginArgs, appleCredential =>
+        {
+            var appleIdCredential = appleCredential as IAppleIDCredential;
+            var identityToken = Encoding.UTF8.GetString(appleIdCredential.IdentityToken);
+            var authorizationCode = Encoding.UTF8.GetString(appleIdCredential.AuthorizationCode);
+            var firebaseCredential = OAuthProvider.GetCredential(
+                "apple.com",
+                identityToken,
+                rawNonce,
+                authorizationCode);
+            credential?.Invoke(firebaseCredential);
+        }, (e) => onCancel?.Invoke());
     }
 
     public void Login_Apple()
     {
 
     }
+
+    string GenerateRandomString(int length)
+    {
+        const string charset = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._";
+        var cryptographicallySecureRandomNumberGenerator = new RNGCryptoServiceProvider();
+        var result = string.Empty;
+        var remainingLength = length;
+
+        var randomNumberHolder = new byte[1];
+        while (remainingLength > 0)
+        {
+            var randomNumbers = new List<int>(16);
+            for (var randomNumberCount = 0; randomNumberCount < 16; randomNumberCount++)
+            {
+                cryptographicallySecureRandomNumberGenerator.GetBytes(randomNumberHolder);
+                randomNumbers.Add(randomNumberHolder[0]);
+            }
+
+            for (var randomNumberIndex = 0; randomNumberIndex < randomNumbers.Count; randomNumberIndex++)
+            {
+                if (remainingLength == 0)
+                {
+                    break;
+                }
+
+                var randomNumber = randomNumbers[randomNumberIndex];
+                if (randomNumber < charset.Length)
+                {
+                    result += charset[randomNumber];
+                    remainingLength--;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    string GenerateSHA256NonceFromRawNonce(string rawNonce)
+    {
+        var sha = new SHA256Managed();
+        var utf8RawNonce = Encoding.UTF8.GetBytes(rawNonce);
+        var hash = sha.ComputeHash(utf8RawNonce);
+
+        var result = string.Empty;
+        for (var i = 0; i < hash.Length; i++)
+        {
+            result += hash[i].ToString("x2");
+        }
+
+        return result;
+    }
+
+
+    public void Login(Task<FirebaseUser> task, LoginType type)
+    {
+        var user = task.Result;
+        userID = user.UserId;
+
+        ES3.Save("FastLogin", userID);
+        ES3.Save("FastLoginType", type);
+
+        OnSuccessLogin();
+
+        print($"<color=green>[Firebase Login]</color> {type.ToString()} Authentication User ID : " + userID);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     void OnSuccessLogin()
     {
@@ -263,5 +307,4 @@ public class FirebaseInit : MonoBehaviour
             }
         });
     }
-
 }
