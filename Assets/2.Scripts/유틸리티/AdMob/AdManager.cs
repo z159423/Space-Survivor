@@ -354,10 +354,10 @@ public class AdManager : MonoBehaviour
         bannerView = new BannerView(adUnitId, adaptiveSize, AdPosition.Bottom);
 
         // Create an empty ad request.
-        // AdRequest request = new AdRequest();
+        AdRequest request = new AdRequest();
 
         // Load the banner with the request.
-        // bannerView.LoadAd(request);
+        bannerView.LoadAd(request);
     }
 
     public void DestoryBanner()

@@ -7,15 +7,11 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using System.Linq;
 using System;
+using Sirenix.OdinInspector;
 
-public class SettingManager : MonoBehaviour
+public class SettingManager : MonoBehaviour, IUIBase
 {
-    public static SettingManager instance;
-
     //public SettingData settingData = new SettingData();
-
-    public bool vibration = true;
-    public bool sound = true;
 
     [Header("MainMenuSetting")]
     public GameObject settingPanel;
@@ -28,6 +24,10 @@ public class SettingManager : MonoBehaviour
     public TMP_Dropdown LanguageDropdown;
     public Text versionText;
 
+    [BoxGroup("User Info")][SerializeField] Text userID;
+    [BoxGroup("User Info")][SerializeField] GameObject icon_Google, icon_Apple, icon_Guest;
+
+
     [Space]
 
     public Color onColor;
@@ -38,10 +38,95 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private GameObject InGame;
     [SerializeField] private Button mainMenuBtn;
 
-    IEnumerator Start()
+    public void TurnSettingPanel()
+    {
+        settingPanel.SetActive(!settingPanel.activeSelf);
+
+        if (settingPanel.activeSelf)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
+
+        goToMainMenuBtn.SetActive(InGame.activeSelf);
+    }
+
+    public void OnChangeSoundSlider()
+    {
+        if (mainMenuSoundSlider.value == 0)
+        {
+            soundSliderFill.color = offColor;
+            soundOnOffText.text = "OFF";
+            AudioListener.volume = 0;
+        }
+        else
+        {
+            soundSliderFill.color = onColor;
+            soundOnOffText.text = "ON";
+            AudioListener.volume = 1;
+        }
+
+        ES3.Save<int>("Sound", (int)mainMenuSoundSlider.value);
+    }
+
+    public void OnChangeVibrationSlider()
+    {
+        if (mainMenuVibrationSlider.value == 0)
+        {
+            vibrationSliderFill.color = offColor;
+            vibrationOnOffText.text = "OFF";
+        }
+        else
+        {
+            vibrationSliderFill.color = onColor;
+            vibrationOnOffText.text = "ON";
+        }
+
+        ES3.Save<int>("Vibration", (int)mainMenuVibrationSlider.value);
+    }
+
+    public void OnClickMainMenuBtn()
+    {
+        TurnSettingPanel();
+        mainMenuBtn.onClick.Invoke();
+    }
+
+    public void LoadSettingData()
+    {
+        mainMenuSoundSlider.value = ES3.KeyExists("Sound") ? ES3.Load<int>("Sound") : 1;
+        mainMenuVibrationSlider.value = ES3.KeyExists("Vibration") ? ES3.Load<int>("Vibration") : 1;
+
+        OnChangeSoundSlider();
+        OnChangeVibrationSlider();
+    }
+
+    void UpdateUI()
     {
         LoadSettingData();
 
+        StartCoroutine(localizeDropBox());
+        StartCoroutine(LocalInit());
+
+        versionText.text = "version : " + Application.version;
+
+        userID.text = "ID : " + FirebaseInit.instance.userID.ToString();
+        switch (FirebaseInit.instance.currentLoginType)
+        {
+            case LoginType.GUEST:
+                icon_Guest.SetActive(true);
+                break;
+
+            case LoginType.GOOGLE:
+                icon_Google.SetActive(true);
+                break;
+
+            case LoginType.APPLE:
+                icon_Apple.SetActive(true);
+                break;
+        }
+    }
+
+    IEnumerator localizeDropBox()
+    {
         // Wait for the localization system to initialize, loading Locales, preloading etc.
         yield return LocalizationSettings.InitializationOperation;
 
@@ -59,123 +144,44 @@ public class SettingManager : MonoBehaviour
 
         LanguageDropdown.value = selected;
         LanguageDropdown.onValueChanged.AddListener(LocaleSelected);
-
-        versionText.text = "version : " + Application.version;
     }
 
-    private void Awake()
+    IEnumerator LocalInit()
     {
-        instance = this;
+        yield return LocalizationSettings.InitializationOperation;
 
-        IEnumerator LocalInit()
+        if (Application.systemLanguage == SystemLanguage.English)
         {
-            yield return LocalizationSettings.InitializationOperation;
-
-            if (Application.systemLanguage == SystemLanguage.English)
-            {
-                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
-            }
-            else if (Application.systemLanguage == SystemLanguage.Korean)
-            {
-                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
-            }
-            else
-            {
-                LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
-            }
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
         }
-
-        StartCoroutine(LocalInit());
-    }
-
-    public void TurnSettingPanel()
-    {
-        settingPanel.SetActive(!settingPanel.activeSelf);
-
-        if (settingPanel.activeSelf)
-            Time.timeScale = 0;
-        else
-            Time.timeScale = 1;
-
-        goToMainMenuBtn.SetActive(InGame.activeSelf);
-
-        if (!settingPanel.activeSelf)
+        else if (Application.systemLanguage == SystemLanguage.Korean)
         {
-            SaveSettingData();
-        }
-    }
-
-    public void OnChangeSoundSlider()
-    {
-        if (mainMenuSoundSlider.value == 0)
-        {
-            soundSliderFill.color = offColor;
-            soundOnOffText.text = "OFF";
-            sound = false;
-            AudioListener.volume = 0;
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
         }
         else
         {
-            soundSliderFill.color = onColor;
-            soundOnOffText.text = "ON";
-            sound = true;
-            AudioListener.volume = 1;
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
         }
     }
-
-    public void OnChangeVibrationSlider()
-    {
-        if (mainMenuVibrationSlider.value == 0)
-        {
-            vibrationSliderFill.color = offColor;
-            vibrationOnOffText.text = "OFF";
-            vibration = false;
-        }
-        else
-        {
-            vibrationSliderFill.color = onColor;
-            vibrationOnOffText.text = "ON";
-            vibration = true;
-        }
-    }
-
-    public void OnClickMainMenuBtn()
-    {
-        TurnSettingPanel();
-        mainMenuBtn.onClick.Invoke();
-    }
-
-    public void SaveSettingData()
-    {
-        print("save");
-
-        int soundValue = (sound == true) ? 1 : 0;
-        int vibraitonValue = (vibration == true) ? 1 : 0;
-
-        PlayerPrefs.SetInt("Sound", soundValue);
-        PlayerPrefs.SetInt("Vibration", vibraitonValue);
-    }
-
-    public void LoadSettingData()
-    {
-        print("load");
-
-        if (PlayerPrefs.HasKey("Sound"))
-            mainMenuSoundSlider.value = PlayerPrefs.GetInt("Sound");
-        if (PlayerPrefs.HasKey("Vibration"))
-            mainMenuVibrationSlider.value = PlayerPrefs.GetInt("Vibration");
-
-        print(sound + " " + vibration);
-
-        OnChangeSoundSlider();
-        OnChangeVibrationSlider();
-    }
-
-
 
     static void LocaleSelected(int index)
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+    }
+
+    public void OnClickLogout()
+    {
+        FirebaseInit.instance.Logout();
+    }
+
+    public void Show()
+    {
+        UpdateUI();
+    }
+
+    public void Hide()
+    {
+        Destroy(gameObject);
     }
 
 }

@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 // using Firebase.Analytics;
 using Sirenix.OdinInspector;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -116,6 +117,8 @@ public class GameManager : MonoBehaviour
         UserDataManager.onChangeCrystalValue += InitShipBuyButton;
 
         ShipChangeBtn();
+
+        AudioListener.volume = ES3.KeyExists("Sound") ? ES3.Load<int>("Sound") : 1;
     }
 
     public void ResetTime()
@@ -661,5 +664,10 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void OnClickSettingBtn()
+    {
+        Instantiate(Resources.LoadAll<GameObject>("UI/Setting").First(), MainUIParent).GetComponent<IUIBase>().Show();
     }
 }

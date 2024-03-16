@@ -22,7 +22,7 @@ public static class Vibration
 
     public static void Vibrate(long milliseconds)
     {
-        if (!SettingManager.instance.vibration || !enableVibration)
+        if ((ES3.KeyExists("Vibration") ? ES3.Load<int>("Vibration") : 1) == 0 || !enableVibration)
             return;
 
 #if UNITY_ANDROID && !UNITY_EDITOR

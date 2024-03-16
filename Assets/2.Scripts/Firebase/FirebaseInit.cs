@@ -1,4 +1,8 @@
 using System.Collections;
+using AppleAuth;
+using AppleAuth.Enums;
+using AppleAuth.Interfaces;
+using AppleAuth.Native;
 using System.Collections.Generic;
 using UnityEngine;
 using Firebase;
@@ -12,23 +16,31 @@ using Newtonsoft.Json;
 using Google;
 using System.Threading.Tasks;
 using System;
+using System.Text;
+using System.Security.Cryptography;
+
 
 public class FirebaseInit : MonoBehaviour
 {
     // Start is called before the first frame update
 
     FirebaseApp _app;
-    FirebaseAuth firebaseAuto;
+    FirebaseAuth firebaseAuth;
     public FirebaseDatabase firebaseDatabase;
+
+    IAppleAuthManager appleAuthManager;
 
     public string userID;
 
     string googleIdToken = "YOUR_GOOGLE_ID_TOKEN";
     string googleAccessToken = "YOUR_GOOGLE_ACCESS_TOKEN";
 
+    public Action onLogin;
+    public Action onCancel;
 
 
     bool ready = false;
+    public LoginType currentLoginType;
 
     public static FirebaseInit instance;
 
@@ -49,7 +61,7 @@ public class FirebaseInit : MonoBehaviour
 
                 // FirebaseAnalytics.LogEvent(FirebaseAnalytics.EventLogin);
 
-                firebaseAuto = FirebaseAuth.DefaultInstance;
+                firebaseAuth = FirebaseAuth.DefaultInstance;
 
                 Crashlytics.IsCrashlyticsCollectionEnabled = true;
 
@@ -57,8 +69,6 @@ public class FirebaseInit : MonoBehaviour
                 firebaseDatabase.SetPersistenceEnabled(false);
 
                 print("Firebase dependencies 연동 선공 + " + task.Result);
-
-
             }
             else
             {
@@ -70,26 +80,24 @@ public class FirebaseInit : MonoBehaviour
 
     public void Login_Anonymouse()
     {
-        firebaseAuto.SignInAnonymouslyAsync().ContinueWith(task =>
+        firebaseAuth.SignInAnonymouslyAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
                 Debug.LogError("SignInAnonymouslyAsync was canceled.");
+                onCancel?.Invoke();
                 return;
             }
             if (task.IsFaulted)
             {
                 Debug.LogError("SignInAnonymouslyAsync encountered an error: " + task.Exception);
+                onCancel?.Invoke();
                 return;
             }
-
-            Firebase.Auth.FirebaseUser result = task.Result;
-
-            userID = result.UserId;
-
-            print("<color=green>[Firebase Login]</color> Anonymouse Authentication User ID : " + userID);
-
-            OnSuccessLogin();
+            if (task.IsCompleted)
+            {
+                Login(task, LoginType.GUEST);
+            };
         });
     }
 
@@ -112,16 +120,18 @@ public class FirebaseInit : MonoBehaviour
             if (task.IsCanceled)
             {
                 Debug.LogWarning("[DB] GoogleSignIn was canceled.");
+                onCancel?.Invoke();
                 return;
             }
             if (task.IsFaulted)
             {
                 Debug.LogError("[DB] GoogleSignIn encountered an error: " + task.Exception);
+                onCancel?.Invoke();
                 return;
             }
             if (task.IsCompleted)
             {
-                firebaseAuto.SignInWithCredentialAsync(GoogleAuthProvider.GetCredential(task.Result.IdToken, null)).ContinueWithOnMainThread(task =>
+                firebaseAuth.SignInWithCredentialAsync(GoogleAuthProvider.GetCredential(task.Result.IdToken, null)).ContinueWithOnMainThread(task =>
                 {
                     Login(task, LoginType.GOOGLE);
                 });
@@ -156,6 +166,11 @@ public class FirebaseInit : MonoBehaviour
     public void Login_Apple()
     {
 
+
+        AppleSign(credential =>
+                {
+                    firebaseAuth.SignInWithCredentialAsync(credential).ContinueWithOnMainThread(task => Login(task, LoginType.APPLE));
+                });
     }
 
     string GenerateRandomString(int length)
@@ -218,22 +233,19 @@ public class FirebaseInit : MonoBehaviour
         ES3.Save("FastLogin", userID);
         ES3.Save("FastLoginType", type);
 
+        currentLoginType = type;
+
         OnSuccessLogin();
 
         print($"<color=green>[Firebase Login]</color> {type.ToString()} Authentication User ID : " + userID);
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    public void Logout()
+    {
+        ES3.DeleteKey("FastLogin");
+        ES3.DeleteKey("FastLoginType");
+        SceneManager.LoadScene("Login");
+    }
 
     void OnSuccessLogin()
     {

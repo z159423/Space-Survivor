@@ -31,6 +31,7 @@ MonoBehaviour:
     assemblyNames:
     - Google.Play.Review
     - Assembly-CSharp
+    - AppleAuth
     - DOTween.Modules
     - Cinemachine
     - Google.Play.Common
@@ -47,6 +48,7 @@ MonoBehaviour:
     - IngameDebugConsole.Editor
     - Sirenix.OdinInspector.Modules.UnityLocalization.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
+    - AppleAuth.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
