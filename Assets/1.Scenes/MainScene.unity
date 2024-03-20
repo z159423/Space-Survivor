@@ -32047,10 +32047,10 @@ MonoBehaviour:
     FloatModifiers: []
     PercentModifiers: []
   additionalCoolTimeStat:
-    baseValue: 0
-    minValue: 0
-    MinValue: 0
-    maxValue: 0
+    baseValue: 1
+    minValue: 1
+    MinValue: 0.1
+    maxValue: 1
     MaxValue: 1000
     FloatModifiers: []
     PercentModifiers: []

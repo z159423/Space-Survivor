@@ -23,7 +23,6 @@ public class DroneAi : ProjectileLogic
     private bool bulletReady = true;
     private bool flyStrate = true;
     [SerializeField] private Transform target = null;
-
     private Coroutine findEnemyCoriotine = null;
 
     private void OnEnable()
@@ -143,7 +142,7 @@ public class DroneAi : ProjectileLogic
         {
             while (target == null)
             {
-                target = Utility.GetClosestTargetInRadius(transform, findTargetRadius);
+                target = Utility.GetClosestTargetInRadius(GameManager.instance.playerStat.transform, findTargetRadius);
 
                 yield return new WaitForSeconds(0.5f);
             }

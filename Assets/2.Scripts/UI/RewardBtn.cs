@@ -9,7 +9,7 @@ public class RewardBtn : MonoBehaviour
 {
     public RewardType type;
 
-    
+
 
     public void OnClick()
     {
@@ -71,7 +71,8 @@ public class RewardBtn : MonoBehaviour
                                 GameManager.instance.playerStat.GetCrystalDouble();
                                 AdManager.instance.useCrystalDoubleThisStage = true;
                                 InterstitialAdCaller.instance.RestartIrAdsCoolTime();
-                                AdManager.instance.crystalBonusRVBtn?.SetActive(false);
+                                gameObject.SetActive(false);
+                                // AdManager.instance.crystalBonusRVBtn?.SetActive(false);
 
                                 // FirebaseAnalytics.LogEvent("ADS_RvAdsComplete_DoubleCrystal");
                                 break;

@@ -104,6 +104,17 @@ public class PlayerStat : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            GetExp(1000000);
+        }
+    }
+
+#endif
+
     public void TakeDamage(int damage, string name = "none")
     {
         if (invinsible || playerDie || shieldInvinsible)
@@ -135,7 +146,7 @@ public class PlayerStat : MonoBehaviour
     }
 
 
-[Button("Force Die")]
+    [Button("Force Die")]
     private void Die(string name = "none")
     {
         playerDie = true;
@@ -164,11 +175,11 @@ public class PlayerStat : MonoBehaviour
         }
         else
         {
-//             FirebaseAnalytics.LogEvent("PlayerDeathTime", "IntParam", GameManager.instance.getCurrentTime());
+            //             FirebaseAnalytics.LogEvent("PlayerDeathTime", "IntParam", GameManager.instance.getCurrentTime());
 
-//             Firebase.Analytics.FirebaseAnalytics.LogEvent(
-//   Firebase.Analytics.FirebaseAnalytics.EventSelectContent, new Firebase.Analytics.Parameter(
-//     FirebaseAnalytics.ParameterItemId, GameManager.instance.getCurrentTime()));
+            //             Firebase.Analytics.FirebaseAnalytics.LogEvent(
+            //   Firebase.Analytics.FirebaseAnalytics.EventSelectContent, new Firebase.Analytics.Parameter(
+            //     FirebaseAnalytics.ParameterItemId, GameManager.instance.getCurrentTime()));
         }
 
     }

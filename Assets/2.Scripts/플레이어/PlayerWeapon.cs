@@ -49,9 +49,10 @@ public class PlayerWeapon : MonoBehaviour
     {
         pool.ready = false;
 
-        print(pool.GetWeaponObject().GetWeaponObject().GetEquipmentType().ToString() + " /  " + pool.coolTime.GetFinalStatValue() + " / " + additionalCoolTimeStat.GetFinalStatValue() + " / " + playerModule.module_Firerate.GetFinalStatValue() + " / " + (pool.coolTime.GetFinalStatValue() * additionalCoolTimeStat.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
+        // print(pool.GetWeaponObject().GetWeaponObject().GetEquipmentType().ToString() + " /  " + pool.coolTime.GetFinalStatValue() + " / " + additionalCoolTimeStat.GetFinalStatValue() + " / " + playerModule.module_Firerate.GetFinalStatValue() + " / " + (pool.coolTime.GetFinalStatValue() * additionalCoolTimeStat.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
+        // print(pool.coolTime.GetFinalStatValue() + " " + additionalCoolTimeStat.GetFinalStatValue() + " " + playerModule.module_Firerate.GetFinalStatValue());
 
-        yield return new WaitForSeconds((pool.coolTime.GetFinalStatValue() * additionalCoolTimeStat.GetFinalStatValue()) * playerModule.module_Firerate.GetFinalStatValue());
+        yield return new WaitForSeconds(pool.coolTime.GetFinalStatValue() * additionalCoolTimeStat.GetFinalStatValue() * playerModule.module_Firerate.GetFinalStatValue());
         pool.ready = true;
     }
 

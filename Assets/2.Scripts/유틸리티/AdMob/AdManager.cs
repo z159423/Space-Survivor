@@ -83,6 +83,8 @@ public class AdManager : MonoBehaviour
         const string rewardMsg =
         "Rewarded ad rewarded the user. Type: {0}, amount: {1}.";
 
+        print((rewardedAd != null) + " " + rewardedAd.CanShowAd());
+
         if (rewardedAd != null && rewardedAd.CanShowAd())
         {
             rewardedAd.Show((Reward reward) =>
@@ -90,9 +92,18 @@ public class AdManager : MonoBehaviour
                 // TODO: Reward the user.
                 Debug.Log(System.String.Format(rewardMsg, reward.Type, reward.Amount));
 
-                onGainReward.Invoke();
+                //딜레이를 안넣어주면 에러가 발생하면서 앱이 다운됨
+                StartCoroutine(delay());
+
+                IEnumerator delay()
+                {
+                    yield return new WaitForEndOfFrame();
+                    onGainReward.Invoke();
+                }
             });
         }
+        else
+            LoadRewardedAd();
     }
 
     /// <summary>
@@ -265,7 +276,7 @@ public class AdManager : MonoBehaviour
 
         // create our request used to load the ad.
         var adRequest = new AdRequest();
-        
+
 
         // send the request to load the ad.
         RewardedAd.Load(adUnitId, adRequest,
