@@ -212,7 +212,8 @@ public class ShipUpgradeUI : MonoBehaviour
 
         var newShipData = Instantiate(currentShipObject);
 
-        UserDataManager.instance.currentUserData.playerHaveShip.Add(newShipData.shipObjectData);
+        // UserDataManager.instance.currentUserData.playerHaveShip.Add(newShipData.shipObjectData);
+        UserDataManager.instance.AddNewShip(newShipData.shipObjectData.shipCode);
 
         SelectShip(currentShipObject);
 

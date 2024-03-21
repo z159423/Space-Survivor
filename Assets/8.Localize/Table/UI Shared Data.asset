@@ -163,6 +163,10 @@ MonoBehaviour:
     m_Key: DeleteSave_Desc
     m_Metadata:
       m_Items: []
+  - m_Id: 239063971137085440
+    m_Key: Message_internetNotConnect
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

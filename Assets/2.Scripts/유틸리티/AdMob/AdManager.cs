@@ -99,6 +99,7 @@ public class AdManager : MonoBehaviour
                 {
                     yield return new WaitForEndOfFrame();
                     onGainReward.Invoke();
+                    LoadRewardedAd();
                 }
             });
         }
@@ -294,6 +295,9 @@ public class AdManager : MonoBehaviour
                           + ad.GetResponseInfo());
 
                 rewardedAd = ad;
+
+                if (!(rewardedAd != null && rewardedAd.CanShowAd()))
+                    LoadRewardedAd();
             });
     }
 

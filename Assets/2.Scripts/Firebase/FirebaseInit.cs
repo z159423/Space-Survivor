@@ -51,6 +51,8 @@ public class FirebaseInit : MonoBehaviour
 
     void Start()
     {
+
+
         this.TaskWaitUntil(() => SceneManager.LoadScene("MainScene"), () => ready == true);
 
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
@@ -288,7 +290,6 @@ public class FirebaseInit : MonoBehaviour
                 Debug.Log("<color=blue>[Firebase]</color> 해당 User의 데이터를 불러왔습니다.");
                 print(task.Result.Exists);
 
-
                 foreach (var data in snapshot.Children)
                 {
                     print(data.Value.ToString());
@@ -296,6 +297,7 @@ public class FirebaseInit : MonoBehaviour
 
                 if (task.Result.Exists)
                 {
+                    onLoadComplete?.Invoke();
                     print(snapshot.Value.ToString());
                     // var userData = JsonConvert.DeserializeObject<UserData>(JsonUtility.ToJson(snapshot.Value.ToString()));
                     UserDataManager.instance.currentUserData = JsonConvert.DeserializeObject<UserData>(snapshot.Value.ToString());
@@ -310,7 +312,6 @@ public class FirebaseInit : MonoBehaviour
 
                     // UserDataManager.instance.LoadDataSnap(snapshot);
 
-                    onLoadComplete?.Invoke();
                 }
                 else
                 {

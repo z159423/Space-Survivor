@@ -9,7 +9,8 @@ using Firebase.Database;
 using Google.MiniJSON;
 using System.Threading.Tasks;
 using Firebase.Extensions;
-
+using System.Linq;
+using Unity.VisualScripting;
 
 
 public enum SaveType
@@ -100,9 +101,11 @@ public class UserDataManager : MonoBehaviour
 
             var newShipData = Instantiate(startShip);
 
-            userData.playerHaveShip.Add(newShipData.shipObjectData);
+            // userData.playerHaveShip.Add(newShipData.shipObjectData);
 
-            SaveUserData(userData);
+            AddNewShip(newShipData.shipObjectData.shipCode);
+
+            // SaveUserData(userData);
 
             return userData;
         }
@@ -214,11 +217,18 @@ public class UserDataManager : MonoBehaviour
         SaveUserData(currentUserData);
     }
 
+    public void AddNewShip(string shipCode)
+    {
+        currentUserData.playerHaveShip.Add(shipCode);
+
+        Save();
+    }
+
     public bool CheckPlayerHaveShip(string code)
     {
         for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)
         {
-            if (currentUserData.playerHaveShip[i].shipCode.Equals(code))
+            if (currentUserData.playerHaveShip[i].Equals(code))
                 return true;
         }
 
@@ -232,8 +242,8 @@ public class UserDataManager : MonoBehaviour
     {
         for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)
         {
-            if (currentUserData.playerHaveShip[i].shipCode.Equals(code))
-                return currentUserData.playerHaveShip[i];
+            if (currentUserData.playerHaveShip[i].Equals(code))
+                return shipList.shipList.Find((n) => n.shipObjectData.shipCode.Equals(code)).shipObjectData;
         }
 
         Debug.Log("해당 코드의 함선이 로컬데이터에 없습니다.");
@@ -259,9 +269,9 @@ public class UserDataManager : MonoBehaviour
     {
         for (int i = 0; i < currentUserData.playerHaveShip.Count; i++)
         {
-            if (currentUserData.playerHaveShip[i].shipCode.Equals(data.shipCode))
+            if (currentUserData.playerHaveShip[i].Equals(data.shipCode))
             {
-                currentUserData.playerHaveShip[i] = data;
+                currentUserData.playerHaveShip[i] = shipList.shipList.Find((n) => n.shipObjectData.shipCode.Equals(data.shipCode)).shipObjectData.shipCode;
             }
         }
     }

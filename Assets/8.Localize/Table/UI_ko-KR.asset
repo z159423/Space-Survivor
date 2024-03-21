@@ -172,6 +172,11 @@ MonoBehaviour:
     m_Localized: "\uC815\uB9D0\uB85C \uC9C4\uD589\uC0C1\uD669\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
     m_Metadata:
       m_Items: []
+  - m_Id: 239063971137085440
+    m_Localized: "\uC778\uD130\uB137\uC774 \uC5F0\uACB0\uB418\uC5B4 \uC788\uC9C0
+      \uC54A\uAC70\uB098 \uC5F0\uACB0\uC774 \uBD88\uC548\uC815 \uD569\uB2C8\uB2E4."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

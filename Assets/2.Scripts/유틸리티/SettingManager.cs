@@ -8,6 +8,8 @@ using UnityEngine.Localization.Settings;
 using System.Linq;
 using System;
 using Sirenix.OdinInspector;
+using UnityEngine.SceneManagement;
+
 
 public class SettingManager : MonoBehaviour, IUIBase
 {
@@ -86,8 +88,9 @@ public class SettingManager : MonoBehaviour, IUIBase
 
     public void OnClickMainMenuBtn()
     {
-        TurnSettingPanel();
-        mainMenuBtn.onClick.Invoke();
+        SceneManager.LoadScene("MainScene");
+        Hide();
+        // mainMenuBtn.onClick.Invoke();
     }
 
     public void LoadSettingData()
@@ -177,6 +180,8 @@ public class SettingManager : MonoBehaviour, IUIBase
     public void Show()
     {
         UpdateUI();
+
+        goToMainMenuBtn.SetActive(GameManager.instance.gameStart);
     }
 
     public void Hide()

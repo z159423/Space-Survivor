@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public enum LoginType
@@ -44,6 +45,12 @@ googleBtn.gameObject.SetActive(true);
         guestBtn.onClick.AddListener(() => Login(LoginType.GUEST));
         googleBtn.onClick.AddListener(() => Login(LoginType.GOOGLE));
         appleBtn.onClick.AddListener(() => Login(LoginType.APPLE));
+
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            // 인터넷에 연결되어 있지 않음
+            Message.GeneateMessage(() => SceneManager.LoadScene("Login"), transform, "UI", "Message_internetNotConnect");
+        }
     }
 
     void Login(LoginType type)

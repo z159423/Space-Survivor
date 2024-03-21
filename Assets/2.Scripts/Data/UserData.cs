@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Drawing.Printing;
 
 [System.Serializable]
 public class UserData
@@ -14,7 +15,7 @@ public class UserData
     public bool Survey = false;
 
     [SerializeField]
-    public List<ShipObjectData> playerHaveShip = new List<ShipObjectData>();
+    public List<string> playerHaveShip = new List<string>();
 
     public string usingShipTrialTime = "2000-01-01 01:01:01";
     public string usingFreeCrystalTime = "2000-01-01 01:01:01";
@@ -78,10 +79,10 @@ public class UserData
     /// </summary>
     public ShipObjectData GetShipDataFromPlayerHaveShip(string code)
     {
-        foreach (ShipObjectData data in playerHaveShip)
+        foreach (string _code in playerHaveShip)
         {
-            if (data.shipCode.Equals(code))
-                return data;
+            if (_code.Equals(code))
+                return UserDataManager.instance.shipList.shipList.Find((n) => n.shipObjectData.shipCode.Equals(code)).shipObjectData;
         }
 
         Debug.LogWarning(code + " 이 코드에 해당하는 소지중인 함선이 없습니다.");
@@ -89,9 +90,12 @@ public class UserData
         foreach (ShipObject ship in GameManager.instance.shipList.shipList)
         {
             if (ship.shipObjectData.shipCode.Equals(code))
+            {
+                MonoBehaviour.print(ship.shipObjectData.baseMoveSpeed.GetBaseValue() + " " + ship.shipObjectData.baseRotationSpeed.GetBaseValue());
                 return ship.shipObjectData;
+            }
         }
 
-        return playerHaveShip[0];
+        return UserDataManager.instance.shipList.shipList[0].shipObjectData;
     }
 }

@@ -563,8 +563,8 @@ public class GameManager : MonoBehaviour
         || UserDataManager.instance.CheckPlayerHaveShip(currentShip.shipObjectData.shipCode))
             return;
 
-        UserDataManager.instance.currentUserData.playerHaveShip.Add(currentShip.shipObjectData);
-
+        // UserDataManager.instance.currentUserData.playerHaveShip.Add(currentShip.shipObjectData);
+        UserDataManager.instance.AddNewShip(currentShip.shipObjectData.shipCode);
         SelectShip(currentShipNumber);
 
         UserDataManager.instance.AddCrystalValue(-currentShip.shipObjectData.shipCost);
@@ -668,6 +668,7 @@ public class GameManager : MonoBehaviour
 
     public void OnClickSettingBtn()
     {
-        Instantiate(Resources.LoadAll<GameObject>("UI/Setting").First(), MainUIParent).GetComponent<IUIBase>().Show();
+        var menu = Instantiate(Resources.LoadAll<GameObject>("UI/Setting").First(), MainUIParent).GetComponent<IUIBase>();
+        menu.Show();
     }
 }
